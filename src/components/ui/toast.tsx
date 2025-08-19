@@ -12,7 +12,7 @@ interface ToastActionProps extends React.ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 export const ToastAction = React.forwardRef<HTMLButtonElement, ToastActionProps>(
-  ({ className, altText, ...props }, ref) => (
+  ({ className, ...props }, ref) => (
     <button
       ref={ref}
       className={cn(
@@ -158,9 +158,7 @@ export const ToastClose = React.forwardRef<HTMLButtonElement, ToastCloseProps>(
 ToastClose.displayName = "ToastClose"
 
 // Toast Title
-interface ToastTitleProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const ToastTitle = React.forwardRef<HTMLDivElement, ToastTitleProps>(
+export const ToastTitle = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
@@ -172,9 +170,7 @@ export const ToastTitle = React.forwardRef<HTMLDivElement, ToastTitleProps>(
 ToastTitle.displayName = "ToastTitle"
 
 // Toast Description
-interface ToastDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const ToastDescription = React.forwardRef<HTMLDivElement, ToastDescriptionProps>(
+export const ToastDescription = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
@@ -203,7 +199,7 @@ const toastVariants = cva(
 )
 
 // Toast Component
-interface ToastComponentProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof toastVariants> {
+interface ToastComponentProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'id' | 'title'>, VariantProps<typeof toastVariants> {
   id: string
   title?: React.ReactNode
   description?: React.ReactNode
@@ -243,9 +239,7 @@ export const Toast = React.forwardRef<HTMLDivElement, ToastComponentProps>(
 Toast.displayName = "Toast"
 
 // Toast Viewport
-interface ToastViewportProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const ToastViewport = React.forwardRef<HTMLDivElement, ToastViewportProps>(
+export const ToastViewport = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => {
     const { toasts } = useToast()
 

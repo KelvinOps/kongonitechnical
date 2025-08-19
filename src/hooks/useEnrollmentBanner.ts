@@ -16,18 +16,19 @@ interface EnrollmentBannerState {
   daysUntilIntake: number;
 }
 
+// Move INTAKE_PERIODS outside the hook since it's a constant
+const INTAKE_PERIODS = [
+  { month: 1, name: 'January' },
+  { month: 5, name: 'May' },
+  { month: 9, name: 'September' },
+];
+
 export const useEnrollmentBanner = () => {
   const [bannerState, setBannerState] = useState<EnrollmentBannerState>({
     isVisible: false,
     currentIntake: null,
     daysUntilIntake: 0,
   });
-
-  const INTAKE_PERIODS = [
-    { month: 1, name: 'January' },
-    { month: 5, name: 'May' },
-    { month: 9, name: 'September' },
-  ];
 
   const calculateDaysUntilIntake = (intakeDate: Date): number => {
     const now = new Date();
@@ -86,7 +87,7 @@ export const useEnrollmentBanner = () => {
         daysUntilIntake: daysUntil,
       });
     }
-  }, []);
+  }, []); // Now the dependency array is correct
 
   const closeBanner = () => {
     sessionStorage.setItem('enrollmentBannerDismissed', 'true');

@@ -7,13 +7,7 @@ import { useToast as useToastContext } from "@/components/ui/toast"
 export const useToast = useToastContext
 
 // Convenience function to create toasts
-export const toast = (props: {
-  title?: React.ReactNode
-  description?: React.ReactNode
-  action?: React.ReactElement
-  variant?: "default" | "destructive"
-  duration?: number
-}) => {
+export const toast = () => {
   // This function needs to be called from within a component
   // that has access to the ToastProvider context
   console.warn("toast() function should be used through the useToast hook within a component")
