@@ -1,29 +1,4 @@
-{/* Registration Information */}
-          <section className="mb-16">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 px-8 rounded-lg">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-4">Official Registration</h2>
-                <p className="text-lg opacity-90">Accredited by TVETA</p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8 text-center">
-                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                  <h3 className="text-xl font-bold mb-4">TVETA Registration</h3>
-                  <p className="text-lg">Registration Certificate Number:</p>
-                  <p className="text-xl font-mono bg-white/20 px-4 py-2 rounded mt-2">TVETA/ASS/7/3440K (2)</p>
-                  <p className="text-sm opacity-80 mt-2">Registered: November 2019</p>
-                </div>
-                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                  <h3 className="text-xl font-bold mb-4">Centre of Excellence</h3>
-                  <p className="text-lg">Specialization:</p>
-                  <p className="text-xl font-semibold bg-white/20 px-4 py-2 rounded mt-2">Building and Civil Engineering (BCE)</p>
-                  <p className="text-sm opacity-80 mt-2">Government Recognized</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          
 import type { Metadata } from "next";
-import Image from "next/image";
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -62,10 +37,10 @@ export default function AboutPage() {
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <h2 className="text-3xl font-bold text-gray-800 mb-6">About Our Institution</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Kongoni TVC is a Government Sponsored Institution under the Ministry of Education. It was established with the core mandate of equipping youths with skills needed to secure employment in today's market. The institution opened its doors to the first batch of students in October 2019.
+                Kongoni TVC is a Government Sponsored Institution under the Ministry of Education. It was established with the core mandate of equipping youths with skills needed to secure employment in today&apos;s market. The institution opened its doors to the first batch of students in October 2019.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                The institution is well equipped to offer courses ranging from ICT, Business to Engineering courses at certificate and diploma level. It's a Centre of Excellence in Building and Civil Engineering.
+                The institution is well equipped to offer courses ranging from ICT, Business to Engineering courses at certificate and diploma level. It&apos;s a Centre of Excellence in Building and Civil Engineering.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Kongoni Technical and Vocational College is located in Likuyani Sub-County of Kakamega County next to Likuyani Sub County Headquarters along Kitale-Eldoret Road. It is situated in serene environment, which is conducive for learning and personal development. We strive to produce job creators rather than job seekers.
@@ -100,6 +75,30 @@ export default function AboutPage() {
             </div>
           </section>
 
+          {/* Registration Information */}
+          <section className="mb-16">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 px-8 rounded-lg">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold mb-4">Official Registration</h2>
+                <p className="text-lg opacity-90">Accredited by TVETA</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8 text-center">
+                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                  <h3 className="text-xl font-bold mb-4">TVETA Registration</h3>
+                  <p className="text-lg">Registration Certificate Number:</p>
+                  <p className="text-xl font-mono bg-white/20 px-4 py-2 rounded mt-2">TVETA/ASS/7/3440K (2)</p>
+                  <p className="text-sm opacity-80 mt-2">Registered: November 2019</p>
+                </div>
+                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                  <h3 className="text-xl font-bold mb-4">Centre of Excellence</h3>
+                  <p className="text-lg">Specialization:</p>
+                  <p className="text-xl font-semibold bg-white/20 px-4 py-2 rounded mt-2">Building and Civil Engineering (BCE)</p>
+                  <p className="text-sm opacity-80 mt-2">Government Recognized</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Objectives and Core Values */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Our Objectives & Core Values</h2>
@@ -110,7 +109,7 @@ export default function AboutPage() {
                 <ul className="space-y-4 text-gray-600">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>Achieve and maintain a level of quality training which enhances the institution's reputation with customers.</span>
+                    <span>Achieve and maintain a level of quality training which enhances the institution&apos;s reputation with customers.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -248,7 +247,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">State of Art Training Equipment</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  KTVC proudly holds the stature of one of the country's most equipped colleges in terms of modern training equipment and experienced staff.
+                  KTVC proudly holds the stature of one of the country&apos;s most equipped colleges in terms of modern training equipment and experienced staff.
                 </p>
               </div>
 

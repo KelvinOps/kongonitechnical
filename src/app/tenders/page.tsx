@@ -150,7 +150,7 @@ export default function TendersPage() {
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredAndSortedTenders = useMemo(() => {
-    let filtered = tenderData.filter((tender) => {
+    const filtered = tenderData.filter((tender) => {
       const matchesSearch = tender.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            tender.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All Categories' || tender.category === selectedCategory;

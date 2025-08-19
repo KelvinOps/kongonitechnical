@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { LucideIcon } from "lucide-react";
 
-// Import Lucide React icons
+// Import Lucide React icons - Removed unused imports
 import { 
   Laptop, 
   Zap, 
@@ -25,16 +25,13 @@ import {
   Paintbrush, 
   Map, 
   HandHeart, 
-  GraduationCap,
   Settings,
   Building,
   Search,
   Clock,
   ArrowLeft,
-  Briefcase,
   Star,
   Target,
-  Award,
   Shield
 } from "lucide-react";
 
@@ -237,7 +234,7 @@ export default function NitaCoursesPage() {
           <p className="text-gray-600">
             Showing <span className="font-semibold">{filteredCourses.length}</span> NITA course{filteredCourses.length !== 1 ? 's' : ''}
             {searchTerm && (
-              <span> for "<span className="font-semibold">{searchTerm}</span>"</span>
+              <span> for &ldquo;<span className="font-semibold">{searchTerm}</span>&rdquo;</span>
             )}
           </p>
         </div>
@@ -308,7 +305,7 @@ export default function NitaCoursesPage() {
                 No NITA courses found
               </h3>
               <p className="text-gray-600 mb-4">
-                Try adjusting your search terms to find what you're looking for.
+                Try adjusting your search terms to find what you&apos;re looking for.
               </p>
               <Button 
                 onClick={() => setSearchTerm("")}

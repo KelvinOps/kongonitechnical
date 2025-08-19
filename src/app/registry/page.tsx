@@ -16,7 +16,6 @@ import {
   Clock,
   Download,
   CheckCircle,
-  Calendar,
   Database,
   Shield,
   Search
@@ -107,7 +106,7 @@ const staff = [
     position: "Registrar",
     qualification: "MA Educational Administration",
     image: "/api/placeholder/200/250",
-    email: "registrar@kongonicollege.ac.ke",
+    email: "registrar@kongonitechnical.ac.ke",
     phone: "+254 700 345 678"
   },
   {
@@ -115,7 +114,7 @@ const staff = [
     position: "Deputy Registrar",
     qualification: "BA Records Management",
     image: "/api/placeholder/200/250",
-    email: "deputy.registrar@kongonicollege.ac.ke", 
+    email: "deputy.registrar@kongonitechnical.ac.ke", 
     phone: "+254 700 345 679"
   },
   {
@@ -123,7 +122,7 @@ const staff = [
     position: "Records Officer",
     qualification: "Diploma in Records Management",
     image: "/api/placeholder/200/250",
-    email: "records@kongonicollege.ac.ke",
+    email: "records@kongonitechnical.ac.ke",
     phone: "+254 700 345 680"
   }
 ];
@@ -284,7 +283,7 @@ export default function RegistryPage() {
         {/* Quick Links */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Quick Links & Downloads
+            Quick Links &amp; Downloads
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="hover:shadow-lg transition-shadow cursor-pointer">
@@ -328,7 +327,7 @@ export default function RegistryPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Clock className="text-[#099cca]" />
-                  Office Hours & Processing Times
+                  Office Hours &amp; Processing Times
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -469,7 +468,7 @@ export default function RegistryPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <div className="flex items-center justify-center gap-2">
                   <Mail className="text-[#099cca]" size={16} />
-                  <span>registry@kongonicollege.ac.ke</span>
+                  <span>registry@kongonitechnical.ac.ke</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="text-[#099cca]" size={16} />

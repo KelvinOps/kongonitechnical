@@ -235,7 +235,7 @@ export default function ArtisanCoursesPage() {
           <p className="text-gray-600">
             Showing <span className="font-semibold">{filteredCourses.length}</span> artisan program{filteredCourses.length !== 1 ? 's' : ''}
             {searchTerm && (
-              <span> for "<span className="font-semibold">{searchTerm}</span>"</span>
+              <span> for &ldquo;<span className="font-semibold">{searchTerm}</span>&rdquo;</span>
             )}
           </p>
         </div>
@@ -306,7 +306,7 @@ export default function ArtisanCoursesPage() {
                 No artisan programs found
               </h3>
               <p className="text-gray-600 mb-4">
-                Try adjusting your search terms to find what you're looking for.
+                Try adjusting your search terms to find what you&apos;re looking for.
               </p>
               <Button 
                 onClick={() => setSearchTerm("")}
@@ -324,7 +324,7 @@ export default function ArtisanCoursesPage() {
             Master Your Craft with Artisan Training
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Our artisan programs provide intensive, hands-on training in skilled trades. With short duration and focused curriculum, you'll quickly gain the practical skills employers are looking for.
+            Our artisan programs provide intensive, hands-on training in skilled trades. With short duration and focused curriculum, you&apos;ll quickly gain the practical skills employers are looking for.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link href="/admissions">

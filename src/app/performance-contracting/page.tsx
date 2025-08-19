@@ -20,11 +20,9 @@ import {
   FileText,
   PieChart,
   Activity,
-  Star,
   ArrowUp,
   Building,
   GraduationCap,
-  BookOpen,
   Briefcase,
   DollarSign,
   Shield
@@ -266,7 +264,7 @@ export default function PerformanceContractPage() {
                 <div className="text-center">
                   <Image
                     src="/api/placeholder/300/300"
-                    alt="Dr. Sarah Mwangi"
+                    alt="Performance Contract Officer"
                     width={300}
                     height={300}
                     className="rounded-full mx-auto mb-4 shadow-md"
@@ -277,13 +275,13 @@ export default function PerformanceContractPage() {
                 </div>
                 <div className="lg:col-span-2">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Mrs.
+                    Mr. John Doe
                   </h2>
                   <p className="text-lg text-gray-700 mb-4">
                     PhD in Strategic Management, MBA in Performance Management
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Mr.  is a seasoned strategic management professional with over 15 years of experience in performance contracting and institutional development. She leads our performance monitoring initiatives, ensuring that KTVC maintains the highest standards of excellence and accountability in all operational areas.
+                    Mr. John Doe is a seasoned strategic management professional with over 15 years of experience in performance contracting and institutional development. He leads our performance monitoring initiatives, ensuring that KTVC maintains the highest standards of excellence and accountability in all operational areas.
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-4 text-sm">

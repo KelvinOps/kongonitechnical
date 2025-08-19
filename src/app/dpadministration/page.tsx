@@ -146,7 +146,7 @@ export default function DPAdministrationPage() {
                     Educational Management
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Mr. Tarian brings experience in educational administration and financial management. She has been instrumental in transforming institutional operations through strategic planning and innovative management approaches. Her leadership has resulted in significant improvements in operational efficiency and resource utilization.
+                    Mr. Tarian brings experience in educational administration and financial management. He has been instrumental in transforming institutional operations through strategic planning and innovative management approaches. His leadership has resulted in significant improvements in operational efficiency and resource utilization.
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
@@ -365,7 +365,7 @@ export default function DPAdministrationPage() {
                 Get in Touch
               </h2>
               <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-                For administrative matters, financial inquiries, or planning discussions, don't hesitate to contact our office.
+                For administrative matters, financial inquiries, or planning discussions, don&apos;t hesitate to contact our office.
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <div className="flex items-center justify-center gap-2">

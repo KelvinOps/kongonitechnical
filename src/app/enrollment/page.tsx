@@ -1,7 +1,7 @@
-// app/enrollment/page.tsx - Optional enrollment page
+// app/enrollment/page.tsx - Fixed enrollment page
 
 import type { Metadata } from "next";
-import { Calendar, Clock, FileText, Users, CheckCircle, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "Enrollment",
@@ -102,7 +102,7 @@ export default function EnrollmentPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {intakePeriods.map((intake, index) => (
+            {intakePeriods.map((intake) => (
               <div 
                 key={intake.name}
                 className={`rounded-xl p-8 transition-all duration-300 hover:shadow-lg ${
@@ -217,7 +217,7 @@ export default function EnrollmentPage() {
             Ready to Begin Your Journey?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Don't wait! Start your application today and take the first step 
+            Don&apos;t wait! Start your application today and take the first step 
             towards a successful technical career.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

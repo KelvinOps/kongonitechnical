@@ -15,7 +15,6 @@ import {
   GraduationCap,
   FileText,
   Filter,
-  SortAsc,
   ChevronDown
 } from "lucide-react";
 
@@ -129,7 +128,7 @@ export default function CareersPage() {
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredAndSortedJobs = useMemo(() => {
-    let filtered = jobOpenings.filter((job) => {
+    const filtered = jobOpenings.filter((job) => {
       const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            job.department.toLowerCase().includes(searchTerm.toLowerCase());
@@ -426,7 +425,7 @@ export default function CareersPage() {
               </p>
               <h4 className="font-semibold text-foreground mb-2">Key Requirements:</h4>
               <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                <li>• Bachelor's degree in Accounting/Finance</li>
+                <li>• Bachelor&apos;s degree in Accounting/Finance</li>
                 <li>• CPA certification preferred</li>
                 <li>• Internal audit experience required</li>
                 <li>• Minimum 3 years experience</li>
@@ -482,7 +481,7 @@ export default function CareersPage() {
                 <h4 className="font-semibold text-foreground mb-2">Application Guidelines:</h4>
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
                   <li>• Submit applications before 5:00 PM on the deadline</li>
-                  <li>• Include "Position Title" in email subject</li>
+                  <li>• Include &quot;Position Title&quot; in email subject</li>
                   <li>• Attach documents in PDF format only</li>
                   <li>• Maximum attachment size: 5MB</li>
                 </ul>
@@ -514,7 +513,7 @@ export default function CareersPage() {
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
               <MapPin className="text-[#099cca] w-12 h-12 mx-auto mb-4" />
-              <h3 className="font-semivold text-foreground mb-2">Great Location</h3>
+              <h3 className="font-semibold text-foreground mb-2">Great Location</h3>
               <p className="text-gray-700 dark:text-gray-300 text-sm">Modern campus with excellent facilities</p>
             </div>
           </div>

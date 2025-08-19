@@ -16,7 +16,6 @@ import {
   Clock,
   Target,
   CheckCircle,
-  FileText,
   Lightbulb
 } from "lucide-react";
 
@@ -213,7 +212,7 @@ export default function DPAcademicsPage() {
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center gap-2">
                       <Mail className="text-[#099cca]" size={16} />
-                      <span>dp.academics@kongonicollege.ac.ke</span>
+                      <span>dp.academics@kongonitechnical.ac.ke</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone className="text-[#099cca]" size={16} />
@@ -464,7 +463,7 @@ export default function DPAcademicsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <div className="flex items-center justify-center gap-2">
                   <Mail className="text-[#099cca]" size={16} />
-                  <span>dp.academics@kongonicollege.ac.ke</span>
+                  <span>dp.academics@kongonitechnical.ac.ke</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="text-[#099cca]" size={16} />

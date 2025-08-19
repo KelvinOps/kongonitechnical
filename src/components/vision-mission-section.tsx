@@ -40,7 +40,7 @@ export default function VisionMissionSection() {
               </h3>
               <div className="w-12 h-0.5 bg-cyan-500 mx-auto mb-6"></div>
               <p className="text-gray-700 text-center leading-relaxed italic">
-                "To be the top-rated technical and vocational college in technical training, innovation, and action research in Kenya and beyond."
+                &ldquo;To be the top-rated technical and vocational college in technical training, innovation, and action research in Kenya and beyond.&rdquo;
               </p>
             </div>
             {/* Decorative Element */}
@@ -59,7 +59,7 @@ export default function VisionMissionSection() {
               </h3>
               <div className="w-12 h-0.5 bg-cream-500 mx-auto mb-6"></div>
               <p className="text-gray-700 text-center leading-relaxed italic">
-                "To provide quality technical and vocational training in collaboration with stakeholders to produce highly skilled and innovative human resource."
+                &ldquo;To provide quality technical and vocational training in collaboration with stakeholders to produce highly skilled and innovative human resource.&rdquo;
               </p>
             </div>
             {/* Decorative Element */}
@@ -80,7 +80,7 @@ export default function VisionMissionSection() {
               </h3>
               <div className="w-12 h-0.5 bg-gradient-to-r from-cyan-500 to-cream-500 mx-auto mb-6"></div>
               <p className="text-gray-700 text-center leading-relaxed italic font-semibold">
-                "Technology and innovation to meet societal needs."
+                &ldquo;Technology and innovation to meet societal needs.&rdquo;
               </p>
             </div>
             {/* Decorative Element */}

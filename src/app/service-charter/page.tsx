@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,8 +13,7 @@ import {
   Scale,
   Users,
   Clock,
-  CheckCircle,
-  ExternalLink
+  CheckCircle
 } from "lucide-react";
 
 export default function ServiceCharterPage() {
@@ -43,7 +43,7 @@ export default function ServiceCharterPage() {
         </div>
       </div>
       
-      {/* Document Display - Using placeholder content */}
+      {/* Document Display */}
       <div className="relative bg-gray-100 min-h-[600px]">
         <div className="p-8 text-center">
           {/* KSTVET Header */}
@@ -62,7 +62,7 @@ export default function ServiceCharterPage() {
             </div>
           </div>
 
-          {/* Charter Document Image - Enhanced */}
+          {/* Charter Document Image */}
           <div className="flex justify-center mb-8">
             <div 
               className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105"
@@ -72,48 +72,31 @@ export default function ServiceCharterPage() {
               }}
             >
               <div className="relative w-64 h-80 bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 hover:shadow-3xl transition-shadow duration-300">
-                {/* Elegant frame effect */}
                 <div className="absolute inset-2 border-2 border-gray-100 rounded-lg"></div>
                 
-                <img 
+                <Image 
                   src={isKiswahili ? "/documents/KiswahiliCharter.jpg" : "/documents/EnglishCharter.jpg"}
                   alt={isKiswahili ? "Kiswahili Charter Preview" : "English Charter Preview"}
+                  width={256}
+                  height={320}
                   className="w-full h-full object-cover p-3 rounded-xl"
-                  onError={(e) => {
-                    // Fallback if image doesn't load
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.nextElementSibling.style.display = 'flex';
-                  }}
                 />
                 
-                {/* Fallback content if image fails to load */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center text-gray-400 text-sm text-center p-4" style={{ display: 'none' }}>
-                  <div>
-                    <FileText className="w-16 h-16 mx-auto mb-4 text-gray-300" />
-                    <div className="font-semibold">Charter Document</div>
-                    <div className="text-xs mt-2 text-gray-500">Preview Unavailable</div>
-                  </div>
-                </div>
-                
-                {/* Hover overlay with zoom hint */}
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                   <div className="bg-white bg-opacity-90 rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
                     <Eye className="w-6 h-6 text-gray-700" />
                   </div>
                 </div>
                 
-                {/* Document type badge */}
                 <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg ${
                   isKiswahili ? 'bg-secondary text-gray-800' : 'bg-primary'
                 }`}>
                   {isKiswahili ? 'Kiswahili' : 'English'}
                 </div>
                 
-                {/* Subtle shine effect */}
                 <div className="absolute -top-1 -left-1 w-16 h-16 bg-gradient-to-br from-white to-transparent opacity-30 rounded-full blur-sm"></div>
               </div>
               
-              {/* Document title below */}
               <div className="text-center mt-4">
                 <h4 className="font-semibold text-gray-800 text-lg">
                   {isKiswahili ? 'Mithaq wa Huduma' : 'Service Charter'}
@@ -195,8 +178,8 @@ export default function ServiceCharterPage() {
             <Button 
               variant="outline" 
               size="sm"
-              className={`${isKiswahili ? 'border-secondary text-secondary hover:bg-secondary/10' : 'border-primary text-primary hover:bg-primary/10'}`}
-              onClick={() => window.open(src, '_blank')}
+              className="border-primary text-primary hover:bg-primary/10"
+              onClick={() => window.open('/documents/service-charter.pdf', '_blank')}
             >
               <Download className="w-4 h-4 mr-2" />
               Download PDF

@@ -1,4 +1,4 @@
-// app/governing-council/page.tsx
+// app/bog/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,8 +7,8 @@ import { Users, Award, FileText, Calendar, Mail, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Board of Governance | Kongoni Technical Vocational Training College",
-  description: "Meet the Governing Council of Kongoni Technical Vocational Training College - dedicated leaders overseeing the strategic direction and governance of the institution.",
-  keywords: "governing council, leadership, governance, board members, institutional leadership",
+  description: "Meet the Board of Governance of Kongoni Technical Vocational Training College - dedicated leaders overseeing the strategic direction and governance of the institution.",
+  keywords: "Board of Governance, leadership, governance, board members, institutional leadership",
 };
 
 // Mock data - replace with actual data
@@ -20,7 +20,7 @@ const councilMembers = [
     qualification: "PhD in Educational Leadership",
     image: "/api/placeholder/300/400",
     bio: "Dr. Wanjiku brings over 20 years of experience in educational leadership and governance.",
-    email: "chair@kongonicollege.ac.ke",
+    email: "chair@kongonitechnical.ac.ke",
     phone: "+254 700 000 001"
   },
   {
@@ -30,7 +30,7 @@ const councilMembers = [
     qualification: "M.Eng, Registered Engineer",
     image: "/api/placeholder/300/400",
     bio: "Eng. Kipchoge is a seasoned engineering professional with expertise in technical education.",
-    email: "vice.chair@kongonicollege.ac.ke",
+    email: "vice.chair@kongonitechnical.ac.ke",
     phone: "+254 700 000 002"
   },
   {
@@ -40,7 +40,7 @@ const councilMembers = [
     qualification: "PhD in Business Administration",
     image: "/api/placeholder/300/400",
     bio: "Prof. Mwangi specializes in institutional management and strategic planning.",
-    email: "s.mwangi@kongonicollege.ac.ke",
+    email: "s.mwangi@kongonitechnical.ac.ke",
     phone: "+254 700 000 003"
   },
   {
@@ -50,7 +50,7 @@ const councilMembers = [
     qualification: "PhD in Technical Education",
     image: "/api/placeholder/300/400",
     bio: "Dr. Ochieng has extensive experience in curriculum development and quality assurance.",
-    email: "p.ochieng@kongonicollege.ac.ke",
+    email: "p.ochieng@kongonitechnical.ac.ke",
     phone: "+254 700 000 004"
   },
   {
@@ -60,7 +60,7 @@ const councilMembers = [
     qualification: "MBA, Legal Affairs",
     image: "/api/placeholder/300/400",
     bio: "Ms. Akinyi oversees governance compliance and institutional legal matters.",
-    email: "secretary@kongonicollege.ac.ke",
+    email: "secretary@kongonitechnical.ac.ke",
     phone: "+254 700 000 005"
   },
 ];
@@ -90,7 +90,7 @@ export default function GoverningCouncilPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Governing Council
+              Board of Governance
             </h1>
             <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
               Providing strategic leadership and governance oversight to ensure excellence in technical and vocational education
@@ -109,16 +109,16 @@ export default function GoverningCouncilPage() {
                 Our Mandate
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                The Governing Council serves as the highest decision-making body of Kongoni Technical Vocational Training College. We are committed to providing strategic oversight, ensuring academic excellence, and fostering institutional growth.
+                The Board of Governance serves as the highest decision-making body of Kongoni Technical Vocational Training College. We are committed to providing strategic oversight, ensuring academic excellence, and fostering institutional growth.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our council comprises distinguished professionals from various fields, bringing diverse expertise to guide the college's mission of empowering trainees through digital innovation and technical excellence.
+                Our council comprises distinguished professionals from various fields, bringing diverse expertise to guide the college&apos;s mission of empowering trainees through digital innovation and technical excellence.
               </p>
             </div>
             <div className="relative">
               <Image
                 src="/api/placeholder/600/400"
-                alt="Governing Council Meeting"
+                alt="Board of Governance Meeting"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg"
@@ -275,7 +275,7 @@ export default function GoverningCouncilPage() {
           <Card className="bg-gradient-to-r from-[#099cca]/10 to-[#277DF5]/10">
             <CardContent className="p-8 text-center">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Contact the Governing Council
+                Contact the Board of Governance 
               </h2>
               <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
                 For matters requiring council attention or to schedule meetings with council members, please contact our secretariat.
@@ -283,7 +283,7 @@ export default function GoverningCouncilPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <div className="flex items-center gap-2">
                   <Mail className="text-[#099cca]" />
-                  <span>council@kongonicollege.ac.ke</span>
+                  <span>council@kongonitechnical.ac.ke</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="text-[#099cca]" />

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { departments } from "@/data/departments";
 import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 
 export default function DepartmentPage({ params }: { params: { id: string } }) {
   const department = departments.find((dept) => dept.id === params.id);
@@ -36,9 +37,11 @@ export default function DepartmentPage({ params }: { params: { id: string } }) {
           </div>
           
           <div className="lg:w-80 flex flex-col items-center">
-            <img
+            <Image
               src={department.hodImage}
               alt={`Head of Department - ${department.hodName}`}
+              width={192}
+              height={192}
               className="w-48 h-48 object-cover rounded-full shadow-lg mb-4"
             />
             <div className="flex space-x-4">
@@ -130,10 +133,12 @@ export default function DepartmentPage({ params }: { params: { id: string } }) {
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Trainee Activities</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {(department.activityImages || []).map((img, i) => (
-              <img
+              <Image
                 key={i}
                 src={img}
                 alt={`Activity ${i + 1}`}
+                width={400}
+                height={300}
                 className="w-full h-48 object-cover rounded shadow-md hover:shadow-lg transition-shadow"
               />
             ))}

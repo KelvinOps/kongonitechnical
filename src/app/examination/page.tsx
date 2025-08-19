@@ -18,7 +18,6 @@ import {
   AlertCircle,
   Download,
   Shield,
-  Target,
   TrendingUp,
   Bell
 } from "lucide-react";
@@ -202,7 +201,7 @@ export default function ExaminationsPage() {
                     Bachelor of Education
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Mr. Kimanzi brings experience in examination management and assessment coordination. He has been instrumental in establishing robust examination systems that maintain the highest standards of integrity and efficiency. His expertise spans across all major certification bodies in Kenya's TVET sector.
+                    Mr. Kimanzi brings experience in examination management and assessment coordination. He has been instrumental in establishing robust examination systems that maintain the highest standards of integrity and efficiency. His expertise spans across all major certification bodies in Kenya&apos;s TVET sector.
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
@@ -383,7 +382,7 @@ export default function ExaminationsPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Download className="text-[#099cca]" />
-                  Downloads & Resources
+                  Downloads &amp; Resources
                 </CardTitle>
               </CardHeader>
               <CardContent>

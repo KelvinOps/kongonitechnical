@@ -223,7 +223,7 @@ export default function CertificateCoursesPage() {
           <p className="text-gray-600">
             Showing <span className="font-semibold">{filteredCourses.length}</span> certificate program{filteredCourses.length !== 1 ? 's' : ''}
             {searchTerm && (
-              <span> for "<span className="font-semibold">{searchTerm}</span>"</span>
+              <span> for &ldquo;<span className="font-semibold">{searchTerm}</span>&rdquo;</span>
             )}
           </p>
         </div>
@@ -294,7 +294,7 @@ export default function CertificateCoursesPage() {
                 No certificate programs found
               </h3>
               <p className="text-gray-600 mb-4">
-                Try adjusting your search terms to find what you're looking for.
+                Try adjusting your search terms to find what you&apos;re looking for.
               </p>
               <Button 
                 onClick={() => setSearchTerm("")}

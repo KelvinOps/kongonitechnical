@@ -227,7 +227,7 @@ export default function DiplomaCoursesPage() {
           <p className="text-gray-600">
             Showing <span className="font-semibold">{filteredCourses.length}</span> diploma program{filteredCourses.length !== 1 ? 's' : ''}
             {searchTerm && (
-              <span> for "<span className="font-semibold">{searchTerm}</span>"</span>
+              <span> for &quot;<span className="font-semibold">{searchTerm}</span>&quot;</span>
             )}
           </p>
         </div>
@@ -298,7 +298,7 @@ export default function DiplomaCoursesPage() {
                 No diploma programs found
               </h3>
               <p className="text-gray-600 mb-4">
-                Try adjusting your search terms to find what you're looking for.
+                Try adjusting your search terms to find what you&apos;re looking for.
               </p>
               <Button 
                 onClick={() => setSearchTerm("")}
@@ -316,7 +316,7 @@ export default function DiplomaCoursesPage() {
             Advance Your Career with a Diploma
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Our diploma programs provide comprehensive education and advanced skills training. With strong industry connections and university transfer opportunities, you'll be well-prepared for professional success.
+            Our diploma programs provide comprehensive education and advanced skills training. With strong industry connections and university transfer opportunities, you&apos;ll be well-prepared for professional success.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link href="/admissions">

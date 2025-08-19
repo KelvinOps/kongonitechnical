@@ -1,73 +1,106 @@
 "use client";
 
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
-import { insertContactSchema } from "@shared/schema";
-import type { InsertContact } from "@shared/schema";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Clock,
+  Send,
+  CheckCircle
+} from "lucide-react";
+
+interface ContactForm {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 export default function ContactPage() {
-  const { toast } = useToast();
-
-  const form = useForm<InsertContact>({
-    resolver: zodResolver(insertContactSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    },
+  const [formData, setFormData] = useState<ContactForm>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<Partial<ContactForm>>({});
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
+  const validateForm = (): boolean => {
+    const newErrors: Partial<ContactForm> = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid";
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleInputChange = (field: keyof ContactForm, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: undefined }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
       const response = await fetch("/api/contacts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message Sent Successfully!",
-        description: "We have received your message and will respond soon.",
+      setIsSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
-      form.reset();
-    },
-    onError: (error) => {
-      toast({
-        title: "Failed to Send Message",
-        description: "There was an error sending your message. Please try again.",
-        variant: "destructive",
-      });
+    } catch (error) {
       console.error("Contact error:", error);
-    },
-  });
-
-  const onSubmit = (data: InsertContact) => {
-    contactMutation.mutate(data);
+      // You could add error toast here if you have a toast system
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -89,73 +122,107 @@ export default function ContactPage() {
                   <CardTitle>Send us a Message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Full Name</FormLabel>
-                            <FormControl>
-                              <Input {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
+                  {isSubmitted ? (
+                    <div className="text-center py-8">
+                      <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                        Message Sent Successfully!
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        We have received your message and will respond soon.
+                      </p>
+                      <Button 
+                        onClick={() => setIsSubmitted(false)}
+                        variant="outline"
+                      >
+                        Send Another Message
+                      </Button>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                          Full Name
+                        </label>
+                        <Input
+                          id="name"
+                          type="text"
+                          value={formData.name}
+                          onChange={(e) => handleInputChange("name", e.target.value)}
+                          className={errors.name ? "border-red-500" : ""}
+                        />
+                        {errors.name && (
+                          <p className="text-red-500 text-sm mt-1">{errors.name}</p>
                         )}
-                      />
+                      </div>
 
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email Address</FormLabel>
-                            <FormControl>
-                              <Input type="email" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                          Email Address
+                        </label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) => handleInputChange("email", e.target.value)}
+                          className={errors.email ? "border-red-500" : ""}
+                        />
+                        {errors.email && (
+                          <p className="text-red-500 text-sm mt-1">{errors.email}</p>
                         )}
-                      />
+                      </div>
 
-                      <FormField
-                        control={form.control}
-                        name="subject"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Subject</FormLabel>
-                            <FormControl>
-                              <Input {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
+                      <div>
+                        <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                          Subject
+                        </label>
+                        <Input
+                          id="subject"
+                          type="text"
+                          value={formData.subject}
+                          onChange={(e) => handleInputChange("subject", e.target.value)}
+                          className={errors.subject ? "border-red-500" : ""}
+                        />
+                        {errors.subject && (
+                          <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
                         )}
-                      />
+                      </div>
 
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Message</FormLabel>
-                            <FormControl>
-                              <Textarea {...field} rows={5} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
+                      <div>
+                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                          Message
+                        </label>
+                        <Textarea
+                          id="message"
+                          rows={5}
+                          value={formData.message}
+                          onChange={(e) => handleInputChange("message", e.target.value)}
+                          className={errors.message ? "border-red-500" : ""}
+                        />
+                        {errors.message && (
+                          <p className="text-red-500 text-sm mt-1">{errors.message}</p>
                         )}
-                      />
+                      </div>
 
                       <Button
                         type="submit"
-                        className="w-full bg-primary text-white hover:bg-secondary transition-colors"
-                        disabled={contactMutation.isPending}
+                        className="w-full bg-[#099cca] text-white hover:bg-[#277DF5] transition-colors"
+                        disabled={isSubmitting}
                       >
-                        {contactMutation.isPending ? "Sending..." : "Send Message"}
+                        {isSubmitting ? (
+                          <div className="flex items-center gap-2">
+                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                            Sending...
+                          </div>
+                        ) : (
+                          <div className="flex items-center gap-2">
+                            <Send className="w-4 h-4" />
+                            Send Message
+                          </div>
+                        )}
                       </Button>
                     </form>
-                  </Form>
+                  )}
                 </CardContent>
               </Card>
             </div>
@@ -165,7 +232,7 @@ export default function ContactPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <i className="fas fa-map-marker-alt text-primary mr-3"></i>
+                    <MapPin className="text-[#099cca] mr-3 w-5 h-5" />
                     Location
                   </CardTitle>
                 </CardHeader>
@@ -181,7 +248,7 @@ export default function ContactPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <i className="fas fa-phone text-primary mr-3"></i>
+                    <Phone className="text-[#099cca] mr-3 w-5 h-5" />
                     Phone
                   </CardTitle>
                 </CardHeader>
@@ -193,7 +260,7 @@ export default function ContactPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <i className="fas fa-envelope text-primary mr-3"></i>
+                    <Mail className="text-[#099cca] mr-3 w-5 h-5" />
                     Email
                   </CardTitle>
                 </CardHeader>
@@ -205,7 +272,7 @@ export default function ContactPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <i className="fas fa-clock text-primary mr-3"></i>
+                    <Clock className="text-[#099cca] mr-3 w-5 h-5" />
                     Office Hours
                   </CardTitle>
                 </CardHeader>

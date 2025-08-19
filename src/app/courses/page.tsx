@@ -7,7 +7,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
 import { LucideIcon } from "lucide-react";
 
-// Import Lucide React icons
+// Import Lucide React icons - Removed unused imports
 import { 
   Laptop, 
   Zap, 
@@ -24,8 +24,6 @@ import {
   GraduationCap,
   Settings,
   Building,
-  Briefcase,
-  BookOpen,
   Car,
   Clock
 } from "lucide-react";
@@ -256,7 +254,7 @@ export default function CoursesSection() {
           </h3>
           <p className="text-gray-600 mb-6">{typeInfo.description}</p>
           <Link href={typeInfo.navPath}>
-            <Button variant="outline" size="lg" className={`text-${typeInfo.color}-600 border-${typeInfo.color}-600 hover:bg-${typeInfo.color}-600 hover:text-white`}>
+            <Button variant="outline" size="lg" className="text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white">
               View All {typeInfo.label} →
             </Button>
           </Link>
@@ -265,7 +263,7 @@ export default function CoursesSection() {
           {courses.map((course, index) => {
             const IconComponent = getIcon(course.title, course.type);
             return (
-              <Card key={course.id} className={`p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-${typeInfo.color}-500`}>
+              <Card key={course.id} className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-blue-500">
                 <div className="flex items-start space-x-4">
                   <div className={`w-12 h-12 ${getIconColor(index)} rounded-lg flex items-center justify-center flex-shrink-0`}>
                     <IconComponent className="text-white w-6 h-6" />
@@ -279,7 +277,7 @@ export default function CoursesSection() {
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex flex-col">
-                        <span className={`text-${typeInfo.color}-600 font-semibold`}>
+                        <span className="text-blue-600 font-semibold">
                           {course.duration}
                         </span>
                         {course.level && (
@@ -289,7 +287,7 @@ export default function CoursesSection() {
                         )}
                       </div>
                       <Link href={`/courses/${course.id}`}>
-                        <Button variant="link" className={`text-${typeInfo.color}-600 hover:text-${typeInfo.color}-800 font-medium p-0`}>
+                        <Button variant="link" className="text-blue-600 hover:text-blue-800 font-medium p-0">
                           Learn More
                         </Button>
                       </Link>

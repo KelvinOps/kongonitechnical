@@ -553,7 +553,7 @@ export default function CourseDetailPage() {
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Course Not Found</h1>
-          <p className="text-gray-600 mb-6">The course you're looking for doesn't exist or has been removed.</p>
+          <p className="text-gray-600 mb-6">The course you&apos;re looking for doesn&apos;t exist or has been removed.</p>
           <Link href="/courses">
             <Button className="bg-blue-600 hover:bg-blue-700">
               <ArrowLeft className="w-4 h-4 mr-2" />
