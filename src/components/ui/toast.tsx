@@ -263,7 +263,7 @@ export const ToastViewport = React.forwardRef<HTMLDivElement, React.HTMLAttribut
 ToastViewport.displayName = "ToastViewport"
 
 // Toast hook with convenient methods
-export const toast = (props: Omit<ToastProps, "id">) => {
+export const toast = () => {
   // This will be called from components that are wrapped with ToastProvider
   // We'll create a custom hook that can be used outside the provider
   throw new Error("toast() function should be called from within a component that has access to ToastProvider")
