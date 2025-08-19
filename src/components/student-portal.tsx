@@ -1,6 +1,7 @@
+//components/student-portal.tsx
+// 
 "use client";
 
-import { useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -14,7 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { CalendarIcon, PlusIcon, TrashIcon } from "lucide-react";
+import { PlusIcon, TrashIcon } from "lucide-react";
 
 // Enhanced schema for comprehensive application
 const enhancedApplicationSchema = z.object({
@@ -129,7 +130,7 @@ export default function StudentPortal() {
         if (key === 'academicQualifications') {
           formData.append(key, JSON.stringify(value));
         } else if (key === 'academicCertificates' && value) {
-          formData.append(key, value);
+          formData.append(key, value as File);
         } else {
           formData.append(key, String(value));
         }
@@ -768,7 +769,7 @@ export default function StudentPortal() {
                       <FormField
                         control={form.control}
                         name="academicCertificates"
-                        render={({ field: { onChange, value, ...field } }) => (
+                        render={({ field: { onChange, ...field } }) => (
                           <FormItem>
                             <FormLabel>Academic Certificate(s) Attachment (Combined in one PDF file format) *</FormLabel>
                             <FormControl>

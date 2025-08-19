@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function PartnershipsSection() {
   const [mounted, setMounted] = useState(false);
@@ -9,38 +10,38 @@ export default function PartnershipsSection() {
     {
       name: "HELB",
       image: "/images/collaborators/helb.jpg",
-      alt: "Higher Education Loans Board Logo"
+      alt: "Higher Education Loans Board Logo",
     },
-    { 
-      name: "KUCCPS", 
+    {
+      name: "KUCCPS",
       image: "/images/partners/kuccps.jpg",
-      alt: "Kenya Universities and Colleges Central Placement Service Logo"
+      alt: "Kenya Universities and Colleges Central Placement Service Logo",
     },
-    { 
-      name: "KATTI", 
+    {
+      name: "KATTI",
       image: "/images/partners/katti.jpg",
-      alt: "Kenya Association of Technical Training Institutes Logo"
+      alt: "Kenya Association of Technical Training Institutes Logo",
     },
-    { 
-      name: "Ministry of Education", 
+    {
+      name: "Ministry of Education",
       image: "/images/partners/moe.jpg",
-      alt: "Ministry of Education Logo"
+      alt: "Ministry of Education Logo",
     },
-    { 
-      name: "TVETA", 
+    {
+      name: "TVETA",
       image: "/images/partners/tveta.jpg",
-      alt: "Technical and Vocational Education and Training Authority Logo"
+      alt: "Technical and Vocational Education and Training Authority Logo",
     },
-    { 
-      name: "CDACC", 
+    {
+      name: "CDACC",
       image: "/images/partners/cdacc.jpg",
-      alt: "Curriculum Development Assessment and Certification Council Logo"
+      alt: "Curriculum Development Assessment and Certification Council Logo",
     },
-    { 
-      name: "NITA", 
+    {
+      name: "NITA",
       image: "/images/partners/nita.jpg",
-      alt: "National Industrial Training Authority Logo"
-    }
+      alt: "National Industrial Training Authority Logo",
+    },
   ];
 
   useEffect(() => {
@@ -56,7 +57,8 @@ export default function PartnershipsSection() {
               Our Partners & Collaborations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Strong partnerships with industry leaders ensure our graduates are job-ready and competitive
+              Strong partnerships with industry leaders ensure our graduates are
+              job-ready and competitive
             </p>
           </div>
           <div className="animate-pulse bg-gray-200 rounded-lg h-64 w-full" />
@@ -73,7 +75,8 @@ export default function PartnershipsSection() {
             Our Partners & Collaborations
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Strong partnerships with industry leaders ensure our graduates are job-ready and competitive
+            Strong partnerships with industry leaders ensure our graduates are
+            job-ready and competitive
           </p>
         </div>
 
@@ -85,14 +88,16 @@ export default function PartnershipsSection() {
               className="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-all duration-300 text-center group hover:shadow-lg"
             >
               <div className="w-12 h-12 mx-auto mb-2 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <img
+                <Image
                   src={partner.image}
                   alt={partner.alt}
-                  className="w-full h-full object-contain rounded-lg"
+                  width={48}
+                  height={48}
+                  className="object-contain rounded-lg"
                   onError={(e) => {
-                    // Fallback to a placeholder if image fails to load
-                    const target = e.currentTarget as HTMLImageElement;
-                    target.src = "/images/placeholder-logo.png";
+                    // fallback image
+                    (e.target as HTMLImageElement).src =
+                      "/images/placeholder-logo.png";
                   }}
                 />
               </div>

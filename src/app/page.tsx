@@ -14,7 +14,7 @@ import CoursesSection from "@/components/courses-section";
 import ImageGallery from "@/components/image-gallery";
 import NewsSection from "@/components/news-section";
 import PartnershipsSection from "@/components/partnerships-section";
-import StudentPortal from "@/components/student-portal";
+// ❌ Removed unused: import StudentPortal from "@/components/student-portal";
 
 // Loading components for better UX
 const SectionSkeleton = () => (
@@ -24,17 +24,20 @@ const SectionSkeleton = () => (
 // Enhanced metadata for the homepage
 export const metadata: Metadata = {
   title: "Home | Kongoni Technical Vocational Training College",
-  description: "Welcome to Kongoni Technical Vocational Training College - Empowering trainees through digital innovation and technical excellence. Discover our programs, departments, and educational opportunities.",
-  keywords: "technical college, vocational training, diploma courses, certificate courses, artisan programs, Kenya education",
+  description:
+    "Welcome to Kongoni Technical Vocational Training College - Empowering trainees through digital innovation and technical excellence. Discover our programs, departments, and educational opportunities.",
+  keywords:
+    "technical college, vocational training, diploma courses, certificate courses, artisan programs, Kenya education",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Kongoni Technical Vocational Training College",
-    description: "Empowering trainees through digital innovation and technical excellence",
+    description:
+      "Empowering trainees through digital innovation and technical excellence",
     type: "website",
     url: "/",
-  }
+  },
 };
 
 export default function HomePage() {
@@ -48,7 +51,6 @@ export default function HomePage() {
         <ProgramsSection />
       </Suspense>
 
-
       {/* About Section */}
       <Suspense fallback={<SectionSkeleton />}>
         <AboutSection />
@@ -58,7 +60,6 @@ export default function HomePage() {
         <PrincipalNote />
       </Suspense>
 
-      
       {/* NEW: Vision Mission Section - Added after Programs Section */}
       <Suspense fallback={<SectionSkeleton />}>
         <VisionMissionSection />

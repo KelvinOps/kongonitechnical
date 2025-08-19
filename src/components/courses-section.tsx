@@ -23,8 +23,7 @@ import {
   HandHeart, 
   GraduationCap,
   Settings,
-  Building,
-  Briefcase
+  Building
 } from "lucide-react";
 
 // Define the Course interface to replace the shared schema import

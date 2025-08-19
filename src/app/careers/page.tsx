@@ -1,9 +1,6 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import type { Metadata } from "next";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { 
   Search,
   Calendar,
@@ -17,12 +14,6 @@ import {
   Filter,
   ChevronDown
 } from "lucide-react";
-
-// export const metadata: Metadata = {
-//   title: "Careers | Kongoni Technical Vocational Training College",
-//   description: "Join our team at KTVC. Explore current job openings, career opportunities, and build your future in technical education.",
-//   keywords: "careers, jobs, employment, teaching positions, KTVC jobs, technical education careers",
-// };
 
 interface JobOpening {
   title: string;

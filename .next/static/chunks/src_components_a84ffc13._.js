@@ -555,7 +555,7 @@ function VisionMissionSection() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-gray-700 text-center leading-relaxed italic",
-                                                children: '"To be the top-rated technical and vocational college in technical training, innovation, and action research in Kenya and beyond."'
+                                                children: "“To be the top-rated technical and vocational college in technical training, innovation, and action research in Kenya and beyond.”"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/vision-mission-section.tsx",
                                                 lineNumber: 42,
@@ -624,7 +624,7 @@ function VisionMissionSection() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-gray-700 text-center leading-relaxed italic",
-                                                children: '"To provide quality technical and vocational training in collaboration with stakeholders to produce highly skilled and innovative human resource."'
+                                                children: "“To provide quality technical and vocational training in collaboration with stakeholders to produce highly skilled and innovative human resource.”"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/vision-mission-section.tsx",
                                                 lineNumber: 61,
@@ -700,7 +700,7 @@ function VisionMissionSection() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-gray-700 text-center leading-relaxed italic font-semibold",
-                                                children: '"Technology and innovation to meet societal needs."'
+                                                children: "“Technology and innovation to meet societal needs.”"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/vision-mission-section.tsx",
                                                 lineNumber: 82,
@@ -2098,7 +2098,7 @@ function CoursesSection() {
                     children: "Error Loading Courses"
                 }, void 0, false, {
                     fileName: "[project]/src/components/courses-section.tsx",
-                    lineNumber: 117,
+                    lineNumber: 116,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2106,13 +2106,13 @@ function CoursesSection() {
                     children: "Please check your connection or try again later."
                 }, void 0, false, {
                     fileName: "[project]/src/components/courses-section.tsx",
-                    lineNumber: 118,
+                    lineNumber: 117,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/courses-section.tsx",
-            lineNumber: 116,
+            lineNumber: 115,
             columnNumber: 7
         }, this);
     }
@@ -2130,20 +2130,20 @@ function CoursesSection() {
                                 className: "h-10 w-64 mx-auto mb-4"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/courses-section.tsx",
-                                lineNumber: 129,
+                                lineNumber: 128,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Skeleton"], {
                                 className: "h-6 w-96 mx-auto"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/courses-section.tsx",
-                                lineNumber: 130,
+                                lineNumber: 129,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/courses-section.tsx",
-                        lineNumber: 128,
+                        lineNumber: 127,
                         columnNumber: 11
                     }, this),
                     Array.from({
@@ -2155,7 +2155,7 @@ function CoursesSection() {
                                     className: "h-8 w-48 mx-auto mb-6"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 136,
+                                    lineNumber: 135,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2171,7 +2171,7 @@ function CoursesSection() {
                                                         className: "w-12 h-12 rounded-lg"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 141,
+                                                        lineNumber: 140,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2181,14 +2181,14 @@ function CoursesSection() {
                                                                 className: "h-6 w-full mb-2"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                                lineNumber: 143,
+                                                                lineNumber: 142,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Skeleton"], {
                                                                 className: "h-4 w-full mb-3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                                lineNumber: 144,
+                                                                lineNumber: 143,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2198,59 +2198,59 @@ function CoursesSection() {
                                                                         className: "h-4 w-16"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                                        lineNumber: 146,
+                                                                        lineNumber: 145,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Skeleton"], {
                                                                         className: "h-4 w-20"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                                        lineNumber: 147,
+                                                                        lineNumber: 146,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                                lineNumber: 145,
+                                                                lineNumber: 144,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 141,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                lineNumber: 140,
+                                                lineNumber: 139,
                                                 columnNumber: 21
                                             }, this)
                                         }, i, false, {
                                             fileName: "[project]/src/components/courses-section.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 138,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 137,
+                                    lineNumber: 136,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, sectionIndex, true, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 135,
+                            lineNumber: 134,
                             columnNumber: 13
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/courses-section.tsx",
-                lineNumber: 127,
+                lineNumber: 126,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/courses-section.tsx",
-            lineNumber: 126,
+            lineNumber: 125,
             columnNumber: 7
         }, this);
     }
@@ -2269,7 +2269,7 @@ function CoursesSection() {
                             children: "Popular Courses"
                         }, void 0, false, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 166,
+                            lineNumber: 165,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2277,13 +2277,13 @@ function CoursesSection() {
                             children: "Discover our most sought-after diploma, certificate, and artisan programs designed to launch your career"
                         }, void 0, false, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 169,
+                            lineNumber: 168,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/courses-section.tsx",
-                    lineNumber: 165,
+                    lineNumber: 164,
                     columnNumber: 9
                 }, this),
                 diplomaCourses && diplomaCourses.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2297,7 +2297,7 @@ function CoursesSection() {
                                     children: "Featured Diploma Programs"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 178,
+                                    lineNumber: 177,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2309,18 +2309,18 @@ function CoursesSection() {
                                         children: "View All Diplomas"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/courses-section.tsx",
-                                        lineNumber: 182,
+                                        lineNumber: 181,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 181,
+                                    lineNumber: 180,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 177,
+                            lineNumber: 176,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2338,12 +2338,12 @@ function CoursesSection() {
                                                     className: "text-white w-6 h-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/courses-section.tsx",
-                                                    lineNumber: 194,
+                                                    lineNumber: 193,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                lineNumber: 193,
+                                                lineNumber: 192,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2354,7 +2354,7 @@ function CoursesSection() {
                                                         children: course.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 197,
+                                                        lineNumber: 196,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2362,7 +2362,7 @@ function CoursesSection() {
                                                         children: course.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 200,
+                                                        lineNumber: 199,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2373,7 +2373,7 @@ function CoursesSection() {
                                                                 children: course.duration
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                                lineNumber: 204,
+                                                                lineNumber: 203,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2384,47 +2384,47 @@ function CoursesSection() {
                                                                     children: "Learn More"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/courses-section.tsx",
-                                                                    lineNumber: 208,
+                                                                    lineNumber: 207,
                                                                     columnNumber: 29
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                                lineNumber: 207,
+                                                                lineNumber: 206,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 203,
+                                                        lineNumber: 202,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                lineNumber: 196,
+                                                lineNumber: 195,
                                                 columnNumber: 23
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/courses-section.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 191,
                                         columnNumber: 21
                                     }, this)
                                 }, course.id, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 191,
+                                    lineNumber: 190,
                                     columnNumber: 19
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 187,
+                            lineNumber: 186,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/courses-section.tsx",
-                    lineNumber: 176,
+                    lineNumber: 175,
                     columnNumber: 11
                 }, this),
                 certificateCourses && certificateCourses.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2438,7 +2438,7 @@ function CoursesSection() {
                                     children: "Featured Certificate Programs"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 226,
+                                    lineNumber: 225,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2450,18 +2450,18 @@ function CoursesSection() {
                                         children: "View All Certificates"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/courses-section.tsx",
-                                        lineNumber: 230,
+                                        lineNumber: 229,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 229,
+                                    lineNumber: 228,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 225,
+                            lineNumber: 224,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2479,12 +2479,12 @@ function CoursesSection() {
                                                     className: "text-white w-6 h-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/courses-section.tsx",
-                                                    lineNumber: 242,
+                                                    lineNumber: 241,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                lineNumber: 241,
+                                                lineNumber: 240,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2495,7 +2495,7 @@ function CoursesSection() {
                                                         children: course.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 245,
+                                                        lineNumber: 244,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2503,7 +2503,7 @@ function CoursesSection() {
                                                         children: course.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 248,
+                                                        lineNumber: 247,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2514,7 +2514,7 @@ function CoursesSection() {
                                                                 children: course.duration
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                                lineNumber: 252,
+                                                                lineNumber: 251,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2525,47 +2525,47 @@ function CoursesSection() {
                                                                     children: "Learn More"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/courses-section.tsx",
-                                                                    lineNumber: 256,
+                                                                    lineNumber: 255,
                                                                     columnNumber: 29
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                                lineNumber: 255,
+                                                                lineNumber: 254,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 251,
+                                                        lineNumber: 250,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                lineNumber: 244,
+                                                lineNumber: 243,
                                                 columnNumber: 23
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/courses-section.tsx",
-                                        lineNumber: 240,
+                                        lineNumber: 239,
                                         columnNumber: 21
                                     }, this)
                                 }, course.id, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 239,
+                                    lineNumber: 238,
                                     columnNumber: 19
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 235,
+                            lineNumber: 234,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/courses-section.tsx",
-                    lineNumber: 224,
+                    lineNumber: 223,
                     columnNumber: 11
                 }, this),
                 artisanCourses && artisanCourses.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2579,7 +2579,7 @@ function CoursesSection() {
                                     children: "Featured Artisan Programs"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 274,
+                                    lineNumber: 273,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2591,18 +2591,18 @@ function CoursesSection() {
                                         children: "View All Artisan Programs"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/courses-section.tsx",
-                                        lineNumber: 278,
+                                        lineNumber: 277,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 277,
+                                    lineNumber: 276,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 273,
+                            lineNumber: 272,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2620,12 +2620,12 @@ function CoursesSection() {
                                                     className: "text-white w-6 h-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/courses-section.tsx",
-                                                    lineNumber: 290,
+                                                    lineNumber: 289,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                lineNumber: 289,
+                                                lineNumber: 288,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2636,7 +2636,7 @@ function CoursesSection() {
                                                         children: course.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 293,
+                                                        lineNumber: 292,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2644,7 +2644,7 @@ function CoursesSection() {
                                                         children: course.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 296,
+                                                        lineNumber: 295,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2655,7 +2655,7 @@ function CoursesSection() {
                                                                 children: course.duration
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                                lineNumber: 300,
+                                                                lineNumber: 299,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2666,47 +2666,47 @@ function CoursesSection() {
                                                                     children: "Learn More"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/courses-section.tsx",
-                                                                    lineNumber: 304,
+                                                                    lineNumber: 303,
                                                                     columnNumber: 29
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                                lineNumber: 303,
+                                                                lineNumber: 302,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/courses-section.tsx",
-                                                        lineNumber: 299,
+                                                        lineNumber: 298,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/courses-section.tsx",
-                                                lineNumber: 292,
+                                                lineNumber: 291,
                                                 columnNumber: 23
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/courses-section.tsx",
-                                        lineNumber: 288,
+                                        lineNumber: 287,
                                         columnNumber: 21
                                     }, this)
                                 }, course.id, false, {
                                     fileName: "[project]/src/components/courses-section.tsx",
-                                    lineNumber: 287,
+                                    lineNumber: 286,
                                     columnNumber: 19
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 283,
+                            lineNumber: 282,
                             columnNumber: 27
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/courses-section.tsx",
-                    lineNumber: 272,
+                    lineNumber: 271,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2719,28 +2719,28 @@ function CoursesSection() {
                             children: "Explore All Our Courses"
                         }, void 0, false, {
                             fileName: "[project]/src/components/courses-section.tsx",
-                            lineNumber: 321,
+                            lineNumber: 320,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/courses-section.tsx",
-                        lineNumber: 320,
+                        lineNumber: 319,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/courses-section.tsx",
-                    lineNumber: 319,
+                    lineNumber: 318,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/courses-section.tsx",
-            lineNumber: 164,
+            lineNumber: 163,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/courses-section.tsx",
-        lineNumber: 163,
+        lineNumber: 162,
         columnNumber: 5
     }, this);
 }
@@ -3154,20 +3154,20 @@ function NewsSection() {
                                 className: "h-10 bg-gray-200 rounded w-64 mx-auto mb-4 animate-pulse"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/news-section.tsx",
-                                lineNumber: 50,
+                                lineNumber: 49,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "h-6 bg-gray-200 rounded w-96 mx-auto animate-pulse"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/news-section.tsx",
-                                lineNumber: 51,
+                                lineNumber: 50,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/news-section.tsx",
-                        lineNumber: 49,
+                        lineNumber: 48,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3182,7 +3182,7 @@ function NewsSection() {
                                             className: "w-full h-64 bg-gray-200 animate-pulse"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/news-section.tsx",
-                                            lineNumber: 58,
+                                            lineNumber: 57,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3192,52 +3192,52 @@ function NewsSection() {
                                                     className: "h-6 bg-gray-200 rounded mb-3 animate-pulse"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 60,
+                                                    lineNumber: 59,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "h-8 bg-gray-200 rounded mb-3 animate-pulse"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 61,
+                                                    lineNumber: 60,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "h-4 bg-gray-200 rounded mb-2 animate-pulse"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 62,
+                                                    lineNumber: 61,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "h-4 bg-gray-200 rounded mb-6 w-3/4 animate-pulse"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 63,
+                                                    lineNumber: 62,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "h-10 bg-gray-200 rounded w-32 animate-pulse"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 64,
+                                                    lineNumber: 63,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/news-section.tsx",
-                                            lineNumber: 59,
+                                            lineNumber: 58,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/news-section.tsx",
-                                    lineNumber: 57,
+                                    lineNumber: 56,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/news-section.tsx",
-                                lineNumber: 56,
+                                lineNumber: 55,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3253,7 +3253,7 @@ function NewsSection() {
                                                     className: "w-20 h-16 bg-gray-200 rounded animate-pulse"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 74,
+                                                    lineNumber: 73,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3263,60 +3263,60 @@ function NewsSection() {
                                                             className: "h-4 bg-gray-200 rounded mb-2 w-16 animate-pulse"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/news-section.tsx",
-                                                            lineNumber: 76,
+                                                            lineNumber: 75,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "h-5 bg-gray-200 rounded mb-2 animate-pulse"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/news-section.tsx",
-                                                            lineNumber: 77,
+                                                            lineNumber: 76,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "h-3 bg-gray-200 rounded w-2/3 animate-pulse"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/news-section.tsx",
-                                                            lineNumber: 78,
+                                                            lineNumber: 77,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 75,
+                                                    lineNumber: 74,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/news-section.tsx",
-                                            lineNumber: 73,
+                                            lineNumber: 72,
                                             columnNumber: 19
                                         }, this)
                                     }, i, false, {
                                         fileName: "[project]/src/components/news-section.tsx",
-                                        lineNumber: 72,
+                                        lineNumber: 71,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/news-section.tsx",
-                                lineNumber: 70,
+                                lineNumber: 69,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/news-section.tsx",
-                        lineNumber: 54,
+                        lineNumber: 53,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/news-section.tsx",
-                lineNumber: 48,
+                lineNumber: 47,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/news-section.tsx",
-            lineNumber: 47,
+            lineNumber: 46,
             columnNumber: 7
         }, this);
     }
@@ -3331,7 +3331,7 @@ function NewsSection() {
                         children: "Latest News"
                     }, void 0, false, {
                         fileName: "[project]/src/components/news-section.tsx",
-                        lineNumber: 94,
+                        lineNumber: 93,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3342,7 +3342,7 @@ function NewsSection() {
                                 children: "News content is temporarily unavailable. Please check back later."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/news-section.tsx",
-                                lineNumber: 96,
+                                lineNumber: 95,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3351,24 +3351,24 @@ function NewsSection() {
                                 children: "Retry"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/news-section.tsx",
-                                lineNumber: 99,
+                                lineNumber: 98,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/news-section.tsx",
-                        lineNumber: 95,
+                        lineNumber: 94,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/news-section.tsx",
-                lineNumber: 93,
+                lineNumber: 92,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/news-section.tsx",
-            lineNumber: 92,
+            lineNumber: 91,
             columnNumber: 7
         }, this);
     }
@@ -3386,7 +3386,7 @@ function NewsSection() {
                             children: "Latest News & Updates"
                         }, void 0, false, {
                             fileName: "[project]/src/components/news-section.tsx",
-                            lineNumber: 115,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3394,13 +3394,13 @@ function NewsSection() {
                             children: "Stay informed about our latest achievements, events, and developments at Kongoni Technical & Vocational Training College"
                         }, void 0, false, {
                             fileName: "[project]/src/components/news-section.tsx",
-                            lineNumber: 118,
+                            lineNumber: 117,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/news-section.tsx",
-                    lineNumber: 114,
+                    lineNumber: 113,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3427,14 +3427,14 @@ function NewsSection() {
                                                     onError: handleImageError
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 130,
+                                                    lineNumber: 129,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 139,
+                                                    lineNumber: 138,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -3442,13 +3442,13 @@ function NewsSection() {
                                                     children: "Latest News"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 140,
+                                                    lineNumber: 139,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/news-section.tsx",
-                                            lineNumber: 129,
+                                            lineNumber: 128,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -3464,7 +3464,7 @@ function NewsSection() {
                                                                     className: "w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                                    lineNumber: 148,
+                                                                    lineNumber: 147,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3475,20 +3475,20 @@ function NewsSection() {
                                                                     })
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                                    lineNumber: 149,
+                                                                    lineNumber: 148,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/news-section.tsx",
-                                                            lineNumber: 147,
+                                                            lineNumber: 146,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: "•"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/news-section.tsx",
-                                                            lineNumber: 157,
+                                                            lineNumber: 156,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3498,26 +3498,26 @@ function NewsSection() {
                                                                     className: "w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                                    lineNumber: 159,
+                                                                    lineNumber: 158,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: mostRecentNews.author
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                                    lineNumber: 160,
+                                                                    lineNumber: 159,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/news-section.tsx",
-                                                            lineNumber: 158,
+                                                            lineNumber: 157,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 145,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -3526,7 +3526,7 @@ function NewsSection() {
                                                     children: mostRecentNews.category
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 164,
+                                                    lineNumber: 163,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3534,7 +3534,7 @@ function NewsSection() {
                                                     children: mostRecentNews.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 168,
+                                                    lineNumber: 167,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3542,7 +3542,7 @@ function NewsSection() {
                                                     children: mostRecentNews.excerpt
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 172,
+                                                    lineNumber: 171,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3553,35 +3553,35 @@ function NewsSection() {
                                                             className: "ml-2 w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/news-section.tsx",
-                                                            lineNumber: 178,
+                                                            lineNumber: 177,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 176,
+                                                    lineNumber: 175,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/news-section.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 144,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/news-section.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 127,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/news-section.tsx",
-                                lineNumber: 127,
+                                lineNumber: 126,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/news-section.tsx",
-                            lineNumber: 126,
+                            lineNumber: 125,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3595,7 +3595,7 @@ function NewsSection() {
                                             children: "Recent Updates"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/news-section.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 188,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3607,19 +3607,19 @@ function NewsSection() {
                                                     className: "ml-1 w-4 h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/news-section.tsx",
-                                                    lineNumber: 192,
+                                                    lineNumber: 191,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/news-section.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 189,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/news-section.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 187,
                                     columnNumber: 13
                                 }, this),
                                 olderNews === null || olderNews === void 0 ? void 0 : olderNews.map((news, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3642,12 +3642,12 @@ function NewsSection() {
                                                             loading: "lazy"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/news-section.tsx",
-                                                            lineNumber: 201,
+                                                            lineNumber: 200,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/news-section.tsx",
-                                                        lineNumber: 200,
+                                                        lineNumber: 199,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3660,7 +3660,7 @@ function NewsSection() {
                                                                         className: "w-2 h-2 rounded-full ".concat(index === 0 ? "bg-green-500" : index === 1 ? "bg-blue-500" : index === 2 ? "bg-purple-500" : index === 3 ? "bg-orange-500" : "bg-gray-400")
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/news-section.tsx",
-                                                                        lineNumber: 214,
+                                                                        lineNumber: 213,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3671,7 +3671,7 @@ function NewsSection() {
                                                                         })
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/news-section.tsx",
-                                                                        lineNumber: 221,
+                                                                        lineNumber: 220,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -3680,13 +3680,13 @@ function NewsSection() {
                                                                         children: news.category
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/news-section.tsx",
-                                                                        lineNumber: 227,
+                                                                        lineNumber: 226,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/news-section.tsx",
-                                                                lineNumber: 213,
+                                                                lineNumber: 212,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -3694,7 +3694,7 @@ function NewsSection() {
                                                                 children: news.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/news-section.tsx",
-                                                                lineNumber: 232,
+                                                                lineNumber: 231,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3702,7 +3702,7 @@ function NewsSection() {
                                                                 children: news.excerpt
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/news-section.tsx",
-                                                                lineNumber: 236,
+                                                                lineNumber: 235,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3713,54 +3713,54 @@ function NewsSection() {
                                                                         children: news.author
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/news-section.tsx",
-                                                                        lineNumber: 241,
+                                                                        lineNumber: 240,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                                                         className: "w-3 h-3 text-gray-400 group-hover:text-primary transition-colors"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/news-section.tsx",
-                                                                        lineNumber: 242,
+                                                                        lineNumber: 241,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/news-section.tsx",
-                                                                lineNumber: 240,
+                                                                lineNumber: 239,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/news-section.tsx",
-                                                        lineNumber: 212,
+                                                        lineNumber: 211,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/news-section.tsx",
-                                                lineNumber: 199,
+                                                lineNumber: 198,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/news-section.tsx",
-                                            lineNumber: 198,
+                                            lineNumber: 197,
                                             columnNumber: 17
                                         }, this)
                                     }, news.id, false, {
                                         fileName: "[project]/src/components/news-section.tsx",
-                                        lineNumber: 197,
+                                        lineNumber: 196,
                                         columnNumber: 15
                                     }, this))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/news-section.tsx",
-                            lineNumber: 187,
+                            lineNumber: 186,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/news-section.tsx",
-                    lineNumber: 123,
+                    lineNumber: 122,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3776,34 +3776,34 @@ function NewsSection() {
                                     className: "ml-2 w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/news-section.tsx",
-                                    lineNumber: 260,
+                                    lineNumber: 259,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/news-section.tsx",
-                            lineNumber: 255,
+                            lineNumber: 254,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/news-section.tsx",
-                        lineNumber: 254,
+                        lineNumber: 253,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/news-section.tsx",
-                    lineNumber: 253,
+                    lineNumber: 252,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/news-section.tsx",
-            lineNumber: 113,
+            lineNumber: 112,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/news-section.tsx",
-        lineNumber: 112,
+        lineNumber: 111,
         columnNumber: 5
     }, this);
 }
@@ -3829,9 +3829,11 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 function PartnershipsSection() {
     _s();
@@ -3892,7 +3894,7 @@ function PartnershipsSection() {
                                 children: "Our Partners & Collaborations"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/partnerships-section.tsx",
-                                lineNumber: 55,
+                                lineNumber: 56,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3900,31 +3902,31 @@ function PartnershipsSection() {
                                 children: "Strong partnerships with industry leaders ensure our graduates are job-ready and competitive"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/partnerships-section.tsx",
-                                lineNumber: 58,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/partnerships-section.tsx",
-                        lineNumber: 54,
+                        lineNumber: 55,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "animate-pulse bg-gray-200 rounded-lg h-64 w-full"
                     }, void 0, false, {
                         fileName: "[project]/src/components/partnerships-section.tsx",
-                        lineNumber: 62,
+                        lineNumber: 64,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/partnerships-section.tsx",
-                lineNumber: 53,
+                lineNumber: 54,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/partnerships-section.tsx",
-            lineNumber: 52,
+            lineNumber: 53,
             columnNumber: 7
         }, this);
     }
@@ -3941,7 +3943,7 @@ function PartnershipsSection() {
                             children: "Our Partners & Collaborations"
                         }, void 0, false, {
                             fileName: "[project]/src/components/partnerships-section.tsx",
-                            lineNumber: 72,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3949,13 +3951,13 @@ function PartnershipsSection() {
                             children: "Strong partnerships with industry leaders ensure our graduates are job-ready and competitive"
                         }, void 0, false, {
                             fileName: "[project]/src/components/partnerships-section.tsx",
-                            lineNumber: 75,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/partnerships-section.tsx",
-                    lineNumber: 71,
+                    lineNumber: 73,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3965,23 +3967,24 @@ function PartnershipsSection() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "w-12 h-12 mx-auto mb-2 flex items-center justify-center group-hover:scale-110 transition-transform duration-300",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         src: partner.image,
                                         alt: partner.alt,
-                                        className: "w-full h-full object-contain rounded-lg",
+                                        width: 48,
+                                        height: 48,
+                                        className: "object-contain rounded-lg",
                                         onError: (e)=>{
-                                            // Fallback to a placeholder if image fails to load
-                                            const target = e.currentTarget;
-                                            target.src = "/images/placeholder-logo.png";
+                                            // fallback image
+                                            e.target.src = "/images/placeholder-logo.png";
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/partnerships-section.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 91,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/partnerships-section.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 90,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3989,29 +3992,29 @@ function PartnershipsSection() {
                                     children: partner.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/partnerships-section.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 104,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, index, true, {
                             fileName: "[project]/src/components/partnerships-section.tsx",
-                            lineNumber: 83,
+                            lineNumber: 86,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/partnerships-section.tsx",
-                    lineNumber: 81,
+                    lineNumber: 84,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/partnerships-section.tsx",
-            lineNumber: 70,
+            lineNumber: 72,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/partnerships-section.tsx",
-        lineNumber: 69,
+        lineNumber: 71,
         columnNumber: 5
     }, this);
 }

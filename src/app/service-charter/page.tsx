@@ -20,8 +20,7 @@ export default function ServiceCharterPage() {
   const [activeTab, setActiveTab] = useState<'both' | 'english' | 'kiswahili'>('both');
 
   // PDF Viewer Component with fallback content
-  const PDFViewer = ({ src, title, language, isKiswahili = false }: { 
-    src: string; 
+  const PDFViewer = ({ title, language, isKiswahili = false }: { 
     title: string; 
     language: string;
     isKiswahili?: boolean;
@@ -265,7 +264,6 @@ export default function ServiceCharterPage() {
                 </div>
                 
                 <PDFViewer 
-                  src="/documents/English-Service-Charter.pdf" 
                   title="Service Charter" 
                   language="English Version"
                   isKiswahili={false}
@@ -289,7 +287,6 @@ export default function ServiceCharterPage() {
                 </div>
                 
                 <PDFViewer 
-                  src="/documents/Kiswahili-Service-Charter.pdf" 
                   title="Mithaq wa Huduma" 
                   language="Toleo la Kiswahili"
                   isKiswahili={true}
