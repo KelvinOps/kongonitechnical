@@ -29,44 +29,6 @@ export const useEnrollmentBanner = () => {
     { month: 9, name: 'September' },
   ];
 
-  const getCurrentIntakePeriod = (): IntakePeriod | null => {
-    const now = new Date();
-    const currentYear = now.getFullYear();
-
-    for (const intake of INTAKE_PERIODS) {
-      const intakeDate = new Date(currentYear, intake.month - 1, 1);
-      const nextYearIntakeDate = new Date(currentYear + 1, intake.month - 1, 1);
-
-      const displayStartDate = new Date(intakeDate);
-      displayStartDate.setMonth(displayStartDate.getMonth() - 1);
-
-      const nextYearDisplayStartDate = new Date(nextYearIntakeDate);
-      nextYearDisplayStartDate.setMonth(nextYearDisplayStartDate.getMonth() - 1);
-
-      if (now >= displayStartDate && now < intakeDate) {
-        return {
-          month: intake.month,
-          name: intake.name,
-          year: currentYear,
-          displayStartDate,
-          intakeDate,
-        };
-      }
-
-      if (now >= nextYearDisplayStartDate && now < nextYearIntakeDate) {
-        return {
-          month: intake.month,
-          name: intake.name,
-          year: currentYear + 1,
-          displayStartDate: nextYearDisplayStartDate,
-          intakeDate: nextYearIntakeDate,
-        };
-      }
-    }
-
-    return null;
-  };
-
   const calculateDaysUntilIntake = (intakeDate: Date): number => {
     const now = new Date();
     const diffTime = intakeDate.getTime() - now.getTime();
@@ -74,6 +36,44 @@ export const useEnrollmentBanner = () => {
   };
 
   useEffect(() => {
+    const getCurrentIntakePeriod = (): IntakePeriod | null => {
+      const now = new Date();
+      const currentYear = now.getFullYear();
+
+      for (const intake of INTAKE_PERIODS) {
+        const intakeDate = new Date(currentYear, intake.month - 1, 1);
+        const nextYearIntakeDate = new Date(currentYear + 1, intake.month - 1, 1);
+
+        const displayStartDate = new Date(intakeDate);
+        displayStartDate.setMonth(displayStartDate.getMonth() - 1);
+
+        const nextYearDisplayStartDate = new Date(nextYearIntakeDate);
+        nextYearDisplayStartDate.setMonth(nextYearDisplayStartDate.getMonth() - 1);
+
+        if (now >= displayStartDate && now < intakeDate) {
+          return {
+            month: intake.month,
+            name: intake.name,
+            year: currentYear,
+            displayStartDate,
+            intakeDate,
+          };
+        }
+
+        if (now >= nextYearDisplayStartDate && now < nextYearIntakeDate) {
+          return {
+            month: intake.month,
+            name: intake.name,
+            year: currentYear + 1,
+            displayStartDate: nextYearDisplayStartDate,
+            intakeDate: nextYearIntakeDate,
+          };
+        }
+      }
+
+      return null;
+    };
+
     const hasDismissedBanner = sessionStorage.getItem('enrollmentBannerDismissed');
     if (hasDismissedBanner === 'true') return;
 

@@ -1,6 +1,6 @@
 // components/about-section.tsx
 import React from 'react';
-import { Play, Users, BookOpen, Award, Phone, Mail, MapPin } from 'lucide-react';
+import { Play, Users, BookOpen, Award } from 'lucide-react';
 
 const AboutSection = () => {
   // Function to determine current intake based on date
@@ -73,7 +73,7 @@ const AboutSection = () => {
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Welcome to Kongoni Technical & Vocational Training College, a Government Sponsored Institution 
             under the Ministry of Education. Established with the core mandate of equipping youths with 
-            skills needed to secure employment in today's market, we strive to produce 
+            skills needed to secure employment in today&apos;s market, we strive to produce 
             <span className="font-semibold text-blue-600"> job creators rather than job seekers</span>.
           </p>
         </div>

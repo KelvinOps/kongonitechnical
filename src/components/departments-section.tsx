@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -105,9 +106,11 @@ export default function DepartmentsSection() {
             <Link key={department.id} href={`/departments/${department.id}`} className="block">
               <Card className="overflow-hidden hover:shadow-lg transition-shadow group h-full">
                 <div className="relative overflow-hidden">
-                  <img
+                  <Image
                     src={department.imageUrl}
                     alt={`${department.name} Department`}
+                    width={400}
+                    height={128}
                     className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { useIsMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
 import { ChevronDown, Globe, Phone, Mail, Menu, X } from "lucide-react";
 
@@ -37,7 +36,6 @@ export default function Header() {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const isMobile = useIsMobile();
   const pathname = usePathname() ?? "/";
   const dropdownRef = useRef<HTMLDivElement>(null);
 
