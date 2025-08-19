@@ -3,8 +3,9 @@ import { departments } from "@/data/departments";
 import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 
-export default function DepartmentPage({ params }: { params: { id: string } }) {
-  const department = departments.find((dept) => dept.id === params.id);
+export default async function DepartmentPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const department = departments.find((dept) => dept.id === id);
 
   if (!department) return notFound();
 
