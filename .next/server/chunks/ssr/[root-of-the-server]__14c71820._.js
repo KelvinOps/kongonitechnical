@@ -75,7 +75,7 @@ const departments = [
         name: "Business Department",
         description: "Developing future leaders in commerce and entrepreneurship.",
         backgroundInfo: "The Business Department has been a cornerstone of our institution for over two decades, providing comprehensive business education that combines academic rigor with practical application. We focus on developing ethical business leaders and innovative entrepreneurs who can thrive in the competitive global marketplace.",
-        hodImage: "/images/hod/dorothy.jpg",
+        hodImage: "/images/hod/dorothyludisi.jpeg",
         hodName: "Dorothy Ludisi",
         hodTitle: "Head of Department - Business Studies",
         hodBio: "Dorothy is a seasoned business professional and educator with extensive experience in business management, entrepreneurship, and financial planning. She brings a wealth of practical knowledge from her years in corporate leadership and business consulting.",
@@ -131,7 +131,7 @@ const departments = [
         name: "Building & Civil Engineering Department",
         description: "Training in structural design, construction, and surveying.",
         backgroundInfo: "The Building & Civil Engineering Department has been instrumental in shaping Kenya's construction industry by providing hands-on training in structural design, construction management, and surveying. Our graduates are equipped with the skills needed to build sustainable infrastructure and contribute to national development.",
-        hodImage: "/images/hod/civil.jpg",
+        hodImage: "/images/hod/nathankibet.jpeg",
         hodName: "Nathan Kibet",
         hodTitle: "Head of Department - Civil Engineering",
         hodBio: "Nathan Kibet is a licensed trainer with experience in construction, infrastructure development, and project management. He has overseen major construction projects and brings valuable industry insights to our academic programs.",
@@ -155,7 +155,8 @@ const departments = [
             "Ms Joylyne Korir",
             "Mr Reuben Khaemba",
             "Mr Ismael Sabwa",
-            "Mr Michael Ondego"
+            "Mr Joseph Atula",
+            "Maureen Barasa"
         ],
         nonTeachingStaff: [
             "Mr Michael Ondego - Technician"
@@ -171,8 +172,7 @@ const departments = [
             "Mr Kevin Magonya",
             "Ms Joylyne Korir",
             "Mr Reuben Khaemba",
-            "Mr Ismael Sabwa",
-            "Mr Michael Ondego"
+            "Mr Ismael Sabwa"
         ],
         objectives: [
             "Provide hands-on experience in construction technologies",
@@ -185,9 +185,9 @@ const departments = [
             "Achieve excellence in structural analysis"
         ],
         activityImages: [
-            "/images/departments/building/civil1.jpg",
-            "/images/departments/building/civil2.jpg",
-            "/images/departments/building/civil3.jpg"
+            "/images/departments/building/building3.jpg",
+            "/images/departments/building/building4.jpg",
+            "/images/departments/building/building6.jpg"
         ]
     },
     {
@@ -243,9 +243,9 @@ const departments = [
             "Collaborate with energy firms for field exposure"
         ],
         activityImages: [
-            "/images/departments/electrical/electrical1.jpg",
-            "/images/departments/electrical/electrical2.jpg",
-            "/images/departments/electrical/electrical3.jpg"
+            "/images/departments/electrical/electrical7.jpg",
+            "/images/departments/electrical/electrical6.jpg",
+            "/images/departments/electrical/electrical.jpg"
         ]
     },
     {
@@ -269,7 +269,9 @@ const departments = [
             "Mrs Suchi Mercylane-Automotive",
             "Mr Litten Kichamu-Welding"
         ],
-        nonTeachingStaff: [],
+        nonTeachingStaff: [
+            "Mark Wanami-Welder"
+        ],
         trainers: [
             "Mrs Suchi Mercylane-Automotive",
             "Mr Litten Kichamu-Welding"
@@ -285,8 +287,8 @@ const departments = [
             "Achieve excellence in automotive certification exams"
         ],
         activityImages: [
-            "/images/departments/automotive/automotive1.jpg",
-            "/images/departments/automotive/automotive3.jpg",
+            "/images/departments/automotive/automotive5.jpg",
+            "/images/departments/automotive/automotive9.jpg",
             "/images/departments/automotive/automotive4.jpg"
         ]
     },
@@ -295,9 +297,9 @@ const departments = [
         name: "Fashion Design and Cosmetics Department",
         description: "Creative training in fashion design, garment construction, and beauty enhancement techniques.",
         backgroundInfo: "The Fashion Design and Cosmetics Department nurtures creative talent and entrepreneurship in the fashion and beauty industry. Our comprehensive programs cover fashion design, pattern making, garment construction, professional makeup, and beauty therapy, preparing students for successful careers in creative industries.",
-        hodImage: "/images/hod/fashion.jpg",
-        hodName: "Careen Nambaka",
-        hodTitle: "Head of Department - Fashion & Cosmetics",
+        hodImage: "/images/hod/tabithaindiori.jpeg",
+        hodName: "Tabitha Indiori",
+        hodTitle: "Acting Head of Department - Fashion & Cosmetics",
         hodBio: "Careen Nambaka is a renowned fashion designer and beauty expert with experience in the fashion industry. She has worked with leading fashion brands and has her own successful fashion line, bringing real-world expertise to our students.",
         hodSocial: {
             facebook: "https://facebook.com/careennambaka",
@@ -308,19 +310,19 @@ const departments = [
         vision: "To be a leading center for fashion and beauty education, producing creative professionals who set trends and build successful enterprises in the fashion and cosmetics industry.",
         mission: "To nurture creative talent and build successful careers in fashion and beauty.",
         teachingStaff: [
-            "Ms Roseline Night",
-            "Mrs Tabitha Indiori",
+            "Ms Carren Shiunda",
+            "Ms Dorcas Aswani",
             "Ms Mirriam Wasike",
-            "Ms Everlyine Milure",
-            "Ms Aswani Dorcus"
+            "Ms Brazeal Namalwa",
+            "Ms Anne Nabwire"
         ],
         nonTeachingStaff: [],
         trainers: [
-            "Ms Roseline Night",
-            "Mrs Tabitha Indiori",
+            "Ms Carren Shiunda",
+            "Ms Dorcas Aswani",
             "Ms Mirriam Wasike",
-            "Ms Everlyine Milure",
-            "Ms Aswani Dorcus"
+            "Ms Brazeal Namalwa",
+            "Ms Anne Nabwire"
         ],
         objectives: [
             "Develop creativity in fashion design and pattern making",
@@ -356,11 +358,15 @@ const departments = [
         vision: "To be a premier institution for hospitality and tourism education, producing service-oriented professionals who enhance Kenya's reputation as a leading tourism destination.",
         mission: "To develop hospitality professionals who deliver world-class service in tourism and hotel industries.",
         teachingStaff: [
-            "Ms Isabel Mideva"
+            "Ms Isabel Gimode",
+            "Ms Elizabeth Sikoyo",
+            "Ms Brenda Asiyo"
         ],
         nonTeachingStaff: [],
         trainers: [
-            "Ms Isabel Mideva"
+            "Ms Isabel Gimode",
+            "Ms Elizabeth Sikoyo",
+            "Ms Brenda Asiyo"
         ],
         objectives: [
             "Train students in hotel operations and management",
@@ -383,7 +389,7 @@ const departments = [
         name: "Agriculture Department",
         description: "Innovative farming techniques and agribusiness education.",
         backgroundInfo: "The Agriculture Department focuses on sustainable farming practices, modern agricultural technologies, and agribusiness development. Our programs are designed to address food security challenges while promoting profitable agricultural enterprises and environmental conservation.",
-        hodImage: "/images/hod/agriculture.jpg",
+        hodImage: "/images/hod/josephatula.jpeg",
         hodName: "Mr Joseph Atula",
         hodTitle: "Head of Department - Agriculture",
         hodBio: "Mr. Joseph Atula is an agricultural expert with experience in crop production, livestock management, and agribusiness development. He has worked with various agricultural research institutions and development organizations, bringing practical knowledge to our students.",
@@ -438,12 +444,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/twitter.js [app-rsc] (ecmascript) <export default as Twitter>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/linkedin.js [app-rsc] (ecmascript) <export default as Linkedin>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/mail.js [app-rsc] (ecmascript) <export default as Mail>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
 ;
 ;
 ;
 ;
-function DepartmentPage({ params }) {
-    const department = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$departments$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["departments"].find((dept)=>dept.id === params.id);
+;
+async function DepartmentPage({ params }) {
+    const { id } = await params;
+    const department = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$departments$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["departments"].find((dept)=>dept.id === id);
     if (!department) return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["notFound"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-gray-50 py-16 px-4",
@@ -455,7 +464,7 @@ function DepartmentPage({ params }) {
                     children: department.name
                 }, void 0, false, {
                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                    lineNumber: 15,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -466,7 +475,7 @@ function DepartmentPage({ params }) {
                             children: "Background Information"
                         }, void 0, false, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 21,
+                            lineNumber: 23,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -474,13 +483,13 @@ function DepartmentPage({ params }) {
                             children: department.backgroundInfo || department.description
                         }, void 0, false, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 22,
+                            lineNumber: 24,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                    lineNumber: 20,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -494,7 +503,7 @@ function DepartmentPage({ params }) {
                                     children: "Head of Department"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 30,
+                                    lineNumber: 32,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -505,7 +514,7 @@ function DepartmentPage({ params }) {
                                             children: department.hodName
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                            lineNumber: 32,
+                                            lineNumber: 34,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -513,7 +522,7 @@ function DepartmentPage({ params }) {
                                             children: department.hodTitle || "Head of Department"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                            lineNumber: 33,
+                                            lineNumber: 35,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -521,31 +530,33 @@ function DepartmentPage({ params }) {
                                             children: department.hodBio || "Leading the department with excellence and dedication to student success."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                            lineNumber: 34,
+                                            lineNumber: 36,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 31,
+                                    lineNumber: 33,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 29,
+                            lineNumber: 31,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "lg:w-80 flex flex-col items-center",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                     src: department.hodImage,
                                     alt: `Head of Department - ${department.hodName}`,
+                                    width: 192,
+                                    height: 192,
                                     className: "w-48 h-48 object-cover rounded-full shadow-lg mb-4"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 39,
+                                    lineNumber: 41,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -558,12 +569,12 @@ function DepartmentPage({ params }) {
                                                 size: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                                lineNumber: 46,
+                                                lineNumber: 50,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                            lineNumber: 45,
+                                            lineNumber: 49,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -573,12 +584,12 @@ function DepartmentPage({ params }) {
                                                 size: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                                lineNumber: 49,
+                                                lineNumber: 53,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                            lineNumber: 48,
+                                            lineNumber: 52,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -588,12 +599,12 @@ function DepartmentPage({ params }) {
                                                 size: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                                lineNumber: 52,
+                                                lineNumber: 56,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                            lineNumber: 51,
+                                            lineNumber: 55,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -603,30 +614,30 @@ function DepartmentPage({ params }) {
                                                 size: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                                lineNumber: 55,
+                                                lineNumber: 59,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                            lineNumber: 54,
+                                            lineNumber: 58,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 44,
+                                    lineNumber: 48,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 38,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                    lineNumber: 28,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -640,7 +651,7 @@ function DepartmentPage({ params }) {
                                     children: "Vision"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 68,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -648,13 +659,13 @@ function DepartmentPage({ params }) {
                                     children: department.vision || "To be a leading department in providing quality education and training that meets industry standards and prepares students for successful careers."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 69,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 63,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -665,7 +676,7 @@ function DepartmentPage({ params }) {
                                     children: "Mission"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 74,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -673,19 +684,19 @@ function DepartmentPage({ params }) {
                                     children: department.mission || "To provide comprehensive education and practical training that empowers students with the knowledge and skills needed to excel in their chosen fields."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 71,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 69,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                    lineNumber: 62,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -696,7 +707,7 @@ function DepartmentPage({ params }) {
                             children: "Teaching Staff"
                         }, void 0, false, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 79,
+                            lineNumber: 83,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -708,17 +719,17 @@ function DepartmentPage({ params }) {
                                         children: staff
                                     }, i, false, {
                                         fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 87,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                lineNumber: 81,
+                                lineNumber: 85,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 80,
+                            lineNumber: 84,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -726,7 +737,7 @@ function DepartmentPage({ params }) {
                             children: "Non-Teaching Staff"
                         }, void 0, false, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 88,
+                            lineNumber: 92,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -742,23 +753,23 @@ function DepartmentPage({ params }) {
                                         children: staff
                                     }, i, false, {
                                         fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 96,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                lineNumber: 90,
+                                lineNumber: 94,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 89,
+                            lineNumber: 93,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                    lineNumber: 78,
+                    lineNumber: 82,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -772,7 +783,7 @@ function DepartmentPage({ params }) {
                                     children: "Objectives"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 101,
+                                    lineNumber: 105,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -786,18 +797,18 @@ function DepartmentPage({ params }) {
                                             children: obj
                                         }, i, false, {
                                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                            lineNumber: 109,
+                                            lineNumber: 113,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 102,
+                                    lineNumber: 106,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 100,
+                            lineNumber: 104,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -808,7 +819,7 @@ function DepartmentPage({ params }) {
                                     children: "Goals"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 114,
+                                    lineNumber: 118,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -822,24 +833,24 @@ function DepartmentPage({ params }) {
                                             children: goal
                                         }, i, false, {
                                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 126,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 115,
+                                    lineNumber: 119,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 113,
+                            lineNumber: 117,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                    lineNumber: 99,
+                    lineNumber: 103,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -849,40 +860,42 @@ function DepartmentPage({ params }) {
                             children: "Trainee Activities"
                         }, void 0, false, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 130,
+                            lineNumber: 134,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4",
-                            children: (department.activityImages || []).map((img, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            children: (department.activityImages || []).map((img, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                     src: img,
                                     alt: `Activity ${i + 1}`,
+                                    width: 400,
+                                    height: 300,
                                     className: "w-full h-48 object-cover rounded shadow-md hover:shadow-lg transition-shadow"
                                 }, i, false, {
                                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 137,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/departments/[id]/page.tsx",
-                            lineNumber: 131,
+                            lineNumber: 135,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/departments/[id]/page.tsx",
-                    lineNumber: 129,
+                    lineNumber: 133,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/departments/[id]/page.tsx",
-            lineNumber: 12,
+            lineNumber: 14,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/departments/[id]/page.tsx",
-        lineNumber: 11,
+        lineNumber: 13,
         columnNumber: 5
     }, this);
 }

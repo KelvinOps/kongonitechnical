@@ -2,6 +2,17 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/api/courses/route": "app/api/courses/route.js",
   "/api/departments/route": "app/api/departments/route.js",
+  "/api/news/[id]/route": "app/api/news/[id]/route.js",
   "/api/news/route": "app/api/news/route.js",
-  "/page": "app/page.js"
+  "/bog/page": "app/bog/page.js",
+  "/careers/page": "app/careers/page.js",
+  "/departments/[id]/page": "app/departments/[id]/page.js",
+  "/dpacademics/page": "app/dpacademics/page.js",
+  "/dpadministration/page": "app/dpadministration/page.js",
+  "/examination/page": "app/examination/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/news/[id]/page": "app/news/[id]/page.js",
+  "/page": "app/page.js",
+  "/registry/page": "app/registry/page.js",
+  "/tenders/page": "app/tenders/page.js"
 }

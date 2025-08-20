@@ -100,20 +100,14 @@ export default function DPAdministrationPage() {
                   Deputy Principal
                 </h1>
                 <h2 className="text-2xl md:text-3xl opacity-90 mb-6">
-                  Planning, Administration & Finance
+                  Administration 
                 </h2>
                 <p className="text-xl opacity-80 leading-relaxed">
                   Driving institutional excellence through strategic planning, efficient administration, and sound financial management.
                 </p>
               </div>
               <div className="text-center lg:text-right">
-                <Image
-                  src="/api/placeholder/400/500"
-                  alt="Deputy Principal Administration"
-                  width={400}
-                  height={500}
-                  className="rounded-lg shadow-2xl mx-auto"
-                />
+               
               </div>
             </div>
           </div>
@@ -152,15 +146,15 @@ export default function DPAdministrationPage() {
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center gap-2">
                       <Mail className="text-[#099cca]" size={16} />
-                      <span>dp.admin@kongonicollege.ac.ke</span>
+                      <span>dp.admin@kongonitechnical.ac.ke</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone className="text-[#099cca]" size={16} />
-                      <span>+254 700 00</span>
+                      <span>+254 700 00000</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="text-[#099cca]" size={16} />
-                      <span>Administration Block, Office 201</span>
+                      <span>Administration Block</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="text-[#099cca]" size={16} />

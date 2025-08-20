@@ -273,27 +273,27 @@ const processes = [
 ];
 const staff = [
     {
-        name: "Ms. Ruth Wanjiku Kamau",
+        name: "Mr. Andrew Juma",
         position: "Registrar",
         qualification: "MA Educational Administration",
         image: "/api/placeholder/200/250",
-        email: "registrar@kongonicollege.ac.ke",
+        email: "registrar@kongonitechnical.ac.ke",
         phone: "+254 700 345 678"
     },
     {
-        name: "Mr. Peter Ochieng Otieno",
-        position: "Deputy Registrar",
+        name: "Mr. Delphine Kubende",
+        position: "Registry Clerk",
         qualification: "BA Records Management",
         image: "/api/placeholder/200/250",
-        email: "deputy.registrar@kongonicollege.ac.ke",
+        email: "deputy.registrar@kongonitechnical.ac.ke",
         phone: "+254 700 345 679"
     },
     {
-        name: "Ms. Grace Mwangi Njoroge",
+        name: "Mr. Joseph Wanjala",
         position: "Records Officer",
         qualification: "Diploma in Records Management",
         image: "/api/placeholder/200/250",
-        email: "records@kongonicollege.ac.ke",
+        email: "records@kongonitechnical.ac.ke",
         phone: "+254 700 345 680"
     }
 ];
@@ -309,68 +309,48 @@ function RegistryPage() {
                         className: "max-w-6xl mx-auto",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid lg:grid-cols-2 gap-12 items-center",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                            className: "text-4xl md:text-5xl font-bold mb-6",
-                                            children: "Registry Department"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 140,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-xl opacity-80 leading-relaxed",
-                                            children: "Your gateway to academic records, student services, and certification. We maintain the integrity and accessibility of all student academic information."
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 143,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/registry/page.tsx",
-                                    lineNumber: 139,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-center lg:text-right",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                        src: "/api/placeholder/500/400",
-                                        alt: "Registry Department",
-                                        width: 500,
-                                        height: 400,
-                                        className: "rounded-lg shadow-2xl mx-auto"
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                        className: "text-4xl md:text-5xl font-bold mb-6",
+                                        children: "Registry Department"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 148,
+                                        lineNumber: 139,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-xl opacity-80 leading-relaxed",
+                                        children: "Your gateway to academic records, student services, and certification. We maintain the integrity and accessibility of all student academic information."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/registry/page.tsx",
+                                        lineNumber: 142,
                                         columnNumber: 17
                                     }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/registry/page.tsx",
-                                    lineNumber: 147,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/registry/page.tsx",
+                                lineNumber: 138,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
                             fileName: "[project]/src/app/registry/page.tsx",
-                            lineNumber: 138,
+                            lineNumber: 137,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/registry/page.tsx",
-                        lineNumber: 137,
+                        lineNumber: 136,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/registry/page.tsx",
-                    lineNumber: 136,
+                    lineNumber: 135,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/registry/page.tsx",
-                lineNumber: 135,
+                lineNumber: 134,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -387,7 +367,7 @@ function RegistryPage() {
                                         children: "Department Overview"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 156,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -395,13 +375,13 @@ function RegistryPage() {
                                         children: "The Registry Department serves as the custodian of all student academic records and the central hub for student services from admission to graduation."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 159,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 164,
+                                lineNumber: 155,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -415,7 +395,7 @@ function RegistryPage() {
                                                     className: "text-[#099cca] w-12 h-12 mx-auto mb-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 178,
+                                                    lineNumber: 169,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -423,7 +403,7 @@ function RegistryPage() {
                                                     children: stat.value
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 179,
+                                                    lineNumber: 170,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -431,29 +411,29 @@ function RegistryPage() {
                                                     children: stat.label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 182,
+                                                    lineNumber: 173,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 177,
+                                            lineNumber: 168,
                                             columnNumber: 17
                                         }, this)
                                     }, index, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 176,
+                                        lineNumber: 167,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 174,
+                                lineNumber: 165,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/registry/page.tsx",
-                        lineNumber: 163,
+                        lineNumber: 154,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -464,7 +444,7 @@ function RegistryPage() {
                                 children: "Our Services"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 191,
+                                lineNumber: 182,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -480,7 +460,7 @@ function RegistryPage() {
                                                         className: "text-[#099cca] w-12 h-12 mx-auto mb-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 199,
+                                                        lineNumber: 190,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -488,7 +468,7 @@ function RegistryPage() {
                                                         children: service.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 200,
+                                                        lineNumber: 191,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -496,34 +476,34 @@ function RegistryPage() {
                                                         children: service.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 203,
+                                                        lineNumber: 194,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 198,
+                                                lineNumber: 189,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 197,
+                                            lineNumber: 188,
                                             columnNumber: 17
                                         }, this)
                                     }, index, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 196,
+                                        lineNumber: 187,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 194,
+                                lineNumber: 185,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/registry/page.tsx",
-                        lineNumber: 190,
+                        lineNumber: 181,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -534,7 +514,7 @@ function RegistryPage() {
                                 children: "Registry Staff"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 215,
+                                lineNumber: 206,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -552,7 +532,7 @@ function RegistryPage() {
                                                     className: "rounded-full mx-auto mb-4 shadow-md"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 222,
+                                                    lineNumber: 213,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -560,7 +540,7 @@ function RegistryPage() {
                                                     children: member.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 229,
+                                                    lineNumber: 220,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Badge"], {
@@ -569,7 +549,7 @@ function RegistryPage() {
                                                     children: member.position
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 232,
+                                                    lineNumber: 223,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -577,7 +557,7 @@ function RegistryPage() {
                                                     children: member.qualification
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 235,
+                                                    lineNumber: 226,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -591,20 +571,20 @@ function RegistryPage() {
                                                                     className: "text-[#099cca]"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                                    lineNumber: 240,
+                                                                    lineNumber: 231,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: member.email
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                                    lineNumber: 241,
+                                                                    lineNumber: 232,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/registry/page.tsx",
-                                                            lineNumber: 239,
+                                                            lineNumber: 230,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -615,48 +595,48 @@ function RegistryPage() {
                                                                     className: "text-[#099cca]"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                                    lineNumber: 244,
+                                                                    lineNumber: 235,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: member.phone
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                                    lineNumber: 245,
+                                                                    lineNumber: 236,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/registry/page.tsx",
-                                                            lineNumber: 243,
+                                                            lineNumber: 234,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 238,
+                                                    lineNumber: 229,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 221,
+                                            lineNumber: 212,
                                             columnNumber: 17
                                         }, this)
                                     }, index, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 211,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 218,
+                                lineNumber: 209,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/registry/page.tsx",
-                        lineNumber: 214,
+                        lineNumber: 205,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -667,7 +647,7 @@ function RegistryPage() {
                                 children: "Service Processes"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 256,
+                                lineNumber: 247,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -680,12 +660,12 @@ function RegistryPage() {
                                                     children: process.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 263,
+                                                    lineNumber: 254,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 262,
+                                                lineNumber: 253,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -699,7 +679,7 @@ function RegistryPage() {
                                                                     children: stepIndex + 1
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                                    lineNumber: 271,
+                                                                    lineNumber: 262,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -707,40 +687,40 @@ function RegistryPage() {
                                                                     children: step
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                                    lineNumber: 274,
+                                                                    lineNumber: 265,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, stepIndex, true, {
                                                             fileName: "[project]/src/app/registry/page.tsx",
-                                                            lineNumber: 270,
+                                                            lineNumber: 261,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 268,
+                                                    lineNumber: 259,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 267,
+                                                lineNumber: 258,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, index, true, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 261,
+                                        lineNumber: 252,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 259,
+                                lineNumber: 250,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/registry/page.tsx",
-                        lineNumber: 255,
+                        lineNumber: 246,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -751,7 +731,7 @@ function RegistryPage() {
                                 children: "Quick Links & Downloads"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 286,
+                                lineNumber: 277,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -766,7 +746,7 @@ function RegistryPage() {
                                                     className: "text-[#099cca] w-12 h-12 mx-auto mb-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 292,
+                                                    lineNumber: 283,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -774,7 +754,7 @@ function RegistryPage() {
                                                     children: "Application Forms"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 293,
+                                                    lineNumber: 284,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -782,18 +762,18 @@ function RegistryPage() {
                                                     children: "Download admission and registration forms"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 294,
+                                                    lineNumber: 285,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 291,
+                                            lineNumber: 282,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 290,
+                                        lineNumber: 281,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -805,7 +785,7 @@ function RegistryPage() {
                                                     className: "text-[#099cca] w-12 h-12 mx-auto mb-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 300,
+                                                    lineNumber: 291,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -813,7 +793,7 @@ function RegistryPage() {
                                                     children: "Transcript Request"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 301,
+                                                    lineNumber: 292,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -821,18 +801,18 @@ function RegistryPage() {
                                                     children: "Official transcript request form"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 302,
+                                                    lineNumber: 293,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 299,
+                                            lineNumber: 290,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 298,
+                                        lineNumber: 289,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -844,7 +824,7 @@ function RegistryPage() {
                                                     className: "text-[#099cca] w-12 h-12 mx-auto mb-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 308,
+                                                    lineNumber: 299,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -852,7 +832,7 @@ function RegistryPage() {
                                                     children: "Verification"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 309,
+                                                    lineNumber: 300,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -860,18 +840,18 @@ function RegistryPage() {
                                                     children: "Certificate verification services"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 310,
+                                                    lineNumber: 301,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 307,
+                                            lineNumber: 298,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 306,
+                                        lineNumber: 297,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -883,7 +863,7 @@ function RegistryPage() {
                                                     className: "text-[#099cca] w-12 h-12 mx-auto mb-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 316,
+                                                    lineNumber: 307,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -891,7 +871,7 @@ function RegistryPage() {
                                                     children: "Student Portal"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 317,
+                                                    lineNumber: 308,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -899,30 +879,30 @@ function RegistryPage() {
                                                     children: "Access your academic records online"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/registry/page.tsx",
-                                                    lineNumber: 318,
+                                                    lineNumber: 309,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 315,
+                                            lineNumber: 306,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 314,
+                                        lineNumber: 305,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 289,
+                                lineNumber: 280,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/registry/page.tsx",
-                        lineNumber: 285,
+                        lineNumber: 276,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -940,19 +920,19 @@ function RegistryPage() {
                                                         className: "text-[#099cca]"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 330,
+                                                        lineNumber: 321,
                                                         columnNumber: 19
                                                     }, this),
                                                     "Office Hours & Processing Times"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 329,
+                                                lineNumber: 320,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 328,
+                                            lineNumber: 319,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -967,7 +947,7 @@ function RegistryPage() {
                                                                 children: "Office Hours"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 337,
+                                                                lineNumber: 328,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -975,7 +955,7 @@ function RegistryPage() {
                                                                 children: "Monday - Friday: 8:00 AM - 5:00 PM"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 338,
+                                                                lineNumber: 329,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -983,13 +963,13 @@ function RegistryPage() {
                                                                 children: "Saturday: 8:00 AM - 12:00 PM"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 339,
+                                                                lineNumber: 330,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 336,
+                                                        lineNumber: 327,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1000,7 +980,7 @@ function RegistryPage() {
                                                                 children: "Processing Times"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 342,
+                                                                lineNumber: 333,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1008,7 +988,7 @@ function RegistryPage() {
                                                                 children: "Transcripts: 5-7 working days"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 343,
+                                                                lineNumber: 334,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1016,7 +996,7 @@ function RegistryPage() {
                                                                 children: "Certificate replacement: 10-14 days"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 344,
+                                                                lineNumber: 335,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1024,30 +1004,30 @@ function RegistryPage() {
                                                                 children: "Verification letters: 2-3 days"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 345,
+                                                                lineNumber: 336,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 341,
+                                                        lineNumber: 332,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 335,
+                                                lineNumber: 326,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 334,
+                                            lineNumber: 325,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/registry/page.tsx",
-                                    lineNumber: 327,
+                                    lineNumber: 318,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -1060,19 +1040,19 @@ function RegistryPage() {
                                                         className: "text-[#099cca]"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 354,
+                                                        lineNumber: 345,
                                                         columnNumber: 19
                                                     }, this),
                                                     "Required Documents"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 353,
+                                                lineNumber: 344,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 352,
+                                            lineNumber: 343,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1086,7 +1066,7 @@ function RegistryPage() {
                                                                 children: "For New Admissions:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 361,
+                                                                lineNumber: 352,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1100,14 +1080,14 @@ function RegistryPage() {
                                                                                 className: "text-[#099cca]"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                                lineNumber: 364,
+                                                                                lineNumber: 355,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             "Original certificates and transcripts"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 363,
+                                                                        lineNumber: 354,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1118,14 +1098,14 @@ function RegistryPage() {
                                                                                 className: "text-[#099cca]"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                                lineNumber: 368,
+                                                                                lineNumber: 359,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             "National ID copy"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 367,
+                                                                        lineNumber: 358,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1136,16 +1116,59 @@ function RegistryPage() {
                                                                                 className: "text-[#099cca]"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                                lineNumber: 372,
+                                                                                lineNumber: 363,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             "Passport photos (4 copies)"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 371,
+                                                                        lineNumber: 362,
                                                                         columnNumber: 23
                                                                     }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "flex items-center gap-2",
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
+                                                                                size: 16,
+                                                                                className: "text-[#099cca]"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/app/registry/page.tsx",
+                                                                                lineNumber: 367,
+                                                                                columnNumber: 25
+                                                                            }, this),
+                                                                            "Medical certificate"
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/src/app/registry/page.tsx",
+                                                                        lineNumber: 366,
+                                                                        columnNumber: 23
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/app/registry/page.tsx",
+                                                                lineNumber: 353,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/registry/page.tsx",
+                                                        lineNumber: 351,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                className: "font-semibold text-gray-900 mb-2",
+                                                                children: "For Services:"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/registry/page.tsx",
+                                                                lineNumber: 373,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                                                className: "space-y-1 text-sm text-gray-700",
+                                                                children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                         className: "flex items-center gap-2",
                                                                         children: [
@@ -1157,54 +1180,11 @@ function RegistryPage() {
                                                                                 lineNumber: 376,
                                                                                 columnNumber: 25
                                                                             }, this),
-                                                                            "Medical certificate"
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 375,
-                                                                        columnNumber: 23
-                                                                    }, this)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 362,
-                                                                columnNumber: 21
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 360,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                                className: "font-semibold text-gray-900 mb-2",
-                                                                children: "For Services:"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 382,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                                className: "space-y-1 text-sm text-gray-700",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                        className: "flex items-center gap-2",
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
-                                                                                size: 16,
-                                                                                className: "text-[#099cca]"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/src/app/registry/page.tsx",
-                                                                                lineNumber: 385,
-                                                                                columnNumber: 25
-                                                                            }, this),
                                                                             "Valid identification"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 384,
+                                                                        lineNumber: 375,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1215,14 +1195,14 @@ function RegistryPage() {
                                                                                 className: "text-[#099cca]"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                                lineNumber: 389,
+                                                                                lineNumber: 380,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             "Completed request forms"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 388,
+                                                                        lineNumber: 379,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1233,54 +1213,54 @@ function RegistryPage() {
                                                                                 className: "text-[#099cca]"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                                lineNumber: 393,
+                                                                                lineNumber: 384,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             "Payment receipts"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 392,
+                                                                        lineNumber: 383,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 383,
+                                                                lineNumber: 374,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 381,
+                                                        lineNumber: 372,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 359,
+                                                lineNumber: 350,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/registry/page.tsx",
-                                            lineNumber: 358,
+                                            lineNumber: 349,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/registry/page.tsx",
-                                    lineNumber: 351,
+                                    lineNumber: 342,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/registry/page.tsx",
-                            lineNumber: 326,
+                            lineNumber: 317,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/registry/page.tsx",
-                        lineNumber: 325,
+                        lineNumber: 316,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1291,7 +1271,7 @@ function RegistryPage() {
                                 children: "Service Fees"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 406,
+                                lineNumber: 397,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -1308,7 +1288,7 @@ function RegistryPage() {
                                                         children: "Document Services"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 413,
+                                                        lineNumber: 404,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1322,7 +1302,7 @@ function RegistryPage() {
                                                                         children: "Official Transcript"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 416,
+                                                                        lineNumber: 407,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1330,13 +1310,13 @@ function RegistryPage() {
                                                                         children: "KSh 500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 417,
+                                                                        lineNumber: 408,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 415,
+                                                                lineNumber: 406,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1347,7 +1327,7 @@ function RegistryPage() {
                                                                         children: "Certificate Copy"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 420,
+                                                                        lineNumber: 411,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1355,13 +1335,13 @@ function RegistryPage() {
                                                                         children: "KSh 300"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 421,
+                                                                        lineNumber: 412,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 419,
+                                                                lineNumber: 410,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1372,7 +1352,7 @@ function RegistryPage() {
                                                                         children: "Verification Letter"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 424,
+                                                                        lineNumber: 415,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1380,13 +1360,13 @@ function RegistryPage() {
                                                                         children: "KSh 200"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 425,
+                                                                        lineNumber: 416,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 423,
+                                                                lineNumber: 414,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1397,7 +1377,7 @@ function RegistryPage() {
                                                                         children: "Duplicate Certificate"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 428,
+                                                                        lineNumber: 419,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1405,25 +1385,25 @@ function RegistryPage() {
                                                                         children: "KSh 2,000"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 429,
+                                                                        lineNumber: 420,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 427,
+                                                                lineNumber: 418,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 414,
+                                                        lineNumber: 405,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 412,
+                                                lineNumber: 403,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1433,7 +1413,7 @@ function RegistryPage() {
                                                         children: "Additional Services"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 434,
+                                                        lineNumber: 425,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1447,7 +1427,7 @@ function RegistryPage() {
                                                                         children: "Expedited Processing"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 437,
+                                                                        lineNumber: 428,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1455,13 +1435,13 @@ function RegistryPage() {
                                                                         children: "+50%"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 438,
+                                                                        lineNumber: 429,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 436,
+                                                                lineNumber: 427,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1472,7 +1452,7 @@ function RegistryPage() {
                                                                         children: "Postal Delivery"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 441,
+                                                                        lineNumber: 432,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1480,13 +1460,13 @@ function RegistryPage() {
                                                                         children: "KSh 150"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 442,
+                                                                        lineNumber: 433,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 440,
+                                                                lineNumber: 431,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1497,7 +1477,7 @@ function RegistryPage() {
                                                                         children: "International Courier"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 445,
+                                                                        lineNumber: 436,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1505,13 +1485,13 @@ function RegistryPage() {
                                                                         children: "KSh 3,500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 446,
+                                                                        lineNumber: 437,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 444,
+                                                                lineNumber: 435,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1522,7 +1502,7 @@ function RegistryPage() {
                                                                         children: "Document Authentication"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 449,
+                                                                        lineNumber: 440,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1530,47 +1510,47 @@ function RegistryPage() {
                                                                         children: "KSh 1,000"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                                        lineNumber: 450,
+                                                                        lineNumber: 441,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                                lineNumber: 448,
+                                                                lineNumber: 439,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 435,
+                                                        lineNumber: 426,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 433,
+                                                lineNumber: 424,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 411,
+                                        lineNumber: 402,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/registry/page.tsx",
-                                    lineNumber: 410,
+                                    lineNumber: 401,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 409,
+                                lineNumber: 400,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/registry/page.tsx",
-                        lineNumber: 405,
+                        lineNumber: 396,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1584,7 +1564,7 @@ function RegistryPage() {
                                         children: "Contact Registry Department"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 463,
+                                        lineNumber: 454,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1592,7 +1572,7 @@ function RegistryPage() {
                                         children: "For all student records, admissions, and certification services, visit our office or contact us during business hours."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 466,
+                                        lineNumber: 457,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1606,20 +1586,20 @@ function RegistryPage() {
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 471,
+                                                        lineNumber: 462,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        children: "registry@kongonicollege.ac.ke"
+                                                        children: "registry@kongonitechnical.ac.ke"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 472,
+                                                        lineNumber: 463,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 470,
+                                                lineNumber: 461,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1630,20 +1610,20 @@ function RegistryPage() {
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 475,
+                                                        lineNumber: 466,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "+254 700 345 678"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 476,
+                                                        lineNumber: 467,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 474,
+                                                lineNumber: 465,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1654,20 +1634,20 @@ function RegistryPage() {
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 479,
+                                                        lineNumber: 470,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Registry Block, Ground Floor"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 480,
+                                                        lineNumber: 471,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 478,
+                                                lineNumber: 469,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1678,54 +1658,54 @@ function RegistryPage() {
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 483,
+                                                        lineNumber: 474,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Mon-Fri: 8AM-5PM"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/registry/page.tsx",
-                                                        lineNumber: 484,
+                                                        lineNumber: 475,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/registry/page.tsx",
-                                                lineNumber: 482,
+                                                lineNumber: 473,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/registry/page.tsx",
-                                        lineNumber: 469,
+                                        lineNumber: 460,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/registry/page.tsx",
-                                lineNumber: 462,
+                                lineNumber: 453,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/registry/page.tsx",
-                            lineNumber: 461,
+                            lineNumber: 452,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/registry/page.tsx",
-                        lineNumber: 460,
+                        lineNumber: 451,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/registry/page.tsx",
-                lineNumber: 161,
+                lineNumber: 152,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/registry/page.tsx",
-        lineNumber: 133,
+        lineNumber: 132,
         columnNumber: 5
     }, this);
 }

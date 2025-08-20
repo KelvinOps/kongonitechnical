@@ -168,7 +168,7 @@ function TendersPage() {
     const [showFilters, setShowFilters] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const filteredAndSortedTenders = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "TendersPage.useMemo[filteredAndSortedTenders]": ()=>{
-            let filtered = tenderData.filter({
+            const filtered = tenderData.filter({
                 "TendersPage.useMemo[filteredAndSortedTenders].filtered": (tender)=>{
                     const matchesSearch = tender.title.toLowerCase().includes(searchTerm.toLowerCase()) || tender.description.toLowerCase().includes(searchTerm.toLowerCase());
                     const matchesCategory = selectedCategory === 'All Categories' || tender.category === selectedCategory;

@@ -167,13 +167,7 @@ export default function DPAcademicsPage() {
                 </p>
               </div>
               <div className="text-center lg:text-right">
-                <Image
-                  src="/api/placeholder/400/500"
-                  alt="Deputy Principal Academic Affairs"
-                  width={400}
-                  height={500}
-                  className="rounded-lg shadow-2xl mx-auto"
-                />
+                
               </div>
             </div>
           </div>
@@ -189,7 +183,7 @@ export default function DPAcademicsPage() {
                 <div className="text-center">
                   <Image
                     src="/api/placeholder/300/300"
-                    alt="Prof. David Kiprotich"
+                    alt="Prof. lucy makhokha"
                     width={300}
                     height={300}
                     className="rounded-full mx-auto mb-4 shadow-md"
@@ -200,13 +194,13 @@ export default function DPAcademicsPage() {
                 </div>
                 <div className="lg:col-span-2">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Prof. David Kiprotich Cheruiyot
+                    Mrs. Lucy Makhokha
                   </h2>
                   <p className="text-lg text-gray-700 mb-4">
-                    PhD in Technical Education, MEd Curriculum Development
+                    Technical Education, MEd Curriculum Development
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Prof. Cheruiyot is a distinguished academic leader with over 18 years of experience in technical and vocational education. His expertise in curriculum development and quality assurance has been instrumental in positioning the college as a center of excellence in technical education. He has published extensively on competency-based training methodologies.
+                    Mrs Makhokha is a distinguished academic leader with over 18 years of experience in technical and vocational education. His expertise in curriculum development and quality assurance has been instrumental in positioning the college as a center of excellence in technical education. He has published extensively on competency-based training methodologies.
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
@@ -216,11 +210,11 @@ export default function DPAcademicsPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone className="text-[#099cca]" size={16} />
-                      <span>+254 700 234 567</span>
+                      <span>+254 788070303</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="text-[#099cca]" size={16} />
-                      <span>Academic Block, Office 301</span>
+                      <span>Academic Block</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="text-[#099cca]" size={16} />

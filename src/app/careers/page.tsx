@@ -36,7 +36,7 @@ const jobOpenings: JobOpening[] = [
     department: "Finance Department",
     location: "Kongoni Technical",
     type: "Full-time",
-    deadline: "30 Sep 2025",
+    deadline: "06 Sep 2025",
     postedDate: "15 Aug 2025",
     requirements: ["Bachelor's degree in Accounting/Finance", "CPA certification preferred", "Internal audit experience"],
     description: "Conduct internal audits, ensure compliance with financial regulations, and provide audit recommendations.",

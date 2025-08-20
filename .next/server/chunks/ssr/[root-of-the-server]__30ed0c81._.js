@@ -366,7 +366,7 @@ function DPAcademicsPage() {
                                             children: "Deputy Principal"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 159,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -374,7 +374,7 @@ function DPAcademicsPage() {
                                             children: "Academic Affairs"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 163,
+                                            lineNumber: 162,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -382,52 +382,41 @@ function DPAcademicsPage() {
                                             children: "Fostering academic excellence through innovative curriculum, quality assurance, and student-centered learning approaches."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 166,
+                                            lineNumber: 165,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 158,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-center lg:text-right",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                        src: "/api/placeholder/400/500",
-                                        alt: "Deputy Principal Academic Affairs",
-                                        width: 400,
-                                        height: 500,
-                                        className: "rounded-lg shadow-2xl mx-auto"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 171,
-                                        columnNumber: 17
-                                    }, this)
+                                    className: "text-center lg:text-right"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                    lineNumber: 170,
+                                    lineNumber: 169,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                            lineNumber: 158,
+                            lineNumber: 157,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                        lineNumber: 157,
+                        lineNumber: 156,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                    lineNumber: 156,
+                    lineNumber: 155,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                lineNumber: 155,
+                lineNumber: 154,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -447,13 +436,13 @@ function DPAcademicsPage() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                                     src: "/api/placeholder/300/300",
-                                                    alt: "Prof. David Kiprotich",
+                                                    alt: "Prof. lucy makhokha",
                                                     width: 300,
                                                     height: 300,
                                                     className: "rounded-full mx-auto mb-4 shadow-md"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 191,
+                                                    lineNumber: 184,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Badge"], {
@@ -462,13 +451,13 @@ function DPAcademicsPage() {
                                                     children: "Deputy Principal"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 198,
+                                                    lineNumber: 191,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 183,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -476,26 +465,26 @@ function DPAcademicsPage() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                                     className: "text-3xl font-bold text-gray-900 mb-4",
-                                                    children: "Prof. David Kiprotich Cheruiyot"
+                                                    children: "Mrs. Lucy Makhokha"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 203,
+                                                    lineNumber: 196,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-lg text-gray-700 mb-4",
-                                                    children: "PhD in Technical Education, MEd Curriculum Development"
+                                                    children: "Technical Education, MEd Curriculum Development"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 206,
+                                                    lineNumber: 199,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-gray-700 leading-relaxed mb-6",
-                                                    children: "Prof. Cheruiyot is a distinguished academic leader with over 18 years of experience in technical and vocational education. His expertise in curriculum development and quality assurance has been instrumental in positioning the college as a center of excellence in technical education. He has published extensively on competency-based training methodologies."
+                                                    children: "Mrs Makhokha is a distinguished academic leader with over 18 years of experience in technical and vocational education. His expertise in curriculum development and quality assurance has been instrumental in positioning the college as a center of excellence in technical education. He has published extensively on competency-based training methodologies."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 209,
+                                                    lineNumber: 202,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -509,20 +498,20 @@ function DPAcademicsPage() {
                                                                     size: 16
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 215,
+                                                                    lineNumber: 208,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    children: "dp.academics@kongonicollege.ac.ke"
+                                                                    children: "dp.academics@kongonitechnical.ac.ke"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 216,
+                                                                    lineNumber: 209,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 214,
+                                                            lineNumber: 207,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -533,20 +522,20 @@ function DPAcademicsPage() {
                                                                     size: 16
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 219,
+                                                                    lineNumber: 212,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    children: "+254 700 234 567"
+                                                                    children: "+254 788070303"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 220,
+                                                                    lineNumber: 213,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 218,
+                                                            lineNumber: 211,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -557,20 +546,20 @@ function DPAcademicsPage() {
                                                                     size: 16
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 223,
+                                                                    lineNumber: 216,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    children: "Academic Block, Office 301"
+                                                                    children: "Academic Block"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 224,
+                                                                    lineNumber: 217,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 222,
+                                                            lineNumber: 215,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -581,53 +570,53 @@ function DPAcademicsPage() {
                                                                     size: 16
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 227,
+                                                                    lineNumber: 220,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Mon-Fri: 8:00 AM - 5:00 PM"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 228,
+                                                                    lineNumber: 221,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 226,
+                                                            lineNumber: 219,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 213,
+                                                    lineNumber: 206,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 202,
+                                            lineNumber: 195,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                    lineNumber: 189,
+                                    lineNumber: 182,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 188,
+                                lineNumber: 181,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                            lineNumber: 187,
+                            lineNumber: 180,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                        lineNumber: 186,
+                        lineNumber: 179,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -638,7 +627,7 @@ function DPAcademicsPage() {
                                 children: "Academic Functions & Responsibilities"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 239,
+                                lineNumber: 232,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -654,7 +643,7 @@ function DPAcademicsPage() {
                                                         className: "text-[#099cca] w-12 h-12 mx-auto mb-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 247,
+                                                        lineNumber: 240,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -662,7 +651,7 @@ function DPAcademicsPage() {
                                                         children: func.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 248,
+                                                        lineNumber: 241,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -670,34 +659,34 @@ function DPAcademicsPage() {
                                                         children: func.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 251,
+                                                        lineNumber: 244,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 246,
+                                                lineNumber: 239,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 245,
+                                            lineNumber: 238,
                                             columnNumber: 17
                                         }, this)
                                     }, index, false, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 244,
+                                        lineNumber: 237,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 242,
+                                lineNumber: 235,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                        lineNumber: 238,
+                        lineNumber: 231,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -708,7 +697,7 @@ function DPAcademicsPage() {
                                 children: "Academic Departments"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 263,
+                                lineNumber: 256,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -723,7 +712,7 @@ function DPAcademicsPage() {
                                                         children: dept.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 270,
+                                                        lineNumber: 263,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -734,13 +723,13 @@ function DPAcademicsPage() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 271,
+                                                        lineNumber: 264,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 269,
+                                                lineNumber: 262,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -750,7 +739,7 @@ function DPAcademicsPage() {
                                                         children: "Programs Offered:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 274,
+                                                        lineNumber: 267,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -762,7 +751,7 @@ function DPAcademicsPage() {
                                                                         className: "text-[#099cca] w-4 h-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                        lineNumber: 278,
+                                                                        lineNumber: 271,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -770,41 +759,41 @@ function DPAcademicsPage() {
                                                                         children: program
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                        lineNumber: 279,
+                                                                        lineNumber: 272,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, idx, true, {
                                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                lineNumber: 277,
+                                                                lineNumber: 270,
                                                                 columnNumber: 23
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 275,
+                                                        lineNumber: 268,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 273,
+                                                lineNumber: 266,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, index, true, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 268,
+                                        lineNumber: 261,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 266,
+                                lineNumber: 259,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                        lineNumber: 262,
+                        lineNumber: 255,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -820,19 +809,19 @@ function DPAcademicsPage() {
                                                     className: "text-[#099cca]"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 295,
+                                                    lineNumber: 288,
                                                     columnNumber: 17
                                                 }, this),
                                                 "Academic Achievements"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 294,
+                                            lineNumber: 287,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 293,
+                                        lineNumber: 286,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -845,7 +834,7 @@ function DPAcademicsPage() {
                                                             className: "w-2 h-2 bg-[#099cca] rounded-full mt-2 flex-shrink-0"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 303,
+                                                            lineNumber: 296,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -853,29 +842,29 @@ function DPAcademicsPage() {
                                                             children: achievement
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 304,
+                                                            lineNumber: 297,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, index, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 302,
+                                                    lineNumber: 295,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 300,
+                                            lineNumber: 293,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 299,
+                                        lineNumber: 292,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 292,
+                                lineNumber: 285,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -888,19 +877,19 @@ function DPAcademicsPage() {
                                                     className: "text-[#099cca]"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 315,
+                                                    lineNumber: 308,
                                                     columnNumber: 17
                                                 }, this),
                                                 "Academic Statistics 2024"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 314,
+                                            lineNumber: 307,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 313,
+                                        lineNumber: 306,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -915,7 +904,7 @@ function DPAcademicsPage() {
                                                             children: "Total Students Enrolled"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 322,
+                                                            lineNumber: 315,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -923,13 +912,13 @@ function DPAcademicsPage() {
                                                             children: "2,847"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 323,
+                                                            lineNumber: 316,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 321,
+                                                    lineNumber: 314,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -940,7 +929,7 @@ function DPAcademicsPage() {
                                                             children: "Academic Programs"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 326,
+                                                            lineNumber: 319,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -948,13 +937,13 @@ function DPAcademicsPage() {
                                                             children: "24"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 327,
+                                                            lineNumber: 320,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 325,
+                                                    lineNumber: 318,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -965,7 +954,7 @@ function DPAcademicsPage() {
                                                             children: "Academic Staff"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 330,
+                                                            lineNumber: 323,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -973,13 +962,13 @@ function DPAcademicsPage() {
                                                             children: "156"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 331,
+                                                            lineNumber: 324,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 329,
+                                                    lineNumber: 322,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -990,7 +979,7 @@ function DPAcademicsPage() {
                                                             children: "Graduate Employment Rate"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 334,
+                                                            lineNumber: 327,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -998,13 +987,13 @@ function DPAcademicsPage() {
                                                             children: "90%"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 335,
+                                                            lineNumber: 328,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 333,
+                                                    lineNumber: 326,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1015,7 +1004,7 @@ function DPAcademicsPage() {
                                                             children: "Course Completion Rate"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 338,
+                                                            lineNumber: 331,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1023,13 +1012,13 @@ function DPAcademicsPage() {
                                                             children: "95%"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 339,
+                                                            lineNumber: 332,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 337,
+                                                    lineNumber: 330,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1040,7 +1029,7 @@ function DPAcademicsPage() {
                                                             children: "Industry Partnerships"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 342,
+                                                            lineNumber: 335,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1048,36 +1037,36 @@ function DPAcademicsPage() {
                                                             children: "15"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 343,
+                                                            lineNumber: 336,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 341,
+                                                    lineNumber: 334,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 320,
+                                            lineNumber: 313,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 319,
+                                        lineNumber: 312,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 312,
+                                lineNumber: 305,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                        lineNumber: 290,
+                        lineNumber: 283,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1088,7 +1077,7 @@ function DPAcademicsPage() {
                                 children: "Upcoming Academic Initiatives"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 352,
+                                lineNumber: 345,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1105,7 +1094,7 @@ function DPAcademicsPage() {
                                                             className: "text-[#099cca] w-12 h-12 mx-auto mb-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 360,
+                                                            lineNumber: 353,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1113,7 +1102,7 @@ function DPAcademicsPage() {
                                                             children: initiative.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 361,
+                                                            lineNumber: 354,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1122,13 +1111,13 @@ function DPAcademicsPage() {
                                                             children: initiative.status
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 364,
+                                                            lineNumber: 357,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 359,
+                                                    lineNumber: 352,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1136,7 +1125,7 @@ function DPAcademicsPage() {
                                                     children: initiative.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 368,
+                                                    lineNumber: 361,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1147,29 +1136,29 @@ function DPAcademicsPage() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 371,
+                                                    lineNumber: 364,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                            lineNumber: 358,
+                                            lineNumber: 351,
                                             columnNumber: 17
                                         }, this)
                                     }, index, false, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 357,
+                                        lineNumber: 350,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 355,
+                                lineNumber: 348,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                        lineNumber: 351,
+                        lineNumber: 344,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1180,7 +1169,7 @@ function DPAcademicsPage() {
                                 children: "Academic Services"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 382,
+                                lineNumber: 375,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1196,19 +1185,19 @@ function DPAcademicsPage() {
                                                             className: "text-[#099cca]"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 389,
+                                                            lineNumber: 382,
                                                             columnNumber: 19
                                                         }, this),
                                                         "Student Services"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 388,
+                                                    lineNumber: 381,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 387,
+                                                lineNumber: 380,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1222,20 +1211,20 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 396,
+                                                                    lineNumber: 389,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Academic counseling and guidance"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 397,
+                                                                    lineNumber: 390,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 395,
+                                                            lineNumber: 388,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1245,20 +1234,20 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 400,
+                                                                    lineNumber: 393,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Course registration and scheduling"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 401,
+                                                                    lineNumber: 394,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 399,
+                                                            lineNumber: 392,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1268,20 +1257,20 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 404,
+                                                                    lineNumber: 397,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Academic progress monitoring"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 405,
+                                                                    lineNumber: 398,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 403,
+                                                            lineNumber: 396,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1291,20 +1280,20 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 408,
+                                                                    lineNumber: 401,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Examination and assessment coordination"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 409,
+                                                                    lineNumber: 402,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 407,
+                                                            lineNumber: 400,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1314,37 +1303,37 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 412,
+                                                                    lineNumber: 405,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Industrial attachment coordination"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 413,
+                                                                    lineNumber: 406,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 411,
+                                                            lineNumber: 404,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 394,
+                                                    lineNumber: 387,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 393,
+                                                lineNumber: 386,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 386,
+                                        lineNumber: 379,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -1357,19 +1346,19 @@ function DPAcademicsPage() {
                                                             className: "text-[#099cca]"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 422,
+                                                            lineNumber: 415,
                                                             columnNumber: 19
                                                         }, this),
                                                         "Faculty Services"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 421,
+                                                    lineNumber: 414,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 420,
+                                                lineNumber: 413,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1383,20 +1372,20 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 429,
+                                                                    lineNumber: 422,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Professional development programs"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 430,
+                                                                    lineNumber: 423,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 428,
+                                                            lineNumber: 421,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1406,20 +1395,20 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 433,
+                                                                    lineNumber: 426,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Curriculum development support"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 434,
+                                                                    lineNumber: 427,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 432,
+                                                            lineNumber: 425,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1429,20 +1418,20 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 437,
+                                                                    lineNumber: 430,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Research and publication assistance"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 438,
+                                                                    lineNumber: 431,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 436,
+                                                            lineNumber: 429,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1452,20 +1441,20 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 441,
+                                                                    lineNumber: 434,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Teaching methodology training"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 442,
+                                                                    lineNumber: 435,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 440,
+                                                            lineNumber: 433,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1475,49 +1464,49 @@ function DPAcademicsPage() {
                                                                     className: "text-[#099cca] w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 445,
+                                                                    lineNumber: 438,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Academic resource allocation"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                                    lineNumber: 446,
+                                                                    lineNumber: 439,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                            lineNumber: 444,
+                                                            lineNumber: 437,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                    lineNumber: 427,
+                                                    lineNumber: 420,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 426,
+                                                lineNumber: 419,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 419,
+                                        lineNumber: 412,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 385,
+                                lineNumber: 378,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                        lineNumber: 381,
+                        lineNumber: 374,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1531,7 +1520,7 @@ function DPAcademicsPage() {
                                         children: "Academic Affairs Office"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 458,
+                                        lineNumber: 451,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1539,7 +1528,7 @@ function DPAcademicsPage() {
                                         children: "For academic inquiries, curriculum matters, or student academic issues, please contact our office during business hours."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 461,
+                                        lineNumber: 454,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1553,20 +1542,20 @@ function DPAcademicsPage() {
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 466,
+                                                        lineNumber: 459,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        children: "dp.academics@kongonicollege.ac.ke"
+                                                        children: "dp.academics@kongonitechnical.ac.ke"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 467,
+                                                        lineNumber: 460,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 465,
+                                                lineNumber: 458,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1577,20 +1566,20 @@ function DPAcademicsPage() {
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 470,
+                                                        lineNumber: 463,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "+254 700 234 567"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 471,
+                                                        lineNumber: 464,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 469,
+                                                lineNumber: 462,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1601,20 +1590,20 @@ function DPAcademicsPage() {
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 474,
+                                                        lineNumber: 467,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Academic Block, Office 301"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 475,
+                                                        lineNumber: 468,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 473,
+                                                lineNumber: 466,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1625,54 +1614,54 @@ function DPAcademicsPage() {
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 478,
+                                                        lineNumber: 471,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Mon-Fri: 8AM-5PM"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                        lineNumber: 479,
+                                                        lineNumber: 472,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                                lineNumber: 477,
+                                                lineNumber: 470,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                                        lineNumber: 464,
+                                        lineNumber: 457,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                                lineNumber: 457,
+                                lineNumber: 450,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/dpacademics/page.tsx",
-                            lineNumber: 456,
+                            lineNumber: 449,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/dpacademics/page.tsx",
-                        lineNumber: 455,
+                        lineNumber: 448,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/dpacademics/page.tsx",
-                lineNumber: 184,
+                lineNumber: 177,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/dpacademics/page.tsx",
-        lineNumber: 153,
+        lineNumber: 152,
         columnNumber: 5
     }, this);
 }

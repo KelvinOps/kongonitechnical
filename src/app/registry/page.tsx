@@ -102,7 +102,7 @@ const processes = [
 
 const staff = [
   {
-    name: "Ms. Ruth Wanjiku Kamau",
+    name: "Mr. Andrew Juma",
     position: "Registrar",
     qualification: "MA Educational Administration",
     image: "/api/placeholder/200/250",
@@ -110,15 +110,15 @@ const staff = [
     phone: "+254 700 345 678"
   },
   {
-    name: "Mr. Peter Ochieng Otieno",
-    position: "Deputy Registrar",
+    name: "Mr. Delphine Kubende",
+    position: "Registry Clerk",
     qualification: "BA Records Management",
     image: "/api/placeholder/200/250",
     email: "deputy.registrar@kongonitechnical.ac.ke", 
     phone: "+254 700 345 679"
   },
   {
-    name: "Ms. Grace Mwangi Njoroge",
+    name: "Mr. Joseph Wanjala",
     position: "Records Officer",
     qualification: "Diploma in Records Management",
     image: "/api/placeholder/200/250",
@@ -143,15 +143,7 @@ export default function RegistryPage() {
                   Your gateway to academic records, student services, and certification. We maintain the integrity and accessibility of all student academic information.
                 </p>
               </div>
-              <div className="text-center lg:text-right">
-                <Image
-                  src="/api/placeholder/500/400"
-                  alt="Registry Department"
-                  width={500}
-                  height={400}
-                  className="rounded-lg shadow-2xl mx-auto"
-                />
-              </div>
+
             </div>
           </div>
         </div>

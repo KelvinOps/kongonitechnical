@@ -42,7 +42,7 @@ const fallbackDepartments: Department[] = [
     id: "hospitality",
     name: "Food & Beverage Department",
     description: "Professional training in culinary arts and hospitality service.",
-    imageUrl: "/images/departments/hospitality.jpg",
+    imageUrl: "/images/departments/hospitality7.jpg",
   },
   {
     id: "agriculture",

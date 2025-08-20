@@ -196,7 +196,7 @@ const mockNews = [
 ];
 async function GET(request, { params }) {
     try {
-        const newsId = params.id;
+        const { id: newsId } = await params;
         // Find the news article by ID
         const newsArticle = mockNews.find((news)=>news.id === newsId);
         if (!newsArticle) {

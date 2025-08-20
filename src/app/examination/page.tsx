@@ -163,7 +163,7 @@ export default function ExaminationsPage() {
               </div>
               <div className="text-center lg:text-right">
                 <Image
-                  src="/api/placeholder/500/400"
+                  src="/images/others/exams.jpg"
                   alt="Examinations Department"
                   width={500}
                   height={400}
@@ -183,7 +183,7 @@ export default function ExaminationsPage() {
               <div className="grid lg:grid-cols-3 gap-8 items-center">
                 <div className="text-center">
                   <Image
-                    src="/api/placeholder/300/300"
+                    src="/images/hod/paulkyalo.jpeg"
                     alt="Paul Kimanzi"
                     width={300}
                     height={300}
@@ -211,7 +211,7 @@ export default function ExaminationsPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone className="text-[#099cca]" size={16} />
-                      <span>+254 700 456 789</span>
+                      <span>+254 788070303</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="text-[#099cca]" size={16} />
@@ -483,7 +483,7 @@ export default function ExaminationsPage() {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="text-[#099cca]" size={16} />
-                  <span>+254 700 456 789</span>
+                  <span>+254 788070303</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="text-[#099cca]" size={16} />

@@ -15,51 +15,51 @@ export const metadata: Metadata = {
 const councilMembers = [
   {
     id: 1,
-    name: "Dr. Margaret Wanjiku",
+    name: "Dr. ",
     position: "Chairperson",
     qualification: "PhD in Educational Leadership",
     image: "/api/placeholder/300/400",
-    bio: "Dr. Wanjiku brings over 20 years of experience in educational leadership and governance.",
+    bio: "Dr.  brings over 20 years of experience in educational leadership and governance.",
     email: "chair@kongonitechnical.ac.ke",
     phone: "+254 700 000 001"
   },
   {
     id: 2,
-    name: "Eng. James Kipchoge",
+    name: "Eng. ",
     position: "Vice Chairperson",
     qualification: "M.Eng, Registered Engineer",
     image: "/api/placeholder/300/400",
-    bio: "Eng. Kipchoge is a seasoned engineering professional with expertise in technical education.",
+    bio: "Eng.  is a seasoned engineering professional with expertise in technical education.",
     email: "vice.chair@kongonitechnical.ac.ke",
     phone: "+254 700 000 002"
   },
   {
     id: 3,
-    name: "Prof. Sarah Mwangi",
+    name: "Prof. ",
     position: "Member",
     qualification: "PhD in Business Administration",
     image: "/api/placeholder/300/400",
-    bio: "Prof. Mwangi specializes in institutional management and strategic planning.",
+    bio: "Prof.  specializes in institutional management and strategic planning.",
     email: "s.mwangi@kongonitechnical.ac.ke",
     phone: "+254 700 000 003"
   },
   {
     id: 4,
-    name: "Dr. Peter Ochieng",
+    name: "Dr. ",
     position: "Member",
     qualification: "PhD in Technical Education",
     image: "/api/placeholder/300/400",
-    bio: "Dr. Ochieng has extensive experience in curriculum development and quality assurance.",
+    bio: "Dr.  has extensive experience in curriculum development and quality assurance.",
     email: "p.ochieng@kongonitechnical.ac.ke",
     phone: "+254 700 000 004"
   },
   {
     id: 5,
-    name: "Ms. Grace Akinyi",
+    name: "Ms. Judith Akaranga",
     position: "Secretary",
-    qualification: "MBA, Legal Affairs",
-    image: "/api/placeholder/300/400",
-    bio: "Ms. Akinyi oversees governance compliance and institutional legal matters.",
+    qualification: "MBA",
+    image: "/images/principal.png",
+    bio: "Ms. Akaranga oversees governance compliance and institutional legal matters.",
     email: "secretary@kongonitechnical.ac.ke",
     phone: "+254 700 000 005"
   },
@@ -117,10 +117,10 @@ export default function GoverningCouncilPage() {
             </div>
             <div className="relative">
               <Image
-                src="/api/placeholder/600/400"
+                src="/images/Logo_imresizer.ico"
                 alt="Board of Governance Meeting"
-                width={600}
-                height={400}
+                width={350}
+                height={150}
                 className="rounded-lg shadow-lg"
               />
             </div>
