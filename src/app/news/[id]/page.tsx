@@ -10,22 +10,26 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
 import type { News } from "@/types/news";
+import { use } from "react";
 
 interface NewsArticlePageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default function NewsArticlePage({ params }: NewsArticlePageProps) {
+  // Unwrap the params Promise
+  const { id } = use(params);
+
   const {
     data: article,
     isLoading,
     error,
   } = useQuery<News>({
-    queryKey: [`/api/news/${params.id}`],
+    queryKey: [`/api/news/${id}`],
     queryFn: async () => {
-      const res = await fetch(`/api/news/${params.id}`);
+      const res = await fetch(`/api/news/${id}`);
       if (!res.ok) throw new Error("Failed to fetch article");
       return res.json();
     },
@@ -37,12 +41,12 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
   const {
     data: relatedNews,
   } = useQuery<News[]>({
-    queryKey: [`/api/news/related/${params.id}`],
+    queryKey: [`/api/news/related/${id}`],
     queryFn: async () => {
       const res = await fetch(`/api/news?limit=3&category=${article?.category}`);
       if (!res.ok) throw new Error("Failed to fetch related articles");
       const allNews = await res.json();
-      return allNews.filter((news: News) => news.id !== params.id).slice(0, 3);
+      return allNews.filter((news: News) => news.id !== id).slice(0, 3);
     },
     enabled: !!article,
     staleTime: 10 * 60 * 1000,
