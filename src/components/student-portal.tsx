@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "@/components/ui/toast";
 import { apiRequest } from "@/lib/queryClient";
 import { PlusIcon, TrashIcon } from "lucide-react";
 
@@ -73,7 +73,7 @@ const enhancedApplicationSchema = z.object({
 type EnhancedApplication = z.infer<typeof enhancedApplicationSchema>;
 
 export default function StudentPortal() {
-  const { toast } = useToast();
+  const { addToast } = useToast();
   const queryClient = useQueryClient();
 
   const form = useForm<EnhancedApplication>({
@@ -140,15 +140,16 @@ export default function StudentPortal() {
       return response.json();
     },
     onSuccess: () => {
-      toast({
+      addToast({
         title: "Application Submitted Successfully!",
         description: "We have received your application and will contact you soon.",
+        variant: "default",
       });
       form.reset();
       queryClient.invalidateQueries({ queryKey: ["/api/applications"] });
     },
     onError: (error) => {
-      toast({
+      addToast({
         title: "Application Failed",
         description: "There was an error submitting your application. Please try again.",
         variant: "destructive",
