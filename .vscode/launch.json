@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: Dev Server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    },
+    {
+      "name": "Next.js: Inspect Build",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
+      "args": ["build"],
+      "runtimeArgs": ["--inspect"],
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
