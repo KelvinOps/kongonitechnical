@@ -98,10 +98,12 @@ export default function Header() {
           label: "Administration",
           isCategory: true as const,
           items: [
+            { href: "/principal", label: "Principal's Office" },
             { href: "/bog", label: "Board of Governance" },
             { href: "/dpadministration", label: "Deputy Principal Planning, Administration and Finance" },
             { href: "/dpacademics", label: "Deputy Principal Academic Affair" },
             { href: "/registry", label: "Registry" },
+            { href: "/dean-of-students", label: "Dean of Students" }
 
           ]
         },
@@ -123,7 +125,12 @@ export default function Header() {
           label: "Non-Academic Departments",
           isCategory: true as const,
           items: [
-            { href: "/examination", label: "Examination" }
+            { href: "/examination", label: "Examination" },
+            { href: "/guidance-counselling", label: "Guidance and Counselling" },
+            { href: "/ilo", label: "Industry Liaison Office" },
+            { href: "/cbet", label: "Competency-Based Education and Training" },
+            { href: "/iso-mr", label: "ISO Standards & Management Reviews" },
+            { href: "/iqa", label: "Internal Quality Assurance Services" }
           ]
         }
       ]
