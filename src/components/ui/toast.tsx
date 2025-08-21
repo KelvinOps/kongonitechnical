@@ -62,6 +62,9 @@ export const useToast = () => {
   return context
 }
 
+// Export for backward compatibility
+export const useToastContext = useToast
+
 // Toast Provider
 interface ToastProviderProps {
   children: React.ReactNode
@@ -261,10 +264,3 @@ export const ToastViewport = React.forwardRef<HTMLDivElement, React.HTMLAttribut
   }
 )
 ToastViewport.displayName = "ToastViewport"
-
-// Toast hook with convenient methods
-export const toast = () => {
-  // This will be called from components that are wrapped with ToastProvider
-  // We'll create a custom hook that can be used outside the provider
-  throw new Error("toast() function should be called from within a component that has access to ToastProvider")
-}

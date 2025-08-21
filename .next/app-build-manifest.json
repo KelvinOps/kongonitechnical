@@ -22,7 +22,7 @@
       "static/chunks/3824-1be51f48bf9e4a63.js",
       "static/chunks/5115-b9d79533b7ceb2ae.js",
       "static/chunks/7911-34d7dc5208c7b799.js",
-      "static/chunks/app/layout-985191123dedbc94.js"
+      "static/chunks/app/layout-3cd122f3d6eb1787.js"
     ],
     "/api/contacts/route": [
       "static/chunks/webpack-b91d1e560c0b3da0.js",
@@ -162,18 +162,6 @@
       "static/chunks/9138-d32918200a13dd6e.js",
       "static/chunks/app/courses/nita-courses/page-3d36abaebba1b8ad.js"
     ],
-    "/courses/shortcourses/page": [
-      "static/chunks/webpack-b91d1e560c0b3da0.js",
-      "static/chunks/4bd1b696-602635ee57868870.js",
-      "static/chunks/5964-2a1ddd40921d073b.js",
-      "static/chunks/main-app-f9e1d3e486cf53f5.js",
-      "static/chunks/4277-a8745681354ed646.js",
-      "static/chunks/6967-9e7f0bbcb417bdc6.js",
-      "static/chunks/6874-f9923318f3096abb.js",
-      "static/chunks/2960-23d47b920fbd5e3b.js",
-      "static/chunks/9138-d32918200a13dd6e.js",
-      "static/chunks/app/courses/shortcourses/page-c2da906bfcb39981.js"
-    ],
     "/courses/page": [
       "static/chunks/webpack-b91d1e560c0b3da0.js",
       "static/chunks/4bd1b696-602635ee57868870.js",
@@ -185,6 +173,18 @@
       "static/chunks/2960-23d47b920fbd5e3b.js",
       "static/chunks/9138-d32918200a13dd6e.js",
       "static/chunks/app/courses/page-40bd751f79ced8fc.js"
+    ],
+    "/courses/shortcourses/page": [
+      "static/chunks/webpack-b91d1e560c0b3da0.js",
+      "static/chunks/4bd1b696-602635ee57868870.js",
+      "static/chunks/5964-2a1ddd40921d073b.js",
+      "static/chunks/main-app-f9e1d3e486cf53f5.js",
+      "static/chunks/4277-a8745681354ed646.js",
+      "static/chunks/6967-9e7f0bbcb417bdc6.js",
+      "static/chunks/6874-f9923318f3096abb.js",
+      "static/chunks/2960-23d47b920fbd5e3b.js",
+      "static/chunks/9138-d32918200a13dd6e.js",
+      "static/chunks/app/courses/shortcourses/page-c2da906bfcb39981.js"
     ],
     "/departments/[id]/page": [
       "static/chunks/webpack-b91d1e560c0b3da0.js",
