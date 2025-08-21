@@ -17,12 +17,8 @@ import {
   MapPin,
   CheckCircle,
   ArrowRight,
-  UserCheck,
-  Building,
   Stethoscope,
   Music,
-  Camera,
-  TreePine,
   Award,
   Lightbulb,
   HandHeart

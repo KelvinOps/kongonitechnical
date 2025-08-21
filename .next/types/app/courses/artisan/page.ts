@@ -1,4 +1,4 @@
-// File: C:\Users\Administrator\Desktop\Works\kongonitechnical\src\app\courses\artisan\page.tsx
+// File: C:\Users\admin\Downloads\Compressed\kongonitechnical\src\app\courses\artisan\page.tsx
 import * as entry from '../../../../../src/app/courses/artisan/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

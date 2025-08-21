@@ -6,8 +6,7 @@ import {
   Award, 
   Users, 
   Target, 
-  CheckCircle, 
-  ArrowLeft,
+  CheckCircle,
   Mail,
   Phone,
   MapPin

@@ -8,8 +8,6 @@ import {
   Clock,
   Facebook,
   Twitter,
-  Linkedin,
-  Youtube,
   Instagram,
   Globe,
   GraduationCap,

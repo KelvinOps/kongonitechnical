@@ -1,4 +1,4 @@
-// File: C:\Users\Administrator\Desktop\Works\kongonitechnical\src\app\dpadministration\page.tsx
+// File: C:\Users\admin\Downloads\Compressed\kongonitechnical\src\app\dpadministration\page.tsx
 import * as entry from '../../../../src/app/dpadministration/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

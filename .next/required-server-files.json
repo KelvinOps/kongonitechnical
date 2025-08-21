@@ -97,7 +97,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Administrator\\Desktop\\Works\\kongonitechnical",
+    "outputFileTracingRoot": "C:\\Users\\admin\\Downloads\\Compressed\\kongonitechnical",
     "experimental": {
       "useSkewCookie": false,
       "nodeMiddleware": false,
@@ -156,7 +156,7 @@
       "middlewarePrefetch": "flexible",
       "optimisticClientCache": true,
       "manualClientBasePath": false,
-      "cpus": 1,
+      "cpus": 3,
       "memoryBasedWorkersCount": false,
       "imgOptConcurrency": null,
       "imgOptTimeoutInSeconds": 7,
@@ -288,10 +288,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\Users\\Administrator\\Desktop\\Works\\kongonitechnical"
+      "root": "C:\\Users\\admin\\Downloads\\Compressed\\kongonitechnical"
     }
   },
-  "appDir": "C:\\Users\\Administrator\\Desktop\\Works\\kongonitechnical",
+  "appDir": "C:\\Users\\admin\\Downloads\\Compressed\\kongonitechnical",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
