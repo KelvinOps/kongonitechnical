@@ -111,7 +111,7 @@ export default function AboutPage() {
                     <div className="bg-secondary/10 p-6 rounded-xl border border-secondary/20">
                       <h3 className="font-bold text-foreground mb-4">Our Mission</h3>
                       <p className="text-gray-700 leading-relaxed">
-                        We strive to produce <strong>job creators rather than job seekers</strong> through market-driven skills and quality CBET education.
+                        To provide quality technical and vocational training in collaboration with stakeholders to produce highly skilled and innovative human resource.
                       </p>
                     </div>
                   </div>
