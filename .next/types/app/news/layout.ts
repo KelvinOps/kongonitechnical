@@ -1,4 +1,4 @@
-// File: C:\Users\admin\Downloads\Compressed\kongonitechnical\src\app\news\layout.tsx
+// File: C:\Users\Administrator\Downloads\Site\kongonitechnical\src\app\news\layout.tsx
 import * as entry from '../../../../src/app/news/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

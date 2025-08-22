@@ -2,9 +2,7 @@ import {
   Award, 
   Users, 
   Wrench, 
-  GraduationCap, 
-  Briefcase, 
-  Clock 
+  GraduationCap
 } from "lucide-react";
 
 export default function ProgramsSection() {
@@ -32,18 +30,6 @@ export default function ProgramsSection() {
       title: "Experienced Faculty",
       description: "Learn from qualified instructors with extensive industry experience and academic credentials.",
       bgColor: "bg-purple-500"
-    },
-    {
-      icon: Briefcase,
-      title: "Career Support",
-      description: "Comprehensive career guidance, job placement assistance, and ongoing professional development support.",
-      bgColor: "bg-secondary"
-    },
-    {
-      icon: Clock,
-      title: "Flexible Scheduling",
-      description: "Day and evening classes available to accommodate working professionals and different learning preferences.",
-      bgColor: "bg-orange-500"
     }
   ];
 
@@ -59,13 +45,13 @@ export default function ProgramsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {programs.map((program, index) => {
             const IconComponent = program.icon;
             return (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow group h-full flex flex-col"
               >
                 <div className={`w-16 h-16 ${program.bgColor} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <IconComponent className="text-white w-8 h-8" />
@@ -73,7 +59,7 @@ export default function ProgramsSection() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
                   {program.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 flex-grow">
                   {program.description}
                 </p>
               </div>

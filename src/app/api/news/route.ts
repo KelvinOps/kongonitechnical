@@ -29,7 +29,7 @@ const mockNews = [
       
       <p>We congratulate all our athletes and look forward to their continued success in upcoming competitions. Special recognition goes to our coaching staff and the entire college community for their unwavering support.</p>
     `,
-    imageUrl: "/images/news/katti-athletics.jpg",
+    imageUrl: "/images/newsevents/athletics/athletics23.jpeg",
     featured: true,
     createdAt: "2024-08-15T10:00:00Z",
     updatedAt: "2024-08-15T10:00:00Z",
@@ -59,7 +59,7 @@ const mockNews = [
       
       <p>The college's commitment to holistic education includes regular counselling services, study groups, and wellness programs throughout the academic year. Students can access confidential counselling services every weekday at the Student Wellness Center.</p>
     `,
-    imageUrl: "/images/news/guidance-counselling.jpg",
+    imageUrl: "/images/newsevents/guidancecounselling/guidance4.jpeg",
     featured: true,
     createdAt: "2024-08-10T14:30:00Z",
     updatedAt: "2024-08-10T14:30:00Z",
@@ -98,7 +98,7 @@ const mockNews = [
   },
   {
     id: "4",
-    title: "New Engineering Lab Opens with Modern Equipment",
+    title: "New ICT Lab Opens with Modern Equipment",
     excerpt: "State-of-the-art engineering laboratory equipped with cutting-edge tools and equipment to enhance hands-on learning experience for engineering students.",
     content: `
       <p>Kongoni Technical College proudly unveils its new engineering laboratory, representing a significant investment in technical education infrastructure and student learning outcomes.</p>
@@ -117,7 +117,7 @@ const mockNews = [
       
       <p>The lab serves all engineering departments and will host specialized workshops, industry training sessions, and research projects. Local industry partners have expressed interest in collaborative projects using the new facilities.</p>
     `,
-    imageUrl: "/images/news/engineering-lab.jpg",
+    imageUrl: "/images/departments/ict/ict7.jpg",
     featured: false,
     createdAt: "2024-08-01T10:00:00Z",
     updatedAt: "2024-08-01T10:00:00Z",
@@ -144,7 +144,7 @@ const mockNews = [
       
       <p>The program includes structured internships, mentorship opportunities, and direct recruitment drives. Over 85% of our recent graduates have secured employment through these industry connections.</p>
     `,
-    imageUrl: "/images/news/industry-partnership.jpg",
+    imageUrl: "/images/departments/ict/ajira-workshop.jpg",
     featured: false,
     createdAt: "2024-07-30T09:15:00Z",
     updatedAt: "2024-07-30T09:15:00Z",
@@ -170,7 +170,7 @@ const mockNews = [
       
       <p>The recognition comes as the college continues to expand its programs and enhance its facilities to meet the growing demand for skilled technical professionals in Kenya.</p>
     `,
-    imageUrl: "/images/news/tvet-awards.jpg",
+    imageUrl: "/images/admin/admin18.jpeg",
     featured: false,
     createdAt: "2024-07-25T16:45:00Z",
     updatedAt: "2024-07-25T16:45:00Z",
@@ -197,7 +197,7 @@ const mockNews = [
       
       <p>"Education should benefit the entire community," noted Community Outreach Coordinator, Mr. Peter Wachira. "These workshops create opportunities for economic empowerment beyond our regular student body."</p>
     `,
-    imageUrl: "/images/news/community-workshop.jpg",
+    imageUrl: "/images/admin/admin17.jpeg",
     featured: false,
     createdAt: "2024-07-20T11:00:00Z",
     updatedAt: "2024-07-20T11:00:00Z",
@@ -225,39 +225,12 @@ const mockNews = [
       
       <p>The system supports both on-campus and remote learning, ensuring continuity of education regardless of circumstances. Student feedback has been overwhelmingly positive, with improved engagement and academic performance metrics.</p>
     `,
-    imageUrl: "/images/news/elearning-platform.jpg",
+    imageUrl: "/images/departments/ict/ajira-workshop.jpg",
     featured: false,
     createdAt: "2024-07-18T13:30:00Z",
     updatedAt: "2024-07-18T13:30:00Z",
     author: "ICT Department",
     category: "Technology"
-  },
-  {
-    id: "9",
-    title: "Graduation Ceremony Class of 2024 - Record Numbers",
-    excerpt: "Over 450 students graduated across various technical programs, marking the largest graduating class in the college's history with excellent job placement rates.",
-    content: `
-      <p>The Graduation Ceremony for the Class of 2024 was a momentous occasion, celebrating the achievements of over 450 graduates across all departments - the largest graduating class in Kongoni Technical College history.</p>
-      
-      <p>Graduation highlights include:</p>
-      <ul>
-        <li>450 graduates across 15 different technical programs</li>
-        <li>92% job placement rate within 6 months of graduation</li>
-        <li>25 students graduated with distinction (First Class honors)</li>
-        <li>Special recognition for outstanding academic and practical achievements</li>
-        <li>Industry awards for best projects in each department</li>
-      </ul>
-      
-      <p>Chief Guest, Cabinet Secretary for Education Dr. Ezekiel Machogu, commended the college for its contribution to Kenya's technical workforce development. "Kongoni Technical College continues to produce graduates who are not just job seekers but job creators," he noted.</p>
-      
-      <p>The ceremony also featured the launch of the Alumni Association, aimed at creating a network for continued professional development and mentorship opportunities for current students.</p>
-    `,
-    imageUrl: "/images/news/graduation-2024.jpg",
-    featured: false,
-    createdAt: "2024-07-15T15:00:00Z",
-    updatedAt: "2024-07-15T15:00:00Z",
-    author: "Administration",
-    category: "Events"
   },
   {
     id: "10",

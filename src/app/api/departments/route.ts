@@ -43,7 +43,7 @@ const departments = [
     id: "hospitality-tourism",
     name: "Hospitality and Tourism Department",
     description: "Comprehensive training in hotel management, tourism operations, and customer service.",
-    imageUrl: "/images/departments//hospitality/hospitality.jpg",
+    imageUrl: "/images/departments/hospitality/hospitality.jpg",
   },
   {
     id: "agriculture",

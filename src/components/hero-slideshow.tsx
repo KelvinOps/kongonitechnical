@@ -32,7 +32,7 @@ const slides: Slide[] = [
   {
     image: "/images/hero/cultural4.jpg",
     title: "Culture & Diversity",
-    subtitle: "Modern workshops and laboratories for hands-on learning",
+    subtitle: "Celebrating Our Roots, Embracing Our Differences",
     buttonText: "View Facilities",
     buttonLink: "/about",
   },
@@ -44,9 +44,9 @@ const slides: Slide[] = [
     buttonLink: "/about",
   },
   {
-    image: "/images/admin/admin20.jpeg",
+    image: "/images/admin/admin14.jpeg",
     title: "Expert Faculty",
-    subtitle: "Learn from industry professionals and experienced educators",
+    subtitle: "Learn from industry professionals and experienced trainers",
     buttonText: "Meet Faculty",
     buttonLink: "/about",
   }
