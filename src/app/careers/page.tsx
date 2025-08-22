@@ -408,7 +408,7 @@ export default function CareersPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-[#099cca]" />
-                  <span>Deadline: September 30, 2025</span>
+                  <span>Deadline: September 06, 2025</span>
                 </div>
               </div>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
