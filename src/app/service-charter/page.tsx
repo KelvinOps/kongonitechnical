@@ -178,7 +178,7 @@ export default function ServiceCharterPage() {
               variant="outline" 
               size="sm"
               className="border-primary text-primary hover:bg-primary/10"
-              onClick={() => window.open('/documents/service-charter.pdf', '_blank')}
+              onClick={() => window.open('/documents/English-Service-Charter.pdf','/documents/Kiswahili-Service-Charter.pdf')}
             >
               <Download className="w-4 h-4 mr-2" />
               Download PDF

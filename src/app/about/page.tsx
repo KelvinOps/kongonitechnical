@@ -48,7 +48,7 @@ export default function AboutPage() {
                 </p>
                 <p className="flex items-center justify-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                  Website: www.kongonitvc.ac.ke
+                  Website: www.kongonitechnical.ac.ke
                 </p>
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function AboutPage() {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <div className="space-y-6">
                     <p className="text-lg text-gray-700 leading-relaxed">
-                      Kongoni TVC is a Government Sponsored Institution under the Ministry of Education. It was established with the core mandate of equipping youths with skills needed to secure employment in today's market.
+                      Kongoni TVC is a Government Sponsored Institution under the Ministry of Education. It was established with the core mandate of equipping youths with skills needed to secure employment in todays market.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
                       The institution opened its doors to the first batch of students in <strong className="text-primary">October 2019</strong> and is well equipped to offer courses ranging from ICT, Business to Engineering courses at certificate and diploma level.
@@ -87,13 +87,11 @@ export default function AboutPage() {
                     <div className="relative rounded-2xl overflow-hidden shadow-xl">
                       <div className="relative w-full h-64">
                         <Image 
-                          src="/images/kongoni-campus.jpg" 
-                          alt="Kongoni TVC Campus View" 
+                          src="/images/facilities/facilities12.jpg" 
+                          alt="Kongoni TVC Campus View - Modern Technical College Building" 
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
-                          onError={() => {
-                            // Handle error - you might want to set a fallback image state here
-                          }}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
@@ -464,7 +462,6 @@ export default function AboutPage() {
                   title: "State-of-the-Art Training Equipment",
                   description: "KTVC proudly holds the stature of one of the country's most equipped colleges in terms of modern training equipment and experienced staff.",
                   gradient: "from-primary to-blue-600",
-                  image: "/images/training-equipment.jpg",
                   fallbackImage: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
                 },
                 {
@@ -472,7 +469,6 @@ export default function AboutPage() {
                   title: "Dual Training System",
                   description: "Innovative dual system of training where trainees are trained 50% at college and 50% at the industry for real-world experience.",
                   gradient: "from-secondary to-yellow-500",
-                  image: "/images/dual-training.jpg",
                   fallbackImage: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
                 },
                 {
@@ -480,7 +476,6 @@ export default function AboutPage() {
                   title: "Excellence in Education",
                   description: "Equity in education, a well-rounded approach to training, and a focus on discipline and ethics are hallmarks in skill transfer at KTVC.",
                   gradient: "from-green-600 to-emerald-600",
-                  image: "/images/students-learning.jpg",
                   fallbackImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
                 }
               ].map((feature, index) => (
@@ -489,10 +484,11 @@ export default function AboutPage() {
                   <div className="relative h-48 overflow-hidden">
                     <div className="relative w-full h-full">
                       <Image 
-                        src={feature.fallbackImage} // Using fallback directly since local images might not exist
+                        src={feature.fallbackImage}
                         alt={feature.title}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </div>
                     <div className={`absolute inset-0 bg-gradient-to-t ${feature.gradient} opacity-60`}></div>

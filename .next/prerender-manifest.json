@@ -126,54 +126,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/courses/certificate": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/courses/certificate",
-      "dataRoute": "/courses/certificate.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/courses/artisan": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/courses/artisan",
-      "dataRoute": "/courses/artisan.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/courses/diploma": {
       "experimentalBypassFor": [
         {
@@ -198,7 +150,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/courses/shortcourses": {
+    "/courses/certificate": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -211,8 +163,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/courses/shortcourses",
-      "dataRoute": "/courses/shortcourses.rsc",
+      "srcRoute": "/courses/certificate",
+      "dataRoute": "/courses/certificate.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/courses/nita-courses": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/courses/nita-courses",
+      "dataRoute": "/courses/nita-courses.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -246,7 +222,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/courses/nita-courses": {
+    "/courses/artisan": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -259,8 +235,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/courses/nita-courses",
-      "dataRoute": "/courses/nita-courses.rsc",
+      "srcRoute": "/courses/artisan",
+      "dataRoute": "/courses/artisan.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/courses/shortcourses": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/courses/shortcourses",
+      "dataRoute": "/courses/shortcourses.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -486,30 +486,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/dpadministration": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/dpadministration",
-      "dataRoute": "/dpadministration.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/dpacademics": {
       "experimentalBypassFor": [
         {
@@ -558,7 +534,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/examination": {
+    "/dpadministration": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -571,8 +547,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/examination",
-      "dataRoute": "/examination.rsc",
+      "srcRoute": "/dpadministration",
+      "dataRoute": "/dpadministration.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -606,7 +582,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/iqa": {
+    "/examination": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -619,8 +595,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/iqa",
-      "dataRoute": "/iqa.rsc",
+      "srcRoute": "/examination",
+      "dataRoute": "/examination.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -645,6 +621,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/ilo",
       "dataRoute": "/ilo.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/iqa": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/iqa",
+      "dataRoute": "/iqa.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -702,30 +702,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/performance-contracting": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/performance-contracting",
-      "dataRoute": "/performance-contracting.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/principal": {
       "experimentalBypassFor": [
         {
@@ -741,6 +717,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/principal",
       "dataRoute": "/principal.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/performance-contracting": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/performance-contracting",
+      "dataRoute": "/performance-contracting.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",

@@ -175,7 +175,7 @@ export default function CourseSearchSection() {
       setTimeout(() => {
         toast.success("Welcome to the admissions page!");
       }, 500);
-    } catch (error) {
+    } catch (navigationError) {
       toast.error("Failed to navigate to admissions page. Please try again.");
     }
   };
@@ -193,7 +193,7 @@ export default function CourseSearchSection() {
       
       // Show success toast
       toast.success("Application procedure document downloaded successfully!");
-    } catch (error) {
+    } catch (downloadError) {
       // Show error toast if download fails
       toast.error("Failed to download application procedure. Please try again or contact support.");
     }
@@ -246,11 +246,6 @@ export default function CourseSearchSection() {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
-  // Show error toast if API fails
-  if (error) {
-    toast.error("Failed to load courses. Please refresh the page.");
-  }
 
   return (
     <section className="py-16 relative">
@@ -384,6 +379,15 @@ export default function CourseSearchSection() {
       {/* Search Results - Outside the background image area */}
       <div className="bg-gray-50 py-12">
         <div className="container mx-auto px-4">
+          {/* Show error message if API fails */}
+          {error && (
+            <div className="text-center mb-8">
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg max-w-md mx-auto">
+                <p>Failed to load courses. Please refresh the page or try again later.</p>
+              </div>
+            </div>
+          )}
+
           {/* Search Results */}
           {showResults && filteredCourses && filteredCourses.length > 0 && (
             <div>
