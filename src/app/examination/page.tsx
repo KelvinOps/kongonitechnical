@@ -198,7 +198,7 @@ export default function ExaminationsPage() {
                     Mr. Paul Kimanzi
                   </h2>
                   <p className="text-lg text-gray-700 mb-4">
-                    Bachelor of Education
+                    Bsc (CM),DTTE (KTTC)
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-6">
                     Mr. Kimanzi brings experience in examination management and assessment coordination. He has been instrumental in establishing robust examination systems that maintain the highest standards of integrity and efficiency. His expertise spans across all major certification bodies in Kenya&apos;s TVET sector.

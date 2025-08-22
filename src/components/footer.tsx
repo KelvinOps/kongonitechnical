@@ -339,7 +339,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom - Full Width Cream Section */}
-      <div className="border-t border-black/20 bg-secondary py-6">
+      <div className="border-t border-black/20 bg-primary py-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="text-center lg:flex-1">
