@@ -113,7 +113,7 @@ const staff = [
     name: "Mr. Delphine Kubende",
     position: "Registry Clerk",
     qualification: "BA Records Management",
-    image: "/api/placeholder/200/250",
+    image: "/images/registry/delphine2.jpeg",
     email: "deputy.registrar@kongonitechnical.ac.ke", 
     phone: "+254 700 345 679"
   },
