@@ -132,7 +132,7 @@ const administrationTeam: AdminMember[] = [
 
 const stats = [
   { icon: Users, label: 'Leadership Team', value: '8+' },
-  { icon: GraduationCap, label: 'Combined Experience', value: '90+ Years' },
+  { icon: GraduationCap, label: 'Combined Experience', value: '5+ Years' },
   { icon: Award, label: 'Advanced Degrees', value: '75%' },
   { icon: Calendar, label: 'Average Tenure', value: '5+ Years' }
 ]
