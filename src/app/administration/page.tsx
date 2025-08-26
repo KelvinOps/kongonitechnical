@@ -40,12 +40,12 @@ const administrationTeam: AdminMember[] = [
     qualifications: ['PhD in Educational Leadership', 'MSc in Technical Education', 'BSc in Engineering'],
     experience: '15+ years in technical education',
     responsibilities: ['Strategic planning and institutional leadership', 'Academic quality assurance', 'Stakeholder relations', 'Policy implementation'],
-    bio: 'Dr. Wanjiku brings over 15 years of experience in technical education leadership. She is passionate about developing skilled technical professionals who contribute to Kenya\'s economic growth.',
-    joinDate: '2018'
+    bio: 'Ms Akaranga brings over 15 years of experience in technical education leadership. She is passionate about developing skilled technical professionals who contribute to Kenya\'s economic growth.',
+    joinDate: '2022'
   },
   {
     id: '2',
-    name: 'Mr. ',
+    name: 'Ms. Lucy Makhokha',
     position: 'Deputy Principal (Academic)',
     department: 'Academic Affairs',
     image: '/images/admin/deputy-academic.jpg',
@@ -73,7 +73,7 @@ const administrationTeam: AdminMember[] = [
   },
   {
     id: '4',
-    name: 'Eng. ',
+    name: 'Mr Kevin Masinde ',
     position: 'Dean of Students',
     department: 'Engineering Faculty',
     image: '/images/admin/dean-engineering.jpg',
@@ -82,7 +82,7 @@ const administrationTeam: AdminMember[] = [
     qualifications: ['MSc in Civil Engineering', 'Professional Engineer (PE)', 'BSc in Civil Engineering'],
     experience: '14+ years in engineering education',
     responsibilities: ['Engineering programs leadership', 'Industry partnerships', 'Research coordination', 'Student projects supervision'],
-    bio: 'Eng. Mwangi leads our engineering programs with a focus on practical skills development and industry relevance.',
+    bio: 'Mr Masinde leads our engineering programs with a focus on practical skills development and industry relevance.',
     joinDate: '2017'
   },
   {
