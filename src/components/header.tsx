@@ -116,7 +116,7 @@ export default function Header() {
             { href: "/departments/civil", label: "Building & Civil Engineering Department" },
             { href: "/departments/electrical", label: "Electrical & Electronics Engineering Department" },
             { href: "/departments/automotive", label: "Automotive & Mechanical Engineering Department" },
-            { href: "/departments/fashion", label: "Fashion Design and Cosmetics Department" },
+            { href: "/departments/fashion", label: "Fashion Design and Cosmetology Department" },
             { href: "/departments/hospitality-tourism", label: "Hospitality and Tourism Department" },
             { href: "/departments/agriculture", label: "Agriculture Department" }
           ]

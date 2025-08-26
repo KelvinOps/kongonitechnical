@@ -34,14 +34,20 @@ const fallbackDepartments: Department[] = [
   },
   {
     id: "automotive",
-    name: "Automotive & Mechanical Engineering Department",
+    name: "Mechanical & Automotive Engineering Department",
     description: "Mastering vehicle diagnostics, repair, and maintenance.",
     imageUrl: "/images/departments/automotive.jpg",
   },
   {
-    id: "hospitality",
-    name: "Food & Beverage Department",
-    description: "Professional training in culinary arts and hospitality service.",
+    id: "fashion",
+    name: "Fashion Design and Cosmetics Department",
+    description: "Creative training in fashion design, garment construction, and beauty enhancement techniques.",
+    imageUrl: "/images/departments/fashion.jpg",
+  },
+  {
+    id: "hospitality-tourism",
+    name: "Hospitality and Tourism Department",
+    description: "Comprehensive training in hotel management, tourism operations, and customer service excellence.",
     imageUrl: "/images/departments/hospitality/hospitality.jpg",
   },
   {
@@ -72,14 +78,14 @@ export default function DepartmentsSection() {
             <Skeleton className="h-8 w-48 mx-auto mb-3" />
             <Skeleton className="h-5 w-80 mx-auto" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {[...Array(8)].map((_, i) => (
               <Card key={i} className="overflow-hidden">
-                <Skeleton className="w-full h-36" />
-                <CardContent className="p-4">
-                  <Skeleton className="h-5 w-full mb-2" />
-                  <Skeleton className="h-4 w-3/4 mb-2" />
-                  <Skeleton className="h-4 w-1/2" />
+                <Skeleton className="w-full h-32" />
+                <CardContent className="p-3">
+                  <Skeleton className="h-4 w-full mb-2" />
+                  <Skeleton className="h-3 w-3/4 mb-2" />
+                  <Skeleton className="h-3 w-1/2" />
                 </CardContent>
               </Card>
             ))}
@@ -102,16 +108,17 @@ export default function DepartmentsSection() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {departmentList.map((department) => (
+          {departmentList.map((department, index) => (
             <Link key={department.id} href={`/departments/${department.id}`} className="block">
               <Card className="overflow-hidden hover:shadow-lg transition-shadow group h-full">
-                <div className="relative overflow-hidden">
+                <div className="relative h-32 overflow-hidden">
                   <Image
                     src={department.imageUrl}
                     alt={`${department.name} Department`}
-                    width={400}
-                    height={128}
-                    className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    priority={index < 5} // Prioritize first 5 images (above fold)
                   />
                 </div>
                 <CardContent className="p-3">

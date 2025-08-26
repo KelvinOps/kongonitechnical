@@ -8,9 +8,6 @@ export default function Departments() {
       <main>
         <DepartmentsSection />
       </main>
-      <div>
-
-      </div>
     </div>
   );
 }

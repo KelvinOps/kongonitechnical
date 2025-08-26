@@ -208,7 +208,7 @@ export const departments: DepartmentDetails[] = [
   },
   {
     id: "fashion",
-    name: "Fashion Design and Cosmetics Department",
+    name: "Fashion Design and Cosmetology Department",
     description: "Creative training in fashion design, garment construction, and beauty enhancement techniques.",
     backgroundInfo: "The Fashion Design and Cosmetics Department nurtures creative talent and entrepreneurship in the fashion and beauty industry. Our comprehensive programs cover fashion design, pattern making, garment construction, professional makeup, and beauty therapy, preparing students for successful careers in creative industries.",
     hodImage: "/images/hod/tabithaindiori.jpeg",

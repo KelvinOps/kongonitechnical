@@ -38,24 +38,43 @@ export default async function DepartmentPage({ params }: { params: Promise<{ id:
           </div>
           
           <div className="lg:w-80 flex flex-col items-center">
-            <Image
-              src={department.hodImage}
-              alt={`Head of Department - ${department.hodName}`}
-              width={192}
-              height={192}
-              className="w-48 h-48 object-cover rounded-full shadow-lg mb-4"
-            />
+            <div className="relative w-48 h-48 mb-4">
+              <Image
+                src={department.hodImage}
+                alt={`Head of Department - ${department.hodName}`}
+                fill
+                sizes="(max-width: 768px) 192px, 192px"
+                className="object-cover rounded-full shadow-lg"
+                priority
+              />
+            </div>
             <div className="flex space-x-4">
-              <a href={department.hodSocial?.facebook || "#"} className="text-blue-600 hover:text-blue-800 transition-colors">
+              <a 
+                href={department.hodSocial?.facebook || "#"} 
+                className="text-blue-600 hover:text-blue-800 transition-colors"
+                aria-label={`${department.hodName}'s Facebook`}
+              >
                 <Facebook size={24} />
               </a>
-              <a href={department.hodSocial?.twitter || "#"} className="text-blue-400 hover:text-blue-600 transition-colors">
+              <a 
+                href={department.hodSocial?.twitter || "#"} 
+                className="text-blue-400 hover:text-blue-600 transition-colors"
+                aria-label={`${department.hodName}'s Twitter`}
+              >
                 <Twitter size={24} />
               </a>
-              <a href={department.hodSocial?.linkedin || "#"} className="text-blue-700 hover:text-blue-900 transition-colors">
+              <a 
+                href={department.hodSocial?.linkedin || "#"} 
+                className="text-blue-700 hover:text-blue-900 transition-colors"
+                aria-label={`${department.hodName}'s LinkedIn`}
+              >
                 <Linkedin size={24} />
               </a>
-              <a href={`mailto:${department.hodSocial?.email || ""}`} className="text-gray-600 hover:text-gray-800 transition-colors">
+              <a 
+                href={`mailto:${department.hodSocial?.email || ""}`} 
+                className="text-gray-600 hover:text-gray-800 transition-colors"
+                aria-label={`Email ${department.hodName}`}
+              >
                 <Mail size={24} />
               </a>
             </div>
@@ -134,14 +153,15 @@ export default async function DepartmentPage({ params }: { params: Promise<{ id:
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Trainee Activities</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {(department.activityImages || []).map((img, i) => (
-              <Image
-                key={i}
-                src={img}
-                alt={`Activity ${i + 1}`}
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover rounded shadow-md hover:shadow-lg transition-shadow"
-              />
+              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded shadow-md hover:shadow-lg transition-shadow">
+                <Image
+                  src={img}
+                  alt={`${department.name} Activity ${i + 1}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
             ))}
           </div>
         </div>

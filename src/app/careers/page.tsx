@@ -454,7 +454,7 @@ export default function CareersPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Submit Application</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Email your application to hr@kongonicollege.ac.ke before the deadline.</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">Email your application to <b>vacancieskongonitvc@gmail.com</b> before the deadline.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -522,11 +522,11 @@ export default function CareersPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
               <div className="flex items-center justify-center gap-2">
                 <Users className="text-[#099cca]" size={16} />
-                <span>hr@kongonitechnical.ac.ke</span>
+                <span>vacancieskongonitvc@gmail.com</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Clock className="text-[#099cca]" size={16} />
-                <span>+254 700 123 789</span>
+                <span>+254 788 070 303</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <MapPin className="text-[#099cca]" size={16} />
