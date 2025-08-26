@@ -98,21 +98,21 @@ const teamMembers = [
     phone: "+254 799 012 345"
   },
   {
-    name: "Mr. Francis Njoroge",
-    title: "ICT Coordinator",
-    image: "/images/team/ict-coordinator.png",
+    name: "Mr. Nelson Thuku",
+    title: "ICT HOD ",
+    image: "/images/hod/nelsonthuku.jpg",
     email: "ict@kongonitvc.ac.ke",
     phone: "+254 700 123 456"
   },
   {
-    name: "Ms. Janet Wanjiku",
+    name: " Mr Makwila Kipkore",
     title: "Procurement Officer",
     image: "/images/team/procurement.png",
     email: "procurement@kongonitvc.ac.ke",
     phone: "+254 711 234 567"
   },
   {
-    name: "Mr. Daniel Muthoka",
+    name: "Mr. ",
     title: "Internal Auditor",
     image: "/images/team/auditor.png",
     email: "audit@kongonitvc.ac.ke",

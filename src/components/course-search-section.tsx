@@ -175,7 +175,7 @@ export default function CourseSearchSection() {
       setTimeout(() => {
         toast.success("Welcome to the admissions page!");
       }, 500);
-    } catch (navigationError) {
+    } catch {
       toast.error("Failed to navigate to admissions page. Please try again.");
     }
   };
@@ -193,7 +193,7 @@ export default function CourseSearchSection() {
       
       // Show success toast
       toast.success("Application procedure document downloaded successfully!");
-    } catch (downloadError) {
+    } catch {
       // Show error toast if download fails
       toast.error("Failed to download application procedure. Please try again or contact support.");
     }
