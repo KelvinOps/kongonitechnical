@@ -179,7 +179,7 @@ export default function AdministrationPage() {
             <blockquote className="text-lg text-gray-700 italic mb-6 leading-relaxed">
               At Kongoni Technical and Vocational College, we are committed to providing world-class technical education that empowers our students with practical skills and knowledge needed to excel in their chosen fields. Our administration team works tirelessly to create an environment that fosters innovation, excellence, and personal growth.
             </blockquote>
-            <cite className="text-blue-600 font-semibold">- Dr. Margaret Wanjiku, Principal</cite>
+            <cite className="text-blue-600 font-semibold">- Ms Judith Akaranga, Principal</cite>
           </div>
         </div>
       </section>
