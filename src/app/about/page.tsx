@@ -44,7 +44,7 @@ export default function AboutPage() {
                 </p>
                 <p className="flex items-center justify-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                  Contact: 0721-320-423 | Email: kongonitvc@gmail.com
+                  Contact: 0788 070 303 | Email: kongonitvc@gmail.com
                 </p>
                 <p className="flex items-center justify-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full"></span>
