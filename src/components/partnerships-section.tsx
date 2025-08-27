@@ -50,7 +50,7 @@ export default function PartnershipsSection() {
     {
       name: "JUAKALI",
       image: "/images/partners/juakali.png",
-      alt: "Juakali Logo",
+      alt: "JUAKALI Logo",
     },
   ];
 
@@ -91,7 +91,7 @@ export default function PartnershipsSection() {
         </div>
 
         {/* Partners Section */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-6 items-center justify-center">
           {partners.map((partner, index) => (
             <div
               key={index}
