@@ -361,7 +361,7 @@ export default function Footer() {
               <Link href="/accessibility" className="text-black hover:text-white hover:bg-black/20 px-2 py-1 rounded transition-all duration-300">
                 Accessibility
               </Link>
-              <Link href="/sitemap" className="text-black hover:text-white hover:bg-black/20 px-2 py-1 rounded transition-all duration-300">
+              <Link href="/sitemap.xml" className="text-black hover:text-white hover:bg-black/20 px-2 py-1 rounded transition-all duration-300">
                 Sitemap
               </Link>
             </div>
