@@ -300,7 +300,7 @@ export default function CBETDepartment() {
                   <Phone className="h-8 w-8 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
-                <p className="text-gray-600">+254 (0) 123 456 790</p>
+                <p className="text-gray-600">+254 788 070303</p>
               </div>
               
               <div className="text-center">
@@ -308,7 +308,7 @@ export default function CBETDepartment() {
                   <Mail className="h-8 w-8 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-600">cbet@company.com</p>
+                <p className="text-gray-600">cbet@kongonitechnical.ac.ke</p>
               </div>
               
               <div className="text-center">
