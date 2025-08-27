@@ -42,6 +42,16 @@ export default function PartnershipsSection() {
       image: "/images/partners/nita.jpg",
       alt: "National Industrial Training Authority Logo",
     },
+    {
+      name: "KNEC",
+      image: "/images/partners/knec.jpg",
+      alt: "Kenya National Examinations Council Logo",
+    },
+    {
+      name: "JUAKALI",
+      image: "/images/partners/juakali.png",
+      alt: "Juakali Logo",
+    },
   ];
 
   useEffect(() => {
