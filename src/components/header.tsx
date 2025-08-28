@@ -247,7 +247,7 @@ export default function Header() {
 
   // Quick Links for header top section - removed opportunities items as requested
   const quickLinks = [
-    { href: "/downloads/brochures", label: "Brochure" },
+    { href: "/documents/kongoni-technical-brochure.pdf", label: "Brochure" },
     { href: "/news/latest", label: "News" }
   ];
 
