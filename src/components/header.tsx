@@ -193,7 +193,7 @@ export default function Header() {
           isCategory: true as const,
           items: [
             { href: "/documents/kongoni-technical-brochure.pdf", label: "Brochure" },
-            { href: "/downloads/trainee-rules", label: "Trainee Rules and Regulations" }
+            { href: "/documents/trainee-rules", label: "Trainee Rules and Regulations" }
           ]
         }
       ]
@@ -207,25 +207,27 @@ export default function Header() {
           label: "Prospect Students",
           isCategory: true as const,
           items: [
-            { href: "/student-hub/application-procedure", label: "Application Procedure" },
-            { href: "/student-hub/online-registration", label: "Online Registration" },
-            { href: "/student-hub/fee-structure", label: "Fee Structure" },
-            { href: "/student-hub/scholarship", label: "Scholarship Application" },
-            { href: "/student-hub/hostel-booking", label: "Hostel Booking" },
-            { href: "/student-hub/join-us", label: "Join Us" }
+            { href: "/documents/Admission-Letter-2025.pdf", label: "Application Procedure" },
+            { href: "/admissions", label: "Online Registration" },
+            { href: "/documents/KongoniTVC-feestructure-2025.pdf", label: "Fee Structure 2025" },
+            { href: "/documents/KongoniTVC-course-requirements.pdf", label: "Course Requirements" },
+            { href: "/documents/KongoniTVC-medical form.pdf", label: "Medical Form" },
+            { href: "https://portal.hef.co.ke/", label: "Scholarship Application" },
+            { href: "/documents/hostel-booking.pdf", label: "Hostel Booking" },
+            { href: "/admissions", label: "Join Us" }
           ]
         },
         { 
           label: "Current Student",
           isCategory: true as const,
           items: [
-            { href: "/student-hub/student-forms", label: "All Student Forms" },
-            { href: "/student-hub/trainee-rules", label: "Trainee Rules & Regulations" },
-            { href: "/student-hub/examination", label: "Examination" },
+            { href: "/documents/student-forms", label: "All Student Forms" },
+            { href: "/documents/trainee-rules", label: "Trainee Rules & Regulations" },
+            { href: "/examination", label: "Examination" },
             { href: "/student-hub/unit-registration", label: "Unit Registration Procedure" },
-            { href: "/student-hub/course-transfer", label: "Course Transfer Form" },
-            { href: "/student-hub/clearance-form", label: "Clearance Form" },
-            { href: "/student-hub/student-handbook", label: "Student Handbook" }
+            { href: "/documents/course-transfer", label: "Course Transfer Form" },
+            { href: "/documents/clearance-form", label: "Clearance Form" },
+            { href: "/documents/student-handbook", label: "Student Handbook" }
           ]
         }
       ]
