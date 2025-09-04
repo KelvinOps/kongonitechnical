@@ -47,7 +47,7 @@ export default function ServiceCharterPage() {
   }) => {
     const pdfPath = isKiswahili ? '/documents/Kiswahili-Service-Charter.pdf' : '/documents/English-Service-Charter.pdf';
     const imagePath = isKiswahili ? "/documents/KiswahiliCharter.jpg" : "/documents/EnglishCharter.jpg";
-    const downloadName = isKiswahili ? 'KSTVET-Service-Charter-Kiswahili.pdf' : 'KSTVET-Service-Charter-English.pdf';
+    const downloadName = isKiswahili ? 'KongoniTVC-Service-Charter-Kiswahili.pdf' : 'KongoniTVC-Service-Charter-English.pdf';
 
     return (
       <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
