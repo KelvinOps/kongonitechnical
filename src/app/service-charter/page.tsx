@@ -19,175 +19,198 @@ import {
 export default function ServiceCharterPage() {
   const [activeTab, setActiveTab] = useState<'both' | 'english' | 'kiswahili'>('both');
 
+  // Download function
+  const downloadPDF = (filename: string, displayName: string) => {
+    try {
+      // Create a temporary anchor element
+      const link = document.createElement('a');
+      link.href = filename;
+      link.download = displayName;
+      link.target = '_blank';
+      
+      // Append to body, click, and remove
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Download failed:', error);
+      // Fallback: open in new tab
+      window.open(filename, '_blank');
+    }
+  };
+
   // PDF Viewer Component with fallback content
   const PDFViewer = ({ title, language, isKiswahili = false }: { 
     title: string; 
     language: string;
     isKiswahili?: boolean;
-  }) => (
-    <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
-      {/* Header with custom colors */}
-      <div className={`p-4 text-white ${isKiswahili ? 'bg-secondary' : 'bg-primary'}`}>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <FileText className="text-white w-6 h-6" />
-            <div>
-              <h3 className="text-white font-semibold text-lg">{title}</h3>
-              <p className="text-white/80 text-sm">{language}</p>
-            </div>
-          </div>
-          <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
-            Official Document
-          </Badge>
-        </div>
-      </div>
-      
-      {/* Document Display */}
-      <div className="relative bg-gray-100 min-h-[600px]">
-        <div className="p-8 text-center">
-          {/* KSTVET Header */}
-          <div className="mb-8">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-4">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                  <div className="text-primary font-bold text-xl">K</div>
-                </div>
-              </div>
-              <div className="text-left">
-                <h1 className="text-2xl font-bold text-primary">KSTVET</h1>
-                <p className="text-sm text-gray-600">Kenya School of TVET</p>
-                <p className="text-xs text-secondary italic">The Home of Technical Education</p>
-              </div>
-            </div>
-          </div>
+  }) => {
+    const pdfPath = isKiswahili ? '/documents/Kiswahili-Service-Charter.pdf' : '/documents/English-Service-Charter.pdf';
+    const imagePath = isKiswahili ? "/documents/KiswahiliCharter.jpg" : "/documents/EnglishCharter.jpg";
+    const downloadName = isKiswahili ? 'KSTVET-Service-Charter-Kiswahili.pdf' : 'KSTVET-Service-Charter-English.pdf';
 
-          {/* Charter Document Image */}
-          <div className="flex justify-center mb-8">
-            <div 
-              className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105"
-              onClick={() => {
-                const imageSrc = isKiswahili ? "/documents/KiswahiliCharter.jpg" : "/documents/EnglishCharter.jpg";
-                window.open(imageSrc, '_blank');
-              }}
-            >
-              <div className="relative w-64 h-80 bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 hover:shadow-3xl transition-shadow duration-300">
-                <div className="absolute inset-2 border-2 border-gray-100 rounded-lg"></div>
-                
-                <Image 
-                  src={isKiswahili ? "/documents/KiswahiliCharter.jpg" : "/documents/EnglishCharter.jpg"}
-                  alt={isKiswahili ? "Kiswahili Charter Preview" : "English Charter Preview"}
-                  width={256}
-                  height={320}
-                  className="w-full h-full object-cover p-3 rounded-xl"
-                />
-                
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <div className="bg-white bg-opacity-90 rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
-                    <Eye className="w-6 h-6 text-gray-700" />
+    return (
+      <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
+        {/* Header with custom colors */}
+        <div className={`p-4 text-white ${isKiswahili ? 'bg-secondary' : 'bg-primary'}`}>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <FileText className="text-white w-6 h-6" />
+              <div>
+                <h3 className="text-white font-semibold text-lg">{title}</h3>
+                <p className="text-white/80 text-sm">{language}</p>
+              </div>
+            </div>
+            <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+              Official Document
+            </Badge>
+          </div>
+        </div>
+        
+        {/* Document Display */}
+        <div className="relative bg-gray-100 min-h-[600px]">
+          <div className="p-8 text-center">
+            {/* KSTVET Header */}
+            <div className="mb-8">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                    <div className="text-primary font-bold text-xl">K</div>
                   </div>
                 </div>
-                
-                <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg ${
-                  isKiswahili ? 'bg-secondary text-gray-800' : 'bg-primary'
-                }`}>
-                  {isKiswahili ? 'Kiswahili' : 'English'}
+                <div className="text-left">
+                  <h1 className="text-2xl font-bold text-primary">KTVC</h1>
+                  <p className="text-sm text-gray-600">Kongoni Technical and Vocational College</p>
+                  <p className="text-xs text-secondary italic">The top-rated technical and vocational college in technical training.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Charter Document Image */}
+            <div className="flex justify-center mb-8">
+              <div 
+                className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105"
+                onClick={() => window.open(imagePath, '_blank')}
+              >
+                <div className="relative w-64 h-80 bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 hover:shadow-3xl transition-shadow duration-300">
+                  <div className="absolute inset-2 border-2 border-gray-100 rounded-lg"></div>
+                  
+                  <Image 
+                    src={imagePath}
+                    alt={isKiswahili ? "Kiswahili Charter Preview" : "English Charter Preview"}
+                    width={256}
+                    height={320}
+                    className="w-full h-full object-cover p-3 rounded-xl"
+                  />
+                  
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="bg-white bg-opacity-90 rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                      <Eye className="w-6 h-6 text-gray-700" />
+                    </div>
+                  </div>
+                  
+                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg ${
+                    isKiswahili ? 'bg-secondary text-gray-800' : 'bg-primary'
+                  }`}>
+                    {isKiswahili ? 'Kiswahili' : 'English'}
+                  </div>
+                  
+                  <div className="absolute -top-1 -left-1 w-16 h-16 bg-gradient-to-br from-white to-transparent opacity-30 rounded-full blur-sm"></div>
                 </div>
                 
-                <div className="absolute -top-1 -left-1 w-16 h-16 bg-gradient-to-br from-white to-transparent opacity-30 rounded-full blur-sm"></div>
+                <div className="text-center mt-4">
+                  <h4 className="font-semibold text-gray-800 text-lg">
+                    {isKiswahili ? 'Mithaq wa Huduma' : 'Service Charter'}
+                  </h4>
+                  <p className="text-sm text-gray-500 mt-1">Click to view full document</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Document Title */}
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-primary mb-2">
+                {isKiswahili ? 'MITHAQ WA UTOAJI HUDUMA KWA WATEJA' : 'CUSTOMER SERVICE DELIVERY CHARTER'}
+              </h2>
+            </div>
+
+            {/* Vision and Mission */}
+            <div className="text-left max-w-4xl mx-auto space-y-4 mb-8">
+              <div>
+                <h3 className="font-bold text-lg text-gray-800">
+                  {isKiswahili ? 'Maono:' : 'Vision:'} 
+                </h3>
+                <p className="text-gray-700">
+                  {isKiswahili 
+                    ? 'Kituo cha Kimataifa cha Ubora katika Elimu ya Teknikal na Mafunzo ya Kitaaluma, Utafiti na Ushauri.'
+                    : 'A Global Center of Excellence in Technical Vocational Education and Training, Research and Consultancy.'
+                  }
+                </p>
               </div>
               
-              <div className="text-center mt-4">
-                <h4 className="font-semibold text-gray-800 text-lg">
-                  {isKiswahili ? 'Mithaq wa Huduma' : 'Service Charter'}
-                </h4>
-                <p className="text-sm text-gray-500 mt-1">Click to view full document</p>
+              <div>
+                <h3 className="font-bold text-lg text-gray-800">
+                  {isKiswahili ? 'Dhamira:' : 'Mission:'}
+                </h3>
+                <p className="text-gray-700">
+                  {isKiswahili
+                    ? 'Kutoa mafunzo ya hali ya juu na ya kimataifa yanayoshindana kwa wataalamu wa TVET, kufanya utafiti na kutoa ushauri ili kukidhi mahitaji ya ulimwengu wenye mabadiliko.'
+                    : 'To Provide high quality and internationally competitive training for TVET practitioners, undertake research and consultancies to meet the needs of a dynamic world.'
+                  }
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-lg text-gray-800">
+                  {isKiswahili ? 'Maadili Muhimu:' : 'Core Values:'}
+                </h3>
+                <p className="text-gray-700">
+                  {isKiswahili
+                    ? 'i. Utaalamu ii. Uvumbuzi iii. Uongozi iv. Ujumuishi v. Uwajibikaji'
+                    : 'i. Professionalism ii. Innovation iii. Integrity iv. Inclusivity v. Accountability'
+                  }
+                </p>
               </div>
             </div>
-          </div>
 
-          {/* Document Title */}
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-primary mb-2">
-              {isKiswahili ? 'MITHAQ WA UTOAJI HUDUMA KWA WATEJA' : 'CUSTOMER SERVICE DELIVERY CHARTER'}
-            </h2>
-          </div>
-
-          {/* Vision and Mission */}
-          <div className="text-left max-w-4xl mx-auto space-y-4 mb-8">
-            <div>
-              <h3 className="font-bold text-lg text-gray-800">
-                {isKiswahili ? 'Maono:' : 'Vision:'} 
-              </h3>
-              <p className="text-gray-700">
-                {isKiswahili 
-                  ? 'Kituo cha Kimataifa cha Ubora katika Elimu ya Teknikal na Mafunzo ya Kitaaluma, Utafiti na Ushauri.'
-                  : 'A Global Center of Excellence in Technical Vocational Education and Training, Research and Consultancy.'
-                }
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg text-gray-800">
-                {isKiswahili ? 'Dhamira:' : 'Mission:'}
-              </h3>
-              <p className="text-gray-700">
-                {isKiswahili
-                  ? 'Kutoa mafunzo ya hali ya juu na ya kimataifa yanayoshindana kwa wataalamu wa TVET, kufanya utafiti na kutoa ushauri ili kukidhi mahitaji ya ulimwengu wenye mabadiliko.'
-                  : 'To Provide high quality and internationally competitive training for TVET practitioners, undertake research and consultancies to meet the needs of a dynamic world.'
-                }
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-lg text-gray-800">
-                {isKiswahili ? 'Maadili Muhimu:' : 'Core Values:'}
-              </h3>
-              <p className="text-gray-700">
-                {isKiswahili
-                  ? 'i. Utaalamu ii. Uvumbuzi iii. Uongozi iv. Ujumuishi v. Uwajibikaji'
-                  : 'i. Professionalism ii. Innovation iii. Integrity iv. Inclusivity v. Accountability'
-                }
-              </p>
+            {/* Commitment Section */}
+            <div className="bg-primary text-white p-6 rounded-lg">
+              <h2 className="text-2xl font-bold mb-4">
+                {isKiswahili ? 'AHADI YETU KWA WATEJA WETU' : 'OUR COMMITMENT TO OUR CUSTOMERS'}
+              </h2>
             </div>
           </div>
-
-          {/* Commitment Section */}
-          <div className="bg-primary text-white p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">
-              {isKiswahili ? 'AHADI YETU KWA WATEJA WETU' : 'OUR COMMITMENT TO OUR CUSTOMERS'}
-            </h2>
+        </div>
+        
+        {/* Action Buttons */}
+        <div className="p-4 bg-gray-50 border-t">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4 text-sm text-gray-600">
+              <span className="flex items-center">
+                <Eye className="w-4 h-4 mr-1" />
+                Preview Available
+              </span>
+              <span className="flex items-center">
+                <Scale className="w-4 h-4 mr-1" />
+                Official Charter
+              </span>
+            </div>
+            <div className="flex space-x-2">
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="border-primary text-primary hover:bg-primary/10"
+                onClick={() => downloadPDF(pdfPath, downloadName)}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download PDF
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-      
-      {/* Action Buttons */}
-      <div className="p-4 bg-gray-50 border-t">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4 text-sm text-gray-600">
-            <span className="flex items-center">
-              <Eye className="w-4 h-4 mr-1" />
-              Preview Available
-            </span>
-            <span className="flex items-center">
-              <Scale className="w-4 h-4 mr-1" />
-              Official Charter
-            </span>
-          </div>
-          <div className="flex space-x-2">
-            <Button 
-              variant="outline" 
-              size="sm"
-              className="border-primary text-primary hover:bg-primary/10"
-              onClick={() => window.open('/documents/English-Service-Charter.pdf','/documents/Kiswahili-Service-Charter.pdf')}
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Download PDF
-            </Button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-cyan-50/30">
@@ -293,6 +316,40 @@ export default function ServiceCharterPage() {
                 />
               </div>
             )}
+          </div>
+        </div>
+
+        {/* Additional Download Section */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg p-8 shadow-md">
+            <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">Download Service Charters</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
+                <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h4 className="font-semibold text-lg mb-2">English Version</h4>
+                <p className="text-gray-600 text-sm mb-4">Official Service Charter in English</p>
+                <Button 
+                  onClick={() => downloadPDF('/documents/English-Service-Charter.pdf', 'KSTVET-Service-Charter-English.pdf')}
+                  className="bg-primary text-white hover:bg-primary/90"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download English PDF
+                </Button>
+              </div>
+              
+              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
+                <FileText className="w-12 h-12 text-secondary mx-auto mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Toleo la Kiswahili</h4>
+                <p className="text-gray-600 text-sm mb-4">Mithaq wa Huduma kwa Kiswahili</p>
+                <Button 
+                  onClick={() => downloadPDF('/documents/Kiswahili-Service-Charter.pdf', 'KSTVET-Service-Charter-Kiswahili.pdf')}
+                  className="bg-secondary text-gray-800 hover:bg-secondary/90"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Kiswahili PDF
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
 
