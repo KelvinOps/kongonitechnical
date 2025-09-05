@@ -70,7 +70,7 @@ export default function ServiceCharterPage() {
         {/* Document Display */}
         <div className="relative bg-gray-100 min-h-[600px]">
           <div className="p-8 text-center">
-            {/* KSTVET Header */}
+            {/* KONGONITVC Header */}
             <div className="mb-8">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-4">
@@ -329,7 +329,7 @@ export default function ServiceCharterPage() {
                 <h4 className="font-semibold text-lg mb-2">English Version</h4>
                 <p className="text-gray-600 text-sm mb-4">Official Service Charter in English</p>
                 <Button 
-                  onClick={() => downloadPDF('/documents/English-Service-Charter.pdf', 'KSTVET-Service-Charter-English.pdf')}
+                  onClick={() => downloadPDF('/documents/English-Service-Charter.pdf', 'KONGONITVC-Service-Charter-English.pdf')}
                   className="bg-primary text-white hover:bg-primary/90"
                 >
                   <Download className="w-4 h-4 mr-2" />
@@ -342,7 +342,7 @@ export default function ServiceCharterPage() {
                 <h4 className="font-semibold text-lg mb-2">Toleo la Kiswahili</h4>
                 <p className="text-gray-600 text-sm mb-4">Mithaq wa Huduma kwa Kiswahili</p>
                 <Button 
-                  onClick={() => downloadPDF('/documents/Kiswahili-Service-Charter.pdf', 'KSTVET-Service-Charter-Kiswahili.pdf')}
+                  onClick={() => downloadPDF('/documents/Kiswahili-Service-Charter.pdf', 'KONGONITVC-Service-Charter-Kiswahili.pdf')}
                   className="bg-secondary text-gray-800 hover:bg-secondary/90"
                 >
                   <Download className="w-4 h-4 mr-2" />
