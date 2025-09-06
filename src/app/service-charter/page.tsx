@@ -310,7 +310,7 @@ export default function ServiceCharterPage() {
                 </div>
                 
                 <PDFViewer 
-                  title="Mithaq wa Huduma" 
+                  title="Mkataba wa Huduma" 
                   language="Toleo la Kiswahili"
                   isKiswahili={true}
                 />
@@ -383,7 +383,7 @@ export default function ServiceCharterPage() {
             <p className="text-gray-600 mb-6">
               For any inquiries about our service charter or to provide feedback on our services
               <br />
-              <em>Kwa maswali yoyote kuhusu mithaq wetu wa huduma au kutoa maoni</em>
+              <em>Kwa maswali yoyote kuhusu Mkataba wetu wa huduma au kutoa maoni</em>
             </p>
             <div className="flex justify-center space-x-4">
               <Button 
