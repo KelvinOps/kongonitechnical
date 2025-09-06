@@ -120,7 +120,7 @@ export default function ServiceCharterPage() {
                 
                 <div className="text-center mt-4">
                   <h4 className="font-semibold text-gray-800 text-lg">
-                    {isKiswahili ? 'Mithaq wa Huduma' : 'Service Charter'}
+                    {isKiswahili ? 'Mkataba wa Huduma' : 'Service Charter'}
                   </h4>
                   <p className="text-sm text-gray-500 mt-1">Click to view full document</p>
                 </div>
