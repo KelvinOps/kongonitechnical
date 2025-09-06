@@ -1,7 +1,7 @@
 // components/VideoSlideshow.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -9,9 +9,6 @@ import {
   ChevronLeft, 
   ChevronRight, 
   Play, 
-  Pause,
-  Volume2,
-  VolumeX,
   Maximize,
   X,
   ImageIcon,
@@ -39,7 +36,6 @@ export default function VideoSlideshow({
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [videoMuted, setVideoMuted] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
 
@@ -49,15 +45,6 @@ export default function VideoSlideshow({
   const hasVideo = Boolean(videoUrl);
   const hasMultipleMedia = allMedia.length > 1;
   const totalImages = limitedImages.length;
-
-  useEffect(() => {
-    if (hasMultipleMedia && !showVideo) {
-      const timer = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % allMedia.length);
-      }, 5000); // Increased to 5 seconds for better viewing
-      return () => clearInterval(timer);
-    }
-  }, [allMedia.length, hasMultipleMedia, showVideo]);
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>, index: number) => {
     const img = e.target as HTMLImageElement;
@@ -84,13 +71,19 @@ export default function VideoSlideshow({
     return url; // Assume direct video URL
   };
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % allMedia.length);
-  };
+  }, [allMedia.length]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + allMedia.length) % allMedia.length);
-  };
+  }, [allMedia.length]);
+
+  const stopVideo = useCallback(() => {
+    setShowVideo(false);
+    setIsVideoPlaying(false);
+    setVideoError(false);
+  }, []);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
@@ -100,12 +93,6 @@ export default function VideoSlideshow({
     if (!videoUrl) return;
     setShowVideo(true);
     setIsVideoPlaying(true);
-  };
-
-  const stopVideo = () => {
-    setShowVideo(false);
-    setIsVideoPlaying(false);
-    setVideoError(false);
   };
 
   const toggleFullscreen = () => {
@@ -118,14 +105,22 @@ export default function VideoSlideshow({
     }
   };
 
+  // Auto slideshow
+  useEffect(() => {
+    if (hasMultipleMedia && !showVideo) {
+      const timer = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % allMedia.length);
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [allMedia.length, hasMultipleMedia, showVideo]);
+
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
-      if (showVideo) return;
-      
-      if (e.key === 'ArrowLeft') {
+      if (e.key === 'ArrowLeft' && !showVideo) {
         prevSlide();
-      } else if (e.key === 'ArrowRight') {
+      } else if (e.key === 'ArrowRight' && !showVideo) {
         nextSlide();
       } else if (e.key === 'Escape' && showVideo) {
         stopVideo();
@@ -134,7 +129,7 @@ export default function VideoSlideshow({
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [showVideo]);
+  }, [showVideo, prevSlide, nextSlide, stopVideo]);
 
   if (allMedia.length === 0) {
     return (
