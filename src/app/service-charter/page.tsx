@@ -340,7 +340,7 @@ export default function ServiceCharterPage() {
               <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
                 <FileText className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h4 className="font-semibold text-lg mb-2">Toleo la Kiswahili</h4>
-                <p className="text-gray-600 text-sm mb-4">Mithaq wa Huduma kwa Kiswahili</p>
+                <p className="text-gray-600 text-sm mb-4">Mkataba wa Huduma kwa Kiswahili</p>
                 <Button 
                   onClick={() => downloadPDF('/documents/Kiswahili-Service-Charter.pdf', 'KTVC-Service-Charter-Kiswahili.pdf')}
                   className="bg-secondary text-gray-800 hover:bg-secondary/90"
