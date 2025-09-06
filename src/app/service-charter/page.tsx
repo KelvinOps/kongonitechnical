@@ -130,7 +130,7 @@ export default function ServiceCharterPage() {
             {/* Document Title */}
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-primary mb-2">
-                {isKiswahili ? 'MITHAQ WA UTOAJI HUDUMA KWA WATEJA' : 'CUSTOMER SERVICE DELIVERY CHARTER'}
+                {isKiswahili ? 'MKATABA WA UTOAJI HUDUMA KWA WATEJA' : 'CUSTOMER SERVICE DELIVERY CHARTER'}
               </h2>
             </div>
 
