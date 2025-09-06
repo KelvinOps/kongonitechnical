@@ -180,16 +180,16 @@ const mockNews = [
       
       <p>We look forward to his return with promised equipment donations and continuing this valuable partnership that bridges international cooperation with local technical education.</p>
     `,
-    imageUrl: "/images/departments/building/carpentry1.jpg",
+    imageUrl: "/images/newsevents/founder/founder15.jpeg",
     images: [
-      "/images/departments/building/carpentry1.jpg",
-      "/images/departments/building/carpentry2.jpg",
-      "/images/departments/building/carpentry3.jpg",
-      "/images/departments/building/building1.jpg",
-      "/images/departments/building/building2.jpg",
-      "/images/newsevents/tree-planting/tree1.jpg",
-      "/images/newsevents/tree-planting/tree2.jpg",
-      "/images/newsevents/international/visit1.jpg"
+      "/images/newsevents/founder/founder1.jpeg",
+      "/images/newsevents/founder/founder2.jpeg",
+      "/images/newsevents/founder/founder3.jpeg",
+      "/images/newsevents/founder/founder4.jpeg",
+      "/images/newsevents/founder/founder5.jpeg",
+      "/images/newsevents/founder/founder6.jpeg",
+      "/images/newsevents/founder/founder7.jpeg",
+      "/images/newsevents/founder/founder8.jpeg"
     ],
     featured: true,
     createdAt: "2025-06-05T14:00:00Z",
