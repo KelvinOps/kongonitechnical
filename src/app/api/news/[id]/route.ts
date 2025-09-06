@@ -4,55 +4,8 @@ import { NextRequest, NextResponse } from "next/server";
 // Enhanced mock news data with video support, multiple images, and comprehensive events
 const mockNews = [
   {
-    id: "19",
-    title: "December 2024 Graduation Ceremony - Celebrating Excellence",
-    excerpt: "Over 800 students from various technical and vocational programs will graduate in our biggest ceremony yet, marking significant achievements in skills development.",
-    content: `
-      <p>Kongoni Technical & Vocational Training College is proud to announce the December 2024 Graduation Ceremony, our largest graduation event to date with over 800 graduating students from all departments.</p>
-      
-      <p><strong>Graduation Statistics:</strong></p>
-      <ul>
-        <li><strong>Building & Construction:</strong> 180 graduates (Masonry: 45, Carpentry: 52, Plumbing: 38, Electrical: 45)</li>
-        <li><strong>ICT Department:</strong> 165 graduates (Computer Studies: 85, Software Development: 45, Digital Marketing: 35)</li>
-        <li><strong>Automotive Department:</strong> 125 graduates (Motor Vehicle Mechanics: 85, Auto Electrical: 40)</li>
-        <li><strong>Business Studies:</strong> 145 graduates (Entrepreneurship: 60, Accounting: 50, Business Management: 35)</li>
-        <li><strong>Fashion & Design:</strong> 95 graduates (Tailoring: 65, Dress Making: 30)</li>
-        <li><strong>Food & Beverage:</strong> 90 graduates (Catering: 55, Food Production: 35)</li>
-      </ul>
-      
-      <p>The ceremony will feature keynote addresses from industry leaders, including Cabinet Secretary for Education and representatives from major employers who have consistently recruited our graduates.</p>
-      
-      <p>"This graduation represents not just individual achievement, but our collective success in producing skilled professionals ready to contribute to Kenya's economic development," said Principal Judith Akaranga.</p>
-      
-      <p>Notable achievements include 15 students graduating with distinction, 45 students already secured employment before graduation, and 25 students launching their own businesses using skills acquired at the college.</p>
-      
-      <p>The ceremony will be held at the Main Campus grounds with live streaming available for families unable to attend in person.</p>
-    `,
-    imageUrl: "/images/newsevents/graduation/graduation1.jpg",
-    images: [
-      "/images/newsevents/graduation/graduation1.jpg",
-      "/images/newsevents/graduation/graduation2.jpg",
-      "/images/newsevents/graduation/graduation3.jpg",
-      "/images/newsevents/graduation/graduation4.jpg",
-      "/images/admin/admin1.jpeg",
-      "/images/admin/admin2.jpeg",
-      "/images/campus/campus1.jpg",
-      "/images/campus/campus2.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=graduation_highlights",
-    videoThumbnail: "/images/newsevents/graduation/graduation1.jpg",
-    featured: true,
-    createdAt: "2024-12-01T09:00:00Z",
-    updatedAt: "2024-12-01T09:00:00Z",
-    author: "Administration",
-    category: "Events",
-    eventDate: "2024-12-15",
-    location: "Main Campus Grounds",
-    tags: ["graduation", "ceremony", "achievement", "celebration", "employment"]
-  },
-  {
     id: "18",
-    title: "September 2025 Intake Students Report for New Academic Year",
+    title: "September 2025 Intake Students Reporting for New Academic Year",
     excerpt: "We warmly welcome the September 2025 intake students as they begin their technical and vocational training journey at Kongoni Technical & Vocational Training College.",
     content: `
       <p>Kongoni Technical & Vocational Training College is pleased to welcome the September 2024 intake students who are reporting for the commencement of their technical and vocational training programs.</p>

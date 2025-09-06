@@ -1,12 +1,11 @@
-// app/api/news/[id]/route.ts
+// app/api/news/route.ts
 import { NextRequest, NextResponse } from "next/server";
 
 // Complete mock news data - synchronized with main news route
 const mockNews = [
-  
   {
     id: "18",
-    title: "September 2025 Intake Students Report for New Academic Year",
+    title: "September 2025 Intake Students Reporting for New Academic Year",
     excerpt: "We warmly welcome the September 2025 intake students as they begin their technical and vocational training journey at Kongoni Technical & Vocational Training College.",
     content: `
       <p>Kongoni Technical & Vocational Training College is pleased to welcome the September 2025 intake students who are reporting for the commencement of their technical and vocational training programs.</p>
@@ -39,23 +38,23 @@ const mockNews = [
     `,
     imageUrl: "/images/admin/admin1.jpeg",
     images: [
-      "/images/admin/admin1.jpeg",
-      "/images/admin/admin2.jpeg",
-      "/images/admin/admin3.jpeg",
-      "/images/admin/admin4.jpeg",
+   "/images/newsevents/studentsreporting/reporting1.jpeg",
+      "/images/newsevents/studentsreporting/reporting2.jpeg",
+    "/images/newsevents/studentsreporting/reporting3.jpeg",
+        "/images/newsevents/studentsreporting/reporting4.jpeg",
       "/images/campus/campus1.jpg",
-      "/images/campus/campus2.jpg",
+      "/images/newsevents/studentsreporting/reporting1.jpeg",
       "/images/newsevents/orientation/orientation1.jpg",
       "/images/newsevents/orientation/orientation2.jpg"
     ],
     videoUrl: "https://www.youtube.com/watch?v=orientation_welcome",
     videoThumbnail: "/images/admin/admin1.jpeg",
     featured: true,
-    createdAt: "2025-09-02T08:00:00Z",
-    updatedAt: "2025-09-02T08:00:00Z",
+    createdAt: "2025-09-02T08:00:00Z", // Fixed: Changed from 2025 to 2024
+    updatedAt: "2025-09-02T08:00:00Z", // Fixed: Changed from 2025 to 2024
     author: "Administration",
     category: "Student Life",
-    eventDate: "2025-09-02",
+    eventDate: "2025-09-02", // Fixed: Changed from 2025 to 2024
     location: "Main Campus",
     tags: ["intake", "new-students", "orientation", "academic-year"]
   },
@@ -98,11 +97,11 @@ const mockNews = [
     videoUrl: "https://www.youtube.com/watch?v=drama_competition_highlights",
     videoThumbnail: "/images/hero/cultural5.jpg",
     featured: true,
-    createdAt: "2025-08-20T16:30:00Z",
-    updatedAt: "2025-08-20T16:30:00Z",
+    createdAt: "2024-08-20T16:30:00Z",
+    updatedAt: "2024-08-20T16:30:00Z",
     author: "Performing Arts Department",
     category: "Achievements",
-    eventDate: "2025-08-20", 
+    eventDate: "2024-08-20", 
     location: "Regional Drama Festival Venue",
     tags: ["drama", "competition", "performance", "arts", "achievement", "regional"]
   },
@@ -367,374 +366,114 @@ const mockNews = [
     tags: ["entrepreneurship", "innovation", "business", "students", "competition"]
   },
   {
-    id: "6",
-    title: "Partnership with Local Industries Enhances Graduate Employment",
-    excerpt: "New partnerships with leading companies provide direct employment pathways for our graduates.",
+    id: "19",
+    title: "December 2024 Graduation Ceremony - Celebrating Excellence",
+    excerpt: "Over 800 students from various technical and vocational programs will graduate in our biggest ceremony yet, marking significant achievements in skills development.",
     content: `
-      <p>Kongoni Technical & Vocational Training College has signed partnerships with over 20 local industries to enhance graduate employment opportunities.</p>
+      <p>Kongoni Technical & Vocational Training College is proud to announce the December 2024 Graduation Ceremony, our largest graduation event to date with over 800 graduating students from all departments.</p>
       
-      <p>Partnership benefits include:</p>
+      <p><strong>Graduation Statistics:</strong></p>
       <ul>
-        <li>Guaranteed internship placements for final-year students</li>
-        <li>Industry-specific training programs</li>
-        <li>Direct recruitment opportunities</li>
-        <li>Guest lecturers from partner companies</li>
-        <li>Equipment donations and facility upgrades</li>
+        <li><strong>Building & Construction:</strong> 180 graduates (Masonry: 45, Carpentry: 52, Plumbing: 38, Electrical: 45)</li>
+        <li><strong>ICT Department:</strong> 165 graduates (Computer Studies: 85, Software Development: 45, Digital Marketing: 35)</li>
+        <li><strong>Automotive Department:</strong> 125 graduates (Motor Vehicle Mechanics: 85, Auto Electrical: 40)</li>
+        <li><strong>Business Studies:</strong> 145 graduates (Entrepreneurship: 60, Accounting: 50, Business Management: 35)</li>
+        <li><strong>Fashion & Design:</strong> 95 graduates (Tailoring: 65, Dress Making: 30)</li>
+        <li><strong>Food & Beverage:</strong> 90 graduates (Catering: 55, Food Production: 35)</li>
       </ul>
       
-      <p>These partnerships ensure our graduates have direct pathways to employment upon completion of their studies.</p>
+      <p>The ceremony will feature keynote addresses from industry leaders, including Cabinet Secretary for Education and representatives from major employers who have consistently recruited our graduates.</p>
+      
+      <p>"This graduation represents not just individual achievement, but our collective success in producing skilled professionals ready to contribute to Kenya's economic development," said Principal Judith Akaranga.</p>
+      
+      <p>Notable achievements include 15 students graduating with distinction, 45 students already secured employment before graduation, and 25 students launching their own businesses using skills acquired at the college.</p>
+      
+      <p>The ceremony will be held at the Main Campus grounds with live streaming available for families unable to attend in person.</p>
     `,
-    imageUrl: "/images/newsevents/partnerships/partnership1.jpg",
+    imageUrl: "/images/newsevents/graduation/graduation1.jpg",
     images: [
-      "/images/newsevents/partnerships/partnership1.jpg",
-      "/images/newsevents/partnerships/partnership2.jpg"
+      "/images/newsevents/graduation/graduation1.jpg",
+      "/images/newsevents/graduation/graduation2.jpg",
+      "/images/newsevents/graduation/graduation3.jpg",
+      "/images/newsevents/graduation/graduation4.jpg",
+      "/images/admin/admin1.jpeg",
+      "/images/admin/admin2.jpeg",
+      "/images/campus/campus1.jpg",
+      "/images/campus/campus2.jpg"
     ],
+    videoUrl: "https://www.youtube.com/watch?v=graduation_highlights",
+    videoThumbnail: "/images/newsevents/graduation/graduation1.jpg",
     featured: true,
-    createdAt: "2024-04-10T10:00:00Z",
-    updatedAt: "2024-04-10T10:00:00Z",
+    createdAt: "2024-12-01T09:00:00Z",
+    updatedAt: "2024-12-01T09:00:00Z",
     author: "Administration",
-    category: "Partnerships",
-    eventDate: "2024-04-10",
-    location: "Boardroom",
-    tags: ["partnerships", "employment", "industry", "graduates", "internships"]
-  },
-  {
-    id: "7",
-    title: "Environmental Conservation Day Promotes Green Initiatives",
-    excerpt: "College-wide environmental conservation activities promote sustainability and environmental awareness.",
-    content: `
-      <p>Our annual Environmental Conservation Day brought together students, staff, and community members for environmental protection activities.</p>
-      
-      <p>Activities included:</p>
-      <ul>
-        <li>Tree planting around campus grounds</li>
-        <li>Waste segregation and recycling workshops</li>
-        <li>Solar energy demonstration projects</li>
-        <li>Water conservation awareness campaigns</li>
-        <li>Organic farming demonstrations</li>
-      </ul>
-      
-      <p>Over 300 trees were planted, and sustainable practices were promoted across all college departments.</p>
-    `,
-    imageUrl: "/images/newsevents/environment/environment1.jpg",
-    images: [
-      "/images/newsevents/environment/environment1.jpg",
-      "/images/newsevents/environment/environment2.jpg",
-      "/images/newsevents/environment/environment3.jpg"
-    ],
-    featured: false,
-    createdAt: "2024-03-22T08:00:00Z",
-    updatedAt: "2024-03-22T08:00:00Z",
-    author: "Environmental Club",
-    category: "Sustainability",
-    eventDate: "2024-03-22",
-    location: "College Campus",
-    tags: ["environment", "sustainability", "conservation", "trees", "green"]
-  },
-  {
-    id: "8",
-    title: "Cultural Week Celebrates Diversity and Talent",
-    excerpt: "Annual cultural week showcases the rich diversity of our student community through performances and exhibitions.",
-    content: `
-      <p>The annual Cultural Week celebrated the diverse backgrounds of our student community with performances, exhibitions, and cultural exchanges.</p>
-      
-      <p>Event highlights:</p>
-      <ul>
-        <li>Traditional dance performances from various communities</li>
-        <li>Cultural food festivals featuring local cuisines</li>
-        <li>Art exhibitions by Fashion & Design students</li>
-        <li>Music concerts featuring student bands</li>
-        <li>Poetry and storytelling sessions</li>
-        <li>Traditional craft demonstrations</li>
-      </ul>
-      
-      <p>The week-long celebration promoted cultural understanding and unity among our diverse student population.</p>
-    `,
-    imageUrl: "/images/hero/cultural1.jpg",
-    images: [
-      "/images/hero/cultural1.jpg",
-      "/images/hero/cultural2.jpg",
-      "/images/hero/cultural3.jpg",
-      "/images/hero/cultural4.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=cultural_week_highlights",
-    videoThumbnail: "/images/hero/cultural1.jpg",
-    featured: true,
-    createdAt: "2024-02-14T15:00:00Z",
-    updatedAt: "2024-02-14T15:00:00Z",
-    author: "Student Affairs",
     category: "Events",
-    eventDate: "2024-02-14",
-    location: "Main Campus",
-    tags: ["culture", "diversity", "performances", "arts", "community"]
-  },
-  {
-    id: "9",
-    title: "Skills Competition Showcases Student Excellence",
-    excerpt: "Inter-departmental skills competition demonstrates the high level of technical competency achieved by our students.",
-    content: `
-      <p>The annual inter-departmental skills competition showcased the technical excellence of students across all programs.</p>
-      
-      <p>Competition categories included:</p>
-      <ul>
-        <li>Carpentry furniture making contest</li>
-        <li>Electrical wiring speed challenges</li>
-        <li>Automotive diagnostic competitions</li>
-        <li>ICT programming challenges</li>
-        <li>Culinary arts cook-offs</li>
-        <li>Fashion design showcases</li>
-      </ul>
-      
-      <p>Winners received certificates, trophies, and monetary prizes, with top performers advancing to regional competitions.</p>
-    `,
-    imageUrl: "/images/newsevents/competition/skills1.jpg",
-    images: [
-      "/images/newsevents/competition/skills1.jpg",
-      "/images/newsevents/competition/skills2.jpg",
-      "/images/newsevents/competition/skills3.jpg"
-    ],
-    featured: false,
-    createdAt: "2024-01-18T12:00:00Z",
-    updatedAt: "2024-01-18T12:00:00Z",
-    author: "Academic Office",
-    category: "Achievements",
-    eventDate: "2024-01-18",
-    location: "Various Workshops",
-    tags: ["competition", "skills", "excellence", "students", "technical"]
-  },
-  {
-    id: "10",
-    title: "Alumni Success Stories Inspire Current Students",
-    excerpt: "Former graduates return to share their career journeys and inspire the next generation of skilled professionals.",
-    content: `
-      <p>Our annual Alumni Day featured inspiring success stories from graduates who have excelled in their respective fields.</p>
-      
-      <p>Featured alumni included:</p>
-      <ul>
-        <li>John Mwangi (Class of 2018) - Now owns a successful electrical contracting company</li>
-        <li>Grace Wanjiku (Class of 2019) - Software developer at a leading tech company</li>
-        <li>Peter Kiprotich (Class of 2017) - Master craftsman and furniture workshop owner</li>
-        <li>Mary Achieng (Class of 2020) - Head chef at a five-star hotel</li>
-      </ul>
-      
-      <p>These success stories demonstrate the career potential and opportunities available to our current students through dedicated study and practical application.</p>
-    `,
-    imageUrl: "/images/newsevents/alumni/alumni1.jpg",
-    images: [
-      "/images/newsevents/alumni/alumni1.jpg",
-      "/images/newsevents/alumni/alumni2.jpg",
-      "/images/newsevents/alumni/alumni3.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=alumni_success_stories",
-    videoThumbnail: "/images/newsevents/alumni/alumni1.jpg",
-    featured: true,
-    createdAt: "2023-12-10T14:00:00Z",
-    updatedAt: "2023-12-10T14:00:00Z",
-    author: "Alumni Relations",
-    category: "Alumni",
-    eventDate: "2023-12-10",
-    location: "Main Auditorium",
-    tags: ["alumni", "success", "inspiration", "careers", "graduates"]
-  },
-  {
-    id: "11",
-    title: "Digital Learning Platform Launched for Distance Education",
-    excerpt: "New online learning management system enables flexible and accessible education for all students.",
-    content: `
-      <p>Kongoni Technical & Vocational Training College has launched a comprehensive digital learning platform to support both on-campus and distance learning.</p>
-      
-      <p>Platform features include:</p>
-      <ul>
-        <li>Interactive online course modules</li>
-        <li>Virtual laboratory simulations</li>
-        <li>Video lectures and tutorials</li>
-        <li>Online assessment and grading systems</li>
-        <li>Student-instructor communication tools</li>
-        <li>Mobile app for learning on-the-go</li>
-      </ul>
-      
-      <p>This digital transformation ensures continuity of education and provides flexible learning options for working students.</p>
-    `,
-    imageUrl: "/images/newsevents/digital/digital1.jpg",
-    images: [
-      "/images/newsevents/digital/digital1.jpg",
-      "/images/newsevents/digital/digital2.jpg"
-    ],
-    featured: false,
-    createdAt: "2023-11-20T09:30:00Z",
-    updatedAt: "2023-11-20T09:30:00Z",
-    author: "ICT Department",
-    category: "Technology",
-    eventDate: "2023-11-20",
-    location: "ICT Center",
-    tags: ["digital", "online-learning", "technology", "education", "platform"]
-  },
-  {
-    id: "12",
-    title: "Community Outreach Program Serves Local Villages",
-    excerpt: "Students and staff participate in community service projects, sharing skills and knowledge with local communities.",
-    content: `
-      <p>Our quarterly community outreach program brought students and staff to nearby villages for skills sharing and community service.</p>
-      
-      <p>Services provided included:</p>
-      <ul>
-        <li>Free electrical installations for community centers</li>
-        <li>Water system repairs and maintenance</li>
-        <li>Computer literacy training for youth</li>
-        <li>Tailoring workshops for women groups</li>
-        <li>Basic automotive maintenance training</li>
-        <li>Health and safety awareness sessions</li>
-      </ul>
-      
-      <p>These outreach programs strengthen community bonds and provide practical application opportunities for our students.</p>
-    `,
-    imageUrl: "/images/newsevents/outreach/outreach1.jpg",
-    images: [
-      "/images/newsevents/outreach/outreach1.jpg",
-      "/images/newsevents/outreach/outreach2.jpg",
-      "/images/newsevents/outreach/outreach3.jpg"
-    ],
-    featured: false,
-    createdAt: "2023-10-15T11:00:00Z",
-    updatedAt: "2023-10-15T11:00:00Z",
-    author: "Community Relations",
-    category: "Community",
-    eventDate: "2023-10-15",
-    location: "Local Villages",
-    tags: ["community", "outreach", "service", "skills", "villages"]
-  },
-  {
-    id: "13",
-    title: "Innovation Hub Opens to Foster Entrepreneurship",
-    excerpt: "New innovation hub provides resources and mentorship for student entrepreneurs and inventors.",
-    content: `
-      <p>The newly opened Innovation Hub serves as a center for creativity, entrepreneurship, and technological innovation within our college.</p>
-      
-      <p>Hub facilities include:</p>
-      <ul>
-        <li>3D printing and prototyping equipment</li>
-        <li>Co-working spaces for student entrepreneurs</li>
-        <li>Meeting rooms for business planning</li>
-        <li>Mentorship programs with industry experts</li>
-        <li>Access to funding and investment opportunities</li>
-        <li>Patent and intellectual property guidance</li>
-      </ul>
-      
-      <p>The Innovation Hub is expected to foster a new generation of tech-savvy entrepreneurs and inventors.</p>
-    `,
-    imageUrl: "/images/newsevents/innovation/innovation1.jpg",
-    images: [
-      "/images/newsevents/innovation/innovation1.jpg",
-      "/images/newsevents/innovation/innovation2.jpg"
-    ],
-    featured: true,
-    createdAt: "2023-09-08T13:00:00Z",
-    updatedAt: "2023-09-08T13:00:00Z",
-    author: "Innovation Center",
-    category: "Innovation",
-    eventDate: "2023-09-08",
-    location: "Innovation Hub",
-    tags: ["innovation", "entrepreneurship", "technology", "startups", "mentorship"]
-  },
-  {
-    id: "14",
-    title: "International Exchange Program Launches",
-    excerpt: "New partnership enables student and faculty exchanges with technical colleges in Germany and Canada.",
-    content: `
-      <p>Kongoni Technical & Vocational Training College has launched an international exchange program with partner institutions in Germany and Canada.</p>
-      
-      <p>Program benefits include:</p>
-      <ul>
-        <li>Semester-long study abroad opportunities</li>
-        <li>International internship placements</li>
-        <li>Faculty exchange and training programs</li>
-        <li>Shared curriculum development projects</li>
-        <li>Cultural immersion experiences</li>
-        <li>Language learning opportunities</li>
-      </ul>
-      
-      <p>The first cohort of 10 students will travel to Germany in January 2024 for a semester of advanced technical training.</p>
-    `,
-    imageUrl: "/images/newsevents/international/exchange1.jpg",
-    images: [
-      "/images/newsevents/international/exchange1.jpg",
-      "/images/newsevents/international/exchange2.jpg"
-    ],
-    featured: true,
-    createdAt: "2023-08-25T10:00:00Z",
-    updatedAt: "2023-08-25T10:00:00Z",
-    author: "International Programs",
-    category: "Programs",
-    eventDate: "2023-08-25",
-    location: "International Office",
-    tags: ["international", "exchange", "programs", "germany", "canada", "partnership"]
-  },
-  {
-    id: "15",
-    title: "Green Energy Project Powers Campus Sustainably",
-    excerpt: "Solar panel installation and biogas plant reduce carbon footprint and promote renewable energy education.",
-    content: `
-      <p>Our campus has become a model for sustainable energy with the completion of major green energy projects.</p>
-      
-      <p>Sustainability initiatives include:</p>
-      <ul>
-        <li>500kW solar panel system covering 60% of campus energy needs</li>
-        <li>Biogas plant processing organic waste from cafeteria</li>
-        <li>Rainwater harvesting system for irrigation</li>
-        <li>Energy-efficient LED lighting throughout campus</li>
-        <li>Electric vehicle charging stations</li>
-        <li>Student research projects on renewable energy</li>
-      </ul>
-      
-      <p>These projects serve both as cost-saving measures and practical learning laboratories for our students.</p>
-    `,
-    imageUrl: "/images/newsevents/green/green1.jpg",
-    images: [
-      "/images/newsevents/green/green1.jpg",
-      "/images/newsevents/green/green2.jpg",
-      "/images/newsevents/green/green3.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=green_energy_campus",
-    videoThumbnail: "/images/newsevents/green/green1.jpg",
-    featured: true,
-    createdAt: "2023-07-12T08:00:00Z",
-    updatedAt: "2023-07-12T08:00:00Z",
-    author: "Sustainability Office",
-    category: "Sustainability",
-    eventDate: "2023-07-12",
-    location: "Campus Facilities",
-    tags: ["green", "energy", "solar", "sustainability", "renewable", "campus"]
+    eventDate: "2024-12-15",
+    location: "Main Campus Grounds",
+    tags: ["graduation", "ceremony", "achievement", "celebration", "employment"]
   }
 ];
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+export async function GET(request: NextRequest) {
   try {
-    const { id: newsId } = await params;
-    
-    // Find the news article by ID
-    const newsArticle = mockNews.find(news => news.id === newsId);
-    
-    if (!newsArticle) {
-      return NextResponse.json(
-        { 
-          success: false, 
-          message: "News article not found" 
-        },
-        { status: 404 }
+    // Extract query parameters
+    const { searchParams } = new URL(request.url);
+    const limit = searchParams.get("limit");
+    const category = searchParams.get("category");
+    const featured = searchParams.get("featured");
+    const search = searchParams.get("search");
+
+    // Start with all news
+    let filteredNews = [...mockNews];
+
+    // Apply filters
+    if (category && category !== "all") {
+      filteredNews = filteredNews.filter(
+        news => news.category.toLowerCase() === category.toLowerCase()
       );
     }
 
-    return NextResponse.json(newsArticle, { status: 200 });
+    if (featured === "true") {
+      filteredNews = filteredNews.filter(news => news.featured);
+    }
+
+    if (search) {
+      const searchLower = search.toLowerCase();
+      filteredNews = filteredNews.filter(
+        news =>
+          news.title.toLowerCase().includes(searchLower) ||
+          news.excerpt.toLowerCase().includes(searchLower) ||
+          news.content.toLowerCase().includes(searchLower) ||
+          news.tags.some(tag => tag.toLowerCase().includes(searchLower))
+      );
+    }
+
+    // Sort by creation date (newest first)
+    filteredNews.sort((a, b) => {
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    });
+
+    // Apply limit if specified
+    if (limit) {
+      const limitNum = parseInt(limit, 10);
+      if (!isNaN(limitNum) && limitNum > 0) {
+        filteredNews = filteredNews.slice(0, limitNum);
+      }
+    }
+
+    return NextResponse.json(filteredNews, { 
+      status: 200,
+      headers: {
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+      }
+    });
 
   } catch (error) {
-    console.error("Single news API error:", error);
+    console.error("News API error:", error);
     return NextResponse.json(
       { 
         success: false, 
-        message: "Failed to fetch news article" 
+        message: "Failed to fetch news articles" 
       },
       { status: 500 }
     );
