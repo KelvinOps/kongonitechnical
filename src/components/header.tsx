@@ -151,7 +151,7 @@ export default function Header() {
       hasDropdown: true,
       subItems: [
         { href: "/documents/september-advert.pdf", label: "Download September Advert" },
-        { href: "/admissions", label: "Student Application" }
+        { href: "/admissions/apply", label: "Student Application" } // Changed from /admissions to /admissions/apply
       ]
     },
     { 
@@ -208,13 +208,13 @@ export default function Header() {
           isCategory: true as const,
           items: [
             { href: "/documents/Admission-Letter-2025.pdf", label: "Application Procedure" },
-            { href: "/admissions", label: "Online Registration" },
+            { href: "/student-hub/registration", label: "Online Registration" }, // Changed from /admissions
             { href: "/documents/KongoniTVC-feestructure-2025.pdf", label: "Fee Structure 2025" },
             { href: "/documents/KongoniTVC-course-requirements.pdf", label: "Course Requirements" },
             { href: "/documents/KongoniTVC-medical form.pdf", label: "Medical Form" },
             { href: "https://portal.hef.co.ke/", label: "Scholarship Application" },
             { href: "/documents/hostel-booking.pdf", label: "Hostel Booking" },
-            { href: "/admissions", label: "Join Us" }
+            { href: "/student-hub/join", label: "Join Us" } // Changed from /admissions
           ]
         },
         { 
@@ -401,8 +401,8 @@ export default function Header() {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
               <div className="flex items-center space-x-6">
-                {navLinks.map((link) => (
-                  <div key={link.href} className="relative group">
+                {navLinks.map((link, linkIndex) => (
+                  <div key={`${link.href}-${linkIndex}`} className="relative group">
                     {link.hasDropdown ? (
                       <div>
                         <button
@@ -422,16 +422,16 @@ export default function Header() {
                         {/* Enhanced Dropdown Menu */}
                         {openDropdown === link.label && (
                           <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-md shadow-lg py-2 min-w-[280px] max-w-[400px] z-50 animate-fade-in max-h-96 overflow-y-auto">
-                            {link.subItems?.map((subItem, index) => (
-                              <div key={`${subItem.label}-${index}`}>
+                            {link.subItems?.map((subItem, subIndex) => (
+                              <div key={`${subItem.label}-${subIndex}`}>
                                 {subItem.isCategory ? (
                                   <div className="px-4 py-2">
                                     <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 border-b pb-1">
                                       {subItem.label}
                                     </div>
-                                    {subItem.items.map((item) => (
+                                    {subItem.items.map((item, itemIndex) => (
                                       <Link
-                                        key={item.href}
+                                        key={`${item.href}-${itemIndex}`}
                                         href={item.href}
                                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors duration-200 rounded mb-1"
                                         onClick={() => setOpenDropdown(null)}
@@ -498,8 +498,8 @@ export default function Header() {
           {isMobileMenuOpen && (
             <div className="lg:hidden border-t border-black/20 py-4 bg-primary/95 backdrop-blur-sm animate-fade-in max-h-96 overflow-y-auto">
               <div className="space-y-1">
-                {navLinks.map((link) => (
-                  <div key={link.href}>
+                {navLinks.map((link, linkIndex) => (
+                  <div key={`mobile-${link.href}-${linkIndex}`}>
                     {link.hasDropdown ? (
                       <div>
                         <button
@@ -519,16 +519,16 @@ export default function Header() {
                         {/* Mobile Dropdown Items */}
                         {openDropdown === `mobile-${link.label}` && (
                           <div className="ml-4 mt-1 space-y-1">
-                            {link.subItems?.map((subItem, index) => (
-                              <div key={`mobile-${subItem.label}-${index}`}>
+                            {link.subItems?.map((subItem, subIndex) => (
+                              <div key={`mobile-${subItem.label}-${subIndex}`}>
                                 {subItem.isCategory ? (
                                   <div className="py-2">
                                     <div className="text-xs font-semibold text-white/70 uppercase tracking-wide mb-2 px-2">
                                       {subItem.label}
                                     </div>
-                                    {subItem.items.map((item) => (
+                                    {subItem.items.map((item, itemIndex) => (
                                       <Link
-                                        key={item.href}
+                                        key={`mobile-${item.href}-${itemIndex}`}
                                         href={item.href}
                                         className="block py-1 px-4 text-sm text-black hover:text-white hover:bg-black/10 rounded transition-colors duration-200"
                                         onClick={() => {
