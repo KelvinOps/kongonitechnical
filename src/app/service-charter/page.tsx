@@ -329,7 +329,7 @@ export default function ServiceCharterPage() {
                 <h4 className="font-semibold text-lg mb-2">English Version</h4>
                 <p className="text-gray-600 text-sm mb-4">Official Service Charter in English</p>
                 <Button 
-                  onClick={() => downloadPDF('/documents/English-Service-Charter.pdf', 'KONGONITVC-Service-Charter-English.pdf')}
+                  onClick={() => downloadPDF('/documents/English-Service-Charter.pdf', 'KTVC-Service-Charter-English.pdf')}
                   className="bg-primary text-white hover:bg-primary/90"
                 >
                   <Download className="w-4 h-4 mr-2" />
@@ -342,7 +342,7 @@ export default function ServiceCharterPage() {
                 <h4 className="font-semibold text-lg mb-2">Toleo la Kiswahili</h4>
                 <p className="text-gray-600 text-sm mb-4">Mithaq wa Huduma kwa Kiswahili</p>
                 <Button 
-                  onClick={() => downloadPDF('/documents/Kiswahili-Service-Charter.pdf', 'KONGONITVC-Service-Charter-Kiswahili.pdf')}
+                  onClick={() => downloadPDF('/documents/Kiswahili-Service-Charter.pdf', 'KTVC-Service-Charter-Kiswahili.pdf')}
                   className="bg-secondary text-gray-800 hover:bg-secondary/90"
                 >
                   <Download className="w-4 h-4 mr-2" />
