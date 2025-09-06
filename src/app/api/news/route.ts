@@ -36,16 +36,13 @@ const mockNews = [
       
       <p>We wish all new students success in their academic journey and look forward to seeing their achievements throughout the program.</p>
     `,
-    imageUrl: "/images/admin/admin1.jpeg",
+    imageUrl:  "/images/newsevents/studentsreporting/reporting2.jpeg",
     images: [
    "/images/newsevents/studentsreporting/reporting1.jpeg",
       "/images/newsevents/studentsreporting/reporting2.jpeg",
     "/images/newsevents/studentsreporting/reporting3.jpeg",
         "/images/newsevents/studentsreporting/reporting4.jpeg",
-      "/images/campus/campus1.jpg",
-      "/images/newsevents/studentsreporting/reporting1.jpeg",
-      "/images/newsevents/orientation/orientation1.jpg",
-      "/images/newsevents/orientation/orientation2.jpg"
+      "/images/newsevents/studentsreporting/reporting1.jpeg"
     ],
     videoUrl: "https://www.youtube.com/watch?v=orientation_welcome",
     videoThumbnail: "/images/admin/admin1.jpeg",
@@ -97,11 +94,11 @@ const mockNews = [
     videoUrl: "https://www.youtube.com/watch?v=drama_competition_highlights",
     videoThumbnail: "/images/hero/cultural5.jpg",
     featured: true,
-    createdAt: "2024-08-20T16:30:00Z",
-    updatedAt: "2024-08-20T16:30:00Z",
+    createdAt: "2025-08-20T16:30:00Z",
+    updatedAt: "2025-08-20T16:30:00Z",
     author: "Performing Arts Department",
     category: "Achievements",
-    eventDate: "2024-08-20", 
+    eventDate: "2025-08-20", 
     location: "Regional Drama Festival Venue",
     tags: ["drama", "competition", "performance", "arts", "achievement", "regional"]
   },
@@ -149,11 +146,11 @@ const mockNews = [
     videoUrl: "https://www.youtube.com/watch?v=athletics_highlights_2024",
     videoThumbnail: "/images/newsevents/athletics/athletics23.jpeg",
     featured: true,
-    createdAt: "2024-08-15T10:00:00Z",
-    updatedAt: "2024-08-15T10:00:00Z",
+    createdAt: "2025-08-15T10:00:00Z",
+    updatedAt: "2025-08-15T10:00:00Z",
     author: "Sports Department",
     category: "Achievements",
-    eventDate: "2024-08-15",
+    eventDate: "2025-08-15",
     location: "Nyayo National Stadium, Nairobi",
     tags: ["athletics", "medals", "competition", "students", "gold-medal", "records"]
   },
@@ -195,11 +192,11 @@ const mockNews = [
       "/images/newsevents/international/visit1.jpg"
     ],
     featured: true,
-    createdAt: "2024-06-05T14:00:00Z",
-    updatedAt: "2024-06-05T14:00:00Z",
+    createdAt: "2025-06-05T14:00:00Z",
+    updatedAt: "2025-06-05T14:00:00Z",
     author: "Building Department",
     category: "Events",
-    eventDate: "2024-06-05",
+    eventDate: "2025-06-05",
     location: "Carpentry Workshop, Building Department",
     tags: ["carpentry", "international", "collaboration", "tree-planting", "skills", "partnership"]
   },
@@ -253,15 +250,15 @@ const mockNews = [
     videoUrl: "https://www.youtube.com/watch?v=student_wellness_highlights",
     videoThumbnail: "/images/newsevents/guidancecounselling/guidance4.jpeg",
     featured: true,
-    createdAt: "2024-08-10T14:30:00Z",
-    updatedAt: "2024-08-10T14:30:00Z",
+    createdAt: "2025-08-10T14:30:00Z",
+    updatedAt: "2025-08-10T14:30:00Z",
     author: "Student Affairs",
     category: "Student Life",
-    eventDate: "2024-08-10",
+    eventDate: "2025-08-10",
     location: "Main Campus Auditorium",
     tags: ["counselling", "wellness", "mental-health", "career-guidance", "student-support"]
   },
-  // Additional news articles to complete the dataset
+
   {
     id: "3",
     title: "New ICT Laboratory Equipment Installation Complete",
@@ -322,11 +319,11 @@ const mockNews = [
       "/images/departments/automotive/automotive3.jpg"
     ],
     featured: false,
-    createdAt: "2024-06-15T09:00:00Z",
-    updatedAt: "2024-06-15T09:00:00Z",
+    createdAt: "2025-06-15T09:00:00Z",
+    updatedAt: "2025-06-15T09:00:00Z",
     author: "Automotive Department",
     category: "Facilities",
-    eventDate: "2024-06-15",
+    eventDate: "2025-06-15",
     location: "Automotive Workshop",
     tags: ["automotive", "equipment", "workshop", "upgrade", "training"]
   },
@@ -364,53 +361,6 @@ const mockNews = [
     eventDate: "2024-05-25",
     location: "Main Campus Hall",
     tags: ["entrepreneurship", "innovation", "business", "students", "competition"]
-  },
-  {
-    id: "19",
-    title: "December 2024 Graduation Ceremony - Celebrating Excellence",
-    excerpt: "Over 800 students from various technical and vocational programs will graduate in our biggest ceremony yet, marking significant achievements in skills development.",
-    content: `
-      <p>Kongoni Technical & Vocational Training College is proud to announce the December 2024 Graduation Ceremony, our largest graduation event to date with over 800 graduating students from all departments.</p>
-      
-      <p><strong>Graduation Statistics:</strong></p>
-      <ul>
-        <li><strong>Building & Construction:</strong> 180 graduates (Masonry: 45, Carpentry: 52, Plumbing: 38, Electrical: 45)</li>
-        <li><strong>ICT Department:</strong> 165 graduates (Computer Studies: 85, Software Development: 45, Digital Marketing: 35)</li>
-        <li><strong>Automotive Department:</strong> 125 graduates (Motor Vehicle Mechanics: 85, Auto Electrical: 40)</li>
-        <li><strong>Business Studies:</strong> 145 graduates (Entrepreneurship: 60, Accounting: 50, Business Management: 35)</li>
-        <li><strong>Fashion & Design:</strong> 95 graduates (Tailoring: 65, Dress Making: 30)</li>
-        <li><strong>Food & Beverage:</strong> 90 graduates (Catering: 55, Food Production: 35)</li>
-      </ul>
-      
-      <p>The ceremony will feature keynote addresses from industry leaders, including Cabinet Secretary for Education and representatives from major employers who have consistently recruited our graduates.</p>
-      
-      <p>"This graduation represents not just individual achievement, but our collective success in producing skilled professionals ready to contribute to Kenya's economic development," said Principal Judith Akaranga.</p>
-      
-      <p>Notable achievements include 15 students graduating with distinction, 45 students already secured employment before graduation, and 25 students launching their own businesses using skills acquired at the college.</p>
-      
-      <p>The ceremony will be held at the Main Campus grounds with live streaming available for families unable to attend in person.</p>
-    `,
-    imageUrl: "/images/newsevents/graduation/graduation1.jpg",
-    images: [
-      "/images/newsevents/graduation/graduation1.jpg",
-      "/images/newsevents/graduation/graduation2.jpg",
-      "/images/newsevents/graduation/graduation3.jpg",
-      "/images/newsevents/graduation/graduation4.jpg",
-      "/images/admin/admin1.jpeg",
-      "/images/admin/admin2.jpeg",
-      "/images/campus/campus1.jpg",
-      "/images/campus/campus2.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=graduation_highlights",
-    videoThumbnail: "/images/newsevents/graduation/graduation1.jpg",
-    featured: true,
-    createdAt: "2024-12-01T09:00:00Z",
-    updatedAt: "2024-12-01T09:00:00Z",
-    author: "Administration",
-    category: "Events",
-    eventDate: "2024-12-15",
-    location: "Main Campus Grounds",
-    tags: ["graduation", "ceremony", "achievement", "celebration", "employment"]
   }
 ];
 

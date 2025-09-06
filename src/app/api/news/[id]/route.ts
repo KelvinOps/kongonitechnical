@@ -54,7 +54,7 @@ const mockNews = [
     updatedAt: "2025-09-02T08:00:00Z",
     author: "Administration",
     category: "Student Life",
-    eventDate: "2024-09-02",
+    eventDate: "2025-09-02",
     location: "Main Campus",
     tags: ["intake", "new-students", "orientation", "academic-year"]
   },
@@ -106,7 +106,7 @@ const mockNews = [
     updatedAt: "2025-07-15T10:00:00Z",
     author: "Sports Department",
     category: "Achievements",
-    eventDate: "2024-08-15",
+    eventDate: "2025-08-15",
     location: "Nyayo National Stadium, Nairobi",
     tags: ["athletics", "medals", "competition", "students", "gold-medal", "records"]
   },
@@ -164,7 +164,7 @@ const mockNews = [
     updatedAt: "2025-05-10T14:30:00Z",
     author: "Student Affairs",
     category: "Student Life",
-    eventDate: "2024-08-10",
+    eventDate: "2025-08-10",
     location: "Main Campus Auditorium",
     tags: ["counselling", "wellness", "mental-health", "career-guidance", "student-support"]
   },
@@ -240,7 +240,7 @@ const mockNews = [
       
       <p>Congratulations to all our drama students and their dedicated instructors for this well-deserved recognition!</p>
     `,
-    imageUrl: "/images/hero/cultural5.jpg",
+    imageUrl: "/images/hero/pic.jpg",
     images: [
       "/images/hero/cultural1.jpg",
       "/images/hero/cultural2.jpg", 

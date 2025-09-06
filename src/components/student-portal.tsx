@@ -202,9 +202,7 @@ export default function StudentPortal() {
                                 </SelectTrigger>
                               </FormControl>
                               <SelectContent className="z-50 bg-white">
-                                <SelectItem className="hover:bg-gray-100" value="main-campus">Main Campus</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="nairobi-branch">Nairobi Branch</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="mombasa-branch">Mombasa Branch</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="main-campus">Kongoni College</SelectItem>
                               </SelectContent>
                             </Select>
                             <FormMessage />
@@ -250,7 +248,6 @@ export default function StudentPortal() {
                               <SelectContent className="z-50 bg-white">
                                 <SelectItem className="hover:bg-gray-100" value="full-time">Full Time</SelectItem>
                                 <SelectItem className="hover:bg-gray-100" value="part-time">Part Time</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="weekend">Weekend</SelectItem>
                               </SelectContent>
                             </Select>
                             <FormMessage />
