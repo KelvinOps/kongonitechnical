@@ -1,4 +1,4 @@
-//app/news/[id]/page.tsx
+// app/news/[id]/page.tsx
 'use client';
 
 import { useQuery } from "@tanstack/react-query";
@@ -8,9 +8,10 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
+import { ArrowLeft, Calendar, User, Share2, MapPin, Tag } from "lucide-react";
 import type { News } from "@/types/news";
 import { use } from "react";
+import VideoSlideshow from "@/components/VideoSlideshow";
 
 interface NewsArticlePageProps {
   params: Promise<{
@@ -57,17 +58,27 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
     img.src = '/images/placeholder-news.jpg';
   };
 
-  const handleShare = () => {
+  const handleShare = async () => {
     if (navigator.share && article) {
-      navigator.share({
-        title: article.title,
-        text: article.excerpt,
-        url: window.location.href,
-      });
+      try {
+        await navigator.share({
+          title: article.title,
+          text: article.excerpt,
+          url: window.location.href,
+        });
+      } catch (err) {
+        // Fallback to clipboard if share fails
+        await navigator.clipboard.writeText(window.location.href);
+        alert("Link copied to clipboard!");
+      }
     } else {
       // Fallback: copy to clipboard
-      navigator.clipboard.writeText(window.location.href);
-      alert("Link copied to clipboard!");
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert("Link copied to clipboard!");
+      } catch (err) {
+        console.error("Failed to copy link:", err);
+      }
     }
   };
 
@@ -141,42 +152,87 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">
-            <Badge className="mb-4 bg-primary/10 text-primary">
-              {article.category}
-            </Badge>
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <Badge className="bg-primary/10 text-primary">
+                {article.category}
+              </Badge>
+              {article.featured && (
+                <Badge className="bg-yellow-500/10 text-yellow-700">
+                  Featured
+                </Badge>
+              )}
+              {article.videoUrl && (
+                <Badge className="bg-red-500/10 text-red-700">
+                  Video Available
+                </Badge>
+              )}
+              {article.images && article.images.length > 1 && (
+                <Badge className="bg-blue-500/10 text-blue-700">
+                  {article.images.length} Photos
+                </Badge>
+              )}
+            </div>
             
             <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6 leading-tight">
               {article.title}
             </h1>
             
-            <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-6">
-              <div className="flex items-center space-x-2">
-                <Calendar className="w-4 h-4" />
-                <span>
-                  {new Date(article.createdAt).toLocaleDateString('en-US', { 
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}
-                </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600 mb-6">
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>
+                    {new Date(article.eventDate || article.createdAt).toLocaleDateString('en-US', { 
+                      weekday: 'long',
+                      year: 'numeric',
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}
+                  </span>
+                </div>
+                
+                <div className="flex items-center space-x-2">
+                  <User className="w-4 h-4" />
+                  <span>{article.author}</span>
+                </div>
               </div>
               
-              <div className="flex items-center space-x-2">
-                <User className="w-4 h-4" />
-                <span>{article.author}</span>
+              <div className="space-y-2">
+                {article.location && (
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="w-4 h-4" />
+                    <span>{article.location}</span>
+                  </div>
+                )}
+                
+                <div className="flex items-center space-x-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleShare}
+                    className="flex items-center space-x-2"
+                  >
+                    <Share2 className="w-4 h-4" />
+                    <span>Share</span>
+                  </Button>
+                </div>
               </div>
-              
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleShare}
-                className="flex items-center space-x-2"
-              >
-                <Share2 className="w-4 h-4" />
-                <span>Share</span>
-              </Button>
             </div>
+
+            {/* Tags */}
+            {article.tags && article.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                <Tag className="w-4 h-4 text-gray-500 mr-2" />
+                {article.tags.map((tag) => (
+                  <span 
+                    key={tag}
+                    className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full hover:bg-gray-200 transition-colors cursor-pointer"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -185,21 +241,22 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <Card className="overflow-hidden mb-8">
-            {/* Featured Image */}
-            <div className="relative w-full h-64 lg:h-96">
-              <Image
-                src={article.imageUrl || "/images/placeholder-news.jpg"}
-                alt={article.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1200px) 100vw, 1200px"
-                priority
-                onError={handleImageError}
-              />
-            </div>
+            {/* Enhanced Media Display with VideoSlideshow */}
+            <VideoSlideshow
+              images={article.images}
+              videoUrl={article.videoUrl}
+              videoThumbnail={article.videoThumbnail}
+              title={article.title}
+              className="rounded-t-lg"
+            />
             
             {/* Article Body */}
             <CardContent className="p-8">
+              {/* Article Excerpt as Lead */}
+              <div className="text-lg text-gray-700 font-medium leading-relaxed mb-6 p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
+                {article.excerpt}
+              </div>
+
               <div className="prose prose-lg max-w-none">
                 <div 
                   className="text-gray-700 leading-relaxed"
@@ -209,13 +266,22 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
               
               {/* Article Footer */}
               <div className="mt-8 pt-6 border-t border-gray-200">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div className="text-sm text-gray-500">
-                    Last updated: {new Date(article.updatedAt).toLocaleDateString('en-US', { 
+                    <p>Published: {new Date(article.createdAt).toLocaleDateString('en-US', { 
                       month: 'long', 
                       day: 'numeric', 
-                      year: 'numeric' 
-                    })}
+                      year: 'numeric',
+                      hour: '2-digit',
+                      minute: '2-digit'
+                    })}</p>
+                    {article.createdAt !== article.updatedAt && (
+                      <p className="mt-1">Last updated: {new Date(article.updatedAt).toLocaleDateString('en-US', { 
+                        month: 'long', 
+                        day: 'numeric', 
+                        year: 'numeric' 
+                      })}</p>
+                    )}
                   </div>
                   
                   <div className="flex space-x-2">
@@ -252,7 +318,7 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
                     <Card className="h-full overflow-hidden bg-white hover:shadow-lg transition-all duration-300 group">
                       <div className="relative w-full h-40">
                         <Image
-                          src={news.imageUrl || "/images/placeholder-news.jpg"}
+                          src={news.imageUrl || news.images?.[0] || "/images/placeholder-news.jpg"}
                           alt={news.title}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -260,12 +326,25 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
                           onError={handleImageError}
                           loading="lazy"
                         />
+                        {/* Media indicators for related articles */}
+                        <div className="absolute top-2 right-2 flex gap-1">
+                          {news.videoUrl && (
+                            <Badge className="bg-red-600 text-white text-xs">
+                              Video
+                            </Badge>
+                          )}
+                          {news.images && news.images.length > 1 && (
+                            <Badge className="bg-blue-600 text-white text-xs">
+                              +{news.images.length}
+                            </Badge>
+                          )}
+                        </div>
                       </div>
                       
                       <CardContent className="p-4">
                         <div className="flex items-center space-x-2 mb-2 text-xs text-gray-500">
                           <span>
-                            {new Date(news.createdAt).toLocaleDateString('en-US', { 
+                            {new Date(news.eventDate || news.createdAt).toLocaleDateString('en-US', { 
                               month: 'short', 
                               day: 'numeric' 
                             })}

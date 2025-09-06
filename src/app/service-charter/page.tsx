@@ -223,7 +223,6 @@ export default function ServiceCharterPage() {
               <h1 className="text-4xl font-bold text-gray-800">Service Charter</h1>
             </div>
             <div className="flex items-center justify-center mb-6">
-              <h2 className="text-2xl text-gray-600 mr-4">Mithaq wa Huduma</h2>
               <Languages className="w-6 h-6 text-secondary" />
             </div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">

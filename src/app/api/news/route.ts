@@ -1,11 +1,103 @@
-//app/api/news/route.ts
+// app/api/news/route.ts
 import { NextRequest, NextResponse } from "next/server";
 
-// Enhanced mock news data with Katti Athletics and other relevant news
+// Enhanced mock news data with new events requested
 const mockNews = [
   {
+    id: "18",
+    title: "September 2024 Intake Students Report for New Academic Year",
+    excerpt: "We warmly welcome the September 2024 intake students as they begin their technical and vocational training journey at Kongoni Technical & Vocational Training College.",
+    content: `
+      <p>Kongoni Technical & Vocational Training College is pleased to welcome the September 2024 intake students who are reporting for the commencement of their technical and vocational training programs.</p>
+      
+      <p>The September intake includes students enrolled in various departments:</p>
+      <ul>
+        <li><strong>Building & Construction:</strong> Masonry, Carpentry, Plumbing, and Electrical Installation</li>
+        <li><strong>ICT Department:</strong> Computer Studies, Software Development, and Digital Marketing</li>
+        <li><strong>Automotive Department:</strong> Motor Vehicle Mechanics and Auto Electrical</li>
+        <li><strong>Business Studies:</strong> Entrepreneurship, Accounting, and Business Management</li>
+        <li><strong>Fashion & Design:</strong> Tailoring and Dress Making</li>
+        <li><strong>Food & Beverage:</strong> Catering and Food Production</li>
+      </ul>
+      
+      <p>During the orientation week, new students will:</p>
+      <ul>
+        <li>Complete registration and documentation processes</li>
+        <li>Receive campus tours and facility orientations</li>
+        <li>Meet with academic advisors and department heads</li>
+        <li>Attend mandatory health and safety briefings</li>
+        <li>Participate in team-building activities</li>
+        <li>Receive their student handbooks and timetables</li>
+      </ul>
+      
+      <p>"We are excited to welcome this new cohort of students who will contribute to Kenya's skilled workforce," said Principal Judith Akaranga. "Our comprehensive programs will equip them with practical skills and knowledge needed for successful careers."</p>
+      
+      <p>The college continues to maintain high admission standards while providing accessible technical education opportunities. Students will benefit from modern facilities, experienced instructors, and strong industry partnerships.</p>
+      
+      <p>We wish all new students success in their academic journey and look forward to seeing their achievements throughout the program.</p>
+    `,
+    imageUrl: "/images/admin/admin1.jpeg",
+    images: [
+      "/images/admin/admin1.jpeg",
+      "/images/admin/admin2.jpeg",
+      "/images/admin/admin3.jpeg",
+      "/images/admin/admin4.jpeg",
+      "/images/campus/campus1.jpg"
+    ],
+    featured: true,
+    createdAt: "2024-09-02T08:00:00Z",
+    updatedAt: "2024-09-02T08:00:00Z",
+    author: "Administration",
+    category: "Student Life",
+    eventDate: "2024-09-02",
+    location: "Main Campus",
+    tags: ["intake", "new-students", "orientation", "academic-year"]
+  },
+  {
+    id: "17", 
+    title: "Drama Students Achieve Second Position in Regional Competition",
+    excerpt: "Congratulations to our talented drama students who secured second position in both solo verse and spoken word categories at the regional drama festival.",
+    content: `
+      <p>We are proud to announce the outstanding achievement of our drama students who excelled at the recent regional drama festival, securing second position in two competitive categories.</p>
+      
+      <p><strong>Competition Results:</strong></p>
+      <ul>
+        <li><strong>Solo Verse Category:</strong> 2nd Position</li>
+        <li><strong>Spoken Word Category:</strong> 2nd Position</li>
+      </ul>
+      
+      <p>This remarkable performance showcases the dedication and talent of our students, as well as the quality of training they receive in our performing arts program. The students competed against numerous institutions from across the region, making their achievement even more significant.</p>
+      
+      <p>The drama program at Kongoni Technical College continues to nurture creative expression alongside technical skills, proving that well-rounded education produces exceptional graduates. Our students demonstrated exceptional creativity, stage presence, and mastery of their craft.</p>
+      
+      <p>"These students have worked tirelessly to perfect their performances," said Drama Instructor Ms. Faith Wanjiru. "Their success reflects not only their individual talents but also their commitment to excellence in all aspects of their education."</p>
+      
+      <p>The college celebrates this achievement as part of our commitment to developing students' creative and communicative abilities, which are essential skills in today's competitive job market.</p>
+      
+      <p>Congratulations to all our drama students and their dedicated instructors for this well-deserved recognition!</p>
+    `,
+    imageUrl: "/images/hero/cultural5.jpg",
+    images: [
+      "/images/hero/cultural1.jpg",
+      "/images/hero/cultural2.jpg", 
+      "/images/hero/cultural3.jpg",
+      "/images/hero/cultural4.jpg",
+      "/images/hero/cultural5.jpg"
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=sample_drama_video",
+    videoThumbnail: "/images/hero/cultural5.jpg",
+    featured: true,
+    createdAt: "2024-08-20T16:30:00Z",
+    updatedAt: "2024-08-20T16:30:00Z",
+    author: "Performing Arts Department",
+    category: "Achievements",
+    eventDate: "2024-08-20", 
+    location: "Regional Drama Festival Venue",
+    tags: ["drama", "competition", "performance", "arts", "achievement"]
+  },
+  {
     id: "1",
-    title: "Kongoni Students Excel at Katti Athletics Games 2024",
+    title: "Kongoni Students Excel at Katti Athletics Games 2024 - Gold Medal Victory",
     excerpt: "Our athletes brought home multiple medals from the Katti Athletics Games, showcasing exceptional talent in track and field events across various categories.",
     content: `
       <p>Kongoni Technical & Vocational Training College is proud to announce the outstanding performance of our student athletes at the prestigious Katti Athletics Games 2024, held at Nyayo National Stadium in Nairobi.</p>
@@ -30,11 +122,60 @@ const mockNews = [
       <p>We congratulate all our athletes and look forward to their continued success in upcoming competitions. Special recognition goes to our coaching staff and the entire college community for their unwavering support.</p>
     `,
     imageUrl: "/images/newsevents/athletics/athletics23.jpeg",
+    images: [
+      "/images/newsevents/athletics/athletics1.jpeg",
+      "/images/newsevents/athletics/athletics2.jpeg",
+      "/images/newsevents/athletics/athletics3.jpeg",
+      "/images/newsevents/athletics/athletics18.jpeg",
+      "/images/newsevents/athletics/athletics23.jpeg"
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    videoThumbnail: "/images/newsevents/athletics/athletics23.jpeg",
     featured: true,
     createdAt: "2024-08-15T10:00:00Z",
     updatedAt: "2024-08-15T10:00:00Z",
     author: "Sports Department",
-    category: "Achievements"
+    category: "Achievements",
+    eventDate: "2024-08-15",
+    location: "Nyayo National Stadium, Nairobi",
+    tags: ["athletics", "medals", "competition", "students", "gold-medal"]
+  },
+  {
+    id: "16",
+    title: "Visit by Mr Chris Norris - American Friends of Kenya Founder",
+    excerpt: "The Carpentry section was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) for an engaging day of tree planting and skill sharing.",
+    content: `
+      <p>Good afternoon governors. The Carpentry section in building department was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) on Saturday June 5th.</p>
+      
+      <p>Among the activities of the day were:</p>
+      <ol>
+        <li><strong>Tree planting</strong> - Contributing to our environmental conservation efforts</li>
+        <li><strong>Visit to the Carpentry store</strong> - Viewing and discussing the various tools and equipment</li>
+        <li><strong>7-hour interaction with trainees</strong> - An intensive workshop in the Carpentry section where participants shared different carpentry skills and collaboratively made an office desk to completion</li>
+      </ol>
+      
+      <p>The visit was highly educational and inspiring for our students, providing them with exposure to international perspectives on vocational training and craftsmanship. Mr. Norris shared valuable insights from his experience with technical education programs globally.</p>
+      
+      <p>The hands-on desk-making session was particularly engaging, with students learning advanced techniques and best practices in furniture construction. The completed office desk will serve as a testament to the collaborative spirit and skilled craftsmanship demonstrated during the visit.</p>
+      
+      <p>We look forward to his return with goodies as promised and continuing this valuable partnership that bridges international cooperation with local technical education.</p>
+    `,
+    imageUrl: "/images/departments/building/carpentry1.jpg",
+    images: [
+      "/images/departments/building/carpentry1.jpg",
+      "/images/departments/building/carpentry2.jpg",
+      "/images/departments/building/carpentry3.jpg",
+      "/images/departments/building/building1.jpg",
+      "/images/departments/building/building2.jpg"
+    ],
+    featured: true,
+    createdAt: "2024-06-05T14:00:00Z",
+    updatedAt: "2024-06-05T14:00:00Z",
+    author: "Building Department",
+    category: "Events",
+    eventDate: "2024-06-05",
+    location: "Carpentry Workshop, Building Department",
+    tags: ["carpentry", "international", "collaboration", "tree-planting", "skills"]
   },
   {
     id: "2",
@@ -60,12 +201,22 @@ const mockNews = [
       <p>The college's commitment to holistic education includes regular counselling services, study groups, and wellness programs throughout the academic year. Students can access confidential counselling services every weekday at the Student Wellness Center.</p>
     `,
     imageUrl: "/images/newsevents/guidancecounselling/guidance4.jpeg",
+    images: [
+      "/images/newsevents/guidancecounselling/guidance1.jpeg",
+      "/images/newsevents/guidancecounselling/guidance2.jpeg",
+      "/images/newsevents/guidancecounselling/guidance3.jpeg",
+      "/images/newsevents/guidancecounselling/guidance4.jpeg"
+    ],
     featured: true,
     createdAt: "2024-08-10T14:30:00Z",
     updatedAt: "2024-08-10T14:30:00Z",
     author: "Student Affairs",
-    category: "Student Life"
+    category: "Student Life",
+    eventDate: "2024-08-10",
+    location: "Main Campus Auditorium",
+    tags: ["counselling", "wellness", "mental-health", "career-guidance"]
   },
+  // ... rest of existing news items
   {
     id: "3",
     title: "Kongoni Technical & Vocational College Cultural Day Celebration",
@@ -90,310 +241,23 @@ const mockNews = [
       <p>This annual tradition continues to strengthen the bonds between students while preserving and celebrating Kenya's cultural heritage within our technical education environment.</p>
     `,
     imageUrl: "/images/hero/cultural5.jpg",
+    images: [
+      "/images/hero/cultural1.jpg",
+      "/images/hero/cultural2.jpg",
+      "/images/hero/cultural3.jpg",
+      "/images/hero/cultural4.jpg",
+      "/images/hero/cultural5.jpg"
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=sample_cultural_video",
+    videoThumbnail: "/images/hero/cultural5.jpg",
     featured: false,
     createdAt: "2024-08-05T10:00:00Z",
     updatedAt: "2024-08-05T10:00:00Z",
     author: "Cultural Committee",
-    category: "Events"
-  },
-  {
-    id: "4",
-    title: "New ICT Lab Opens with Modern Equipment",
-    excerpt: "State-of-the-art engineering laboratory equipped with cutting-edge tools and equipment to enhance hands-on learning experience for engineering students.",
-    content: `
-      <p>Kongoni Technical College proudly unveils its new engineering laboratory, representing a significant investment in technical education infrastructure and student learning outcomes.</p>
-      
-      <p>The facility features modern equipment including:</p>
-      <ul>
-        <li>Advanced CAD/CAM workstations with latest software</li>
-        <li>CNC machines for precision manufacturing</li>
-        <li>3D printing and rapid prototyping equipment</li>
-        <li>Materials testing and quality control instruments</li>
-        <li>Industrial automation and PLC training modules</li>
-        <li>Renewable energy demonstration systems</li>
-      </ul>
-      
-      <p>"This laboratory bridges the gap between theoretical knowledge and industry practice," stated Principal Judith Akaranga. "Our students will graduate with hands-on experience using the same technologies they'll encounter in their careers."</p>
-      
-      <p>The lab serves all engineering departments and will host specialized workshops, industry training sessions, and research projects. Local industry partners have expressed interest in collaborative projects using the new facilities.</p>
-    `,
-    imageUrl: "/images/departments/ict/ict7.jpg",
-    featured: false,
-    createdAt: "2024-08-01T10:00:00Z",
-    updatedAt: "2024-08-01T10:00:00Z",
-    author: "Engineering Department",
-    category: "Facilities"
-  },
-  {
-    id: "5",
-    title: "Industry Partnership Program Expands Job Opportunities",
-    excerpt: "New partnerships with leading companies in Kenya provide direct pathways to employment for our graduates through internships and job placement programs.",
-    content: `
-      <p>Kongoni Technical College announces an expanded industry partnership program, creating direct employment pathways for students and graduates in Kenya's growing technical sector.</p>
-      
-      <p>New partnership agreements include:</p>
-      <ul>
-        <li>Kenya Power & Lighting Company - Electrical and Power Systems programs</li>
-        <li>Safaricom PLC - ICT and Telecommunications training</li>
-        <li>Kenya Airways - Aviation and Mechanical Engineering opportunities</li>
-        <li>Bamburi Cement - Civil Engineering and Construction programs</li>
-        <li>Various local manufacturing companies - Mechanical and Production roles</li>
-      </ul>
-      
-      <p>"These partnerships ensure our curriculum remains relevant to industry needs while providing guaranteed pathways to employment," explained Career Services Director, Ms. Sarah Muthoni.</p>
-      
-      <p>The program includes structured internships, mentorship opportunities, and direct recruitment drives. Over 85% of our recent graduates have secured employment through these industry connections.</p>
-    `,
-    imageUrl: "/images/departments/ict/ajira-workshop.jpg",
-    featured: false,
-    createdAt: "2024-07-30T09:15:00Z",
-    updatedAt: "2024-07-30T09:15:00Z",
-    author: "Career Services",
-    category: "Partnerships"
-  },
-  {
-    id: "6",
-    title: "TVET Excellence Awards 2024 - Multiple Recognition",
-    excerpt: "Kongoni Technical College receives multiple awards at the National TVET Excellence Awards, recognizing outstanding performance in technical education delivery.",
-    content: `
-      <p>At the National TVET Excellence Awards 2024, Kongoni Technical & Vocational Training College was honored with multiple awards recognizing our commitment to quality technical education.</p>
-      
-      <p>Awards received include:</p>
-      <ul>
-        <li>Best Technical College in Central Kenya Region</li>
-        <li>Excellence in Student Support Services</li>
-        <li>Outstanding Industry Partnership Program</li>
-        <li>Innovation in Technical Training Methods</li>
-      </ul>
-      
-      <p>"These awards validate our mission to provide world-class technical education," said Principal Judith Akaranga. "They reflect the hard work of our faculty, staff, and the achievements of our students."</p>
-      
-      <p>The recognition comes as the college continues to expand its programs and enhance its facilities to meet the growing demand for skilled technical professionals in Kenya.</p>
-    `,
-    imageUrl: "/images/admin/admin18.jpeg",
-    featured: false,
-    createdAt: "2024-07-25T16:45:00Z",
-    updatedAt: "2024-07-25T16:45:00Z",
-    author: "Administration",
-    category: "Achievements"
-  },
-  {
-    id: "7",
-    title: "Skills Development Workshop for Local Community",
-    excerpt: "Free community workshop program teaching practical skills in plumbing, electrical work, and basic ICT to support local economic development.",
-    content: `
-      <p>As part of our community outreach initiative, Kongoni Technical College hosted a week-long skills development workshop for local community members, providing free training in essential technical skills.</p>
-      
-      <p>Workshop areas included:</p>
-      <ul>
-        <li>Basic electrical installation and safety</li>
-        <li>Plumbing and water system maintenance</li>
-        <li>Computer literacy and digital skills</li>
-        <li>Small business management</li>
-        <li>Basic automotive maintenance</li>
-      </ul>
-      
-      <p>Over 150 community members participated in the program, with many expressing interest in further technical training. The initiative aims to empower local communities with practical skills that can generate income and improve livelihoods.</p>
-      
-      <p>"Education should benefit the entire community," noted Community Outreach Coordinator, Mr. Peter Wachira. "These workshops create opportunities for economic empowerment beyond our regular student body."</p>
-    `,
-    imageUrl: "/images/admin/admin17.jpeg",
-    featured: false,
-    createdAt: "2024-07-20T11:00:00Z",
-    updatedAt: "2024-07-20T11:00:00Z",
-    author: "Community Outreach",
-    category: "Community"
-  },
-  {
-    id: "8",
-    title: "Digital Learning Initiative Launches New E-Learning Platform",
-    excerpt: "Advanced e-learning platform integration enables blended learning approach, giving students 24/7 access to course materials and virtual lab simulations.",
-    content: `
-      <p>Kongoni Technical College introduces a comprehensive digital learning platform, revolutionizing how students access educational content and participate in technical training.</p>
-      
-      <p>Platform features include:</p>
-      <ul>
-        <li>Interactive virtual laboratory simulations</li>
-        <li>24/7 access to course materials and assignments</li>
-        <li>Real-time progress tracking and assessment</li>
-        <li>Video lectures and practical demonstrations</li>
-        <li>Online collaboration tools for group projects</li>
-        <li>Mobile app for learning on-the-go</li>
-      </ul>
-      
-      <p>"This platform enhances our teaching methodology while ensuring students can learn at their own pace," explained ICT Director, Ms. Nancy Achieng. "It's particularly valuable for students who need to balance work and study."</p>
-      
-      <p>The system supports both on-campus and remote learning, ensuring continuity of education regardless of circumstances. Student feedback has been overwhelmingly positive, with improved engagement and academic performance metrics.</p>
-    `,
-    imageUrl: "/images/departments/ict/ajira-workshop.jpg",
-    featured: false,
-    createdAt: "2024-07-18T13:30:00Z",
-    updatedAt: "2024-07-18T13:30:00Z",
-    author: "ICT Department",
-    category: "Technology"
-  },
-  {
-    id: "10",
-    title: "New ICT Center Equipped with Latest Technology",
-    excerpt: "Modern ICT center featuring high-speed internet, latest computers, and specialized software for programming, web development, and digital design courses.",
-    content: `
-      <p>The new ICT Center at Kongoni Technical College sets a new standard for computer education in technical institutions, featuring state-of-the-art equipment and infrastructure.</p>
-      
-      <p>Facility highlights:</p>
-      <ul>
-        <li>80 high-performance computers with latest specifications</li>
-        <li>High-speed fiber internet connectivity</li>
-        <li>Specialized software for programming, design, and analysis</li>
-        <li>Virtual reality development stations</li>
-        <li>Network security and cybersecurity training lab</li>
-        <li>Digital media production studio</li>
-      </ul>
-      
-      <p>"This investment positions our students to compete globally in the digital economy," said ICT Department Head, Mr. Samuel Gitonga. "We're not just teaching current technologies but preparing students for future innovations."</p>
-      
-      <p>The center supports courses in software development, web design, digital marketing, cybersecurity, and emerging technologies like AI and machine learning.</p>
-    `,
-    imageUrl: "/images/news/ict-center.jpg",
-    featured: false,
-    createdAt: "2024-07-12T08:45:00Z",
-    updatedAt: "2024-07-12T08:45:00Z",
-    author: "ICT Department",
-    category: "Facilities"
-  },
-  {
-    id: "11",
-    title: "Green Energy Project Installation Complete",
-    excerpt: "Solar energy installation project reduces college's carbon footprint by 60% while providing practical learning opportunities for electrical students.",
-    content: `
-      <p>Kongoni Technical College completed its ambitious green energy project, installing a comprehensive solar power system that significantly reduces environmental impact while serving as a living laboratory for students.</p>
-      
-      <p>Project achievements:</p>
-      <ul>
-        <li>500kW solar panel installation across campus buildings</li>
-        <li>60% reduction in grid electricity dependency</li>
-        <li>Annual savings of over KES 2 million in electricity costs</li>
-        <li>Hands-on learning opportunities for electrical students</li>
-        <li>Battery storage system for continuous power supply</li>
-      </ul>
-      
-      <p>"This project demonstrates our commitment to environmental sustainability while providing practical learning experiences," explained Facilities Manager, Eng. Michael Otieno.</p>
-      
-      <p>Students in electrical and renewable energy programs use the installation for practical exercises, maintenance training, and research projects. The college plans to expand the system further and explore wind energy options.</p>
-    `,
-    imageUrl: "/images/news/solar-installation.jpg",
-    featured: false,
-    createdAt: "2024-07-08T12:20:00Z",
-    updatedAt: "2024-07-08T12:20:00Z",
-    author: "Facilities Department",
-    category: "Sustainability"
-  },
-  {
-    id: "12",
-    title: "Student Innovation Challenge Winners Announced",
-    excerpt: "Annual innovation challenge showcases creative solutions to local problems, with winning projects receiving funding for development and implementation.",
-    content: `
-      <p>The Annual Student Innovation Challenge concluded with impressive presentations of creative solutions addressing real-world problems in Kenya.</p>
-      
-      <p>Winning projects include:</p>
-      <ul>
-        <li><strong>1st Place:</strong> Water purification system for rural communities</li>
-        <li><strong>2nd Place:</strong> Mobile app for connecting farmers with markets</li>
-        <li><strong>3rd Place:</strong> Solar-powered security lighting system</li>
-        <li><strong>Special Recognition:</strong> Waste recycling into building materials</li>
-      </ul>
-      
-      <p>Each winning team receives funding support ranging from KES 50,000 to KES 200,000 to develop their prototypes further. Industry mentors will guide the development process.</p>
-      
-      <p>"Innovation is at the heart of technical education," noted Research Coordinator, Dr. Linda Nyambura. "These projects demonstrate how technical skills can solve practical problems in our communities."</p>
-    `,
-    imageUrl: "/images/news/innovation-challenge.jpg",
-    featured: false,
-    createdAt: "2024-07-03T14:15:00Z",
-    updatedAt: "2024-07-03T14:15:00Z",
-    author: "Research Department",
-    category: "Innovation"
-  },
-  {
-    id: "13",
-    title: "International Exchange Program with German Technical Institutes",
-    excerpt: "New exchange program allows selected students to study in Germany while German students experience technical education in Kenya.",
-    content: `
-      <p>Kongoni Technical College launches an international student exchange program with prestigious technical institutes in Germany, opening new horizons for cultural and educational exchange.</p>
-      
-      <p>Program benefits include:</p>
-      <ul>
-        <li>Semester abroad opportunities for top-performing students</li>
-        <li>Exposure to German engineering standards and practices</li>
-        <li>Language learning and cultural immersion</li>
-        <li>International certification opportunities</li>
-        <li>Network building with global technical education institutions</li>
-      </ul>
-      
-      <p>"This partnership exemplifies our commitment to providing world-class education," said International Relations Officer, Ms. Catherine Mwende. "Students will gain invaluable global perspectives."</p>
-      
-      <p>The first cohort of 10 students will depart for Germany in September 2024, while we prepare to welcome German students for the January 2025 semester.</p>
-    `,
-    imageUrl: "/images/news/exchange-program.jpg",
-    featured: false,
-    createdAt: "2024-06-28T11:30:00Z",
-    updatedAt: "2024-06-28T11:30:00Z",
-    author: "International Relations",
-    category: "Programs"
-  },
-  {
-    id: "14",
-    title: "Alumni Success Stories: Entrepreneurship Thriving",
-    excerpt: "Recent graduates showcase successful businesses and startups, demonstrating the entrepreneurial impact of technical education from Kongoni Technical College.",
-    content: `
-      <p>Alumni from Kongoni Technical College continue to make significant impacts in Kenya's economy through successful businesses and innovative startups across various technical sectors.</p>
-      
-      <p>Success stories include:</p>
-      <ul>
-        <li>TechSolutions Kenya - IT services company serving 200+ clients</li>
-        <li>GreenBuild Construction - Sustainable building materials manufacturer</li>
-        <li>MechFix Automotive - Chain of automotive service centers</li>
-        <li>AgriTech Innovations - Smart farming solutions provider</li>
-        <li>PowerTech Solutions - Renewable energy installation company</li>
-      </ul>
-      
-      <p>"Our alumni demonstrate that technical education is a foundation for entrepreneurship and innovation," said Alumni Relations Coordinator, Mr. Francis Maina.</p>
-      
-      <p>The college maintains strong connections with alumni through mentorship programs, guest lectures, and business development support for current students interested in entrepreneurship.</p>
-    `,
-    imageUrl: "/images/news/alumni-success.jpg",
-    featured: false,
-    createdAt: "2024-06-25T10:00:00Z",
-    updatedAt: "2024-06-25T10:00:00Z",
-    author: "Alumni Relations",
-    category: "Alumni"
-  },
-  {
-    id: "15",
-    title: "New Automotive Workshop Opens for Hands-On Training",
-    excerpt: "Fully equipped automotive workshop with diagnostic tools, service bays, and training vehicles provides comprehensive practical experience for automotive students.",
-    content: `
-      <p>The new Automotive Workshop at Kongoni Technical College provides students with industry-standard facilities for comprehensive hands-on training in automotive technology and repair.</p>
-      
-      <p>Workshop features include:</p>
-      <ul>
-        <li>8 fully equipped service bays with hydraulic lifts</li>
-        <li>Latest diagnostic equipment and scan tools</li>
-        <li>Engine testing and rebuilding stations</li>
-        <li>Electrical systems training modules</li>
-        <li>Hybrid and electric vehicle training units</li>
-        <li>Parts inventory and tools library</li>
-      </ul>
-      
-      <p>"Students now train on the same equipment they'll use in professional workshops," said Automotive Department Head, Mr. John Kariuki. "This hands-on experience is invaluable for employment readiness."</p>
-      
-      <p>The workshop also serves the local community through discounted vehicle services provided by students under supervision, creating a win-win situation for learning and community support.</p>
-    `,
-    imageUrl: "/images/news/auto-workshop.jpg",
-    featured: false,
-    createdAt: "2024-06-20T14:00:00Z",
-    updatedAt: "2024-06-20T14:00:00Z",
-    author: "Automotive Department",
-    category: "Facilities"
+    category: "Events",
+    eventDate: "2024-08-05",
+    location: "Main Campus Grounds",
+    tags: ["culture", "diversity", "celebration", "traditions"]
   }
 ];
 
@@ -404,6 +268,7 @@ export async function GET(request: NextRequest) {
     const category = searchParams.get('category');
     const limit = searchParams.get('limit');
     const search = searchParams.get('search');
+    const tags = searchParams.get('tags');
 
     let filteredNews = [...mockNews];
 
@@ -419,13 +284,22 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    // Filter by tags if requested
+    if (tags) {
+      filteredNews = filteredNews.filter(news => 
+        news.tags?.some(tag => tag.toLowerCase().includes(tags.toLowerCase()))
+      );
+    }
+
     // Filter by search term if requested
     if (search) {
       const searchTerm = search.toLowerCase();
       filteredNews = filteredNews.filter(news => 
         news.title.toLowerCase().includes(searchTerm) ||
         news.excerpt.toLowerCase().includes(searchTerm) ||
-        news.content.toLowerCase().includes(searchTerm)
+        news.content.toLowerCase().includes(searchTerm) ||
+        news.author.toLowerCase().includes(searchTerm) ||
+        news.tags?.some(tag => tag.toLowerCase().includes(searchTerm))
       );
     }
 
