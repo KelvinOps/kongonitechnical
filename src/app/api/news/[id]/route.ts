@@ -45,7 +45,7 @@ const mockNews = [
       
       <p>This governance transition positions Kongoni Technical & Vocational Training College for continued growth and excellence in technical education delivery.</p>
     `,
-    imageUrl: "/images/admin/board/bog2.jpeg",
+    imageUrl: "/images/admin/board/bog2.jpg",
     images: [
       "/images/admin/board/bog1.jpeg",
       "/images/admin/board/bog2.jpeg"
@@ -58,7 +58,7 @@ const mockNews = [
     author: "Administration",
     category: "Events",
     eventDate: "2025-09-05",
-    location: "College Boardroom",
+    location: "Principals Office",
     tags: ["governance", "board-meeting", "leadership", "transition", "administration", "strategic-planning"]
   },
   {

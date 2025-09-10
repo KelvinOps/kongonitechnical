@@ -101,7 +101,8 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
         {/* Content Skeleton */}
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
-            <Skeleton className="w-full h-96 mb-8 rounded-lg" />
+            {/* Enhanced skeleton for larger slideshow */}
+            <Skeleton className="w-full h-72 sm:h-96 lg:h-[30rem] mb-8 rounded-lg" />
             <div className="space-y-6">
               {Array.from({ length: 6 }, (_, i) => (
                 <Skeleton key={i} className="h-4 w-full" />
@@ -151,7 +152,7 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
       {/* Article Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto"> {/* Increased from max-w-4xl for better content width */}
             {/* Badges Section */}
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge className="bg-primary/10 text-primary px-3 py-1 text-sm font-medium">
@@ -249,16 +250,18 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
 
       {/* Article Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto"> {/* Increased from max-w-4xl */}
           <Card className="overflow-hidden shadow-lg mb-12">
-            {/* Enhanced Media Display with VideoSlideshow */}
+            {/* Enhanced Media Display with VideoSlideshow - NOW WITH LARGER HEIGHT */}
             <VideoSlideshow
               images={article.images}
               videoUrl={article.videoUrl}
               videoThumbnail={article.videoThumbnail}
               title={article.title}
+              height="xl" // Changed from default to 'xl' for much larger view
               className="rounded-t-lg"
             />
+            
             
             {/* Article Body */}
             <CardContent className="p-8 lg:p-12">

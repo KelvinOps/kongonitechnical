@@ -46,17 +46,11 @@ const mockNews = [
     
     <p>This governance transition positions Kongoni Technical & Vocational Training College for continued growth and excellence in technical education delivery.</p>
   `,
-  imageUrl: "/images/admin/admin1.jpeg",
-  images: [
-    "/images/admin/admin1.jpeg",
-    "/images/admin/admin2.jpeg",
-    "/images/admin/admin3.jpeg",
-    "/images/admin/admin4.jpeg",
-    "/images/newsevents/governance/meeting1.jpg",
-    "/images/newsevents/governance/meeting2.jpg",
-    "/images/newsevents/governance/board1.jpg",
-    "/images/newsevents/governance/board2.jpg"
-  ],
+    imageUrl: "/images/admin/board/bog2.jpg",
+    images: [
+      "/images/admin/board/bog1.jpeg",
+      "/images/admin/board/bog2.jpeg"
+    ],
   videoUrl: "https://www.youtube.com/watch?v=board_governance_meeting",
   videoThumbnail: "/images/admin/admin1.jpeg",
   featured: true,
@@ -118,11 +112,7 @@ const mockNews = [
     "/images/newsevents/prayer/prayer1.jpg",
     "/images/newsevents/prayer/prayer2.jpg",
     "/images/newsevents/prayer/prayer3.jpg",
-    "/images/newsevents/prayer/prayer4.jpg",
-    "/images/campus/campus1.jpg",
-    "/images/campus/campus2.jpg",
-    "/images/newsevents/community/community1.jpg",
-    "/images/newsevents/community/community2.jpg"
+    "/images/newsevents/prayer/prayer4.jpg"
   ],
   videoUrl: "https://www.youtube.com/watch?v=prayer_day_highlights",
   videoThumbnail: "/images/newsevents/prayer/prayer1.jpg",
