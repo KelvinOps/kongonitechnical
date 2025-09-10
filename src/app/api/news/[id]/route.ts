@@ -6,7 +6,7 @@ const mockNews = [
   // Insert them at the beginning of the array for newest-first ordering
   {
     id: "19",
-    title: "3rd Board of Governance Meeting - Transition to New Leadership Structure",
+    title: "3rd Board of Governors Inauguration - Transition to New Leadership Structure",
     excerpt: "Historic transition as Kongoni Technical & Vocational Training College transitions from Board of Management to the new Board of Governance structure, marking a significant milestone in institutional development.",
     content: `
       <p>On September 5th, 2025, Kongoni Technical & Vocational Training College held its historic 3rd Board of Governance meeting, marking a significant transition in the institution's leadership structure.</p>
