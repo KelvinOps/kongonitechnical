@@ -84,9 +84,9 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         {/* Header Skeleton */}
-        <div className="bg-white border-b">
+        <div className="bg-white border-b shadow-sm">
           <div className="container mx-auto px-4 py-6">
             <Skeleton className="h-6 w-32 mb-4" />
             <Skeleton className="h-10 w-3/4 mb-2" />
@@ -99,10 +99,10 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
         </div>
 
         {/* Content Skeleton */}
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             <Skeleton className="w-full h-96 mb-8 rounded-lg" />
-            <div className="space-y-4">
+            <div className="space-y-6">
               {Array.from({ length: 6 }, (_, i) => (
                 <Skeleton key={i} className="h-4 w-full" />
               ))}
@@ -115,13 +115,13 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
 
   if (error || !article) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Card className="max-w-md mx-auto">
-          <CardContent className="p-8 text-center">
-            <h1 className="text-2xl font-bold text-gray-800 mb-4">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+        <Card className="max-w-md mx-auto shadow-lg">
+          <CardContent className="p-10 text-center">
+            <h1 className="text-2xl font-bold text-gray-800 mb-6">
               Article Not Found
             </h1>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-8 leading-relaxed">
               The news article you&apos;re looking for doesn&apos;t exist or has been removed.
             </p>
             <Link href="/news">
@@ -137,11 +137,11 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Navigation Header */}
-      <div className="bg-white border-b sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4">
-          <Link href="/news" className="inline-flex items-center text-primary hover:text-primary/80">
+      <div className="bg-white border-b shadow-sm sticky top-0 z-10">
+        <div className="container mx-auto px-4 py-5">
+          <Link href="/news" className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to News
           </Link>
@@ -149,39 +149,42 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
       </div>
 
       {/* Article Header */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-8">
+      <div className="bg-white border-b shadow-sm">
+        <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-wrap items-center gap-2 mb-4">
-              <Badge className="bg-primary/10 text-primary">
+            {/* Badges Section */}
+            <div className="flex flex-wrap items-center gap-3 mb-8">
+              <Badge className="bg-primary/10 text-primary px-3 py-1 text-sm font-medium">
                 {article.category}
               </Badge>
               {article.featured && (
-                <Badge className="bg-yellow-500/10 text-yellow-700">
+                <Badge className="bg-yellow-500/10 text-yellow-700 px-3 py-1 text-sm font-medium">
                   Featured
                 </Badge>
               )}
               {article.videoUrl && (
-                <Badge className="bg-red-500/10 text-red-700">
+                <Badge className="bg-red-500/10 text-red-700 px-3 py-1 text-sm font-medium">
                   Video Available
                 </Badge>
               )}
               {article.images && article.images.length > 1 && (
-                <Badge className="bg-blue-500/10 text-blue-700">
+                <Badge className="bg-blue-500/10 text-blue-700 px-3 py-1 text-sm font-medium">
                   {article.images.length} Photos
                 </Badge>
               )}
             </div>
             
-            <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6 leading-tight">
+            {/* Title */}
+            <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
               {article.title}
             </h1>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600 mb-6">
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>
+            {/* Meta Information Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-gray-600 mb-10">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                  <Calendar className="w-5 h-5 text-primary" />
+                  <span className="font-medium">
                     {new Date(article.eventDate || article.createdAt).toLocaleDateString('en-US', { 
                       weekday: 'long',
                       year: 'numeric',
@@ -191,46 +194,53 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
                   </span>
                 </div>
                 
-                <div className="flex items-center space-x-2">
-                  <User className="w-4 h-4" />
-                  <span>{article.author}</span>
+                <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                  <User className="w-5 h-5 text-primary" />
+                  <span className="font-medium">{article.author}</span>
                 </div>
               </div>
               
-              <div className="space-y-2">
+              <div className="space-y-4">
                 {article.location && (
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>{article.location}</span>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <MapPin className="w-5 h-5 text-primary" />
+                    <span className="font-medium">{article.location}</span>
                   </div>
                 )}
                 
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-3">
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={handleShare}
-                    className="flex items-center space-x-2"
+                    className="flex items-center space-x-2 px-4 py-2"
                   >
                     <Share2 className="w-4 h-4" />
-                    <span>Share</span>
+                    <span>Share Article</span>
                   </Button>
                 </div>
               </div>
             </div>
 
-            {/* Tags */}
+            {/* Tags Section */}
             {article.tags && article.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-6">
-                <Tag className="w-4 h-4 text-gray-500 mr-2" />
-                {article.tags.map((tag) => (
-                  <span 
-                    key={tag}
-                    className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full hover:bg-gray-200 transition-colors cursor-pointer"
-                  >
-                    #{tag}
-                  </span>
-                ))}
+              <div className="border-t pt-8">
+                <div className="flex items-start space-x-4">
+                  <div className="flex items-center space-x-2 text-gray-500 mt-1">
+                    <Tag className="w-4 h-4" />
+                    <span className="text-sm font-medium">Tags:</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {article.tags.map((tag) => (
+                      <span 
+                        key={tag}
+                        className="px-3 py-2 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-gray-200 transition-colors cursor-pointer font-medium"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
           </div>
@@ -238,9 +248,9 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
       </div>
 
       {/* Article Content */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <Card className="overflow-hidden mb-8">
+          <Card className="overflow-hidden shadow-lg mb-12">
             {/* Enhanced Media Display with VideoSlideshow */}
             <VideoSlideshow
               images={article.images}
@@ -251,44 +261,50 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
             />
             
             {/* Article Body */}
-            <CardContent className="p-8">
+            <CardContent className="p-8 lg:p-12">
               {/* Article Excerpt as Lead */}
-              <div className="text-lg text-gray-700 font-medium leading-relaxed mb-6 p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
+              <div className="text-xl text-gray-800 font-medium leading-relaxed mb-10 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border-l-4 border-primary shadow-sm">
                 {article.excerpt}
               </div>
 
+              {/* Main Content with Custom Bullet Point Styling */}
               <div className="prose prose-lg max-w-none">
                 <div 
-                  className="text-gray-700 leading-relaxed"
+                  className="text-gray-700 leading-relaxed space-y-6 [&>p]:mb-6 [&>ul]:my-8 [&>ol]:my-8 [&>h2]:mt-12 [&>h2]:mb-6 [&>h3]:mt-10 [&>h3]:mb-4 [&>blockquote]:my-8 [&>hr]:my-10 [&_ul]:list-none [&_ul]:pl-0 [&_ul_li]:relative [&_ul_li]:pl-6 [&_ul_li]:mb-3 [&_ul_li:before]:content-['•'] [&_ul_li:before]:absolute [&_ul_li:before]:left-0 [&_ul_li:before]:top-0 [&_ul_li:before]:text-primary [&_ul_li:before]:font-bold [&_ul_li:before]:text-lg [&_ol]:list-none [&_ol]:pl-0 [&_ol_li]:relative [&_ol_li]:pl-6 [&_ol_li]:mb-3 [&_ol_li:before]:content-['•'] [&_ol_li:before]:absolute [&_ol_li:before]:left-0 [&_ol_li:before]:top-0 [&_ol_li:before]:text-primary [&_ol_li:before]:font-bold [&_ol_li:before]:text-lg"
                   dangerouslySetInnerHTML={{ __html: article.content }}
                 />
               </div>
               
               {/* Article Footer */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <div className="text-sm text-gray-500">
-                    <p>Published: {new Date(article.createdAt).toLocaleDateString('en-US', { 
-                      month: 'long', 
-                      day: 'numeric', 
-                      year: 'numeric',
-                      hour: '2-digit',
-                      minute: '2-digit'
-                    })}</p>
-                    {article.createdAt !== article.updatedAt && (
-                      <p className="mt-1">Last updated: {new Date(article.updatedAt).toLocaleDateString('en-US', { 
+              <div className="mt-16 pt-8 border-t border-gray-200">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                  <div className="text-sm text-gray-500 space-y-2">
+                    <p className="font-medium">
+                      Published: {new Date(article.createdAt).toLocaleDateString('en-US', { 
                         month: 'long', 
                         day: 'numeric', 
-                        year: 'numeric' 
-                      })}</p>
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                      })}
+                    </p>
+                    {article.createdAt !== article.updatedAt && (
+                      <p>
+                        Last updated: {new Date(article.updatedAt).toLocaleDateString('en-US', { 
+                          month: 'long', 
+                          day: 'numeric', 
+                          year: 'numeric' 
+                        })}
+                      </p>
                     )}
                   </div>
                   
-                  <div className="flex space-x-2">
+                  <div className="flex space-x-3">
                     <Button
                       variant="outline"
                       size="sm"
                       onClick={() => window.print()}
+                      className="px-4 py-2"
                     >
                       Print Article
                     </Button>
@@ -296,6 +312,7 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
                       variant="outline"
                       size="sm"
                       onClick={handleShare}
+                      className="px-4 py-2"
                     >
                       Share Article
                     </Button>
@@ -307,16 +324,19 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
 
           {/* Related Articles */}
           {relatedNews && relatedNews.length > 0 && (
-            <div className="mt-12">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                Related Articles
-              </h3>
+            <section className="mt-16">
+              <div className="text-center mb-10">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  Related Articles
+                </h3>
+                <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+              </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {relatedNews.map((news) => (
                   <Link key={news.id} href={`/news/${news.id}`} className="block">
-                    <Card className="h-full overflow-hidden bg-white hover:shadow-lg transition-all duration-300 group">
-                      <div className="relative w-full h-40">
+                    <Card className="h-full overflow-hidden bg-white hover:shadow-xl transition-all duration-300 group">
+                      <div className="relative w-full h-48">
                         <Image
                           src={news.imageUrl || news.images?.[0] || "/images/placeholder-news.jpg"}
                           alt={news.title}
@@ -327,37 +347,37 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
                           loading="lazy"
                         />
                         {/* Media indicators for related articles */}
-                        <div className="absolute top-2 right-2 flex gap-1">
+                        <div className="absolute top-3 right-3 flex gap-2">
                           {news.videoUrl && (
-                            <Badge className="bg-red-600 text-white text-xs">
+                            <Badge className="bg-red-600 text-white text-xs px-2 py-1">
                               Video
                             </Badge>
                           )}
                           {news.images && news.images.length > 1 && (
-                            <Badge className="bg-blue-600 text-white text-xs">
+                            <Badge className="bg-blue-600 text-white text-xs px-2 py-1">
                               +{news.images.length}
                             </Badge>
                           )}
                         </div>
                       </div>
                       
-                      <CardContent className="p-4">
-                        <div className="flex items-center space-x-2 mb-2 text-xs text-gray-500">
-                          <span>
+                      <CardContent className="p-6">
+                        <div className="flex items-center space-x-2 mb-3 text-xs text-gray-500">
+                          <span className="font-medium">
                             {new Date(news.eventDate || news.createdAt).toLocaleDateString('en-US', { 
                               month: 'short', 
                               day: 'numeric' 
                             })}
                           </span>
                           <span>•</span>
-                          <span className="text-primary">{news.category}</span>
+                          <span className="text-primary font-medium">{news.category}</span>
                         </div>
                         
-                        <h4 className="font-semibold text-gray-800 mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        <h4 className="font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2 text-lg">
                           {news.title}
                         </h4>
                         
-                        <p className="text-gray-600 text-sm line-clamp-2">
+                        <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed">
                           {news.excerpt}
                         </p>
                       </CardContent>
@@ -365,14 +385,14 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
                   </Link>
                 ))}
               </div>
-            </div>
+            </section>
           )}
 
           {/* Navigation */}
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <Link href="/news">
-              <Button className="bg-primary hover:bg-primary/90">
-                <ArrowLeft className="w-4 h-4 mr-2" />
+              <Button className="bg-primary hover:bg-primary/90 px-8 py-3 text-lg font-medium">
+                <ArrowLeft className="w-5 h-5 mr-3" />
                 Back to All News
               </Button>
             </Link>

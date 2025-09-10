@@ -121,7 +121,7 @@ const staff = [
     name: "Mr. Joseph Wanjala",
     position: "Records Officer",
     qualification: "Diploma in Records Management",
-    image: "/api/placeholder/200/250",
+    image: "/images/registry/josephwanjala.jpeg",
     email: "records@kongonitechnical.ac.ke",
     phone: "+254 700 345 680"
   }

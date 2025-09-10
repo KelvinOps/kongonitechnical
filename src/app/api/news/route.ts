@@ -3,6 +3,138 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Complete mock news data - synchronized with main news route
 const mockNews = [
+  // Insert them at the beginning of the array for newest-first ordering
+
+{
+  id: "19",
+  title: "3rd Board of Governance Meeting - Transition to New Leadership Structure",
+  excerpt: "Historic transition as Kongoni Technical & Vocational Training College transitions from Board of Management to the new Board of Governance structure, marking a significant milestone in institutional development.",
+  content: `
+    <p>On September 5th, 2025, Kongoni Technical & Vocational Training College held its historic 3rd Board of Governance meeting, marking a significant transition in the institution's leadership structure.</p>
+    
+    <p>This meeting represented the formal transition from the previous Board of Management to the newly established Board of Governance, reflecting the college's commitment to enhanced institutional governance and strategic oversight.</p>
+    
+    <p><strong>Key Highlights of the Meeting:</strong></p>
+    <ul>
+      <li>Formal handover from the outgoing Board of Management</li>
+      <li>Introduction and orientation of new Board of Governance members</li>
+      <li>Review of institutional strategic plans and performance indicators</li>
+      <li>Discussion of governance framework and operational policies</li>
+      <li>Budget review and financial oversight responsibilities</li>
+      <li>Academic quality assurance and program development priorities</li>
+      <li>Infrastructure development and modernization plans</li>
+      <li>Student welfare and community engagement initiatives</li>
+    </ul>
+    
+    <p>The new Board of Governance brings together experienced professionals from various sectors including education, industry, government, and community leadership, ensuring comprehensive oversight and strategic guidance for the institution.</p>
+    
+    <p>"This transition represents our commitment to excellence in governance and our dedication to providing world-class technical and vocational education," said the Board Chairperson during the meeting.</p>
+    
+    <p>The Board of Governance will provide enhanced strategic oversight, ensuring the college continues to meet evolving industry needs while maintaining high educational standards. This governance structure aligns with best practices in technical and vocational education management.</p>
+    
+    <p><strong>Areas of Focus for the New Board:</strong></p>
+    <ul>
+      <li>Strategic planning and institutional development</li>
+      <li>Quality assurance and academic standards</li>
+      <li>Financial sustainability and resource mobilization</li>
+      <li>Industry partnerships and graduate employability</li>
+      <li>Innovation in technical education delivery</li>
+      <li>Community engagement and social responsibility</li>
+    </ul>
+    
+    <p>The college community looks forward to the enhanced leadership and strategic direction that the new Board of Governance will provide as we continue to build on our reputation as a leading technical and vocational training institution.</p>
+    
+    <p>This governance transition positions Kongoni Technical & Vocational Training College for continued growth and excellence in technical education delivery.</p>
+  `,
+  imageUrl: "/images/admin/admin1.jpeg",
+  images: [
+    "/images/admin/admin1.jpeg",
+    "/images/admin/admin2.jpeg",
+    "/images/admin/admin3.jpeg",
+    "/images/admin/admin4.jpeg",
+    "/images/newsevents/governance/meeting1.jpg",
+    "/images/newsevents/governance/meeting2.jpg",
+    "/images/newsevents/governance/board1.jpg",
+    "/images/newsevents/governance/board2.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=board_governance_meeting",
+  videoThumbnail: "/images/admin/admin1.jpeg",
+  featured: true,
+  createdAt: "2025-09-05T14:30:00Z",
+  updatedAt: "2025-09-05T14:30:00Z",
+  author: "Administration",
+  category: "Events",
+  eventDate: "2025-09-05",
+  location: "College Boardroom",
+  tags: ["governance", "board-meeting", "leadership", "transition", "administration", "strategic-planning"]
+},
+{
+  id: "20",
+  title: "Term Opening Prayer Day - Spiritual Blessing for New Academic Term",
+  excerpt: "The college community came together for a special prayer service to seek divine blessing and guidance for the new academic term, fostering unity and spiritual well-being among students and staff.",
+  content: `
+    <p>On September 9th, 2025, Kongoni Technical & Vocational Training College held a special Term Opening Prayer Day, bringing together the entire college community to seek divine blessing and guidance for the new academic term.</p>
+    
+    <p>The prayer service, held at the main campus grounds, was attended by students, faculty, staff, and invited religious leaders from various denominations, reflecting the college's commitment to holistic education that nurtures both academic and spiritual development.</p>
+    
+    <p><strong>Prayer Service Program:</strong></p>
+    <ul>
+      <li>Opening worship and praise session</li>
+      <li>Welcome address by Principal Judith Akaranga</li>
+      <li>Interfaith prayers for academic success and guidance</li>
+      <li>Special prayers for students, faculty, and staff</li>
+      <li>Blessing of academic facilities and laboratories</li>
+      <li>Prayers for safety and protection throughout the term</li>
+      <li>Community fellowship and refreshments</li>
+    </ul>
+    
+    <p>"As we begin this new academic term, we recognize the importance of spiritual foundation in our educational journey," said Principal Judith Akaranga during her address. "This prayer day reminds us that success comes not only through hard work but also through divine guidance and blessing."</p>
+    
+    <p>The event featured participation from multiple religious denominations, emphasizing the college's inclusive approach to spiritual matters while respecting diverse faith backgrounds within the college community.</p>
+    
+    <p><strong>Key Prayer Themes:</strong></p>
+    <ul>
+      <li>Academic excellence and wisdom for students and instructors</li>
+      <li>Safety and protection for the college community</li>
+      <li>Unity and harmony among diverse backgrounds</li>
+      <li>Guidance for institutional leadership and decision-making</li>
+      <li>Success in upcoming examinations and assessments</li>
+      <li>Prosperity and growth for the institution</li>
+      <li>Community outreach and social impact</li>
+    </ul>
+    
+    <p>Students from various departments participated actively, with many expressing gratitude for the opportunity to begin their academic journey with spiritual grounding. The prayer day also included special intercessions for new students beginning their studies.</p>
+    
+    <p>"This prayer day helps create a positive atmosphere for learning and reminds us that we are part of a caring community," said Mary Wanjiku, a Business Studies student.</p>
+    
+    <p>The college's commitment to spiritual well-being complements its focus on academic and technical excellence, recognizing that holistic education addresses all aspects of human development.</p>
+    
+    <p>Religious leaders from the local community praised the college's initiative, noting how such gatherings strengthen community bonds and provide moral foundation for educational pursuits.</p>
+    
+    <p>The Term Opening Prayer Day concluded with a blessing ceremony for all academic activities, setting a positive and hopeful tone for the term ahead.</p>
+  `,
+  imageUrl: "/images/newsevents/prayer/prayer1.jpg",
+  images: [
+    "/images/newsevents/prayer/prayer1.jpg",
+    "/images/newsevents/prayer/prayer2.jpg",
+    "/images/newsevents/prayer/prayer3.jpg",
+    "/images/newsevents/prayer/prayer4.jpg",
+    "/images/campus/campus1.jpg",
+    "/images/campus/campus2.jpg",
+    "/images/newsevents/community/community1.jpg",
+    "/images/newsevents/community/community2.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=prayer_day_highlights",
+  videoThumbnail: "/images/newsevents/prayer/prayer1.jpg",
+  featured: true,
+  createdAt: "2025-09-09T10:00:00Z",
+  updatedAt: "2025-09-09T10:00:00Z",
+  author: "Student Affairs",
+  category: "Student Life",
+  eventDate: "2025-09-09",
+  location: "Main Campus Grounds",
+  tags: ["prayer", "spirituality", "term-opening", "community", "blessing", "interfaith", "student-life"]
+},
   {
     id: "18",
     title: "September 2025 Intake Students Reporting for New Academic Year",

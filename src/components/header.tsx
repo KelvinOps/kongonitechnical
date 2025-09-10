@@ -176,7 +176,7 @@ export default function Header() {
           label: "Website & NoticeBoard",
           isCategory: true as const,
           items: [
-            { href: "/news/latest", label: "News" },
+            { href: "/news", label: "News" },
             { href: "/news/events", label: "Events" },
             { href: "/news/career", label: "Career" }
           ]
