@@ -106,17 +106,12 @@ const mockNews = [
       
       <p>The Term Opening Prayer Day concluded with a blessing ceremony for all academic activities, setting a positive and hopeful tone for the term ahead.</p>
     `,
-    imageUrl: "/images/newsevents/prayer/prayer1.jpg",
-    images: [
-      "/images/newsevents/prayer/prayer1.jpg",
-      "/images/newsevents/prayer/prayer2.jpg",
-      "/images/newsevents/prayer/prayer3.jpg",
-      "/images/newsevents/prayer/prayer4.jpg",
-      "/images/campus/campus1.jpg",
-      "/images/campus/campus2.jpg",
-      "/images/newsevents/community/community1.jpg",
-      "/images/newsevents/community/community2.jpg"
-    ],
+  imageUrl: "/images/newsevents/prayerday/prayerday1.jpeg",
+  images: [
+    "/images/newsevents/prayerday/prayerday1.jpeg",
+    "/images/newsevents/prayerday/prayerday2.jpeg",
+    "/images/newsevents/prayerday/prayerday3.jpeg"
+  ],
     videoUrl: "https://www.youtube.com/watch?v=prayer_day_highlights",
     videoThumbnail: "/images/newsevents/prayer/prayer1.jpg",
     featured: true,

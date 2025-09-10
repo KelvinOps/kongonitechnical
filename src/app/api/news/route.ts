@@ -7,7 +7,7 @@ const mockNews = [
 
 {
   id: "19",
-  title: "3rd Board of Governance Meeting - Transition to New Leadership Structure",
+  title: "3rd Board of Governors Inauguration - Transition to New Leadership Structure",
   excerpt: "Historic transition as Kongoni Technical & Vocational Training College transitions from Board of Management to the new Board of Governance structure, marking a significant milestone in institutional development.",
   content: `
     <p>On September 5th, 2025, Kongoni Technical & Vocational Training College held its historic 3rd Board of Governance meeting, marking a significant transition in the institution's leadership structure.</p>
@@ -107,12 +107,11 @@ const mockNews = [
     
     <p>The Term Opening Prayer Day concluded with a blessing ceremony for all academic activities, setting a positive and hopeful tone for the term ahead.</p>
   `,
-  imageUrl: "/images/newsevents/prayer/prayer1.jpg",
+  imageUrl: "/images/newsevents/prayerday/prayerday1.jpeg",
   images: [
-    "/images/newsevents/prayer/prayer1.jpg",
-    "/images/newsevents/prayer/prayer2.jpg",
-    "/images/newsevents/prayer/prayer3.jpg",
-    "/images/newsevents/prayer/prayer4.jpg"
+    "/images/newsevents/prayerday/prayerday1.jpeg",
+    "/images/newsevents/prayerday/prayerday2.jpeg",
+    "/images/newsevents/prayerday/prayerday3.jpeg"
   ],
   videoUrl: "https://www.youtube.com/watch?v=prayer_day_highlights",
   videoThumbnail: "/images/newsevents/prayer/prayer1.jpg",
