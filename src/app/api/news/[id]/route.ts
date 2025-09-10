@@ -180,7 +180,7 @@ const mockNews = [
   },
   {
     id: "1",
-    title: "Kongoni Students Excel at Katti Athletics Games 2024 - Gold Medal Victory",
+    title: "Kongoni Students Excel at Katti Athletics Games 2025 - Gold Medal Victory",
     excerpt: "Our athletes brought home multiple medals from the Katti Athletics Games, showcasing exceptional talent in track and field events across various categories.",
     content: `
       <p>Kongoni Technical & Vocational Training College is proud to announce the outstanding performance of our student athletes at the prestigious Katti Athletics Games 2024, held at Nyayo National Stadium in Nairobi.</p>
@@ -209,15 +209,11 @@ const mockNews = [
     imageUrl: "/images/newsevents/athletics/athletics23.jpeg",
     images: [
       "/images/newsevents/athletics/athletics1.jpeg",
-      "/images/newsevents/athletics/athletics2.jpeg",
-      "/images/newsevents/athletics/athletics3.jpeg",
       "/images/newsevents/athletics/athletics18.jpeg",
       "/images/newsevents/athletics/athletics23.jpeg",
       "/images/newsevents/athletics/athletics24.jpeg",
       "/images/newsevents/athletics/athletics25.jpeg",
-      "/images/newsevents/athletics/athletics26.jpeg",
-      "/images/newsevents/athletics/athletics27.jpeg",
-      "/images/newsevents/athletics/athletics28.jpeg"
+      "/images/newsevents/athletics/athletics26.jpeg"
     ],
     videoUrl: "https://www.youtube.com/watch?v=athletics_highlights_2024",
     videoThumbnail: "/images/newsevents/athletics/athletics23.jpeg",
