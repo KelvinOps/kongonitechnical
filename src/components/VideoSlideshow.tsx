@@ -136,7 +136,7 @@ export default function VideoSlideshow({
     if (hasMultipleMedia && !showVideo && !isImageFullscreen) {
       const timer = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % allMedia.length);
-      }, 6000); // Increased from 5000 to 6000 for better viewing time
+      }, 9000); // Increased from 5000 to 6000 for better viewing time
       return () => clearInterval(timer);
     }
   }, [allMedia.length, hasMultipleMedia, showVideo, isImageFullscreen]);
