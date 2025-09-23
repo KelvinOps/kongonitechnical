@@ -5,6 +5,186 @@ import { NextRequest, NextResponse } from "next/server";
 const mockNews = [
   // Insert them at the beginning of the array for newest-first ordering
   {
+    id: "22",
+    title: "CBET Modular Curriculum Delivery Workshop at Sigalagala National Polytechnic",
+    excerpt: "Kongoni Technical College's academic leadership team participated in a comprehensive 5-day workshop on Competency-Based Education and Training (CBET) modular curriculum delivery at Sigalagala National Polytechnic.",
+    content: `
+      <p>A delegation from Kongoni Technical & Vocational Training College participated in an intensive 5-day workshop on Competency-Based Education and Training (CBET) modular curriculum delivery at Sigalagala National Polytechnic from September 8-12, 2025.</p>
+      
+      <p>The college was represented by key academic leadership including all Heads of Departments (HODs), the Examinations Officer, and the Deputy Principal for Academics, demonstrating the institution's commitment to implementing best practices in technical education delivery.</p>
+      
+      <p><strong>Workshop Participants from Kongoni Technical College:</strong></p>
+      <ul>
+        <li>Deputy Principal for Academics - Ms. Lucy Makhokha</li>
+        <li>Examinations Officer - Mr. Paul Kyalo</li>
+        <li>Head of Department - Building & Civil Engineering - Mr. Nathan Kibet</li>
+        <li>Head of Department - Computing & Informatics - Mr. Nelson Thuku</li>
+        <li>Head of Department - Automotive & Mechanical - Mr. Bryan Wekesa</li>
+        <li>Head of Department - Business Studies - Ms. Dorothy Ludisi</li>
+        <li>Head of Department - Fashion Design & Cosmetology - Ms. Tabitha Indiori</li>
+        <li>Head of Department - Hospitality & Tourism - Ms. Faith Kadeiza</li>
+      </ul>
+      
+      <p>The workshop focused on enhancing understanding and implementation of CBET methodology, which emphasizes practical skills acquisition and competency demonstration rather than traditional time-based learning approaches.</p>
+      
+      <p><strong>Key Workshop Areas Covered:</strong></p>
+      <ul>
+        <li>CBET philosophy and pedagogical principles</li>
+        <li>Modular curriculum design and development</li>
+        <li>Learning outcome formulation and assessment methods</li>
+        <li>Competency-based assessment techniques and tools</li>
+        <li>Student-centered learning approaches</li>
+        <li>Industry-relevant skill mapping and alignment</li>
+        <li>Quality assurance in CBET implementation</li>
+        <li>Resource planning and facility optimization</li>
+        <li>Record keeping and progress tracking systems</li>
+        <li>Integration of workplace learning experiences</li>
+      </ul>
+      
+      <p>Deputy Principal for Academics, Ms. Lucy Makhokha, noted the workshop's relevance to the college's strategic objectives. "This training aligns perfectly with our mission to provide industry-relevant education. CBET modular delivery will enhance our graduates' employability and entrepreneurial capacity," she explained.</p>
+      
+      <p>The workshop featured interactive sessions where participants engaged in curriculum mapping exercises, developed assessment rubrics, and designed learning modules for their respective departments. Each HOD worked on specific competency frameworks relevant to their technical areas.</p>
+      
+      <p><strong>Practical Workshop Activities:</strong></p>
+      <ul>
+        <li>Competency mapping for various technical programs</li>
+        <li>Development of learning outcome statements</li>
+        <li>Design of formative and summative assessment tools</li>
+        <li>Creation of modular learning packages</li>
+        <li>Industry consultation frameworks development</li>
+        <li>Student progress monitoring system design</li>
+        <li>Resource allocation planning for CBET implementation</li>
+      </ul>
+      
+      <p>Sigalagala National Polytechnic, as the host institution, provided excellent facilities and shared their experiences in CBET implementation. The polytechnic's successful model served as a practical reference for participants to adapt to their institutional contexts.</p>
+      
+      <p>Examinations Officer Mr. Samuel Wekesa highlighted the workshop's impact on assessment practices. "We learned innovative approaches to continuous assessment that will make our evaluation processes more meaningful and industry-aligned," he stated.</p>
+      
+      <p><strong>Implementation Plans Developed:</strong></p>
+      <ul>
+        <li>Phased rollout of CBET modules across all departments</li>
+        <li>Staff training program for instructors on CBET methodology</li>
+        <li>Industry partnership enhancement for workplace learning</li>
+        <li>Assessment tool development and standardization</li>
+        <li>Student progress tracking system implementation</li>
+        <li>Quality assurance framework establishment</li>
+      </ul>
+      
+      <p>The workshop concluded with each participating institution presenting their action plans for CBET implementation. Kongoni Technical College's presentation was commended for its comprehensive approach and realistic timelines.</p>
+      
+      <p>Principal Judith Akaranga expressed appreciation for the team's participation, noting that the knowledge gained will be cascaded to all teaching staff through in-house training sessions. "This investment in our academic leadership capacity will translate to improved educational outcomes for our students," she affirmed.</p>
+      
+      <p>The college plans to implement the CBET modular approach in phases, beginning with pilot programs in select departments before full institutional rollout. Regular monitoring and evaluation will ensure effective implementation and continuous improvement.</p>
+      
+      <p>Follow-up sessions with Sigalagala National Polytechnic have been scheduled to share implementation experiences and best practices as both institutions advance their CBET delivery systems.</p>
+    `,
+    imageUrl: "/images/newsevents/cbet/cbet_workshop1.jpeg",
+    images: [
+      "/images/newsevents/cbet/cbet_workshop1.jpeg",
+      "/images/newsevents/cbet/cbet_workshop2.jpeg",
+      "/images/newsevents/cbet/cbet_workshop3.jpeg",
+      "/images/newsevents/cbet/sigalagala1.jpeg",
+      "/images/newsevents/cbet/sigalagala2.jpeg",
+      "/images/admin/hods_meeting1.jpeg",
+      "/images/admin/hods_meeting2.jpeg",
+      "/images/newsevents/training/academic_training1.jpeg"
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=cbet_workshop_highlights",
+    videoThumbnail: "/images/newsevents/cbet/cbet_workshop1.jpeg",
+    featured: true,
+    createdAt: "2025-09-12T18:00:00Z",
+    updatedAt: "2025-09-12T18:00:00Z",
+    author: "Academics Department",
+    category: "Training",
+    eventDate: "2025-09-12",
+    location: "Sigalagala National Polytechnic",
+    tags: ["cbet", "curriculum", "training", "academic-staff", "competency-based", "modular-delivery", "professional-development"]
+  }
+,{
+    id: "21",
+    title: "Kongoni Technical Hosts CS Oparanya at NYOTA Entrepreneurship Training Completion by Ebullient Professional Agencies",
+    excerpt: "Hon. Wycliffe Oparanya, Cabinet Secretary for Co-operatives and MSMEs, was chief guest at the completion ceremony of the 4-day NYOTA entrepreneurship training program that empowered 150 youths with business skills.",
+    content: `
+      <p>Kongoni Technical & Vocational Training College had the honor of hosting Hon. Wycliffe Oparanya, Cabinet Secretary for Co-operatives and Micro, Small and Medium Enterprises (MSMEs), as chief guest during the completion ceremony of the NYOTA (National Youth Opportunities Training Academy) entrepreneurship training program.</p>
+      
+      <p>The hosted 4-day intensive training program, held from September 12-15, 2025, successfully empowered 150 young entrepreneurs with essential business skills and knowledge needed to establish and manage successful enterprises.</p>
+      
+      <p><strong>Training Program Highlights:</strong></p>
+      <ul>
+        <li>Business plan development and financial planning</li>
+        <li>Market research and customer identification</li>
+        <li>Digital marketing strategies for small businesses</li>
+        <li>Access to government funding and support programs</li>
+        <li>Legal requirements for business registration</li>
+        <li>Record keeping and basic accounting principles</li>
+        <li>Product development and quality control</li>
+        <li>Networking and partnership building</li>
+      </ul>
+      
+      <p>During his address, CS Oparanya emphasized the government's commitment to youth empowerment through skills development and entrepreneurship. "The NYOTA initiative represents our dedication to creating opportunities for young Kenyans to become job creators rather than job seekers," he stated.</p>
+      
+      <p>The Cabinet Secretary praised Kongoni Technical College for its role in implementing government initiatives and providing quality training facilities. "Institutions like Kongoni Technical College are instrumental in achieving our vision of an empowered and economically active youth population," he noted.</p>
+      
+      <p><strong>Key Program Outcomes:</strong></p>
+      <ul>
+        <li>150 youths certified in entrepreneurship skills</li>
+        <li>85% of participants developed viable business plans</li>
+        <li>Formation of 12 youth business groups for collective ventures</li>
+        <li>Commitment from 120 participants to start businesses within 6 months</li>
+        <li>Establishment of mentorship networks with successful entrepreneurs</li>
+        <li>Access to government funding opportunities for qualified participants</li>
+      </ul>
+      
+      <p>Principal Judith Akaranga expressed gratitude to the government for selecting the college as a NYOTA training center. "This partnership demonstrates our capacity to deliver quality training programs that align with national development goals," she said.</p>
+      
+      <p>The training sessions, conducted daily from 8:00 AM to 4:00 PM, featured a blend of theoretical instruction and practical exercises. Participants engaged in business simulation activities, developed actual business plans, and received mentorship from experienced entrepreneurs.</p>
+      
+      <p><strong>Government Support Initiatives Highlighted:</strong></p>
+      <ul>
+        <li>Youth Enterprise Development Fund (YEDF) access procedures</li>
+        <li>Uwezo Fund application processes</li>
+        <li>Government procurement opportunities for youth-owned businesses</li>
+        <li>Tax incentives and exemptions for young entrepreneurs</li>
+        <li>Access to industrial parks and business incubation centers</li>
+        <li>Export promotion support for scalable businesses</li>
+      </ul>
+      
+      <p>The completion ceremony featured presentations by outstanding participants who showcased innovative business ideas ranging from agribusiness to technology solutions. Several participants received seed funding commitments from local investors present at the event.</p>
+      
+      <p>CS Oparanya announced plans to expand the NYOTA program to reach more youths across the country, with Kongoni Technical College identified as a model training center for replication in other regions.</p>
+      
+      <p>"Today marks not the end but the beginning of your entrepreneurial journey," the Cabinet Secretary told the participants. "The skills you have acquired here will enable you to contribute meaningfully to Kenya's economic transformation."</p>
+      
+      <p>The college established a follow-up support system to track participants' progress and provide ongoing mentorship as they implement their business plans in their respective communities.</p>
+    `,
+    imageUrl: "/images/newsevents/nyotaexitmeeting/nyotaexit18th-25.jpeg",
+    images: [
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-25.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-4.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-2.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-3.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-5.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-14.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-15.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-8.jpeg",
+            "/images/newsevents/nyotaexitmeeting/nyotaexit18th-17.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-22.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-24.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-30.jpeg",
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-25.jpeg"
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=cs_oparanya_nyota_visit",
+    videoThumbnail: "/images/newsevents/nyotaexitmeeting/nyotaexit18th-23.jpeg",
+    featured: true,
+    createdAt: "2025-09-15T16:00:00Z",
+    updatedAt: "2025-09-15T16:00:00Z",
+    author: "Administration",
+    category: "Events",
+    eventDate: "2025-09-15",
+    location: "College Grounds",
+    tags: ["nyota", "entrepreneurship", "cabinet-secretary", "youth-empowerment", "government-initiative", "business-training", "graduation"]
+  },
+  {
     id: "19",
     title: "3rd Board of Governors Inauguration - Transition to New Leadership Structure",
     excerpt: "Historic transition as Kongoni Technical & Vocational Training College transitions from Board of Management to the new Board of Governance structure, marking a significant milestone in institutional development.",

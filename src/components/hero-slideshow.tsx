@@ -44,7 +44,7 @@ const slides: Slide[] = [
     buttonLink: "/about",
   },
   {
-    image: "/images/admin/admin14.jpeg",
+    image: "/images/hero/modulartraining14.jpg",
     title: "Expert Faculty",
     subtitle: "Learn from industry professionals and experienced trainers",
     buttonText: "Meet Faculty",
