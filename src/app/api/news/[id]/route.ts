@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 const mockNews = [
   {
     id: "24",
-    title: "KTVC Sports Day 2025 - Athletic Excellence and Team Spirit",
+    title: "Sports Day 2025 - Athletic Excellence and Team Spirit",
     excerpt: "Kongoni Technical College hosted an electrifying Sports Day featuring football, volleyball, handball, and netball competitions. Eleven Stars crowned football champions with Rising Stars and Green Garden taking second and third positions respectively.",
     content: `
       <p>On October 10th, 2025, Kongoni Technical & Vocational Training College held its annual Sports Day, showcasing exceptional athletic talent and team spirit across multiple sporting disciplines.</p>
@@ -45,20 +45,19 @@ const mockNews = [
       
       <p>The event concluded with an awards ceremony where champions received their trophies amid cheers from fellow students.</p>
     `,
-    imageUrl: "/images/newsevents/kattigames/kattigames (1).jpeg",
+    imageUrl: "/images/newsevents/kattigames/kattigames9.jpg",
     images: [
-      "/images/newsevents/kattigames/kattigames (1).jpeg",
-      "/images/newsevents/kattigames/kattigames (2).jpeg",
-      "/images/newsevents/kattigames/kattigames (3).jpeg",
-      "/images/newsevents/kattigames/kattigames (4).jpeg",
-      "/images/newsevents/kattigames/kattigames (9).jpeg",
-      "/images/newsevents/kattigames/kattigamesladies (6).jpeg",
-      "/images/newsevents/kattigames/kattigamesladies (7).jpeg",
-      "/images/newsevents/kattigames/kattigamesladies (8).jpeg",
-      "/images/newsevents/kattigames/kattigamesladies (5).jpeg"
+      "/images/newsevents/kattigames/kattigames1.jpg",
+      "/images/newsevents/kattigames/kattigames2.jpg",
+      "/images/newsevents/kattigames/kattigames3.jpg",
+      "/images/newsevents/kattigames/kattigames4.jpg",
+      "/images/newsevents/kattigames/kattigamesladies5.jpg",
+      "/images/newsevents/kattigames/kattigamesladies6.jpg",
+      "/images/newsevents/kattigames/kattigamesladies7.jpg",
+      "/images/newsevents/kattigames/kattigamesladies8.jpg",
+      "/images/newsevents/kattigames/kattigames9.jpg"
     ],
-    videoUrl: "https://www.youtube.com/watch?v=ktvc_sports_day_2024",
-    videoThumbnail: "/images/newsevents/kattigames/kattigames (1).jpeg",
+    videoThumbnail: "/images/newsevents/kattigames/kattigames1.jpg",
     featured: true,
     createdAt: "2025-10-10T16:00:00Z",
     updatedAt: "2025-10-10T16:00:00Z",

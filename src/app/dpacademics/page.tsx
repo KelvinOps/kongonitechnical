@@ -59,12 +59,12 @@ const academicFunctions = [
 ];
 
 const achievements = [
-  "Achieved 95% student completion rate across all programs",
-  "Introduced 8 new industry-aligned courses in 2024",
-  "Established partnerships with 15 industry leaders",
-  "Implemented competency-based training approach",
-  "Achieved 90% graduate employment rate within 6 months",
-  "Obtained accreditation for 12 technical programs from NITA"
+  "Successfully pioneered Research, Innovation and Robotics programs at Kisiwa TTI (2018-2024)",
+  "Led Applied Science Department as HOD achieving excellence in mathematics and science education",
+  "Coordinated curriculum development in STEM programs integrating modern pedagogical approaches",
+  "Established interdepartmental research collaborations enhancing academic innovation",
+  "Mentored academic staff in research methodologies and statistical analysis applications",
+  "Transformed secondary school academic performance as Director of Studies at Malaha Secondary School"
 ];
 
 const departments = [
@@ -72,57 +72,57 @@ const departments = [
     name: "Business Department",
     description: "Developing future leaders in commerce and entrepreneurship.",
     programs: ["Business Management", "Accounting", "Marketing", "Entrepreneurship", "Supply Chain Management"],
-    hod: "Ms. Grace Mwangi",
-    image: "/api/placeholder/400/300"
+    hod: "Ms. Dorothy Ludisi",
+    image: "/images/hod/dorothyludisi.jpeg"
   },
   {
     name: "Computing & Informatics Department", 
     description: "Empowering students with modern computing and digital skills.",
     programs: ["Computer Science", "Information Technology", "Software Development", "Cybersecurity", "Data Analytics"],
-    hod: "Dr. Susan Wanjiru",
-    image: "/api/placeholder/400/300"
+    hod: "Nelson Thuku ",
+    image: "/images/hod/nelsonthuku.png"
   },
   {
     name: "Building & Civil Engineering Department",
     description: "Training in structural design, construction, and surveying.",
     programs: ["Civil Engineering", "Building Construction", "Quantity Surveying", "Architectural Technology"],
-    hod: "Eng. Patrick Mutua",
-    image: "/api/placeholder/400/300"
+    hod: "Mr Nathan Kibet",
+    image: "/images/hod/nathankibet.jpeg"
   },
   {
     name: "Electrical & Electronics Engineering Department",
     description: "Hands-on experience in electrical systems and installations.",
     programs: ["Electrical Engineering", "Electronics Engineering", "Telecommunications", "Power Systems"],
-    hod: "Eng. Joseph Kipchoge",
-    image: "/api/placeholder/400/300"
+    hod: "Mr Evans Maruti",
+    image: "/images/hod/evansmaruti.jpg"
   },
   {
     name: "Automotive & Mechanical Engineering Department",
     description: "Mastering vehicle diagnostics, repair, and maintenance.",
     programs: ["Mechanical Engineering", "Automotive Technology", "Welding & Fabrication", "Refrigeration Technology"],
-    hod: "Eng. Michael Otieno",
-    image: "/api/placeholder/400/300"
+    hod: "Mr Bryan Wekesa",
+    image: "/images/hod/wekesabryan.jpg"
   },
   {
     name: "Fashion Design and Cosmetics Department",
     description: "Creative training in fashion design, garment construction, and beauty techniques.",
     programs: ["Fashion Design", "Garment Construction", "Cosmetology", "Beauty Therapy", "Textile Design"],
-    hod: "Ms. Sarah Akinyi",
-    image: "/api/placeholder/400/300"
+    hod: "Tabitha Indiori",
+    image: "/images/hod/tabithaindiori.jpeg"
   },
   {
     name: "Hospitality and Tourism Department",
     description: "Comprehensive training in hotel management, tourism operations, and customer service.",
     programs: ["Hotel Management", "Tourism Operations", "Food & Beverage", "Travel & Tours", "Event Management"],
-    hod: "Mr. David Wanjiku",
-    image: "/api/placeholder/400/300"
+    hod: "Faith Kadeiza",
+    image: "/images/hod/faithkadeiza.jpg"
   },
   {
     name: "Agriculture Department",
     description: "Innovative farming techniques and agribusiness education.",
     programs: ["Agricultural Technology", "Agribusiness", "Animal Husbandry", "Horticulture", "Agricultural Engineering"],
-    hod: "Dr. James Kiprotich",
-    image: "/api/placeholder/400/300"
+    hod: "Mr Joseph Atula",
+    image: "/images/hod/josephatula.jpeg"
   }
 ];
 
@@ -182,8 +182,8 @@ export default function DPAcademicsPage() {
               <div className="grid lg:grid-cols-3 gap-8 items-center">
                 <div className="text-center">
                   <Image
-                    src="/api/placeholder/300/300"
-                    alt="Prof. lucy makhokha"
+                    src="/images/admin/board/lucymakokha.jpeg"
+                    alt="Mrs. Lucy Makokha"
                     width={300}
                     height={300}
                     className="rounded-full mx-auto mb-4 shadow-md"
@@ -194,23 +194,24 @@ export default function DPAcademicsPage() {
                 </div>
                 <div className="lg:col-span-2">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Mrs. Lucy Makhokha
+                    Mrs. Lucy Makokha
                   </h2>
                   <p className="text-lg text-gray-700 mb-4">
-                    Technical Education, MEd Curriculum Development
+                    MSc Statistics (MMUST) | Mathematics & Chemistry Education Specialist
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Mrs Makhokha is a distinguished academic leader with over 18 years of experience in technical and vocational education. His expertise in curriculum development and quality assurance has been instrumental in positioning the college as a center of excellence in technical education. He has published extensively on competency-based training methodologies.
+                    Mrs. Makokha brings over two decades of distinguished experience in education spanning secondary school leadership and technical vocational training. Her career journey reflects a deep commitment to academic excellence and innovation in STEM education. With a Master of Science in Statistics from Masinde Muliro University of Science and Technology, she has demonstrated exceptional leadership in curriculum development, research coordination, and departmental management. Her tenure at Kisiwa Technical Training Institute saw her pioneering the Research, Innovation and Robotics program while simultaneously leading the Applied Science Department to new heights.
                   </p>
+                  
                   
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center gap-2">
                       <Mail className="text-[#099cca]" size={16} />
-                      <span>dp.academics@kongonitechnical.ac.ke</span>
+                      <span>dpac@kongonitechnical.ac.ke</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone className="text-[#099cca]" size={16} />
-                      <span>+254 788070303</span>
+                      <span>+254 788 070 303</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="text-[#099cca]" size={16} />
@@ -457,15 +458,15 @@ export default function DPAcademicsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <div className="flex items-center justify-center gap-2">
                   <Mail className="text-[#099cca]" size={16} />
-                  <span>dp.academics@kongonitechnical.ac.ke</span>
+                  <span>dpac@kongonitechnical.ac.ke</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="text-[#099cca]" size={16} />
-                  <span>+254 700 234 567</span>
+                  <span>+254 788 070 303</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="text-[#099cca]" size={16} />
-                  <span>Academic Block, Office 301</span>
+                  <span>Academic Block</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Clock className="text-[#099cca]" size={16} />

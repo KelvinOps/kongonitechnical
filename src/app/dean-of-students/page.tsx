@@ -191,8 +191,8 @@ export default function DeanOfStudentsPage() {
               <div className="bg-white rounded-lg shadow-lg p-6 text-center sticky top-8">
                 <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-gray-200 ring-4 ring-primary/20">
                   <Image
-                    src="/images/dean-of-students.png"
-                    alt="Dean of Students"
+                    src="/images/admin/board/kevinmasinde.png"
+                    alt="Kevin Masinde"
                     width={192}
                     height={192}
                     className="object-cover w-full h-full"
@@ -201,7 +201,7 @@ export default function DeanOfStudentsPage() {
                 </div>
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Dean of Students
+                    Kevin Masinde
                   </h2>
                   <p className="text-primary font-semibold mb-1 text-lg">Student Welfare Office</p>
                   <p className="text-gray-600 text-sm mb-4">
@@ -230,7 +230,7 @@ export default function DeanOfStudentsPage() {
                   <div className="flex items-center space-x-2">
                     <Mail className="w-4 h-4 text-primary" />
                     <a href="mailto:dean.students@kongonitvc.ac.ke" className="hover:text-primary transition-colors">
-                      dean.students@kongonitvc.ac.ke
+                      dean@kongonitechnical.ac.ke
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -241,7 +241,7 @@ export default function DeanOfStudentsPage() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-4 h-4 text-primary" />
-                    <span>Student Affairs Office</span>
+                    <span>Deans Office</span>
                   </div>
                 </div>
               </div>

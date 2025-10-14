@@ -104,18 +104,18 @@ const staff = [
   {
     name: "Mr. Andrew Juma",
     position: "Registrar",
-    qualification: "MA Educational Administration",
-    image: "/api/placeholder/200/250",
+    qualification: "Diploma in Building",
+    image: "/images/admin/board/andrewjumacopy.png",
     email: "registrar@kongonitechnical.ac.ke",
-    phone: "+254 700 345 678"
+    phone: "+254 788 070 303"
   },
   {
     name: "Mr. Delphine Kubende",
     position: "Registry Clerk",
-    qualification: "BA Records Management",
+    qualification: "BSc in Information Technology",
     image: "/images/registry/delphine2.jpeg",
-    email: "deputy.registrar@kongonitechnical.ac.ke", 
-    phone: "+254 700 345 679"
+    email: "deputyregistrar@kongonitechnical.ac.ke", 
+    phone: "+254 788 070 303"
   },
   {
     name: "Mr. Joseph Wanjala",
@@ -123,7 +123,7 @@ const staff = [
     qualification: "Diploma in Records Management",
     image: "/images/registry/josephwanjala.jpeg",
     email: "records@kongonitechnical.ac.ke",
-    phone: "+254 700 345 680"
+    phone: "+254 788 070 303"
   }
 ];
 
@@ -464,11 +464,11 @@ export default function RegistryPage() {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="text-[#099cca]" size={16} />
-                  <span>+254 700 345 678</span>
+                  <span>+254 788 070 303</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="text-[#099cca]" size={16} />
-                  <span>Registry Block, Ground Floor</span>
+                  <span>Registry Block</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Clock className="text-[#099cca]" size={16} />

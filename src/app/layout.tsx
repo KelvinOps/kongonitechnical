@@ -15,7 +15,6 @@ import Footer from "@/components/footer";
 import EnrollmentBanner from "@/components/enrollment-banner";
 
 // ✅ Toast System
-import { ToastProvider } from "@/components/ui/toast";
 import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
@@ -79,17 +78,15 @@ export default function RootLayout({
       <body
         className={`antialiased bg-white text-gray-900 min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable}`}
       >
-        <ToastProvider>
-          <Providers>
-            <Header />
-            <main className="flex-1 px-4 py-6">{children}</main>
-            <Footer />
-            <Toaster />
-            
-            {/* 🎯 Enrollment Banner - Shows automatically based on intake periods */}
-            <EnrollmentBanner />
-          </Providers>
-        </ToastProvider>
+        <Providers>
+          <Header />
+          <main className="flex-1 px-4 py-6">{children}</main>
+          <Footer />
+          <Toaster />
+          
+          {/* 🎯 Enrollment Banner - Shows automatically based on intake periods */}
+          <EnrollmentBanner />
+        </Providers>
       </body>
     </html>
   );

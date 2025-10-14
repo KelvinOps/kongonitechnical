@@ -20,7 +20,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Deputy Principal Administration | Kongoni Technical Vocational Training College",
-  description: "Office of the Deputy Principal  Administration - overseeing institutional planning, administrative operations, and financial management.",
+  description: "Office of the Deputy Principal Administration - overseeing institutional planning, administrative operations, and financial management.",
   keywords: "deputy principal, administration, institutional management",
 };
 
@@ -58,12 +58,12 @@ const departmentFunctions = [
 ];
 
 const achievements = [
-  "Implemented digital financial management systems",
-  "Achieved 98% budget utilization efficiency",
-  "Established comprehensive staff development programs",
-  "Streamlined procurement processes reducing turnaround time by 40%",
-  "Developed institutional strategic plan 2024-2029",
-  "Enhanced resource mobilization generating 25% increase in revenue"
+  "Successfully led academic operations at Shamberere National Polytechnic as Deputy Principal - Academics (2024-2025)",
+  "Established robust quality assurance systems as Internal Quality Assurance Officer ensuring compliance with TVET standards",
+  "Coordinated competency-based assessment programs as Assessment Center Officer serving over 500 trainees annually",
+  "Managed institutional records and student services as Registrar at Shamberere National Polytechnic",
+  "Trained over 1,000 National Youth Service trainees in technical skills during seven years as Technical Instructor",
+  "Developed strategic institutional frameworks through Senior Management Course training at Kenya School of Government"
 ];
 
 const upcomingProjects = [
@@ -122,8 +122,8 @@ export default function DPAdministrationPage() {
               <div className="grid lg:grid-cols-3 gap-8 items-center">
                 <div className="text-center">
                   <Image
-                    src="/api/placeholder/300/300"
-                    alt="Mr. Newton Tarian"
+                    src="/images/admin/board/ezraorina.jpeg"
+                    alt="Mr. Ezra Orina"
                     width={300}
                     height={300}
                     className="rounded-full mx-auto mb-4 shadow-md"
@@ -134,23 +134,24 @@ export default function DPAdministrationPage() {
                 </div>
                 <div className="lg:col-span-2">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Mr. Newton Tarian
+                    Mr. Ezra Orina
                   </h2>
                   <p className="text-lg text-gray-700 mb-4">
-                    Educational Management
+                    Bachelor of Education | Diploma in Technical Education | Diploma in Mechanical Engineering
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Mr. Tarian brings experience in educational administration and financial management. He has been instrumental in transforming institutional operations through strategic planning and innovative management approaches. His leadership has resulted in significant improvements in operational efficiency and resource utilization.
+                    Mr. Orina brings over two decades of comprehensive experience in technical and vocational education spanning teaching, quality assurance, academic administration, and institutional management. His career journey from Technical Instructor to Deputy Principal reflects his deep commitment to TVET excellence. He has held key leadership positions including Deputy Principal - Academics, Registrar, and Internal Quality Assurance Officer at Shamberere National Polytechnic, where he honed his expertise in educational management and quality systems. 
                   </p>
-                  
+       
+                          
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center gap-2">
                       <Mail className="text-[#099cca]" size={16} />
-                      <span>dp.admin@kongonitechnical.ac.ke</span>
+                      <span>dpad@kongonitechnical.ac.ke</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone className="text-[#099cca]" size={16} />
-                      <span>+254 700 00000</span>
+                      <span>+254 788 070 303</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="text-[#099cca]" size={16} />
@@ -364,15 +365,15 @@ export default function DPAdministrationPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <div className="flex items-center justify-center gap-2">
                   <Mail className="text-[#099cca]" size={16} />
-                  <span>dp.admin@kongonitechnical.ac.ke</span>
+                  <span>dpad@kongonitechnical.ac.ke</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="text-[#099cca]" size={16} />
-                  <span>+254 700 123 456</span>
+                  <span>+254 788 070 303</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="text-[#099cca]" size={16} />
-                  <span>Admin Block,</span>
+                  <span>Admin Block</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Clock className="text-[#099cca]" size={16} />
