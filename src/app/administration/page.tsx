@@ -1,4 +1,5 @@
 // app/administration/page.tsx
+import Image from 'next/image'
 import { Metadata } from 'next'
 import { Mail, Phone, MapPin, Calendar, Award, GraduationCap, Users } from 'lucide-react'
 
@@ -34,56 +35,56 @@ const administrationTeam: AdminMember[] = [
     name: 'Ms. Judith akaranga',
     position: 'Principal',
     department: 'Executive Leadership',
-    image: '/images/principal.png',
-    email: 'principal@kongoni.ac.ke',
-    phone: '+254 712 345 678',
+    image: '/images/admin/board/judith.png',
+    email: 'principal@kongonitechnical.ac.ke',
+    phone: '+254 788 070 303',
     qualifications: ['PhD in Educational Leadership', 'MSc in Technical Education', 'BSc in Engineering'],
     experience: '15+ years in technical education',
     responsibilities: ['Strategic planning and institutional leadership', 'Academic quality assurance', 'Stakeholder relations', 'Policy implementation'],
     bio: 'Ms Akaranga brings over 15 years of experience in technical education leadership. She is passionate about developing skilled technical professionals who contribute to Kenya\'s economic growth.',
-    joinDate: '2022'
+    joinDate: '2023'
   },
   {
     id: '2',
     name: 'Ms. Lucy Makhokha',
     position: 'Deputy Principal (Academic)',
     department: 'Academic Affairs',
-    image: '/images/admin/deputy-academic.jpg',
-    email: 'deputy.academic@kongoni.ac.ke',
-    phone: '+254 723 456 789',
+    image: '/images/admin/board/lucymakokha.jpeg',
+    email: 'dpac@kongonitechnical.ac.ke',
+    phone: '+254 788 070 303',
     qualifications: ['MSc in Mechanical Engineering', 'Diploma in Technical Education', 'BSc in Engineering Technology'],
     experience: '12+ years in academic administration',
     responsibilities: ['Academic program oversight', 'Curriculum development', 'Faculty coordination', 'Student academic affairs'],
     bio: 'Mr. Kiprotich oversees all academic programs ensuring they meet industry standards and prepare students for successful careers in technical fields.',
-    joinDate: '2019'
+    joinDate: '2025'
   },
   {
     id: '3',
-    name: 'Ms. ',
+    name: 'Mr Ezra Orina ',
     position: 'Deputy Principal (Administration)',
     department: 'Administrative Services',
-    image: '/images/admin/deputy-admin.jpg',
-    email: 'deputy.admin@kongoni.ac.ke',
-    phone: '+254 734 567 890',
-    qualifications: ['MBA in Operations Management', 'BSc in Business Administration', 'Diploma in Human Resource Management'],
+    image: '/images/admin/board/ezraorina.jpeg',
+    email: 'dpad@kongonitechnical.ac.ke',
+    phone: '+254 788 070 303',
+    qualifications: ['Bachelor of Education ', 'Diploma in Technical Education ', 'Diploma in Mechanical Engineering'],
     experience: '10+ years in institutional administration',
     responsibilities: ['Administrative operations', 'Human resource management', 'Financial oversight', 'Infrastructure development'],
-    bio: 'Ms. Achieng ensures smooth administrative operations and creates an enabling environment for effective teaching and learning.',
-    joinDate: '2020'
+    bio: 'Mr. Orina ensures smooth administrative operations and creates an enabling environment for effective teaching and learning.',
+    joinDate: '2025'
   },
   {
     id: '4',
     name: 'Mr Kevin Masinde ',
     position: 'Dean of Students',
     department: 'Engineering Faculty',
-    image: '/images/admin/dean-engineering.jpg',
-    email: 'dean.engineering@kongoni.ac.ke',
-    phone: '+254 745 678 901',
-    qualifications: ['MSc in Civil Engineering', 'Professional Engineer (PE)', 'BSc in Civil Engineering'],
+    image: '/images/admin/board/kevinmasinde.png',
+    email: 'dean@kongonitechnical.ac.ke',
+    phone: '+254 788 070 303',
+    qualifications: ['BSc in Information Technology'],
     experience: '14+ years in engineering education',
     responsibilities: ['Engineering programs leadership', 'Industry partnerships', 'Research coordination', 'Student projects supervision'],
     bio: 'Mr Masinde leads our engineering programs with a focus on practical skills development and industry relevance.',
-    joinDate: '2017'
+    joinDate: '2019'
   },
   {
 
@@ -91,27 +92,27 @@ const administrationTeam: AdminMember[] = [
     name: 'Mr. Andrew Juma',
     position: 'Registrar',
     department: 'Registry Services',
-    image: '/images/admin/registrar.jpg',
-    email: 'registrar@kongoni.ac.ke',
+    image: '/images/admin/board/andrewjumacopy.png',
+    email: 'registrar@kongonitechnical.ac.ke',
     phone: '+254 767 890 123',
-    qualifications: ['MSc in Information Management', 'BSc in Computer Science', 'Diploma in Records Management'],
+    qualifications: ['Diploma in Building Technology'],
     experience: '9+ years in academic registry',
     responsibilities: ['Student records management', 'Academic calendar coordination', 'Examination administration', 'Graduation ceremonies'],
-    bio: 'Mr. Ochieng ensures efficient management of all student academic records and administrative processes.',
-    joinDate: '2021'
+    bio: 'Mr. Juma ensures efficient management of all student academic records and administrative processes.',
+    joinDate: '2019'
   },
   {
     id: '7',
-    name: 'Ms Lucy Makhokha',
-    position: 'Director of Research',
+    name: 'Mr Cyrus Lagat',
+    position: 'Internal Quality Assurance Coordinator',
     department: 'Research and Innovation',
     image: '/images/admin/research-director.jpg',
-    email: 'research@kongoni.ac.ke',
+    email: 'iqa@kongonitechnical.ac.ke',
     phone: '+254 778 901 234',
     qualifications: ['PhD in Industrial Technology', 'MSc in Applied Sciences', 'BSc in Chemistry'],
     experience: '13+ years in research and innovation',
     responsibilities: ['Research program coordination', 'Innovation initiatives', 'Grant applications', 'Industry collaborations'],
-    bio: 'Dr. Mutua leads our research efforts, focusing on applied research that addresses real-world technical challenges.',
+    bio: 'Mr Lagat leads our research efforts, focusing on applied research that addresses real-world technical challenges.',
     joinDate: '2018'
   },
   {
@@ -119,14 +120,14 @@ const administrationTeam: AdminMember[] = [
     name: 'Ms. Millicent Nambo',
     position: 'Finance Officer',
     department: 'Finance and Accounts',
-    image: '/images/admin/finance-manager.jpg',
+    image: '/images/admin/board/millcentwanyonyi.jpeg',
     email: 'finance@kongoni.ac.ke',
     phone: '+254 789 012 345',
     qualifications: ['MBA in Finance', 'CPA (K)', 'BSc in Finance and Accounting'],
     experience: '8+ years in financial management',
     responsibilities: ['Financial planning and control', 'Budget management', 'Financial reporting', 'Audit coordination'],
-    bio: 'Mr. Kariuki ensures sound financial management and transparent use of institutional resources.',
-    joinDate: '2020'
+    bio: 'Ms Nambo ensures sound financial management and transparent use of institutional resources.',
+    joinDate: '2021'
   }
 ]
 
@@ -192,14 +193,16 @@ export default function AdministrationPage() {
             {administrationTeam.map((member) => (
               <div key={member.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 {/* Member Photo */}
-                <div className="relative h-64 bg-gradient-to-br from-blue-100 to-blue-200">
-                  {/* Placeholder for actual images */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-2xl font-bold">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
+                <div className="flex justify-center pt-8 pb-4">
+                  <div className="relative h-48 w-48 rounded-full overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200 ring-4 ring-blue-200">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                      sizes="192px"
+                      priority={false}
+                    />
                   </div>
                 </div>
 
@@ -307,25 +310,23 @@ export default function AdministrationPage() {
               <MapPin className="h-12 w-12 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
               <p className="text-blue-100">
-                Kongoni Technical College<br />
-                P.O. Box 1234-00100<br />
-                Nairobi, Kenya
+                Kongoni Technical and Vocational College<br />
+                P.O. Box 45 - 30205 <br />
+                Matunda, Kenya
               </p>
             </div>
             <div className="flex flex-col items-center">
               <Phone className="h-12 w-12 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Call Us</h3>
               <p className="text-blue-100">
-                +254 700 123 456<br />
-                +254 733 654 321
+                +254 788 070 303
               </p>
             </div>
             <div className="flex flex-col items-center">
               <Mail className="h-12 w-12 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
               <p className="text-blue-100">
-                info@kongoni.ac.ke<br />
-                admin@kongoni.ac.ke
+                info@kongonitechnical.ac.ke
               </p>
             </div>
           </div>

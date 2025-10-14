@@ -9,18 +9,69 @@ import {
   CheckCircle,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  Briefcase
 } from "lucide-react";
 import type { Metadata } from 'next';
 
-
 export const metadata: Metadata = {
-  title: 'Principal - Ms. Judith Akaranga | Kongoni Technical & Vocational College',
-  description: 'Meet Ms. Judith Akaranga, Principal of Kongoni Technical and Vocational College. Learn about her vision, experience, and commitment to quality technical education.',
-  keywords: 'Principal, Judith Akaranga, Kongoni Technical College, TVET, Leadership, Technical Education',
+  title: 'Principal - Ms. Judith  Akaranga | Kongoni Technical & Vocational College',
+  description: 'Meet Ms. Judith  Akaranga, Principal of Kongoni Technical and Vocational College. With over 35 years of educational leadership experience, Ms. Akaranga brings exceptional expertise in technical and vocational education.',
+  keywords: 'Principal, Judith Akaranga, Kongoni Technical College, TVET, Educational Leadership, Technical Education',
 };
 
 export default function PrincipalPage() {
+  const careerHighlights = [
+    {
+      period: "2023 - Present",
+      role: "Principal",
+      institution: "Kongoni Technical and Vocational College",
+      description: "Leading the institution through strategic growth and excellence in technical education"
+    },
+    {
+      period: "2019 - 2023",
+      role: "Principal",
+      institution: "Shamberere Technical Training Institute",
+      description: "Managed operations and strategic development"
+    },
+    {
+      period: "2016 - 2019",
+      role: "Principal",
+      institution: "Musakasa Technical Training Institute",
+      description: "Provided institutional leadership and academic oversight"
+    },
+    {
+      period: "2015 - 2016",
+      role: "Deputy Principal",
+      institution: "Masai Technical Training Institute",
+      description: "Supported principal in institutional management"
+    },
+    {
+      period: "2013 - 2015",
+      role: "Director of Studies",
+      institution: "Masai Technical Training Institute",
+      description: "Oversaw academic programs and curriculum development"
+    },
+    {
+      period: "2006 - 2008",
+      role: "Principal",
+      institution: "Shitoto Girls Secondary School",
+      description: "Led secondary education institution"
+    },
+    {
+      period: "2004 - 2006",
+      role: "Principal",
+      institution: "Khwisero Girls Secondary School",
+      description: "Managed secondary school operations"
+    },
+    {
+      period: "1997 - 2004",
+      role: "Head of Department",
+      institution: "St. Juney's Mumias Girls High School",
+      description: "Led departmental programs and staff"
+    }
+  ];
+
   return (
     <>
       {/* Breadcrumb Navigation */}
@@ -48,7 +99,8 @@ export default function PrincipalPage() {
               Office of the Principal
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Leadership committed to excellence in technical and vocational education
+              Ms. Judith  Akaranga<br />
+              Over 35 Years of Educational Leadership Excellence
             </p>
           </div>
         </div>
@@ -64,7 +116,7 @@ export default function PrincipalPage() {
                 <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-gray-200 ring-4 ring-primary/20">
                   <Image
                     src="/images/principal.png"
-                    alt="Ms. Judith Akaranga - Principal"
+                    alt="Ms. Judith  Akaranga - Principal"
                     width={192}
                     height={192}
                     className="object-cover w-full h-full"
@@ -72,27 +124,30 @@ export default function PrincipalPage() {
                   />
                 </div>
                 <div className="text-center mb-6">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Ms. Judith Akaranga
+                  <h2 className="text-2xl font-bold text-gray-900 mb-1">
+                    Ms. Judith  Akaranga
                   </h2>
-                  <p className="text-primary font-semibold mb-1 text-lg">Principal</p>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-primary font-semibold mb-3 text-lg">Principal</p>
+                  <p className="text-gray-600 text-sm mb-1">
                     Kongoni Technical & Vocational College
+                  </p>
+                  <p className="text-gray-500 text-xs mb-6">
+                    Secretary to the Board of Governors
                   </p>
                   
                   {/* Qualifications */}
                   <div className="space-y-3 text-sm text-gray-700 mb-6">
                     <div className="flex items-center justify-center space-x-2 bg-gray-50 rounded-lg py-2 px-3">
-                      <GraduationCap className="w-4 h-4 text-primary" />
-                      <span>M.Ed, B.Ed (TVET)</span>
+                      <GraduationCap className="w-4 h-4 text-primary flex-shrink-0" />
+                      <span>M.Ed (Educational Administration)</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2 bg-gray-50 rounded-lg py-2 px-3">
-                      <Award className="w-4 h-4 text-primary" />
-                      <span>15+ Years Experience</span>
+                      <Award className="w-4 h-4 text-primary flex-shrink-0" />
+                      <span>35+ Years Experience</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2 bg-gray-50 rounded-lg py-2 px-3">
-                      <Users className="w-4 h-4 text-primary" />
-                      <span>Educational Leadership</span>
+                      <Users className="w-4 h-4 text-primary flex-shrink-0" />
+                      <span>TVET & Secondary Leadership</span>
                     </div>
                   </div>
                 </div>
@@ -100,20 +155,20 @@ export default function PrincipalPage() {
                 {/* Contact Information */}
                 <div className="border-t pt-4 space-y-2 text-sm text-gray-600">
                   <div className="flex items-center space-x-2">
-                    <Mail className="w-4 h-4 text-primary" />
-                    <a href="mailto:principal@kongonitvc.ac.ke" className="hover:text-primary transition-colors">
-                      principal@kongonitvc.ac.ke
+                    <Mail className="w-4 h-4 text-primary flex-shrink-0" />
+                    <a href="mailto:principal@kongonitvc.ac.ke" className="hover:text-primary transition-colors text-xs">
+                      principal@kongonitechnical.ac.ke
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4 text-primary" />
+                    <Phone className="w-4 h-4 text-primary flex-shrink-0" />
                     <a href="tel:+254788070303" className="hover:text-primary transition-colors">
                       +254 788 070 303
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <MapPin className="w-4 h-4 text-primary" />
-                    <span> Matunda,Likuyani SubCounty</span>
+                    <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                    <span className="text-xs">Matunda, Likuyani Sub-County</span>
                   </div>
                 </div>
               </div>
@@ -131,9 +186,9 @@ export default function PrincipalPage() {
                 <div className="prose prose-lg text-gray-700 space-y-6">
                   <p className="leading-relaxed text-lg">
                     It is with great pleasure that I welcome you to Kongoni Technical and Vocational College. 
-                    Established with a vision to provide quality technical education, our institution has 
-                    experienced remarkable growth in academic programs, faculty development, and the expansion 
-                    of our physical infrastructure.
+                    As a dedicated educator with over 35 years of experience in educational leadership and 
+                    management, I am committed to advancing the mission of our institution and ensuring that 
+                    our students receive world-class technical and vocational training.
                   </p>
 
                   <p className="leading-relaxed">
@@ -167,16 +222,18 @@ export default function PrincipalPage() {
                 </h3>
                 
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Kongoni TVC serves as a Center of Excellence in training highly qualified technical 
-                  professionals, aligning with our vision to lead in technical and vocational education 
-                  across the region. My leadership philosophy centers on collaborative excellence, 
-                  innovation, and student-centered learning.
+                  Drawing from my extensive experience across secondary and technical institutions, I believe 
+                  in transformative educational leadership that combines strategic vision with practical 
+                  implementation. Kongoni TVC serves as a Center of Excellence in training highly qualified 
+                  technical professionals, aligning with our vision to lead in technical and vocational education 
+                  across the region.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
-                  I believe in empowering both our faculty and students to reach their full potential 
-                  through continuous professional development, industry engagement, and the cultivation 
-                  of an environment that promotes academic excellence and personal growth.
+                  My leadership philosophy centers on collaborative excellence, innovation, and student-centered 
+                  learning. I believe in empowering both our faculty and students to reach their full potential 
+                  through continuous professional development, industry engagement, and the cultivation of an 
+                  environment that promotes academic excellence and personal growth.
                 </p>
               </div>
             </div>
@@ -289,7 +346,7 @@ export default function PrincipalPage() {
                 technical excellence.&quot;
               </blockquote>
               <cite className="text-secondary font-semibold text-lg">
-                - Ms. Judith Akaranga, Principal
+                - Ms. Judith  Akaranga, Principal
               </cite>
             </div>
           </div>
