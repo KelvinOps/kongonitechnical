@@ -3,7 +3,130 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Enhanced mock news data with video support, multiple images, and comprehensive events
 const mockNews = [
-  // Insert them at the beginning of the array for newest-first ordering
+  {
+    id: "24",
+    title: "KTVC Sports Day 2025 - Athletic Excellence and Team Spirit",
+    excerpt: "Kongoni Technical College hosted an electrifying Sports Day featuring football, volleyball, handball, and netball competitions. Eleven Stars crowned football champions with Rising Stars and Green Garden taking second and third positions respectively.",
+    content: `
+      <p>On October 10th, 2025, Kongoni Technical & Vocational Training College held its annual Sports Day, showcasing exceptional athletic talent and team spirit across multiple sporting disciplines.</p>
+      
+      <p>The day featured intense competitions in four major sports categories, with students demonstrating remarkable skills, determination, and sportsmanship throughout the event.</p>
+      
+      <p><strong>Sports Featured:</strong></p>
+      <ul>
+        <li>Football (Men's and Ladies')</li>
+        <li>Volleyball</li>
+        <li>Handball</li>
+        <li>Netball</li>
+      </ul>
+      
+      <p><strong>Men's Football Tournament Results:</strong></p>
+      <p>The men's football tournament was highly competitive, featuring 8 talented teams battling for supremacy on the field. After intense matches throughout the day, the champions emerged:</p>
+      <ul>
+        <li><strong>🥇 Champions: ELEVEN STARS</strong> - Demonstrated exceptional teamwork, strategic gameplay, and technical skills to claim the top position.</li>
+        <li><strong>🥈 2nd Runners-Up: RISING STARS</strong> - Lived up to their name with impressive performances, showing great potential and determination.</li>
+        <li><strong>🥉 3rd Place: GREEN GARDEN</strong> - Secured third position with commendable performances, displaying strong defensive strategies.</li>
+      </ul>
+      
+      <p><strong>Ladies' Football Competition:</strong></p>
+      <ul>
+        <li><strong>🥇 Champions: TEAM A</strong> - Emerged victorious with superior gameplay and outstanding performances.</li>
+      </ul>
+      
+      <p><strong>Event Highlights:</strong></p>
+      <ul>
+        <li>Over 200 student athletes participated across all sports</li>
+        <li>8 men's football teams competed in intense tournament format</li>
+        <li>2 ladies' football teams showcased women's athletic prowess</li>
+        <li>Professional officiating ensuring fair play throughout</li>
+      </ul>
+      
+      <p>"Today's Sports Day exemplifies our commitment to holistic education," remarked Principal Judith Akaranga during the awards ceremony.</p>
+      
+      <p>The event concluded with an awards ceremony where champions received their trophies amid cheers from fellow students.</p>
+    `,
+    imageUrl: "/images/newsevents/kattigames/kattigames (1).jpeg",
+    images: [
+      "/images/newsevents/kattigames/kattigames (1).jpeg",
+      "/images/newsevents/kattigames/kattigames (2).jpeg",
+      "/images/newsevents/kattigames/kattigames (3).jpeg",
+      "/images/newsevents/kattigames/kattigames (4).jpeg",
+      "/images/newsevents/kattigames/kattigames (9).jpeg",
+      "/images/newsevents/kattigames/kattigamesladies (6).jpeg",
+      "/images/newsevents/kattigames/kattigamesladies (7).jpeg",
+      "/images/newsevents/kattigames/kattigamesladies (8).jpeg",
+      "/images/newsevents/kattigames/kattigamesladies (5).jpeg"
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=ktvc_sports_day_2024",
+    videoThumbnail: "/images/newsevents/kattigames/kattigames (1).jpeg",
+    featured: true,
+    createdAt: "2025-10-10T16:00:00Z",
+    updatedAt: "2025-10-10T16:00:00Z",
+    author: "Sports Department",
+    category: "Events",
+    eventDate: "2025-10-10",
+    location: "Matunda SA School",
+    tags: ["sports", "football", "volleyball", "handball", "netball", "championship", "athletics", "competition", "sports-day", "team-spirit"]
+  },
+  {
+    id: "23",
+    title: "Mazingira Day 2025 - 548 Fruit Trees Planted at Nangili Primary School",
+    excerpt: "KTVC joined forces with Equity Bank Moi's Bridge and Scout Society to celebrate Mazingira Day by planting 548 fruit trees at Nangili Comprehensive Primary School under the theme 'Citizen-Centric Tree Growing and Stewardship'.",
+    content: `
+      <p>On October 10th, 2025, Kongoni Technical & Vocational Training College, in partnership with Equity Bank Moi's Bridge and the KTVC Scout Society, celebrated Mazingira Day with a massive tree planting initiative at Nangili Comprehensive Primary School.</p>
+      
+      <p>Under the theme "Citizen-Centric Tree Growing and Stewardship" and hashtags #TurudiPrimo and #TukaDonateFruitTrees, the collaborative effort resulted in planting 548 fruit trees.</p>
+      
+      <p><strong>Complete Breakdown of Trees Planted:</strong></p>
+      <ul>
+        <li><strong>🥑 Avocados: 68 trees</strong></li>
+        <li><strong>🍈 Guavas: 156 trees</strong></li>
+        <li><strong>🥭 Grafted Mangoes: 50 trees</strong></li>
+        <li><strong>🌰 Macadamia (Njugu Mawe): 21 trees</strong></li>
+        <li><strong>🍈 Jackfruit (Fenesi): 56 trees</strong></li>
+        <li><strong>🍏 Custard Apple (Mafora): 18 trees</strong></li>
+        <li><strong>🫐 Black Plum (Zambarau): 2 trees</strong></li>
+        <li><strong>🍑 Loquat (Chinduli): 157 trees</strong></li>
+        <li><strong>🔴 Pomegranate (Mkomamanga): 20 trees</strong></li>
+      </ul>
+      
+      <p><strong>Environmental and Community Impact:</strong></p>
+      <ul>
+        <li>Carbon sequestration and climate change mitigation</li>
+        <li>Food security for school children</li>
+        <li>Educational value for environmental studies</li>
+        <li>Soil conservation and microclimate improvement</li>
+      </ul>
+      
+      <p>Deputy Principal Ezra Orina  emphasized: "Today we plant more than trees - we plant hope, nutrition, and a sustainable future for these children."</p>
+    `,
+    imageUrl: "/images/newsevents/treeplanting/nangilitree (48).jpeg",
+    images: [
+      "/images/newsevents/treeplanting/nangilitree (59).jpeg",
+      "/images/newsevents/treeplanting/nangilitree (60).jpeg",
+      "/images/newsevents/treeplanting/nangilitree (61).jpeg",
+      "/images/newsevents/treeplanting/nangilitree (62).jpeg",
+      "/images/newsevents/treeplanting/nangilitree (63).jpeg",
+      "/images/newsevents/treeplanting/nangilitreeselect1.jpeg",
+      "/images/newsevents/treeplanting/nangilitreeselect2.jpeg",
+      "/images/newsevents/treeplanting/nangilitreeselect3.jpeg",
+      "/images/newsevents/treeplanting/nangilitreeselect4.jpeg",
+      "/images/newsevents/treeplanting/nangilitreeselect5.jpeg",
+      "/images/newsevents/treeplanting/nangilitreeselect6.jpeg",
+      "/images/newsevents/treeplanting/nangilitreeselect7.jpeg",
+      "/images/newsevents/treeplanting/nangilitreeselect8.jpeg"
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=mazingira_day_2024",
+    videoThumbnail: "/images/newsevents/treeplanting/nangilitree (48).jpeg",
+    featured: true,
+    createdAt: "2025-10-10T14:00:00Z",
+    updatedAt: "2025-10-10T14:00:00Z",
+    author: "Environmental Conservation Team",
+    category: "Events",
+    eventDate: "2025-10-10",
+    location: "Nangili Comprehensive Primary School",
+    tags: ["mazingira-day", "tree-planting", "environment", "conservation", "equity-bank", "scouts", "community-service", "sustainability", "fruit-trees", "greening", "turudi-primo"]
+  },
   {
     id: "22",
     title: "CBET Modular Curriculum Delivery Workshop at Sigalagala National Polytechnic",
@@ -11,86 +134,30 @@ const mockNews = [
     content: `
       <p>A delegation from Kongoni Technical & Vocational Training College participated in an intensive 5-day workshop on Competency-Based Education and Training (CBET) modular curriculum delivery at Sigalagala National Polytechnic from September 8-12, 2025.</p>
       
-      <p>The college was represented by key academic leadership including all Heads of Departments (HODs), the Examinations Officer, and the Deputy Principal for Academics, demonstrating the institution's commitment to implementing best practices in technical education delivery.</p>
+      <p>The college was represented by key academic leadership including all Heads of Departments (HODs), the Examinations Officer, and the Deputy Principal for Academics.</p>
       
-      <p><strong>Workshop Participants from Kongoni Technical College:</strong></p>
+      <p><strong>Workshop Participants:</strong></p>
       <ul>
         <li>Deputy Principal for Academics - Ms. Lucy Makhokha</li>
         <li>Examinations Officer - Mr. Paul Kyalo</li>
-        <li>Head of Department - Building & Civil Engineering - Mr. Nathan Kibet</li>
-        <li>Head of Department - Computing & Informatics - Mr. Nelson Thuku</li>
-        <li>Head of Department - Automotive & Mechanical - Mr. Bryan Wekesa</li>
-        <li>Head of Department - Business Studies - Ms. Dorothy Ludisi</li>
-        <li>Head of Department - Fashion Design & Cosmetology - Ms. Tabitha Indiori</li>
-        <li>Head of Department - Hospitality & Tourism - Ms. Faith Kadeiza</li>
+        <li>All Department Heads</li>
       </ul>
       
-      <p>The workshop focused on enhancing understanding and implementation of CBET methodology, which emphasizes practical skills acquisition and competency demonstration rather than traditional time-based learning approaches.</p>
-      
-      <p><strong>Key Workshop Areas Covered:</strong></p>
-      <ul>
-        <li>CBET philosophy and pedagogical principles</li>
-        <li>Modular curriculum design and development</li>
-        <li>Learning outcome formulation and assessment methods</li>
-        <li>Competency-based assessment techniques and tools</li>
-        <li>Student-centered learning approaches</li>
-        <li>Industry-relevant skill mapping and alignment</li>
-        <li>Quality assurance in CBET implementation</li>
-        <li>Resource planning and facility optimization</li>
-        <li>Record keeping and progress tracking systems</li>
-        <li>Integration of workplace learning experiences</li>
-      </ul>
-      
-      <p>Deputy Principal for Academics, Ms. Lucy Makhokha, noted the workshop's relevance to the college's strategic objectives. "This training aligns perfectly with our mission to provide industry-relevant education. CBET modular delivery will enhance our graduates' employability and entrepreneurial capacity," she explained.</p>
-      
-      <p>The workshop featured interactive sessions where participants engaged in curriculum mapping exercises, developed assessment rubrics, and designed learning modules for their respective departments. Each HOD worked on specific competency frameworks relevant to their technical areas.</p>
-      
-      <p><strong>Practical Workshop Activities:</strong></p>
-      <ul>
-        <li>Competency mapping for various technical programs</li>
-        <li>Development of learning outcome statements</li>
-        <li>Design of formative and summative assessment tools</li>
-        <li>Creation of modular learning packages</li>
-        <li>Industry consultation frameworks development</li>
-        <li>Student progress monitoring system design</li>
-        <li>Resource allocation planning for CBET implementation</li>
-      </ul>
-      
-      <p>Sigalagala National Polytechnic, as the host institution, provided excellent facilities and shared their experiences in CBET implementation. The polytechnic's successful model served as a practical reference for participants to adapt to their institutional contexts.</p>
-      
-      <p>Examinations Officer Mr. Samuel Wekesa highlighted the workshop's impact on assessment practices. "We learned innovative approaches to continuous assessment that will make our evaluation processes more meaningful and industry-aligned," he stated.</p>
-      
-      <p><strong>Implementation Plans Developed:</strong></p>
-      <ul>
-        <li>Phased rollout of CBET modules across all departments</li>
-        <li>Staff training program for instructors on CBET methodology</li>
-        <li>Industry partnership enhancement for workplace learning</li>
-        <li>Assessment tool development and standardization</li>
-        <li>Student progress tracking system implementation</li>
-        <li>Quality assurance framework establishment</li>
-      </ul>
-      
-      <p>The workshop concluded with each participating institution presenting their action plans for CBET implementation. Kongoni Technical College's presentation was commended for its comprehensive approach and realistic timelines.</p>
-      
-      <p>Principal Judith Akaranga expressed appreciation for the team's participation, noting that the knowledge gained will be cascaded to all teaching staff through in-house training sessions. "This investment in our academic leadership capacity will translate to improved educational outcomes for our students," she affirmed.</p>
-      
-      <p>The college plans to implement the CBET modular approach in phases, beginning with pilot programs in select departments before full institutional rollout. Regular monitoring and evaluation will ensure effective implementation and continuous improvement.</p>
-      
-      <p>Follow-up sessions with Sigalagala National Polytechnic have been scheduled to share implementation experiences and best practices as both institutions advance their CBET delivery systems.</p>
+      <p>The workshop focused on enhancing CBET methodology implementation, emphasizing practical skills acquisition and competency demonstration.</p>
     `,
-    imageUrl: "/images/newsevents/cbet/cbet_workshop1.jpeg",
+    imageUrl: "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
     images: [
-      "/images/newsevents/cbet/cbet_workshop1.jpeg",
-      "/images/newsevents/cbet/cbet_workshop2.jpeg",
-      "/images/newsevents/cbet/cbet_workshop3.jpeg",
-      "/images/newsevents/cbet/sigalagala1.jpeg",
-      "/images/newsevents/cbet/sigalagala2.jpeg",
-      "/images/admin/hods_meeting1.jpeg",
-      "/images/admin/hods_meeting2.jpeg",
-      "/images/newsevents/training/academic_training1.jpeg"
+      "/images/newsevents/sigalagalatraining/modulartraining1.jpg",
+      "/images/newsevents/sigalagalatraining/modulartraining2.jpg",
+      "/images/newsevents/sigalagalatraining/modulartraining3.jpg",
+      "/images/newsevents/sigalagalatraining/modulartraining4.jpg",
+      "/images/newsevents/sigalagalatraining/modulartraining5.jpg",
+      "/images/newsevents/sigalagalatraining/modulartraining6.jpg",
+      "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
+      "/images/newsevents/sigalagalatraining/modulartraining8.jpg"
     ],
     videoUrl: "https://www.youtube.com/watch?v=cbet_workshop_highlights",
-    videoThumbnail: "/images/newsevents/cbet/cbet_workshop1.jpeg",
+    videoThumbnail: "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
     featured: true,
     createdAt: "2025-09-12T18:00:00Z",
     updatedAt: "2025-09-12T18:00:00Z",

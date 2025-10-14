@@ -1,4 +1,12 @@
-//components/news-section.tsx
+// ============================================
+// COMPONENT FIX: components/news-section.tsx
+// ============================================
+// Your component is ALREADY correct and dynamic!
+// It automatically fetches from the API, so no changes needed.
+// The component will automatically show the new events once you update the API files.
+
+// However, here's an ENHANCED version with better error handling:
+
 'use client';
 
 import { useQuery } from "@tanstack/react-query";
@@ -22,13 +30,14 @@ export default function NewsSection() {
       if (!res.ok) throw new Error("Failed to fetch news");
       return res.json();
     },
-    staleTime: 5 * 60 * 1000, // 5 minutes
-    gcTime: 30 * 60 * 1000, // 30 minutes
+    staleTime: 5 * 60 * 1000,
+    gcTime: 30 * 60 * 1000,
     refetchOnWindowFocus: false,
     retry: 2,
     retryDelay: 1000,
   });
 
+  // The news is already sorted by date in the API, but we ensure it here too
   const sortedNews = allNews?.sort((a, b) => {
     return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
   });
@@ -51,7 +60,6 @@ export default function NewsSection() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Main article skeleton */}
             <div className="lg:row-span-2">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="w-full h-64 bg-gray-200 animate-pulse" />
@@ -65,7 +73,6 @@ export default function NewsSection() {
               </div>
             </div>
             
-            {/* Side articles skeleton */}
             <div className="space-y-4">
               {Array.from({ length: 5 }, (_, i) => (
                 <div key={i} className="bg-white rounded-lg shadow p-4">
@@ -86,14 +93,14 @@ export default function NewsSection() {
     );
   }
 
-  if (error || !allNews) {
+  if (error || !allNews || allNews.length === 0) {
     return (
       <section className="py-12 bg-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Latest News</h2>
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 max-w-md mx-auto">
             <p className="text-yellow-800">
-              News content is temporarily unavailable. Please check back later.
+              {error ? "News content is temporarily unavailable." : "No news articles available yet."}
             </p>
             <Button 
               onClick={() => window.location.reload()} 
@@ -120,7 +127,7 @@ export default function NewsSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Main Featured Article */}
+          {/* Main Featured Article - ALWAYS shows the most recent */}
           {mostRecentNews && (
             <div className="lg:row-span-2">
               <Link href={`/news/${mostRecentNews.id}`} className="block">
@@ -192,59 +199,65 @@ export default function NewsSection() {
               </Link>
             </div>
 
-            {olderNews?.map((news, index) => (
-              <Link key={news.id} href={`/news/${news.id}`} className="block">
-                <Card className="p-4 bg-white hover:bg-gray-50 hover:shadow-md transition-all duration-200 border border-gray-100 cursor-pointer group">
-                  <div className="flex gap-4">
-                    <div className="relative w-20 h-16 flex-shrink-0 rounded-lg overflow-hidden">
-                      <Image
-                        src={news.imageUrl || "/images/placeholder-news.jpg"}
-                        alt={news.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-200"
-                        sizes="80px"
-                        onError={handleImageError}
-                        loading="lazy"
-                      />
-                    </div>
-                    
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <span className={`w-2 h-2 rounded-full ${
-                          index === 0 ? "bg-green-500" :
-                          index === 1 ? "bg-blue-500" :
-                          index === 2 ? "bg-purple-500" :
-                          index === 3 ? "bg-orange-500" :
-                          "bg-gray-400"
-                        }`} />
-                        <span className="text-xs text-gray-500">
-                          {new Date(news.createdAt).toLocaleDateString('en-US', { 
-                            month: 'short', 
-                            day: 'numeric' 
-                          })}
-                        </span>
-                        <Badge variant="outline" className="text-xs px-2 py-0">
-                          {news.category}
-                        </Badge>
+            {olderNews && olderNews.length > 0 ? (
+              olderNews.map((news, index) => (
+                <Link key={news.id} href={`/news/${news.id}`} className="block">
+                  <Card className="p-4 bg-white hover:bg-gray-50 hover:shadow-md transition-all duration-200 border border-gray-100 cursor-pointer group">
+                    <div className="flex gap-4">
+                      <div className="relative w-20 h-16 flex-shrink-0 rounded-lg overflow-hidden">
+                        <Image
+                          src={news.imageUrl || "/images/placeholder-news.jpg"}
+                          alt={news.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-200"
+                          sizes="80px"
+                          onError={handleImageError}
+                          loading="lazy"
+                        />
                       </div>
                       
-                      <h4 className="font-semibold text-gray-800 mb-2 group-hover:text-primary transition-colors text-sm leading-tight line-clamp-2">
-                        {news.title}
-                      </h4>
-                      
-                      <p className="text-gray-600 text-xs line-clamp-2 leading-relaxed">
-                        {news.excerpt}
-                      </p>
-                      
-                      <div className="flex items-center justify-between mt-2">
-                        <span className="text-xs text-gray-500">{news.author}</span>
-                        <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-primary transition-colors" />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <span className={`w-2 h-2 rounded-full ${
+                            index === 0 ? "bg-green-500" :
+                            index === 1 ? "bg-blue-500" :
+                            index === 2 ? "bg-purple-500" :
+                            index === 3 ? "bg-orange-500" :
+                            "bg-gray-400"
+                          }`} />
+                          <span className="text-xs text-gray-500">
+                            {new Date(news.createdAt).toLocaleDateString('en-US', { 
+                              month: 'short', 
+                              day: 'numeric' 
+                            })}
+                          </span>
+                          <Badge variant="outline" className="text-xs px-2 py-0">
+                            {news.category}
+                          </Badge>
+                        </div>
+                        
+                        <h4 className="font-semibold text-gray-800 mb-2 group-hover:text-primary transition-colors text-sm leading-tight line-clamp-2">
+                          {news.title}
+                        </h4>
+                        
+                        <p className="text-gray-600 text-xs line-clamp-2 leading-relaxed">
+                          {news.excerpt}
+                        </p>
+                        
+                        <div className="flex items-center justify-between mt-2">
+                          <span className="text-xs text-gray-500">{news.author}</span>
+                          <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-primary transition-colors" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Card>
-              </Link>
-            ))}
+                  </Card>
+                </Link>
+              ))
+            ) : (
+              <div className="text-center py-8 text-gray-500">
+                <p>No additional news available</p>
+              </div>
+            )}
           </div>
         </div>
 
