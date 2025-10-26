@@ -31,7 +31,7 @@ export default function PrincipalNote() {
                     <p>
                       &quot;Welcome to Kongoni Technical and Vocational College,
                       where we transform aspirations into achievements. For over
-                      two decades, our institution has been at the forefront of
+                      6 years our institution has been at the forefront of
                       technical education, preparing students for successful
                       careers in today&apos;s dynamic economy.&quot;
                     </p>
