@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +12,9 @@ import {
   Scale,
   Users,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Video,
+  Accessibility
 } from "lucide-react";
 
 export default function ServiceCharterPage() {
@@ -22,19 +23,15 @@ export default function ServiceCharterPage() {
   // Download function
   const downloadPDF = (filename: string, displayName: string) => {
     try {
-      // Create a temporary anchor element
       const link = document.createElement('a');
       link.href = filename;
       link.download = displayName;
       link.target = '_blank';
-      
-      // Append to body, click, and remove
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     } catch (error) {
       console.error('Download failed:', error);
-      // Fallback: open in new tab
       window.open(filename, '_blank');
     }
   };
@@ -51,7 +48,6 @@ export default function ServiceCharterPage() {
 
     return (
       <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
-        {/* Header with custom colors */}
         <div className={`p-4 text-white ${isKiswahili ? 'bg-secondary' : 'bg-primary'}`}>
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -67,10 +63,8 @@ export default function ServiceCharterPage() {
           </div>
         </div>
         
-        {/* Document Display */}
         <div className="relative bg-gray-100 min-h-[600px]">
           <div className="p-8 text-center">
-            {/* KONGONITVC Header */}
             <div className="mb-8">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-4">
@@ -86,7 +80,6 @@ export default function ServiceCharterPage() {
               </div>
             </div>
 
-            {/* Charter Document Image */}
             <div className="flex justify-center mb-8">
               <div 
                 className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105"
@@ -95,11 +88,9 @@ export default function ServiceCharterPage() {
                 <div className="relative w-64 h-80 bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 hover:shadow-3xl transition-shadow duration-300">
                   <div className="absolute inset-2 border-2 border-gray-100 rounded-lg"></div>
                   
-                  <Image 
+                  <img 
                     src={imagePath}
                     alt={isKiswahili ? "Kiswahili Charter Preview" : "English Charter Preview"}
-                    width={256}
-                    height={320}
                     className="w-full h-full object-cover p-3 rounded-xl"
                   />
                   
@@ -127,14 +118,12 @@ export default function ServiceCharterPage() {
               </div>
             </div>
 
-            {/* Document Title */}
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-primary mb-2">
                 {isKiswahili ? 'MKATABA WA UTOAJI HUDUMA KWA WATEJA' : 'CUSTOMER SERVICE DELIVERY CHARTER'}
               </h2>
             </div>
 
-            {/* Vision and Mission */}
             <div className="text-left max-w-4xl mx-auto space-y-4 mb-8">
               <div>
                 <h3 className="font-bold text-lg text-gray-800">
@@ -173,7 +162,6 @@ export default function ServiceCharterPage() {
               </div>
             </div>
 
-            {/* Commitment Section */}
             <div className="bg-primary text-white p-6 rounded-lg">
               <h2 className="text-2xl font-bold mb-4">
                 {isKiswahili ? 'AHADI YETU KWA WATEJA WETU' : 'OUR COMMITMENT TO OUR CUSTOMERS'}
@@ -182,7 +170,6 @@ export default function ServiceCharterPage() {
           </div>
         </div>
         
-        {/* Action Buttons */}
         <div className="p-4 bg-gray-50 border-t">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4 text-sm text-gray-600">
@@ -230,6 +217,94 @@ export default function ServiceCharterPage() {
               Our commitment to quality service delivery • Ahadi yetu ya utoaji huduma bora
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Sign Language Video Section - PROMINENT PLACEMENT */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-5xl mx-auto">
+          <Card className="overflow-hidden shadow-xl border-2 border-blue-200">
+            {/* Video Header */}
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-white/20 p-3 rounded-full">
+                    <Accessibility className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold mb-1">Service Charter in Sign Language</h2>
+                    <p className="text-blue-100 text-sm">Mkataba wa Huduma kwa Lugha ya Alama</p>
+                  </div>
+                </div>
+                <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
+                  <Video className="w-4 h-4 mr-2 inline" />
+                  Accessible Format
+                </Badge>
+              </div>
+            </div>
+
+            {/* Video Container */}
+            <div className="bg-gray-900 p-4">
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-lg"
+                  src="https://www.youtube.com/embed/W5UQKhJaE7s"
+                  title="KTVC Service Charter - Sign Language Version"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ border: 'none' }}
+                />
+              </div>
+            </div>
+
+            {/* Video Description */}
+            <div className="p-6 bg-white">
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Accessibility className="w-6 h-6 text-blue-600" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    Inclusive Service Charter Presentation
+                  </h3>
+                  <p className="text-gray-600 mb-3">
+                    We are committed to accessibility and inclusion. This video presents our Service Charter 
+                    in Kenyan Sign Language to ensure all members of our community can access important 
+                    information about our services and commitments.
+                  </p>
+                  <p className="text-gray-600 text-sm italic">
+                    Tumejitolea kuhakikisha huduma zetu zinafikiwa na wote. Video hii inaonyesha Mkataba 
+                    wetu wa Huduma kwa Lugha ya Alama ya Kenya ili kuhakikisha wanajamii wetu wote 
+                    wanapata taarifa muhimu kuhusu huduma na ahadi zetu.
+                  </p>
+                </div>
+              </div>
+
+              <div className="border-t pt-4 mt-4">
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-blue-600 text-blue-600 hover:bg-blue-50"
+                    onClick={() => window.open('https://www.youtube.com/watch?v=W5UQKhJaE7s', '_blank')}
+                  >
+                    <Video className="w-4 h-4 mr-2" />
+                    Watch on YouTube
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-gray-400 text-gray-700 hover:bg-gray-50"
+                  >
+                    <Accessibility className="w-4 h-4 mr-2" />
+                    Accessibility Info
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
 
