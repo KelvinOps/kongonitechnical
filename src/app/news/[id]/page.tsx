@@ -66,7 +66,7 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
           text: article.excerpt,
           url: window.location.href,
         });
-      } catch (err) {
+      } catch {
         // Fallback to clipboard if share fails
         await navigator.clipboard.writeText(window.location.href);
         alert("Link copied to clipboard!");
@@ -76,8 +76,8 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
       try {
         await navigator.clipboard.writeText(window.location.href);
         alert("Link copied to clipboard!");
-      } catch (err) {
-        console.error("Failed to copy link:", err);
+      } catch (clipboardErr) {
+        console.error("Failed to copy link:", clipboardErr);
       }
     }
   };

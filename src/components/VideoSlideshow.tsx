@@ -36,9 +36,7 @@ export default function VideoSlideshow({
   height = 'large' // Default to large instead of the previous h-96
 }: VideoSlideshowProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
   const [isImageFullscreen, setIsImageFullscreen] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
@@ -103,7 +101,6 @@ export default function VideoSlideshow({
 
   const stopVideo = useCallback(() => {
     setShowVideo(false);
-    setIsVideoPlaying(false);
     setVideoError(false);
   }, []);
 
@@ -114,16 +111,13 @@ export default function VideoSlideshow({
   const playVideo = () => {
     if (!videoUrl) return;
     setShowVideo(true);
-    setIsVideoPlaying(true);
   };
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
-      setIsFullscreen(true);
     } else {
       document.exitFullscreen();
-      setIsFullscreen(false);
     }
   };
 
@@ -160,18 +154,6 @@ export default function VideoSlideshow({
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [showVideo, isImageFullscreen, prevSlide, nextSlide, stopVideo]);
-
-  // Handle fullscreen change events
-  useEffect(() => {
-    const handleFullscreenChange = () => {
-      if (!document.fullscreenElement) {
-        setIsFullscreen(false);
-      }
-    };
-
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-  }, []);
 
   if (allMedia.length === 0) {
     return (

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -86,27 +87,30 @@ export default function ServiceCharterPage() {
                 onClick={() => window.open(imagePath, '_blank')}
               >
                 <div className="relative w-64 h-80 bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 hover:shadow-3xl transition-shadow duration-300">
-                  <div className="absolute inset-2 border-2 border-gray-100 rounded-lg"></div>
+                  <div className="absolute inset-2 border-2 border-gray-100 rounded-lg z-10"></div>
                   
-                  <img 
+                  <Image 
                     src={imagePath}
                     alt={isKiswahili ? "Kiswahili Charter Preview" : "English Charter Preview"}
-                    className="w-full h-full object-cover p-3 rounded-xl"
+                    fill
+                    className="object-cover p-3 rounded-xl"
+                    sizes="256px"
+                    priority={false}
                   />
                   
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 z-20">
                     <div className="bg-white bg-opacity-90 rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
                       <Eye className="w-6 h-6 text-gray-700" />
                     </div>
                   </div>
                   
-                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg ${
+                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg z-20 ${
                     isKiswahili ? 'bg-secondary text-gray-800' : 'bg-primary'
                   }`}>
                     {isKiswahili ? 'Kiswahili' : 'English'}
                   </div>
                   
-                  <div className="absolute -top-1 -left-1 w-16 h-16 bg-gradient-to-br from-white to-transparent opacity-30 rounded-full blur-sm"></div>
+                  <div className="absolute -top-1 -left-1 w-16 h-16 bg-gradient-to-br from-white to-transparent opacity-30 rounded-full blur-sm z-10"></div>
                 </div>
                 
                 <div className="text-center mt-4">

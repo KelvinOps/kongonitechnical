@@ -1,5 +1,4 @@
-//components/student-portal.tsx
-// 
+// components/student-portal.tsx
 "use client";
 
 import { useForm, useFieldArray } from "react-hook-form";
@@ -19,15 +18,12 @@ import { PlusIcon, TrashIcon } from "lucide-react";
 
 // Enhanced schema for comprehensive application
 const enhancedApplicationSchema = z.object({
-  // Program Information
   preferredCampus: z.string().min(1, { message: "Preferred campus is required" }),
   preferredIntake: z.string().min(1, { message: "Preferred intake is required" }),
   preferredAttendance: z.string().min(1, { message: "Preferred attendance is required" }),
   programType: z.string().min(1, { message: "Program type is required" }),
   stageYearLevel: z.string().min(1, { message: "Stage/Year/Level is required" }),
   program: z.string().min(1, { message: "Program is required" }),
-  
-  // Personal Details
   firstName: z.string().min(1, { message: "First name is required" }),
   middleName: z.string().optional(),
   lastName: z.string().min(1, { message: "Last name is required" }),
@@ -42,27 +38,19 @@ const enhancedApplicationSchema = z.object({
   kcpeIndex: z.string().optional(),
   countyState: z.string().min(1, { message: "County/State is required" }),
   subCountyDistrict: z.string().min(1, { message: "Sub-County/District is required" }),
-  
-  // Contact Information
   address: z.string().min(1, { message: "Address is required" }),
   careOf: z.string().optional(),
   town: z.string().min(1, { message: "Town is required" }),
   email: z.string().email({ message: "Valid email is required" }),
   mobilePhone: z.string().min(1, { message: "Mobile phone is required" }),
   alternatePhone: z.string().optional(),
-  
-  // Academic Qualifications
   academicQualifications: z.array(z.object({
     certification: z.string().min(1, { message: "Certification is required" }),
     overallScore: z.string().min(1, { message: "Overall score is required" }),
     institutionName: z.string().min(1, { message: "Institution name is required" }),
     yearRange: z.string().min(1, { message: "Year range is required" }),
   })).min(1, { message: "At least one academic qualification is required" }),
-  
-  // File uploads
   academicCertificates: z.any().optional(),
-  
-  // Additional Information
   howDidYouKnow: z.string().optional(),
   scholarshipInterest: z.boolean().default(false),
   additionalInfo: z.string().optional(),
@@ -122,10 +110,8 @@ export default function StudentPortal() {
 
   const applicationMutation = useMutation({
     mutationFn: async (data: EnhancedApplication) => {
-      // Create FormData to handle file uploads
       const formData = new FormData();
       
-      // Append all form fields
       Object.entries(data).forEach(([key, value]) => {
         if (key === 'academicQualifications') {
           formData.append(key, JSON.stringify(value));
@@ -165,7 +151,6 @@ export default function StudentPortal() {
   return (
     <section className="py-16 bg-primary">
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
             Online Course Application
@@ -175,7 +160,6 @@ export default function StudentPortal() {
           </p>
         </div>
 
-        {/* Application Form */}
         <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-8">
             <Form {...form}>
@@ -335,7 +319,6 @@ export default function StudentPortal() {
                     </h3>
                     
                     <div className="space-y-4">
-                      {/* Name Fields */}
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <FormField
                           control={form.control}
@@ -380,7 +363,6 @@ export default function StudentPortal() {
                         />
                       </div>
 
-                      {/* Disability Checkbox */}
                       <FormField
                         control={form.control}
                         name="livingWithDisability"
@@ -397,7 +379,6 @@ export default function StudentPortal() {
                         )}
                       />
 
-                      {/* Title, Gender, DOB */}
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <FormField
                           control={form.control}
@@ -461,7 +442,6 @@ export default function StudentPortal() {
                         />
                       </div>
 
-                      {/* Nationality, Ethnicity */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
@@ -492,7 +472,6 @@ export default function StudentPortal() {
                         />
                       </div>
 
-                      {/* ID Numbers */}
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <FormField
                           control={form.control}
@@ -537,7 +516,6 @@ export default function StudentPortal() {
                         />
                       </div>
 
-                      {/* Location */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
@@ -762,7 +740,6 @@ export default function StudentPortal() {
                       ))}
                     </div>
 
-                    {/* File Upload */}
                     <div className="mt-6">
                       <FormField
                         control={form.control}

@@ -1,7 +1,9 @@
-// src/components/ui/toaster.tsx
+// ============================================
+// FILE 1: src/components/ui/toaster.tsx
+// ============================================
 "use client"
 
-import { ToastViewport, ToastProvider } from "@/components/ui/toast"
+import { ToastProvider, ToastViewport } from "@/components/ui/toast"
 
 export function Toaster() {
   return (

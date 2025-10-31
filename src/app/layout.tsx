@@ -1,21 +1,15 @@
-// app/layout.tsx - Updated with Enrollment Banner
-
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-// 🧠 Global Providers - Client Components
+// Global Providers - Client Components
 import { Providers } from "@/components/providers";
 
-// 🧱 Shared Layout Components
+// Shared Layout Components
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-
-// 🎯 NEW: Enrollment Banner Component
 import EnrollmentBanner from "@/components/enrollment-banner";
-
-// ✅ Toast System
-import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,10 +56,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
-  },
 };
 
 export default function RootLayout({
@@ -82,9 +72,9 @@ export default function RootLayout({
           <Header />
           <main className="flex-1 px-4 py-6">{children}</main>
           <Footer />
-          <Toaster />
           
-          {/* 🎯 Enrollment Banner - Shows automatically based on intake periods */}
+          {/* Toast is now handled inside Providers component */}
+          {/* Enrollment Banner - Shows automatically based on intake periods */}
           <EnrollmentBanner />
         </Providers>
       </body>

@@ -9,8 +9,7 @@ import {
   CheckCircle,
   Mail,
   Phone,
-  MapPin,
-  Briefcase
+  MapPin
 } from "lucide-react";
 import type { Metadata } from 'next';
 
@@ -21,57 +20,6 @@ export const metadata: Metadata = {
 };
 
 export default function PrincipalPage() {
-  const careerHighlights = [
-    {
-      period: "2023 - Present",
-      role: "Principal",
-      institution: "Kongoni Technical and Vocational College",
-      description: "Leading the institution through strategic growth and excellence in technical education"
-    },
-    {
-      period: "2019 - 2023",
-      role: "Principal",
-      institution: "Shamberere Technical Training Institute",
-      description: "Managed operations and strategic development"
-    },
-    {
-      period: "2016 - 2019",
-      role: "Principal",
-      institution: "Musakasa Technical Training Institute",
-      description: "Provided institutional leadership and academic oversight"
-    },
-    {
-      period: "2015 - 2016",
-      role: "Deputy Principal",
-      institution: "Masai Technical Training Institute",
-      description: "Supported principal in institutional management"
-    },
-    {
-      period: "2013 - 2015",
-      role: "Director of Studies",
-      institution: "Masai Technical Training Institute",
-      description: "Oversaw academic programs and curriculum development"
-    },
-    {
-      period: "2006 - 2008",
-      role: "Principal",
-      institution: "Shitoto Girls Secondary School",
-      description: "Led secondary education institution"
-    },
-    {
-      period: "2004 - 2006",
-      role: "Principal",
-      institution: "Khwisero Girls Secondary School",
-      description: "Managed secondary school operations"
-    },
-    {
-      period: "1997 - 2004",
-      role: "Head of Department",
-      institution: "St. Juney's Mumias Girls High School",
-      description: "Led departmental programs and staff"
-    }
-  ];
-
   return (
     <>
       {/* Breadcrumb Navigation */}
