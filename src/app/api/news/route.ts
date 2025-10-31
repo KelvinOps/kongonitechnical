@@ -4,6 +4,86 @@ import { NextRequest, NextResponse } from "next/server";
 // Complete mock news data - synchronized with main news route
 const mockNews = [
   {
+    id: "25",
+    title: "Dual TVET Workshop - Round 2 Dualization Training for Rift Valley Region",
+    excerpt: "Trainers from Kongoni Technical and Vocational College joined other TVET institutions for a comprehensive 2-day workshop on Dual TVET and Dualization at Starbucks Hotel, Eldoret, facilitated by GIZ/GFA and Kenya School of TVET.",
+    content: `
+      <p>On 23rd and 24th October 2025, a team representing Kongoni Technical and Vocational College joined trainers from other TVET institutions across the Rift Valley Region for a transformative 2-Day Workshop on Round 2 Dual TVET and Dualization, held at Starbucks Hotel, Eldoret.</p>
+      
+      <p>The workshop was facilitated through collaborative efforts between GIZ/GFA and Kenya School of TVET, as part of the ongoing effort to ensure smooth implementation of dual learning, with a key focus on dualization in line with the modularized curriculum.</p>
+      
+      <p><strong>Day 1 Program Highlights:</strong></p>
+      <ul>
+        <li><strong>Overview of Dual Program</strong> - Comprehensive introduction to the D-TVET model and its implementation framework</li>
+        <li><strong>Steps in Dual Training Implementation</strong> - Detailed roadmap for establishing dual training systems</li>
+        <li><strong>Dual TVET Key Documentation</strong> - Planning and delivery documentation requirements</li>
+        <li><strong>Interpretation of Modularized CBET Curriculum</strong> - Understanding competency-based education modules</li>
+        <li><strong>Modular Implementation Graph Analysis</strong> - Visual representation of curriculum delivery timelines</li>
+        <li><strong>Development of Generic Training Plans</strong> - Creating standardized training frameworks</li>
+        <li><strong>Presentation of Sample Generic Plans</strong> - Best practices and model examples</li>
+        <li><strong>Introduction to Specific Training Plans</strong> - Customizing plans for specific courses</li>
+      </ul>
+      
+      <p><strong>Day 2 Program Highlights:</strong></p>
+      <ul>
+        <li><strong>Development of Specific Training Plans</strong> - Hands-on creation of unit-specific training plans</li>
+        <li><strong>In-Company Training Plan Development</strong> - Structuring workplace-based learning experiences</li>
+        <li><strong>Rotational Plan Development</strong> - Designing student rotation schedules between institution and industry</li>
+        <li><strong>Use of Mentoring Tools</strong> - Implementing effective mentorship frameworks</li>
+        <li><strong>Establishment and Roles of TICC</strong> - Training Institution Coordination Committee setup and responsibilities</li>
+        <li><strong>Challenges in Dual Training</strong> - Experience sharing and solutions discussion</li>
+      </ul>
+      
+      <p><strong>Key Workshop Objectives:</strong></p>
+      <ul>
+        <li>Sensitization on the D-TVET model and its benefits</li>
+        <li>Understanding dual training implementation steps</li>
+        <li>Mastering documentation requirements for planning and delivery</li>
+        <li>Developing practical skills in creating training plans</li>
+        <li>Building capacity for effective mentorship and coordination</li>
+        <li>Addressing implementation challenges through collaborative problem-solving</li>
+      </ul>
+      
+      <p>The workshop featured interactive sessions with energizers, group work, and practical exercises. Participants actively engaged in developing training plans, sharing experiences, and learning from facilitators from Kenya School of TVET and GIZ consultants.</p>
+      
+      <p><strong>Impact and Benefits:</strong></p>
+      <ul>
+        <li>Enhanced understanding of dual training methodology among Kongoni trainers</li>
+        <li>Improved capacity to implement modularized CBET curriculum</li>
+        <li>Strengthened collaboration with industry partners</li>
+        <li>Better preparation for establishing TICC structures</li>
+        <li>Practical tools and templates for training plan development</li>
+        <li>Network building with trainers from other TVET institutions</li>
+      </ul>
+      
+      <p>"This workshop has equipped our trainers with essential skills and knowledge to effectively implement the dual training model," remarked Deputy Principal for Academics. "The hands-on approach and collaborative learning environment provided invaluable insights that we will immediately apply in our training programs."</p>
+      
+      <p>The dual TVET model combines theoretical learning at the institution with practical training at industry workplaces, ensuring students gain real-world experience and industry-relevant skills. This approach significantly enhances graduate employability and bridges the gap between education and industry needs.</p>
+      
+      <p>Kongoni Technical and Vocational College remains committed to adopting best practices in technical education, and this workshop represents a significant milestone in our journey toward excellence in dual training delivery.</p>
+      
+      <p>The knowledge and skills gained from this workshop will be cascaded to all training staff, ensuring consistent implementation of the dual TVET model across all departments at Kongoni Technical and Vocational College.</p>
+    `,
+    imageUrl: "/images/newsevents/dualtvettworkshop/dualworkshop1.jpg",
+    images: [
+      "/images/newsevents/dualtvettworkshop/dualworkshop1.jpg",
+      "/images/newsevents/dualtvettworkshop/dualworkshop2.jpg",
+      "/images/newsevents/dualtvettworkshop/dualworkshop3.jpg",
+      "/images/newsevents/dualtvettworkshop/dualworkshop4.jpg",
+      "/images/newsevents/dualtvettworkshop/dualworkshop5.jpg",
+      "/images/newsevents/dualtvettworkshop/dualworkshop6.jpg"
+    ],
+    videoThumbnail: "/images/newsevents/dualtvettworkshop/dualworkshop1.jpg",
+    featured: true,
+    createdAt: "2025-10-24T17:00:00Z",
+    updatedAt: "2025-10-24T17:00:00Z",
+    author: "Academic Affairs Department",
+    category: "Training",
+    eventDate: "2025-10-24",
+    location: "Starbucks Hotel, Eldoret",
+    tags: ["dual-tvet", "workshop", "training", "giz", "kstvet", "dualization", "cbet", "modular-curriculum", "capacity-building", "rift-valley", "professional-development", "trainers"]
+  },
+  {
     id: "24",
     title: "Sports Day 2025 - Athletic Excellence and Team Spirit",
     excerpt: "Kongoni Technical College hosted an electrifying Sports Day featuring football, volleyball, handball, and netball competitions. Eleven Stars crowned football champions with Rising Stars and Green Garden taking second and third positions respectively.",

@@ -37,85 +37,64 @@ const teamMembers = [
   {
     name: "Ms. Judith Akaranga",
     title: "Team Leader & Principal",
-    image: "/images/principal.png",
-    email: "principal@kongonitvc.ac.ke",
+    image: "/images/JUDITH AKARANGA.png",
+    email: "principal@kongonitechnical.ac.ke",
     phone: "+254 788 070 303"
   },
   {
     name: "Mr. ",
     title: "Deputy Principal (Academics)",
-    image: "/images/team/deputy-principal.png",
-    email: "deputy.academics@kongonitvc.ac.ke",
+    image: "/images/LUCY MAKOKHA.png",
+    email: "deputy.academics@kongonitechnical.ac.ke",
     phone: "+254 722 345 678"
   },
   {
     name: "Ms. ",
     title: "Deputy Principal (Administration)",
-    image: "/images/team/deputy-admin.png",
-    email: "deputy.admin@kongonitvc.ac.ke",
+    image: "/images/EZRA ORINA.png",
+    email: "deputy.admin@kongonitechnical.ac.ke",
     phone: "+254 733 456 789"
-  },
-  {
-    name: "Mr. ",
-    title: "Head of Department - Engineering",
-    image: "/images/team/hod-engineering.png",
-    email: "hod.engineering@kongonitvc.ac.ke",
-    phone: "+254 744 567 890"
-  },
-  {
-    name: "Ms. ",
-    title: "Head of Department - Business Studies",
-    image: "/images/team/hod-business.png",
-    email: "hod.business@kongonitvc.ac.ke",
-    phone: "+254 755 678 901"
   },
   {
     name: "Mrs Millicent Nambo",
     title: "Finance Officer",
-    image: "/images/team/finance-manager.png",
-    email: "finance@kongonitvc.ac.ke",
+    image: "/images/NAMBO MILLCENT.png",
+    email: "finance@kongonitechnical.ac.ke",
     phone: "+254 766 789 012"
   },
   {
     name: "Ms. Jesca Kitiavi",
     title: "Human Resources Manager",
-    image: "/images/team/hr-manager.png",
-    email: "hr@kongonitvc.ac.ke",
+    image: "/images/JESCAH_KITIAVI.png",
+    email: "hr@kongonitechnical.ac.ke",
     phone: "+254 777 890 123"
   },
   {
     name: "Mr. Cyrus Lagat",
     title: "Quality Assurance Officer",
-    image: "/images/team/qa-officer.png",
-    email: "quality@kongonitvc.ac.ke",
+    image: "/images/CYRUS_LAGAT_KIMELI.png",
+    email: "quality@kongonitechnical.ac.ke",
     phone: "+254 788 901 234"
   },
   {
     name: "Mr. Kevin Masinde",
     title: "Dean of Students",
-    image: "/images/team/student-affairs.png",
-    email: "students@kongonitvc.ac.ke",
+    image: "/images/KEVIN MASINDE.png",
+    email: "students@kongonitechnical.ac.ke",
     phone: "+254 799 012 345"
-  },
-  {
-    name: "Mr. Nelson Thuku",
-    title: "ICT HOD ",
-    image: "/images/hod/nelsonthuku.jpg",
-    email: "ict@kongonitvc.ac.ke",
-    phone: "+254 700 123 456"
   },
   {
     name: " Mr Makwila Kipkore",
     title: "Procurement Officer",
-    image: "/images/team/procurement.png",
-    email: "procurement@kongonitvc.ac.ke",
+    image: "/images/GEOFREY_KIPKORIR.png",
+    email: "procurement@kongonitechnical.ac.ke",
     phone: "+254 711 234 567"
   },
   {
     name: "Mr. ",
     title: "Internal Auditor",
     image: "/images/team/auditor.png",
-    email: "audit@kongonitvc.ac.ke",
+    email: "audit@kongonitechnical.ac.ke",
     phone: "+254 722 345 678"
   }
 ];
