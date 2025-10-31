@@ -346,37 +346,6 @@ export default function AdministrationPage() {
         </div>
       </section>
 
-      {/* Contact Section - Using primary color */}
-      <section className="py-16 bg-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-8">Get in Touch with Our Administration</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center animate-slide-up" style={{ animationDelay: '0s' }}>
-              <MapPin className="h-12 w-12 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
-              <p className="text-white/90">
-                Kongoni Technical and Vocational College<br />
-                P.O. Box 45 - 30205<br />
-                Matunda, Kenya
-              </p>
-            </div>
-            <div className="flex flex-col items-center animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              <Phone className="h-12 w-12 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-              <p className="text-white/90">
-                +254 788 070 303
-              </p>
-            </div>
-            <div className="flex flex-col items-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <Mail className="h-12 w-12 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-              <p className="text-white/90">
-                info@kongonitechnical.ac.ke
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
