@@ -115,7 +115,7 @@ export const departments: DepartmentDetails[] = [
     },
     vision: "To be a leading center for civil engineering education, producing skilled professionals who build sustainable and resilient infrastructure for future generations.",
     mission: "To build a generation of engineers who shape resilient infrastructure.",
-    teachingStaff: ["Mr Juma Andrew Khisa", "Mr Joseph Wanjala","Mr Paul Kimanzi","Mr Patrick Mwangi","Mr Stephen melly","Ms Charity Lagat","Ms Faith Moraa","Mr Kevin Magonya","Ms Joylyne Korir","Mr Reuben Khaemba","Mr Ismael Sabwa","Mr Joseph Atula","Maureen Barasa"],
+    teachingStaff: ["Mr Juma Andrew Khisa", "Mr Joseph Wanjala","Mr Paul Kimanzi","Mr Patrick Mwangi","Mr Stephen Meli","Ms Charity Lagat","Ms Faith Moraa","Mr Kevin Magonya","Ms Joylyne Korir","Mr Reuben Khaemba","Mr Ismael Sabwa","Mr Joseph Atula","Maureen Barasa"],
     nonTeachingStaff: ["Mr Michael Ondego - Technician"],
     trainers: ["Mr Juma Andrew Khisa", "Mr Joseph Wanjala","Mr Paul Kimanzi","Mr Patrick Mwangi","Mr Stephen melly","Ms Charity Lagat","Ms Faith Moraa","Mr Kevin Magonya","Ms Joylyne Korir","Mr Reuben Khaemba","Mr Ismael Sabwa"],
     objectives: [
