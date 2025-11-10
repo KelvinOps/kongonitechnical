@@ -16,7 +16,7 @@ interface Slide {
 
 const slides: Slide[] = [
     {
-    image: "/images/hero/block3.jpg",
+    image: "/images/hero/gate/Select.jpeg",
     title: "Beautiful Campus",
     subtitle: "A conducive learning environment for your academic journey",
     buttonText: "Campus Tour",
