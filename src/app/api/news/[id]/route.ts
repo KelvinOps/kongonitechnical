@@ -64,7 +64,7 @@ const mockNews = [
       
       <p>The knowledge and skills gained from this workshop will be cascaded to all training staff, ensuring consistent implementation of the dual TVET model across all departments at Kongoni Technical and Vocational College.</p>
     `,
-    imageUrl: "/images/newsevents/dualtvettworkshop/dualworkshop1.jpeg",
+    imageUrl: "/images/newsevents/dualtvettworkshop/dualworkshop2.jpeg",
     images: [
       "/images/newsevents/dualtvettworkshop/dualworkshop1.jpeg",
       "/images/newsevents/dualtvettworkshop/dualworkshop2.jpeg",
