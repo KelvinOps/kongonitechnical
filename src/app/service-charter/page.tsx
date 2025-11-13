@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -15,13 +15,66 @@ import {
   Clock,
   CheckCircle,
   Video,
-  Accessibility
+  Accessibility,
+  Headphones,
+  Play,
+  Pause,
+  SkipBack,
+  SkipForward
 } from "lucide-react";
 
 export default function ServiceCharterPage() {
-  const [activeTab, setActiveTab] = useState<'both' | 'english' | 'kiswahili'>('both');
+  const [activeTab, setActiveTab] = useState('both');
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Download function
+  // Audio controls
+  const togglePlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime);
+    }
+  };
+
+  const handleLoadedMetadata = () => {
+    if (audioRef.current) {
+      setDuration(audioRef.current.duration);
+    }
+  };
+
+  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const time = parseFloat(e.target.value);
+    if (audioRef.current) {
+      audioRef.current.currentTime = time;
+      setCurrentTime(time);
+    }
+  };
+
+  const skipTime = (seconds: number) => {
+    if (audioRef.current) {
+      audioRef.current.currentTime += seconds;
+    }
+  };
+
+  const formatTime = (time: number) => {
+    if (isNaN(time)) return '0:00';
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
   const downloadPDF = (filename: string, displayName: string) => {
     try {
       const link = document.createElement('a');
@@ -37,12 +90,20 @@ export default function ServiceCharterPage() {
     }
   };
 
-  // PDF Viewer Component with fallback content
-  const PDFViewer = ({ title, language, isKiswahili = false }: { 
-    title: string; 
-    language: string;
-    isKiswahili?: boolean;
-  }) => {
+  const downloadAudio = () => {
+    try {
+      const link = document.createElement('a');
+      link.href = '/documents/Kongoni tvc audio Recordings of service delivery charter.m4a';
+      link.download = 'KTVC-Service-Charter-Audio.m4a';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Download failed:', error);
+    }
+  };
+
+  const PDFViewer = ({ title, language, isKiswahili = false }: { title: string; language: string; isKiswahili?: boolean }) => {
     const pdfPath = isKiswahili ? '/documents/Kiswahili-Service-Charter.pdf' : '/documents/English-Service-Charter.pdf';
     const imagePath = isKiswahili ? "/documents/KiswahiliCharter.jpg" : "/documents/EnglishCharter.jpg";
     const downloadName = isKiswahili ? 'KongoniTVC-Service-Charter-Kiswahili.pdf' : 'KongoniTVC-Service-Charter-English.pdf';
@@ -224,11 +285,10 @@ export default function ServiceCharterPage() {
         </div>
       </div>
 
-      {/* Sign Language Video Section - PROMINENT PLACEMENT */}
+      {/* Sign Language Video Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           <Card className="overflow-hidden shadow-xl border-2 border-blue-200">
-            {/* Video Header */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center space-x-4">
@@ -247,7 +307,6 @@ export default function ServiceCharterPage() {
               </div>
             </div>
 
-            {/* Video Container */}
             <div className="bg-gray-900 p-4">
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <iframe
@@ -261,7 +320,6 @@ export default function ServiceCharterPage() {
               </div>
             </div>
 
-            {/* Video Description */}
             <div className="p-6 bg-white">
               <div className="flex items-start space-x-4 mb-4">
                 <div className="flex-shrink-0">
@@ -312,6 +370,96 @@ export default function ServiceCharterPage() {
         </div>
       </div>
 
+      {/* Compact Audio Section */}
+      <div className="container mx-auto px-4 pb-6">
+        <div className="max-w-5xl mx-auto">
+          <Card className="overflow-hidden shadow-md border border-gray-200">
+            <div className="bg-white p-4">
+              <div className="flex items-center justify-between gap-4 flex-wrap">
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Headphones className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-800">Service Charter Audio</h3>
+                    <p className="text-xs text-gray-500">Rekodi ya Sauti</p>
+                  </div>
+                </div>
+
+                <audio
+                  ref={audioRef}
+                  onTimeUpdate={handleTimeUpdate}
+                  onLoadedMetadata={handleLoadedMetadata}
+                  onEnded={() => setIsPlaying(false)}
+                  className="hidden"
+                >
+                  <source src="/documents/Kongoni tvc audio Recordings of service delivery charter.m4a" type="audio/mp4" />
+                </audio>
+
+                <div className="flex items-center space-x-2">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => skipTime(-10)}
+                    className="h-8 w-8 p-0 hover:bg-gray-100"
+                  >
+                    <SkipBack className="w-3 h-3" />
+                  </Button>
+
+                  <Button
+                    onClick={togglePlayPause}
+                    className="h-10 w-10 rounded-full bg-primary hover:bg-primary/90 text-white p-0"
+                  >
+                    {isPlaying ? (
+                      <Pause className="w-4 h-4" />
+                    ) : (
+                      <Play className="w-4 h-4 ml-0.5" />
+                    )}
+                  </Button>
+
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => skipTime(10)}
+                    className="h-8 w-8 p-0 hover:bg-gray-100"
+                  >
+                    <SkipForward className="w-3 h-3" />
+                  </Button>
+
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={downloadAudio}
+                    className="h-8 w-8 p-0 hover:bg-gray-100"
+                    title="Download Audio"
+                  >
+                    <Download className="w-3 h-3" />
+                  </Button>
+                </div>
+              </div>
+
+              <div className="mt-3">
+                <input
+                  type="range"
+                  min="0"
+                  max={duration || 0}
+                  value={currentTime}
+                  onChange={handleSeek}
+                  className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  style={{
+                    background: `linear-gradient(to right, #0893f0 0%, #0893f0 ${(currentTime / duration) * 100}%, #e5e7eb ${(currentTime / duration) * 100}%, #e5e7eb 100%)`
+                  }}
+                />
+                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                  <span>{formatTime(currentTime)}</span>
+                  <span>{formatTime(duration)}</span>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+
       {/* Tab Navigation */}
       <div className="container mx-auto px-4 py-6">
         <div className="flex justify-center mb-8">
@@ -346,11 +494,8 @@ export default function ServiceCharterPage() {
           </div>
         </div>
 
-        {/* Service Charter Display */}
         <div className="max-w-7xl mx-auto">
           <div className={`grid gap-8 ${activeTab === 'both' ? 'md:grid-cols-2' : 'grid-cols-1 max-w-4xl mx-auto'}`}>
-            
-            {/* English Version */}
             {(activeTab === 'both' || activeTab === 'english') && (
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -364,16 +509,10 @@ export default function ServiceCharterPage() {
                     Official Language
                   </Badge>
                 </div>
-                
-                <PDFViewer 
-                  title="Service Charter" 
-                  language="English Version"
-                  isKiswahili={false}
-                />
+                <PDFViewer title="Service Charter" language="English Version" isKiswahili={false} />
               </div>
             )}
 
-            {/* Kiswahili Version */}
             {(activeTab === 'both' || activeTab === 'kiswahili') && (
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -387,18 +526,12 @@ export default function ServiceCharterPage() {
                     Lugha Rasmi
                   </Badge>
                 </div>
-                
-                <PDFViewer 
-                  title="Mkataba wa Huduma" 
-                  language="Toleo la Kiswahili"
-                  isKiswahili={true}
-                />
+                <PDFViewer title="Mkataba wa Huduma" language="Toleo la Kiswahili" isKiswahili={true} />
               </div>
             )}
           </div>
         </div>
 
-        {/* Additional Download Section */}
         <div className="mt-12 max-w-4xl mx-auto">
           <div className="bg-white rounded-lg p-8 shadow-md">
             <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">Download Service Charters</h3>
@@ -432,7 +565,6 @@ export default function ServiceCharterPage() {
           </div>
         </div>
 
-        {/* Information Section */}
         <div className="mt-16 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
@@ -455,7 +587,6 @@ export default function ServiceCharterPage() {
           </div>
         </div>
 
-        {/* Contact Information */}
         <div className="mt-12 text-center">
           <div className="bg-white rounded-lg p-8 shadow-md max-w-2xl mx-auto">
             <h4 className="text-xl font-semibold mb-4 text-gray-800">Need Help? • Unahitaji Msaada?</h4>

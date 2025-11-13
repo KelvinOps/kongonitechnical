@@ -5,7 +5,7 @@ import { Suspense } from "react";
 // Components
 import HeroSlideshow from "@/components/hero-slideshow";
 import ProgramsSection from "@/components/programs-section";
-import VisionMissionSection from "@/components/vision-mission-section"; // NEW: Vision Mission Section
+import VisionMissionSection from "@/components/vision-mission-section";
 import AboutSection from "@/components/about-section";
 import PrincipalNote from "@/components/principal-note";
 import DepartmentsSection from "@/components/departments-section";
@@ -13,8 +13,8 @@ import CourseSearchSection from "@/components/course-search-section";
 import CoursesSection from "@/components/courses-section";
 import ImageGallery from "@/components/image-gallery";
 import NewsSection from "@/components/news-section";
+import ServiceCharterAudioSection from "@/components/service-charter-audio-section"; // NEW
 import PartnershipsSection from "@/components/partnerships-section";
-// ❌ Removed unused: import StudentPortal from "@/components/student-portal";
 
 // Loading components for better UX
 const SectionSkeleton = () => (
@@ -60,7 +60,7 @@ export default function HomePage() {
         <PrincipalNote />
       </Suspense>
 
-      {/* NEW: Vision Mission Section - Added after Programs Section */}
+      {/* Vision Mission Section */}
       <Suspense fallback={<SectionSkeleton />}>
         <VisionMissionSection />
       </Suspense>
@@ -69,23 +69,28 @@ export default function HomePage() {
         <DepartmentsSection />
       </Suspense>
 
-      {/* Course Search Section - Added before the regular courses section */}
+      {/* Course Search Section */}
       <Suspense fallback={<SectionSkeleton />}>
         <CourseSearchSection />
       </Suspense>
 
-      {/* Regular Courses Section - Now appears after the search section */}
+      {/* Regular Courses Section */}
       <Suspense fallback={<SectionSkeleton />}>
         <CoursesSection />
       </Suspense>
 
-      {/* Image Gallery - Lazy load for performance */}
+      {/* Image Gallery */}
       <Suspense fallback={<SectionSkeleton />}>
         <ImageGallery />
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
         <NewsSection />
+      </Suspense>
+
+      {/* NEW: Service Charter Audio Section - Added above Partnerships */}
+      <Suspense fallback={<SectionSkeleton />}>
+        <ServiceCharterAudioSection />
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
