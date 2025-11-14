@@ -12,9 +12,9 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useToast } from "@/components/ui/toast";
-import { apiRequest } from "@/lib/queryClient";
-import { PlusIcon, TrashIcon } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { PlusIcon, TrashIcon, FileIcon } from "lucide-react";
+import { useState } from "react";
 
 // Enhanced schema for comprehensive application
 const enhancedApplicationSchema = z.object({
@@ -50,19 +50,35 @@ const enhancedApplicationSchema = z.object({
     institutionName: z.string().min(1, { message: "Institution name is required" }),
     yearRange: z.string().min(1, { message: "Year range is required" }),
   })).min(1, { message: "At least one academic qualification is required" }),
-  academicCertificates: z.any().optional(),
   howDidYouKnow: z.string().optional(),
   scholarshipInterest: z.boolean().default(false),
   additionalInfo: z.string().optional(),
-  agreesToTerms: z.boolean()
-    .refine(val => val === true, { message: "You must agree to terms" }),
+  agreesToTerms: z.boolean().refine((val) => val === true, {
+    message: "You must agree to the Terms and Conditions",
+  }),
 });
 
 type EnhancedApplication = z.infer<typeof enhancedApplicationSchema>;
 
+// Document upload state interface
+interface DocumentFiles {
+  idCopy: File | null;
+  birthCertificate: File | null;
+  kcpeCertificate: File | null;
+  kcseCertificate: File | null;
+  kraCertificate: File | null;
+}
+
 export default function StudentPortal() {
-  const { addToast } = useToast();
+  const { toast } = useToast();
   const queryClient = useQueryClient();
+  const [documentFiles, setDocumentFiles] = useState<DocumentFiles>({
+    idCopy: null,
+    birthCertificate: null,
+    kcpeCertificate: null,
+    kcseCertificate: null,
+    kraCertificate: null,
+  });
 
   const form = useForm<EnhancedApplication>({
     resolver: zodResolver(enhancedApplicationSchema),
@@ -108,6 +124,27 @@ export default function StudentPortal() {
     name: "academicQualifications"
   });
 
+  const handleFileChange = (fileType: keyof DocumentFiles, file: File | null) => {
+    setDocumentFiles(prev => ({
+      ...prev,
+      [fileType]: file
+    }));
+  };
+
+  const clearAllFiles = () => {
+    setDocumentFiles({
+      idCopy: null,
+      birthCertificate: null,
+      kcpeCertificate: null,
+      kcseCertificate: null,
+      kraCertificate: null,
+    });
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+    fileInputs.forEach((input) => {
+      (input as HTMLInputElement).value = '';
+    });
+  };
+
   const applicationMutation = useMutation({
     mutationFn: async (data: EnhancedApplication) => {
       const formData = new FormData();
@@ -115,29 +152,42 @@ export default function StudentPortal() {
       Object.entries(data).forEach(([key, value]) => {
         if (key === 'academicQualifications') {
           formData.append(key, JSON.stringify(value));
-        } else if (key === 'academicCertificates' && value) {
-          formData.append(key, value as File);
         } else {
           formData.append(key, String(value));
         }
       });
 
-      const response = await apiRequest("POST", "/api/applications", formData);
+      if (documentFiles.idCopy) formData.append('idCopy', documentFiles.idCopy);
+      if (documentFiles.birthCertificate) formData.append('birthCertificate', documentFiles.birthCertificate);
+      if (documentFiles.kcpeCertificate) formData.append('kcpeCertificate', documentFiles.kcpeCertificate);
+      if (documentFiles.kcseCertificate) formData.append('kcseCertificate', documentFiles.kcseCertificate);
+      if (documentFiles.kraCertificate) formData.append('kraCertificate', documentFiles.kraCertificate);
+
+      const response = await fetch("/api/applications", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to submit application');
+      }
+
       return response.json();
     },
     onSuccess: () => {
-      addToast({
+      toast({
         title: "Application Submitted Successfully!",
         description: "We have received your application and will contact you soon.",
-        variant: "default",
       });
       form.reset();
+      clearAllFiles();
       queryClient.invalidateQueries({ queryKey: ["/api/applications"] });
     },
     onError: (error) => {
-      addToast({
+      toast({
         title: "Application Failed",
-        description: "There was an error submitting your application. Please try again.",
+        description: error instanceof Error ? error.message : "There was an error submitting your application. Please try again.",
         variant: "destructive",
       });
       console.error("Application error:", error);
@@ -179,7 +229,7 @@ export default function StudentPortal() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Preferred Campus *</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
                                 <SelectTrigger>
                                   <SelectValue placeholder="Select campus" />
@@ -200,7 +250,7 @@ export default function StudentPortal() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Preferred Intake *</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
                                 <SelectTrigger>
                                   <SelectValue placeholder="Select intake" />
@@ -223,7 +273,7 @@ export default function StudentPortal() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Preferred Attendance *</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
                                 <SelectTrigger>
                                   <SelectValue placeholder="Select attendance" />
@@ -245,7 +295,7 @@ export default function StudentPortal() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Programme Type *</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
                                 <SelectTrigger>
                                   <SelectValue placeholder="Select type" />
@@ -282,7 +332,7 @@ export default function StudentPortal() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Programme/Course *</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
                                 <SelectTrigger>
                                   <SelectValue placeholder="Select programme" />
@@ -374,7 +424,7 @@ export default function StudentPortal() {
                                 onCheckedChange={field.onChange}
                               />
                             </FormControl>
-                            <FormLabel>Living with Disability</FormLabel>
+                            <FormLabel className="cursor-pointer">Living with Disability</FormLabel>
                           </FormItem>
                         )}
                       />
@@ -386,7 +436,7 @@ export default function StudentPortal() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Title *</FormLabel>
-                              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                              <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
                                   <SelectTrigger>
                                     <SelectValue placeholder="Select" />
@@ -410,7 +460,7 @@ export default function StudentPortal() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Gender *</FormLabel>
-                              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                              <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
                                   <SelectTrigger>
                                     <SelectValue placeholder="Select" />
@@ -739,26 +789,98 @@ export default function StudentPortal() {
                         </div>
                       ))}
                     </div>
+                  </CardContent>
+                </Card>
 
-                    <div className="mt-6">
-                      <FormField
-                        control={form.control}
-                        name="academicCertificates"
-                        render={({ field: { onChange, ...field } }) => (
-                          <FormItem>
-                            <FormLabel>Academic Certificate(s) Attachment (Combined in one PDF file format) *</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="file"
-                                accept=".pdf"
-                                onChange={(e) => onChange(e.target.files?.[0])}
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                {/* Document Upload Section */}
+                <Card>
+                  <CardContent className="pt-6">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                      Document Upload
+                    </h3>
+                    
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
+                          <label className="block mb-2 font-semibold text-gray-700">
+                            <FileIcon className="inline w-4 h-4 mr-2" />
+                            National ID/Passport Copy *
+                          </label>
+                          <input
+                            type="file"
+                            accept="image/*,.pdf"
+                            onChange={(e) => handleFileChange('idCopy', e.target.files?.[0] || null)}
+                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                          />
+                          {documentFiles.idCopy && (
+                            <p className="text-sm text-green-600 mt-2">✓ {documentFiles.idCopy.name}</p>
+                          )}
+                        </div>
+
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
+                          <label className="block mb-2 font-semibold text-gray-700">
+                            <FileIcon className="inline w-4 h-4 mr-2" />
+                            Birth Certificate *
+                          </label>
+                          <input
+                            type="file"
+                            accept="image/*,.pdf"
+                            onChange={(e) => handleFileChange('birthCertificate', e.target.files?.[0] || null)}
+                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                          />
+                          {documentFiles.birthCertificate && (
+                            <p className="text-sm text-green-600 mt-2">✓ {documentFiles.birthCertificate.name}</p>
+                          )}
+                        </div>
+
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
+                          <label className="block mb-2 font-semibold text-gray-700">
+                            <FileIcon className="inline w-4 h-4 mr-2" />
+                            KCPE Certificate *
+                          </label>
+                          <input
+                            type="file"
+                            accept="image/*,.pdf"
+                            onChange={(e) => handleFileChange('kcpeCertificate', e.target.files?.[0] || null)}
+                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                          />
+                          {documentFiles.kcpeCertificate && (
+                            <p className="text-sm text-green-600 mt-2">✓ {documentFiles.kcpeCertificate.name}</p>
+                          )}
+                        </div>
+
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
+                          <label className="block mb-2 font-semibold text-gray-700">
+                            <FileIcon className="inline w-4 h-4 mr-2" />
+                            KCSE Certificate *
+                          </label>
+                          <input
+                            type="file"
+                            accept="image/*,.pdf"
+                            onChange={(e) => handleFileChange('kcseCertificate', e.target.files?.[0] || null)}
+                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                          />
+                          {documentFiles.kcseCertificate && (
+                            <p className="text-sm text-green-600 mt-2">✓ {documentFiles.kcseCertificate.name}</p>
+                          )}
+                        </div>
+
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 md:col-span-2">
+                          <label className="block mb-2 font-semibold text-gray-700">
+                            <FileIcon className="inline w-4 h-4 mr-2" />
+                            KRA PIN Certificate (Optional)
+                          </label>
+                          <input
+                            type="file"
+                            accept="image/*,.pdf"
+                            onChange={(e) => handleFileChange('kraCertificate', e.target.files?.[0] || null)}
+                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                          />
+                          {documentFiles.kraCertificate && (
+                            <p className="text-sm text-green-600 mt-2">✓ {documentFiles.kraCertificate.name}</p>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -773,6 +895,20 @@ export default function StudentPortal() {
                     <div className="space-y-4">
                       <FormField
                         control={form.control}
+                        name="howDidYouKnow"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>How did you know about us?</FormLabel>
+                            <FormControl>
+                              <Input {...field} placeholder="e.g., Social Media, Friend, Website" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
                         name="scholarshipInterest"
                         render={({ field }) => (
                           <FormItem className="flex flex-row items-start space-x-3 space-y-0">
@@ -782,21 +918,9 @@ export default function StudentPortal() {
                                 onCheckedChange={field.onChange}
                               />
                             </FormControl>
-                            <FormLabel>Scholarship(s)</FormLabel>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="howDidYouKnow"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>How did you know about Us:</FormLabel>
-                            <FormControl>
-                              <Textarea {...field} placeholder="How did you know about Us" rows={3} />
-                            </FormControl>
-                            <FormMessage />
+                            <FormLabel className="cursor-pointer">
+                              I am interested in scholarship opportunities
+                            </FormLabel>
                           </FormItem>
                         )}
                       />
@@ -806,31 +930,14 @@ export default function StudentPortal() {
                         name="additionalInfo"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Additional Comments:</FormLabel>
+                            <FormLabel>Additional Comments</FormLabel>
                             <FormControl>
-                              <Textarea {...field} placeholder="Any additional information..." rows={3} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="agreesToTerms"
-                        render={({ field }) => (
-                          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value}
-                                onCheckedChange={field.onChange}
+                              <Textarea 
+                                {...field} 
+                                placeholder="Any additional information you'd like to share..."
+                                rows={4}
                               />
                             </FormControl>
-                            <div className="space-y-1 leading-none">
-                              <FormLabel className="text-sm">
-                                I agree to the Terms and Conditions and Privacy Policy *
-                              </FormLabel>
-                            </div>
                             <FormMessage />
                           </FormItem>
                         )}
@@ -839,98 +946,47 @@ export default function StudentPortal() {
                   </CardContent>
                 </Card>
 
-                {/* Submit Buttons */}
-                <div className="flex justify-center gap-4 pt-6">
+                {/* Terms and Conditions */}
+                <Card>
+                  <CardContent className="pt-6">
+                    <FormField
+                      control={form.control}
+                      name="agreesToTerms"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="cursor-pointer font-semibold">
+                              I agree to the Terms and Conditions *
+                            </FormLabel>
+                            <p className="text-sm text-gray-500">
+                              By submitting this application, you confirm that all information provided is accurate and complete.
+                            </p>
+                            <FormMessage />
+                          </div>
+                        </FormItem>
+                      )}
+                    />
+                  </CardContent>
+                </Card>
+
+                {/* Submit Button */}
+                <div className="flex justify-center pt-6">
                   <Button
                     type="submit"
-                    className="px-8 py-3 bg-primary text-white hover:bg-secondary transition-colors duration-200"
                     disabled={applicationMutation.isPending}
+                    className="px-12 py-6 text-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white"
                   >
-                    {applicationMutation.isPending ? (
-                      <div className="flex items-center">
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                        Submitting...
-                      </div>
-                    ) : (
-                      "SUBMIT"
-                    )}
-                  </Button>
-
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={() => form.reset()}
-                    className="px-8 py-3"
-                  >
-                    CLEAR
-                  </Button>
-
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    onClick={() => window.history.back()}
-                    className="px-8 py-3"
-                  >
-                    CANCEL
+                    {applicationMutation.isPending ? "Submitting..." : "Submit Application"}
                   </Button>
                 </div>
               </form>
             </Form>
-          </div>
-
-          {/* Information Panel */}
-          <div className="bg-gray-50 p-8 border-t">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              Application Information
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-4 rounded-lg border-l-4 border-primary">
-                <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-                  <span className="mr-2">📅</span> Application Deadlines
-                </h4>
-                <div className="text-gray-600 text-sm space-y-1">
-                  <p>• <span className="font-medium">September Intake:</span> July 31st</p>
-                  <p>• <span className="font-medium">January Intake:</span> November 30th</p>
-                  <p>• <span className="font-medium">May Intake:</span> March 31st</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-lg border-l-4 border-secondary">
-                <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-                  <span className="mr-2">📋</span> Required Documents
-                </h4>
-                <div className="text-gray-600 text-sm space-y-1">
-                  <p>• Academic Certificates (PDF)</p>
-                  <p>• National ID Copy</p>
-                  <p>• Passport Photos</p>
-                  <p>• Application Fee Receipt</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-lg border-l-4 border-accent">
-                <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-                  <span className="mr-2">💰</span> Registration Fee
-                </h4>
-                <div className="text-gray-600 text-sm">
-                  <p className="font-medium text-primary mb-2">KES 3,900 (non-refundable)</p>
-                  <p className="text-xs">Payment methods accepted:</p>
-                  <p className="text-xs">• M-Pesa • Bank Transfer • Cash</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-lg border-l-4 border-primary">
-                <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-                  <span className="mr-2">📞</span> Need Help?
-                </h4>
-                <div className="text-gray-600 text-sm space-y-1">
-                  <p className="font-medium">Admissions Office</p>
-                  <p>Phone: <a href="tel:+254700123456" className="text-primary hover:underline">+254 700 123 456</a></p>
-                  <p>Email: <a href="mailto:admissions@kongoni.ac.ke" className="text-primary hover:underline">admissions@kongoni.ac.ke</a></p>
-                  <p className="text-xs">Office Hours: 8AM - 5PM</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
