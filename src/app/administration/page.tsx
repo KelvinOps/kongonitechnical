@@ -1,7 +1,7 @@
 // app/administration/page.tsx
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Mail, Phone, MapPin, Calendar, Award, GraduationCap, Users, Download, FileText } from 'lucide-react'
+import { Mail, Phone,  Calendar, Award, GraduationCap, Users, Download, FileText } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Administration Team | Kongoni Technical and Vocational College',

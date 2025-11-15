@@ -1,7 +1,7 @@
 // components/student-portal.tsx
 "use client";
 
-import { useForm, useFieldArray } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { z } from "zod";
@@ -10,55 +10,76 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { PlusIcon, TrashIcon, FileIcon } from "lucide-react";
+import { FileIcon } from "lucide-react";
 import { useState } from "react";
 
-// Enhanced schema for comprehensive application
-const enhancedApplicationSchema = z.object({
-  preferredCampus: z.string().min(1, { message: "Preferred campus is required" }),
-  preferredIntake: z.string().min(1, { message: "Preferred intake is required" }),
-  preferredAttendance: z.string().min(1, { message: "Preferred attendance is required" }),
-  programType: z.string().min(1, { message: "Program type is required" }),
-  stageYearLevel: z.string().min(1, { message: "Stage/Year/Level is required" }),
-  program: z.string().min(1, { message: "Program is required" }),
+// Schema matching backend expectations
+const applicationSchema = z.object({
+  // Section A - Personal Details
+  surname: z.string().min(1, { message: "Surname is required" }),
   firstName: z.string().min(1, { message: "First name is required" }),
-  middleName: z.string().optional(),
-  lastName: z.string().min(1, { message: "Last name is required" }),
-  livingWithDisability: z.boolean().default(false),
-  title: z.string().min(1, { message: "Title is required" }),
-  gender: z.string().min(1, { message: "Gender is required" }),
+  otherNames: z.string().optional(),
+  idPassportNumber: z.string().min(1, { message: "ID/Passport number is required" }),
   dateOfBirth: z.string().min(1, { message: "Date of birth is required" }),
-  nationality: z.string().min(1, { message: "Nationality is required" }),
-  ethnicity: z.string().optional(),
-  nationalId: z.string().min(1, { message: "National ID/Passport is required" }),
-  kcseIndex: z.string().optional(),
-  kcpeIndex: z.string().optional(),
-  countyState: z.string().min(1, { message: "County/State is required" }),
-  subCountyDistrict: z.string().min(1, { message: "Sub-County/District is required" }),
-  address: z.string().min(1, { message: "Address is required" }),
-  careOf: z.string().optional(),
+  maritalStatus: z.string().min(1, { message: "Marital status is required" }),
+  gender: z.string().min(1, { message: "Gender is required" }),
+  postalAddress: z.string().min(1, { message: "Postal address is required" }),
+  postalCode: z.string().optional(),
   town: z.string().min(1, { message: "Town is required" }),
-  email: z.string().email({ message: "Valid email is required" }),
-  mobilePhone: z.string().min(1, { message: "Mobile phone is required" }),
-  alternatePhone: z.string().optional(),
-  academicQualifications: z.array(z.object({
-    certification: z.string().min(1, { message: "Certification is required" }),
-    overallScore: z.string().min(1, { message: "Overall score is required" }),
-    institutionName: z.string().min(1, { message: "Institution name is required" }),
-    yearRange: z.string().min(1, { message: "Year range is required" }),
-  })).min(1, { message: "At least one academic qualification is required" }),
-  howDidYouKnow: z.string().optional(),
-  scholarshipInterest: z.boolean().default(false),
-  additionalInfo: z.string().optional(),
+  county: z.string().min(1, { message: "County is required" }),
+  subCounty: z.string().min(1, { message: "Sub-County is required" }),
+  ward: z.string().optional(),
+  location: z.string().optional(),
+  subLocation: z.string().optional(),
+  village: z.string().optional(),
+  nemisCode: z.string().optional(),
+  kraPin: z.string().optional(),
+  mobileNumber: z.string().min(1, { message: "Mobile number is required" }),
+  emailAddress: z.string().email({ message: "Valid email is required" }),
+  nationality: z.string().min(1, { message: "Nationality is required" }),
+  disability: z.boolean().default(false),
+  disabilityDetails: z.string().optional(),
+  
+  // Section B - Academic Qualifications
+  kcseSchool: z.string().optional(),
+  kcseIndex: z.string().optional(),
+  kcseYear: z.string().optional(),
+  kcseMeanGrade: z.string().optional(),
+  kcpeSchool: z.string().optional(),
+  kcpeIndex: z.string().optional(),
+  kcpeYear: z.string().optional(),
+  kcpeMeanGrade: z.string().optional(),
+  collegeAttended: z.string().optional(),
+  collegeYear: z.string().optional(),
+  collegeMeanGrade: z.string().optional(),
+  
+  // Section C - Sponsor/Guardian Details
+  sponsorFullName: z.string().optional(),
+  sponsorIdPassport: z.string().optional(),
+  sponsorPostalAddress: z.string().optional(),
+  sponsorTown: z.string().optional(),
+  relationshipToApplicant: z.string().optional(),
+  sponsorEmail: z.string().optional(),
+  sponsorMobile: z.string().optional(),
+  sponsorOccupation: z.string().optional(),
+  
+  // Section D - Course Details
+  courseNameFull: z.string().min(1, { message: "Course name is required" }),
+  intake: z.string().min(1, { message: "Intake is required" }),
+  programmeDuration: z.string().optional(),
+  examiningBody: z.string().optional(),
+  level: z.string().min(1, { message: "Level is required" }),
+  applicationType: z.string().min(1, { message: "Application type is required" }),
+  
+  // Agreement
   agreesToTerms: z.boolean().refine((val) => val === true, {
     message: "You must agree to the Terms and Conditions",
   }),
 });
 
-type EnhancedApplication = z.infer<typeof enhancedApplicationSchema>;
+type Application = z.infer<typeof applicationSchema>;
 
 // Document upload state interface
 interface DocumentFiles {
@@ -66,7 +87,7 @@ interface DocumentFiles {
   birthCertificate: File | null;
   kcpeCertificate: File | null;
   kcseCertificate: File | null;
-  kraCertificate: File | null;
+  passportPhoto: File | null;
 }
 
 export default function StudentPortal() {
@@ -77,51 +98,62 @@ export default function StudentPortal() {
     birthCertificate: null,
     kcpeCertificate: null,
     kcseCertificate: null,
-    kraCertificate: null,
+    passportPhoto: null,
   });
 
-  const form = useForm<EnhancedApplication>({
-    resolver: zodResolver(enhancedApplicationSchema),
+  const form = useForm<Application>({
+    resolver: zodResolver(applicationSchema),
     defaultValues: {
-      preferredCampus: "",
-      preferredIntake: "",
-      preferredAttendance: "",
-      programType: "",
-      stageYearLevel: "",
-      program: "",
+      surname: "",
       firstName: "",
-      middleName: "",
-      lastName: "",
-      livingWithDisability: false,
-      title: "",
-      gender: "",
+      otherNames: "",
+      idPassportNumber: "",
       dateOfBirth: "",
-      nationality: "",
-      ethnicity: "",
-      nationalId: "",
-      kcseIndex: "",
-      kcpeIndex: "",
-      countyState: "",
-      subCountyDistrict: "",
-      address: "",
-      careOf: "",
+      maritalStatus: "",
+      gender: "",
+      postalAddress: "",
+      postalCode: "",
       town: "",
-      email: "",
-      mobilePhone: "",
-      alternatePhone: "",
-      academicQualifications: [
-        { certification: "", overallScore: "", institutionName: "", yearRange: "" }
-      ],
-      howDidYouKnow: "",
-      scholarshipInterest: false,
-      additionalInfo: "",
+      county: "",
+      subCounty: "",
+      ward: "",
+      location: "",
+      subLocation: "",
+      village: "",
+      nemisCode: "",
+      kraPin: "",
+      mobileNumber: "",
+      emailAddress: "",
+      nationality: "",
+      disability: false,
+      disabilityDetails: "",
+      kcseSchool: "",
+      kcseIndex: "",
+      kcseYear: "",
+      kcseMeanGrade: "",
+      kcpeSchool: "",
+      kcpeIndex: "",
+      kcpeYear: "",
+      kcpeMeanGrade: "",
+      collegeAttended: "",
+      collegeYear: "",
+      collegeMeanGrade: "",
+      sponsorFullName: "",
+      sponsorIdPassport: "",
+      sponsorPostalAddress: "",
+      sponsorTown: "",
+      relationshipToApplicant: "",
+      sponsorEmail: "",
+      sponsorMobile: "",
+      sponsorOccupation: "",
+      courseNameFull: "",
+      intake: "",
+      programmeDuration: "",
+      examiningBody: "",
+      level: "",
+      applicationType: "",
       agreesToTerms: false,
     },
-  });
-
-  const { fields, append, remove } = useFieldArray({
-    control: form.control,
-    name: "academicQualifications"
   });
 
   const handleFileChange = (fileType: keyof DocumentFiles, file: File | null) => {
@@ -137,7 +169,7 @@ export default function StudentPortal() {
       birthCertificate: null,
       kcpeCertificate: null,
       kcseCertificate: null,
-      kraCertificate: null,
+      passportPhoto: null,
     });
     const fileInputs = document.querySelectorAll('input[type="file"]');
     fileInputs.forEach((input) => {
@@ -146,22 +178,20 @@ export default function StudentPortal() {
   };
 
   const applicationMutation = useMutation({
-    mutationFn: async (data: EnhancedApplication) => {
+    mutationFn: async (data: Application) => {
       const formData = new FormData();
       
+      // Add all form fields
       Object.entries(data).forEach(([key, value]) => {
-        if (key === 'academicQualifications') {
-          formData.append(key, JSON.stringify(value));
-        } else {
-          formData.append(key, String(value));
-        }
+        formData.append(key, String(value));
       });
 
+      // Add document files
       if (documentFiles.idCopy) formData.append('idCopy', documentFiles.idCopy);
       if (documentFiles.birthCertificate) formData.append('birthCertificate', documentFiles.birthCertificate);
       if (documentFiles.kcpeCertificate) formData.append('kcpeCertificate', documentFiles.kcpeCertificate);
       if (documentFiles.kcseCertificate) formData.append('kcseCertificate', documentFiles.kcseCertificate);
-      if (documentFiles.kraCertificate) formData.append('kraCertificate', documentFiles.kraCertificate);
+      if (documentFiles.passportPhoto) formData.append('passportPhoto', documentFiles.passportPhoto);
 
       const response = await fetch("/api/applications", {
         method: "POST",
@@ -194,7 +224,18 @@ export default function StudentPortal() {
     },
   });
 
-  const onSubmit = (data: EnhancedApplication) => {
+  const onSubmit = (data: Application) => {
+    // Validate required documents
+    if (!documentFiles.idCopy || !documentFiles.birthCertificate || 
+        !documentFiles.kcpeCertificate || !documentFiles.kcseCertificate) {
+      toast({
+        title: "Missing Documents",
+        description: "Please upload all required documents (ID, Birth Certificate, KCPE, and KCSE certificates)",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     applicationMutation.mutate(data);
   };
 
@@ -215,161 +256,29 @@ export default function StudentPortal() {
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 
-                {/* Programme/Course Information */}
+                {/* SECTION A: PERSONAL DETAILS */}
                 <Card>
                   <CardContent className="pt-6">
                     <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      Programme/Course Interested
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="preferredCampus"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Preferred Campus *</FormLabel>
-                            <Select onValueChange={field.onChange} value={field.value}>
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select campus" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent className="z-50 bg-white">
-                                <SelectItem className="hover:bg-gray-100" value="main-campus">Kongoni College</SelectItem>
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="preferredIntake"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Preferred Intake *</FormLabel>
-                            <Select onValueChange={field.onChange} value={field.value}>
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select intake" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent className="z-50 bg-white">
-                                <SelectItem className="hover:bg-gray-100" value="september">September</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="january">January</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="may">May</SelectItem>
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="preferredAttendance"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Preferred Attendance *</FormLabel>
-                            <Select onValueChange={field.onChange} value={field.value}>
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select attendance" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent className="z-50 bg-white">
-                                <SelectItem className="hover:bg-gray-100" value="full-time">Full Time</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="part-time">Part Time</SelectItem>
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="programType"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Programme Type *</FormLabel>
-                            <Select onValueChange={field.onChange} value={field.value}>
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select type" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent className="z-50 bg-white">
-                                <SelectItem className="hover:bg-gray-100" value="diploma">Diploma</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="certificate">Certificate</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="artisan">Artisan</SelectItem>
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="stageYearLevel"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Stage/Year/Level *</FormLabel>
-                            <FormControl>
-                              <Input {...field} placeholder="e.g., 1, 2, 3" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="program"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Programme/Course *</FormLabel>
-                            <Select onValueChange={field.onChange} value={field.value}>
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select programme" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent className="z-50 bg-white max-h-[200px] overflow-y-auto">
-                                <SelectItem className="hover:bg-gray-100" value="diploma-mechanical">Diploma in Mechanical Engineering</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="diploma-it">Diploma in Information Technology</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="diploma-business">Diploma in Business Management</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="diploma-electrical">Diploma in Electrical Engineering</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="diploma-hotel">Diploma in Hotel Management</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="diploma-nursing">Diploma in Nursing</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="cert-automotive">Certificate in Motor Vehicle Mechanics</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="cert-computer">Certificate in Computer Applications</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="cert-carpentry">Certificate in Carpentry & Joinery</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="cert-fashion">Certificate in Fashion & Design</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="cert-agriculture">Certificate in Agriculture</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="cert-beauty">Certificate in Beauty & Cosmetology</SelectItem>
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Personal Details */}
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      Personal Details
+                      SECTION A: PERSONAL DETAILS
                     </h3>
                     
                     <div className="space-y-4">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="surname"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Surname *</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Surname" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
                         <FormField
                           control={form.control}
                           name="firstName"
@@ -386,26 +295,12 @@ export default function StudentPortal() {
                         
                         <FormField
                           control={form.control}
-                          name="middleName"
+                          name="otherNames"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Middle Name</FormLabel>
+                              <FormLabel>Other Names</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Middle Name" />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        
-                        <FormField
-                          control={form.control}
-                          name="lastName"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Surname *</FormLabel>
-                              <FormControl>
-                                <Input {...field} placeholder="Surname" />
+                                <Input {...field} placeholder="Other Names" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -413,65 +308,16 @@ export default function StudentPortal() {
                         />
                       </div>
 
-                      <FormField
-                        control={form.control}
-                        name="livingWithDisability"
-                        render={({ field }) => (
-                          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value}
-                                onCheckedChange={field.onChange}
-                              />
-                            </FormControl>
-                            <FormLabel className="cursor-pointer">Living with Disability</FormLabel>
-                          </FormItem>
-                        )}
-                      />
-
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <FormField
                           control={form.control}
-                          name="title"
+                          name="idPassportNumber"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Title *</FormLabel>
-                              <Select onValueChange={field.onChange} value={field.value}>
-                                <FormControl>
-                                  <SelectTrigger>
-                                    <SelectValue placeholder="Select" />
-                                  </SelectTrigger>
-                                </FormControl>
-                                <SelectContent className="z-50 bg-white">
-                                  <SelectItem className="hover:bg-gray-100" value="mr">Mr.</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="mrs">Mrs.</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="ms">Ms.</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="dr">Dr.</SelectItem>
-                                </SelectContent>
-                              </Select>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-
-                        <FormField
-                          control={form.control}
-                          name="gender"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Gender *</FormLabel>
-                              <Select onValueChange={field.onChange} value={field.value}>
-                                <FormControl>
-                                  <SelectTrigger>
-                                    <SelectValue placeholder="Select" />
-                                  </SelectTrigger>
-                                </FormControl>
-                                <SelectContent className="z-50 bg-white">
-                                  <SelectItem className="hover:bg-gray-100" value="male">Male</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="female">Female</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="other">Other</SelectItem>
-                                </SelectContent>
-                              </Select>
+                              <FormLabel>ID/Passport No *</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="ID/Passport Number" />
+                              </FormControl>
                               <FormMessage />
                             </FormItem>
                           )}
@@ -490,9 +336,55 @@ export default function StudentPortal() {
                             </FormItem>
                           )}
                         />
+
+                        <FormField
+                          control={form.control}
+                          name="gender"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Gender *</FormLabel>
+                              <Select onValueChange={field.onChange} value={field.value}>
+                                <FormControl>
+                                  <SelectTrigger>
+                                    <SelectValue placeholder="Select" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent className="z-50 bg-white">
+                                  <SelectItem className="hover:bg-gray-100" value="Male">Male</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="Female">Female</SelectItem>
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="maritalStatus"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Marital Status *</FormLabel>
+                              <Select onValueChange={field.onChange} value={field.value}>
+                                <FormControl>
+                                  <SelectTrigger>
+                                    <SelectValue placeholder="Select" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent className="z-50 bg-white">
+                                  <SelectItem className="hover:bg-gray-100" value="Single">Single</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="Married">Married</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="Divorced">Divorced</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="Widowed">Widowed</SelectItem>
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
                         <FormField
                           control={form.control}
                           name="nationality"
@@ -506,15 +398,63 @@ export default function StudentPortal() {
                             </FormItem>
                           )}
                         />
+                      </div>
+
+                      <FormField
+                        control={form.control}
+                        name="disability"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                            <FormControl>
+                              <Checkbox
+                                checked={field.value}
+                                onCheckedChange={field.onChange}
+                              />
+                            </FormControl>
+                            <FormLabel className="cursor-pointer">Do you have any disability?</FormLabel>
+                          </FormItem>
+                        )}
+                      />
+
+                      {form.watch("disability") && (
+                        <FormField
+                          control={form.control}
+                          name="disabilityDetails"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Disability Details</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Please specify" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      )}
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="postalAddress"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Postal Address *</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="P.O. Box" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
 
                         <FormField
                           control={form.control}
-                          name="ethnicity"
+                          name="postalCode"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Ethnicity</FormLabel>
+                              <FormLabel>Postal Code</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Ethnicity" />
+                                <Input {...field} placeholder="Postal Code" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -525,12 +465,12 @@ export default function StudentPortal() {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <FormField
                           control={form.control}
-                          name="nationalId"
+                          name="town"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>National ID/Passport No *</FormLabel>
+                              <FormLabel>Town *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="ID/Passport Number" />
+                                <Input {...field} placeholder="Town" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -539,12 +479,12 @@ export default function StudentPortal() {
 
                         <FormField
                           control={form.control}
-                          name="kcseIndex"
+                          name="county"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>KCSE Index</FormLabel>
+                              <FormLabel>County *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="INDEX NUMBER/YEAR" />
+                                <Input {...field} placeholder="County" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -553,12 +493,70 @@ export default function StudentPortal() {
 
                         <FormField
                           control={form.control}
-                          name="kcpeIndex"
+                          name="subCounty"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>KCPE Index</FormLabel>
+                              <FormLabel>Sub-County *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="KCPE Index" />
+                                <Input {...field} placeholder="Sub-County" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="ward"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Ward</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Ward" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="location"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Location</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Location" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="subLocation"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Sub-Location</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Sub-Location" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="village"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Village</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Village" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -569,12 +567,12 @@ export default function StudentPortal() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
-                          name="countyState"
+                          name="mobileNumber"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>County/State/Province *</FormLabel>
+                              <FormLabel>Mobile Number *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="County/State/Province" />
+                                <Input type="tel" {...field} placeholder="0700000000" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -583,12 +581,42 @@ export default function StudentPortal() {
 
                         <FormField
                           control={form.control}
-                          name="subCountyDistrict"
+                          name="emailAddress"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Sub-County/District *</FormLabel>
+                              <FormLabel>Email Address *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Sub-County/District" />
+                                <Input type="email" {...field} placeholder="email@example.com" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="nemisCode"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>NEMIS Code</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="NEMIS Code" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="kraPin"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>KRA PIN</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="KRA PIN" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -599,66 +627,377 @@ export default function StudentPortal() {
                   </CardContent>
                 </Card>
 
-                {/* Applicant Contacts */}
+                {/* SECTION B: ACADEMIC QUALIFICATIONS */}
                 <Card>
                   <CardContent className="pt-6">
                     <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      Applicant Contacts
+                      SECTION B: ACADEMIC QUALIFICATIONS
+                    </h3>
+                    
+                    <div className="space-y-6">
+                      {/* KCSE */}
+                      <div className="border rounded-lg p-4 bg-gray-50">
+                        <h4 className="font-semibold text-lg mb-4">KCSE Details</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <FormField
+                            control={form.control}
+                            name="kcseSchool"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>School Name</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="School Name" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="kcseIndex"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Index Number</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="Index Number" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="kcseYear"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Year</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="Year" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="kcseMeanGrade"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Mean Grade</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="e.g., B+" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                      </div>
+
+                      {/* KCPE */}
+                      <div className="border rounded-lg p-4 bg-gray-50">
+                        <h4 className="font-semibold text-lg mb-4">KCPE Details</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <FormField
+                            control={form.control}
+                            name="kcpeSchool"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>School Name</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="School Name" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="kcpeIndex"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Index Number</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="Index Number" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="kcpeYear"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Year</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="Year" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="kcpeMeanGrade"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Mean Grade/Marks</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="e.g., 350" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                      </div>
+
+                      {/* College (Optional) */}
+                      <div className="border rounded-lg p-4 bg-gray-50">
+                        <h4 className="font-semibold text-lg mb-4">College Details (Optional)</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                          <FormField
+                            control={form.control}
+                            name="collegeAttended"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>College Name</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="College Name" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="collegeYear"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Year</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="Year" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="collegeMeanGrade"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Grade/Marks</FormLabel>
+                                <FormControl>
+                                  <Input {...field} placeholder="Grade/Marks" />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* SECTION C: SPONSOR/GUARDIAN DETAILS */}
+                <Card>
+                  <CardContent className="pt-6">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                      SECTION C: SPONSOR/GUARDIAN DETAILS (Optional)
+                    </h3>
+                    
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="sponsorFullName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Full Name</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Sponsor/Guardian Full Name" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="sponsorIdPassport"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>ID/Passport No</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="ID/Passport Number" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <FormField
+                        control={form.control}
+                        name="relationshipToApplicant"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Relationship to Applicant</FormLabel>
+                            <FormControl>
+                              <Input {...field} placeholder="e.g., Father, Mother, Guardian" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="sponsorPostalAddress"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Postal Address</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="P.O. Box" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="sponsorTown"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Town</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Town" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="sponsorMobile"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Mobile Number</FormLabel>
+                              <FormControl>
+                                <Input type="tel" {...field} placeholder="0700000000" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="sponsorEmail"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Email</FormLabel>
+                              <FormControl>
+                                <Input type="email" {...field} placeholder="email@example.com" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <FormField
+                        control={form.control}
+                        name="sponsorOccupation"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Occupation</FormLabel>
+                            <FormControl>
+                              <Input {...field} placeholder="Occupation" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* SECTION D: COURSE DETAILS */}
+                <Card>
+                  <CardContent className="pt-6">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                      SECTION D: COURSE DETAILS
                     </h3>
                     
                     <div className="space-y-4">
                       <FormField
                         control={form.control}
-                        name="address"
+                        name="courseNameFull"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Address *</FormLabel>
-                            <FormControl>
-                              <Input {...field} placeholder="Address" />
-                            </FormControl>
+                            <FormLabel>Course Name *</FormLabel>
+                            <Select onValueChange={field.onChange} value={field.value}>
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Select course" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent className="z-50 bg-white max-h-[200px] overflow-y-auto">
+                                <SelectItem className="hover:bg-gray-100" value="Diploma in Mechanical Engineering">Diploma in Mechanical Engineering</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Diploma in Information Technology">Diploma in Information Technology</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Diploma in Business Management">Diploma in Business Management</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Diploma in Electrical Engineering">Diploma in Electrical Engineering</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Diploma in Hotel Management">Diploma in Hotel Management</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Diploma in Nursing">Diploma in Nursing</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Certificate in Motor Vehicle Mechanics">Certificate in Motor Vehicle Mechanics</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Certificate in Computer Applications">Certificate in Computer Applications</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Certificate in Carpentry & Joinery">Certificate in Carpentry & Joinery</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Certificate in Fashion & Design">Certificate in Fashion & Design</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Certificate in Agriculture">Certificate in Agriculture</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Certificate in Beauty & Cosmetology">Certificate in Beauty & Cosmetology</SelectItem>
+                              </SelectContent>
+                            </Select>
                             <FormMessage />
                           </FormItem>
                         )}
                       />
 
-                      <FormField
-                        control={form.control}
-                        name="careOf"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>C/O</FormLabel>
-                            <FormControl>
-                              <Input {...field} placeholder="C/O" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="town"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Town *</FormLabel>
-                            <FormControl>
-                              <Input {...field} placeholder="Town" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
-                          name="email"
+                          name="level"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Email *</FormLabel>
-                              <FormControl>
-                                <Input type="email" {...field} placeholder="Email" />
-                              </FormControl>
+                              <FormLabel>Level *</FormLabel>
+                              <Select onValueChange={field.onChange} value={field.value}>
+                                <FormControl>
+                                  <SelectTrigger>
+                                    <SelectValue placeholder="Select level" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent className="z-50 bg-white">
+                                  <SelectItem className="hover:bg-gray-100" value="Diploma">Diploma</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="Certificate">Certificate</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="Artisan">Artisan</SelectItem>
+                                </SelectContent>
+                              </Select>
                               <FormMessage />
                             </FormItem>
                           )}
@@ -666,13 +1005,47 @@ export default function StudentPortal() {
 
                         <FormField
                           control={form.control}
-                          name="mobilePhone"
+                          name="intake"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Mobile Phone *</FormLabel>
-                              <FormControl>
-                                <Input type="tel" {...field} placeholder="Mobile Phone" />
-                              </FormControl>
+                              <FormLabel>Intake *</FormLabel>
+                              <Select onValueChange={field.onChange} value={field.value}>
+                                <FormControl>
+                                  <SelectTrigger>
+                                    <SelectValue placeholder="Select intake" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent className="z-50 bg-white">
+                                  <SelectItem className="hover:bg-gray-100" value="September 2024">September 2024</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="January 2025">January 2025</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="May 2025">May 2025</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="September 2025">September 2025</SelectItem>
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="applicationType"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Application Type *</FormLabel>
+                              <Select onValueChange={field.onChange} value={field.value}>
+                                <FormControl>
+                                  <SelectTrigger>
+                                    <SelectValue placeholder="Select type" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent className="z-50 bg-white">
+                                  <SelectItem className="hover:bg-gray-100" value="Full-Time">Full-Time</SelectItem>
+                                  <SelectItem className="hover:bg-gray-100" value="Part-Time">Part-Time</SelectItem>
+                                </SelectContent>
+                              </Select>
                               <FormMessage />
                             </FormItem>
                           )}
@@ -680,119 +1053,47 @@ export default function StudentPortal() {
 
                         <FormField
                           control={form.control}
-                          name="alternatePhone"
+                          name="programmeDuration"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Alternate Mobile Phone</FormLabel>
+                              <FormLabel>Programme Duration</FormLabel>
                               <FormControl>
-                                <Input type="tel" {...field} placeholder="Alternate Phone" />
+                                <Input {...field} placeholder="e.g., 2 years, 6 months" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
                           )}
                         />
                       </div>
+
+                      <FormField
+                        control={form.control}
+                        name="examiningBody"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Examining Body</FormLabel>
+                            <Select onValueChange={field.onChange} value={field.value}>
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Select examining body" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent className="z-50 bg-white">
+                                <SelectItem className="hover:bg-gray-100" value="KNEC">KNEC</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="NITA">NITA</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="KASNEB">KASNEB</SelectItem>
+                                <SelectItem className="hover:bg-gray-100" value="Other">Other</SelectItem>
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* Academic Qualifications */}
-                <Card>
-                  <CardContent className="pt-6">
-                    <div className="flex justify-between items-center mb-6">
-                      <h3 className="text-2xl font-bold text-gray-800">
-                        Academic Qualifications
-                      </h3>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        onClick={() => append({ certification: "", overallScore: "", institutionName: "", yearRange: "" })}
-                        className="flex items-center gap-2"
-                      >
-                        <PlusIcon className="w-4 h-4" />
-                        Add
-                      </Button>
-                    </div>
-                    
-                    <div className="space-y-4">
-                      {fields.map((field, index) => (
-                        <div key={field.id} className="border rounded-lg p-4 relative">
-                          {fields.length > 1 && (
-                            <Button
-                              type="button"
-                              variant="ghost"
-                              size="sm"
-                              onClick={() => remove(index)}
-                              className="absolute top-2 right-2 text-red-500"
-                            >
-                              <TrashIcon className="w-4 h-4" />
-                            </Button>
-                          )}
-                          
-                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <FormField
-                              control={form.control}
-                              name={`academicQualifications.${index}.certification`}
-                              render={({ field }) => (
-                                <FormItem>
-                                  <FormLabel>Certification *</FormLabel>
-                                  <FormControl>
-                                    <Input {...field} placeholder="Certification" />
-                                  </FormControl>
-                                  <FormMessage />
-                                </FormItem>
-                              )}
-                            />
-
-                            <FormField
-                              control={form.control}
-                              name={`academicQualifications.${index}.overallScore`}
-                              render={({ field }) => (
-                                <FormItem>
-                                  <FormLabel>Overall Score *</FormLabel>
-                                  <FormControl>
-                                    <Input {...field} placeholder="Overall Score" />
-                                  </FormControl>
-                                  <FormMessage />
-                                </FormItem>
-                              )}
-                            />
-
-                            <FormField
-                              control={form.control}
-                              name={`academicQualifications.${index}.institutionName`}
-                              render={({ field }) => (
-                                <FormItem>
-                                  <FormLabel>Institution Name *</FormLabel>
-                                  <FormControl>
-                                    <Input {...field} placeholder="Institution Name" />
-                                  </FormControl>
-                                  <FormMessage />
-                                </FormItem>
-                              )}
-                            />
-
-                            <FormField
-                              control={form.control}
-                              name={`academicQualifications.${index}.yearRange`}
-                              render={({ field }) => (
-                                <FormItem>
-                                  <FormLabel>Year Range *</FormLabel>
-                                  <FormControl>
-                                    <Input {...field} placeholder="e.g., 2020-2024" />
-                                  </FormControl>
-                                  <FormMessage />
-                                </FormItem>
-                              )}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Document Upload Section */}
+                {/* DOCUMENT UPLOAD SECTION */}
                 <Card>
                   <CardContent className="pt-6">
                     <h3 className="text-2xl font-bold text-gray-800 mb-6">
@@ -868,16 +1169,16 @@ export default function StudentPortal() {
                         <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 md:col-span-2">
                           <label className="block mb-2 font-semibold text-gray-700">
                             <FileIcon className="inline w-4 h-4 mr-2" />
-                            KRA PIN Certificate (Optional)
+                            Passport Photo (Optional)
                           </label>
                           <input
                             type="file"
-                            accept="image/*,.pdf"
-                            onChange={(e) => handleFileChange('kraCertificate', e.target.files?.[0] || null)}
+                            accept="image/*"
+                            onChange={(e) => handleFileChange('passportPhoto', e.target.files?.[0] || null)}
                             className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                           />
-                          {documentFiles.kraCertificate && (
-                            <p className="text-sm text-green-600 mt-2">✓ {documentFiles.kraCertificate.name}</p>
+                          {documentFiles.passportPhoto && (
+                            <p className="text-sm text-green-600 mt-2">✓ {documentFiles.passportPhoto.name}</p>
                           )}
                         </div>
                       </div>
@@ -885,70 +1186,13 @@ export default function StudentPortal() {
                   </CardContent>
                 </Card>
 
-                {/* Additional Information */}
+                {/* TERMS AND CONDITIONS */}
                 <Card>
                   <CardContent className="pt-6">
                     <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      Additional Information
+                      Declaration
                     </h3>
                     
-                    <div className="space-y-4">
-                      <FormField
-                        control={form.control}
-                        name="howDidYouKnow"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>How did you know about us?</FormLabel>
-                            <FormControl>
-                              <Input {...field} placeholder="e.g., Social Media, Friend, Website" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="scholarshipInterest"
-                        render={({ field }) => (
-                          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value}
-                                onCheckedChange={field.onChange}
-                              />
-                            </FormControl>
-                            <FormLabel className="cursor-pointer">
-                              I am interested in scholarship opportunities
-                            </FormLabel>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="additionalInfo"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Additional Comments</FormLabel>
-                            <FormControl>
-                              <Textarea 
-                                {...field} 
-                                placeholder="Any additional information you'd like to share..."
-                                rows={4}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Terms and Conditions */}
-                <Card>
-                  <CardContent className="pt-6">
                     <FormField
                       control={form.control}
                       name="agreesToTerms"
@@ -965,7 +1209,8 @@ export default function StudentPortal() {
                               I agree to the Terms and Conditions *
                             </FormLabel>
                             <p className="text-sm text-gray-500">
-                              By submitting this application, you confirm that all information provided is accurate and complete.
+                              I declare that the information provided in this application is true and correct to the best of my knowledge. 
+                              I understand that providing false information may result in the rejection of my application or termination of my studies.
                             </p>
                             <FormMessage />
                           </div>
@@ -975,7 +1220,7 @@ export default function StudentPortal() {
                   </CardContent>
                 </Card>
 
-                {/* Submit Button */}
+                {/* SUBMIT BUTTON */}
                 <div className="flex justify-center pt-6">
                   <Button
                     type="submit"

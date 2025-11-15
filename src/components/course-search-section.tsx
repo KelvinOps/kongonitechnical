@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ChevronDown, Search, FileText, GraduationCap, Award, Briefcase } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 // Define interfaces
 interface Course {
@@ -26,6 +26,7 @@ type CoursesResponse = Course[];
 // Course search section component
 export default function CourseSearchSection() {
   const router = useRouter();
+  const { toast } = useToast();
   const [selectedDepartment, setSelectedDepartment] = useState<string>("");
   const [selectedLevel, setSelectedLevel] = useState<string>("");
   const [selectedTerm, setSelectedTerm] = useState<string>("");
@@ -124,13 +125,17 @@ export default function CourseSearchSection() {
   const handleSearchCourses = () => {
     // Show loading toast first
     if (isLoading) {
-      toast.info("Loading courses...");
+      toast({ title: "Info", description: "Loading courses..." });
       return;
     }
 
     // Handle API error
     if (error) {
-      toast.error("Failed to load courses. Please try again.");
+      toast({ 
+        title: "Error", 
+        description: "Failed to load courses. Please try again.",
+        variant: "destructive" 
+      });
       return;
     }
 
@@ -138,7 +143,10 @@ export default function CourseSearchSection() {
     const hasFilters = selectedDepartment || selectedLevel || selectedTerm;
     
     if (!hasFilters) {
-      toast.info("Please select at least one filter to search for courses.");
+      toast({ 
+        title: "Info", 
+        description: "Please select at least one filter to search for courses." 
+      });
       return;
     }
 
@@ -157,26 +165,33 @@ export default function CourseSearchSection() {
         if (levelText) searchMessage += ` ${levelText}`;
       }
       
-      toast.success(searchMessage);
+      toast({ title: "Success", description: searchMessage });
     } else {
-      toast.info("No courses found matching your criteria. Try adjusting your filters or browse all courses.");
+      toast({ 
+        title: "Info", 
+        description: "No courses found matching your criteria. Try adjusting your filters or browse all courses." 
+      });
     }
   };
 
   const handleJoinNow = () => {
     try {
       // Show loading toast
-      toast.info("Redirecting to admissions page...");
+      toast({ title: "Info", description: "Redirecting to admissions page..." });
       
       // Navigate to admissions page
       router.push('/admissions');
       
       // Success toast will show after navigation
       setTimeout(() => {
-        toast.success("Welcome to the admissions page!");
+        toast({ title: "Success", description: "Welcome to the admissions page!" });
       }, 500);
     } catch {
-      toast.error("Failed to navigate to admissions page. Please try again.");
+      toast({ 
+        title: "Error", 
+        description: "Failed to navigate to admissions page. Please try again.",
+        variant: "destructive"
+      });
     }
   };
 
@@ -192,10 +207,17 @@ export default function CourseSearchSection() {
       document.body.removeChild(link);
       
       // Show success toast
-      toast.success("Application procedure document downloaded successfully!");
+      toast({ 
+        title: "Success", 
+        description: "Application procedure document downloaded successfully!" 
+      });
     } catch {
       // Show error toast if download fails
-      toast.error("Failed to download application procedure. Please try again or contact support.");
+      toast({ 
+        title: "Error", 
+        description: "Failed to download application procedure. Please try again or contact support.",
+        variant: "destructive"
+      });
     }
   };
 
@@ -205,7 +227,10 @@ export default function CourseSearchSection() {
     if (value && showResults) {
       // Reset results when changing filters after search
       setShowResults(false);
-      toast.info("Filters updated. Click search to see new results.");
+      toast({ 
+        title: "Info", 
+        description: "Filters updated. Click search to see new results." 
+      });
     }
   };
 
@@ -215,7 +240,10 @@ export default function CourseSearchSection() {
     if (value && showResults) {
       // Reset results when changing filters after search
       setShowResults(false);
-      toast.info("Filters updated. Click search to see new results.");
+      toast({ 
+        title: "Info", 
+        description: "Filters updated. Click search to see new results." 
+      });
     }
   };
 
@@ -225,7 +253,10 @@ export default function CourseSearchSection() {
     if (value && showResults) {
       // Reset results when changing filters after search
       setShowResults(false);
-      toast.info("Intake term selected. Click search to see updated results.");
+      toast({ 
+        title: "Info", 
+        description: "Intake term selected. Click search to see updated results." 
+      });
     }
   };
 
@@ -420,7 +451,11 @@ export default function CourseSearchSection() {
                             <Button 
                               size="sm" 
                               className="w-full bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 py-2.5"
-                              onClick={() => toast.info(`Loading ${course.title} details...`)}
+                              onClick={() => toast({ 
+                                title: "Info", 
+                                description: `Loading ${course.title} details...`,
+                                duration: 2000 
+                              })}
                             >
                               View Details
                             </Button>
@@ -437,7 +472,11 @@ export default function CourseSearchSection() {
                   <Link href="/courses">
                     <Button 
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-cyan-400/50"
-                      onClick={() => toast.info("Loading all courses...")}
+                      onClick={() => toast({ 
+                        title: "Info", 
+                        description: "Loading all courses...",
+                        duration: 2000 
+                      })}
                     >
                       View All {filteredCourses.length} Courses
                     </Button>
@@ -459,7 +498,11 @@ export default function CourseSearchSection() {
                 <Link href="/courses">
                   <Button 
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg"
-                    onClick={() => toast.info("Loading all available courses...")}
+                    onClick={() => toast({ 
+                      title: "Info", 
+                      description: "Loading all available courses...",
+                      duration: 2000 
+                    })}
                   >
                     View All Courses
                   </Button>

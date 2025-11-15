@@ -1,15 +1,15 @@
 // src/components/toast-setup.tsx
 "use client"
 
-import { useToastSetup } from "@/hooks/use-toast"
+import { useToast } from "@/hooks/use-toast"
 import { useEffect } from "react"
 
 export function ToastSetup() {
-  const toastContext = useToastSetup()
+  const { toast } = useToast()
   
   useEffect(() => {
     // Toast context is now available globally
-  }, [toastContext])
+  }, [toast])
   
   return null
 }
