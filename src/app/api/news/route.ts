@@ -4,26 +4,26 @@ import { NextRequest, NextResponse } from "next/server";
 // Complete mock news data - synchronized with main news route
 const mockNews = [
 
-  {
+{
   id: "26",
   title: "Kongoni TVC Cultural Day 2025 - Celebrating Heritage, Unity & Talent",
   excerpt: "Kongoni Technical and Vocational College hosted a spectacular Cultural Day celebration featuring traditional dances, drama, spoken word, cultural fashion parade, local cuisine exhibitions, and vibrant music performances that brought Kenya's rich heritage to life.",
   content: `
     <p>On November 7th, 2025, Kongoni Technical & Vocational Training College transformed its grounds into a vibrant celebration of Kenyan culture during the highly anticipated Cultural Day 2025.</p>
     
-    <p>The event brought together students, staff, and guests in a spectacular showcase of Kenya's diverse cultural heritage, demonstrating the college's commitment to celebrating unity in diversity while nurturing talent and creativity among students.</p>
+    <p>The event brought together trainees, staff, and guests in a spectacular showcase of Kenya's diverse cultural heritage, demonstrating the college's commitment to celebrating unity in diversity while nurturing talent and creativity among trainees.</p>
     
     <p><strong>Event Highlights:</strong></p>
     <ul>
-      <li><strong>✨ Traditional Dances</strong> - Students performed authentic traditional dances from various Kenyan communities, showcasing the rich diversity of our cultural heritage through carefully choreographed routines that captivated the audience.</li>
+      <li><strong>✨ Traditional Dances</strong> - trainees performed authentic traditional dances from various Kenyan communities, showcasing the rich diversity of our cultural heritage through carefully choreographed routines that captivated the audience.</li>
       <li><strong>🎭 Drama & Spoken Word</strong> - Talented performers delivered powerful dramatic presentations and thought-provoking spoken word poetry that addressed contemporary issues while celebrating cultural identity.</li>
-      <li><strong>👗 Cultural Fashion Parade</strong> - A stunning display of traditional attire from different Kenyan communities, with students modeling beautifully crafted traditional garments that told stories of heritage and craftsmanship.</li>
+      <li><strong>👗 Cultural Fashion Parade</strong> - A stunning display of traditional attire from different Kenyan communities, with trainees modeling beautifully crafted traditional garments that told stories of heritage and craftsmanship.</li>
       <li><strong>🍲 Local Cuisine Exhibitions</strong> - Food enthusiasts showcased authentic Kenyan dishes and delicacies, offering guests a delicious journey through Kenya's culinary traditions.</li>
       <li><strong>🎶 Music & Performances</strong> - Live musical performances featuring traditional instruments and contemporary interpretations of cultural music kept the energy high throughout the day.</li>
     </ul>
     
     <p><strong>Celebrating Unity in Diversity:</strong></p>
-    <p>The Cultural Day served as a powerful reminder of Kenya's beautiful diversity and the strength found in unity. Students from various backgrounds came together to celebrate each other's cultures, fostering mutual respect, understanding, and appreciation for different traditions.</p>
+    <p>The Cultural Day served as a powerful reminder of Kenya's beautiful diversity and the strength found in unity. trainees from various backgrounds came together to celebrate each other's cultures, fostering mutual respect, understanding, and appreciation for different traditions.</p>
     
     <p>"This event exemplifies what makes Kongoni Technical College special - our ability to celebrate our differences while building a united community," said Principal Judith Akaranga during the opening ceremony. "Cultural Day is not just about entertainment; it's about understanding, respect, and building bridges between communities."</p>
     
@@ -37,7 +37,7 @@ const mockNews = [
     </ul>
     
     <p><strong>Impact and Community Building:</strong></p>
-    <p>The Cultural Day created lasting memories and strengthened bonds within the college community. Students who might not have previously interacted found common ground through cultural exchange, while others gained new appreciation for traditions different from their own.</p>
+    <p>The Cultural Day created lasting memories and strengthened bonds within the college community. trainees who might not have previously interacted found common ground through cultural exchange, while others gained new appreciation for traditions different from their own.</p>
     
     <p>"Participating in Cultural Day helped me understand and appreciate cultures I knew little about," shared Mary Wanjiru, a Fashion & Design student who participated in the cultural fashion parade. "It's amazing how much we can learn from each other when we take time to celebrate our heritage together."</p>
     
@@ -47,7 +47,7 @@ const mockNews = [
     <p>Special recognition goes to:</p>
     <ul>
       <li>The Student Council for coordinating student participation</li>
-      <li>Department heads for supporting their students' involvement</li>
+      <li>Department heads for supporting their trainees' involvement</li>
       <li>The Food & Beverage Department for coordinating the cuisine exhibition</li>
       <li>The Fashion & Design Department for organizing the cultural fashion parade</li>
       <li>All student performers who practiced tirelessly to perfect their presentations</li>
@@ -57,20 +57,47 @@ const mockNews = [
     <p><strong>Preserving Heritage for Future Generations:</strong></p>
     <p>Cultural Day serves an important educational purpose beyond entertainment. It provides a platform for younger generations to learn about and appreciate traditional practices, ensuring that cultural heritage is preserved and passed on. The event included storytelling sessions where elders from the community shared the historical significance of various cultural practices.</p>
     
-    <p>"Events like these are crucial for keeping our traditions alive," noted Deputy Principal for Student Affairs. "In our rapidly modernizing world, it's essential that young people remain connected to their cultural roots while embracing progress and innovation."</p>
+    <p>"Events like these are crucial for keeping our traditions alive," noted the Principal . "In our rapidly modernizing world, it's essential that young people remain connected to their cultural roots while embracing progress and innovation."</p>
     
     <p><strong>Media Coverage and Documentation:</strong></p>
     <p>The entire event was professionally documented through photography and videography, with highlights available on the college's YouTube channel. The vibrant images and video footage serve as a lasting record of this memorable celebration and will be used for promotional purposes and future reference.</p>
     
+    <p><strong>Professional Media Coverage by Afrikwear Unit Entertainment:</strong></p>
+    <p>The college extends special appreciation to <strong>Afrikwear Unit Entertainment</strong>, who provided exceptional professional media coverage throughout the Cultural Day celebration. Their expertise and dedication ensured that every memorable moment was beautifully captured and preserved.</p>
+    
+    <p>Afrikwear Unit Entertainment's comprehensive coverage included:</p>
+    <ul>
+      <li><strong>Professional Photography:</strong> High-quality images capturing the vibrant colors, emotions, and cultural expressions throughout the day</li>
+      <li><strong>Videography Services:</strong> Complete video documentation of all performances, presentations, and activities</li>
+      <li><strong>Live Coverage:</strong> Real-time capturing of spontaneous moments and candid interactions</li>
+      <li><strong>Post-Production:</strong> Professional editing and compilation of highlights for the college's promotional materials</li>
+      <li><strong>Social Media Content:</strong> Curated content optimized for various digital platforms</li>
+    </ul>
+    
+    <p>"Afrikwear Unit Entertainment went above and beyond in documenting our Cultural Day," noted the event coordinator. "Their professional approach and artistic eye captured not just the events, but the spirit and emotion of the celebration. The quality of their work will allow us to relive these precious moments for years to come."</p>
+    
+    <p>The comprehensive photo and video gallery created by Afrikwear Unit Entertainment is now available on the college's official YouTube channel and social media platforms, allowing trainees, parents, and the wider community to experience the beauty and diversity of the celebration.</p>
+    
+    <p>Their dedication to excellence in media production has resulted in a lasting visual legacy of this significant cultural celebration. The professionally captured content serves multiple purposes:</p>
+    <ul>
+      <li>Promotional materials for future college events and marketing</li>
+      <li>Historical documentation of the college's cultural activities</li>
+      <li>Portfolio material for participating trainees</li>
+      <li>Engagement content for social media and website</li>
+      <li>Reference material for planning future Cultural Day events</li>
+    </ul>
+    
+    <p>We sincerely thank <strong>Afrikwear Unit Entertainment</strong> for their professionalism, creativity, and commitment to capturing the essence of our Cultural Day celebration. Their work has helped immortalize the joy, talent, and cultural richness that made this event truly unforgettable.</p>
+    
     <p><strong>Looking Forward:</strong></p>
     <p>The overwhelming success of Cultural Day 2025 has set a high standard for future events. The college is committed to making this an annual tradition that continues to grow and evolve, incorporating more cultural expressions and reaching even more participants.</p>
     
-    <p>"This is just the beginning," said Cultural Day Coordinator James Ochieng. "We're already planning for next year's event, and we have exciting ideas to make it even bigger and better. The enthusiasm shown by students and staff has been incredible."</p>
+    <p>"This is just the beginning," said Cultural Day Coordinator James Ochieng. "We're already planning for next year's event, and we have exciting ideas to make it even bigger and better. The enthusiasm shown by trainees and staff has been incredible."</p>
     
     <p>Cultural Day 2025 concluded with a unity ceremony where representatives from all participating cultural groups came together for a symbolic gesture of unity and friendship, reminding everyone that while we celebrate our differences, we are one Kongoni family.</p>
     
     <p><strong>Gratitude and Acknowledgments:</strong></p>
-    <p>The college extends heartfelt gratitude to all students, staff, organizers, performers, and guests who contributed to making Cultural Day 2025 an unforgettable success. Your energy, creativity, teamwork, and dedication brought Kenya's rich heritage to life and strengthened our unity as a college community.</p>
+    <p>The college extends heartfelt gratitude to all trainees, staff, organizers, performers, and guests who contributed to making Cultural Day 2025 an unforgettable success. Your energy, creativity, teamwork, and dedication brought Kenya's rich heritage to life and strengthened our unity as a college community.</p>
     
     <p>Special thanks to our sponsors and partners who supported the event, the catering team who ensured everyone was well-fed throughout the day, the sound and lighting crew who created the perfect ambiance, and the security team who ensured everyone's safety.</p>
     
@@ -114,7 +141,8 @@ const mockNews = [
     "kenyan-culture",
     "student-talent",
     "celebration",
-    "community-event"
+    "community-event",
+    "afrikwear-unit-entertainment"
   ]
 },
   {
@@ -172,7 +200,7 @@ const mockNews = [
       
       <p>"This workshop has equipped our trainers with essential skills and knowledge to effectively implement the dual training model," remarked Deputy Principal for Academics. "The hands-on approach and collaborative learning environment provided invaluable insights that we will immediately apply in our training programs."</p>
       
-      <p>The dual TVET model combines theoretical learning at the institution with practical training at industry workplaces, ensuring students gain real-world experience and industry-relevant skills. This approach significantly enhances graduate employability and bridges the gap between education and industry needs.</p>
+      <p>The dual TVET model combines theoretical learning at the institution with practical training at industry workplaces, ensuring trainees gain real-world experience and industry-relevant skills. This approach significantly enhances graduate employability and bridges the gap between education and industry needs.</p>
       
       <p>Kongoni Technical and Vocational College remains committed to adopting best practices in technical education, and this workshop represents a significant milestone in our journey toward excellence in dual training delivery.</p>
       
@@ -204,7 +232,7 @@ const mockNews = [
     content: `
       <p>On October 10th, 2025, Kongoni Technical & Vocational Training College held its annual Sports Day, showcasing exceptional athletic talent and team spirit across multiple sporting disciplines.</p>
       
-      <p>The day featured intense competitions in four major sports categories, with students demonstrating remarkable skills, determination, and sportsmanship throughout the event.</p>
+      <p>The day featured intense competitions in four major sports categories, with trainees demonstrating remarkable skills, determination, and sportsmanship throughout the event.</p>
       
       <p><strong>Sports Featured:</strong></p>
       <ul>
@@ -237,7 +265,7 @@ const mockNews = [
       
       <p>"Today's Sports Day exemplifies our commitment to holistic education," remarked Principal Judith Akaranga during the awards ceremony.</p>
       
-      <p>The event concluded with an awards ceremony where champions received their trophies amid cheers from fellow students.</p>
+      <p>The event concluded with an awards ceremony where champions received their trophies amid cheers from fellow trainees.</p>
     `,
     imageUrl: "/images/newsevents/kattigames/kattigames9.jpg",
     images: [
@@ -501,18 +529,18 @@ const mockNews = [
 {
   id: "20",
   title: "Term Opening Prayer Day - Spiritual Blessing for New Academic Term",
-  excerpt: "The college community came together for a special prayer service to seek divine blessing and guidance for the new academic term, fostering unity and spiritual well-being among students and staff.",
+  excerpt: "The college community came together for a special prayer service to seek divine blessing and guidance for the new academic term, fostering unity and spiritual well-being among trainees and staff.",
   content: `
     <p>On September 9th, 2025, Kongoni Technical & Vocational Training College held a special Term Opening Prayer Day, bringing together the entire college community to seek divine blessing and guidance for the new academic term.</p>
     
-    <p>The prayer service, held at the main campus grounds, was attended by students, faculty, staff, and invited religious leaders from various denominations, reflecting the college's commitment to holistic education that nurtures both academic and spiritual development.</p>
+    <p>The prayer service, held at the main campus grounds, was attended by trainees, faculty, staff, and invited religious leaders from various denominations, reflecting the college's commitment to holistic education that nurtures both academic and spiritual development.</p>
     
     <p><strong>Prayer Service Program:</strong></p>
     <ul>
       <li>Opening worship and praise session</li>
       <li>Welcome address by Principal Judith Akaranga</li>
       <li>Interfaith prayers for academic success and guidance</li>
-      <li>Special prayers for students, faculty, and staff</li>
+      <li>Special prayers for trainees, faculty, and staff</li>
       <li>Blessing of academic facilities and laboratories</li>
       <li>Prayers for safety and protection throughout the term</li>
       <li>Community fellowship and refreshments</li>
@@ -524,7 +552,7 @@ const mockNews = [
     
     <p><strong>Key Prayer Themes:</strong></p>
     <ul>
-      <li>Academic excellence and wisdom for students and instructors</li>
+      <li>Academic excellence and wisdom for trainees and instructors</li>
       <li>Safety and protection for the college community</li>
       <li>Unity and harmony among diverse backgrounds</li>
       <li>Guidance for institutional leadership and decision-making</li>
@@ -533,7 +561,7 @@ const mockNews = [
       <li>Community outreach and social impact</li>
     </ul>
     
-    <p>Students from various departments participated actively, with many expressing gratitude for the opportunity to begin their academic journey with spiritual grounding. The prayer day also included special intercessions for new students beginning their studies.</p>
+    <p>trainees from various departments participated actively, with many expressing gratitude for the opportunity to begin their academic journey with spiritual grounding. The prayer day also included special intercessions for new trainees beginning their studies.</p>
     
     <p>"This prayer day helps create a positive atmosphere for learning and reminds us that we are part of a caring community," said Mary Wanjiku, a Business Studies student.</p>
     
@@ -562,12 +590,12 @@ const mockNews = [
 },
   {
     id: "18",
-    title: "September 2025 Intake Students Reporting for New Academic Year",
-    excerpt: "We warmly welcome the September 2025 intake students as they begin their technical and vocational training journey at Kongoni Technical & Vocational Training College.",
+    title: "September 2025 Intake trainees Reporting for New Academic Year",
+    excerpt: "We warmly welcome the September 2025 intake trainees as they begin their technical and vocational training journey at Kongoni Technical & Vocational Training College.",
     content: `
-      <p>Kongoni Technical & Vocational Training College is pleased to welcome the September 2025 intake students who are reporting for the commencement of their technical and vocational training programs.</p>
+      <p>Kongoni Technical & Vocational Training College is pleased to welcome the September 2025 intake trainees who are reporting for the commencement of their technical and vocational training programs.</p>
       
-      <p>The September intake includes students enrolled in various departments:</p>
+      <p>The September intake includes trainees enrolled in various departments:</p>
       <ul>
         <li><strong>Building & Construction:</strong> Masonry, Carpentry, Plumbing, and Electrical Installation</li>
         <li><strong>ICT Department:</strong> Computer Studies, Software Development, and Digital Marketing</li>
@@ -577,7 +605,7 @@ const mockNews = [
         <li><strong>Food & Beverage:</strong> Catering and Food Production</li>
       </ul>
       
-      <p>During the orientation week, new students will:</p>
+      <p>During the orientation week, new trainees will:</p>
       <ul>
         <li>Complete registration and documentation processes</li>
         <li>Receive campus tours and facility orientations</li>
@@ -587,19 +615,19 @@ const mockNews = [
         <li>Receive their student handbooks and timetables</li>
       </ul>
       
-      <p>"We are excited to welcome this new cohort of students who will contribute to Kenya's skilled workforce," said Principal Judith Akaranga. "Our comprehensive programs will equip them with practical skills and knowledge needed for successful careers."</p>
+      <p>"We are excited to welcome this new cohort of trainees who will contribute to Kenya's skilled workforce," said Principal Judith Akaranga. "Our comprehensive programs will equip them with practical skills and knowledge needed for successful careers."</p>
       
-      <p>The college continues to maintain high admission standards while providing accessible technical education opportunities. Students will benefit from modern facilities, experienced instructors, and strong industry partnerships.</p>
+      <p>The college continues to maintain high admission standards while providing accessible technical education opportunities. trainees will benefit from modern facilities, experienced instructors, and strong industry partnerships.</p>
       
-      <p>We wish all new students success in their academic journey and look forward to seeing their achievements throughout the program.</p>
+      <p>We wish all new trainees success in their academic journey and look forward to seeing their achievements throughout the program.</p>
     `,
-    imageUrl:  "/images/newsevents/studentsreporting/reporting2.jpeg",
+    imageUrl:  "/images/newsevents/traineesreporting/reporting2.jpeg",
     images: [
-   "/images/newsevents/studentsreporting/reporting1.jpeg",
-      "/images/newsevents/studentsreporting/reporting2.jpeg",
-    "/images/newsevents/studentsreporting/reporting3.jpeg",
-        "/images/newsevents/studentsreporting/reporting4.jpeg",
-      "/images/newsevents/studentsreporting/reporting1.jpeg"
+   "/images/newsevents/traineesreporting/reporting1.jpeg",
+      "/images/newsevents/traineesreporting/reporting2.jpeg",
+    "/images/newsevents/traineesreporting/reporting3.jpeg",
+        "/images/newsevents/traineesreporting/reporting4.jpeg",
+      "/images/newsevents/traineesreporting/reporting1.jpeg"
     ],
     videoUrl: "https://www.youtube.com/watch?v=orientation_welcome",
     videoThumbnail: "/images/admin/admin1.jpeg",
@@ -610,14 +638,14 @@ const mockNews = [
     category: "Student Life",
     eventDate: "2025-09-02", // Fixed: Changed from 2025 to 2024
     location: "Main Campus",
-    tags: ["intake", "new-students", "orientation", "academic-year"]
+    tags: ["intake", "new-trainees", "orientation", "academic-year"]
   },
   {
     id: "17", 
-    title: "Drama Students Achieve Second Position in Regional Competition",
-    excerpt: "Congratulations to our talented drama students who secured second position in both solo verse and spoken word categories at the regional drama festival.",
+    title: "Drama trainees Achieve Second Position in Regional Competition",
+    excerpt: "Congratulations to our talented drama trainees who secured second position in both solo verse and spoken word categories at the regional drama festival.",
     content: `
-      <p>We are proud to announce the outstanding achievement of our drama students who excelled at the recent regional drama festival, securing second position in two competitive categories.</p>
+      <p>We are proud to announce the outstanding achievement of our drama trainees who excelled at the recent regional drama festival, securing second position in two competitive categories.</p>
       
       <p><strong>Competition Results:</strong></p>
       <ul>
@@ -625,17 +653,17 @@ const mockNews = [
         <li><strong>Spoken Word Category:</strong> 2nd Position - Michael Ochieng (Business Studies)</li>
       </ul>
       
-      <p>This remarkable performance showcases the dedication and talent of our students, as well as the quality of training they receive in our performing arts program. The students competed against numerous institutions from across the region, making their achievement even more significant.</p>
+      <p>This remarkable performance showcases the dedication and talent of our trainees, as well as the quality of training they receive in our performing arts program. The trainees competed against numerous institutions from across the region, making their achievement even more significant.</p>
       
-      <p>The drama program at Kongoni Technical College continues to nurture creative expression alongside technical skills, proving that well-rounded education produces exceptional graduates. Our students demonstrated exceptional creativity, stage presence, and mastery of their craft.</p>
+      <p>The drama program at Kongoni Technical College continues to nurture creative expression alongside technical skills, proving that well-rounded education produces exceptional graduates. Our trainees demonstrated exceptional creativity, stage presence, and mastery of their craft.</p>
       
-      <p>"These students have worked tirelessly to perfect their performances," said Drama Instructor Ms. Faith Wanjiru. "Their success reflects not only their individual talents but also their commitment to excellence in all aspects of their education."</p>
+      <p>"These trainees have worked tirelessly to perfect their performances," said Drama Instructor Ms. Faith Wanjiru. "Their success reflects not only their individual talents but also their commitment to excellence in all aspects of their education."</p>
       
-      <p>The college celebrates this achievement as part of our commitment to developing students' creative and communicative abilities, which are essential skills in today's competitive job market.</p>
+      <p>The college celebrates this achievement as part of our commitment to developing trainees' creative and communicative abilities, which are essential skills in today's competitive job market.</p>
       
-      <p>Both students will now advance to the national drama competition scheduled for November 2024. The college community looks forward to supporting them as they represent us at the national level.</p>
+      <p>Both trainees will now advance to the national drama competition scheduled for November 2024. The college community looks forward to supporting them as they represent us at the national level.</p>
       
-      <p>Congratulations to all our drama students and their dedicated instructors for this well-deserved recognition!</p>
+      <p>Congratulations to all our drama trainees and their dedicated instructors for this well-deserved recognition!</p>
     `,
     imageUrl: "/images/hero/cultural5.jpg",
     images: [
@@ -661,7 +689,7 @@ const mockNews = [
   },
   {
     id: "1",
-    title: "Kongoni Students Excel at Katti Athletics Games 2024 - Gold Medal Victory",
+    title: "Kongoni trainees Excel at Katti Athletics Games 2024 - Gold Medal Victory",
     excerpt: "Our athletes brought home multiple medals from the Katti Athletics Games, showcasing exceptional talent in track and field events across various categories.",
     content: `
       <p>Kongoni Technical & Vocational Training College is proud to announce the outstanding performance of our student athletes at the prestigious Katti Athletics Games 2024, held at Nyayo National Stadium in Nairobi.</p>
@@ -679,7 +707,7 @@ const mockNews = [
         <li><strong>Bronze Medals (4):</strong> Various track and field events including discus and pole vault</li>
       </ul>
       
-      <p>"This remarkable achievement reflects not only the natural talent of our students but also their dedication to training and the excellent coaching support they receive," said Sports Coordinator Mr. David Mutua.</p>
+      <p>"This remarkable achievement reflects not only the natural talent of our trainees but also their dedication to training and the excellent coaching support they receive," said Sports Coordinator Mr. David Mutua.</p>
       
       <p>The college's investment in sports facilities and training programs continues to pay dividends, with our athletes consistently performing at national and regional levels. Several of our medalists have been scouted for national team selections for upcoming international competitions.</p>
       
@@ -709,7 +737,7 @@ const mockNews = [
     category: "Achievements",
     eventDate: "2025-08-15",
     location: "Nyayo National Stadium, Nairobi",
-    tags: ["athletics", "medals", "competition", "students", "gold-medal", "records"]
+    tags: ["athletics", "medals", "competition", "trainees", "gold-medal", "records"]
   },
   {
     id: "16",
@@ -727,13 +755,13 @@ const mockNews = [
         <li><strong>Equipment donation discussion</strong> - Planning for future equipment support from American Friends of Kenya</li>
       </ol>
       
-      <p>The visit was highly educational and inspiring for our students, providing them with exposure to international perspectives on vocational training and craftsmanship. Mr. Norris shared valuable insights from his experience with technical education programs globally.</p>
+      <p>The visit was highly educational and inspiring for our trainees, providing them with exposure to international perspectives on vocational training and craftsmanship. Mr. Norris shared valuable insights from his experience with technical education programs globally.</p>
       
-      <p>The hands-on desk-making session was particularly engaging, with students learning advanced techniques and best practices in furniture construction. The completed office desk will serve as a testament to the collaborative spirit and skilled craftsmanship demonstrated during the visit.</p>
+      <p>The hands-on desk-making session was particularly engaging, with trainees learning advanced techniques and best practices in furniture construction. The completed office desk will serve as a testament to the collaborative spirit and skilled craftsmanship demonstrated during the visit.</p>
       
       <p>The tree planting initiative aligns with the college's commitment to environmental conservation and sustainable practices. The indigenous trees planted will contribute to campus beautification and environmental protection efforts.</p>
       
-      <p>Mr. Norris expressed his admiration for the dedication and skill level of our carpentry students, noting their potential for international market competitiveness with proper support and equipment enhancement.</p>
+      <p>Mr. Norris expressed his admiration for the dedication and skill level of our carpentry trainees, noting their potential for international market competitiveness with proper support and equipment enhancement.</p>
       
       <p>We look forward to his return with promised equipment donations and continuing this valuable partnership that bridges international cooperation with local technical education.</p>
     `,
@@ -764,7 +792,7 @@ const mockNews = [
     content: `
       <p>Kongoni Technical & Vocational Training College successfully hosted its Annual Guidance and Counselling Day, emphasizing the importance of mental health and personal development in technical education.</p>
       
-      <p>The day-long event featured various activities designed to support our students' emotional, academic, and career development:</p>
+      <p>The day-long event featured various activities designed to support our trainees' emotional, academic, and career development:</p>
       <ul>
         <li>Individual counselling sessions with professional counsellors</li>
         <li>Group therapy workshops on stress management and study skills</li>
@@ -778,20 +806,20 @@ const mockNews = [
       
       <p>"Student wellness is fundamental to academic success," explained Head of Student Affairs, Ms. Grace Wanjiku. "Through our guidance and counselling program, we ensure that every student has the support they need to thrive both academically and personally."</p>
       
-      <p>The event saw participation from over 800 students across all departments, with positive feedback highlighting the practical value of the sessions. Guest speakers included clinical psychologists, career coaches, and successful alumni who shared their experiences and insights.</p>
+      <p>The event saw participation from over 800 trainees across all departments, with positive feedback highlighting the practical value of the sessions. Guest speakers included clinical psychologists, career coaches, and successful alumni who shared their experiences and insights.</p>
       
       <p>Key highlights from the day included:</p>
       <ul>
         <li>150+ individual counselling sessions conducted</li>
         <li>20 group workshops with average 15 participants each</li>
-        <li>Career guidance sessions for all final-year students</li>
+        <li>Career guidance sessions for all final-year trainees</li>
         <li>Mental health screening for early intervention</li>
         <li>Formation of 12 peer support groups across departments</li>
       </ul>
       
-      <p>The college's commitment to holistic education includes regular counselling services, study groups, and wellness programs throughout the academic year. Students can access confidential counselling services every weekday at the Student Wellness Center.</p>
+      <p>The college's commitment to holistic education includes regular counselling services, study groups, and wellness programs throughout the academic year. trainees can access confidential counselling services every weekday at the Student Wellness Center.</p>
       
-      <p>"The response from students has been overwhelmingly positive," noted Senior Counsellor Dr. Peter Kamau. "Many students reported feeling more confident about their academic journey and personal development after participating in the day's activities."</p>
+      <p>"The response from trainees has been overwhelmingly positive," noted Senior Counsellor Dr. Peter Kamau. "Many trainees reported feeling more confident about their academic journey and personal development after participating in the day's activities."</p>
     `,
     imageUrl: "/images/newsevents/guidancecounselling/guidance4.jpeg",
     images: [
@@ -819,7 +847,7 @@ const mockNews = [
   {
     id: "3",
     title: "New ICT Laboratory Equipment Installation Complete",
-    excerpt: "State-of-the-art computer laboratory with 50 modern workstations enhances practical learning for ICT students.",
+    excerpt: "State-of-the-art computer laboratory with 50 modern workstations enhances practical learning for ICT trainees.",
     content: `
       <p>Kongoni Technical & Vocational Training College has successfully completed the installation of cutting-edge equipment in our expanded ICT laboratory facility.</p>
       
@@ -833,7 +861,7 @@ const mockNews = [
         <li>Air conditioning and ergonomic furniture</li>
       </ul>
       
-      <p>This investment represents our commitment to providing students with industry-standard facilities that prepare them for the modern workplace.</p>
+      <p>This investment represents our commitment to providing trainees with industry-standard facilities that prepare them for the modern workplace.</p>
     `,
     imageUrl: "/images/departments/ict/ict1.jpg",
     images: [
@@ -854,7 +882,7 @@ const mockNews = [
   {
     id: "4",
     title: "Automotive Workshop Receives Major Equipment Upgrade",
-    excerpt: "New diagnostic equipment and vehicle lifts enhance hands-on training for automotive students.",
+    excerpt: "New diagnostic equipment and vehicle lifts enhance hands-on training for automotive trainees.",
     content: `
       <p>Our automotive department has received a significant upgrade with new equipment worth over 2 million Kenyan Shillings.</p>
       
@@ -867,7 +895,7 @@ const mockNews = [
         <li>Wheel alignment machines</li>
       </ul>
       
-      <p>This upgrade ensures our students learn on equipment they'll encounter in modern automotive workshops.</p>
+      <p>This upgrade ensures our trainees learn on equipment they'll encounter in modern automotive workshops.</p>
     `,
     imageUrl: "/images/departments/automotive/automotive1.jpg",
     images: [
@@ -887,9 +915,9 @@ const mockNews = [
   {
     id: "5",
     title: "Student Entrepreneurship Week Showcases Innovation",
-    excerpt: "Students display their business ideas and innovations during the annual entrepreneurship week celebration.",
+    excerpt: "trainees display their business ideas and innovations during the annual entrepreneurship week celebration.",
     content: `
-      <p>The annual Student Entrepreneurship Week showcased the innovative spirit of our students across all departments.</p>
+      <p>The annual Student Entrepreneurship Week showcased the innovative spirit of our trainees across all departments.</p>
       
       <p>Highlights included:</p>
       <ul>
@@ -917,7 +945,7 @@ const mockNews = [
     category: "Events",
     eventDate: "2024-05-25",
     location: "Main Campus Hall",
-    tags: ["entrepreneurship", "innovation", "business", "students", "competition"]
+    tags: ["entrepreneurship", "innovation", "business", "trainees", "competition"]
   }
 ];
 
