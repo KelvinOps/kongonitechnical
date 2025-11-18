@@ -33,7 +33,7 @@ const mockNews = [
       <li>We had different cultural groups represented various Kenyan communities</li>
       <li>Performances on traditional dance performances throughout the day</li>
       <li>Drama and spoken word presentations</li>
-      <li>8 live music performances featuring traditional and fusion genres</li>
+      <li>live music performances featuring traditional and fusion genres</li>
     </ul>
     
     <p><strong>Impact and Community Building:</strong></p>
