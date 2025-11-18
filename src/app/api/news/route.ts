@@ -3,6 +3,120 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Complete mock news data - synchronized with main news route
 const mockNews = [
+
+  {
+  id: "26",
+  title: "Kongoni TVC Cultural Day 2025 - Celebrating Heritage, Unity & Talent",
+  excerpt: "Kongoni Technical and Vocational College hosted a spectacular Cultural Day celebration featuring traditional dances, drama, spoken word, cultural fashion parade, local cuisine exhibitions, and vibrant music performances that brought Kenya's rich heritage to life.",
+  content: `
+    <p>On November 7th, 2025, Kongoni Technical & Vocational Training College transformed its grounds into a vibrant celebration of Kenyan culture during the highly anticipated Cultural Day 2025.</p>
+    
+    <p>The event brought together students, staff, and guests in a spectacular showcase of Kenya's diverse cultural heritage, demonstrating the college's commitment to celebrating unity in diversity while nurturing talent and creativity among students.</p>
+    
+    <p><strong>Event Highlights:</strong></p>
+    <ul>
+      <li><strong>✨ Traditional Dances</strong> - Students performed authentic traditional dances from various Kenyan communities, showcasing the rich diversity of our cultural heritage through carefully choreographed routines that captivated the audience.</li>
+      <li><strong>🎭 Drama & Spoken Word</strong> - Talented performers delivered powerful dramatic presentations and thought-provoking spoken word poetry that addressed contemporary issues while celebrating cultural identity.</li>
+      <li><strong>👗 Cultural Fashion Parade</strong> - A stunning display of traditional attire from different Kenyan communities, with students modeling beautifully crafted traditional garments that told stories of heritage and craftsmanship.</li>
+      <li><strong>🍲 Local Cuisine Exhibitions</strong> - Food enthusiasts showcased authentic Kenyan dishes and delicacies, offering guests a delicious journey through Kenya's culinary traditions.</li>
+      <li><strong>🎶 Music & Performances</strong> - Live musical performances featuring traditional instruments and contemporary interpretations of cultural music kept the energy high throughout the day.</li>
+    </ul>
+    
+    <p><strong>Celebrating Unity in Diversity:</strong></p>
+    <p>The Cultural Day served as a powerful reminder of Kenya's beautiful diversity and the strength found in unity. Students from various backgrounds came together to celebrate each other's cultures, fostering mutual respect, understanding, and appreciation for different traditions.</p>
+    
+    <p>"This event exemplifies what makes Kongoni Technical College special - our ability to celebrate our differences while building a united community," said Principal Judith Akaranga during the opening ceremony. "Cultural Day is not just about entertainment; it's about understanding, respect, and building bridges between communities."</p>
+    
+    <p><strong>Student Participation and Talent:</strong></p>
+    <ul>
+      <li>Trainees actively participated in various performances and exhibitions</li>
+      <li>We had different cultural groups represented various Kenyan communities</li>
+      <li>Performances on traditional dance performances throughout the day</li>
+      <li>Drama and spoken word presentations</li>
+      <li>8 live music performances featuring traditional and fusion genres</li>
+    </ul>
+    
+    <p><strong>Impact and Community Building:</strong></p>
+    <p>The Cultural Day created lasting memories and strengthened bonds within the college community. Students who might not have previously interacted found common ground through cultural exchange, while others gained new appreciation for traditions different from their own.</p>
+    
+    <p>"Participating in Cultural Day helped me understand and appreciate cultures I knew little about," shared Mary Wanjiru, a Fashion & Design student who participated in the cultural fashion parade. "It's amazing how much we can learn from each other when we take time to celebrate our heritage together."</p>
+    
+    <p><strong>Organizational Excellence:</strong></p>
+    <p>The success of Cultural Day 2025 was made possible through meticulous planning and coordination by the organizing committee, comprising dedicated staff members and student leaders. The event ran smoothly from start to finish, with seamless transitions between performances and activities.</p>
+    
+    <p>Special recognition goes to:</p>
+    <ul>
+      <li>The Student Council for coordinating student participation</li>
+      <li>Department heads for supporting their students' involvement</li>
+      <li>The Food & Beverage Department for coordinating the cuisine exhibition</li>
+      <li>The Fashion & Design Department for organizing the cultural fashion parade</li>
+      <li>All student performers who practiced tirelessly to perfect their presentations</li>
+      <li>Staff members who volunteered their time and expertise</li>
+    </ul>
+    
+    <p><strong>Preserving Heritage for Future Generations:</strong></p>
+    <p>Cultural Day serves an important educational purpose beyond entertainment. It provides a platform for younger generations to learn about and appreciate traditional practices, ensuring that cultural heritage is preserved and passed on. The event included storytelling sessions where elders from the community shared the historical significance of various cultural practices.</p>
+    
+    <p>"Events like these are crucial for keeping our traditions alive," noted Deputy Principal for Student Affairs. "In our rapidly modernizing world, it's essential that young people remain connected to their cultural roots while embracing progress and innovation."</p>
+    
+    <p><strong>Media Coverage and Documentation:</strong></p>
+    <p>The entire event was professionally documented through photography and videography, with highlights available on the college's YouTube channel. The vibrant images and video footage serve as a lasting record of this memorable celebration and will be used for promotional purposes and future reference.</p>
+    
+    <p><strong>Looking Forward:</strong></p>
+    <p>The overwhelming success of Cultural Day 2025 has set a high standard for future events. The college is committed to making this an annual tradition that continues to grow and evolve, incorporating more cultural expressions and reaching even more participants.</p>
+    
+    <p>"This is just the beginning," said Cultural Day Coordinator James Ochieng. "We're already planning for next year's event, and we have exciting ideas to make it even bigger and better. The enthusiasm shown by students and staff has been incredible."</p>
+    
+    <p>Cultural Day 2025 concluded with a unity ceremony where representatives from all participating cultural groups came together for a symbolic gesture of unity and friendship, reminding everyone that while we celebrate our differences, we are one Kongoni family.</p>
+    
+    <p><strong>Gratitude and Acknowledgments:</strong></p>
+    <p>The college extends heartfelt gratitude to all students, staff, organizers, performers, and guests who contributed to making Cultural Day 2025 an unforgettable success. Your energy, creativity, teamwork, and dedication brought Kenya's rich heritage to life and strengthened our unity as a college community.</p>
+    
+    <p>Special thanks to our sponsors and partners who supported the event, the catering team who ensured everyone was well-fed throughout the day, the sound and lighting crew who created the perfect ambiance, and the security team who ensured everyone's safety.</p>
+    
+    <p>The memories created on November 7th, 2025, will be cherished for years to come. Until next year's Cultural Day, we carry with us the spirit of unity, the pride of heritage, and the joy of celebration that made this day truly special.</p>
+    
+    <p><strong>🎉 Thank you for celebrating with us! 🎉</strong></p>
+  `,
+  imageUrl: "/images/newsevents/culturalday/cultural10.jpeg",
+  images: [
+    "/images/newsevents/culturalday/cultural1.jpeg",
+    "/images/newsevents/culturalday/cultural2.jpeg",
+    "/images/newsevents/culturalday/cultural3.jpeg",
+    "/images/newsevents/culturalday/cultural4.jpeg",
+    "/images/newsevents/culturalday/cultural5.jpeg",
+    "/images/newsevents/culturalday/cultural6.jpeg",
+    "/images/newsevents/culturalday/cultural7.jpeg",
+    "/images/newsevents/culturalday/cultural8.jpeg",
+    "/images/newsevents/culturalday/cultural9.jpeg",
+    "/images/newsevents/culturalday/cultural10.jpeg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=duMxys0H_yY", 
+  videoThumbnail: "/images/newsevents/culturalday/cultural10.jpeg",
+  featured: true,
+  createdAt: "2025-11-07T16:00:00Z",
+  updatedAt: "2025-11-07T16:00:00Z",
+  author: "Student Affairs Department",
+  category: "Events",
+  eventDate: "2025-11-07",
+  location: "Kongoni Technical and Vocational College Grounds",
+  tags: [
+    "cultural-day",
+    "heritage",
+    "traditional-dances",
+    "drama",
+    "spoken-word",
+    "fashion-parade",
+    "local-cuisine",
+    "music",
+    "performances",
+    "unity-in-diversity",
+    "kenyan-culture",
+    "student-talent",
+    "celebration",
+    "community-event"
+  ]
+},
   {
     id: "25",
     title: "Dual TVET Workshop - Round 2 Dualization Training for Rift Valley Region",
@@ -64,16 +178,16 @@ const mockNews = [
       
       <p>The knowledge and skills gained from this workshop will be cascaded to all training staff, ensuring consistent implementation of the dual TVET model across all departments at Kongoni Technical and Vocational College.</p>
     `,
-    imageUrl: "/images/newsevents/dualtvettworkshop/dualworkshop1.jpg",
+    imageUrl: "/images/newsevents/dualtvetworkshop/dualworkshop7.jpeg",
     images: [
-      "/images/newsevents/dualtvettworkshop/dualworkshop1.jpg",
-      "/images/newsevents/dualtvettworkshop/dualworkshop2.jpg",
-      "/images/newsevents/dualtvettworkshop/dualworkshop3.jpg",
-      "/images/newsevents/dualtvettworkshop/dualworkshop4.jpg",
-      "/images/newsevents/dualtvettworkshop/dualworkshop5.jpg",
-      "/images/newsevents/dualtvettworkshop/dualworkshop6.jpg"
+      "/images/newsevents/dualtvetworkshop/dualworkshop1.jpeg",
+      "/images/newsevents/dualtvetworkshop/dualworkshop2.jpeg",
+      "/images/newsevents/dualtvetworkshop/dualworkshop3.jpeg",
+      "/images/newsevents/dualtvetworkshop/dualworkshop4.jpeg",
+      "/images/newsevents/dualtvetworkshop/dualworkshop5.jpeg",
+      "/images/newsevents/dualtvetworkshop/dualworkshop6.jpeg"
     ],
-    videoThumbnail: "/images/newsevents/dualtvettworkshop/dualworkshop1.jpg",
+    videoThumbnail: "/images/newsevents/dualtvetworkshop/dualworkshop4.jpeg",
     featured: true,
     createdAt: "2025-10-24T17:00:00Z",
     updatedAt: "2025-10-24T17:00:00Z",
@@ -125,19 +239,19 @@ const mockNews = [
       
       <p>The event concluded with an awards ceremony where champions received their trophies amid cheers from fellow students.</p>
     `,
-    imageUrl: "/images/newsevents/kattigames/kattigames9.jpeg",
+    imageUrl: "/images/newsevents/kattigames/kattigames9.jpg",
     images: [
-      "/images/newsevents/kattigames/kattigames1.jpeg",
-      "/images/newsevents/kattigames/kattigames2.jpeg",
-      "/images/newsevents/kattigames/kattigames3.jpeg",
-      "/images/newsevents/kattigames/kattigames4.jpeg",
-      "/images/newsevents/kattigames/kattigamesladies5.jpeg",
-      "/images/newsevents/kattigames/kattigamesladies6.jpeg",
-      "/images/newsevents/kattigames/kattigamesladies7.jpeg",
-      "/images/newsevents/kattigames/kattigamesladies8.jpeg",
-      "/images/newsevents/kattigames/kattigames9.jpeg"
+      "/images/newsevents/kattigames/kattigames1.jpg",
+      "/images/newsevents/kattigames/kattigames2.jpg",
+      "/images/newsevents/kattigames/kattigames3.jpg",
+      "/images/newsevents/kattigames/kattigames4.jpg",
+      "/images/newsevents/kattigames/kattigamesladies5.jpg",
+      "/images/newsevents/kattigames/kattigamesladies6.jpg",
+      "/images/newsevents/kattigames/kattigamesladies7.jpg",
+      "/images/newsevents/kattigames/kattigamesladies8.jpg",
+      "/images/newsevents/kattigames/kattigames9.jpg"
     ],
-    videoThumbnail: "/images/newsevents/kattigames/kattigames (1).jpeg",
+    videoThumbnail: "/images/newsevents/kattigames/kattigames9.jpg",
     featured: true,
     createdAt: "2025-10-10T16:00:00Z",
     updatedAt: "2025-10-10T16:00:00Z",
@@ -179,24 +293,21 @@ const mockNews = [
       
       <p>Deputy Principal Ezra Orina  emphasized: "Today we plant more than trees - we plant hope, nutrition, and a sustainable future for these children."</p>
     `,
-    imageUrl: "/images/newsevents/treeplanting/nangilitree (48).jpeg",
+    imageUrl: "/images/newsevents/treeplanting/nangilitree2.jpg",
     images: [
-      "/images/newsevents/treeplanting/nangilitree (59).jpeg",
-      "/images/newsevents/treeplanting/nangilitree (60).jpeg",
-      "/images/newsevents/treeplanting/nangilitree (61).jpeg",
-      "/images/newsevents/treeplanting/nangilitree (62).jpeg",
-      "/images/newsevents/treeplanting/nangilitree (63).jpeg",
-      "/images/newsevents/treeplanting/nangilitreeselect1.jpeg",
-      "/images/newsevents/treeplanting/nangilitreeselect2.jpeg",
-      "/images/newsevents/treeplanting/nangilitreeselect3.jpeg",
-      "/images/newsevents/treeplanting/nangilitreeselect4.jpeg",
-      "/images/newsevents/treeplanting/nangilitreeselect5.jpeg",
-      "/images/newsevents/treeplanting/nangilitreeselect6.jpeg",
-      "/images/newsevents/treeplanting/nangilitreeselect7.jpeg",
-      "/images/newsevents/treeplanting/nangilitreeselect8.jpeg"
+      "/images/newsevents/treeplanting/nangilitree3.jpg",
+      "/images/newsevents/treeplanting/nangilitree7.jpg",
+      "/images/newsevents/treeplanting/nangilitree49.jpg",
+      "/images/newsevents/treeplanting/nangilitree48.jpg",
+      "/images/newsevents/treeplanting/nangilitree1.jpg",
+      "/images/newsevents/treeplanting/nangilitree4.jpg",
+      "/images/newsevents/treeplanting/nangilitreeselect5.jpg",
+      "/images/newsevents/treeplanting/nangilitreeselect6.jpg",
+      "/images/newsevents/treeplanting/nangilitreeselect7.jpg",
+      "/images/newsevents/treeplanting/nangilitreeselect8.jpg"
     ],
     videoUrl: "https://www.youtube.com/watch?v=mazingira_day_2024",
-    videoThumbnail: "/images/newsevents/treeplanting/nangilitree (48).jpeg",
+    videoThumbnail: "/images/newsevents/treeplanting/nangilitree7.jpg",
     featured: true,
     createdAt: "2025-10-10T14:00:00Z",
     updatedAt: "2025-10-10T14:00:00Z",
