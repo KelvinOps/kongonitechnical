@@ -116,72 +116,83 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   };
 
   // Header with logos
-  doc.setFillColor(37, 99, 235);
-  doc.rect(0, 0, pageWidth, 45, 'F');
-  
-  // Add left logo (Kongoni Logo)
-  if (leftLogoBase64) {
-    try {
-      doc.addImage(leftLogoBase64, 'PNG', 10, 5, 25, 25);
-    } catch (error) {
-      console.error('Error adding left logo:', error);
-      // Fallback to placeholder
-      doc.setFillColor(255, 255, 255);
-      doc.circle(22, 17, 12, 'F');
-      doc.setTextColor(37, 99, 235);
-      doc.setFontSize(8);
-      doc.setFont('helvetica', 'bold');
-      doc.text('LOGO', 22, 19, { align: 'center' });
-    }
-  } else {
-    // Placeholder if logo not found
+  // Replace the header with logos section in your generateApplicationPDF function
+// Starting from line ~79 to approximately line ~134
+
+// Header with logos
+doc.setFillColor(37, 99, 235);
+doc.rect(0, 0, pageWidth, 50, 'F'); // Increased header height from 45 to 50
+
+// Logo dimensions - increased for better visibility
+const logoWidth = 35;  // Increased from 25
+const logoHeight = 35; // Increased from 25
+const logoMarginX = 15; // Horizontal margin from edges
+const logoY = 7.5; // Vertical position - centered in 50px header
+
+// Add left logo (MOE Logo - Ministry of Education)
+if (leftLogoBase64) {
+  try {
+    doc.addImage(leftLogoBase64, 'PNG', logoMarginX, logoY, logoWidth, logoHeight);
+  } catch (error) {
+    console.error('Error adding left logo:', error);
+    // Fallback to placeholder
     doc.setFillColor(255, 255, 255);
-    doc.circle(22, 17, 12, 'F');
+    doc.circle(logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
     doc.setTextColor(37, 99, 235);
     doc.setFontSize(8);
     doc.setFont('helvetica', 'bold');
-    doc.text('LOGO', 22, 19, { align: 'center' });
+    doc.text('MOE', logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
   }
-  
-  // Add right logo (MOE Logo)
-  if (rightLogoBase64) {
-    try {
-      doc.addImage(rightLogoBase64, 'JPEG', pageWidth - 35, 5, 25, 25);
-    } catch (error) {
-      console.error('Error adding right logo:', error);
-      // Fallback to placeholder
-      doc.setFillColor(255, 255, 255);
-      doc.circle(pageWidth - 22, 17, 12, 'F');
-      doc.setTextColor(37, 99, 235);
-      doc.setFontSize(8);
-      doc.setFont('helvetica', 'bold');
-      doc.text('LOGO', pageWidth - 22, 19, { align: 'center' });
-    }
-  } else {
-    // Placeholder if logo not found
-    doc.setFillColor(255, 255, 255);
-    doc.circle(pageWidth - 22, 17, 12, 'F');
-    doc.setTextColor(37, 99, 235);
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'bold');
-    doc.text('LOGO', pageWidth - 22, 19, { align: 'center' });
-  }
-  
-  // Center text
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(16);
-  doc.setFont('helvetica', 'bold');
-  doc.text('KONGONI TECHNICAL AND', pageWidth / 2, 12, { align: 'center' });
-  doc.text('VOCATIONAL COLLEGE', pageWidth / 2, 19, { align: 'center' });
-  
+} else {
+  // Placeholder if logo not found
+  doc.setFillColor(255, 255, 255);
+  doc.circle(logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
+  doc.setTextColor(37, 99, 235);
   doc.setFontSize(8);
-  doc.setFont('helvetica', 'normal');
-  doc.text('P.O Box 45 - 30205, Matunda', pageWidth / 2, 26, { align: 'center' });
-  doc.text('Along Eldoret - Kitale Road', pageWidth / 2, 31, { align: 'center' });
-  doc.text('Tel: 0788 070 303 | Email: kongonitvc@gmail.com', pageWidth / 2, 36, { align: 'center' });
-  
-  yPos = 55;
-  
+  doc.setFont('helvetica', 'bold');
+  doc.text('MOE', logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
+}
+
+// Add right logo (Kongoni Logo - Institution Logo)
+if (rightLogoBase64) {
+  try {
+    doc.addImage(rightLogoBase64, 'JPEG', pageWidth - logoMarginX - logoWidth, logoY, logoWidth, logoHeight);
+  } catch (error) {
+    console.error('Error adding right logo:', error);
+    // Fallback to placeholder
+    doc.setFillColor(255, 255, 255);
+    doc.circle(pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
+    doc.setTextColor(37, 99, 235);
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'bold');
+    doc.text('KTVC', pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
+  }
+} else {
+  // Placeholder if logo not found
+  doc.setFillColor(255, 255, 255);
+  doc.circle(pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
+  doc.setTextColor(37, 99, 235);
+  doc.setFontSize(8);
+  doc.setFont('helvetica', 'bold');
+  doc.text('KTVC', pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
+}
+
+// Center text - adjusted vertical positions for taller header
+doc.setTextColor(255, 255, 255);
+doc.setFontSize(16);
+doc.setFont('helvetica', 'bold');
+doc.text('KONGONI TECHNICAL AND', pageWidth / 2, 15, { align: 'center' });
+doc.text('VOCATIONAL COLLEGE', pageWidth / 2, 22, { align: 'center' });
+
+doc.setFontSize(8);
+doc.setFont('helvetica', 'normal');
+doc.text('P.O Box 45 - 30205, Matunda', pageWidth / 2, 30, { align: 'center' });
+doc.text('Along Eldoret - Kitale Road', pageWidth / 2, 35, { align: 'center' });
+doc.text('Tel: 0788 070 303 | Email: kongonitvc@gmail.com', pageWidth / 2, 40, { align: 'center' });
+
+yPos = 60;
+
+// Adjusted starting position after taller header
   // Title
   doc.setTextColor(0, 0, 0);
   doc.setFontSize(14);
