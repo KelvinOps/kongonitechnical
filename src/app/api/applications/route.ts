@@ -89,7 +89,7 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   
   try {
     const leftLogoPath = path.join(process.cwd(), 'public', 'images', 'moelogo.png');
-    const rightLogoPath = path.join(process.cwd(), 'public', 'images', 'kongonilogo.jpg');
+    const rightLogoPath = path.join(process.cwd(), 'public', 'images', 'kongonilogo.png');
     
     if (fs.existsSync(leftLogoPath)) {
       const leftLogoBuffer = fs.readFileSync(leftLogoPath);
@@ -176,7 +176,7 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   
   doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
-  doc.text('P.O Box 219 - 30303, Matunda', pageWidth / 2, 26, { align: 'center' });
+  doc.text('P.O Box 45 - 30205, Matunda', pageWidth / 2, 26, { align: 'center' });
   doc.text('Along Eldoret - Kitale Road', pageWidth / 2, 31, { align: 'center' });
   doc.text('Tel: 0788 070 303 | Email: kongonitvc@gmail.com', pageWidth / 2, 36, { align: 'center' });
   
