@@ -92,7 +92,7 @@ const mockNews = [
     <p><strong>Looking Forward:</strong></p>
     <p>The overwhelming success of Cultural Day 2025 has set a high standard for future events. The college is committed to making this an annual tradition that continues to grow and evolve, incorporating more cultural expressions and reaching even more participants.</p>
     
-    <p>"This is just the beginning," said Cultural Day Coordinator James Ochieng. "We're already planning for next year's event, and we have exciting ideas to make it even bigger and better. The enthusiasm shown by trainees and staff has been incredible."</p>
+    <p>"This is just the beginning," said Dean of Trainees Kevin Masinde. "We're already planning for next year's event, and we have exciting ideas to make it even bigger and better. The enthusiasm shown by trainees and staff has been incredible."</p>
     
     <p>Cultural Day 2025 concluded with a unity ceremony where representatives from all participating cultural groups came together for a symbolic gesture of unity and friendship, reminding everyone that while we celebrate our differences, we are one Kongoni family.</p>
     

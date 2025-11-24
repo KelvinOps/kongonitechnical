@@ -505,7 +505,7 @@ export async function POST(request: NextRequest) {
 
     // Send email to registry with PDF form and documents
     const registryMailOptions: nodemailer.SendMailOptions = {
-      from: `"Kongoni College Applications" <${process.env.GMAIL_USER}>`,
+      from: `"Kongoni Technical & Vocational College Applications" <${process.env.GMAIL_USER}>`,
       to: 'registry@kongonitechnical.ac.ke',
       subject: `New Application: ${data.firstName} ${data.surname} - ${data.courseNameFull}`,
       html: `
@@ -540,9 +540,9 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to applicant
     const applicantMailOptions: nodemailer.SendMailOptions = {
-      from: `"Kongoni Technical College" <${process.env.GMAIL_USER}>`,
+      from: `"Kongoni Technical & Vocational College" <${process.env.GMAIL_USER}>`,
       to: data.emailAddress as string,
-      subject: 'Application Received - Kongoni Technical College',
+      subject: 'Application Received - Kongoni Technical & Vocational College',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background-color: #2563eb; color: white; padding: 20px; text-align: center;">
