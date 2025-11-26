@@ -81,9 +81,10 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   let yPos = 20;
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
-  const margin = 15; // Reduced margin
-  const lineHeight = 6; // Reduced line height
-  const compactLineHeight = 5; // Even more compact for dense sections
+  const margin = 15;
+  const lineHeight = 6;
+  const compactLineHeight = 5;
+  const labelValueSpacing = 5; // Added spacing between label and value
 
   // Load logos (keep your existing logo code)
   let leftLogoBase64 = '';
@@ -116,9 +117,9 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
     return false;
   };
 
-  // Compact header
+  // Compact header (your existing header code)
   doc.setFillColor(37, 99, 235);
-  doc.rect(0, 0, pageWidth, 40, 'F'); // Reduced header height
+  doc.rect(0, 0, pageWidth, 40, 'F');
 
   const logoWidth = 25;
   const logoHeight = 18;
@@ -154,7 +155,7 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   doc.text('P.O Box 45 - 30205, Matunda', pageWidth / 2, 25, { align: 'center' });
   doc.text('Tel: 0788 070 303 | Email: kongonitvc@gmail.com', pageWidth / 2, 30, { align: 'center' });
 
-  yPos = 45; // Start content closer to header
+  yPos = 45;
 
   // Title
   doc.setTextColor(0, 0, 0);
@@ -180,7 +181,7 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
     doc.setTextColor(0, 0, 0);
   };
 
-  // Helper function to add compact field
+  // UPDATED: Helper function to add compact field with proper spacing
   const addField = (label: string, value: string) => {
     checkNewPage(lineHeight);
     doc.setFontSize(8);
@@ -190,29 +191,29 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
     const textWidth = doc.getTextWidth(`${label}: `);
     
     // Handle long values by splitting text
-    const maxWidth = pageWidth - margin - (margin + textWidth + 5);
+    const maxWidth = pageWidth - margin - (margin + textWidth + labelValueSpacing + 5);
     const valueLines = doc.splitTextToSize(value || 'N/A', maxWidth);
     
     if (valueLines.length > 1) {
-      doc.text(valueLines[0], margin + textWidth + 3, yPos);
+      doc.text(valueLines[0], margin + textWidth + labelValueSpacing, yPos);
       yPos += compactLineHeight;
       for (let i = 1; i < valueLines.length; i++) {
         checkNewPage(compactLineHeight);
-        doc.text(valueLines[i], margin + 5, yPos);
+        doc.text(valueLines[i], margin + textWidth + labelValueSpacing, yPos);
         yPos += compactLineHeight;
       }
     } else {
-      doc.text(value || 'N/A', margin + textWidth + 3, yPos);
+      doc.text(value || 'N/A', margin + textWidth + labelValueSpacing, yPos);
       yPos += lineHeight;
     }
   };
 
-  // Helper function to add compact two-column field
+  // UPDATED: Helper function to add compact two-column field with proper spacing
   const addTwoColumnField = (label1: string, value1: string, label2: string, value2: string) => {
     checkNewPage(lineHeight);
     doc.setFontSize(8);
     const midPoint = pageWidth / 2;
-    const columnWidth = (pageWidth - (2 * margin)) / 2 - 5;
+    const columnWidth = (pageWidth - (2 * margin)) / 2 - 10; // Reduced column width to accommodate spacing
     
     // Left column
     doc.setFont('helvetica', 'bold');
@@ -220,8 +221,8 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
     doc.setFont('helvetica', 'normal');
     const textWidth1 = doc.getTextWidth(`${label1}: `);
     
-    const value1Lines = doc.splitTextToSize(value1 || 'N/A', columnWidth - textWidth1);
-    doc.text(value1Lines[0], margin + textWidth1 + 3, yPos);
+    const value1Lines = doc.splitTextToSize(value1 || 'N/A', columnWidth - textWidth1 - labelValueSpacing);
+    doc.text(value1Lines[0], margin + textWidth1 + labelValueSpacing, yPos);
     
     // Right column
     doc.setFont('helvetica', 'bold');
@@ -229,8 +230,8 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
     doc.setFont('helvetica', 'normal');
     const textWidth2 = doc.getTextWidth(`${label2}: `);
     
-    const value2Lines = doc.splitTextToSize(value2 || 'N/A', columnWidth - textWidth2);
-    doc.text(value2Lines[0], midPoint + textWidth2 + 3, yPos);
+    const value2Lines = doc.splitTextToSize(value2 || 'N/A', columnWidth - textWidth2 - labelValueSpacing);
+    doc.text(value2Lines[0], midPoint + textWidth2 + labelValueSpacing, yPos);
     
     // Handle multi-line values
     const maxLines = Math.max(value1Lines.length, value2Lines.length);
@@ -239,10 +240,10 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
       for (let i = 1; i < maxLines; i++) {
         checkNewPage(compactLineHeight);
         if (value1Lines[i]) {
-          doc.text(value1Lines[i], margin + 5, yPos);
+          doc.text(value1Lines[i], margin + textWidth1 + labelValueSpacing, yPos);
         }
         if (value2Lines[i]) {
-          doc.text(value2Lines[i], midPoint + 5, yPos);
+          doc.text(value2Lines[i], midPoint + textWidth2 + labelValueSpacing, yPos);
         }
         yPos += compactLineHeight;
       }
@@ -262,7 +263,7 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   
   // Combine address fields
   const fullAddress = `${data.postalAddress}${data.postalCode ? ' - ' + data.postalCode : ''}, ${data.town}, ${data.county}`;
-  addField('Address', fullAddress);
+  addField('Postal Address', fullAddress);
   
   addTwoColumnField('Sub-County', data.subCounty, 'Ward', data.ward || 'N/A');
   
@@ -274,10 +275,10 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
     addField('Village', data.village);
   }
   
-  addTwoColumnField('Mobile', data.mobileNumber, 'Email', data.emailAddress);
+  addTwoColumnField('Mobile Number', data.mobileNumber, 'Email Address', data.emailAddress);
   
   if (data.nemisCode || data.kraPin) {
-    addTwoColumnField('NEMIS', data.nemisCode || 'N/A', 'KRA PIN', data.kraPin || 'N/A');
+    addTwoColumnField('NEMIS Code', data.nemisCode || 'N/A', 'KRA PIN', data.kraPin || 'N/A');
   }
 
   yPos += 3;
@@ -285,21 +286,21 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   // SECTION B: ACADEMIC QUALIFICATIONS - More compact table
   addSection('SECTION B: ACADEMIC QUALIFICATIONS');
   
-  doc.setFontSize(7); // Smaller font for table
+  doc.setFontSize(7);
   
-  // Compact table header
+  // UPDATED: Compact table header with better spacing
   const col1X = margin;
-  const col2X = margin + 25;
-  const col3X = margin + 70;
-  const col4X = margin + 100;
-  const col5X = margin + 120;
+  const col2X = margin + 30; // Increased spacing
+  const col3X = margin + 75; // Increased spacing
+  const col4X = margin + 110; // Increased spacing
+  const col5X = margin + 135; // Increased spacing
   
   doc.setFont('helvetica', 'bold');
   doc.text('Exam', col1X, yPos);
   doc.text('School', col2X, yPos);
-  doc.text('Index', col3X, yPos);
+  doc.text('Index No.', col3X, yPos);
   doc.text('Year', col4X, yPos);
-  doc.text('Grade', col5X, yPos);
+  doc.text('Grade/Marks', col5X, yPos);
   yPos += compactLineHeight;
   
   // Add horizontal line
@@ -311,27 +312,27 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   
   // KCSE row
   doc.text('KCSE', col1X, yPos);
-  doc.text(data.kcseSchool || '-', col2X, yPos);
-  doc.text(data.kcseIndex || '-', col3X, yPos);
-  doc.text(data.kcseYear || '-', col4X, yPos);
-  doc.text(data.kcseMeanGrade || '-', col5X, yPos);
+  doc.text(data.kcseSchool || 'Not provided', col2X, yPos);
+  doc.text(data.kcseIndex || 'Not provided', col3X, yPos);
+  doc.text(data.kcseYear || 'Not provided', col4X, yPos);
+  doc.text(data.kcseMeanGrade || 'Not provided', col5X, yPos);
   yPos += compactLineHeight;
   
   // KCPE row
   doc.text('KCPE', col1X, yPos);
-  doc.text(data.kcpeSchool || '-', col2X, yPos);
-  doc.text(data.kcpeIndex || '-', col3X, yPos);
-  doc.text(data.kcpeYear || '-', col4X, yPos);
-  doc.text(data.kcpeMeanGrade || '-', col5X, yPos);
+  doc.text(data.kcpeSchool || 'Not provided', col2X, yPos);
+  doc.text(data.kcpeIndex || 'Not provided', col3X, yPos);
+  doc.text(data.kcpeYear || 'Not provided', col4X, yPos);
+  doc.text(data.kcpeMeanGrade || 'Not provided', col5X, yPos);
   yPos += compactLineHeight;
   
   // College row (if provided)
-  if (data.collegeAttended) {
+  if (data.collegeAttended || data.collegeYear || data.collegeMeanGrade) {
     doc.text('College', col1X, yPos);
-    doc.text(data.collegeAttended, col2X, yPos);
-    doc.text('-', col3X, yPos);
-    doc.text(data.collegeYear || '-', col4X, yPos);
-    doc.text(data.collegeMeanGrade || '-', col5X, yPos);
+    doc.text(data.collegeAttended || 'Not provided', col2X, yPos);
+    doc.text('Not provided', col3X, yPos);
+    doc.text(data.collegeYear || 'Not provided', col4X, yPos);
+    doc.text(data.collegeMeanGrade || 'Not provided', col5X, yPos);
     yPos += compactLineHeight;
   }
   
@@ -341,16 +342,16 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   if (data.sponsorFullName) {
     addSection('SECTION C: SPONSOR/GUARDIAN DETAILS');
     
-    addField('Name', data.sponsorFullName);
+    addField('Full Name', data.sponsorFullName);
     if (data.sponsorIdPassport) {
-      addTwoColumnField('ID/Passport', data.sponsorIdPassport, 'Relationship', data.relationshipToApplicant || 'N/A');
+      addTwoColumnField('ID/Passport No', data.sponsorIdPassport, 'Relationship', data.relationshipToApplicant || 'N/A');
     }
     if (data.sponsorPostalAddress) {
       const sponsorAddress = `${data.sponsorPostalAddress}${data.sponsorTown ? ', ' + data.sponsorTown : ''}`;
-      addField('Address', sponsorAddress);
+      addField('Postal Address', sponsorAddress);
     }
     if (data.sponsorMobile) {
-      addTwoColumnField('Mobile', data.sponsorMobile, 'Email', data.sponsorEmail || 'N/A');
+      addTwoColumnField('Mobile Number', data.sponsorMobile, 'Email Address', data.sponsorEmail || 'N/A');
     }
     if (data.sponsorOccupation) {
       addField('Occupation', data.sponsorOccupation);
@@ -362,11 +363,11 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   // SECTION D: COURSE DETAILS - Compact layout
   addSection('SECTION D: COURSE DETAILS');
   
-  addField('Course', data.courseNameFull);
+  addField('Course Name', data.courseNameFull);
   addTwoColumnField('Level', data.level, 'Intake', data.intake);
-  addTwoColumnField('Type', data.applicationType, 'Duration', data.programmeDuration || 'N/A');
+  addTwoColumnField('Application Type', data.applicationType, 'Duration', data.programmeDuration || 'N/A');
   if (data.examiningBody) {
-    addField('Exam Body', data.examiningBody);
+    addField('Examining Body', data.examiningBody);
   }
   
   yPos += 3;
@@ -381,9 +382,19 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   doc.text(lines, margin, yPos);
   yPos += lines.length * compactLineHeight + 3;
   
-  doc.text(`Applicant: ${data.firstName} ${data.surname}`, margin, yPos);
+  // UPDATED: Declaration fields with proper spacing
+  doc.setFont('helvetica', 'bold');
+  doc.text('Applicant Name:', margin, yPos);
+  doc.setFont('helvetica', 'normal');
+  const applicantTextWidth = doc.getTextWidth('Applicant Name: ');
+  doc.text(`${data.firstName} ${data.surname}`, margin + applicantTextWidth + labelValueSpacing, yPos);
   yPos += compactLineHeight;
-  doc.text(`Date: ${new Date().toLocaleDateString()}`, margin, yPos);
+  
+  doc.setFont('helvetica', 'bold');
+  doc.text('Date:', margin, yPos);
+  doc.setFont('helvetica', 'normal');
+  const dateTextWidth = doc.getTextWidth('Date: ');
+  doc.text(new Date().toLocaleDateString(), margin + dateTextWidth + labelValueSpacing, yPos);
   yPos += 10;
 
   // Compact Footer
