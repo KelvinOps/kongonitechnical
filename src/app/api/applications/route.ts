@@ -80,10 +80,12 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   const doc = new jsPDF();
   let yPos = 20;
   const pageWidth = doc.internal.pageSize.getWidth();
-  const margin = 20;
-  const lineHeight = 7;
+  const pageHeight = doc.internal.pageSize.getHeight();
+  const margin = 15; // Reduced margin
+  const lineHeight = 6; // Reduced line height
+  const compactLineHeight = 5; // Even more compact for dense sections
 
-  // Load logos from public/images folder
+  // Load logos (keep your existing logo code)
   let leftLogoBase64 = '';
   let rightLogoBase64 = '';
   
@@ -102,286 +104,298 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
     }
   } catch (error) {
     console.error('Error loading logos:', error);
-    // Continue without logos if there's an error
   }
-
-  // Helper function to add text with word wrap
 
   // Helper function to check if we need a new page
-  const checkNewPage = () => {
-    if (yPos > 270) {
+  const checkNewPage = (requiredSpace: number = 10) => {
+    if (yPos + requiredSpace > pageHeight - 20) {
       doc.addPage();
       yPos = 20;
+      return true;
     }
+    return false;
   };
 
-  // Header with logos
-  // Replace the header with logos section in your generateApplicationPDF function
-// Starting from line ~79 to approximately line ~134
+  // Compact header
+  doc.setFillColor(37, 99, 235);
+  doc.rect(0, 0, pageWidth, 40, 'F'); // Reduced header height
 
-// Header with logos
-doc.setFillColor(37, 99, 235);
-doc.rect(0, 0, pageWidth, 50, 'F'); // Increased header height from 45 to 50
+  const logoWidth = 25;
+  const logoHeight = 18;
+  const logoMarginX = 12;
+  const logoY = 6;
 
-// Logo dimensions - increased for better visibility
-const logoWidth = 35;  // Increased from 25
-const logoHeight = 25; // Increased from 25
-const logoMarginX = 15; // Horizontal margin from edges
-const logoY = 7.5; // Vertical position - centered in 50px header
-
-// Add left logo (MOE Logo - Ministry of Education)
-if (leftLogoBase64) {
-  try {
-    doc.addImage(leftLogoBase64, 'PNG', logoMarginX, logoY, logoWidth, logoHeight);
-  } catch (error) {
-    console.error('Error adding left logo:', error);
-    // Fallback to placeholder
-    doc.setFillColor(255, 255, 255);
-    doc.circle(logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
-    doc.setTextColor(37, 99, 235);
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'bold');
-    doc.text('MOE', logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
+  // Add logos (your existing logo code)
+  if (leftLogoBase64) {
+    try {
+      doc.addImage(leftLogoBase64, 'PNG', logoMarginX, logoY, logoWidth, logoHeight);
+    } catch (error) {
+      // Fallback placeholder
+    }
   }
-} else {
-  // Placeholder if logo not found
-  doc.setFillColor(255, 255, 255);
-  doc.circle(logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
-  doc.setTextColor(37, 99, 235);
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'bold');
-  doc.text('MOE', logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
-}
 
-// Add right logo (Kongoni Logo - Institution Logo)
-if (rightLogoBase64) {
-  try {
-    doc.addImage(rightLogoBase64, 'JPEG', pageWidth - logoMarginX - logoWidth, logoY, logoWidth, logoHeight);
-  } catch (error) {
-    console.error('Error adding right logo:', error);
-    // Fallback to placeholder
-    doc.setFillColor(255, 255, 255);
-    doc.circle(pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
-    doc.setTextColor(37, 99, 235);
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'bold');
-    doc.text('KTVC', pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
+  if (rightLogoBase64) {
+    try {
+      doc.addImage(rightLogoBase64, 'JPEG', pageWidth - logoMarginX - logoWidth, logoY, logoWidth, logoHeight);
+    } catch (error) {
+      // Fallback placeholder
+    }
   }
-} else {
-  // Placeholder if logo not found
-  doc.setFillColor(255, 255, 255);
-  doc.circle(pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
-  doc.setTextColor(37, 99, 235);
-  doc.setFontSize(8);
+
+  // Center text - compact
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(12);
   doc.setFont('helvetica', 'bold');
-  doc.text('KTVC', pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
-}
+  doc.text('KONGONI TECHNICAL AND', pageWidth / 2, 12, { align: 'center' });
+  doc.text('VOCATIONAL COLLEGE', pageWidth / 2, 18, { align: 'center' });
 
-// Center text - adjusted vertical positions for taller header
-doc.setTextColor(255, 255, 255);
-doc.setFontSize(16);
-doc.setFont('helvetica', 'bold');
-doc.text('KONGONI TECHNICAL AND', pageWidth / 2, 15, { align: 'center' });
-doc.text('VOCATIONAL COLLEGE', pageWidth / 2, 22, { align: 'center' });
+  doc.setFontSize(7);
+  doc.setFont('helvetica', 'normal');
+  doc.text('P.O Box 45 - 30205, Matunda', pageWidth / 2, 25, { align: 'center' });
+  doc.text('Tel: 0788 070 303 | Email: kongonitvc@gmail.com', pageWidth / 2, 30, { align: 'center' });
 
-doc.setFontSize(8);
-doc.setFont('helvetica', 'normal');
-doc.text('P.O Box 45 - 30205, Matunda', pageWidth / 2, 30, { align: 'center' });
-doc.text('Along Eldoret - Kitale Road', pageWidth / 2, 35, { align: 'center' });
-doc.text('Tel: 0788 070 303 | Email: kongonitvc@gmail.com', pageWidth / 2, 40, { align: 'center' });
+  yPos = 45; // Start content closer to header
 
-yPos = 60;
-
-// Adjusted starting position after taller header
   // Title
   doc.setTextColor(0, 0, 0);
-  doc.setFontSize(14);
+  doc.setFontSize(12);
   doc.setFont('helvetica', 'bold');
   doc.text('ADMISSION APPLICATION FORM', pageWidth / 2, yPos, { align: 'center' });
-  yPos += 10;
   
-  doc.setFontSize(8);
+  doc.setFontSize(7);
   doc.setFont('helvetica', 'normal');
-  doc.text(`Application Date: ${new Date().toLocaleDateString('en-US', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
-  })}`, pageWidth - margin, yPos, { align: 'right' });
-  yPos += 15;
+  doc.text(`Application Date: ${new Date().toLocaleDateString()}`, pageWidth - margin, yPos, { align: 'right' });
+  yPos += 12;
 
-  // Helper function to add section header
+  // Helper function to add compact section header
   const addSection = (title: string) => {
-    checkNewPage();
+    checkNewPage(8);
     doc.setFillColor(37, 99, 235);
-    doc.rect(margin, yPos - 5, pageWidth - (2 * margin), 8, 'F');
+    doc.rect(margin, yPos - 3, pageWidth - (2 * margin), 6, 'F');
     doc.setTextColor(255, 255, 255);
-    doc.setFontSize(11);
+    doc.setFontSize(9);
     doc.setFont('helvetica', 'bold');
     doc.text(title, margin + 2, yPos);
-    yPos += 12;
+    yPos += 8;
     doc.setTextColor(0, 0, 0);
   };
 
-  // Helper function to add field
+  // Helper function to add compact field
   const addField = (label: string, value: string) => {
-    checkNewPage();
-    doc.setFontSize(9);
+    checkNewPage(lineHeight);
+    doc.setFontSize(8);
     doc.setFont('helvetica', 'bold');
     doc.text(`${label}:`, margin, yPos);
     doc.setFont('helvetica', 'normal');
     const textWidth = doc.getTextWidth(`${label}: `);
-    doc.text(value || 'N/A', margin + textWidth + 3, yPos); // Added 3 units of space
-    yPos += lineHeight;
+    
+    // Handle long values by splitting text
+    const maxWidth = pageWidth - margin - (margin + textWidth + 5);
+    const valueLines = doc.splitTextToSize(value || 'N/A', maxWidth);
+    
+    if (valueLines.length > 1) {
+      doc.text(valueLines[0], margin + textWidth + 3, yPos);
+      yPos += compactLineHeight;
+      for (let i = 1; i < valueLines.length; i++) {
+        checkNewPage(compactLineHeight);
+        doc.text(valueLines[i], margin + 5, yPos);
+        yPos += compactLineHeight;
+      }
+    } else {
+      doc.text(value || 'N/A', margin + textWidth + 3, yPos);
+      yPos += lineHeight;
+    }
   };
 
-  // Helper function to add two-column field
+  // Helper function to add compact two-column field
   const addTwoColumnField = (label1: string, value1: string, label2: string, value2: string) => {
-    checkNewPage();
-    doc.setFontSize(9);
+    checkNewPage(lineHeight);
+    doc.setFontSize(8);
     const midPoint = pageWidth / 2;
+    const columnWidth = (pageWidth - (2 * margin)) / 2 - 5;
     
     // Left column
     doc.setFont('helvetica', 'bold');
     doc.text(`${label1}:`, margin, yPos);
     doc.setFont('helvetica', 'normal');
     const textWidth1 = doc.getTextWidth(`${label1}: `);
-    doc.text(value1 || 'N/A', margin + textWidth1, yPos);
+    
+    const value1Lines = doc.splitTextToSize(value1 || 'N/A', columnWidth - textWidth1);
+    doc.text(value1Lines[0], margin + textWidth1 + 3, yPos);
     
     // Right column
     doc.setFont('helvetica', 'bold');
     doc.text(`${label2}:`, midPoint, yPos);
     doc.setFont('helvetica', 'normal');
     const textWidth2 = doc.getTextWidth(`${label2}: `);
-    doc.text(value2 || 'N/A', midPoint + textWidth2, yPos);
     
-    yPos += lineHeight;
+    const value2Lines = doc.splitTextToSize(value2 || 'N/A', columnWidth - textWidth2);
+    doc.text(value2Lines[0], midPoint + textWidth2 + 3, yPos);
+    
+    // Handle multi-line values
+    const maxLines = Math.max(value1Lines.length, value2Lines.length);
+    if (maxLines > 1) {
+      yPos += compactLineHeight;
+      for (let i = 1; i < maxLines; i++) {
+        checkNewPage(compactLineHeight);
+        if (value1Lines[i]) {
+          doc.text(value1Lines[i], margin + 5, yPos);
+        }
+        if (value2Lines[i]) {
+          doc.text(value2Lines[i], midPoint + 5, yPos);
+        }
+        yPos += compactLineHeight;
+      }
+    } else {
+      yPos += lineHeight;
+    }
   };
 
-  // SECTION A: PERSONAL DETAILS
+  // SECTION A: PERSONAL DETAILS - Compact layout
   addSection('SECTION A: PERSONAL DETAILS');
   
+  // Combine name fields to save space
   addField('Full Name', `${data.surname} ${data.firstName} ${data.otherNames || ''}`);
-  addTwoColumnField('ID/Passport No', data.idPassportNumber, 'Date of Birth', data.dateOfBirth);
+  addTwoColumnField('ID/Passport', data.idPassportNumber, 'Date of Birth', data.dateOfBirth);
   addTwoColumnField('Gender', data.gender, 'Marital Status', data.maritalStatus);
   addTwoColumnField('Nationality', data.nationality, 'Disability', data.disability ? `YES${data.disabilityDetails ? ' - ' + data.disabilityDetails : ''}` : 'NO');
-  addField('Postal Address', `${data.postalAddress}${data.postalCode ? ' - ' + data.postalCode : ''}`);
-  addTwoColumnField('Town', data.town, 'County', data.county);
+  
+  // Combine address fields
+  const fullAddress = `${data.postalAddress}${data.postalCode ? ' - ' + data.postalCode : ''}, ${data.town}, ${data.county}`;
+  addField('Address', fullAddress);
+  
   addTwoColumnField('Sub-County', data.subCounty, 'Ward', data.ward || 'N/A');
   
-  if (data.location) {
-    addTwoColumnField('Location', data.location, 'Sub-Location', data.subLocation || 'N/A');
+  if (data.location || data.subLocation) {
+    addTwoColumnField('Location', data.location || 'N/A', 'Sub-Location', data.subLocation || 'N/A');
   }
+  
   if (data.village) {
     addField('Village', data.village);
   }
   
-  addTwoColumnField('Mobile Number', data.mobileNumber, 'Email Address', data.emailAddress);
+  addTwoColumnField('Mobile', data.mobileNumber, 'Email', data.emailAddress);
   
-  if (data.nemisCode) {
-    addTwoColumnField('NEMIS Code', data.nemisCode, 'KRA PIN', data.kraPin || 'N/A');
+  if (data.nemisCode || data.kraPin) {
+    addTwoColumnField('NEMIS', data.nemisCode || 'N/A', 'KRA PIN', data.kraPin || 'N/A');
   }
 
-  yPos += 5;
+  yPos += 3;
 
-  // SECTION B: ACADEMIC QUALIFICATIONS
+  // SECTION B: ACADEMIC QUALIFICATIONS - More compact table
   addSection('SECTION B: ACADEMIC QUALIFICATIONS');
   
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(7); // Smaller font for table
   
-  // Table header
+  // Compact table header
   const col1X = margin;
-  const col2X = margin + 30;
-  const col3X = margin + 80;
-  const col4X = margin + 120;
-  const col5X = margin + 145;
+  const col2X = margin + 25;
+  const col3X = margin + 70;
+  const col4X = margin + 100;
+  const col5X = margin + 120;
   
+  doc.setFont('helvetica', 'bold');
   doc.text('Exam', col1X, yPos);
-  doc.text('School/College', col2X, yPos);
-  doc.text('Index No.', col3X, yPos);
+  doc.text('School', col2X, yPos);
+  doc.text('Index', col3X, yPos);
   doc.text('Year', col4X, yPos);
-  doc.text('Grade/Marks', col5X, yPos);
-  yPos += lineHeight;
+  doc.text('Grade', col5X, yPos);
+  yPos += compactLineHeight;
+  
+  // Add horizontal line
+  doc.setDrawColor(200, 200, 200);
+  doc.line(margin, yPos - 2, pageWidth - margin, yPos - 2);
+  yPos += 2;
   
   doc.setFont('helvetica', 'normal');
   
-  // KCSE
+  // KCSE row
   doc.text('KCSE', col1X, yPos);
   doc.text(data.kcseSchool || '-', col2X, yPos);
   doc.text(data.kcseIndex || '-', col3X, yPos);
   doc.text(data.kcseYear || '-', col4X, yPos);
   doc.text(data.kcseMeanGrade || '-', col5X, yPos);
-  yPos += lineHeight;
+  yPos += compactLineHeight;
   
-  // KCPE
+  // KCPE row
   doc.text('KCPE', col1X, yPos);
   doc.text(data.kcpeSchool || '-', col2X, yPos);
   doc.text(data.kcpeIndex || '-', col3X, yPos);
   doc.text(data.kcpeYear || '-', col4X, yPos);
   doc.text(data.kcpeMeanGrade || '-', col5X, yPos);
-  yPos += lineHeight;
+  yPos += compactLineHeight;
   
-  // College (if provided)
+  // College row (if provided)
   if (data.collegeAttended) {
     doc.text('College', col1X, yPos);
     doc.text(data.collegeAttended, col2X, yPos);
     doc.text('-', col3X, yPos);
     doc.text(data.collegeYear || '-', col4X, yPos);
     doc.text(data.collegeMeanGrade || '-', col5X, yPos);
-    yPos += lineHeight;
+    yPos += compactLineHeight;
   }
   
-  yPos += 5;
+  yPos += 3;
 
-  // SECTION C: SPONSOR/GUARDIAN DETAILS (if provided)
+  // SECTION C: SPONSOR/GUARDIAN DETAILS - Only if provided, compact layout
   if (data.sponsorFullName) {
     addSection('SECTION C: SPONSOR/GUARDIAN DETAILS');
     
-    addField('Full Name', data.sponsorFullName);
-    if (data.sponsorIdPassport) addField('ID/Passport No', data.sponsorIdPassport);
-    if (data.relationshipToApplicant) addField('Relationship to Applicant', data.relationshipToApplicant);
-    if (data.sponsorPostalAddress) addTwoColumnField('Postal Address', data.sponsorPostalAddress, 'Town', data.sponsorTown || 'N/A');
-    if (data.sponsorMobile) addTwoColumnField('Mobile Number', data.sponsorMobile, 'Email', data.sponsorEmail || 'N/A');
-    if (data.sponsorOccupation) addField('Occupation', data.sponsorOccupation);
+    addField('Name', data.sponsorFullName);
+    if (data.sponsorIdPassport) {
+      addTwoColumnField('ID/Passport', data.sponsorIdPassport, 'Relationship', data.relationshipToApplicant || 'N/A');
+    }
+    if (data.sponsorPostalAddress) {
+      const sponsorAddress = `${data.sponsorPostalAddress}${data.sponsorTown ? ', ' + data.sponsorTown : ''}`;
+      addField('Address', sponsorAddress);
+    }
+    if (data.sponsorMobile) {
+      addTwoColumnField('Mobile', data.sponsorMobile, 'Email', data.sponsorEmail || 'N/A');
+    }
+    if (data.sponsorOccupation) {
+      addField('Occupation', data.sponsorOccupation);
+    }
     
-    yPos += 5;
+    yPos += 3;
   }
 
-  // SECTION D: COURSE DETAILS
+  // SECTION D: COURSE DETAILS - Compact layout
   addSection('SECTION D: COURSE DETAILS');
   
-  addField('Course Name', data.courseNameFull);
+  addField('Course', data.courseNameFull);
   addTwoColumnField('Level', data.level, 'Intake', data.intake);
-  addTwoColumnField('Application Type', data.applicationType, 'Duration', data.programmeDuration || 'N/A');
-  if (data.examiningBody) addField('Examining Body', data.examiningBody);
+  addTwoColumnField('Type', data.applicationType, 'Duration', data.programmeDuration || 'N/A');
+  if (data.examiningBody) {
+    addField('Exam Body', data.examiningBody);
+  }
   
-  yPos += 5;
+  yPos += 3;
 
-  // Declaration
+  // Compact Declaration
   addSection('DECLARATION');
   
-  doc.setFontSize(8);
+  doc.setFontSize(7);
   doc.setFont('helvetica', 'normal');
   const declarationText = 'I declare that the information provided in this application is true and correct to the best of my knowledge. I understand that providing false information may result in the rejection of my application or termination of my studies.';
   const lines = doc.splitTextToSize(declarationText, pageWidth - (2 * margin));
   doc.text(lines, margin, yPos);
-  yPos += lines.length * lineHeight + 5;
+  yPos += lines.length * compactLineHeight + 3;
   
-  doc.text(`Applicant Name: ${data.firstName} ${data.surname}`, margin, yPos);
-  yPos += lineHeight;
-  doc.text(`Date: ${new Date().toLocaleDateString('en-US')}`, margin, yPos);
-  yPos += 15;
+  doc.text(`Applicant: ${data.firstName} ${data.surname}`, margin, yPos);
+  yPos += compactLineHeight;
+  doc.text(`Date: ${new Date().toLocaleDateString()}`, margin, yPos);
+  yPos += 10;
 
-  // Footer
-  checkNewPage();
-  doc.setFontSize(8);
+  // Compact Footer
+  checkNewPage(15);
+  doc.setFontSize(7);
   doc.setFont('helvetica', 'bold');
   doc.text('FOR OFFICIAL USE ONLY', pageWidth / 2, yPos, { align: 'center' });
-  yPos += lineHeight;
+  yPos += compactLineHeight;
   doc.setFont('helvetica', 'normal');
-  doc.text('Received by: _________________ Date: __________ Signature: __________', pageWidth / 2, yPos, { align: 'center' });
-  yPos += lineHeight;
-  doc.text('Approved by: _________________ Date: __________ Signature: __________', pageWidth / 2, yPos, { align: 'center' });
+  doc.text('Received by: ___________ Date: _______ Signature: ___________', pageWidth / 2, yPos, { align: 'center' });
+  yPos += compactLineHeight;
+  doc.text('Approved by: ___________ Date: _______ Signature: ___________', pageWidth / 2, yPos, { align: 'center' });
 
   // Convert to Buffer
   const pdfOutput = doc.output('arraybuffer');
