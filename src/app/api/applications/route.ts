@@ -404,9 +404,9 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   doc.text('FOR OFFICIAL USE ONLY', pageWidth / 2, yPos, { align: 'center' });
   yPos += compactLineHeight;
   doc.setFont('helvetica', 'normal');
-  doc.text('Received by: ___________ Date: _______ Signature: ___________', pageWidth / 2, yPos, { align: 'center' });
+  doc.text('Received by: __________________________ Date: __________________ Signature: ___________', pageWidth / 2, yPos, { align: 'center' });
   yPos += compactLineHeight;
-  doc.text('Approved by: ___________ Date: _______ Signature: ___________', pageWidth / 2, yPos, { align: 'center' });
+  doc.text('Approved by: __________________________ Date: __________________ Signature: ___________', pageWidth / 2, yPos, { align: 'center' });
 
   // Convert to Buffer
   const pdfOutput = doc.output('arraybuffer');
