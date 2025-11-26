@@ -153,7 +153,7 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   doc.setFontSize(7);
   doc.setFont('helvetica', 'normal');
   doc.text('P.O Box 45 - 30205, Matunda', pageWidth / 2, 25, { align: 'center' });
-  doc.text('Tel: 0788 070 303 | Email: kongonitvc@gmail.com', pageWidth / 2, 30, { align: 'center' });
+  doc.text('Tel: 0788 070 303 | Email: info@kongonitechnical.ac.ke  | Website: www.kongonitechnical.ac.ke', pageWidth / 2, 30, { align: 'center' });
 
   yPos = 45;
 
