@@ -61,7 +61,7 @@ export default function Footer() {
               {/* Social Media */}
               <div className="flex space-x-3">
                 <a
-                  href="https://facebook.com/kongonitechnical"
+                  href="https://web.facebook.com/people/Kongoni-Technical-Vocational-College-2025/61581469161977/"
                   className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-primary hover:scale-110 transition-all duration-300"
                   aria-label="Facebook"
                   target="_blank"
@@ -70,7 +70,7 @@ export default function Footer() {
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://twitter.com/kongonitechnical"
+                  href="https://twitter.com/kongoniTVC"
                   className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-primary hover:scale-110 transition-all duration-300"
                   aria-label="Twitter"
                   target="_blank"
@@ -79,7 +79,7 @@ export default function Footer() {
                   <Twitter className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://instagram.com/kongonitechnical"
+                  href="https://www.instagram.com/kongonitvc?utm_source=qr&igsh=aGR1bnExaXVw"
                   className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-primary hover:scale-110 transition-all duration-300"
                   aria-label="Instagram"
                   target="_blank"
