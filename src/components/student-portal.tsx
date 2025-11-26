@@ -14,6 +14,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { FileIcon } from "lucide-react";
 import { useState } from "react";
+import { DEPARTMENTS, OTHER_PROGRAMMES } from "@/lib/academic-data";
+import { KENYA_COUNTIES } from "@/lib/kenya-locations";
 
 // Schema matching backend expectations
 const applicationSchema = z.object({
@@ -101,6 +103,13 @@ export default function StudentPortal() {
     passportPhoto: null,
   });
 
+  // State for cascading location selects
+  const [selectedCounty, setSelectedCounty] = useState<string>("");
+  const [selectedSubCounty, setSelectedSubCounty] = useState<string>("");
+  
+  // State for department-based course filtering
+  const [selectedDepartment, setSelectedDepartment] = useState<string>("");
+
   const form = useForm<Application>({
     resolver: zodResolver(applicationSchema),
     defaultValues: {
@@ -124,7 +133,7 @@ export default function StudentPortal() {
       kraPin: "",
       mobileNumber: "",
       emailAddress: "",
-      nationality: "",
+      nationality: "Kenyan",
       disability: false,
       disabilityDetails: "",
       kcseSchool: "",
@@ -156,6 +165,39 @@ export default function StudentPortal() {
     },
   });
 
+  // Get all courses from all departments plus other programmes
+  const allCourses = [
+    ...DEPARTMENTS.flatMap(dept => dept.courses),
+    ...OTHER_PROGRAMMES
+  ].sort((a, b) => a.name.localeCompare(b.name));
+  
+  // Get filtered courses based on selected department
+  const getFilteredCourses = () => {
+    if (!selectedDepartment) {
+      return allCourses;
+    }
+    
+    if (selectedDepartment === "Other Programmes") {
+      return OTHER_PROGRAMMES;
+    }
+    
+    const department = DEPARTMENTS.find(dept => dept.name === selectedDepartment);
+    return department ? department.courses : [];
+  };
+
+  // Get sub-counties based on selected county
+  const getSubCounties = () => {
+    const county = KENYA_COUNTIES.find(c => c.name === selectedCounty);
+    return county?.subCounties || [];
+  };
+
+  // Get wards based on selected sub-county
+  const getWards = () => {
+    const county = KENYA_COUNTIES.find(c => c.name === selectedCounty);
+    const subCounty = county?.subCounties.find(sc => sc.name === selectedSubCounty);
+    return subCounty?.wards || [];
+  };
+
   const handleFileChange = (fileType: keyof DocumentFiles, file: File | null) => {
     setDocumentFiles(prev => ({
       ...prev,
@@ -181,12 +223,10 @@ export default function StudentPortal() {
     mutationFn: async (data: Application) => {
       const formData = new FormData();
       
-      // Add all form fields
       Object.entries(data).forEach(([key, value]) => {
         formData.append(key, String(value));
       });
 
-      // Add document files
       if (documentFiles.idCopy) formData.append('idCopy', documentFiles.idCopy);
       if (documentFiles.birthCertificate) formData.append('birthCertificate', documentFiles.birthCertificate);
       if (documentFiles.kcpeCertificate) formData.append('kcpeCertificate', documentFiles.kcpeCertificate);
@@ -212,6 +252,9 @@ export default function StudentPortal() {
       });
       form.reset();
       clearAllFiles();
+      setSelectedCounty("");
+      setSelectedSubCounty("");
+      setSelectedDepartment("");
       queryClient.invalidateQueries({ queryKey: ["/api/applications"] });
     },
     onError: (error) => {
@@ -225,7 +268,6 @@ export default function StudentPortal() {
   });
 
   const onSubmit = (data: Application) => {
-    // Validate required documents
     if (!documentFiles.idCopy || !documentFiles.birthCertificate || 
         !documentFiles.kcpeCertificate || !documentFiles.kcseCertificate) {
       toast({
@@ -240,28 +282,34 @@ export default function StudentPortal() {
   };
 
   return (
-    <section className="py-16 bg-primary">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Online Course Application
-          </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Complete your application form below to begin your educational journey
-          </p>
-        </div>
+ <section className="py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <div className="inline-flex items-center justify-center mb-6">
+        <div className="w-12 h-1 bg-blue-600 rounded-full mr-4"></div>
+        <h2 className="text-5xl font-bold text-gray-900 tracking-tight">
+          Online Course Application
+        </h2>
+        <div className="w-12 h-1 bg-blue-600 rounded-full ml-4"></div>
+      </div>
+      <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        Complete your application form below to begin your educational journey with us
+      </p>
+    </div>
 
-        <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div className="max-w-6xl mx-auto bg-gray-50 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-8">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 
                 {/* SECTION A: PERSONAL DETAILS */}
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      SECTION A: PERSONAL DETAILS
-                    </h3>
+                <Card className="border-2 border-gray-200 shadow-sm">
+                  <CardContent className="pt-6 bg-white">
+                    <div className="bg-blue-600 -mx-6 -mt-6 px-6 py-4 mb-6">
+                      <h3 className="text-2xl font-bold text-white">
+                        SECTION A: PERSONAL DETAILS
+                      </h3>
+                    </div>
                     
                     <div className="space-y-4">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -270,9 +318,9 @@ export default function StudentPortal() {
                           name="surname"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Surname *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Surname *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Surname" />
+                                <Input {...field} placeholder="Surname" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -284,9 +332,9 @@ export default function StudentPortal() {
                           name="firstName"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>First Name *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">First Name *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="First Name" />
+                                <Input {...field} placeholder="First Name" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -298,9 +346,9 @@ export default function StudentPortal() {
                           name="otherNames"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Other Names</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Other Names</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Other Names" />
+                                <Input {...field} placeholder="Other Names" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -314,9 +362,9 @@ export default function StudentPortal() {
                           name="idPassportNumber"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>ID/Passport No *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">ID/Passport No *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="ID/Passport Number" />
+                                <Input {...field} placeholder="ID/Passport Number" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -328,9 +376,9 @@ export default function StudentPortal() {
                           name="dateOfBirth"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Date of Birth *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Date of Birth *</FormLabel>
                               <FormControl>
-                                <Input type="date" {...field} />
+                                <Input type="date" {...field} className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -342,16 +390,16 @@ export default function StudentPortal() {
                           name="gender"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Gender *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Gender *</FormLabel>
                               <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className="border-gray-300 text-gray-900">
                                     <SelectValue placeholder="Select" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent className="z-50 bg-white">
-                                  <SelectItem className="hover:bg-gray-100" value="Male">Male</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="Female">Female</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Male">Male</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Female">Female</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -366,18 +414,18 @@ export default function StudentPortal() {
                           name="maritalStatus"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Marital Status *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Marital Status *</FormLabel>
                               <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className="border-gray-300 text-gray-900">
                                     <SelectValue placeholder="Select" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent className="z-50 bg-white">
-                                  <SelectItem className="hover:bg-gray-100" value="Single">Single</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="Married">Married</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="Divorced">Divorced</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="Widowed">Widowed</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Single">Single</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Married">Married</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Divorced">Divorced</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Widowed">Widowed</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -390,9 +438,9 @@ export default function StudentPortal() {
                           name="nationality"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Nationality *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Nationality *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Nationality" />
+                                <Input {...field} placeholder="Nationality" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -411,7 +459,7 @@ export default function StudentPortal() {
                                 onCheckedChange={field.onChange}
                               />
                             </FormControl>
-                            <FormLabel className="cursor-pointer">Do you have any disability?</FormLabel>
+                            <FormLabel className="cursor-pointer text-gray-900 font-medium">Do you have any disability?</FormLabel>
                           </FormItem>
                         )}
                       />
@@ -422,9 +470,9 @@ export default function StudentPortal() {
                           name="disabilityDetails"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Disability Details</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Disability Details</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Please specify" />
+                                <Input {...field} placeholder="Please specify" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -438,9 +486,9 @@ export default function StudentPortal() {
                           name="postalAddress"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Postal Address *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Postal Address *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="P.O. Box" />
+                                <Input {...field} placeholder="P.O. Box" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -452,9 +500,9 @@ export default function StudentPortal() {
                           name="postalCode"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Postal Code</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Postal Code</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Postal Code" />
+                                <Input {...field} placeholder="Postal Code" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -468,9 +516,9 @@ export default function StudentPortal() {
                           name="town"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Town *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Town *</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Town" />
+                                <Input {...field} placeholder="Town" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -482,10 +530,34 @@ export default function StudentPortal() {
                           name="county"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>County *</FormLabel>
-                              <FormControl>
-                                <Input {...field} placeholder="County" />
-                              </FormControl>
+                              <FormLabel className="text-gray-900 font-semibold">County *</FormLabel>
+                              <Select 
+                                onValueChange={(value) => {
+                                  field.onChange(value);
+                                  setSelectedCounty(value);
+                                  setSelectedSubCounty("");
+                                  form.setValue("subCounty", "");
+                                  form.setValue("ward", "");
+                                }} 
+                                value={field.value}
+                              >
+                                <FormControl>
+                                  <SelectTrigger className="border-gray-300 text-gray-900">
+                                    <SelectValue placeholder="Select County" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent className="z-50 bg-white max-h-[200px] overflow-y-auto">
+                                  {KENYA_COUNTIES.map(county => (
+                                    <SelectItem 
+                                      key={county.code} 
+                                      className="hover:bg-blue-50 text-gray-900" 
+                                      value={county.name}
+                                    >
+                                      {county.name}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
                               <FormMessage />
                             </FormItem>
                           )}
@@ -496,10 +568,33 @@ export default function StudentPortal() {
                           name="subCounty"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Sub-County *</FormLabel>
-                              <FormControl>
-                                <Input {...field} placeholder="Sub-County" />
-                              </FormControl>
+                              <FormLabel className="text-gray-900 font-semibold">Sub-County *</FormLabel>
+                              <Select 
+                                onValueChange={(value) => {
+                                  field.onChange(value);
+                                  setSelectedSubCounty(value);
+                                  form.setValue("ward", "");
+                                }} 
+                                value={field.value}
+                                disabled={!selectedCounty}
+                              >
+                                <FormControl>
+                                  <SelectTrigger className="border-gray-300 text-gray-900">
+                                    <SelectValue placeholder={selectedCounty ? "Select Sub-County" : "Select County first"} />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent className="z-50 bg-white max-h-[200px] overflow-y-auto">
+                                  {getSubCounties().map(subCounty => (
+                                    <SelectItem 
+                                      key={subCounty.name} 
+                                      className="hover:bg-blue-50 text-gray-900" 
+                                      value={subCounty.name}
+                                    >
+                                      {subCounty.name}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
                               <FormMessage />
                             </FormItem>
                           )}
@@ -512,10 +607,29 @@ export default function StudentPortal() {
                           name="ward"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Ward</FormLabel>
-                              <FormControl>
-                                <Input {...field} placeholder="Ward" />
-                              </FormControl>
+                              <FormLabel className="text-gray-900 font-semibold">Ward</FormLabel>
+                              <Select 
+                                onValueChange={field.onChange} 
+                                value={field.value}
+                                disabled={!selectedSubCounty}
+                              >
+                                <FormControl>
+                                  <SelectTrigger className="border-gray-300 text-gray-900">
+                                    <SelectValue placeholder={selectedSubCounty ? "Select Ward" : "Select Sub-County first"} />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent className="z-50 bg-white max-h-[200px] overflow-y-auto">
+                                  {getWards().map(ward => (
+                                    <SelectItem 
+                                      key={ward} 
+                                      className="hover:bg-blue-50 text-gray-900" 
+                                      value={ward}
+                                    >
+                                      {ward}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
                               <FormMessage />
                             </FormItem>
                           )}
@@ -526,9 +640,9 @@ export default function StudentPortal() {
                           name="location"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Location</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Location</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Location" />
+                                <Input {...field} placeholder="Location" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -540,9 +654,9 @@ export default function StudentPortal() {
                           name="subLocation"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Sub-Location</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Sub-Location</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Sub-Location" />
+                                <Input {...field} placeholder="Sub-Location" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -554,9 +668,9 @@ export default function StudentPortal() {
                           name="village"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Village</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Village</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Village" />
+                                <Input {...field} placeholder="Village" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -570,9 +684,9 @@ export default function StudentPortal() {
                           name="mobileNumber"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Mobile Number *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Mobile Number *</FormLabel>
                               <FormControl>
-                                <Input type="tel" {...field} placeholder="0700000000" />
+                                <Input type="tel" {...field} placeholder="0700000000" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -584,9 +698,9 @@ export default function StudentPortal() {
                           name="emailAddress"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Email Address *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Email Address *</FormLabel>
                               <FormControl>
-                                <Input type="email" {...field} placeholder="email@example.com" />
+                                <Input type="email" {...field} placeholder="email@example.com" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -600,9 +714,9 @@ export default function StudentPortal() {
                           name="nemisCode"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>NEMIS Code</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">NEMIS Code</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="NEMIS Code" />
+                                <Input {...field} placeholder="NEMIS Code" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -614,9 +728,9 @@ export default function StudentPortal() {
                           name="kraPin"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>KRA PIN</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">KRA PIN</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="KRA PIN" />
+                                <Input {...field} placeholder="KRA PIN" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -627,195 +741,199 @@ export default function StudentPortal() {
                   </CardContent>
                 </Card>
 
-                {/* SECTION B: ACADEMIC QUALIFICATIONS */}
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      SECTION B: ACADEMIC QUALIFICATIONS
-                    </h3>
-                    
-                    <div className="space-y-6">
-                      {/* KCSE */}
-                      <div className="border rounded-lg p-4 bg-gray-50">
-                        <h4 className="font-semibold text-lg mb-4">KCSE Details</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <FormField
-                            control={form.control}
-                            name="kcseSchool"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>School Name</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="School Name" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+ {/* SECTION B: ACADEMIC QUALIFICATIONS */}
+<Card className="border-2 border-gray-200 shadow-sm">
+  <CardContent className="pt-6 bg-white">
+    <div className="bg-blue-600 -mx-6 -mt-6 px-6 py-4 mb-6">
+      <h3 className="text-2xl font-bold text-white">
+        SECTION B: ACADEMIC QUALIFICATIONS
+      </h3>
+    </div>
+    
+    <div className="space-y-6">
+      {/* KCSE */}
+      <div className="border rounded-lg p-4 bg-gray-50">
+        <h4 className="font-semibold text-lg mb-4 text-gray-900">KCSE Details</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="kcseSchool"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">School Name</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="School Name" className="border-gray-300 text-gray-900" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-                          <FormField
-                            control={form.control}
-                            name="kcseIndex"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Index Number</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="Index Number" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+          <FormField
+            control={form.control}
+            name="kcseIndex"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">Index Number</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="Index Number" className="border-gray-300 text-gray-900"  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-                          <FormField
-                            control={form.control}
-                            name="kcseYear"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Year</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="Year" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+          <FormField
+            control={form.control}
+            name="kcseYear"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">Year</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="Year" className="border-gray-300 text-gray-900" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-                          <FormField
-                            control={form.control}
-                            name="kcseMeanGrade"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Mean Grade</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="e.g., B+" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                        </div>
-                      </div>
+          <FormField
+            control={form.control}
+            name="kcseMeanGrade"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">Mean Grade</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="e.g., B+" className="border-gray-300 text-gray-900" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+      </div>
 
-                      {/* KCPE */}
-                      <div className="border rounded-lg p-4 bg-gray-50">
-                        <h4 className="font-semibold text-lg mb-4">KCPE Details</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <FormField
-                            control={form.control}
-                            name="kcpeSchool"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>School Name</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="School Name" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+      {/* KCPE */}
+      <div className="border rounded-lg p-4 bg-gray-50">
+        <h4 className="font-semibold text-lg mb-4 text-gray-900">KCPE Details</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="kcpeSchool"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">School Name</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="School Name" className="border-gray-300 text-gray-900"  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-                          <FormField
-                            control={form.control}
-                            name="kcpeIndex"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Index Number</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="Index Number" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+          <FormField
+            control={form.control}
+            name="kcpeIndex"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">Index Number</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="Index Number" className="border-gray-300 text-gray-900" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-                          <FormField
-                            control={form.control}
-                            name="kcpeYear"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Year</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="Year" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+          <FormField
+            control={form.control}
+            name="kcpeYear"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">Year</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="Year" className="border-gray-300 text-gray-900" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-                          <FormField
-                            control={form.control}
-                            name="kcpeMeanGrade"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Mean Grade/Marks</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="e.g., 350" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                        </div>
-                      </div>
+          <FormField
+            control={form.control}
+            name="kcpeMeanGrade"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">Mean Grade/Marks</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="e.g., 350" className="border-gray-300 text-gray-900" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+      </div>
 
-                      {/* College (Optional) */}
-                      <div className="border rounded-lg p-4 bg-gray-50">
-                        <h4 className="font-semibold text-lg mb-4">College Details (Optional)</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                          <FormField
-                            control={form.control}
-                            name="collegeAttended"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>College Name</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="College Name" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+      {/* College (Optional) */}
+      <div className="border rounded-lg p-4 bg-gray-50">
+        <h4 className="font-semibold text-lg mb-4 text-gray-900">College Details (Optional)</h4>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <FormField
+            control={form.control}
+            name="collegeAttended"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">College Name</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="College Name" className="border-gray-300 text-gray-900"  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-                          <FormField
-                            control={form.control}
-                            name="collegeYear"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Year</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="Year" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+          <FormField
+            control={form.control}
+            name="collegeYear"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">Year</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="Year" className="border-gray-300 text-gray-900"  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-                          <FormField
-                            control={form.control}
-                            name="collegeMeanGrade"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Grade/Marks</FormLabel>
-                                <FormControl>
-                                  <Input {...field} placeholder="Grade/Marks" />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+          <FormField
+            control={form.control}
+            name="collegeMeanGrade"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-gray-900 font-semibold">Grade/Marks</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="Grade/Marks" className="border-gray-300 text-gray-900" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+      </div>
+    </div>
+  </CardContent>
+</Card>
 
                 {/* SECTION C: SPONSOR/GUARDIAN DETAILS */}
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      SECTION C: SPONSOR/GUARDIAN DETAILS (Optional)
-                    </h3>
+                <Card className="border-2 border-gray-200 shadow-sm">
+                  <CardContent className="pt-6 bg-white">
+                    <div className="bg-blue-600 -mx-6 -mt-6 px-6 py-4 mb-6">
+                      <h3 className="text-2xl font-bold text-white">
+                        SECTION C: SPONSOR/GUARDIAN DETAILS (Optional)
+                      </h3>
+                    </div>
                     
                     <div className="space-y-4">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -824,9 +942,9 @@ export default function StudentPortal() {
                           name="sponsorFullName"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Full Name</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Full Name</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Sponsor/Guardian Full Name" />
+                                <Input {...field} placeholder="Sponsor/Guardian Full Name" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -838,9 +956,9 @@ export default function StudentPortal() {
                           name="sponsorIdPassport"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>ID/Passport No</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">ID/Passport No</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="ID/Passport Number" />
+                                <Input {...field} placeholder="ID/Passport Number" className="border-gray-300 text-gray-900"/>
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -853,9 +971,9 @@ export default function StudentPortal() {
                         name="relationshipToApplicant"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Relationship to Applicant</FormLabel>
+                            <FormLabel className="text-gray-900 font-semibold">Relationship to Applicant</FormLabel>
                             <FormControl>
-                              <Input {...field} placeholder="e.g., Father, Mother, Guardian" />
+                              <Input {...field} placeholder="e.g., Father, Mother, Guardian" className="border-gray-300 text-gray-900"/>
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -868,9 +986,9 @@ export default function StudentPortal() {
                           name="sponsorPostalAddress"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Postal Address</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Postal Address</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="P.O. Box" />
+                                <Input {...field} placeholder="P.O. Box" className="border-gray-300 text-gray-900"/>
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -882,9 +1000,9 @@ export default function StudentPortal() {
                           name="sponsorTown"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Town</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Town</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="Town" />
+                                <Input {...field} placeholder="Town" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -898,9 +1016,9 @@ export default function StudentPortal() {
                           name="sponsorMobile"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Mobile Number</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Mobile Number</FormLabel>
                               <FormControl>
-                                <Input type="tel" {...field} placeholder="0700000000" />
+                                <Input type="tel" {...field} placeholder="0700000000" className="border-gray-300 text-gray-900"/>
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -912,9 +1030,9 @@ export default function StudentPortal() {
                           name="sponsorEmail"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Email</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Email</FormLabel>
                               <FormControl>
-                                <Input type="email" {...field} placeholder="email@example.com" />
+                                <Input type="email" {...field} placeholder="email@gmail.com" className="border-gray-300 text-gray-900"/>
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -927,9 +1045,9 @@ export default function StudentPortal() {
                         name="sponsorOccupation"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Occupation</FormLabel>
+                            <FormLabel className="text-gray-900 font-semibold">Occupation</FormLabel>
                             <FormControl>
-                              <Input {...field} placeholder="Occupation" />
+                              <Input {...field} placeholder="Occupation" className="border-gray-300 text-gray-900"/>
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -940,38 +1058,77 @@ export default function StudentPortal() {
                 </Card>
 
                 {/* SECTION D: COURSE DETAILS */}
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      SECTION D: COURSE DETAILS
-                    </h3>
+                <Card className="border-2 border-gray-200 shadow-sm">
+                  <CardContent className="pt-6 bg-white">
+                    <div className="bg-blue-600 -mx-6 -mt-6 px-6 py-4 mb-6">
+                      <h3 className="text-2xl font-bold text-white">
+                        SECTION D: COURSE DETAILS
+                      </h3>
+                    </div>
                     
                     <div className="space-y-4">
+                      {/* Department Selection */}
+                      <div className="border-b pb-4">
+                        <label className="block text-sm font-medium text-gray-900 mb-6">
+                          Department *
+                        </label>
+                        <Select 
+                          value={selectedDepartment} 
+                          onValueChange={(value) => {
+                            setSelectedDepartment(value);
+                            // Clear course selection when department changes
+                            form.setValue("courseNameFull", "");
+                          }}
+                        >
+                          <SelectTrigger className="w-full border-gray-300 text-gray-900">
+                            <SelectValue placeholder="Select department first" />
+                          </SelectTrigger>
+                          <SelectContent className="z-50 bg-white max-h-[200px] overflow-y-auto">
+                            {DEPARTMENTS.map(dept => (
+                              <SelectItem 
+                                key={dept.id} 
+                                className="hover:bg-blue-50 text-gray-900" 
+                                value={dept.name}
+                              >
+                                {dept.name}
+                              </SelectItem>
+                            ))}
+                            <SelectItem 
+                              className="hover:bg-blue-50 text-gray-900" 
+                              value="Other Programmes"
+                            >
+                              Other Programmes
+                            </SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
                       <FormField
                         control={form.control}
                         name="courseNameFull"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Course Name *</FormLabel>
-                            <Select onValueChange={field.onChange} value={field.value}>
+                            <FormLabel className="text-gray-900 font-semibold">Course Name *</FormLabel>
+                            <Select 
+                              onValueChange={field.onChange} 
+                              value={field.value}
+                              disabled={!selectedDepartment}
+                            >
                               <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select course" />
+                                <SelectTrigger className="border-gray-300 text-gray-900">
+                                  <SelectValue placeholder={selectedDepartment ? "Select course" : "Select department first"} />
                                 </SelectTrigger>
                               </FormControl>
                               <SelectContent className="z-50 bg-white max-h-[200px] overflow-y-auto">
-                                <SelectItem className="hover:bg-gray-100" value="Diploma in Mechanical Engineering">Diploma in Mechanical Engineering</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Diploma in Information Technology">Diploma in Information Technology</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Diploma in Business Management">Diploma in Business Management</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Diploma in Electrical Engineering">Diploma in Electrical Engineering</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Diploma in Hotel Management">Diploma in Hotel Management</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Diploma in Nursing">Diploma in Nursing</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Certificate in Motor Vehicle Mechanics">Certificate in Motor Vehicle Mechanics</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Certificate in Computer Applications">Certificate in Computer Applications</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Certificate in Carpentry & Joinery">Certificate in Carpentry & Joinery</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Certificate in Fashion & Design">Certificate in Fashion & Design</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Certificate in Agriculture">Certificate in Agriculture</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Certificate in Beauty & Cosmetology">Certificate in Beauty & Cosmetology</SelectItem>
+                                {getFilteredCourses().map(course => (
+                                  <SelectItem 
+                                    key={course.name} 
+                                    className="hover:bg-blue-50 text-gray-900" 
+                                    value={course.name}
+                                  >
+                                    {course.name}
+                                  </SelectItem>
+                                ))}
                               </SelectContent>
                             </Select>
                             <FormMessage />
@@ -985,17 +1142,19 @@ export default function StudentPortal() {
                           name="level"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Level *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Level *</FormLabel>
                               <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className="border-gray-300 text-gray-900">
                                     <SelectValue placeholder="Select level" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent className="z-50 bg-white">
-                                  <SelectItem className="hover:bg-gray-100" value="Diploma">Diploma</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="Certificate">Certificate</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="Artisan">Artisan</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Diploma">Diploma</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Certificate">Certificate</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Artisan">Artisan</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Short Course">Short Course</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="NITA">NITA</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -1008,18 +1167,18 @@ export default function StudentPortal() {
                           name="intake"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Intake *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Intake *</FormLabel>
                               <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className="border-gray-300 text-gray-900">
                                     <SelectValue placeholder="Select intake" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent className="z-50 bg-white">
-                                  <SelectItem className="hover:bg-gray-100" value="September 2024">September 2024</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="January 2025">January 2025</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="May 2025">May 2025</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="September 2025">September 2025</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="January 2025">January 2025</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="May 2025">May 2025</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="September 2025">September 2025</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="January 2026">January 2026</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -1034,16 +1193,16 @@ export default function StudentPortal() {
                           name="applicationType"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Application Type *</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Application Type *</FormLabel>
                               <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className="border-gray-300 text-gray-900">
                                     <SelectValue placeholder="Select type" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent className="z-50 bg-white">
-                                  <SelectItem className="hover:bg-gray-100" value="Full-Time">Full-Time</SelectItem>
-                                  <SelectItem className="hover:bg-gray-100" value="Part-Time">Part-Time</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Full-Time">Full-Time</SelectItem>
+                                  <SelectItem className="hover:bg-blue-50 text-gray-900" value="Part-Time">Part-Time</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -1056,9 +1215,9 @@ export default function StudentPortal() {
                           name="programmeDuration"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Programme Duration</FormLabel>
+                              <FormLabel className="text-gray-900 font-semibold">Programme Duration</FormLabel>
                               <FormControl>
-                                <Input {...field} placeholder="e.g., 2 years, 6 months" />
+                                <Input {...field} placeholder="e.g., 2 years, 6 months" className="border-gray-300 text-gray-900" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -1071,18 +1230,19 @@ export default function StudentPortal() {
                         name="examiningBody"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Examining Body</FormLabel>
+                            <FormLabel className="text-gray-900 font-semibold">Examining Body</FormLabel>
                             <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
-                                <SelectTrigger>
+                                <SelectTrigger className="border-gray-300 text-gray-900">
                                   <SelectValue placeholder="Select examining body" />
                                 </SelectTrigger>
                               </FormControl>
                               <SelectContent className="z-50 bg-white">
-                                <SelectItem className="hover:bg-gray-100" value="KNEC">KNEC</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="NITA">NITA</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="KASNEB">KASNEB</SelectItem>
-                                <SelectItem className="hover:bg-gray-100" value="Other">Other</SelectItem>
+                                <SelectItem className="hover:bg-blue-50 text-gray-900" value="CDACC">CDACC</SelectItem>
+                                <SelectItem className="hover:bg-blue-50 text-gray-900" value="KNEC">KNEC</SelectItem>
+                                <SelectItem className="hover:bg-blue-50 text-gray-900" value="NITA">NITA</SelectItem>
+                                <SelectItem className="hover:bg-blue-50 text-gray-900" value="KASNEB">KASNEB</SelectItem>
+                                <SelectItem className="hover:bg-blue-50 text-gray-900" value="Other">Other</SelectItem>
                               </SelectContent>
                             </Select>
                             <FormMessage />
@@ -1094,16 +1254,18 @@ export default function StudentPortal() {
                 </Card>
 
                 {/* DOCUMENT UPLOAD SECTION */}
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      Document Upload
-                    </h3>
+                <Card className="border-2 border-gray-200 shadow-sm">
+                  <CardContent className="pt-6 bg-white">
+                    <div className="bg-blue-600 -mx-6 -mt-6 px-6 py-4 mb-6">
+                      <h3 className="text-2xl font-bold text-white">
+                        Document Upload
+                      </h3>
+                    </div>
                     
                     <div className="space-y-4">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
-                          <label className="block mb-2 font-semibold text-gray-700">
+                          <label className="block mb-2 font-semibold text-gray-900">
                             <FileIcon className="inline w-4 h-4 mr-2" />
                             National ID/Passport Copy *
                           </label>
@@ -1111,7 +1273,7 @@ export default function StudentPortal() {
                             type="file"
                             accept="image/*,.pdf"
                             onChange={(e) => handleFileChange('idCopy', e.target.files?.[0] || null)}
-                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                            className="w-full text-sm text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                           />
                           {documentFiles.idCopy && (
                             <p className="text-sm text-green-600 mt-2">✓ {documentFiles.idCopy.name}</p>
@@ -1119,7 +1281,7 @@ export default function StudentPortal() {
                         </div>
 
                         <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
-                          <label className="block mb-2 font-semibold text-gray-700">
+                          <label className="block mb-2 font-semibold text-gray-900">
                             <FileIcon className="inline w-4 h-4 mr-2" />
                             Birth Certificate *
                           </label>
@@ -1127,7 +1289,7 @@ export default function StudentPortal() {
                             type="file"
                             accept="image/*,.pdf"
                             onChange={(e) => handleFileChange('birthCertificate', e.target.files?.[0] || null)}
-                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                            className="w-full text-sm text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                           />
                           {documentFiles.birthCertificate && (
                             <p className="text-sm text-green-600 mt-2">✓ {documentFiles.birthCertificate.name}</p>
@@ -1135,7 +1297,7 @@ export default function StudentPortal() {
                         </div>
 
                         <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
-                          <label className="block mb-2 font-semibold text-gray-700">
+                          <label className="block mb-2 font-semibold text-gray-900">
                             <FileIcon className="inline w-4 h-4 mr-2" />
                             KCPE Certificate *
                           </label>
@@ -1143,7 +1305,7 @@ export default function StudentPortal() {
                             type="file"
                             accept="image/*,.pdf"
                             onChange={(e) => handleFileChange('kcpeCertificate', e.target.files?.[0] || null)}
-                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                            className="w-full text-sm text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                           />
                           {documentFiles.kcpeCertificate && (
                             <p className="text-sm text-green-600 mt-2">✓ {documentFiles.kcpeCertificate.name}</p>
@@ -1151,7 +1313,7 @@ export default function StudentPortal() {
                         </div>
 
                         <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
-                          <label className="block mb-2 font-semibold text-gray-700">
+                          <label className="block mb-2 font-semibold text-gray-900">
                             <FileIcon className="inline w-4 h-4 mr-2" />
                             KCSE Certificate *
                           </label>
@@ -1159,7 +1321,7 @@ export default function StudentPortal() {
                             type="file"
                             accept="image/*,.pdf"
                             onChange={(e) => handleFileChange('kcseCertificate', e.target.files?.[0] || null)}
-                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                            className="w-full text-sm text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                           />
                           {documentFiles.kcseCertificate && (
                             <p className="text-sm text-green-600 mt-2">✓ {documentFiles.kcseCertificate.name}</p>
@@ -1167,7 +1329,7 @@ export default function StudentPortal() {
                         </div>
 
                         <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 md:col-span-2">
-                          <label className="block mb-2 font-semibold text-gray-700">
+                          <label className="block mb-2 font-semibold text-gray-900">
                             <FileIcon className="inline w-4 h-4 mr-2" />
                             Passport Photo (Optional)
                           </label>
@@ -1175,7 +1337,7 @@ export default function StudentPortal() {
                             type="file"
                             accept="image/*"
                             onChange={(e) => handleFileChange('passportPhoto', e.target.files?.[0] || null)}
-                            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                            className="w-full text-sm text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                           />
                           {documentFiles.passportPhoto && (
                             <p className="text-sm text-green-600 mt-2">✓ {documentFiles.passportPhoto.name}</p>
@@ -1187,11 +1349,13 @@ export default function StudentPortal() {
                 </Card>
 
                 {/* TERMS AND CONDITIONS */}
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                      Declaration
-                    </h3>
+                <Card className="border-2 border-gray-200 shadow-sm">
+                  <CardContent className="pt-6 bg-white">
+                    <div className="bg-blue-600 -mx-6 -mt-6 px-6 py-4 mb-6">
+                      <h3 className="text-2xl font-bold text-white">
+                        Declaration
+                      </h3>
+                    </div>
                     
                     <FormField
                       control={form.control}
@@ -1205,10 +1369,10 @@ export default function StudentPortal() {
                             />
                           </FormControl>
                           <div className="space-y-1 leading-none">
-                            <FormLabel className="cursor-pointer font-semibold">
+                            <FormLabel className="cursor-pointer font-semibold text-gray-900">
                               I agree to the Terms and Conditions *
                             </FormLabel>
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm text-gray-700">
                               I declare that the information provided in this application is true and correct to the best of my knowledge. 
                               I understand that providing false information may result in the rejection of my application or termination of my studies.
                             </p>

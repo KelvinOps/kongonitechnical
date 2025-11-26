@@ -75,13 +75,13 @@ interface DocumentFiles {
   passportPhoto?: File;
 }
 
-// Generate PDF Application Form using jsPDF - SINGLE PAGE VERSION
+// Generate PDF Application Form using jsPDF
 function generateApplicationPDF(data: ApplicationData): Buffer {
   const doc = new jsPDF();
   let yPos = 20;
   const pageWidth = doc.internal.pageSize.getWidth();
-  const margin = 15;
-  const lineHeight = 5.5;
+  const margin = 20;
+  const lineHeight = 7;
 
   // Load logos from public/images folder
   let leftLogoBase64 = '';
@@ -102,99 +102,152 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
     }
   } catch (error) {
     console.error('Error loading logos:', error);
+    // Continue without logos if there's an error
   }
 
-  // COMPACT HEADER
-  doc.setFillColor(37, 99, 235);
-  doc.rect(0, 0, pageWidth, 35, 'F');
+  // Helper function to add text with word wrap
 
-  // Smaller logo dimensions
-  const logoWidth = 22;
-  const logoHeight = 16;
-  const logoMarginX = 12;
-  const logoY = 9.5;
-
-  // Add left logo
-  if (leftLogoBase64) {
-    try {
-      doc.addImage(leftLogoBase64, 'PNG', logoMarginX, logoY, logoWidth, logoHeight);
-    } catch (error) {
-      console.error('Error adding left logo:', error);
+  // Helper function to check if we need a new page
+  const checkNewPage = () => {
+    if (yPos > 270) {
+      doc.addPage();
+      yPos = 20;
     }
-  }
+  };
 
-  // Add right logo
-  if (rightLogoBase64) {
-    try {
-      doc.addImage(rightLogoBase64, 'JPEG', pageWidth - logoMarginX - logoWidth, logoY, logoWidth, logoHeight);
-    } catch (error) {
-      console.error('Error adding right logo:', error);
-    }
-  }
+  // Header with logos
+  // Replace the header with logos section in your generateApplicationPDF function
+// Starting from line ~79 to approximately line ~134
 
-  // Compact center text
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(12);
+// Header with logos
+doc.setFillColor(37, 99, 235);
+doc.rect(0, 0, pageWidth, 50, 'F'); // Increased header height from 45 to 50
+
+// Logo dimensions - increased for better visibility
+const logoWidth = 35;  // Increased from 25
+const logoHeight = 25; // Increased from 25
+const logoMarginX = 15; // Horizontal margin from edges
+const logoY = 7.5; // Vertical position - centered in 50px header
+
+// Add left logo (MOE Logo - Ministry of Education)
+if (leftLogoBase64) {
+  try {
+    doc.addImage(leftLogoBase64, 'PNG', logoMarginX, logoY, logoWidth, logoHeight);
+  } catch (error) {
+    console.error('Error adding left logo:', error);
+    // Fallback to placeholder
+    doc.setFillColor(255, 255, 255);
+    doc.circle(logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
+    doc.setTextColor(37, 99, 235);
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'bold');
+    doc.text('MOE', logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
+  }
+} else {
+  // Placeholder if logo not found
+  doc.setFillColor(255, 255, 255);
+  doc.circle(logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
+  doc.setTextColor(37, 99, 235);
+  doc.setFontSize(8);
   doc.setFont('helvetica', 'bold');
-  doc.text('KONGONI TECHNICAL AND VOCATIONAL COLLEGE', pageWidth / 2, 13, { align: 'center' });
+  doc.text('MOE', logoMarginX + (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
+}
 
-  doc.setFontSize(7);
-  doc.setFont('helvetica', 'normal');
-  doc.text('P.O Box 45 - 30205, Matunda | Eldoret - Kitale Road', pageWidth / 2, 19, { align: 'center' });
-  doc.text('Tel: 0788 070 303 | Email: kongonitvc@gmail.com', pageWidth / 2, 24, { align: 'center' });
+// Add right logo (Kongoni Logo - Institution Logo)
+if (rightLogoBase64) {
+  try {
+    doc.addImage(rightLogoBase64, 'JPEG', pageWidth - logoMarginX - logoWidth, logoY, logoWidth, logoHeight);
+  } catch (error) {
+    console.error('Error adding right logo:', error);
+    // Fallback to placeholder
+    doc.setFillColor(255, 255, 255);
+    doc.circle(pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
+    doc.setTextColor(37, 99, 235);
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'bold');
+    doc.text('KTVC', pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
+  }
+} else {
+  // Placeholder if logo not found
+  doc.setFillColor(255, 255, 255);
+  doc.circle(pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2), 15, 'F');
+  doc.setTextColor(37, 99, 235);
+  doc.setFontSize(8);
+  doc.setFont('helvetica', 'bold');
+  doc.text('KTVC', pageWidth - logoMarginX - (logoWidth / 2), logoY + (logoHeight / 2) + 2, { align: 'center' });
+}
 
-  yPos = 40;
+// Center text - adjusted vertical positions for taller header
+doc.setTextColor(255, 255, 255);
+doc.setFontSize(16);
+doc.setFont('helvetica', 'bold');
+doc.text('KONGONI TECHNICAL AND', pageWidth / 2, 15, { align: 'center' });
+doc.text('VOCATIONAL COLLEGE', pageWidth / 2, 22, { align: 'center' });
 
-  // Compact title
+doc.setFontSize(8);
+doc.setFont('helvetica', 'normal');
+doc.text('P.O Box 45 - 30205, Matunda', pageWidth / 2, 30, { align: 'center' });
+doc.text('Along Eldoret - Kitale Road', pageWidth / 2, 35, { align: 'center' });
+doc.text('Tel: 0788 070 303 | Email: kongonitvc@gmail.com', pageWidth / 2, 40, { align: 'center' });
+
+yPos = 60;
+
+// Adjusted starting position after taller header
+  // Title
   doc.setTextColor(0, 0, 0);
-  doc.setFontSize(11);
+  doc.setFontSize(14);
   doc.setFont('helvetica', 'bold');
   doc.text('ADMISSION APPLICATION FORM', pageWidth / 2, yPos, { align: 'center' });
-  yPos += 6;
-
-  doc.setFontSize(7);
+  yPos += 10;
+  
+  doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
   doc.text(`Application Date: ${new Date().toLocaleDateString('en-US', { 
     year: 'numeric', 
     month: 'long', 
     day: 'numeric' 
   })}`, pageWidth - margin, yPos, { align: 'right' });
-  yPos += 8;
+  yPos += 15;
 
-  // Helper function to add compact section header
+  // Helper function to add section header
   const addSection = (title: string) => {
+    checkNewPage();
     doc.setFillColor(37, 99, 235);
-    doc.rect(margin, yPos - 3, pageWidth - (2 * margin), 6, 'F');
+    doc.rect(margin, yPos - 5, pageWidth - (2 * margin), 8, 'F');
     doc.setTextColor(255, 255, 255);
-    doc.setFontSize(9);
+    doc.setFontSize(11);
     doc.setFont('helvetica', 'bold');
-    doc.text(title, margin + 2, yPos + 1);
-    yPos += 8;
+    doc.text(title, margin + 2, yPos);
+    yPos += 12;
     doc.setTextColor(0, 0, 0);
   };
 
   // Helper function to add field
   const addField = (label: string, value: string) => {
-    doc.setFontSize(8);
+    checkNewPage();
+    doc.setFontSize(9);
     doc.setFont('helvetica', 'bold');
     doc.text(`${label}:`, margin, yPos);
     doc.setFont('helvetica', 'normal');
     const textWidth = doc.getTextWidth(`${label}: `);
-    doc.text(value || 'N/A', margin + textWidth + 2, yPos);
+    doc.text(value || 'N/A', margin + textWidth + 3, yPos); // Added 3 units of space
     yPos += lineHeight;
   };
 
   // Helper function to add two-column field
   const addTwoColumnField = (label1: string, value1: string, label2: string, value2: string) => {
-    doc.setFontSize(8);
+    checkNewPage();
+    doc.setFontSize(9);
     const midPoint = pageWidth / 2;
     
+    // Left column
     doc.setFont('helvetica', 'bold');
     doc.text(`${label1}:`, margin, yPos);
     doc.setFont('helvetica', 'normal');
     const textWidth1 = doc.getTextWidth(`${label1}: `);
     doc.text(value1 || 'N/A', margin + textWidth1, yPos);
     
+    // Right column
     doc.setFont('helvetica', 'bold');
     doc.text(`${label2}:`, midPoint, yPos);
     doc.setFont('helvetica', 'normal');
@@ -211,30 +264,43 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   addTwoColumnField('ID/Passport No', data.idPassportNumber, 'Date of Birth', data.dateOfBirth);
   addTwoColumnField('Gender', data.gender, 'Marital Status', data.maritalStatus);
   addTwoColumnField('Nationality', data.nationality, 'Disability', data.disability ? `YES${data.disabilityDetails ? ' - ' + data.disabilityDetails : ''}` : 'NO');
-  addField('Postal Address', `${data.postalAddress}${data.postalCode ? ' - ' + data.postalCode : ''}, ${data.town}`);
-  addTwoColumnField('County', data.county, 'Sub-County', data.subCounty);
-  addTwoColumnField('Mobile', data.mobileNumber, 'Email', data.emailAddress);
+  addField('Postal Address', `${data.postalAddress}${data.postalCode ? ' - ' + data.postalCode : ''}`);
+  addTwoColumnField('Town', data.town, 'County', data.county);
+  addTwoColumnField('Sub-County', data.subCounty, 'Ward', data.ward || 'N/A');
+  
+  if (data.location) {
+    addTwoColumnField('Location', data.location, 'Sub-Location', data.subLocation || 'N/A');
+  }
+  if (data.village) {
+    addField('Village', data.village);
+  }
+  
+  addTwoColumnField('Mobile Number', data.mobileNumber, 'Email Address', data.emailAddress);
+  
+  if (data.nemisCode) {
+    addTwoColumnField('NEMIS Code', data.nemisCode, 'KRA PIN', data.kraPin || 'N/A');
+  }
 
-  yPos += 2;
+  yPos += 5;
 
-  // SECTION B: ACADEMIC QUALIFICATIONS (Compact Table)
+  // SECTION B: ACADEMIC QUALIFICATIONS
   addSection('SECTION B: ACADEMIC QUALIFICATIONS');
   
-  doc.setFontSize(7);
+  doc.setFontSize(8);
   doc.setFont('helvetica', 'bold');
   
-  // Compact table columns
+  // Table header
   const col1X = margin;
-  const col2X = margin + 22;
-  const col3X = margin + 72;
-  const col4X = margin + 115;
-  const col5X = margin + 135;
+  const col2X = margin + 30;
+  const col3X = margin + 80;
+  const col4X = margin + 120;
+  const col5X = margin + 145;
   
   doc.text('Exam', col1X, yPos);
   doc.text('School/College', col2X, yPos);
   doc.text('Index No.', col3X, yPos);
   doc.text('Year', col4X, yPos);
-  doc.text('Grade', col5X, yPos);
+  doc.text('Grade/Marks', col5X, yPos);
   yPos += lineHeight;
   
   doc.setFont('helvetica', 'normal');
@@ -255,6 +321,7 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   doc.text(data.kcpeMeanGrade || '-', col5X, yPos);
   yPos += lineHeight;
   
+  // College (if provided)
   if (data.collegeAttended) {
     doc.text('College', col1X, yPos);
     doc.text(data.collegeAttended, col2X, yPos);
@@ -264,18 +331,20 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
     yPos += lineHeight;
   }
   
-  yPos += 2;
+  yPos += 5;
 
-  // SECTION C: SPONSOR/GUARDIAN (Compact)
+  // SECTION C: SPONSOR/GUARDIAN DETAILS (if provided)
   if (data.sponsorFullName) {
     addSection('SECTION C: SPONSOR/GUARDIAN DETAILS');
     
     addField('Full Name', data.sponsorFullName);
-    addTwoColumnField('ID/Passport', data.sponsorIdPassport || 'N/A', 'Relationship', data.relationshipToApplicant || 'N/A');
-    addField('Postal Address', `${data.sponsorPostalAddress || 'N/A'}, ${data.sponsorTown || ''}`);
-    addTwoColumnField('Mobile', data.sponsorMobile || 'N/A', 'Occupation', data.sponsorOccupation || 'N/A');
+    if (data.sponsorIdPassport) addField('ID/Passport No', data.sponsorIdPassport);
+    if (data.relationshipToApplicant) addField('Relationship to Applicant', data.relationshipToApplicant);
+    if (data.sponsorPostalAddress) addTwoColumnField('Postal Address', data.sponsorPostalAddress, 'Town', data.sponsorTown || 'N/A');
+    if (data.sponsorMobile) addTwoColumnField('Mobile Number', data.sponsorMobile, 'Email', data.sponsorEmail || 'N/A');
+    if (data.sponsorOccupation) addField('Occupation', data.sponsorOccupation);
     
-    yPos += 2;
+    yPos += 5;
   }
 
   // SECTION D: COURSE DETAILS
@@ -286,25 +355,26 @@ function generateApplicationPDF(data: ApplicationData): Buffer {
   addTwoColumnField('Application Type', data.applicationType, 'Duration', data.programmeDuration || 'N/A');
   if (data.examiningBody) addField('Examining Body', data.examiningBody);
   
-  yPos += 3;
+  yPos += 5;
 
-  // DECLARATION (Compact)
+  // Declaration
   addSection('DECLARATION');
   
-  doc.setFontSize(7);
+  doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
   const declarationText = 'I declare that the information provided in this application is true and correct to the best of my knowledge. I understand that providing false information may result in the rejection of my application or termination of my studies.';
   const lines = doc.splitTextToSize(declarationText, pageWidth - (2 * margin));
   doc.text(lines, margin, yPos);
-  yPos += lines.length * lineHeight + 3;
+  yPos += lines.length * lineHeight + 5;
   
   doc.text(`Applicant Name: ${data.firstName} ${data.surname}`, margin, yPos);
   yPos += lineHeight;
   doc.text(`Date: ${new Date().toLocaleDateString('en-US')}`, margin, yPos);
-  yPos += 10;
+  yPos += 15;
 
-  // Footer (Compact)
-  doc.setFontSize(7);
+  // Footer
+  checkNewPage();
+  doc.setFontSize(8);
   doc.setFont('helvetica', 'bold');
   doc.text('FOR OFFICIAL USE ONLY', pageWidth / 2, yPos, { align: 'center' });
   yPos += lineHeight;
