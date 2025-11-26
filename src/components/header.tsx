@@ -151,7 +151,7 @@ export default function Header() {
       hasDropdown: true,
       subItems: [
         { href: "/documents/september-advert.pdf", label: "Download September Advert" },
-        { href: "/admissions/apply", label: "Student Application" } // Changed from /admissions to /admissions/apply
+        { href: "/admissions", label: "Student Application" } 
       ]
     },
     { 
@@ -274,8 +274,8 @@ export default function Header() {
               </div>
               <div className="hidden md:flex items-center space-x-1">
                 <Mail className="w-4 h-4 text-black" />
-                <a href="mailto:kongonitvc@gmail.com" className="text-black hover:text-white hover:underline transition-colors duration-200 text-xs">
-                  kongonitvc@gmail.com
+                <a href="mailto:info@kongonitechnical.ac.ke" className="text-black hover:text-white hover:underline transition-colors duration-200 text-xs">
+                  info@kongonitechnical.ac.ke
                 </a>
               </div>
             </div>
@@ -587,8 +587,8 @@ export default function Header() {
                     </div>
                     <div className="flex items-center space-x-2">
                       <Mail className="w-4 h-4" />
-                      <a href="mailto:kongonitvc@gmail.com" className="text-black hover:text-white transition-colors duration-200 break-all">
-                        kongonitvc@gmail.com
+                      <a href="mailto:info@kongonitechnical.ac.ke" className="text-black hover:text-white transition-colors duration-200 break-all">
+                        info@kongonitechnical.ac.ke
                       </a>
                     </div>
                   </div>
