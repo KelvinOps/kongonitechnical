@@ -316,10 +316,10 @@ export default function Footer() {
                 <div className="flex items-center space-x-2">
                   <Mail className="text-black w-4 h-4 flex-shrink-0" />
                   <a 
-                    href="mailto:kongonitvc@gmail.com" 
+                    href="mailto:info@kongonitechnical.ac.ke" 
                     className="text-sm text-black hover:text-white transition-colors duration-300 hover:underline"
                   >
-                    kongonitvc@gmail.com
+                    info@kongonitechnical.ac.ke
                   </a>
                 </div>
                 
