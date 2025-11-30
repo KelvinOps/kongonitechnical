@@ -124,7 +124,7 @@ export default function FeedbackSection() {
                 <div>
                   <h4 className="font-semibold text-gray-900">Visit Us</h4>
                   <p className="text-gray-900 font-medium">
-                    Kongoni Technical Vocational College<br />
+                    Kongoni Technical and Vocational College<br />
                     P.O. Box 45 - 30205<br />
                     Matunda, Kenya
                   </p>
