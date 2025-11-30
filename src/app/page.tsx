@@ -1,4 +1,3 @@
-// app/page.tsx 
 import type { Metadata } from "next";
 import { Suspense } from "react";
 
@@ -13,8 +12,10 @@ import CourseSearchSection from "@/components/course-search-section";
 import CoursesSection from "@/components/courses-section";
 import ImageGallery from "@/components/image-gallery";
 import NewsSection from "@/components/news-section";
-import ServiceCharterAudioSection from "@/components/service-charter-audio-section"; // NEW
+import ServiceCharterAudioSection from "@/components/service-charter-audio-section";
 import PartnershipsSection from "@/components/partnerships-section";
+import FAQSection from "@/components/faq-section"; // NEW
+import FeedbackSection from "@/components/feedback-section"; // NEW
 
 // Loading components for better UX
 const SectionSkeleton = () => (
@@ -88,12 +89,24 @@ export default function HomePage() {
         <NewsSection />
       </Suspense>
 
-      {/* NEW: Service Charter Audio Section - Added above Partnerships */}
+      {/* Service Charter Audio Section */}
       <Suspense fallback={<SectionSkeleton />}>
         <ServiceCharterAudioSection />
       </Suspense>
 
+
+
+      {/* NEW: FAQ Section */}
       <Suspense fallback={<SectionSkeleton />}>
+        <FAQSection />
+      </Suspense>
+
+      {/* NEW: Feedback Section */}
+      <Suspense fallback={<SectionSkeleton />}>
+        <FeedbackSection />
+      </Suspense>
+
+            <Suspense fallback={<SectionSkeleton />}>
         <PartnershipsSection />
       </Suspense>
     </div>
