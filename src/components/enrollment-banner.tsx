@@ -1,14 +1,11 @@
+// components/EnrollmentBanner.tsx - Updated with fixed navigation
 'use client';
 
 import { Calendar, X } from 'lucide-react';
 import { useEnrollmentBanner } from '@/hooks/useEnrollmentBanner';
 
 const EnrollmentBanner = () => {
-  const { isVisible, currentIntake, closeBanner } = useEnrollmentBanner();
-
-  const handleJoinNow = () => {
-    window.location.href = '/admissions';
-  };
+  const { isVisible, currentIntake, closeBanner, handleApplyNow } = useEnrollmentBanner();
 
   if (!isVisible || !currentIntake) {
     return null;
@@ -67,7 +64,7 @@ const EnrollmentBanner = () => {
             {/* Action Buttons */}
             <div className="space-y-3">
               <button
-                onClick={handleJoinNow}
+                onClick={handleApplyNow} // Use the fixed handler
                 className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg uppercase tracking-wide text-sm flex items-center justify-center gap-2 group"
               >
                 Apply Now
