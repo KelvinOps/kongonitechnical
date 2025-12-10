@@ -4,6 +4,129 @@ import { NextRequest, NextResponse } from "next/server";
 // Complete mock news data - synchronized with main news route
 const mockNews = [
 
+  {
+  id: "27",
+  title: "Celebrating Academic Excellence: Our Staff's Remarkable Achievements",
+  excerpt: "Kongoni Technical and Vocational College proudly celebrates our trainers and staff members who have recently achieved significant academic milestones at various universities across Kenya.",
+  content: `
+    <p>Kongoni Technical and Vocational Training College extends heartfelt congratulations to our dedicated trainers and staff members who have recently achieved remarkable academic milestones. Their pursuit of higher education exemplifies our institution's commitment to lifelong learning and professional development.</p>
+    
+    <p><strong>🌟 PHD ACHIEVEMENT 🌟</strong></p>
+    <p>We celebrate with immense pride as our esteemed <strong>Board of Governors Member</strong> successfully attained her <strong>Doctor of Philosophy (PhD)</strong> from <strong>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</strong>. This monumental achievement represents years of dedication, research, and scholarly excellence that will undoubtedly enrich our institution's governance and strategic direction.</p>
+    
+    <p><strong>🎓 DEGREE ACCOLADES 🎓</strong></p>
+    <p>Congratulations to our dedicated staff members who have attained their degrees from the <strong>Technical University of Kenya</strong>:</p>
+    <ul>
+      <li><strong>Mr. Andrew Juma</strong></li>
+      <li><strong>Mr. Patrick Mwangi</strong></li>
+    </ul>
+    <p>Their academic accomplishments demonstrate remarkable commitment to balancing professional responsibilities with educational pursuits.</p>
+    
+    <p><strong>📜 DIPLOMA HONORS 📜</strong></p>
+    <p>Heartfelt congratulations to our team from <strong>Kenya School of TVET (KSTVET)</strong> for successfully earning their <strong>Diplomas in Technical Training</strong>. Special recognition to:</p>
+    <ul>
+      <li>Bryan Wekesa</li>
+      <li>Ann Namukhaywa</li>
+      <li>Kelvin Bugigi</li>
+      <li>Dennis Simiyu</li>
+      <li>Ann Waitherero</li>
+      <li>...and all other graduates!</li>
+    </ul>
+    <p>These diplomas enhance our technical training capacity and ensure we deliver the highest quality vocational education.</p>
+    
+    <p><strong>✨ ADDITIONAL CONGRATULATIONS ✨</strong></p>
+    <p>A special round of applause for <strong>Joshua Makacha</strong> on his graduation from <strong>Dedan Kimathi University of Technology</strong>!</p>
+    
+    <p><strong>Institutional Impact and Vision:</strong></p>
+    <p>These academic achievements significantly strengthen our institution's capacity for excellence in technical and vocational education. Each milestone represents not only personal success but also enhanced expertise that directly benefits our trainees and the quality of education we provide.</p>
+    
+    <p>"We are immensely proud of our staff members' academic accomplishments," said Principal Judith Akaranga. "Their dedication to continuous learning sets a powerful example for our trainees and elevates the standards of our entire institution. At Kongoni Technical College, we believe that learning is a lifelong journey, and our staff exemplify this principle."</p>
+    
+    <p>The college recognizes that investing in staff development yields direct benefits for our trainees. Enhanced knowledge, updated teaching methodologies, and exposure to current industry trends ensure that our curriculum remains relevant and competitive.</p>
+    
+    <p><strong>Celebrating the Culture of Excellence:</strong></p>
+    <ul>
+      <li>These achievements reinforce our institution's culture of academic excellence</li>
+      <li>Enhanced expertise translates to improved teaching quality and trainee outcomes</li>
+      <li>Higher qualifications strengthen our institutional credibility and partnerships</li>
+      <li>Staff development aligns with national goals for TVET sector advancement</li>
+      <li>Personal growth contributes to overall institutional growth and reputation</li>
+    </ul>
+    
+    <p><strong>Benefits to Our Trainees:</strong></p>
+    <ul>
+      <li>Access to instructors with current and relevant academic qualifications</li>
+      <li>Exposure to latest teaching methodologies and industry practices</li>
+      <li>Enhanced mentorship from academically accomplished staff</li>
+      <li>Improved learning outcomes through updated knowledge and skills</li>
+      <li>Inspiration to pursue their own academic and professional development</li>
+    </ul>
+    
+    <p><strong>Future Commitments:</strong></p>
+    <p>Kongoni Technical and Vocational College remains committed to supporting staff development through:</p>
+    <ul>
+      <li>Continuing to encourage and facilitate staff academic advancement</li>
+      <li>Providing flexible scheduling to accommodate study commitments</li>
+      <li>Recognizing and celebrating academic achievements within our community</li>
+      <li>Creating opportunities for knowledge sharing from advanced studies</li>
+      <li>Maintaining partnerships with universities for staff development</li>
+    </ul>
+    
+    <p>"Our staff's academic achievements represent the heartbeat of our institution's progress," noted the Deputy Principal for Academics. "Each certificate, diploma, and degree earned by our team members adds another layer of excellence to the education we provide. We celebrate not just the qualifications obtained, but the journey of growth and the enhanced capacity they bring to our institution."</p>
+    
+    <p><strong>Community Celebration:</strong></p>
+    <p>The entire Kongoni Technical College community joins in celebrating these remarkable achievements. From the administration to fellow staff members and trainees, we collectively acknowledge the hard work, sacrifice, and dedication that each of these accomplishments represents.</p>
+    
+    <p>We encourage our staff to continue pursuing academic and professional growth, knowing that their development directly contributes to our institutional mission of providing quality technical and vocational education.</p>
+    
+    <p><strong>Looking Forward:</strong></p>
+    <p>As we celebrate these achievements, we look forward to even greater accomplishments in the future. The foundation laid by these academic milestones will inspire others within our community to pursue their educational goals, creating a virtuous cycle of continuous improvement and excellence.</p>
+    
+    <p>The college administration extends its full support to all staff members currently pursuing further studies and encourages those considering academic advancement to take the next step in their educational journey.</p>
+    
+    <p><strong>🎉 CONGRATULATIONS ONCE AGAIN! 🎉</strong></p>
+    <p>To all our staff members who have achieved these academic milestones: Your success is our success. Your growth is our growth. Your achievement is our pride.</p>
+    
+    <p>May these qualifications open new doors of opportunity, enhance your professional practice, and inspire generations of trainees to pursue their own educational dreams.</p>
+    
+    <p><em>Kongoni Technical and Vocational Training College: Where excellence in education begins with excellence in educators.</em></p>
+  `,
+  imageUrl: "/images/newsevents/staffachievements/achievement1.jpg",
+  images: [
+    "/images/newsevents/staffachievements/achievement1.jpg",
+    "/images/newsevents/staffachievements/achievement2.jpg",
+    "/images/newsevents/staffachievements/achievement3.jpg",
+    "/images/newsevents/staffachievements/achievement4.jpg",
+    "/images/newsevents/staffachievements/achievement5.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=staff_achievements_celebration",
+  videoThumbnail: "/images/newsevents/staffachievements/achievement1.jpg",
+  featured: true,
+  createdAt: "2025-12-10T10:00:00Z", // Today's date
+  updatedAt: "2025-12-10T10:00:00Z",
+  author: "Administration & Human Resources",
+  category: "Achievements",
+  eventDate: "2025-12-10",
+  location: "Kongoni Technical and Vocational College",
+  tags: [
+    "staff-achievements",
+    "academic-excellence",
+    "graduation",
+    "phd",
+    "degrees",
+    "diplomas",
+    "jkuat",
+    "technical-university-of-kenya",
+    "kstvet",
+    "dedan-kimathi-university",
+    "professional-development",
+    "lifelong-learning",
+    "congratulations",
+    "academic-milestones",
+    "staff-success"
+  ]
+},
+
 {
   id: "26",
   title: "Kongoni TVC Cultural Day 2025 - Celebrating Heritage, Unity & Talent",
