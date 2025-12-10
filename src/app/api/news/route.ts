@@ -3,7 +3,174 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Complete mock news data - synchronized with main news route
 const mockNews = [
-
+  
+  {
+  id: "28",
+  title: "Kongoni Technical College Partners with Modia Driving School to Offer Comprehensive Driving Courses",
+  excerpt: "Kongoni Technical & Vocational College announces exciting collaboration with Modia Driving School to provide professional driving certification courses on campus, featuring NTSA-certified training across multiple vehicle classes.",
+  content: `
+    <p>Kongoni Technical & Vocational Training College is proud to announce a strategic partnership with <strong>Modia Driving School</strong>, bringing professional driving education directly to our campus. This collaboration represents our commitment to expanding practical skills training and providing our students and community with valuable, certified driving qualifications.</p>
+    
+    <p><strong>🚗 About the Partnership:</strong></p>
+    <p>This partnership combines Kongoni Technical College's educational excellence with Modia Driving School's professional driving instruction expertise. Together, we offer comprehensive driving courses designed to meet industry standards and prepare participants for successful careers in transportation and logistics.</p>
+    
+    <p><strong>🎓 Comprehensive Course Offerings:</strong></p>
+    <p>The program offers training across multiple vehicle classes, catering to diverse career paths and personal development goals:</p>
+    
+    <p><strong>🏍️ CLASS A (Motorcycles):</strong></p>
+    <ul>
+      <li><strong>A1 Motorcycles</strong> - Basic motorcycle operation and safety</li>
+      <li><strong>A2 Light Motorcycles</strong> - Advanced motorcycle handling</li>
+    </ul>
+    
+    <p><strong>🚗 CLASS B (Private Vehicles):</strong></p>
+    <ul>
+      <li><strong>B2 Saloon - Manual</strong> - Standard passenger vehicle operation</li>
+      <li><strong>B3 Professional</strong> - Professional driving standards</li>
+    </ul>
+    
+    <p><strong>🚚 CLASS C (Commercial Trucks):</strong></p>
+    <ul>
+      <li><strong>C1 Light Commercial Trucks</strong> - Light truck operation</li>
+      <li><strong>C Medium Trucks</strong> - Medium commercial vehicles</li>
+    </ul>
+    
+    <p><strong>🚐 CLASS D (Public Service Vehicles):</strong></p>
+    <ul>
+      <li><strong>D1 Vans - PSV's</strong> - Public service vans</li>
+      <li><strong>D2 Mini Buses</strong> - Mini-bus operation</li>
+    </ul>
+    
+    <p><strong>✅ Why Choose Our Driving Program?</strong></p>
+    <ul>
+      <li><strong>NTSA-Certified Instructors:</strong> All instructors are certified by the National Transport and Safety Authority</li>
+      <li><strong>Modern Facilities:</strong> Well-equipped classrooms and training vehicles</li>
+      <li><strong>Flexible Scheduling:</strong> Lesson plans designed to accommodate different timetables</li>
+      <li><strong>Payment Flexibility:</strong> Installment payment options available</li>
+      <li><strong>Comprehensive Training:</strong> Exposure to all major roads and highway conditions</li>
+      <li><strong>Campus Convenience:</strong> Training conducted at Kongoni Technical College</li>
+      <li><strong>Professional Standards:</strong> Industry-aligned curriculum and assessment</li>
+    </ul>
+    
+    <p><strong>🎯 Program Benefits for Students:</strong></p>
+    <ul>
+      <li>Enhanced employability with professional driving certification</li>
+      <li>Practical skills complementing technical training</li>
+      <li>Convenient on-campus training facilities</li>
+      <li>Affordable rates with flexible payment plans</li>
+      <li>Professional development for various career paths</li>
+      <li>NTSA-recognized certification upon completion</li>
+    </ul>
+    
+    <p><strong>🏫 Institutional Vision:</strong></p>
+    <p>"This partnership aligns perfectly with our mission to provide comprehensive vocational training," said Principal Judith Akaranga. "By offering driving courses alongside our technical programs, we're creating more opportunities for our students to develop marketable skills and increase their employability."</p>
+    
+    <p>The collaboration represents Kongoni Technical College's ongoing commitment to expanding its educational offerings and responding to community needs. Driving skills are increasingly valuable in today's job market, and this program ensures our students graduate with additional qualifications.</p>
+    
+    <p><strong>📊 Training Methodology:</strong></p>
+    <ul>
+      <li><strong>Theory Classes:</strong> Comprehensive classroom instruction on traffic rules, safety regulations, and driving principles</li>
+      <li><strong>Practical Training:</strong> Hands-on driving experience with certified instructors</li>
+      <li><strong>Road Safety Education:</strong> Emphasis on defensive driving and road safety awareness</li>
+      <li><strong>Assessment Preparation:</strong> Thorough preparation for NTSA driving tests</li>
+      <li><strong>Real-World Exposure:</strong> Training on various road types and conditions</li>
+    </ul>
+    
+    <p><strong>👥 Target Audience:</strong></p>
+    <ul>
+      <li>Kongoni Technical College students seeking additional skills</li>
+      <li>College alumni looking to enhance their qualifications</li>
+      <li>Community members seeking professional driving certification</li>
+      <li>Individuals pursuing careers in transport and logistics</li>
+      <li>Business owners needing certified drivers</li>
+    </ul>
+    
+    <p><strong>🚦 Safety First Approach:</strong></p>
+    <p>The program emphasizes road safety throughout all training modules. "We believe that good drivers are safe drivers," noted the Modia Driving School Director. "Our curriculum focuses not just on passing the test, but on developing responsible, safety-conscious drivers."</p>
+    
+    <p><strong>📅 Program Details:</strong></p>
+    <ul>
+      <li><strong>Registration:</strong> Ongoing - enroll at any time</li>
+      <li><strong>Location:</strong> Kongoni Technical & Vocational College Campus</li>
+      <li><strong>Duration:</strong> Varies by class type and individual progress</li>
+      <li><strong>Certification:</strong> NTSA-recognized upon successful completion</li>
+    </ul>
+    
+    <p><strong>📞 Contact Information:</strong></p>
+    <p>For inquiries and registration:</p>
+    <ul>
+      <li><strong>Phone/WhatsApp:</strong> 0722 794 586</li>
+      <li><strong>Phone/WhatsApp:</strong> 0781 930 803</li>
+      <li><strong>Phone/WhatsApp:</strong> 0740 325 676</li>
+      <li><strong>Visit:</strong> Kongoni Technical College Administration Office</li>
+    </ul>
+    
+    <p><strong>🌟 Community Impact:</strong></p>
+    <p>This partnership extends beyond campus boundaries, offering valuable skills to the wider community. By providing accessible driving education, we contribute to:</p>
+    <ul>
+      <li>Improved road safety through better-trained drivers</li>
+      <li>Economic empowerment through employable skills</li>
+      <li>Professional development for transportation careers</li>
+      <li>Community accessibility to quality driving education</li>
+      <li>Support for local businesses needing certified drivers</li>
+    </ul>
+    
+    <p><strong>🔮 Future Development:</strong></p>
+    <p>The college plans to expand this partnership with additional courses and specialized training modules based on industry demand. Future developments may include:</p>
+    <ul>
+      <li>Advanced defensive driving courses</li>
+      <li>Specialized vehicle operation training</li>
+      <li>Logistics and fleet management modules</li>
+      <li>Road safety awareness programs for the community</li>
+      <li>Partnerships with transport companies for placement opportunities</li>
+    </ul>
+    
+    <p><strong>🎉 Join Our Driving Program Today!</strong></p>
+    <p>Whether you're a current student looking to enhance your skills, an alum seeking additional qualifications, or a community member pursuing driving certification, this program offers the perfect opportunity.</p>
+    
+    <p>"Drive your future forward with Kongoni Technical College and Modia Driving School. Together, we're steering toward success!"</p>
+    
+    <p><strong>🚗 ENROLL TODAY! 🚗</strong></p>
+    <p>Take the wheel of your future and join our professional driving program. Contact us now to begin your journey toward becoming a certified, professional driver.</p>
+    
+    <p><em>Kongoni Technical & Vocational Training College: Expanding Skills, Empowering Futures.</em></p>
+  `,
+  imageUrl: "/images/newsevents/modiadriving/driving1.jpg",
+  images: [
+    "/images/newsevents/modiadriving/driving1.jpg",
+    "/images/newsevents/modiadriving/driving2.jpg",
+    "/images/newsevents/modiadriving/driving3.jpg",
+    "/images/newsevents/modiadriving/driving4.jpg",
+    "/images/newsevents/modiadriving/driving5.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=modia_driving_school_collaboration",
+  videoThumbnail: "/images/newsevents/modiadriving/driving1.jpg",
+  featured: true,
+  createdAt: "2025-12-10T12:00:00Z",
+  updatedAt: "2025-12-10T12:00:00Z",
+  author: "Administration & External Partnerships",
+  category: "Partnerships",
+  eventDate: "2025-12-10",
+  location: "Kongoni Technical and Vocational College Campus",
+  tags: [
+    "driving-school",
+    "modia-driving",
+    "partnership",
+    "driving-courses",
+    "ntsa-certified",
+    "vocational-training",
+    "skills-development",
+    "road-safety",
+    "transport-education",
+    "professional-driving",
+    "collaboration",
+    "community-training",
+    "driving-certification",
+    "student-opportunities",
+    "career-training",
+    "logistics-education"
+  ]
+},
   {
   id: "27",
   title: "Celebrating Academic Excellence: Our Staff's Remarkable Achievements",
