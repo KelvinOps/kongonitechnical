@@ -98,6 +98,7 @@ const mockNews = [
     <p><strong>📞 Contact Information:</strong></p>
     <p>For inquiries and registration:</p>
     <ul>
+      <li><strong>Phone/WhatsApp:</strong> 0788 070 303</li>
       <li><strong>Phone/WhatsApp:</strong> 0722 794 586</li>
       <li><strong>Phone/WhatsApp:</strong> 0781 930 803</li>
       <li><strong>Phone/WhatsApp:</strong> 0740 325 676</li>
@@ -137,10 +138,10 @@ const mockNews = [
   imageUrl: "/images/newsevents/modiadriving/driving1.jpg",
   images: [
     "/images/newsevents/modiadriving/driving1.jpg",
-    "/images/newsevents/modiadriving/driving2.jpg",
-    "/images/newsevents/modiadriving/driving3.jpg",
+    "/images/newsevents/modiadriving/driving2.jpeg",
+    "/images/newsevents/modiadriving/driving3.jpeg",
     "/images/newsevents/modiadriving/driving4.jpg",
-    "/images/newsevents/modiadriving/driving5.jpg"
+    "/images/newsevents/modiadriving/driving5.jpeg"
   ],
   videoUrl: "https://www.youtube.com/watch?v=modia_driving_school_collaboration",
   videoThumbnail: "/images/newsevents/modiadriving/driving1.jpg",
