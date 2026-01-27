@@ -314,9 +314,9 @@ export default function ILOPage() {
                 </div>
                 
                 <div className="border-b border-gray-200 pb-4">
-                  <h4 className="font-semibold text-gray-900">Ms. Polycub Mutsotso</h4>
+                  <h4 className="font-semibold text-gray-900">Mr. Polycub Mutsotso</h4>
                   <p className="text-primary">Internship Coordinator</p>
-                  <p className="text-sm text-gray-600">B.Sc Human Resource Management</p>
+                  <p className="text-sm text-gray-600">B.Sc in Information Technology</p>
                   <p className="text-xs text-gray-500 mt-1">Student Placements & Career Services</p>
                 </div>
                 

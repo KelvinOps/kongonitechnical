@@ -122,7 +122,7 @@ export default function DPAdministrationPage() {
               <div className="grid lg:grid-cols-3 gap-8 items-center">
                 <div className="text-center">
                   <Image
-                    src="/images/admin/board/ezraorina.jpeg"
+                    src="/images/admin/ezraorina.png"
                     alt="Mr. Ezra Orina"
                     width={300}
                     height={300}

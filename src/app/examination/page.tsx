@@ -138,95 +138,103 @@ export default function ExaminationsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#099cca] to-[#277DF5] text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Examinations Department
-                </h1>
-                <p className="text-xl opacity-80 leading-relaxed mb-8">
-                  Ensuring excellence and integrity in all assessments and certifications across CDACC, KNEC, NITA, and KTVC board examinations.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Badge variant="secondary" className="text-lg px-4 py-2">
-                    CDACC Certified
-                  </Badge>
-                  <Badge variant="secondary" className="text-lg px-4 py-2">
-                    KNEC Approved
-                  </Badge>
-                  <Badge variant="secondary" className="text-lg px-4 py-2">
-                    NITA Accredited
-                  </Badge>
-                </div>
-              </div>
-              <div className="text-center lg:text-right">
-                <Image
-                  src="/images/others/exams.jpg"
-                  alt="Examinations Department"
-                  width={500}
-                  height={400}
-                  className="rounded-lg shadow-2xl mx-auto"
-                />
-              </div>
-            </div>
+<section className="bg-gradient-to-r from-[#099cca] to-[#277DF5] text-white py-16">
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Examinations Department
+          </h1>
+          <p className="text-xl opacity-80 leading-relaxed mb-8">
+            Ensuring excellence and integrity in all assessments and certifications across CDACC, KNEC, NITA, and KTVC board examinations.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Badge variant="secondary" className="text-lg px-4 py-2">
+              CDACC Certified
+            </Badge>
+            <Badge variant="secondary" className="text-lg px-4 py-2">
+              KNEC Approved
+            </Badge>
+            <Badge variant="secondary" className="text-lg px-4 py-2">
+              NITA Accredited
+            </Badge>
+          </div>
+          <div className="mt-8 pt-6 border-t border-white/20">
+            <p className="text-lg mb-2">
+              <strong>Department Head:</strong> Patrick Mwangi
+            </p>
+            <p className="opacity-90">
+              Leading the examinations department with over 10 years of experience in educational assessment and certification.
+            </p>
           </div>
         </div>
-      </section>
+        <div className="text-center lg:text-right">
+          <Image
+            src="/images/others/exams.jpg"
+            alt="Examinations Department"
+            width={500}
+            height={400}
+            className="rounded-lg shadow-2xl mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <div className="container mx-auto px-4 py-12">
         {/* Leadership Profile */}
-        <section className="mb-16">
-          <Card className="shadow-lg">
-            <CardContent className="p-8">
-              <div className="grid lg:grid-cols-3 gap-8 items-center">
-                <div className="text-center">
-                  <Image
-                    src="/images/hod/paulkyalo.jpeg"
-                    alt="Paul Kimanzi"
-                    width={300}
-                    height={300}
-                    className="rounded-full mx-auto mb-4 shadow-md"
-                  />
-                  <Badge variant="outline" className="text-lg px-4 py-2">
-                    Examinations Officer
-                  </Badge>
-                </div>
-                <div className="lg:col-span-2">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Mr. Paul Kimanzi
-                  </h2>
-                  <p className="text-lg text-gray-700 mb-4">
-                    Bsc (CM),DTTE (KTTC)
-                  </p>
-                  <p className="text-gray-700 leading-relaxed mb-6">
-                    Mr. Kimanzi brings experience in examination management and assessment coordination. He has been instrumental in establishing robust examination systems that maintain the highest standards of integrity and efficiency. His expertise spans across all major certification bodies in Kenya&apos;s TVET sector.
-                  </p>
-                  
-                  <div className="grid md:grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center gap-2">
-                      <Mail className="text-[#099cca]" size={16} />
-                      <span>examinations@kongonitechnical.ac.ke</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Phone className="text-[#099cca]" size={16} />
-                      <span>+254 788070303</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="text-[#099cca]" size={16} />
-                      <span>Examinations Block</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="text-[#099cca]" size={16} />
-                      <span>Mon-Fri: 8:00 AM - 5:00 PM</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
+ <section className="mb-16">
+  <Card className="shadow-lg">
+    <CardContent className="p-8">
+      <div className="grid lg:grid-cols-3 gap-8 items-center">
+        <div className="text-center">
+          <Image
+            src="/images/admin/patrickmwangi.png"
+            alt="Patrick Mwangi"
+            width={300}
+            height={300}
+            className="rounded-full mx-auto mb-4 shadow-md"
+          />
+          <Badge variant="outline" className="text-lg px-4 py-2">
+            Examinations Officer
+          </Badge>
+        </div>
+        <div className="lg:col-span-2">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Mr. Patrick Mwangi
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+             (KTTC)
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Mr. Mwangi brings experience in examination management and assessment coordination. He has been instrumental in establishing robust examination systems that maintain the highest standards of integrity and efficiency. His expertise spans across all major certification bodies in Kenya&apos;s TVET sector.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
+            <div className="flex items-center gap-2">
+              <Mail className="text-[#099cca]" size={16} />
+              <span>exams@kongonitechnical.ac.ke</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="text-[#099cca]" size={16} />
+              <span>+254 788070303</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="text-[#099cca]" size={16} />
+              <span>Administration Block</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="text-[#099cca]" size={16} />
+              <span>Mon-Fri: 8:00 AM - 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+</section>
 
         {/* Statistics */}
         <section className="mb-16">
@@ -479,7 +487,7 @@ export default function ExaminationsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <div className="flex items-center justify-center gap-2">
                   <Mail className="text-[#099cca]" size={16} />
-                  <span>examinations@kongonicollege.ac.ke</span>
+                  <span>exams@kongonitechnical.ac.ke</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="text-[#099cca]" size={16} />
@@ -487,7 +495,7 @@ export default function ExaminationsPage() {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="text-[#099cca]" size={16} />
-                  <span>Examinations Block, Office 101</span>
+                  <span>Examinations Office</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Clock className="text-[#099cca]" size={16} />

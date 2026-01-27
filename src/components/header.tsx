@@ -130,7 +130,8 @@ export default function Header() {
             { href: "/ilo", label: "Industry Liaison Office" },
             { href: "/cbet", label: "Competency-Based Education and Training" },
             { href: "/iso-mr", label: "ISO Standards & Management Reviews" },
-            { href: "/iqa", label: "Internal Quality Assurance Services" }
+            { href: "/iqa", label: "Internal Quality Assurance Services" },
+            { href: "/non-teaching", label: "Non Teaching Staff" }
           ]
         }
       ]

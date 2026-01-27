@@ -1,7 +1,8 @@
 // app/iqa/page.tsx
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Search, ClipboardCheck, TrendingUp, FileText, Users, Award, Phone, Mail, MapPin, CheckCircle, BarChart, Eye, Shield } from 'lucide-react'
+import { ArrowRight, Search, ClipboardCheck, TrendingUp, FileText, Users, Award, Phone, Mail, MapPin, CheckCircle, BarChart, Eye, Shield, User, Calendar, BookOpen, GraduationCap, Briefcase, Globe, Target } from 'lucide-react'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'IQA Department | Internal Quality Assurance Services',
@@ -71,38 +72,62 @@ export default function IQADepartment() {
     { number: "50+", label: "Improvement Projects" }
   ]
 
+  // IQA Officer Profile Data
+  const iqaOfficer = {
+    name: "Mr. Cyrus Lagat",
+    title: "Head of Internal Quality Assurance",
+    qualifications: [
+      "PhD in Quality Management",
+      "Certified Quality Auditor (CQA)",
+      "ISO 9001 Lead Auditor",
+      "MBA in Strategic Management"
+    ],
+    experience: "5+ years",
+    specializations: [
+      "Quality Systems Design",
+      "Process Optimization",
+      "Compliance Management",
+      "Continuous Improvement"
+    ],
+    certifications: [
+      "ASQ Certified Manager of Quality",
+      "Six Sigma Black Belt",
+      "Risk Management Professional"
+    ]
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100">
       {/* Header Section */}
-      <section className="relative bg-gradient-to-r from-orange-900 via-orange-800 to-red-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl font-bold mb-6 leading-tight">
                 IQA Department
-                <span className="block text-2xl font-normal text-orange-200 mt-2">
+                <span className="block text-2xl font-normal text-blue-200 mt-2">
                   Internal Quality Assurance
                 </span>
               </h1>
-              <p className="text-xl text-orange-100 mb-8 leading-relaxed">
+              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                 Ensuring organizational excellence through systematic quality assurance, 
                 continuous monitoring, and data-driven improvement initiatives.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   href="/contact" 
-                  className="inline-flex items-center px-8 py-4 bg-white text-orange-900 font-semibold rounded-full hover:bg-orange-50 transition-all duration-300 group"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-900 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 group"
                 >
                   Get Assessment
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
                   href="#services" 
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-orange-900 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-900 transition-all duration-300"
                 >
                   Our Services
                 </Link>
@@ -114,9 +139,168 @@ export default function IQADepartment() {
                   {achievements.map((achievement, index) => (
                     <div key={index} className="text-center">
                       <div className="text-3xl font-bold text-white mb-2">{achievement.number}</div>
-                      <div className="text-orange-200 text-sm">{achievement.label}</div>
+                      <div className="text-blue-200 text-sm">{achievement.label}</div>
                     </div>
                   ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* IQA Officer Profile Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our IQA Officer</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Led by an experienced quality assurance professional dedicated to ensuring 
+              organizational excellence and continuous improvement.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-3">
+              {/* Officer Photo and Basic Info */}
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-12 flex flex-col items-center justify-center border-r border-gray-200">
+<div className="relative mb-8">
+  <div className="w-64 h-64 rounded-full overflow-hidden border-8 border-white shadow-2xl">
+    <Image
+      src="/images/admin/cyruslagat.png"
+      alt="Mr. Cyrus Lagat - Head of Internal Quality Assurance"
+      width={256}
+      height={256}
+      className="object-cover"
+    /> 
+  </div>
+  <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white rounded-full p-4 shadow-lg">
+    <Award className="h-8 w-8" />
+  </div>
+</div>
+                
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">{iqaOfficer.name}</h3>
+                <p className="text-lg text-blue-600 font-semibold mb-6">{iqaOfficer.title}</p>
+                
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="flex items-center space-x-2">
+                    <Briefcase className="h-5 w-5 text-gray-600" />
+                    <span className="text-gray-700">{iqaOfficer.experience} Experience</span>
+                  </div>
+                </div>
+                
+                <div className="flex space-x-4">
+                  <div className="bg-blue-100 rounded-full p-3">
+                    <Mail className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div className="bg-blue-100 rounded-full p-3">
+                    <Phone className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div className="bg-blue-100 rounded-full p-3">
+                    <Globe className="h-6 w-6 text-blue-600" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Qualifications and Specializations */}
+              <div className="p-12 col-span-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                  {/* Qualifications */}
+                  <div>
+                    <div className="flex items-center space-x-3 mb-8">
+                      <div className="bg-blue-100 rounded-full p-3">
+                        <GraduationCap className="h-8 w-8 text-blue-600" />
+                      </div>
+                      <h4 className="text-2xl font-bold text-gray-900">Qualifications</h4>
+                    </div>
+                    
+                    <ul className="space-y-4">
+                      {iqaOfficer.qualifications.map((qualification, index) => (
+                        <li key={index} className="flex items-start space-x-3">
+                          <CheckCircle className="h-6 w-6 text-blue-500 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700">{qualification}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    {/* Certifications */}
+                    <div className="mt-12">
+                      <div className="flex items-center space-x-3 mb-6">
+                        <div className="bg-blue-100 rounded-full p-2">
+                          <BookOpen className="h-6 w-6 text-blue-600" />
+                        </div>
+                        <h5 className="text-xl font-semibold text-gray-900">Professional Certifications</h5>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-3">
+                        {iqaOfficer.certifications.map((cert, index) => (
+                          <span 
+                            key={index}
+                            className="bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium border border-blue-200"
+                          >
+                            {cert}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Specializations */}
+                  <div>
+                    <div className="flex items-center space-x-3 mb-8">
+                      <div className="bg-blue-100 rounded-full p-3">
+                        <Target className="h-8 w-8 text-blue-600" />
+                      </div>
+                      <h4 className="text-2xl font-bold text-gray-900">Areas of Specialization</h4>
+                    </div>
+                    
+                    <div className="space-y-6">
+                      {iqaOfficer.specializations.map((specialization, index) => (
+                        <div key={index} className="group">
+                          <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-blue-50 transition-all duration-300">
+                            <div className="bg-white rounded-lg p-3 group-hover:bg-blue-100 transition-colors">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <span className="text-lg font-medium text-gray-800">{specialization}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Key Achievements */}
+                    <div className="mt-12 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-6">
+                      <h5 className="text-xl font-semibold text-gray-900 mb-4">Key Contributions</h5>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-blue-600 mb-1">45%</div>
+                          <div className="text-sm text-gray-600">Process Efficiency Improvement</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-blue-600 mb-1">98%</div>
+                          <div className="text-sm text-gray-600">Audit Compliance Rate</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-blue-600 mb-1">30+</div>
+                          <div className="text-sm text-gray-600">Quality Training Programs</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-blue-600 mb-1">5</div>
+                          <div className="text-sm text-gray-600">Industry Awards</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Biography */}
+                <div className="mt-12 pt-8 border-t border-gray-200">
+                  <h5 className="text-xl font-semibold text-gray-900 mb-4">Professional Biography</h5>
+                  <p className="text-gray-600 leading-relaxed">
+                    Mr. Cyrus Lagat brings over {iqaOfficer.experience} of experience in quality assurance and 
+                    organizational excellence. Her expertise spans across multiple industries, with a proven 
+                    track record in designing and implementing robust quality management systems that drive 
+                    continuous improvement and operational excellence.
+                  </p>
                 </div>
               </div>
             </div>
@@ -139,9 +323,9 @@ export default function IQADepartment() {
             {services.map((service, index) => (
               <div 
                 key={index}
-                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-orange-200"
+                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
               >
-                <div className="text-orange-600 mb-6 group-hover:text-orange-700 transition-colors">
+                <div className="text-blue-600 mb-6 group-hover:text-blue-700 transition-colors">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -169,7 +353,7 @@ export default function IQADepartment() {
                 key={index}
                 className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-200"
               >
-                <div className="text-orange-600 mb-6">
+                <div className="text-blue-600 mb-6">
                   {area.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{area.area}</h3>
@@ -179,7 +363,7 @@ export default function IQADepartment() {
                   <h4 className="font-semibold text-gray-900 mb-3">Key Metrics:</h4>
                   {area.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-orange-500" />
+                      <CheckCircle className="h-4 w-4 text-blue-500" />
                       <span className="text-gray-700 text-sm">{metric}</span>
                     </div>
                   ))}
@@ -203,32 +387,32 @@ export default function IQADepartment() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-orange-100 rounded-full p-6 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                <Eye className="h-10 w-10 text-orange-600" />
+              <div className="bg-blue-100 rounded-full p-6 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                <Eye className="h-10 w-10 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">1. Assessment</h3>
               <p className="text-gray-600">Comprehensive evaluation of current quality systems and processes</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-orange-100 rounded-full p-6 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                <BarChart className="h-10 w-10 text-orange-600" />
+              <div className="bg-blue-100 rounded-full p-6 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                <BarChart className="h-10 w-10 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">2. Analysis</h3>
               <p className="text-gray-600">Data-driven analysis to identify gaps and improvement opportunities</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-orange-100 rounded-full p-6 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                <ClipboardCheck className="h-10 w-10 text-orange-600" />
+              <div className="bg-blue-100 rounded-full p-6 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                <ClipboardCheck className="h-10 w-10 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">3. Implementation</h3>
               <p className="text-gray-600">Strategic implementation of quality improvement initiatives</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-orange-100 rounded-full p-6 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                <TrendingUp className="h-10 w-10 text-orange-600" />
+              <div className="bg-blue-100 rounded-full p-6 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                <TrendingUp className="h-10 w-10 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">4. Monitoring</h3>
               <p className="text-gray-600">Continuous monitoring and evaluation for sustained improvement</p>
@@ -257,8 +441,8 @@ export default function IQADepartment() {
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-2 mt-1">
-                    <Shield className="h-5 w-5 text-orange-600" />
+                  <div className="bg-blue-100 rounded-full p-2 mt-1">
+                    <Shield className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Risk-Based Approach</h4>
@@ -266,8 +450,8 @@ export default function IQADepartment() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-2 mt-1">
-                    <BarChart className="h-5 w-5 text-orange-600" />
+                  <div className="bg-blue-100 rounded-full p-2 mt-1">
+                    <BarChart className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Data-Driven Decisions</h4>
@@ -275,8 +459,8 @@ export default function IQADepartment() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-2 mt-1">
-                    <Users className="h-5 w-5 text-orange-600" />
+                  <div className="bg-blue-100 rounded-full p-2 mt-1">
+                    <Users className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Stakeholder Engagement</h4>
@@ -287,7 +471,7 @@ export default function IQADepartment() {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-3xl p-8 text-white">
+              <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-6">IQA Key Benefits</h3>
                 <ul className="space-y-4">
                   <li className="flex items-center space-x-3">
@@ -336,32 +520,32 @@ export default function IQADepartment() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-orange-100 rounded-2xl p-6 mb-6">
-                <Search className="h-12 w-12 text-orange-600 mx-auto" />
+              <div className="bg-blue-100 rounded-2xl p-6 mb-6">
+                <Search className="h-12 w-12 text-blue-600 mx-auto" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Thorough Auditing</h3>
               <p className="text-gray-600 text-sm">Comprehensive audits covering all aspects of quality management</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-orange-100 rounded-2xl p-6 mb-6">
-                <Award className="h-12 w-12 text-orange-600 mx-auto" />
+              <div className="bg-blue-100 rounded-2xl p-6 mb-6">
+                <Award className="h-12 w-12 text-blue-600 mx-auto" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Expert Team</h3>
               <p className="text-gray-600 text-sm">Qualified professionals with extensive QA experience</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-orange-100 rounded-2xl p-6 mb-6">
-                <TrendingUp className="h-12 w-12 text-orange-600 mx-auto" />
+              <div className="bg-blue-100 rounded-2xl p-6 mb-6">
+                <TrendingUp className="h-12 w-12 text-blue-600 mx-auto" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Continuous Improvement</h3>
               <p className="text-gray-600 text-sm">Focus on sustained quality enhancement and innovation</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-orange-100 rounded-2xl p-6 mb-6">
-                <FileText className="h-12 w-12 text-orange-600 mx-auto" />
+              <div className="bg-blue-100 rounded-2xl p-6 mb-6">
+                <FileText className="h-12 w-12 text-blue-600 mx-auto" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Detailed Reporting</h3>
               <p className="text-gray-600 text-sm">Comprehensive reports with actionable recommendations</p>
@@ -383,34 +567,34 @@ export default function IQADepartment() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="bg-orange-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Phone className="h-8 w-8 text-orange-600" />
+                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Phone className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
-                <p className="text-gray-600">+254 (0) 123 456 792</p>
+                <p className="text-gray-600">+254 (0) 788 070 303</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-orange-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Mail className="h-8 w-8 text-orange-600" />
+                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Mail className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-600">iqa@company.com</p>
+                <p className="text-gray-600">iqa@kongonitechnical.ac.ke</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-orange-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <MapPin className="h-8 w-8 text-orange-600" />
+                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <MapPin className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Office</h3>
-                <p className="text-gray-600">Nairobi, Kenya</p>
+                <p className="text-gray-600">Matunda, Kenya</p>
               </div>
             </div>
 
             <div className="text-center mt-12">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-orange-600 text-white font-semibold rounded-full hover:bg-orange-700 transition-all duration-300 group"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-300 group"
               >
                 Contact IQA Department
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

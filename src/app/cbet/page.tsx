@@ -1,270 +1,411 @@
-// app/administration/page.tsx
+// app/cbet/page.tsx
 import { Metadata } from 'next'
-import { Mail, Phone, MapPin, Calendar, Award, GraduationCap, Users } from 'lucide-react'
+import { 
+  Target, 
+  Users, 
+  TrendingUp, 
+  CheckCircle, 
+  BookOpen, 
+  Briefcase, 
+  Award, 
+  Clock, 
+  Building, 
+  Lightbulb,
+  GraduationCap,
+  Shield,
+  BarChart,
+  Zap,
+  Globe,
+  Heart,
+  ArrowRight,
+  Calendar,
+  FileText,
+  UserCheck
+} from 'lucide-react'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Administration Team | Kongoni Technical and Vocational College',
-  description: 'Meet the dedicated leadership team at Kongoni Technical and Vocational College. Our experienced administrators are committed to providing quality technical and vocational education.',
-  keywords: 'administration, leadership, technical college, vocational education, Kenya, management team',
+  title: 'CBET Programs | Kongoni Technical and Vocational College',
+  description: 'Discover our Competency Based Education and Training (CBET) programs designed to equip students with practical skills and industry-relevant competencies for today\'s job market.',
+  keywords: 'CBET, Competency Based Education, TVET, technical training, vocational education, skills development, Kenya',
   openGraph: {
-    title: 'Administration Team | Kongoni Technical and Vocational College',
-    description: 'Meet our experienced leadership team committed to excellence in technical and vocational education.',
+    title: 'CBET Programs | Kongoni Technical and Vocational College',
+    description: 'Industry-focused competency based training programs for career success.',
     type: 'website',
   },
 }
 
-interface AdminMember {
-  id: string
-  name: string
-  position: string
-  department: string
-  image: string
-  email: string
-  phone: string
-  qualifications: string[]
-  experience: string
-  responsibilities: string[]
-  bio: string
-  joinDate: string
-}
-
-const administrationTeam: AdminMember[] = [
+const cbetPrinciples = [
   {
-    id: '1',
-    name: 'Ms. Judith Akaranga',
-    position: 'Principal',
-    department: 'Executive Leadership',
-    image: '/images/principal.png',
-    email: 'principal@kongoni.ac.ke',
-    phone: '+254 712 345 678',
-    qualifications: ['PhD in Educational Leadership', 'MSc in Technical Education', 'BSc in Engineering'],
-    experience: '15+ years in technical education',
-    responsibilities: ['Strategic planning and institutional leadership', 'Academic quality assurance', 'Stakeholder relations', 'Policy implementation'],
-    bio: 'Ms Akaranga brings over 15 years of experience in technical education leadership. She is passionate about developing skilled technical professionals who contribute to Kenya\'s economic growth.',
-    joinDate: '2022'
+    icon: <Target className="h-10 w-10" />,
+    title: "Outcome-Focused",
+    description: "Training focused on measurable skills and competencies"
   },
   {
-    id: '2',
-    name: 'Ms. Lucy Makhokha',
-    position: 'Deputy Principal (Academic)',
-    department: 'Academic Affairs',
-    image: '/images/admin/deputy-academic.jpg',
-    email: 'deputy.academic@kongoni.ac.ke',
-    phone: '+254 723 456 789',
-    qualifications: ['MSc in Mechanical Engineering', 'Diploma in Technical Education', 'BSc in Engineering Technology'],
-    experience: '12+ years in academic administration',
-    responsibilities: ['Academic program oversight', 'Curriculum development', 'Faculty coordination', 'Student academic affairs'],
-    bio: 'Ms. Makhokha oversees all academic programs ensuring they meet industry standards and prepare students for successful careers in technical fields.',
-    joinDate: '2019'
+    icon: <Users className="h-10 w-10" />,
+    title: "Learner-Centered",
+    description: "Personalized learning paths based on individual needs"
   },
   {
-    id: '3',
-    name: 'Ms. Sarah Achieng',
-    position: 'Deputy Principal (Administration)',
-    department: 'Administrative Services',
-    image: '/images/admin/deputy-admin.jpg',
-    email: 'deputy.admin@kongoni.ac.ke',
-    phone: '+254 734 567 890',
-    qualifications: ['MBA in Operations Management', 'BSc in Business Administration', 'Diploma in Human Resource Management'],
-    experience: '10+ years in institutional administration',
-    responsibilities: ['Administrative operations', 'Human resource management', 'Financial oversight', 'Infrastructure development'],
-    bio: 'Ms. Achieng ensures smooth administrative operations and creates an enabling environment for effective teaching and learning.',
-    joinDate: '2020'
+    icon: <CheckCircle className="h-10 w-10" />,
+    title: "Competency Assessment",
+    description: "Skills demonstration rather than theoretical exams"
   },
   {
-    id: '4',
-    name: 'Mr. Kevin Masinde',
-    position: 'Dean of Students',
-    department: 'Student Affairs',
-    image: '/images/admin/dean-students.jpg',
-    email: 'dean.students@kongoni.ac.ke',
-    phone: '+254 745 678 901',
-    qualifications: ['MSc in Educational Psychology', 'BSc in Social Sciences', 'Diploma in Guidance and Counseling'],
-    experience: '11+ years in student affairs',
-    responsibilities: ['Student welfare coordination', 'Disciplinary matters', 'Student activities oversight', 'Counseling services'],
-    bio: 'Mr. Masinde leads student affairs with a focus on holistic student development and creating a supportive learning environment.',
-    joinDate: '2018'
-  },
-  {
-    id: '5',
-    name: 'Mr. Andrew Juma',
-    position: 'Registrar',
-    department: 'Registry Services',
-    image: '/images/admin/registrar.jpg',
-    email: 'registrar@kongoni.ac.ke',
-    phone: '+254 767 890 123',
-    qualifications: ['MSc in Information Management', 'BSc in Computer Science', 'Diploma in Records Management'],
-    experience: '9+ years in academic registry',
-    responsibilities: ['Student records management', 'Academic calendar coordination', 'Examination administration', 'Graduation ceremonies'],
-    bio: 'Mr. Juma ensures efficient management of all student academic records and administrative processes.',
-    joinDate: '2021'
-  },
-  {
-    id: '6',
-    name: 'Dr. Margaret Mutua',
-    position: 'Director of Research',
-    department: 'Research and Innovation',
-    image: '/images/admin/research-director.jpg',
-    email: 'research@kongoni.ac.ke',
-    phone: '+254 778 901 234',
-    qualifications: ['PhD in Industrial Technology', 'MSc in Applied Sciences', 'BSc in Chemistry'],
-    experience: '13+ years in research and innovation',
-    responsibilities: ['Research program coordination', 'Innovation initiatives', 'Grant applications', 'Industry collaborations'],
-    bio: 'Dr. Mutua leads our research efforts, focusing on applied research that addresses real-world technical challenges.',
-    joinDate: '2018'
-  },
-  {
-    id: '7',
-    name: 'Ms. Millicent Nambo',
-    position: 'Finance Officer',
-    department: 'Finance and Accounts',
-    image: '/images/admin/finance-manager.jpg',
-    email: 'finance@kongoni.ac.ke',
-    phone: '+254 789 012 345',
-    qualifications: ['MBA in Finance', 'CPA (K)', 'BSc in Finance and Accounting'],
-    experience: '8+ years in financial management',
-    responsibilities: ['Financial planning and control', 'Budget management', 'Financial reporting', 'Audit coordination'],
-    bio: 'Ms. Nambo ensures sound financial management and transparent use of institutional resources.',
-    joinDate: '2020'
+    icon: <TrendingUp className="h-10 w-10" />,
+    title: "Continuous Improvement",
+    description: "Regular curriculum updates based on industry feedback"
   }
 ]
 
-const stats = [
-  { icon: Users, label: 'Leadership Team', value: '7' },
-  { icon: GraduationCap, label: 'Combined Experience', value: '78+ Years' },
-  { icon: Award, label: 'Advanced Degrees', value: '86%' },
-  { icon: Calendar, label: 'Average Tenure', value: '4+ Years' }
+const cbetPrograms = [
+  {
+    title: "Automotive Technology",
+    duration: "2 Years",
+    certification: "Artisan & Craftsman Level",
+    competencies: ["Engine Diagnostics", "Electrical Systems", "Brake Systems", "Suspension"],
+    industryPartners: ["Toyota Kenya", "Isuzu East Africa", "DT Dobie"],
+    icon: <Zap className="h-8 w-8" />
+  },
+  {
+    title: "ICT & Digital Skills",
+    duration: "18 Months",
+    certification: "National Certificate",
+    competencies: ["Software Development", "Networking", "Cybersecurity", "Digital Marketing"],
+    industryPartners: ["Safaricom", "Microsoft", "Cisco Academy"],
+    icon: <Globe className="h-8 w-8" />
+  },
+  {
+    title: "Hospitality & Tourism",
+    duration: "2 Years",
+    certification: "Diploma in Hospitality",
+    competencies: ["Food Production", "Front Office Operations", "Tour Guiding", "Customer Service"],
+    industryPartners: ["Sarova Hotels", "Kenya Wildlife Service", "Tourism Fund"],
+    icon: <Heart className="h-8 w-8" />
+  },
+  {
+    title: "Building Technology",
+    duration: "2.5 Years",
+    certification: "Artisan & Technician",
+    competencies: ["Masonry", "Carpentry", "Plumbing", "Electrical Installation"],
+    industryPartners: ["Bamburi Cement", "Mabati Rolling Mills", "National Construction"],
+    icon: <Building className="h-8 w-8" />
+  },
+  {
+    title: "Agri-Business",
+    duration: "18 Months",
+    certification: "Certificate in Agri-Business",
+    competencies: ["Smart Farming", "Agri-Marketing", "Value Addition", "Farm Management"],
+    industryPartners: ["Kenya Agricultural Institute", "SNV Netherlands", "Equity Bank"],
+    icon: <TrendingUp className="h-8 w-8" />
+  },
+  {
+    title: "Health Sciences",
+    duration: "2 Years",
+    certification: "Certificate in Community Health",
+    competencies: ["First Aid", "Health Education", "Community Outreach", "Basic Nursing"],
+    industryPartners: ["Ministry of Health", "Red Cross", "AMREF"],
+    icon: <Shield className="h-8 w-8" />
+  }
 ]
 
-export default function AdministrationPage() {
+const cbetBenefits = [
+  {
+    title: "Industry-Relevant Skills",
+    description: "Direct alignment with current industry needs and standards",
+    icon: <Briefcase className="h-6 w-6" />
+  },
+  {
+    title: "Practical Experience",
+    description: "70% hands-on training and 30% theory",
+    icon: <BookOpen className="h-6 w-6" />
+  },
+  {
+    title: "Flexible Learning",
+    description: "Modular programs with flexible entry and exit points",
+    icon: <Clock className="h-6 w-6" />
+  },
+  {
+    title: "Employment Ready",
+    description: "Immediate employability upon completion",
+    icon: <UserCheck className="h-6 w-6" />
+  },
+  {
+    title: "Certification",
+    description: "Nationally recognized certificates and diplomas",
+    icon: <Award className="h-6 w-6" />
+  },
+  {
+    title: "Continuous Assessment",
+    description: "Ongoing evaluation of skills and competencies",
+    icon: <BarChart className="h-6 w-6" />
+  }
+]
+
+const cbetProcess = [
+  {
+    step: "01",
+    title: "Competency Identification",
+    description: "Industry consultation to identify required skills",
+    icon: <Target className="h-8 w-8" />
+  },
+  {
+    step: "02",
+    title: "Curriculum Development",
+    description: "Design modular training programs based on competencies",
+    icon: <FileText className="h-8 w-8" />
+  },
+  {
+    step: "03",
+    title: "Training Delivery",
+    description: "Practical hands-on training with industry exposure",
+    icon: <BookOpen className="h-8 w-8" />
+  },
+  {
+    step: "04",
+    title: "Assessment",
+    description: "Demonstration of skills through practical tests",
+    icon: <CheckCircle className="h-8 w-8" />
+  },
+  {
+    step: "05",
+    title: "Certification",
+    description: "Award of competency-based certificates",
+    icon: <Award className="h-8 w-8" />
+  },
+  {
+    step: "06",
+    title: "Employment Linkage",
+    description: "Connection to industry opportunities",
+    icon: <Briefcase className="h-8 w-8" />
+  }
+]
+
+export default function CBETPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-gray-100">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-[#0775c7] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-900 text-white py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Administration Team
+            <div className="inline-flex items-center justify-center px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-8">
+              <span className="text-sm font-semibold">COMPETENCY BASED EDUCATION & TRAINING</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              CBET Programs
+              <span className="block text-2xl font-normal text-blue-200 mt-4">
+                Empowering Skills for Industry Excellence
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-95">
-              Meet the dedicated leadership team committed to excellence in technical and vocational education at Kongoni Technical and Vocational College
+            <p className="text-xl text-blue-100 mb-10 max-w-4xl mx-auto leading-relaxed">
+              At Kongoni Technical  College, we pioneer Competency Based Education and Training designed to 
+              bridge the skills gap and prepare learners for immediate employment in dynamic industries.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="py-16 bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
-                    <stat.icon className="h-8 w-8 text-primary" />
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600 font-medium text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership Message */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Leadership Message</h2>
-          <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 border-l-4 border-primary">
-            <blockquote className="text-lg text-gray-700 mb-8 leading-relaxed">
-              At Kongoni Technical and Vocational College, we are committed to providing world-class technical education that empowers our students with practical skills and knowledge needed to excel in their chosen fields. Our administration team works tirelessly to create an environment that fosters innovation, excellence, and personal growth.
-            </blockquote>
-            <div className="flex items-center justify-center">
-              <div className="text-center">
-                <cite className="text-primary font-semibold text-lg">Ms. Judith Akaranga</cite>
-                <p className="text-gray-600 text-sm mt-1">Principal</p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link 
+                href="#programs" 
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-900 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 group shadow-lg"
+              >
+                Explore Programs
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link 
+                href="/admissions" 
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-900 transition-all duration-300"
+              >
+                Apply Now
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Administration Team Grid */}
+      {/* What is CBET */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
+                <Lightbulb className="h-4 w-4 mr-2" />
+                INNOVATIVE APPROACH
+              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                What is <span className="text-blue-600">Competency Based Education?</span>
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Competency Based Education and Training (CBET) is an innovative approach that focuses on 
+                developing specific skills and competencies required by industries. Unlike traditional 
+                education, CBET emphasizes <span className="font-semibold text-blue-700">what learners can do</span> rather than what they know.
+              </p>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Our CBET programs are designed in collaboration with industry partners to ensure graduates 
+                possess the exact skills needed for todays job market, making them immediately employable 
+                and productive from day one.
+              </p>
+              
+              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-100 rounded-full p-3 flex-shrink-0">
+                    <Target className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-2">Our Mission in CBET</h4>
+                    <p className="text-gray-700">
+                      To transform TVET education by producing highly skilled, industry-ready professionals 
+                      who can drive economic growth and innovation in Kenya and beyond.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-6">
+              {cbetPrinciples.map((principle, index) => (
+                <div 
+                  key={index}
+                  className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="text-blue-600 mb-4">
+                    {principle.icon}
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">{principle.title}</h4>
+                  <p className="text-gray-600 text-sm">{principle.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Benefits */}
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-cyan-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Experienced professionals dedicated to advancing technical and vocational education
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our CBET Programs?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience education thats directly connected to real-world success
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {administrationTeam.map((member) => (
-              <div key={member.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                {/* Member Photo */}
-                <div className="relative h-56 bg-gradient-to-br from-primary/10 to-primary/20">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-28 h-28 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                      <span className="text-white text-xl font-bold">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                  </div>
+            {cbetBenefits.map((benefit, index) => (
+              <div 
+                key={index}
+                className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
+              >
+                <div className="inline-flex items-center justify-center p-3 bg-blue-100 rounded-xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  {benefit.icon}
                 </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                {/* Member Info */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-primary font-semibold mb-1">{member.position}</p>
-                  <p className="text-gray-600 text-sm mb-4">{member.department}</p>
+      {/* CBET Process */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our CBET Implementation Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A systematic approach to developing industry-ready professionals
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cbetProcess.map((process, index) => (
+              <div 
+                key={index}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="text-3xl font-bold text-blue-600 opacity-20">{process.step}</div>
+                    <div className="text-blue-600">
+                      {process.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{process.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{process.description}</p>
+                </div>
+                {index < cbetProcess.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-blue-200 transform -translate-y-1/2"></div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Programs Section */}
+      <section id="programs" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our CBET Programs</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Industry-focused training programs designed for career success
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cbetPrograms.map((program, index) => (
+              <div 
+                key={index}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
+              >
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="text-blue-600">
+                      {program.icon}
+                    </div>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
+                      {program.duration}
+                    </span>
+                  </div>
                   
-                  {/* Contact Info */}
-                  <div className="space-y-2 mb-4 p-3 bg-gray-50 rounded-lg">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Mail className="h-4 w-4 mr-2 text-primary" />
-                      <a href={`mailto:${member.email}`} className="hover:text-primary transition-colors">
-                        {member.email}
-                      </a>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Phone className="h-4 w-4 mr-2 text-primary" />
-                      <a href={`tel:${member.phone}`} className="hover:text-primary transition-colors">
-                        {member.phone}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Experience */}
-                  <div className="mb-4">
-                    <p className="text-sm font-semibold text-gray-800 mb-2">Experience</p>
-                    <p className="text-sm text-gray-600 bg-secondary/20 px-3 py-2 rounded-lg">{member.experience}</p>
-                  </div>
-
-                  {/* Bio */}
-                  <div className="mb-4">
-                    <p className="text-sm text-gray-700 leading-relaxed">{member.bio}</p>
-                  </div>
-
-                  {/* Qualifications */}
-                  <div className="mb-4">
-                    <p className="text-sm font-semibold text-gray-800 mb-3">Key Qualifications</p>
-                    <div className="space-y-2">
-                      {member.qualifications.slice(0, 2).map((qual, index) => (
-                        <div key={index} className="flex items-center text-xs text-gray-700">
-                          <div className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></div>
-                          <span>{qual}</span>
-                        </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{program.title}</h3>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Competencies:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {program.competencies.map((competency, idx) => (
+                        <span 
+                          key={idx}
+                          className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full border border-blue-100"
+                        >
+                          {competency}
+                        </span>
                       ))}
                     </div>
                   </div>
-
-                  {/* Join Date */}
-                  <div className="flex items-center text-xs text-gray-500 pt-3 border-t border-gray-100">
-                    <Calendar className="h-3 w-3 mr-2" />
-                    <span>Joined {member.joinDate}</span>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-2">Certification:</h4>
+                    <p className="text-gray-700">{program.certification}</p>
                   </div>
+                  
+                  <div className="pt-6 border-t border-gray-100">
+                    <h4 className="font-semibold text-gray-900 mb-3">Industry Partners:</h4>
+                    <p className="text-gray-600 text-sm">
+                      {program.industryPartners.join(', ')}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="px-8 py-6 bg-gradient-to-r from-blue-50 to-gray-50 border-t border-gray-100">
+                  <Link 
+                    href={`/programs/${program.title.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`}
+                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 group"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -272,104 +413,126 @@ export default function AdministrationPage() {
         </div>
       </section>
 
-      {/* Organizational Structure */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Industry Partnerships */}
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Organizational Structure</h2>
-            <p className="text-gray-600 text-lg">Clear governance structure ensuring effective leadership and decision-making</p>
+            <h2 className="text-4xl font-bold mb-4">Industry Partnerships</h2>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Collaborating with leading companies to ensure relevant training
+            </p>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 border border-gray-100">
-            <div className="text-center mb-12">
-              <div className="inline-block bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg">
-                Principal
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { name: "Safaricom PLC", logo: "S" },
+              { name: "Toyota Kenya", logo: "T" },
+              { name: "Sarova Hotels", logo: "S" },
+              { name: "Microsoft", logo: "M" },
+              { name: "Bamburi Cement", logo: "B" },
+              { name: "Red Cross", logo: "RC" },
+              { name: "Cisco Academy", logo: "C" },
+              { name: "DT Dobie", logo: "DT" },
+            ].map((partner, index) => (
+              <div 
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 border border-white/20"
+              >
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl font-bold">{partner.logo}</span>
+                </div>
+                <h4 className="font-semibold">{partner.name}</h4>
               </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="text-center">
-                <div className="bg-primary/10 border-2 border-primary/20 text-primary px-6 py-4 rounded-xl font-bold mb-6 text-lg">
-                  Deputy Principal (Academic)
-                </div>
-                <div className="space-y-3">
-                  <div className="bg-secondary/20 border border-secondary/40 px-4 py-3 rounded-lg text-sm font-medium text-gray-700">
-                    Dean of Engineering
-                  </div>
-                  <div className="bg-secondary/20 border border-secondary/40 px-4 py-3 rounded-lg text-sm font-medium text-gray-700">
-                    Dean of Business Studies
-                  </div>
-                  <div className="bg-secondary/20 border border-secondary/40 px-4 py-3 rounded-lg text-sm font-medium text-gray-700">
-                    Director of Research
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-primary/10 border-2 border-primary/20 text-primary px-6 py-4 rounded-xl font-bold mb-6 text-lg">
-                  Deputy Principal (Administration)
-                </div>
-                <div className="space-y-3">
-                  <div className="bg-secondary/20 border border-secondary/40 px-4 py-3 rounded-lg text-sm font-medium text-gray-700">
-                    Registrar
-                  </div>
-                  <div className="bg-secondary/20 border border-secondary/40 px-4 py-3 rounded-lg text-sm font-medium text-gray-700">
-                    Finance Officer
-                  </div>
-                  <div className="bg-secondary/20 border border-secondary/40 px-4 py-3 rounded-lg text-sm font-medium text-gray-700">
-                    Dean of Students
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-primary text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Success Stories */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Get in Touch with Our Administration</h2>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Our leadership team is committed to maintaining open communication with all stakeholders
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our graduates making an impact in various industries
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
-              <div className="flex justify-center mb-4">
-                <MapPin className="h-12 w-12 text-secondary" />
+            {[
+              {
+                name: "John Kamau",
+                program: "Automotive Technology",
+                achievement: "Senior Technician at Toyota Kenya",
+                quote: "The hands-on training at Kongoni gave me the exact skills needed in the automotive industry."
+              },
+              {
+                name: "Sarah Akinyi",
+                program: "ICT & Digital Skills",
+                achievement: "Software Developer at Safaricom",
+                quote: "CBET approach prepared me for real-world challenges. I was productive from day one at work."
+              },
+              {
+                name: "Michael Ochieng",
+                program: "Building Technology",
+                achievement: "Site Supervisor at National Construction",
+                quote: "The competency-based assessment gave me confidence in my practical skills."
+              }
+            ].map((story, index) => (
+              <div 
+                key={index}
+                className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <GraduationCap className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">{story.name}</h4>
+                    <p className="text-sm text-blue-600">{story.program}</p>
+                  </div>
+                </div>
+                
+                
+                <div className="pt-4 border-t border-blue-100">
+                  <p className="text-sm font-semibold text-gray-900">{story.achievement}</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Visit Us</h3>
-              <p className="text-white/90 leading-relaxed">
-                Kongoni Technical & Vocational College<br />
-                P.O. Box 45 - 30205<br />
-                Matunda, Kenya
-              </p>
-            </div>
-            
-            <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
-              <div className="flex justify-center mb-4">
-                <Phone className="h-12 w-12 text-secondary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Call Us</h3>
-              <p className="text-white/90 leading-relaxed">
-                <a href="tel:+254700123456" className="hover:text-secondary transition-colors">+254 700 123 456</a><br />
-                <a href="tel:+254733654321" className="hover:text-secondary transition-colors">+254 733 654 321</a>
-              </p>
-            </div>
-            
-            <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
-              <div className="flex justify-center mb-4">
-                <Mail className="h-12 w-12 text-secondary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Email Us</h3>
-              <p className="text-white/90 leading-relaxed">
-                <a href="mailto:info@kongoni.ac.ke" className="hover:text-secondary transition-colors">info@kongoni.ac.ke</a><br />
-                <a href="mailto:admin@kongoni.ac.ke" className="hover:text-secondary transition-colors">admin@kongoni.ac.ke</a>
-              </p>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Career?</h2>
+          <p className="text-xl mb-10 max-w-2xl mx-auto opacity-95">
+            Join our CBET programs and acquire the skills that industries demand
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link 
+              href="/admissions"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-900 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 group shadow-lg"
+            >
+              Apply Now
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link 
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-900 transition-all duration-300"
+            >
+              Request Information
+            </Link>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-white/20">
+            <p className="text-blue-100">
+              Need guidance? Contact our CBET Coordinators: 
+              <a href="tel:+254700123456" className="font-semibold ml-2 hover:text-white">+254 700 123 456</a> | 
+              <a href="mailto:cbet@kongoni.ac.ke" className="font-semibold ml-2 hover:text-white">cbet@kongoni.ac.ke</a>
+            </p>
           </div>
         </div>
       </section>

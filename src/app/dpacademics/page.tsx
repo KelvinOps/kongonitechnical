@@ -107,8 +107,8 @@ const departments = [
     name: "Fashion Design and Cosmetics Department",
     description: "Creative training in fashion design, garment construction, and beauty techniques.",
     programs: ["Fashion Design", "Garment Construction", "Cosmetology", "Beauty Therapy", "Textile Design"],
-    hod: "Tabitha Indiori",
-    image: "/images/hod/tabithaindiori.jpeg"
+    hod: "Carren Sheunda",
+    image: "/images/hod/carrensheunda.png"
   },
   {
     name: "Hospitality and Tourism Department",
@@ -182,7 +182,7 @@ export default function DPAcademicsPage() {
               <div className="grid lg:grid-cols-3 gap-8 items-center">
                 <div className="text-center">
                   <Image
-                    src="/images/admin/board/lucymakokha.jpeg"
+                    src="/images/admin/lucymakokha.png"
                     alt="Mrs. Lucy Makokha"
                     width={300}
                     height={300}

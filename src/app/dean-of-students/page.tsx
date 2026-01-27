@@ -191,7 +191,7 @@ export default function DeanOfStudentsPage() {
               <div className="bg-white rounded-lg shadow-lg p-6 text-center sticky top-8">
                 <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-gray-200 ring-4 ring-primary/20">
                   <Image
-                    src="/images/admin/board/kevinmasinde.png"
+                    src="/images/dean/kevinmasinde.png"
                     alt="Kevin Masinde"
                     width={192}
                     height={192}

@@ -39,11 +39,6 @@ const registryServices = [
     description: "Maintenance and safekeeping of all student academic records and documents."
   },
   {
-    icon: GraduationCap,
-    title: "Graduation Services",
-    description: "Coordination of graduation ceremonies and issuance of certificates and diplomas."
-  },
-  {
     icon: ClipboardCheck,
     title: "Transcript Services",
     description: "Preparation and verification of official academic transcripts and statements."
@@ -105,16 +100,16 @@ const staff = [
     name: "Mr. Andrew Juma",
     position: "Registrar",
     qualification: "Diploma in Building",
-    image: "/images/admin/board/andrewjumacopy.png",
-    email: "registrar@kongonitechnical.ac.ke",
+    image: "/images/registry/andrewjuma.png",
+    email: "registry@kongonitechnical.ac.ke",
     phone: "+254 788 070 303"
   },
   {
     name: "Mr. Delphine Kubende",
-    position: "Registry Clerk",
+    position: "System Administrator",
     qualification: "BSc in Information Technology",
-    image: "/images/registry/delphine2.jpeg",
-    email: "deputyregistrar@kongonitechnical.ac.ke", 
+    image: "/images/registry/delphine.png",
+    email: "", 
     phone: "+254 788 070 303"
   },
   {
@@ -122,7 +117,7 @@ const staff = [
     position: "Records Officer",
     qualification: "Diploma in Records Management",
     image: "/images/registry/josephwanjala.jpeg",
-    email: "records@kongonitechnical.ac.ke",
+    email: "",
     phone: "+254 788 070 303"
   }
 ];
@@ -353,7 +348,7 @@ export default function RegistryPage() {
                     <ul className="space-y-1 text-sm text-gray-700">
                       <li className="flex items-center gap-2">
                         <CheckCircle size={16} className="text-[#099cca]" />
-                        Original certificates and transcripts
+                        Original certificates and result slips
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle size={16} className="text-[#099cca]" />
@@ -361,7 +356,7 @@ export default function RegistryPage() {
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle size={16} className="text-[#099cca]" />
-                        Passport photos (4 copies)
+                        Passport photos (2 copies)
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle size={16} className="text-[#099cca]" />
@@ -405,19 +400,19 @@ export default function RegistryPage() {
                   <div className="space-y-3">
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="text-gray-700">Official Transcript</span>
-                      <span className="font-semibold text-[#099cca]">KSh 500</span>
+                      <span className="font-semibold text-[#099cca]">KSh </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="text-gray-700">Certificate Copy</span>
-                      <span className="font-semibold text-[#099cca]">KSh 300</span>
+                      <span className="font-semibold text-[#099cca]">KSh </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="text-gray-700">Verification Letter</span>
-                      <span className="font-semibold text-[#099cca]">KSh 200</span>
+                      <span className="font-semibold text-[#099cca]">KSh </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="text-gray-700">Duplicate Certificate</span>
-                      <span className="font-semibold text-[#099cca]">KSh 2,000</span>
+                      <span className="font-semibold text-[#099cca]">KSh </span>
                     </div>
                   </div>
                 </div>
@@ -430,15 +425,15 @@ export default function RegistryPage() {
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="text-gray-700">Postal Delivery</span>
-                      <span className="font-semibold text-[#099cca]">KSh 150</span>
+                      <span className="font-semibold text-[#099cca]">KSh </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="text-gray-700">International Courier</span>
-                      <span className="font-semibold text-[#099cca]">KSh 3,500</span>
+                      <span className="font-semibold text-[#099cca]">KSh </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="text-gray-700">Document Authentication</span>
-                      <span className="font-semibold text-[#099cca]">KSh 1,000</span>
+                      <span className="font-semibold text-[#099cca]">KSh </span>
                     </div>
                   </div>
                 </div>
@@ -468,7 +463,7 @@ export default function RegistryPage() {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="text-[#099cca]" size={16} />
-                  <span>Registry Block</span>
+                  <span>Administration Block,Registry Office</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Clock className="text-[#099cca]" size={16} />
