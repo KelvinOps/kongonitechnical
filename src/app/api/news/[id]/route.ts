@@ -3,6 +3,92 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Enhanced mock news data with video support, multiple images, and comprehensive events
 const mockNews = [
+
+   {
+  id: "29",
+  title: "Kongoni Technical College Annual Athletic Sports Day - Unity, Teamwork & Physical Excellence",
+  excerpt: "Trainees from different departments came together for the annual athletic sports day, showcasing talent across multiple disciplines, with top performers qualifying to represent the institution at regional level and beyond.",
+  content: `
+    <p>Kongoni Technical and Training Institute has successfully concluded its annual athletic sports activities, bringing together trainees from across all departments for a day of fierce but friendly competition, camaraderie, and sporting excellence.</p>
+ 
+    <p>The event was designed to promote unity, teamwork, and physical fitness among trainees — values the college recognizes as integral to holistic education alongside technical and vocational training.</p>
+ 
+    <p><strong>🏃 A Day of Competition and Achievement:</strong></p>
+    <p>Trainees from every department stepped up to compete across a wide range of athletic disciplines, displaying remarkable talent, determination, and sportsmanship throughout the day. The competitions were spirited and closely contested, with participants giving their all in pursuit of glory for themselves and their departments.</p>
+ 
+    <p>Standout performers from multiple disciplines have qualified to represent Kongoni Technical and Training Institute at the regional level and beyond — a testament to the depth of athletic talent within the institution.</p>
+ 
+    <p><strong>🎯 Event Objectives:</strong></p>
+    <ul>
+      <li><strong>Promote Unity:</strong> Bringing trainees from all departments together in a shared celebration of sport</li>
+      <li><strong>Foster Teamwork:</strong> Encouraging collaborative spirit and mutual support among participants</li>
+      <li><strong>Physical Fitness:</strong> Reinforcing the importance of an active and healthy lifestyle</li>
+      <li><strong>Talent Identification:</strong> Spotting athletes with potential for regional and national competition</li>
+      <li><strong>Holistic Development:</strong> Complementing academic and technical training with physical and social development</li>
+    </ul>
+ 
+    <p><strong>🏅 Notable Attendees:</strong></p>
+    <ul>
+      <li><strong>Members of Athletics Kenya</strong> — Representatives from the national athletics governing body attended to observe and identify promising talent</li>
+      <li><strong>Principal Judith Akaranga</strong> — The college principal graced the event, underscoring the administration\'s commitment to student well-being and holistic development</li>
+      <li><strong>College Lecturers and Management</strong> — Staff members turned out in strong numbers to cheer on and support the competing trainees</li>
+      <li><strong>Radio Ustawi</strong> — The event received full media coverage from Radio Ustawi, who were present throughout the day capturing every moment of sporting action</li>
+    </ul>
+ 
+    <p><strong>📻 Media Coverage:</strong></p>
+    <p>Radio Ustawi\'s presence ensured that the excitement and achievements of the day reached a wider audience, shining a spotlight on the athletic talent at Kongoni Technical and Training Institute and amplifying the college\'s vibrant student life.</p>
+ 
+    <p><strong>🌟 Looking Ahead:</strong></p>
+    <p>The athletes who have qualified for regional competition will now carry the Kongoni Technical and Training Institute flag forward, representing the institution with pride. The college\'s management expressed full support for the qualifying trainees as they prepare for the next stage of competition.</p>
+ 
+    <p>"Events like our annual sports day are a reminder that education is about more than the classroom," said Principal Judith Akaranga. "Sport builds character, discipline, and resilience — qualities that will serve our trainees throughout their careers and lives."</p>
+ 
+    <p>The institution congratulates every trainee who participated in making this year\'s sports day a memorable and inspiring occasion.</p>
+ 
+    <p><em>#KongoniTechnical #Sports #RadioUstawi</em></p>
+  `,
+  imageUrl: "/images/Sports Day2026/sportdday (17).JPG",
+  images: [
+    "/images/Sports Day2026/sportdday (10).JPG",
+    "/images/Sports Day2026/sportdday (2).JPG",
+    "/images/Sports Day2026/sportdday (3).JPG",
+    "/images/Sports Day2026/sportdday (4).JPG",
+    "/images/Sports Day2026/sportdday (5).JPG",
+    "/images/Sports Day2026/sportdday (6).JPG",
+   "/images/Sports Day2026/sportdday (7).JPG",
+    "/images/Sports Day2026/sportdday (8).JPG",
+        "/images/Sports Day2026/sportdday (9).JPG",
+    "/images/Sports Day2026/sportdday (1).JPG",
+    "/images/Sports Day2026/sportdday (11).JPG",
+    "/images/Sports Day2026/sportdday (12).JPG",
+    "/images/Sports Day2026/sportdday (13).JPG",
+    "/images/Sports Day2026/sportdday (14).JPG",
+   "/images/Sports Day2026/sportdday (15).JPG",
+    "/images/Sports Day2026/sportdday (16).JPG",
+  ],
+  videoThumbnail: "/images/newsevents/athletics/athletics23.jpeg",
+  featured: true,
+  createdAt: "2026-03-13T10:00:00Z",
+  updatedAt: "2026-03-13T10:00:00Z",
+  author: "Sports Department",
+  category: "Events",
+  eventDate: "2026-03-13",
+  location: "Kongoni Technical and Training Institute Grounds",
+  tags: [
+    "athletics",
+    "sports",
+    "teamwork",
+    "unity",
+    "fitness",
+    "radio-ustawi",
+    "athletics-kenya",
+    "competition",
+    "annual-sports",
+    "student-life",
+    "regional-qualifiers",
+    "holistic-development"
+  ]
+},
   {
   id: "28",
   title: "Kongoni Technical College Partners with Modia Driving School to Offer Comprehensive Driving Courses",
