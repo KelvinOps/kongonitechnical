@@ -38,7 +38,7 @@ const jobOpenings: JobOpening[] = [
     department: "Procurement",
     location: "Kongoni Technical",
     type: "Full-time",
-    deadline: "TBA",
+    deadline: "08 Apr 2026", // Updated deadline
     postedDate: "18 Mar 2026",
     requirements: [
       "Diploma in Supply Chain Management or Store Keeping II or equivalent",
@@ -370,7 +370,7 @@ export default function CareersPage() {
                       <td className="px-6 py-4">
                         <div className="text-foreground">{job.deadline}</div>
                         <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                          {formatDeadline(job.deadline)}
+                          {job.deadline === "08 Apr 2026" ? "on or before 5:00pm on 8th April 2026" : formatDeadline(job.deadline)}
                         </div>
                       </td>
                       <td className="px-6 py-4">
@@ -473,7 +473,7 @@ export default function CareersPage() {
                   <div className="bg-[#099cca] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold shrink-0">3</div>
                   <div>
                     <h4 className="font-semibold text-foreground">Submit Application</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Email your application to <b>vacancieskongonitvc@gmail.com</b> before the deadline.</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">Email your application to <b>vacancies@kongonitechnical.ac.ke</b> before the deadline.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -535,7 +535,7 @@ export default function CareersPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
               <div className="flex items-center justify-center gap-2">
                 <Users className="text-[#099cca]" size={16} />
-                <span>vacancieskongonitvc@gmail.com</span>
+                <span>vacancies@kongonitechnical.ac.ke</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Clock className="text-[#099cca]" size={16} />
