@@ -38,7 +38,7 @@ const jobOpenings: JobOpening[] = [
     department: "Procurement",
     location: "Kongoni Technical",
     type: "Full-time",
-    deadline: "08 Apr 2026", // Updated deadline
+    deadline: "08 Apr 2026",
     postedDate: "18 Mar 2026",
     requirements: [
       "Diploma in Supply Chain Management or Store Keeping II or equivalent",
@@ -85,7 +85,7 @@ const jobOpenings: JobOpening[] = [
     fileSize: "2.3 MB"
   },
   {
-    title: "Library Assistant",
+    title: "Librarian",
     department: "Library Services",
     location: "Kongoni Technical",
     type: "Full-time",
@@ -95,7 +95,7 @@ const jobOpenings: JobOpening[] = [
     description: "Assist students and staff with library services, catalog management, and research support.",
     experience: "1+ years",
     status: "closed",
-    documentUrl: "/documents/library-assistant-2025.pdf",
+    documentUrl: "/documents/librarian-2025.pdf",
     fileSize: "1.5 MB"
   },
   {
@@ -103,27 +103,27 @@ const jobOpenings: JobOpening[] = [
     department: "Engineering Department",
     location: "Kongoni Technical",
     type: "Full-time",
-    deadline: "30 Jun 2025",
-    postedDate: "25 May 2025",
+    deadline: "30 Jun 2024",
+    postedDate: "25 May 2024",
     requirements: ["Masters in Electrical Engineering", "Teaching experience", "Research publications preferred"],
     description: "Teach electrical engineering courses and conduct research activities.",
     experience: "4+ years",
     status: "closed",
-    documentUrl: "/documents/electrical-lecturer-2025.pdf",
+    documentUrl: "/documents/electrical-lecturer-2024.pdf",
     fileSize: "2.0 MB"
   },
   {
-    title: "Human Resource Assistant",
+    title: "Human Resource Officer",
     department: "Human Resources",
     location: "Kongoni Technical",
     type: "Full-time",
-    deadline: "20 Jun 2025",
-    postedDate: "28 May 2025",
-    requirements: ["Bachelor's in HR/Business", "HR certification", "2+ years experience"],
+    deadline: "20 May 2025",
+    postedDate: "28 Apr 2025",
+    requirements: ["Bachelor's in HR/Business", "HR certification", "3+ years experience"],
     description: "Support HR operations, recruitment processes, and employee relations.",
-    experience: "2+ years",
+    experience: "3+ years",
     status: "closed",
-    documentUrl: "/documents/hr-assistant-2025.pdf",
+    documentUrl: "/documents/hr-officer-2025.pdf",
     fileSize: "1.7 MB"
   }
 ];
@@ -140,7 +140,7 @@ const jobStats = [
 export default function CareersPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('All Departments');
-  const [sortBy, setSortBy] = useState('deadline');
+  const [sortBy, setSortBy] = useState('posted');
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredAndSortedJobs = useMemo(() => {
@@ -299,10 +299,10 @@ export default function CareersPage() {
                         onChange={(e) => setSortBy(e.target.value)}
                         className="w-full px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg focus:border-[#099cca] focus:outline-none bg-white dark:bg-gray-700 text-foreground appearance-none"
                       >
+                        <option value="posted">Date Posted (Newest First)</option>
                         <option value="deadline">Deadline</option>
                         <option value="title">Job Title</option>
                         <option value="department">Department</option>
-                        <option value="posted">Date Posted</option>
                       </select>
                       <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                     </div>
