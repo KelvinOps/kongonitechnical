@@ -28,9 +28,34 @@ interface JobOpening {
   status: "open" | "closing-soon" | "closed";
   documentUrl: string;
   fileSize: string;
+  jobGroup?: string;
+  reportsTo?: string;
 }
 
 const jobOpenings: JobOpening[] = [
+  {
+    title: "Store Keeper",
+    department: "Procurement",
+    location: "Kongoni Technical",
+    type: "Full-time",
+    deadline: "TBA",
+    postedDate: "18 Mar 2026",
+    requirements: [
+      "Diploma in Supply Chain Management or Store Keeping II or equivalent",
+      "Registered member of Kenya Institute of Supplies Management (KISM)",
+      "Minimum 2 years of relevant experience",
+      "Computer literacy",
+      "Knowledge of Public Procurement and Asset Disposal Act and Regulations",
+      "Meet Chapter Six of the Constitution of Kenya requirements"
+    ],
+    description: "Responsible for managing stores operations including scheduling deliveries, keeping stores records, attending to queries on stores, and preparing store documentation.",
+    experience: "2+ years",
+    status: "open",
+    documentUrl: "/documents/store-keeper-2026.pdf",
+    fileSize: "1.8 MB",
+    jobGroup: "G",
+    reportsTo: "Procurement Officer"
+  },
   {
     title: "Internal Auditor",
     department: "Finance Department",
@@ -41,7 +66,7 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Bachelor's degree in Accounting/Finance", "CPA certification preferred", "Internal audit experience"],
     description: "Conduct internal audits, ensure compliance with financial regulations, and provide audit recommendations.",
     experience: "3+ years",
-    status: "open",
+    status: "closed",
     documentUrl: "/documents/internal-auditor-2025.pdf",
     fileSize: "2.1 MB"
   },
@@ -103,12 +128,12 @@ const jobOpenings: JobOpening[] = [
   }
 ];
 
-const departments = ["All Departments", "Finance Department", "Automotive Department", "Library Services", "Engineering Department", "Human Resources"];
+const departments = ["All Departments", "Procurement", "Finance Department", "Automotive Department", "Library Services", "Engineering Department", "Human Resources"];
 
 const jobStats = [
   { label: "Open Positions", value: "1", icon: Briefcase },
   { label: "Departments Hiring", value: "1", icon: Users },
-  { label: "Application Deadline", value: "Sep 2025", icon: Calendar },
+  { label: "Terms of Service", value: "Permanent", icon: Calendar },
   { label: "Average Response Time", value: "2 weeks", icon: Clock }
 ];
 
@@ -127,7 +152,6 @@ export default function CareersPage() {
       return matchesSearch && matchesDepartment;
     });
 
-    // Sort jobs
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'deadline':
@@ -151,12 +175,9 @@ export default function CareersPage() {
     link.href = job.documentUrl;
     link.download = `${job.title.replace(/\s+/g, '_')}.pdf`;
     link.target = '_blank';
-    
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    
-    console.log(`Downloading: ${job.title}`);
   };
 
   const getStatusBadge = (status: string) => {
@@ -174,11 +195,11 @@ export default function CareersPage() {
   };
 
   const formatDeadline = (deadline: string) => {
+    if (deadline === "TBA") return "To be announced";
     const date = new Date(deadline);
     const now = new Date();
     const diffTime = date.getTime() - now.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    
     if (diffDays < 0) return "Expired";
     if (diffDays === 0) return "Today";
     if (diffDays === 1) return "Tomorrow";
@@ -221,9 +242,7 @@ export default function CareersPage() {
             {jobStats.map((stat, index) => (
               <div key={index} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
                 <stat.icon className="text-[#099cca] w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-2">
-                  {stat.value}
-                </h3>
+                <h3 className="text-2xl font-bold text-foreground mb-2">{stat.value}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{stat.label}</p>
               </div>
             ))}
@@ -234,8 +253,6 @@ export default function CareersPage() {
         <section className="mb-8">
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
             <h2 className="text-2xl font-bold text-foreground mb-6">Search Career Opportunities</h2>
-            
-            {/* Search Bar */}
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -256,15 +273,11 @@ export default function CareersPage() {
               </button>
             </div>
 
-            {/* Filter Options */}
             {showFilters && (
               <div className="animate-fade-in border-t border-gray-200 dark:border-gray-600 pt-6 mt-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {/* Department Filter */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Department
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Department</label>
                     <div className="relative">
                       <select
                         value={selectedDepartment}
@@ -272,20 +285,14 @@ export default function CareersPage() {
                         className="w-full px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg focus:border-[#099cca] focus:outline-none bg-white dark:bg-gray-700 text-foreground appearance-none"
                       >
                         {departments.map((dept) => (
-                          <option key={dept} value={dept}>
-                            {dept}
-                          </option>
+                          <option key={dept} value={dept}>{dept}</option>
                         ))}
                       </select>
                       <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                     </div>
                   </div>
-
-                  {/* Sort Filter */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Sort By
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Sort By</label>
                     <div className="relative">
                       <select
                         value={sortBy}
@@ -300,8 +307,6 @@ export default function CareersPage() {
                       <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                     </div>
                   </div>
-
-                  {/* Results Count */}
                   <div className="flex items-end">
                     <div className="text-sm text-gray-600 dark:text-gray-400">
                       Showing <span className="font-semibold text-[#099cca]">{filteredAndSortedJobs.length}</span> of {jobOpenings.length} positions
@@ -336,6 +341,9 @@ export default function CareersPage() {
                       <td className="px-6 py-4">
                         <div>
                           <h3 className="font-semibold text-foreground">{job.title}</h3>
+                          {job.jobGroup && (
+                            <div className="text-xs text-[#099cca] font-medium mt-0.5">Job Group: {job.jobGroup}</div>
+                          )}
                           <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-300 mt-1">
                             <div className="flex items-center gap-1">
                               <MapPin className="w-4 h-4" />
@@ -353,6 +361,11 @@ export default function CareersPage() {
                         <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                           Experience: {job.experience}
                         </div>
+                        {job.reportsTo && (
+                          <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                            Reports to: {job.reportsTo}
+                          </div>
+                        )}
                       </td>
                       <td className="px-6 py-4">
                         <div className="text-foreground">{job.deadline}</div>
@@ -366,7 +379,7 @@ export default function CareersPage() {
                         </span>
                       </td>
                       <td className="px-6 py-4">
-                        <button 
+                        <button
                           onClick={() => handleDownload(job)}
                           className="flex items-center gap-2 text-[#099cca] hover:text-[#277DF5] transition-colors"
                         >
@@ -388,38 +401,50 @@ export default function CareersPage() {
         {/* Job Details Section */}
         <section className="mb-12">
           <div className="grid lg:grid-cols-2 gap-8">
-            {/* Featured Job - Internal Auditor */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <Briefcase className="text-[#099cca] w-6 h-6" />
-                <h3 className="text-xl font-bold text-foreground">Featured Position</h3>
+            {/* Featured Job - Store Keeper */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border-l-4 border-[#099cca]">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <Briefcase className="text-[#099cca] w-6 h-6" />
+                  <h3 className="text-xl font-bold text-foreground">Featured Position</h3>
+                </div>
+                <span className="px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Now Open</span>
               </div>
-              <h4 className="text-xl font-bold text-foreground mb-2">
-                Internal Auditor
-              </h4>
+              <h4 className="text-xl font-bold text-foreground mb-1">Store Keeper</h4>
+              <p className="text-sm text-[#099cca] font-medium mb-3">Job Group G &bull; Permanent &bull; 1 Post</p>
               <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-4">
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-[#099cca]" />
-                  <span>Finance Department</span>
+                  <span>Procurement Department</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-[#099cca]" />
                   <span>Kongoni Technical</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-[#099cca]" />
-                  <span>Deadline: September 06, 2025</span>
+                  <Briefcase className="w-4 h-4 text-[#099cca]" />
+                  <span>Reports to: Procurement Officer</span>
                 </div>
               </div>
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                We are seeking an experienced internal auditor to join our finance team. The role involves conducting internal audits, ensuring compliance with financial regulations, and providing audit recommendations.
+              <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm">
+                Responsible for managing stores operations, scheduling deliveries, maintaining accurate stock records, and preparing store documentation.
               </p>
+              <h4 className="font-semibold text-foreground mb-2">Duties & Responsibilities:</h4>
+              <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1 mb-4">
+                <li>• Attend to stores enquiries and inform departments of available stock levels</li>
+                <li>• Issue and receipt of stores for timely delivery to user departments</li>
+                <li>• Maintain accurate and up-to-date stock records</li>
+                <li>• Label stock and conduct stock checks to identify wear or defects</li>
+                <li>• Arrange received goods for ease of accessibility and retrieval</li>
+              </ul>
               <h4 className="font-semibold text-foreground mb-2">Key Requirements:</h4>
               <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                <li>• Bachelor&apos;s degree in Accounting/Finance</li>
-                <li>• CPA certification preferred</li>
-                <li>• Internal audit experience required</li>
-                <li>• Minimum 3 years experience</li>
+                <li>• Diploma in Supply Chain Management or Store Keeping II (or equivalent)</li>
+                <li>• Registered member of KISM</li>
+                <li>• Minimum 2 years relevant experience</li>
+                <li>• Computer literate</li>
+                <li>• Knowledge of Public Procurement & Asset Disposal Act</li>
+                <li>• Meets Chapter Six of the Constitution of Kenya</li>
               </ul>
             </div>
 
@@ -431,36 +456,28 @@ export default function CareersPage() {
               </div>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="bg-[#099cca] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                    1
-                  </div>
+                  <div className="bg-[#099cca] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold shrink-0">1</div>
                   <div>
                     <h4 className="font-semibold text-foreground">Review Requirements</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-300">Download and carefully read the job description and requirements.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-[#099cca] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                    2
-                  </div>
+                  <div className="bg-[#099cca] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold shrink-0">2</div>
                   <div>
                     <h4 className="font-semibold text-foreground">Prepare Documents</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-300">Gather CV, cover letter, certificates, and references.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-[#099cca] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                    3
-                  </div>
+                  <div className="bg-[#099cca] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold shrink-0">3</div>
                   <div>
                     <h4 className="font-semibold text-foreground">Submit Application</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-300">Email your application to <b>vacancieskongonitvc@gmail.com</b> before the deadline.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-[#099cca] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                    4
-                  </div>
+                  <div className="bg-[#099cca] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold shrink-0">4</div>
                   <div>
                     <h4 className="font-semibold text-foreground">Interview Process</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-300">Shortlisted candidates will be contacted for interviews within 2 weeks.</p>
@@ -483,9 +500,7 @@ export default function CareersPage() {
 
         {/* Benefits Section */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-8">
-            Why Work With Us?
-          </h2>
+          <h2 className="text-3xl font-bold text-foreground text-center mb-8">Why Work With Us?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
               <GraduationCap className="text-[#099cca] w-12 h-12 mx-auto mb-4" />
@@ -513,9 +528,7 @@ export default function CareersPage() {
         {/* Contact Section */}
         <section>
           <div className="bg-gradient-to-r from-[#099cca]/10 to-[#277DF5]/10 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
-              Have Questions About Our Opportunities?
-            </h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Have Questions About Our Opportunities?</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
               Contact our Human Resources team for more information about career opportunities, application process, or general inquiries.
             </p>
