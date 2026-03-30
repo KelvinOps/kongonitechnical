@@ -3,6 +3,85 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Complete mock news data - synchronized with main news route
 const mockNews = [
+{
+  id: "30",
+  title: "Drama Club Excels at the 2026 Regional KATTI Drama Festivals - Multiple Awards at Bungoma National Polytechnic",
+  excerpt: "Kongoni Technical and Vocational College's drama club delivered a captivating performance at the 2026 Regional KATTI Drama Festivals held at Bungoma National Polytechnic, scooping multiple awards across solo verse, spoken word, film, and cultural creative dance categories.",
+  content: `
+    <p>In a remarkable display of creativity, discipline, and artistic excellence, our institution emerged as one of the standout performers at the <strong>2026 Regional KATTI Drama Festivals</strong>, held at <strong>Bungoma National Polytechnic</strong>. The event brought together talented participants from various institutions across the region, providing a vibrant platform for showcasing theatrical brilliance, cultural expression, and storytelling mastery.</p>
+
+    <p>Our drama team captivated audiences and adjudicators alike with a powerful, well-coordinated performance centered on <strong>environmental conservation</strong>, <strong>national cohesion</strong>, <strong>making good life choices</strong>, and <strong>embracing technology in the artificial intelligence era</strong>. These performances ranged from solo verse, narrative, stand-up comedy, modern dance, spoken word, choral verse, film presentations, and culminated in a spectacular cultural creative dance.</p>
+
+    <p>The performers demonstrated exceptional stage presence, confidence, and teamwork. Their costumes — carefully designed to reinforce thematic elements — added visual appeal and depth to the performance. The creative use of props, lighting, and stage design further enhanced the storytelling, creating an immersive and memorable experience for the audience.</p>
+
+    <p>What truly set the team apart was their ability to seamlessly integrate drama, dance, and mime into a cohesive performance. Each scene transitioned smoothly into the next, maintaining audience engagement while delivering both entertainment and education. The performers’ dedication, evident through their synchronization and emotional expression, reflected the countless hours of rehearsal and commitment invested in the production.</p>
+
+    <p><strong>🥇 Awards & Recognition</strong></p>
+    <p>The institution scooped multiple accolades at the festival, with winning items including:</p>
+    <ul>
+      <li><strong>Solo Verse</strong> — An outstanding performance that earned 2nd Runner‑Up!</li>
+      <li><strong>Spoken Word</strong> — Proudly honoured with the 1st Runner‑Up award!</li>
+      <li><strong>Film Categories</strong> — Winning two separate awards for creativity and impact.</li>
+      <li><strong>Cultural Creative Dance</strong> — Bagged an award for the best item on environmental conservation.</li>
+    </ul>
+
+    <p>The adjudicators commended the institution for its originality, clarity of theme, and effective communication of message. Special recognition was given to the group’s creativity in interpreting contemporary issues through cultural and artistic lenses.</p>
+
+    <p><strong>🌟 Voices of Pride</strong></p>
+    <p>"This achievement is a testament to the institution's commitment to nurturing talent and promoting the arts as a vital component of holistic education," noted Mr David Madaga. "The support of trainers, directors, and the administration played a crucial role in the team's success — this belongs to all of us."</p>
+
+    <p>Principal Judith Akaranga extended heartfelt congratulations to every member of the drama club, celebrating not only the awards won but the courage, creativity, and professionalism that the trainees brought to the festival stage.</p>
+
+    <p><strong>🎬 Watch the Highlights</strong></p>
+    <p>Relive the magic of the 2026 KATTI Drama Festival by watching the full performance highlights on the college's official YouTube channel.</p>
+
+    <p><strong>🔮 Looking Ahead</strong></p>
+    <p>As we celebrate this milestone, the institution remains committed to pushing creative boundaries and inspiring future performers to use art as a powerful tool for impact and transformation. We look forward to future festivals with optimism and pride.</p>
+
+    <p><em>#KongoniTechnical #KATTIDrama2026 #DramaFestival #BungomaNationalPolytechnic #ArtsAndCulture</em></p>
+  `,
+  imageUrl: "/images/newsevents/drama2026/CCD_.png",
+  images: [
+    "/images/newsevents/drama2026/drama2026_1.png",
+    "/images/newsevents/drama2026/drama2026_2.png",
+    "/images/newsevents/drama2026/drama2026_3.png",
+    "/images/newsevents/drama2026/CCD_.png",
+    "/images/newsevents/drama2026/CORALVERSE.png",
+    "/images/newsevents/drama2026/MODERNDANCE.png",
+    "/images/newsevents/drama2026/STANDUPCOMEDY.png",
+    "/images/newsevents/drama2026/SOLOVERSE.png"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=Cln1l8H34bc",
+  videoThumbnail: "/images/newsevents/drama2026/drama2026_1.png",
+  featured: true,
+  createdAt: "2026-03-30T10:00:00Z",
+  updatedAt: "2026-03-30T10:00:00Z",
+  author: "Student Affairs Department",
+  category: "Achievements",
+  eventDate: "2026-03-08",
+  location: "Bungoma National Polytechnic",
+  tags: [
+    "drama",
+    "katti",
+    "drama-festival",
+    "2026",
+    "bungoma",
+    "solo-verse",
+    "spoken-word",
+    "modern-dance",
+    "narrative",
+    "stand-up-comedy",
+    "choral-verse",
+    "film",
+    "cultural-dance",
+    "awards",
+    "achievement",
+    "performing-arts",
+    "student-talent",
+    "environmental-conservation",
+    "regional-competition"
+  ]
+},
    {
   id: "29",
   title: "Kongoni Technical College Annual Athletic Sports Day - Unity, Teamwork & Physical Excellence",
@@ -356,7 +435,7 @@ const mockNews = [
   videoUrl: "https://www.youtube.com/watch?v=staff_achievements_celebration",
   videoThumbnail: "/images/newsevents/staffachievements/achievement1.jpg",
   featured: true,
-  createdAt: "2025-12-10T10:00:00Z", // Today's date
+  createdAt: "2025-12-10T10:00:00Z",
   updatedAt: "2025-12-10T10:00:00Z",
   author: "Administration & Human Resources",
   category: "Achievements",
@@ -1009,11 +1088,11 @@ const mockNews = [
     videoUrl: "https://www.youtube.com/watch?v=orientation_welcome",
     videoThumbnail: "/images/admin/admin1.jpeg",
     featured: true,
-    createdAt: "2025-09-02T08:00:00Z", // Fixed: Changed from 2025 to 2024
-    updatedAt: "2025-09-02T08:00:00Z", // Fixed: Changed from 2025 to 2024
+    createdAt: "2025-09-02T08:00:00Z",
+    updatedAt: "2025-09-02T08:00:00Z",
     author: "Administration",
     category: "Student Life",
-    eventDate: "2025-09-02", // Fixed: Changed from 2025 to 2024
+    eventDate: "2025-09-02",
     location: "Main Campus",
     tags: ["intake", "new-trainees", "orientation", "academic-year"]
   },
