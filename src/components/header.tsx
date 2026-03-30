@@ -104,7 +104,6 @@ export default function Header() {
             { href: "/dpacademics", label: "Deputy Principal Academic Affair" },
             { href: "/registry", label: "Registry" },
             { href: "/dean-of-students", label: "Dean of Students" }
-
           ]
         },
         { 
@@ -209,13 +208,13 @@ export default function Header() {
           isCategory: true as const,
           items: [
             { href: "/documents/Admission-Letter-2025.pdf", label: "Application Procedure" },
-            { href: "/student-hub/registration", label: "Online Registration" }, // Changed from /admissions
+            { href: "/student-hub/registration", label: "Online Registration" },
             { href: "/documents/KongoniTVC-feestructure-2025.pdf", label: "Fee Structure 2025" },
             { href: "/documents/KongoniTVC-course-requirements.pdf", label: "Course Requirements" },
             { href: "/documents/KongoniTVC-medical form.pdf", label: "Medical Form" },
             { href: "https://portal.hef.co.ke/", label: "Scholarship Application" },
             { href: "/documents/hostel-booking.pdf", label: "Hostel Booking" },
-            { href: "/student-hub/join", label: "Join Us" } // Changed from /admissions
+            { href: "/student-hub/join", label: "Join Us" }
           ]
         },
         { 
@@ -236,9 +235,8 @@ export default function Header() {
   ];
 
   const languages = [
-    { code: "en", name: "English", flag: "🇬🇧" },
-    { code: "sw", name: "Kiswahili", flag: "🇰🇪" },
-    { code: "fr", name: "Français", flag: "🇫🇷" },
+    { code: "en", name: "English" },
+    { code: "sw", name: "Kiswahili" },
   ];
 
   const handleLanguageChange = (language: typeof languages[0]) => {
@@ -246,7 +244,7 @@ export default function Header() {
     setIsLanguageDropdownOpen(false);
   };
 
-  // Quick Links for header top section - removed opportunities items as requested
+  // Quick Links for header top section
   const quickLinks = [
     { href: "/documents/kongoni-technical-brochure.pdf", label: "Brochure" },
     { href: "/news/latest", label: "News" }
@@ -324,7 +322,7 @@ export default function Header() {
 
           {/* Right Side - Quick Links and Language Selector */}
           <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-6">
-            {/* Quick Access Links - Horizontal scroll on mobile */}
+            {/* Quick Access Links */}
             <div className="hidden xl:flex items-center space-x-2 text-xs">
               {quickLinks.map((link, index) => (
                 <span key={link.href} className="flex items-center space-x-2">
@@ -344,28 +342,24 @@ export default function Header() {
                 aria-label="Select Language"
               >
                 <Globe className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="text-xs font-medium">
-                  <span className="hidden sm:inline">
-                    {languages.find(lang => lang.name === selectedLanguage)?.flag} {selectedLanguage}
-                  </span>
-                  <span className="sm:hidden">
-                    {languages.find(lang => lang.name === selectedLanguage)?.flag}
-                  </span>
-                </span>
+                <span className="text-xs font-medium">{selectedLanguage}</span>
                 <ChevronDown className="w-3 h-3" />
               </button>
 
               {/* Language Dropdown */}
               {isLanguageDropdownOpen && (
-                <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg py-1 min-w-[130px] sm:min-w-[150px] z-50">
+                <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg py-1 min-w-[120px] z-50">
                   {languages.map((language) => (
                     <button
                       key={language.code}
                       onClick={() => handleLanguageChange(language)}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex items-center space-x-2 transition-colors duration-200"
+                      className={`w-full text-left px-3 py-2 text-sm hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200 ${
+                        selectedLanguage === language.name
+                          ? "text-gray-900 font-semibold bg-gray-50"
+                          : "text-gray-700"
+                      }`}
                     >
-                      <span>{language.flag}</span>
-                      <span className="text-xs sm:text-sm">{language.name}</span>
+                      {language.name}
                     </button>
                   ))}
                 </div>
