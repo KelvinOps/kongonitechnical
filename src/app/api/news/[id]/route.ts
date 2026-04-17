@@ -4,6 +4,73 @@ import { NextRequest, NextResponse } from "next/server";
 // Enhanced mock news data with video support, multiple images, and comprehensive events
 const mockNews = [
 {
+  id: "31",
+  title: "Kongoni Technical Shines as National Champions at the 2026 Kenya National Drama and Film Festival",
+  excerpt: "Kongoni Technical and Vocational College (Kongoni TVC) has etched its name in the annals of excellence after an outstanding performance at the 2026 Kenya National Drama and Film Festival held in Nyeri County — emerging as national champions in the Advertisement Category on their very first attempt.",
+  content: `
+    <p>Kongoni Technical and Vocational College (Kongoni TVC) has etched its name in the annals of excellence after an outstanding performance at the <strong>2026 Kenya National Drama and Film Festivals</strong> held in Nyeri County. The prestigious event, hosted at <strong>Nyeri National Polytechnic</strong> and <strong>Kagumo Teachers Training College</strong> from <strong>April 6th to 15th</strong>, brought together top-performing institutions from across the country.</p>
+    <p>Kongoni Technical emerged as the <strong>national champions in the advertisement category</strong> — a remarkable achievement that has been widely celebrated within and beyond the institution. Their winning piece creatively addressed a relatable and practical issue: demonstrating how students can conveniently pay examination fees using their mobile phones, instead of enduring long, time-consuming queues. The advert resonated strongly with audiences and adjudicators alike for its relevance, clarity, and innovative delivery.</p>
+    <p>What makes this triumph even more extraordinary is the fact that <strong>this was the institution's first time ever competing in the advertisement category</strong>. National champions. First attempt. That milestone alone speaks volumes about the calibre of talent nurtured at Kongoni TVC.</p>
+    <p><strong>🏆 Voices of Pride</strong></p>
+    <p>Speaking after the victory, <strong>Co-Patron Mr. David Madaga</strong> emphasised the magnitude of the achievement, noting that winning at the national level is no small feat given the stiff competition from seasoned performers across the country. He credited the triumph to the learners' dedication, creativity, and the collective effort of the entire team.</p>
+    <p><strong>Patron Ms. Doris Wekesa</strong> echoed similar sentiments, pointing out that becoming national champions on a debut reflects the extraordinary hard work, discipline, and commitment invested by both students and trainers. The success story of Kongoni TVC, she noted, stands as an inspiration to other institutions aspiring to excel in co-curricular activities.</p>
+    <p><strong>Principal Ms. Judith Akaranga</strong> lauded the team for what she described as a "splendid performance." She reaffirmed the college's commitment to nurturing holistic learners — focusing not only on academic excellence but on developing talents and life skills beyond the classroom. She expressed gratitude to God for the victory and optimism for even greater achievements in future festivals.</p>
+    <p><strong>🎬 Watch the Winning Performance</strong></p>
+    <p>Relive the magic of the award-winning advertisement on the college's official YouTube channel. Watch the Live TV production and the Advertisement that brought Kongoni TVC to the national spotlight.</p>
+    <p><strong>🔮 A New Chapter Begins</strong></p>
+    <p>This landmark win marks a new chapter for Kongoni TVC, positioning it as a rising force in the national drama and film arena. With such a strong debut, the institution looks ahead with confidence and determination — ready to build on this success in upcoming competitions.</p>
+    <p><em>Courtesy of Equity Bank — "Your success, our commitment."</em></p>
+    <p><em>Creative Minds. Powerful Stories. Bright Futures.</em></p>
+    <p><em>#KongoniTVC #NationalChampions #KNDFF2026 #AdvertisementCategory #EmergingWinners #EquityBank #TVETKenya</em></p>
+  `,
+  imageUrl: "/images/newsevents/drama2026national/AdvertWin.jpeg",
+  images: [
+    "/images/newsevents/drama2026national/AdvertWin.jpeg",
+     "/images/newsevents/drama2026national/nationaldrama_advert.png",
+    "/images/newsevents/drama2026national/nationaldrama_advert1.png",
+    "/images/newsevents/drama2026national/nationaldrama_livetv.png"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=3GdhGQ5QUio",
+  videoThumbnail: "/images/newsevents/drama2026national/nationaldrama_advert.png",
+  videos: [
+    {
+      url: "https://www.youtube.com/watch?v=3GdhGQ5QUio",
+      title: "🏆 Advertisement — National Winning Entry",
+      thumbnail: "/images/newsevents/drama2026national/nationaldrama_advert.png"
+    },
+    {
+      url: "https://www.youtube.com/watch?v=nHvpt8KMo-E",
+      title: "📺 Live TV Production",
+      thumbnail: "/images/newsevents/drama2026national/nationaldrama_livetv.png"
+    }
+  ],
+  featured: true,
+  createdAt: "2026-04-16T10:00:00Z",
+  updatedAt: "2026-04-16T10:00:00Z",
+  author: "Student Affairs Department",
+  category: "Achievements",
+  eventDate: "2026-04-15",
+  location: "Nyeri National Polytechnic & Kagumo Teachers Training College, Nyeri County",
+  tags: [
+    "drama",
+    "national-champions",
+    "kndff2026",
+    "advertisement-category",
+    "emerging-winners",
+    "equity-bank",
+    "live-tv",
+    "film-festival",
+    "2026",
+    "nyeri",
+    "performing-arts",
+    "student-talent",
+    "achievement",
+    "tvet-kenya",
+    "national-competition",
+    "first-attempt"
+  ]
+},
+{
   id: "30",
   title: "Drama Club Excels at the 2026 Regional KATTI Drama Festivals - Multiple Awards at Bungoma National Polytechnic",
   excerpt: "Kongoni Technical and Vocational College's drama club delivered a captivating performance at the 2026 Regional KATTI Drama Festivals held at Bungoma National Polytechnic, scooping multiple awards across solo verse, spoken word, film, and cultural creative dance categories.",
