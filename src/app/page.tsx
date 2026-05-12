@@ -14,8 +14,9 @@ import ImageGallery from "@/components/image-gallery";
 import NewsSection from "@/components/news-section";
 import ServiceCharterAudioSection from "@/components/service-charter-audio-section";
 import PartnershipsSection from "@/components/partnerships-section";
-import FAQSection from "@/components/faq-section"; // NEW
-import FeedbackSection from "@/components/feedback-section"; // NEW
+import FAQSection from "@/components/faq-section";
+import FeedbackSection from "@/components/feedback-section"; 
+import PosterVideoSection from "@/components/poster-video-section";
 
 // Loading components for better UX
 const SectionSkeleton = () => (
@@ -84,6 +85,12 @@ export default function HomePage() {
       <Suspense fallback={<SectionSkeleton />}>
         <ImageGallery />
       </Suspense>
+
+      {/* Poster & Introductory Video */}
+<Suspense fallback={<SectionSkeleton />}>
+  <PosterVideoSection />
+</Suspense>
+
 
       <Suspense fallback={<SectionSkeleton />}>
         <NewsSection />
