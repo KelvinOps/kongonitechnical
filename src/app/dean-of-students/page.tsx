@@ -74,7 +74,7 @@ export default function DeanOfStudentsPage() {
     },
     {
       title: "Games & Sports",
-      head: "HOD Physical Education",
+      head: "HOD - Sports",
       description: "Participation in games and sports under the Kenya Technical Institutions Sports Association",
       icon: <Trophy className="w-8 h-8 text-primary" />,
       details: [

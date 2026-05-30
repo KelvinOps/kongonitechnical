@@ -136,8 +136,8 @@ export default function Header() {
       ]
     },
     { 
-      href: "/opportunities", 
-      label: "Opportunities",
+      href: "/adverts", 
+      label: "Adverts",
       hasDropdown: true,
       subItems: [
         { href: "/careers", label: "Career" },
@@ -150,7 +150,6 @@ export default function Header() {
       label: "Admissions",
       hasDropdown: true,
       subItems: [
-        { href: "/documents/september-advert.pdf", label: "Download September Advert" },
         { href: "/admissions", label: "Student Application" } 
       ]
     },
@@ -207,14 +206,13 @@ export default function Header() {
           label: "Prospect Students",
           isCategory: true as const,
           items: [
-            { href: "/documents/Admission-Letter-2025.pdf", label: "Application Procedure" },
-            { href: "/student-hub/registration", label: "Online Registration" },
-            { href: "/documents/KongoniTVC-feestructure-2025.pdf", label: "Fee Structure 2025" },
+            { href: "/documents/Admission-Letter-2025.pdf", label: "Admission Letter" },
+            { href: "/admissions", label: "Online Application" },
+            { href: "/documents/KongoniTVC-feestructure-2026.pdf", label: "Fee Structure 2026" },
             { href: "/documents/KongoniTVC-course-requirements.pdf", label: "Course Requirements" },
             { href: "/documents/KongoniTVC-medical form.pdf", label: "Medical Form" },
             { href: "https://portal.hef.co.ke/", label: "Scholarship Application" },
-            { href: "/documents/hostel-booking.pdf", label: "Hostel Booking" },
-            { href: "/student-hub/join", label: "Join Us" }
+            { href: "/documents/hostel-booking.pdf", label: "Hostel Booking" }
           ]
         },
         { 

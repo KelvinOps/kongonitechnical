@@ -190,7 +190,7 @@ const nonTeachingStaff: StaffMember[] = [
   },
   {
     id: 3,
-    name: 'MAURICE INYANGALA',
+    name: '',
     position: 'Store Keeper',
     department: 'Procurement and Supplies',
     email: 'procurement@kongonitechnical.ac.ke',

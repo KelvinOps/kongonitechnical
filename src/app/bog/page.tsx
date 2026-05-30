@@ -117,7 +117,7 @@ const managementTeam = [
     id: 4,
     name: "Mr. Andrew Juma",
     position: "Registrar",
-    qualification: "Diploma in Building",
+    qualification: "BSc in Civil & Building Engineering",
     image: "/images/admin/board/ANDREW JUMA.png",
     summary: "Manages institutional registration and records. Serves as trainer and has been with Kongoni TVC since 2019. Previously worked as trainer at Sigalagala National Polytechnic and Manager at Lurale Youth."
   },
@@ -376,7 +376,7 @@ export default function GoverningCouncilPage() {
                 </div>
                 <div className="flex items-center gap-2 justify-center">
                   <Phone className="text-[#099cca]" />
-                  <span>+254 700 000 000</span>
+                  <span>+254 788 070 303</span>
                 </div>
               </div>
             </CardContent>

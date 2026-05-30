@@ -44,7 +44,7 @@ export default function AboutPage() {
                 </p>
                 <p className="flex items-center justify-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                  Contact: 0788 070 303 | Email: kongonitvc@gmail.com
+                  Contact: 0788 070 303 | Email: kongonitvc@gmail.com / info@kongonitechnical.ac.ke
                 </p>
                 <p className="flex items-center justify-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full"></span>
@@ -70,7 +70,7 @@ export default function AboutPage() {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <div className="space-y-6">
                     <p className="text-lg text-gray-700 leading-relaxed">
-                      Kongoni TVC is a Government Sponsored Institution under the Ministry of Education. It was established with the core mandate of equipping youths with skills needed to secure employment in todays market.
+                      Kongoni Technical and Vocational college is a Government Sponsored Institution under the Ministry of Education. It was established with the core mandate of equipping youths with skills needed to secure employment in todays market.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
                       The institution opened its doors to the first batch of students in <strong className="text-primary">October 2019</strong> and is well equipped to offer courses ranging from ICT, Business to Engineering courses at certificate and diploma level.
@@ -452,7 +452,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Why Choose Us - Modern Layout with Images */}
+          {/* Why Choose Us - Modern Layout with Local Images */}
           <section className="mb-20">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-center mb-16">Why Choose Kongoni TVC</h2>
             <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -462,35 +462,33 @@ export default function AboutPage() {
                   title: "State-of-the-Art Training Equipment",
                   description: "KTVC proudly holds the stature of one of the country's most equipped colleges in terms of modern training equipment and experienced staff.",
                   gradient: "from-primary to-blue-600",
-                  fallbackImage: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  image: "/images/facilities/facilities12.jpg"
                 },
                 {
                   number: "02",
                   title: "Dual Training System",
                   description: "Innovative dual system of training where trainees are trained 50% at college and 50% at the industry for real-world experience.",
                   gradient: "from-secondary to-yellow-500",
-                  fallbackImage: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  image: "/images/facilities/facilities12.jpg"
                 },
                 {
                   number: "03",
                   title: "Excellence in Education",
                   description: "Equity in education, a well-rounded approach to training, and a focus on discipline and ethics are hallmarks in skill transfer at KTVC.",
                   gradient: "from-green-600 to-emerald-600",
-                  fallbackImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  image: "/images/facilities/facilities12.jpg"
                 }
               ].map((feature, index) => (
                 <div key={index} className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 relative group">
                   {/* Feature Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <div className="relative w-full h-full">
-                      <Image 
-                        src={feature.fallbackImage}
-                        alt={feature.title}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-300"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                    </div>
+                    <Image 
+                      src={feature.image}
+                      alt={feature.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                     <div className={`absolute inset-0 bg-gradient-to-t ${feature.gradient} opacity-60`}></div>
                     <div className="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
                       <span className="text-white text-lg font-bold">{feature.number}</span>

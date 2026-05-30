@@ -46,25 +46,33 @@ export default function PosterVideoSection() {
           </p>
         </div>
 
-        {/* Content grid */}
-        <div className="content-grid">
-          {/* ── Poster Card ── */}
+        {/* ── Two Posters Row ── */}
+        <div className="posters-grid">
+          {/* Poster 1 */}
           <div className="card poster-card">
             <div className="card-badge">Official Poster</div>
 
             <div className="poster-frame">
               {/*
-               * Replace the src below with your actual poster image path.
-               * e.g. src="/images/poster.jpg"
-               * Ensure the image is placed in the /public/images/ folder.
+               * POSTER 1: Replace src with your first poster image path.
+               * e.g. src="/images/poster1.jpg"
+               * Using width/height with style instead of fill prevents
+               * layout shift and the "buffering/flash" on page load.
                */}
               <Image
                 src="/images/Dual/dualposter.jpeg"
                 alt="Kongoni Technical Vocational Training College – Official Poster"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                width={600}
+                height={800}
                 className="poster-img"
                 priority
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  display: "block",
+                }}
               />
 
               {/* Overlay gradient */}
@@ -102,17 +110,78 @@ export default function PosterVideoSection() {
             </div>
           </div>
 
-          {/* ── Video Card ── */}
+          {/* Poster 2 */}
+          <div className="card poster-card">
+            <div className="card-badge">Official Poster</div>
+
+            <div className="poster-frame">
+              {/*
+               * POSTER 2: Replace src with your second poster image path.
+               * e.g. src="/images/poster2.jpg"
+               */}
+              <Image
+                src="/images/Dual/dualkongoniposter.jpeg"
+                alt="Kongoni Technical Vocational Training College – Second Official Poster"
+                width={600}
+                height={800}
+                className="poster-img"
+                priority
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  display: "block",
+                }}
+              />
+
+              {/* Overlay gradient */}
+              <div className="poster-overlay" aria-hidden="true" />
+
+              {/* Corner accents */}
+              <span className="corner corner-tl" aria-hidden="true" />
+              <span className="corner corner-br" aria-hidden="true" />
+            </div>
+
+            <div className="card-footer">
+              <a
+                href="/images/Dual/dualposter2.jpeg"
+                download
+                className="btn btn-outline"
+                aria-label="Download second official poster"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download Poster
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Video Row (full width, landscape) ── */}
+        <div className="video-row">
           <div className="card video-card">
             <div className="card-badge video-badge">Introductory Video</div>
 
+            {/* 16:9 landscape video frame */}
             <div className="video-frame">
               {/*
-               * Replace the src below with your actual video file path.
+               * Replace src with your video file path.
                * e.g. src="/videos/intro.mp4"
-               * Ensure the video is placed in the /public/videos/ folder.
-               * Add a poster attribute for the thumbnail:
-               * poster="/images/video-thumbnail.jpg"
+               * poster should be a landscape thumbnail for best appearance.
                */}
               <video
                 ref={videoRef}
@@ -153,24 +222,12 @@ export default function PosterVideoSection() {
                   aria-label={isPlaying ? "Pause video" : "Play video"}
                 >
                   {isPlaying ? (
-                    /* Pause icon */
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      width="18"
-                      height="18"
-                    >
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                       <rect x="6" y="4" width="4" height="16" />
                       <rect x="14" y="4" width="4" height="16" />
                     </svg>
                   ) : (
-                    /* Play icon */
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      width="18"
-                      height="18"
-                    >
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                       <polygon points="5 3 19 12 5 21 5 3" />
                     </svg>
                   )}
@@ -186,29 +243,13 @@ export default function PosterVideoSection() {
                   aria-label={isMuted ? "Unmute video" : "Mute video"}
                 >
                   {isMuted ? (
-                    /* Muted icon */
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      width="18"
-                      height="18"
-                    >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
                       <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
                       <line x1="23" y1="9" x2="17" y2="15" />
                       <line x1="17" y1="9" x2="23" y2="15" />
                     </svg>
                   ) : (
-                    /* Unmuted icon */
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      width="18"
-                      height="18"
-                    >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
                       <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
                       <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
                       <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
@@ -218,11 +259,11 @@ export default function PosterVideoSection() {
               </div>
             </div>
 
-            <div className="card-footer">
+            <div className="card-footer video-footer">
               <p className="video-desc">
-                Discover Kongoni Tvc — our facilities, programs, and the
-                vibrant community that makes us unique.
-                In collaboration with Dual tvet support with Kenya School of Tvet
+                Discover Kongoni TVC — our facilities, programs, and the
+                vibrant community that makes us unique. In collaboration with
+                Dual TVET Support and Kenya School of TVET.
               </p>
             </div>
           </div>
@@ -321,17 +362,23 @@ export default function PosterVideoSection() {
           line-height: 1.6;
         }
 
-        /* ── Grid ────────────────────────────────────────── */
-        .content-grid {
+        /* ── Posters grid (2 columns) ────────────────────── */
+        .posters-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 2rem;
           align-items: start;
+          margin-bottom: 2rem;
         }
-        @media (max-width: 768px) {
-          .content-grid {
+        @media (max-width: 640px) {
+          .posters-grid {
             grid-template-columns: 1fr;
           }
+        }
+
+        /* ── Video row (full width below posters) ────────── */
+        .video-row {
+          width: 100%;
         }
 
         /* ── Card shared ─────────────────────────────────── */
@@ -374,9 +421,19 @@ export default function PosterVideoSection() {
           align-items: center;
           gap: 1rem;
         }
+        .video-footer {
+          /* Allow text to wrap naturally in the wider video footer */
+          align-items: flex-start;
+        }
 
         /* ── Poster card ─────────────────────────────────── */
         .poster-frame {
+          /*
+           * KEY FIX: explicit width+height on <Image> combined with
+           * position:relative + overflow:hidden here (no fill prop)
+           * means the browser knows the dimensions immediately from HTML
+           * — no layout shift, no visible "buffering" flash.
+           */
           position: relative;
           width: 100%;
           /* Portrait 3:4 ratio */
@@ -385,8 +442,6 @@ export default function PosterVideoSection() {
           background: #e8e4dc;
         }
         .poster-img {
-          object-fit: cover;
-          object-position: center top;
           transition: transform 0.5s ease;
         }
         .card:hover .poster-img {
@@ -424,12 +479,15 @@ export default function PosterVideoSection() {
           border-right: 2.5px solid #c8972b;
         }
 
-        /* ── Video card ──────────────────────────────────── */
+        /* ── Video card (landscape 16:9) ─────────────────── */
         .video-frame {
           position: relative;
           width: 100%;
-          /* Portrait 3:4 ratio — matches poster */
-          aspect-ratio: 3 / 4;
+          /*
+           * 16:9 landscape ratio — gives the video the width it needs
+           * to be properly viewable. Matches standard video formats.
+           */
+          aspect-ratio: 16 / 9;
           background: #0d1f33;
           overflow: hidden;
         }
@@ -479,7 +537,7 @@ export default function PosterVideoSection() {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding-left: 4px; /* optical centering for triangle */
+          padding-left: 4px;
           box-shadow: 0 6px 24px rgba(200, 151, 43, 0.5);
           transition: background 0.2s ease, transform 0.2s ease;
         }

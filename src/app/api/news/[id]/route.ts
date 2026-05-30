@@ -3,6 +3,426 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Enhanced mock news data with video support, multiple images, and comprehensive events
 const mockNews = [
+
+{
+  id: "38",
+  title: "Eid ul-Adha Mubarak — Wishing Our Community Joy, Peace & Blessings",
+  excerpt: "Kongoni Technical and Vocational College extends warm Eid ul-Adha Mubarak greetings to all Muslim members of our college family and the wider community, wishing them a blessed Festival of Sacrifice filled with gratitude, compassion, and togetherness.",
+  content: `
+    <p>Kongoni Technical and Vocational College warmly extends heartfelt <strong>Eid ul-Adha Mubarak — عيد الأضحى مبارك</strong> greetings to all Muslim trainees, staff, and the broader community as they celebrate this blessed occasion.</p>
+
+    <p>Eid ul-Adha, the <em>Festival of Sacrifice</em>, commemorates the unwavering faith and devotion of Prophet Ibrahim (AS) and marks the culmination of the sacred Hajj pilgrimage. It is a time of profound reflection, gratitude, generosity, and communal unity.</p>
+
+    <p><strong>🌙 A Message from the College:</strong></p>
+    <p>On this auspicious day, the entire Kongoni Technical and Vocational College family joins our Muslim brothers and sisters in celebrating the spirit of sacrifice, devotion, and compassion that Eid ul-Adha embodies.</p>
+
+    <p>May the blessings of this holy occasion:</p>
+    <ul>
+      <li>Bring peace, joy, and happiness to your homes and hearts</li>
+      <li>Strengthen the bonds of family, friendship, and community</li>
+      <li>Inspire acts of generosity, charity, and service to others</li>
+      <li>Fill your lives with prosperity, good health, and divine guidance</li>
+      <li>Bring harmony and unity to our diverse college community</li>
+    </ul>
+
+    <p>As we mark this special occasion, we are reminded of the values that unite us as a college community — sacrifice, perseverance, generosity, and compassion — qualities that define not only this blessed festival but the spirit of Kongoni TVC itself.</p>
+
+    <p>We wish all celebrating a blessed Eid ul-Adha filled with joy, spiritual fulfilment, and cherished moments with loved ones.</p>
+
+    <p><strong>Eid Mubarak! 🌙✨</strong></p>
+
+    <p><em>— The Principal, Management, Staff, and Trainees of Kongoni Technical and Vocational College</em></p>
+
+    <p><em>#EidulAdha #EidMubarak #KongoniTVC #FestivalOfSacrifice #Unity #Compassion #Generosity</em></p>
+  `,
+  imageUrl: "/images/newsevents/eid2026/Finale.png",
+  images: [
+    "/images/newsevents/eid2026/Finale.png"
+  ],
+  featured: true,
+  createdAt: "2026-06-06T06:00:00Z",
+  updatedAt: "2026-06-06T06:00:00Z",
+  author: "College Administration",
+  category: "Announcements",
+  eventDate: "2026-05-27",
+  location: "Kongoni Technical and Vocational College",
+  tags: [
+    "eid-ul-adha",
+    "eid-mubarak",
+    "festival-of-sacrifice",
+    "islamic-holiday",
+    "community",
+    "celebration",
+    "unity",
+    "compassion",
+    "generosity",
+    "2026",
+    "announcement"
+  ]
+},
+{
+  id: "37",
+  title: "Victorious March Through College — Trainees & Trainers Celebrate Western TVET Fair Triumph",
+  excerpt: "In a jubilant display of pride and community spirit, Kongoni TVC trainees and trainers marched through the college environs in a celebratory procession, singing and cheering to honour the institution's historic victories at the 2026 Western TVET Fair.",
+  content: `
+    <p>The Kongoni Technical and Vocational College grounds came alive with joyful noise, colour, and pride as trainees and trainers came together for a spirited <strong>Celebratory March</strong> to honour the institution's remarkable achievements at the <strong>2026 Western Region TVET Fair</strong>.</p>
+
+    <p>The march wound through the college environs — from the main hall, through the departmental blocks, across the workshop areas, and around the college grounds — with participants singing victory songs, chanting praises, and celebrating as one unified community.</p>
+
+    <p><strong>🎉 A College United in Celebration:</strong></p>
+    <p>The procession drew trainees from every department and trainers from across all faculties, creating an electrifying atmosphere of collective pride. The march was more than a celebration of trophies — it was a testament to the spirit, discipline, and excellence that defines Kongoni TVC.</p>
+
+    <p>Banners, flags, and department colours were proudly displayed as the procession moved through campus. Winners from the <strong>Beauty Therapy</strong> and <strong>Civil & Building Engineering</strong> teams were hoisted in celebration, surrounded by their fellow trainees and cheering staff.</p>
+
+    <p><strong>🏆 What We're Celebrating:</strong></p>
+    <ul>
+      <li><strong>1st Place — Beauty Therapy Skills</strong>: Champions across all TVET institutions in the Western Region</li>
+      <li><strong>2nd Place — Civil & Building Engineering Project Innovation</strong>: Silver medallists in a fiercely competitive engineering category</li>
+      <li>Both winning teams qualify to represent the Western Region at the <strong>National TVET Fair in Wote, Kenya</strong></li>
+    </ul>
+
+    <p><strong>🎶 Songs of Victory:</strong></p>
+    <p>The marching procession was accompanied by spontaneous songs of praise, traditional chants, and collective cheers that echoed across the college grounds. The celebratory energy was infectious, drawing bystanders and community members to witness the joyful procession.</p>
+
+    <p>Principal Ms. Judith Akaranga joined the march alongside the college management team, walking in solidarity with the trainees and trainers in what participants described as a deeply moving and memorable moment for the institution.</p>
+
+    <p><strong>🌟 A Message of Pride:</strong></p>
+    <p>"This march is not just for the winners — it is for every trainee who worked hard, every trainer who mentored, and every support staff member who contributed to this institution's success," said the Principal during the celebrations. "We march as one because we are one Kongoni family."</p>
+
+    <p>The victorious march served as a powerful symbol of institutional identity, community pride, and the shared belief that excellence is not an individual achievement but a collective triumph.</p>
+
+    <p>As our champions now prepare for the National TVET Fair in Wote, this march marks the beginning of a new chapter — carrying the hopes and colours of Kongoni TVC to the national stage.</p>
+
+    <p><em>Onwards to Nationals! 🏆🎉</em></p>
+
+    <p><em>#KongoniTVC #VictoriousMarch #WesternTVETFair2026 #NationalsHere #KongoniPride #CelebratoryMarch #TVET</em></p>
+  `,
+  imageUrl: "/images/newsevents/celebrationmarch2026/march_main.jpg",
+  images: [
+    "/images/newsevents/celebrationmarch2026/march_main.jpg",
+    "/images/newsevents/celebrationmarch2026/march2.jpg",
+    "/images/newsevents/celebrationmarch2026/march3.jpg",
+    "/images/newsevents/celebrationmarch2026/march4.jpg",
+    "/images/newsevents/celebrationmarch2026/march5.jpg",
+    "/images/newsevents/celebrationmarch2026/march6.jpg",
+    "/images/newsevents/celebrationmarch2026/march7.jpg",
+    "/images/newsevents/celebrationmarch2026/march8.jpg",
+    "/images/newsevents/celebrationmarch2026/march9.jpg",
+    "/images/newsevents/celebrationmarch2026/march10.jpg",
+    "/images/newsevents/celebrationmarch2026/march11.jpg",
+    "/images/newsevents/celebrationmarch2026/march12.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-05-18T14:00:00Z",
+  updatedAt: "2026-05-18T14:00:00Z",
+  author: "Student Affairs Department",
+  category: "Events",
+  eventDate: "2026-05-18",
+  location: "Kongoni Technical and Vocational College Grounds",
+  tags: [
+    "celebratory-march",
+    "victory",
+    "western-tvet-fair",
+    "2026",
+    "beauty-therapy",
+    "civil-engineering",
+    "national-qualifiers",
+    "college-pride",
+    "community",
+    "celebrations",
+    "wote-nationals",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "36",
+  title: "Kongoni TVC Shines at 2026 Western Region TVET Fair — 1st Place Beauty Therapy & 2nd Place Civil Engineering",
+  excerpt: "Kongoni Technical and Vocational College delivered an outstanding performance at the 2026 Western Region TVET Fair (14–16 May), clinching 1st place in Beauty Therapy Skills and 2nd place in Civil & Building Engineering Project Innovation — with both teams now advancing to the National TVET Fair in Wote, Kenya.",
+  content: `
+    <p>Kongoni Technical and Vocational College has once again demonstrated the exceptional calibre of its trainees and trainers at the prestigious <strong>2026 Western Region TVET Fair</strong>, competing against polytechnics and TVET institutions from across the western region from <strong>14th to 16th May 2026</strong>.</p>
+
+    <p>After three days of intensive skills competitions, project presentations, and rigorous judging, Kongoni TVC emerged among the region's top performers — securing medals in two highly competitive categories and earning qualification to the <strong>National TVET Fair in Wote, Kenya</strong>.</p>
+
+    <p><strong>🏆 Award-Winning Results:</strong></p>
+
+    <p><strong>🥇 1st Place — Beauty Therapy Skills</strong></p>
+    <p>Kongoni TVC's Beauty Therapy team delivered a masterclass performance, showcasing technical precision, creativity, and professional standards that surpassed all competing institutions across the entire western region. Their work was lauded by judges for its exceptional skill execution, attention to detail, and client-centred approach — a true demonstration of world-class vocational excellence.</p>
+
+    <p><strong>🥈 2nd Place — Civil & Building Engineering Project Innovation</strong></p>
+    <p>The Civil and Building Engineering team presented an innovative project that impressed judges and fellow competitors alike. Their creative engineering solution, technical rigour, and professional presentation earned them a well-deserved silver position in a fiercely contested category — a remarkable achievement that reflects the depth of talent within the department.</p>
+
+    <p><strong>🌟 Both Teams Advance to the National TVET Fair, Wote!</strong></p>
+    <p>Both the Beauty Therapy and Civil & Building Engineering teams will now carry the Kongoni TVC banner to the <strong>National TVET Fair in Wote, Kenya</strong>, representing the Western Region on the biggest stage in the TVET calendar. The college community extends its full support and encouragement as they prepare for the national showdown.</p>
+
+    <p><strong>Voices of Pride:</strong></p>
+    <p>Principal Ms. Judith Akaranga expressed immense pride in the teams' performances: "These achievements are the result of months of hard work, dedication, and an unwavering commitment to excellence. We are extraordinarily proud of every participant — winners and participants alike — for representing our institution with distinction and professionalism."</p>
+
+    <p>"To our champions heading to Wote — we believe in you. Go and show the nation what Kongoni TVC is made of," she added.</p>
+
+    <p><strong>🙏 Thank You to All Participants:</strong></p>
+    <p>The college extends heartfelt gratitude and congratulations to <strong>every trainee and trainer who participated</strong> in the 2026 Western Region TVET Fair. Your courage, preparation, and passion made Kongoni TVC proud across every category. Every entry, every presentation, and every skill demonstration was a contribution to the institution's growing legacy of excellence.</p>
+
+    <p>Special recognition goes to the departmental trainers, mentors, and support staff who guided, coached, and prepared the teams — your dedication is the foundation of this success.</p>
+
+    <p><strong>🔮 Road to Nationals:</strong></p>
+    <p>Preparations for the National TVET Fair in Wote are already underway. The college is committed to providing every resource and support needed to ensure our qualifiers perform at their absolute best on the national stage.</p>
+
+    <p><em>#KongoniTVC #WesternTVETFair2026 #BeautyTherapy #CivilEngineering #NationalQualifiers #Wote2026 #TVETExcellence #WesternChampions</em></p>
+  `,
+  imageUrl: "/images/newsevents/tvetfair2026/tvetfair_main.jpg",
+  images: [
+    "/images/newsevents/tvetfair2026/tvetfair_main.jpg",
+    "/images/newsevents/tvetfair2026/tvetfair_beauty1.jpg",
+    "/images/newsevents/tvetfair2026/tvetfair_beauty2.jpg",
+    "/images/newsevents/tvetfair2026/tvetfair_civil1.jpg",
+    "/images/newsevents/tvetfair2026/tvetfair_civil2.jpg",
+    "/images/newsevents/tvetfair2026/tvetfair_awards.jpg",
+     "/images/newsevents/tvetfair2026/tvetfair_awards1.jpg",
+    "/images/newsevents/tvetfair2026/tvetfair_team.jpg",
+     "/images/newsevents/tvetfair2026/tvetfair_team1.jpg",
+      "/images/newsevents/tvetfair2026/tvetfair_electrical.jpg",
+       "/images/newsevents/tvetfair2026/tvetfair_mechanical.jpg"
+     
+  ],
+  featured: true,
+  createdAt: "2026-05-16T18:00:00Z",
+  updatedAt: "2026-05-16T18:00:00Z",
+  author: "Academic & Student Affairs Department",
+  category: "Achievements",
+  eventDate: "2026-05-16",
+  location: "Western Region TVET Fair, Western Kenya",
+  tags: [
+    "western-tvet-fair",
+    "2026",
+    "beauty-therapy",
+    "civil-engineering",
+    "1st-place",
+    "2nd-place",
+    "national-qualifiers",
+    "wote",
+    "achievement",
+    "competition",
+    "skills-competition",
+    "western-region",
+    "tvet-kenya",
+    "awards",
+    "excellence"
+  ]
+},
+{
+  id: "35",
+  title: "Internal College Exhibition 2026 — Departments Showcase Innovation Ahead of Western TVET Fair",
+  excerpt: "On Tuesday 12th May 2026, Kongoni TVC held an Internal College Exhibition where individual departments presented the impressive items, projects, and skills they had prepared to represent the institution at the upcoming KATTI Western TVET Fair 2026.",
+  content: `
+    <p>On <strong>Tuesday, 12th May 2026</strong>, the Kongoni Technical and Vocational College grounds buzzed with excitement and creative energy during the <strong>Internal College Exhibition 2026</strong> — an in-house showcase designed to preview and finalise the entries that departments would be presenting at the <strong>KATTI Western TVET Fair 2026</strong>.</p>
+
+    <p>The internal exhibition served as a critical dress rehearsal, allowing departmental teams to present their prepared projects, skills demonstrations, and innovations before an internal panel of judges, trainers, and fellow trainees — receiving feedback and affirmation ahead of the regional competition stage.</p>
+
+    <p><strong>🏛️ Departments That Showcased:</strong></p>
+    <p>Every department rose to the occasion, presenting items that reflected months of preparation, creativity, and technical excellence. Highlights included:</p>
+
+    <ul>
+      <li><strong>Beauty Therapy Department:</strong> Delivered a polished skills showcase demonstrating professional therapy techniques, creative hair and beauty artistry, and client-service excellence — drawing some of the loudest applause of the day.</li>
+      <li><strong>Civil & Building Engineering Department:</strong> Unveiled an innovative engineering project that drew considerable interest from the internal judges, showcasing both technical precision and creative problem-solving in the built environment.</li>
+      <li><strong>ICT Department:</strong> Demonstrated cutting-edge digital solutions, software projects, and tech innovations tailored for real-world applications.</li>
+      <li><strong>Automotive Department:</strong> Presented diagnostic and mechanical solutions alongside impressive technical projects reflecting current industry standards.</li>
+      <li><strong>Fashion & Design Department:</strong> Showcased original garment collections, design concepts, and fashion artistry that impressed with their creativity and craftsmanship.</li>
+      <li><strong>Food & Beverage Department:</strong> Displayed culinary innovation through beautifully prepared dishes, beverage concepts, and hospitality presentations.</li>
+      <li><strong>Business Studies Department:</strong> Presented entrepreneurship projects, business models, and market innovation concepts aligned with current economic trends.</li>
+    </ul>
+
+    <p><strong>🌟 A Platform for Peer Recognition:</strong></p>
+    <p>The internal exhibition was not only a preparation platform — it was a celebration of the talent already present within the college. Trainees cheered each other on, trainers offered constructive guidance, and the administration conducted structured evaluations to ensure every entry was competition-ready.</p>
+
+    <p>Principal Ms. Judith Akaranga commended all participating departments: "What I witnessed today gives me great confidence ahead of the Western TVET Fair. Every department has put in remarkable work, and the standard of entries is genuinely impressive. I am proud of each and every one of you."</p>
+
+    <p><strong>🎯 Road to the Western TVET Fair:</strong></p>
+    <p>Following the internal exhibition, final selections and refinements were made to ensure that Kongoni TVC's entries at the Western TVET Fair would be polished, professional, and competitive at the highest regional level.</p>
+
+    <p>The internal exhibition proved to be an invaluable stepping stone — building confidence, sharpening presentations, and cementing the institution's collective readiness for the regional stage.</p>
+
+    <p><em>#KongoniTVC #InternalExhibition2026 #WesternTVETFair #StudentInnovation #DepartmentShowcase #TVETExcellence</em></p>
+  `,
+  imageUrl: "/images/newsevents/internalexhibition2026/exhibition_main.jpg",
+  images: [
+    "/images/newsevents/internalexhibition2026/exhibition_main.jpg",
+    "/images/newsevents/internalexhibition2026/exhibition_beauty.jpg",
+    "/images/newsevents/internalexhibition2026/exhibition_civil.jpg",
+    "/images/newsevents/internalexhibition2026/exhibition_ict.jpg",
+    "/images/newsevents/internalexhibition2026/exhibition_automotive.jpg",
+    "/images/newsevents/internalexhibition2026/exhibition_food.jpg",
+    "/images/newsevents/internalexhibition2026/exhibition_electrical.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-05-12T17:00:00Z",
+  updatedAt: "2026-05-12T17:00:00Z",
+  author: "Academic Affairs Department",
+  category: "Events",
+  eventDate: "2026-05-12",
+  location: "Kongoni Technical and Vocational College Grounds",
+  tags: [
+    "internal-exhibition",
+    "2026",
+    "tvet-fair",
+    "departments",
+    "innovation",
+    "skills-showcase",
+    "beauty-therapy",
+    "civil-engineering",
+    "ict",
+    "automotive",
+    "fashion-design",
+    "food-beverage",
+    "business-studies",
+    "western-region",
+    "preparation",
+    "student-talent"
+  ]
+},
+{
+  id: "34",
+  title: "Term Opening Prayer Day — Seeking Divine Guidance for the May–August 2026 Term",
+  excerpt: "On Friday 8th May 2026, the Kongoni TVC community gathered in faith and unity for the Term Opening Prayer Day, invoking divine blessing, wisdom, and protection over trainees, trainers, and staff as the new academic term begins.",
+  content: `
+    <p>On <strong>Friday, 8th May 2026</strong>, Kongoni Technical and Vocational College paused to gather in prayer and reflection as the institution observed the <strong>Term Opening Prayer Day</strong> for the <strong>May–August 2026 Academic Term</strong>.</p>
+
+    <p>In keeping with the college's cherished tradition of anchoring each new term in faith, the prayer day brought together trainees, trainers, and staff in a spirit of unity, gratitude, and hopeful anticipation for the term ahead.</p>
+
+    <p><strong>🙏 A Morning of Faith and Fellowship:</strong></p>
+    <p>The prayer gathering, held at the main campus grounds, was marked by warmth, reverence, and communal participation. Representatives from multiple faith traditions led prayers and devotional reflections, affirming the college's inclusive, interfaith approach to spiritual life.</p>
+
+    <p>The service opened with songs of praise that filled the campus with an atmosphere of worship and joy. Religious leaders from the local community joined the college community, offering words of encouragement, blessing, and divine guidance for the term ahead.</p>
+
+    <p><strong>📖 Key Themes and Prayers:</strong></p>
+    <ul>
+      <li>Prayers for <strong>academic excellence and wisdom</strong> for all trainees undertaking their studies</li>
+      <li>Petitions for <strong>safety and protection</strong> across the college community throughout the term</li>
+      <li>Intercessions for <strong>trainers and staff</strong> — for energy, patience, and effectiveness in their work</li>
+      <li>Blessings over all <strong>workshops, laboratories, and learning spaces</strong></li>
+      <li>Prayers for the <strong>new intake trainees</strong> beginning their journeys at Kongoni TVC</li>
+      <li>Gratitude for <strong>the recent victories</strong> at the Western TVET Fair and the opportunities ahead</li>
+      <li>Prayers for <strong>national competition success</strong> as qualifying teams prepare for Wote</li>
+      <li>Intercessions for <strong>peace, unity, and harmony</strong> within the college community and the nation</li>
+    </ul>
+
+    <p><strong>💬 Principal's Address:</strong></p>
+    <p>Principal Ms. Judith Akaranga welcomed the college community and set the tone for the term with words of encouragement and faith: "We begin every term in prayer because we recognise that our efforts and achievements are only possible through divine grace. As we step into this new term with ambition and purpose, let us do so with hearts that are grateful, focused, and open to guidance from above."</p>
+
+    <p>She called on all trainees to approach their studies with diligence and integrity, reminding them that excellence is a form of stewardship — making the most of the opportunities placed before them.</p>
+
+    <p><strong>🌟 A United Community:</strong></p>
+    <p>The prayer day concluded with a moment of collective blessing over the term, with participants joining hands symbolically before dispersing with renewed energy and purpose. Many trainees expressed how meaningful the gathering was — particularly new intake trainees who found the prayer day a warm, inclusive welcome into the Kongoni TVC family.</p>
+
+    <p>The college remains committed to nurturing not only the minds and hands of its trainees but also their hearts — ensuring that holistic development remains at the core of the Kongoni TVC experience.</p>
+
+    <p><em>#KongoniTVC #PrayerDay #MayTerm2026 #HolisticEducation #TermOpening #FaithAndExcellence</em></p>
+  `,
+  imageUrl: "/images/newsevents/prayerday2026/prayerday_main.jpg",
+  images: [
+    "/images/newsevents/prayerday2026/prayerday_main.jpg",
+    "/images/newsevents/prayerday2026/prayerday2.jpg",
+    "/images/newsevents/prayerday2026/prayerday3.jpg",
+    "/images/newsevents/prayerday2026/prayerday4.jpg",
+      "/images/newsevents/prayerday2026/prayerday5.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-05-08T11:00:00Z",
+  updatedAt: "2026-05-08T11:00:00Z",
+  author: "Student Affairs Department",
+  category: "Student Life",
+  eventDate: "2026-05-08",
+  location: "Kongoni Technical and Vocational College Main Grounds",
+  tags: [
+    "prayer-day",
+    "term-opening",
+    "2026",
+    "may-term",
+    "spirituality",
+    "interfaith",
+    "community",
+    "blessing",
+    "holistic-education",
+    "student-life",
+    "faith",
+    "new-term"
+  ]
+},
+{
+  id: "33",
+  title: "May–August 2026 Intake — Trainees Report in Great Numbers for New Academic Term",
+  excerpt: "On 5th May 2026, Kongoni Technical and Vocational College welcomed a large and enthusiastic cohort of returning and new trainees to the May–August 2026 term, with the college grounds bustling with energy as registration and orientation got underway.",
+  content: `
+    <p>The <strong>5th of May 2026</strong> marked an exciting new beginning for Kongoni Technical and Vocational College as trainees arrived in impressive numbers to report for the commencement of the <strong>May–August 2026 Academic Term</strong>.</p>
+
+    <p>The college grounds came alive with the energy of hundreds of trainees — some returning with renewed purpose after the term break, others stepping onto campus for the very first time — all converging to begin what promises to be a vibrant and productive term.</p>
+
+    <p><strong>📋 A Smooth and Organised Reporting Day:</strong></p>
+    <p>The reporting process was efficiently managed by college staff, with dedicated registration stations set up across the campus to handle the high turnout. Trainees moved through documentation verification, fee processing, accommodation assignment, and departmental induction in an orderly and welcoming atmosphere.</p>
+
+    <p>The strong turnout reflects both the growing reputation of Kongoni TVC as a premier technical and vocational institution in the region and the increasing demand for quality TVET education across Western Kenya.</p>
+
+    <p><strong>🏫 Departments Welcoming New and Returning Trainees:</strong></p>
+    <ul>
+      <li><strong>Building & Construction</strong> — Masonry, Carpentry, Plumbing, and Electrical Installation</li>
+      <li><strong>ICT Department</strong> — Computer Studies, Software Development, and Digital Solutions</li>
+      <li><strong>Automotive Department</strong> — Motor Vehicle Mechanics and Auto Electrical</li>
+      <li><strong>Business Studies</strong> — Entrepreneurship, Accounting, and Business Management</li>
+      <li><strong>Beauty Therapy</strong> — Professional Beauty, Hair, and Spa Therapy</li>
+      <li><strong>Fashion & Design</strong> — Tailoring, Dress Making, and Creative Design</li>
+      <li><strong>Food & Beverage</strong> — Catering, Hospitality, and Food Production</li>
+    </ul>
+
+    <p><strong>🌟 A Warm Welcome from the Administration:</strong></p>
+    <p>Principal Ms. Judith Akaranga personally welcomed trainees at the reporting event, reinforcing the college's commitment to providing a supportive, world-class learning environment. Addressing the gathering, she said:</p>
+
+    <p><em>"Welcome back and welcome for the first time to Kongoni TVC. You have chosen well — this is a place where talent is nurtured, hard work is celebrated, and futures are built. We are excited to have you here, and we are committed to ensuring this term is your best yet."</em></p>
+
+    <p>She encouraged new trainees to settle in quickly, engage fully with their departments, and take advantage of all the opportunities the college has to offer — from academics and workshops to clubs, sports, and co-curricular activities.</p>
+
+    <p><strong>🔮 What Awaits in the May–August 2026 Term:</strong></p>
+    <p>The term ahead is packed with exciting academic milestones, competitions, and community activities, including:</p>
+    <ul>
+      <li>Continuation of the CBET modular curriculum across all departments</li>
+      <li>National TVET Fair participation for qualifying teams in Wote</li>
+      <li>Sports, drama, and cultural activities</li>
+      <li>Industry attachment and workplace learning opportunities</li>
+      <li>Entrepreneurship and innovation programmes</li>
+    </ul>
+
+    <p>The college looks forward to a term full of growth, achievement, and unforgettable experiences. To every trainee who reported on 5th May — <strong>welcome to a new chapter.</strong></p>
+
+    <p><em>#KongoniTVC #MayIntake2026 #NewTerm #TraineesReporting #TVETKenya #WelcomeHome</em></p>
+  `,
+  imageUrl: "/images/newsevents/reporting2026may/reporting_main.jpg",
+  images: [
+    "/images/newsevents/reporting2026may/reporting_main.jpg",
+    "/images/newsevents/reporting2026may/reporting2.jpg",
+    "/images/newsevents/reporting2026may/reporting3.jpg",
+    "/images/newsevents/reporting2026may/reporting4.jpg",
+    "/images/newsevents/reporting2026may/reporting5.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-05-05T09:00:00Z",
+  updatedAt: "2026-05-05T09:00:00Z",
+  author: "Administration",
+  category: "Student Life",
+  eventDate: "2026-05-05",
+  location: "Kongoni Technical and Vocational College Grounds",
+  tags: [
+    "trainees-reporting",
+    "may-2026",
+    "new-term",
+    "intake",
+    "orientation",
+    "may-august-term",
+    "student-life",
+    "new-intake",
+    "returning-trainees",
+    "tvet-kenya",
+    "college-opening",
+    "2026"
+  ]
+},
 {
   id: "31",
   title: "Kongoni Technical Shines as National Champions at the 2026 Kenya National Drama and Film Festival",

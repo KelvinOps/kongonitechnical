@@ -114,8 +114,8 @@ const staff = [
   },
   {
     name: "Mr. Joseph Wanjala",
-    position: "Records Officer",
-    qualification: "Diploma in Records Management",
+    position: "Deputy Registrar",
+    qualification: "Civil and Building Engineering",
     image: "/images/registry/josephwanjala.jpeg",
     email: "",
     phone: "+254 788 070 303"
@@ -322,7 +322,6 @@ export default function RegistryPage() {
                   <div className="border-l-4 border-[#099cca] pl-4">
                     <h4 className="font-semibold text-gray-900">Office Hours</h4>
                     <p className="text-gray-700">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                    <p className="text-gray-700">Saturday: 8:00 AM - 12:00 PM</p>
                   </div>
                   <div className="border-l-4 border-[#099cca] pl-4">
                     <h4 className="font-semibold text-gray-900">Processing Times</h4>

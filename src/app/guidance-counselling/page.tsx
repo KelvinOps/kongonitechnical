@@ -148,21 +148,21 @@ export default function GuidanceCounsellingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  name: "Dr. Sarah Wanjiku",
+                  name: "",
                   title: "Head of Guidance & Counselling",
                   qualifications: "PhD Counselling Psychology",
                   specialization: "Academic & Career Counselling",
                   image: "/images/counsellor-1.jpg"
                 },
                 {
-                  name: "Mr. James Kiprotich",
+                  name: "",
                   title: "Senior Counsellor",
                   qualifications: "M.A. Clinical Psychology",
                   specialization: "Personal & Crisis Counselling",
                   image: "/images/counsellor-2.jpg"
                 },
                 {
-                  name: "Ms. Grace Achieng",
+                  name: "",
                   title: "Counselling Psychologist",
                   qualifications: "B.A. Psychology, Cert. Counselling",
                   specialization: "Group Therapy & Life Skills",
@@ -301,8 +301,8 @@ export default function GuidanceCounsellingPage() {
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:counselling@kongonitvc.ac.ke" className="text-primary hover:text-primary/80 transition-colors">
-                      counselling@kongonitvc.ac.ke
+                    <a href="mailto:counselling@kongonitechnical.ac.ke" className="text-primary hover:text-primary/80 transition-colors">
+                      counselling@kongonitechnical.ac.ke
                     </a>
                   </div>
                 </div>
@@ -312,7 +312,7 @@ export default function GuidanceCounsellingPage() {
                   <div>
                     <p className="font-medium">Phone</p>
                     <a href="tel:+254788070304" className="text-primary hover:text-primary/80 transition-colors">
-                      +254 788 070 304
+                      +254 788 070 303
                     </a>
                   </div>
                 </div>

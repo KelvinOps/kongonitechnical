@@ -57,7 +57,7 @@ export default function ImageGallery() {
       category: "events"
     },
     {
-      src: "/images/newsevents/cultural/culturalday12.jpg",
+      src: "/images/newsevents/culturalday/culturalday2025_edited.png",
       alt: "Cultural Day",
       span: "lg:col-span-2",
       category: "events"

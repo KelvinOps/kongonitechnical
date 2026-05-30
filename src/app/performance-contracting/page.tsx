@@ -37,65 +37,73 @@ const teamMembers = [
   {
     name: "Ms. Judith Akaranga",
     title: "Team Leader & Principal",
-    image: "/images/JUDITH AKARANGA.png",
+    image: "/images/pc/judithakaranga.png",
     email: "principal@kongonitechnical.ac.ke",
     phone: "+254 788 070 303"
   },
   {
-    name: "Mr. ",
+    name: "Ms. Lucy Makhokha  ",
     title: "Deputy Principal (Academics)",
-    image: "/images/LUCY MAKOKHA.png",
-    email: "deputy.academics@kongonitechnical.ac.ke",
-    phone: "+254 722 345 678"
+    image: "/images/pc/lucymakokha.png",
+    email: "dpac@kongonitechnical.ac.ke",
+    phone: "+254 788 070 303"
   },
   {
-    name: "Ms. ",
+    name: "Mr. Ezra Orina ",
     title: "Deputy Principal (Administration)",
-    image: "/images/EZRA ORINA.png",
-    email: "deputy.admin@kongonitechnical.ac.ke",
-    phone: "+254 733 456 789"
+    image: "/images/pc/ezraorina.png",
+    email: "dpad@kongonitechnical.ac.ke",
+    phone: "+254 788 070 303"
   },
   {
     name: "Mrs Millicent Nambo",
     title: "Finance Officer",
-    image: "/images/NAMBO MILLCENT.png",
+    image: "/images/pc/millcentnambo.png",
     email: "finance@kongonitechnical.ac.ke",
-    phone: "+254 766 789 012"
+    phone: "+254 788 070 303"
   },
   {
     name: "Ms. Jesca Kitiavi",
     title: "Human Resources Manager",
-    image: "/images/JESCAH_KITIAVI.png",
-    email: "hr@kongonitechnical.ac.ke",
-    phone: "+254 777 890 123"
+    image: "/images/pc/JESCAH_KITIAVI.png",
+    email: "hrm@kongonitechnical.ac.ke",
+    phone: "+254 788 070 303"
   },
   {
     name: "Mr. Cyrus Lagat",
     title: "Quality Assurance Officer",
-    image: "/images/CYRUS_LAGAT_KIMELI.png",
-    email: "quality@kongonitechnical.ac.ke",
-    phone: "+254 788 901 234"
+    image: "/images/pc/cyruslagat.png",
+    email: "iqa@kongonitechnical.ac.ke",
+    phone: "+254 788 070 303"
   },
   {
     name: "Mr. Kevin Masinde",
     title: "Dean of Students",
-    image: "/images/KEVIN MASINDE.png",
-    email: "students@kongonitechnical.ac.ke",
-    phone: "+254 799 012 345"
+    image: "/images/pc/kevinmasinde.png",
+    email: "dean@kongonitechnical.ac.ke",
+    phone: "+254 788 070 303"
   },
   {
-    name: " Mr Makwila Kipkore",
+    name: " Mr. Makwila Kipkore",
     title: "Procurement Officer",
-    image: "/images/GEOFREY_KIPKORIR.png",
+    image: "/images/pc/GEOFREY_KIPKORIR.png",
     email: "procurement@kongonitechnical.ac.ke",
-    phone: "+254 711 234 567"
+    phone: "+254 788 070 303"
   },
   {
-    name: "Mr. ",
+    name: "Mr. Reuben Chemtingen ",
     title: "Internal Auditor",
-    image: "/images/team/auditor.png",
+    image: "/images/pc/reuben cheptinget.png",
     email: "audit@kongonitechnical.ac.ke",
-    phone: "+254 722 345 678"
+    phone: "+254 788 070 303"
+  }
+  ,
+  {
+    name: "Ms. Charity Chepkorir ",
+    title: "PC Coordinator",
+    image: "/images/pc/CHARITY JEPKORIR.png",
+    email: "pc@kongonitechnical.ac.ke",
+    phone: "+254 788 070 303"
   }
 ];
 

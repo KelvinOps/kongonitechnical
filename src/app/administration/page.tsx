@@ -114,6 +114,20 @@ const administrationTeam: AdminMember[] = [
     bio: 'Mr Lagat leads our research efforts, focusing on applied research that addresses real-world technical challenges.',
     joinDate: '2018'
   },
+    {
+    id: '11',
+    name: 'Mr Patrick Mwangi',
+    position: 'Examination Officer',
+    department: 'Examination',
+    image: '/images/admin/patrickmwangi.png',
+    email: 'exams@kongonitechnical.ac.ke',
+    phone: '+254 788 070 303',
+    qualifications: ['MSc in Education'],
+    experience: '13+ years in curriculum development',
+    responsibilities: ['Research program coordination', 'Innovation initiatives', 'Grant applications', 'Industry collaborations'],
+    bio: 'Mr Mwangi leads our examination department, focusing on applied research that addresses real-world technical challenges.',
+    joinDate: '2018'
+  },
   {
     id: '8',
     name: 'Ms. Millicent Nambo',
@@ -128,6 +142,20 @@ const administrationTeam: AdminMember[] = [
     bio: 'Ms Nambo ensures sound financial management and transparent use of institutional resources.',
     joinDate: '2021'
   },
+    {
+    id: '12',
+    name: 'Mr Reuben Chemtingen',
+    position: 'Internal Auditor',
+    department: 'Finance and Accounts',
+    image: '/images/admin/reuben cheptinget.png',
+    email: 'audit@kongonitecnhical.ac.ke',
+    phone: '+254 788 070 303',
+    qualifications: ['MBA in Finance', 'CPA (K)', 'BSc in Finance and Accounting'],
+    experience: '8+ years in financial management',
+    responsibilities: ['Financial planning and control', 'Budget management', 'Financial reporting', 'Audit coordination'],
+    bio: 'Mr Chemtingen ensures sound financial management and transparent use of institutional resources.',
+    joinDate: '2025'
+  },
   {
     id: '9',
     name: 'Mr. Kevin Magonya',
@@ -141,6 +169,20 @@ const administrationTeam: AdminMember[] = [
     responsibilities: ['Industry partnerships development', 'Student internship coordination', 'Alumni engagement', 'Corporate relations'],
     bio: 'Mr. Magonya bridges the gap between the institution and industry, ensuring our programs align with market needs and creating opportunities for students.',
     joinDate: '2020'
+  },
+    {
+    id: '13',
+    name: 'Ms Jesica Kitiavi ',
+    position: 'Human Resource Officer',
+    department: 'Human Resource',
+    image: '/images/admin/JESCAH_KITIAVI.png',
+    email: 'hrm@kongonitechnical.ac.ke',
+    phone: '+254 788 070 303',
+    qualifications: ['BSc in Human Resource'],
+    experience: '5+ years in human resource',
+    responsibilities: ['Industry partnerships development', 'Student internship coordination', 'Alumni engagement', 'Corporate relations'],
+    bio: 'Ms Jesica manages and takes care of all staff and creating opportunities for staff.',
+    joinDate: '2025'
   },
   {
     id: '10',

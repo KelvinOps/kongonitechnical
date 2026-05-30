@@ -258,8 +258,8 @@ export default function ILOPage() {
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:ilo@kongonitvc.ac.ke" className="text-primary hover:text-primary/80 transition-colors">
-                      ilo@kongonitvc.ac.ke
+                    <a href="mailto:ilo@kongonitechnical.ac.ke" className="text-primary hover:text-primary/80 transition-colors">
+                      ilo@kongonitechnical.ac.ke
                     </a>
                   </div>
                 </div>
@@ -269,7 +269,7 @@ export default function ILOPage() {
                   <div>
                     <p className="font-medium">Phone</p>
                     <a href="tel:+254788070305" className="text-primary hover:text-primary/80 transition-colors">
-                      +254 788 070 305
+                      +254 788 070 303
                     </a>
                   </div>
                 </div>
@@ -290,10 +290,7 @@ export default function ILOPage() {
                     <span>Monday - Friday</span>
                     <span>8:00 AM - 5:00 PM</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>9:00 AM - 1:00 PM</span>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -388,7 +385,7 @@ export default function ILOPage() {
                 Schedule Meeting
               </Link>
               <a 
-                href="mailto:ilo@kongonitvc.ac.ke"
+                href="mailto:ilo@kongonitechnical.ac.ke"
                 className="inline-flex items-center bg-secondary hover:bg-secondary/90 text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
               >
                 <Mail className="w-5 h-5 mr-2" />
