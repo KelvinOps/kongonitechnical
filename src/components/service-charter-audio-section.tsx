@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
+import {
   Headphones,
   Play,
   Pause,
@@ -15,28 +15,17 @@ import {
   AlertCircle
 } from "lucide-react";
 
-// ─── IMPORTANT: Rename your audio file to remove spaces ───────────────────────
-// From: "Kongoni tvc audio Recordings of service delivery charter.m4a"
-// To:   "service-charter-audio.m4a"
-// Then place it in your Next.js /public/documents/ folder.
-//
-// Also add this to your next.config.js to ensure .m4a is served correctly:
-//
-//   headers: async () => [{
-//     source: '/documents/:file*',
-//     headers: [{ key: 'Accept-Ranges', value: 'bytes' }],
-//   }],
-// ──────────────────────────────────────────────────────────────────────────────
-
 const AUDIO_SRC = '/documents/service-charter-audio.m4a';
+const BG_IMAGE  = '/images/hero/service-charter-bg.png';
 
 export default function ServiceCharterAudioSection() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+  // Start as false — let events drive loading state rather than assuming load is in progress
+  const [isPlaying, setIsPlaying]   = useState(false);
+  const [isLoading, setIsLoading]   = useState(false);
+  const [hasError,  setHasError]    = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [isReady, setIsReady] = useState(false);
+  const [duration,  setDuration]    = useState(0);
+  const [isReady,   setIsReady]     = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
@@ -48,9 +37,24 @@ export default function ServiceCharterAudioSection() {
       setIsLoading(false);
       setHasError(false);
     };
-    const handleWaiting  = () => setIsLoading(true);
-    const handlePlaying  = () => { setIsLoading(false); setHasError(false); };
-    const handleError    = () => {
+
+    // canplaythrough means enough data buffered to play without interruption
+    const handleCanPlayThrough = () => {
+      setIsReady(true);
+      setIsLoading(false);
+    };
+
+    const handleWaiting = () => setIsLoading(true);
+
+    const handlePlaying = () => {
+      setIsLoading(false);
+      setHasError(false);
+      setIsPlaying(true);
+    };
+
+    const handlePause = () => setIsPlaying(false);
+
+    const handleError = () => {
       const err = audio.error;
       const messages: Record<number, string> = {
         1: 'MEDIA_ERR_ABORTED – playback was aborted.',
@@ -66,19 +70,26 @@ export default function ServiceCharterAudioSection() {
       setHasError(true);
       setIsLoading(false);
       setIsPlaying(false);
+      setIsReady(false);
     };
 
-    audio.addEventListener('canplay',  handleCanPlay);
-    audio.addEventListener('waiting',  handleWaiting);
-    audio.addEventListener('playing',  handlePlaying);
-    audio.addEventListener('error',    handleError);
+    audio.addEventListener('canplay',       handleCanPlay);
+    audio.addEventListener('canplaythrough', handleCanPlayThrough);
+    audio.addEventListener('waiting',        handleWaiting);
+    audio.addEventListener('playing',        handlePlaying);
+    audio.addEventListener('pause',          handlePause);
+    audio.addEventListener('error',          handleError);
+
+    // Trigger the browser to start buffering
     audio.load();
 
     return () => {
-      audio.removeEventListener('canplay',  handleCanPlay);
-      audio.removeEventListener('waiting',  handleWaiting);
-      audio.removeEventListener('playing',  handlePlaying);
-      audio.removeEventListener('error',    handleError);
+      audio.removeEventListener('canplay',        handleCanPlay);
+      audio.removeEventListener('canplaythrough', handleCanPlayThrough);
+      audio.removeEventListener('waiting',        handleWaiting);
+      audio.removeEventListener('playing',        handlePlaying);
+      audio.removeEventListener('pause',          handlePause);
+      audio.removeEventListener('error',          handleError);
     };
   }, []);
 
@@ -88,31 +99,36 @@ export default function ServiceCharterAudioSection() {
 
     if (isPlaying) {
       audio.pause();
-      setIsPlaying(false);
+      // setIsPlaying handled by 'pause' event
       return;
     }
 
+    // If not yet ready, show loading and wait for canplay
     if (!isReady) {
       setIsLoading(true);
       await new Promise<void>((resolve) => {
         const onReady = () => {
           audio.removeEventListener('canplay', onReady);
-          setIsReady(true);
-          setIsLoading(false);
           resolve();
         };
         audio.addEventListener('canplay', onReady);
+        // In case browser already buffered enough before listener attached
+        if (audio.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
+          audio.removeEventListener('canplay', onReady);
+          resolve();
+        }
       });
+      setIsLoading(false);
+      setIsReady(true);
     }
 
     try {
       setIsLoading(true);
       await audio.play();
-      setIsPlaying(true);
+      // setIsPlaying(true) handled by 'playing' event
     } catch (err) {
       console.error('[Audio] play() rejected:', err);
       setIsPlaying(false);
-    } finally {
       setIsLoading(false);
     }
   };
@@ -184,23 +200,38 @@ export default function ServiceCharterAudioSection() {
   const progressPercentage = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <section className="py-12 bg-gradient-to-br from-gray-50 to-cyan-50/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Service Charter</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our commitment to quality service delivery • Ahadi yetu ya utoaji huduma bora
+    <section
+      className="py-20 relative"
+      style={{
+        backgroundImage: `url(${BG_IMAGE})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Dark overlay so text stays legible over any background image */}
+      <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
+
+      <div className="relative z-10 container mx-auto px-4">
+        {/* Section heading — white text over the overlay */}
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold text-white mb-3 drop-shadow">
+            Service Delivery Charter
+          </h2>
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
+            Our commitment to quality service delivery &bull; Ahadi yetu ya utoaji huduma bora
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto space-y-6">
-          {/* Audio Player Card */}
-          <Card className="overflow-hidden shadow-md border border-gray-200">
-            <div className="bg-white p-4">
+
+          {/* ── Audio Player Card ── */}
+          <Card className="overflow-hidden shadow-xl border border-white/20 bg-white/95 backdrop-blur-sm">
+            <div className="p-5">
 
               {/* Error banner */}
               {hasError && (
-                <div className="flex items-center gap-2 mb-3 px-3 py-2 rounded-md bg-red-50 border border-red-200 text-red-700 text-xs">
+                <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-md bg-red-50 border border-red-200 text-red-700 text-xs">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   <span>
                     Audio file could not be loaded. Make sure{' '}
@@ -213,6 +244,7 @@ export default function ServiceCharterAudioSection() {
               )}
 
               <div className="flex items-center justify-between gap-4 flex-wrap">
+                {/* Label */}
                 <div className="flex items-center space-x-3">
                   <div className="bg-primary/10 p-2 rounded-full">
                     <Headphones className="w-5 h-5 text-primary" />
@@ -223,6 +255,7 @@ export default function ServiceCharterAudioSection() {
                   </div>
                 </div>
 
+                {/* Hidden audio element */}
                 <audio
                   ref={audioRef}
                   onTimeUpdate={handleTimeUpdate}
@@ -232,10 +265,10 @@ export default function ServiceCharterAudioSection() {
                   className="hidden"
                   preload="auto"
                 >
-                  {/* Use a single clean src — no spaces in filename */}
                   <source src={AUDIO_SRC} type="audio/mp4" />
                 </audio>
 
+                {/* Controls */}
                 <div className="flex items-center space-x-2">
                   <Button
                     variant="ghost"
@@ -287,8 +320,9 @@ export default function ServiceCharterAudioSection() {
                 </div>
               </div>
 
-              <div className="mt-3">
-                <div className="relative w-full h-1 bg-gray-200 rounded-lg overflow-hidden">
+              {/* Progress bar */}
+              <div className="mt-4">
+                <div className="relative w-full h-1.5 bg-gray-200 rounded-lg overflow-hidden">
                   <div
                     className="absolute top-0 left-0 h-full bg-primary transition-all duration-100"
                     style={{ width: `${progressPercentage}%` }}
@@ -312,9 +346,9 @@ export default function ServiceCharterAudioSection() {
             </div>
           </Card>
 
-          {/* Download PDFs Card */}
-          <Card className="overflow-hidden shadow-md border border-gray-200">
-            <div className="bg-white p-6">
+          {/* ── Download PDFs Card ── */}
+          <Card className="overflow-hidden shadow-xl border border-white/20 bg-white/95 backdrop-blur-sm">
+            <div className="p-6">
               <h3 className="text-xl font-bold text-center mb-6 text-gray-800">
                 Download Service Charter
               </h3>
@@ -349,6 +383,7 @@ export default function ServiceCharterAudioSection() {
               </div>
             </div>
           </Card>
+
         </div>
       </div>
     </section>

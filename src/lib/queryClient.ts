@@ -29,6 +29,13 @@ export async function apiRequest(
 // Types for better TypeScript support
 type UnauthorizedBehavior = "returnNull" | "throw";
 
+// Helper to extract status code from error message
+function getStatusCode(error: unknown): number | null {
+  const msg = error instanceof Error ? error.message : String(error);
+  const match = msg.match(/^(\d{3}):/);
+  return match ? parseInt(match[1], 10) : null;
+}
+
 // Enhanced query function with proper error handling
 export const getQueryFn: <T>(options: {
   on401: UnauthorizedBehavior;
@@ -36,10 +43,10 @@ export const getQueryFn: <T>(options: {
   ({ on401: unauthorizedBehavior }) =>
   async ({ queryKey, signal }) => {
     const url = queryKey.join("/") as string;
-    
+
     const res = await fetch(url, {
       credentials: "include",
-      signal, // Support for AbortController for better cancellation
+      signal,
     });
 
     // Handle unauthorized access based on configuration
@@ -47,98 +54,85 @@ export const getQueryFn: <T>(options: {
       return null;
     }
 
+    // Return null for 404s instead of throwing — missing routes are not fatal
+    if (res.status === 404) {
+      return null;
+    }
+
     await throwIfResNotOk(res);
     return await res.json();
   };
 
-// ✅ FIXED: Updated QueryClient with corrected syntax and types
+// Smart retry logic — no retries on client errors
+const smartRetry = (failureCount: number, error: unknown): boolean => {
+  const status = getStatusCode(error);
+  if (status !== null && status >= 400 && status < 500) return false; // Never retry 4xx
+  return failureCount < 2; // Up to 2 retries for server/network errors
+};
+
 export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       queryFn: getQueryFn({ on401: "throw" }),
-      
-      // ✅ STRATEGY 1: Smart caching for different data types
-      staleTime: 5 * 60 * 1000, // 5 minutes (instead of Infinity)
-      gcTime: 30 * 60 * 1000, // 30 minutes cache (was cacheTime)
-      
-      // ✅ STRATEGY 2: Selective refetch optimization
-      refetchOnWindowFocus: false, // Keep your preference
-      refetchOnMount: false, // Prevent unnecessary refetches on component mount
-      refetchOnReconnect: true, // Good for network reconnection
-      refetchInterval: false, // Keep your preference
-      
-      // ✅ STRATEGY 3: Smart retry logic for better UX - FIXED SYNTAX
-      retry: (failureCount, error: unknown) => {
-        // Don't retry client errors (4xx) but retry server/network errors
-        const errorMessage = error instanceof Error ? error.message : String(error);
-        if (errorMessage?.includes('400')) return false;
-        if (errorMessage?.includes('401') || errorMessage?.includes('403')) return false;
-        if (errorMessage?.includes('404')) return false;
-        return failureCount < 2; // Maximum 2 retries
-      },
+
+      staleTime: 5 * 60 * 1000,       // 5 minutes
+      gcTime: 30 * 60 * 1000,          // 30 minutes
+
+      refetchOnWindowFocus: false,
+      refetchOnMount: false,
+      refetchOnReconnect: true,
+      refetchInterval: false,
+
+      retry: smartRetry,
       retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
-      
-      // ✅ STRATEGY 4: Performance optimizations
-      throwOnError: true, // Keep your setting
-      networkMode: 'online', // Only run queries when online
+
+      throwOnError: true,
+      networkMode: "online",
     },
     mutations: {
-      retry: false, // Keep your original conservative setting
-      networkMode: 'online',
-      
-      // ✅ STRATEGY 5: Mutation error handling - FIXED SYNTAX
+      retry: false,
+      networkMode: "online",
+
       throwOnError: (error: unknown) => {
-        // Don't throw on expected errors, handle them in components
-        const errorMessage = error instanceof Error ? error.message : String(error);
-        if (errorMessage?.includes('400') || errorMessage?.includes('409')) {
-          return false;
-        }
+        const status = getStatusCode(error);
+        if (status === 400 || status === 409) return false;
         return true;
       },
     },
   },
 });
 
-// ✅ STRATEGY 6: Query-specific optimizations for your components
+// Query-specific config presets
 export const queryConfigs = {
-  // Static content - cache longer
   departments: {
-    staleTime: 10 * 60 * 1000, // 10 minutes
-    gcTime: 60 * 60 * 1000, // 1 hour
+    staleTime: 10 * 60 * 1000,
+    gcTime: 60 * 60 * 1000,
     refetchOnMount: false,
   },
-  
-  // Semi-static content  
   courses: {
-    staleTime: 10 * 60 * 1000, // 10 minutes
-    gcTime: 30 * 60 * 1000, // 30 minutes
+    staleTime: 10 * 60 * 1000,
+    gcTime: 30 * 60 * 1000,
     refetchOnMount: false,
   },
-  
-  // Dynamic content - shorter cache
   news: {
-    staleTime: 2 * 60 * 1000, // 2 minutes
-    gcTime: 10 * 60 * 1000, // 10 minutes
+    staleTime: 2 * 60 * 1000,
+    gcTime: 10 * 60 * 1000,
     refetchOnMount: false,
-    retry: 1, // News can fail gracefully
+    retry: 1,
   },
-  
-  // User-specific content - fresh data
   userProfile: {
-    staleTime: 1 * 60 * 1000, // 1 minute
-    gcTime: 5 * 60 * 1000, // 5 minutes
+    staleTime: 1 * 60 * 1000,
+    gcTime: 5 * 60 * 1000,
     refetchOnMount: true,
   },
-  
-  // Search results - very short cache
   search: {
-    staleTime: 30 * 1000, // 30 seconds
-    gcTime: 2 * 60 * 1000, // 2 minutes
+    staleTime: 30 * 1000,
+    gcTime: 2 * 60 * 1000,
     refetchOnMount: false,
   },
 };
 
-// ✅ STRATEGY 7: Enhanced query hooks for your components
+// Helper to build optimized query options
 export const useOptimizedQuery = <T>(
   queryKey: string[],
   queryFn?: () => Promise<T>,
@@ -149,49 +143,29 @@ export const useOptimizedQuery = <T>(
   }
 ) => {
   const config = options?.type ? queryConfigs[options.type] : {};
-  
-  return {
-    queryKey,
-    queryFn,
-    ...config,
-    ...options, // User options override defaults
-  };
+  return { queryKey, queryFn, ...config, ...options };
 };
 
-// ✅ STRATEGY 8: Prefetch utilities for performance
+// Prefetch utilities
 export const prefetchQueries = {
-  departments: () => queryClient.prefetchQuery({
-    queryKey: ['/api/departments'],
-    ...queryConfigs.departments,
-  }),
-  
-  courses: () => queryClient.prefetchQuery({
-    queryKey: ['/api/courses'],
-    ...queryConfigs.courses,
-  }),
-  
-  news: () => queryClient.prefetchQuery({
-    queryKey: ['/api/news'],
-    ...queryConfigs.news,
-  }),
+  departments: () =>
+    queryClient.prefetchQuery({ queryKey: ["/api/departments"], ...queryConfigs.departments }),
+  courses: () =>
+    queryClient.prefetchQuery({ queryKey: ["/api/courses"], ...queryConfigs.courses }),
+  news: () =>
+    queryClient.prefetchQuery({ queryKey: ["/api/news"], ...queryConfigs.news }),
 };
 
-// ✅ STRATEGY 9: Cache invalidation utilities
+// Cache invalidation utilities
 export const invalidateQueries = {
-  departments: () => queryClient.invalidateQueries({ queryKey: ['/api/departments'] }),
-  courses: () => queryClient.invalidateQueries({ queryKey: ['/api/courses'] }),
-  news: () => queryClient.invalidateQueries({ queryKey: ['/api/news'] }),
+  departments: () => queryClient.invalidateQueries({ queryKey: ["/api/departments"] }),
+  courses: () => queryClient.invalidateQueries({ queryKey: ["/api/courses"] }),
+  news: () => queryClient.invalidateQueries({ queryKey: ["/api/news"] }),
   all: () => queryClient.invalidateQueries(),
 };
 
-// ✅ STRATEGY 10: Development helpers
-if (process.env.NODE_ENV === 'development') {
-  // Add query debugging in development
-  queryClient.setQueryDefaults(['/api/debug'], {
-    meta: {
-      persist: false,
-    },
-  });
+if (process.env.NODE_ENV === "development") {
+  queryClient.setQueryDefaults(["/api/debug"], { meta: { persist: false } });
 }
 
 export default queryClient;

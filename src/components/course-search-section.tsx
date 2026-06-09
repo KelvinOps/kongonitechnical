@@ -1,3 +1,5 @@
+//src/components/course-search-section.tsx
+
 'use client';
 
 import { useState } from "react";
@@ -16,7 +18,7 @@ interface Course {
   title: string;
   description: string;
   duration: string;
-  type: 'diploma' | 'certificate' | 'artisan';
+  type: 'diploma' | 'certificate' | 'artisan' | 'short_course' | 'nita_course' | 'driving_course';
   level?: string;
   featured?: boolean;
 }
@@ -32,21 +34,17 @@ export default function CourseSearchSection() {
   const [selectedTerm, setSelectedTerm] = useState<string>("");
   const [showResults, setShowResults] = useState<boolean>(false);
 
-  // Fetch all courses for search
+  // Fetch all courses for search — null is returned for 404 by queryClient
   const {
     data: allCourses,
     isLoading,
     error,
-  } = useQuery<CoursesResponse>({
+  } = useQuery<CoursesResponse | null>({
     queryKey: ["/api/courses"],
-    queryFn: async (): Promise<CoursesResponse> => {
-      const response = await fetch("/api/courses");
-      if (!response.ok) throw new Error("Failed to fetch courses");
-      return response.json();
-    },
+    // No custom queryFn — uses the global queryClient default which handles 404 → null
   });
 
-  // Department options based on your courses
+  // Department options
   const departments = [
     { value: "", label: "Select Department" },
     { value: "engineering", label: "Engineering & Technology" },
@@ -57,7 +55,7 @@ export default function CourseSearchSection() {
     { value: "construction", label: "Construction & Building" },
     { value: "automotive", label: "Automotive Technology" },
     { value: "hospitality", label: "Hospitality & Food Service" },
-    { value: "community", label: "Social Work & Community Development" }
+    { value: "community", label: "Social Work & Community Development" },
   ];
 
   // Level options
@@ -65,7 +63,7 @@ export default function CourseSearchSection() {
     { value: "", label: "Select Level" },
     { value: "diploma", label: "Diploma (Level 6)" },
     { value: "certificate", label: "Certificate (Level 5)" },
-    { value: "artisan", label: "Artisan (Level 3-4)" }
+    { value: "artisan", label: "Artisan (Level 3-4)" },
   ];
 
   // Term options
@@ -73,11 +71,11 @@ export default function CourseSearchSection() {
     { value: "", label: "Select Term" },
     { value: "january", label: "January Intake" },
     { value: "may", label: "May Intake" },
-    { value: "september", label: "September Intake" }
+    { value: "september", label: "September Intake" },
   ];
 
-  // Filter courses based on selections
-  const filteredCourses = allCourses?.filter(course => {
+  // Filter courses based on selections — safely handles null/undefined
+  const filteredCourses = (allCourses ?? []).filter(course => {
     const titleLower = course.title.toLowerCase();
     let matchesDepartment = true;
     let matchesLevel = true;
@@ -120,84 +118,74 @@ export default function CourseSearchSection() {
     }
 
     return matchesDepartment && matchesLevel;
-  }) || [];
+  });
 
   const handleSearchCourses = () => {
-    // Show loading toast first
     if (isLoading) {
       toast({ title: "Info", description: "Loading courses..." });
       return;
     }
 
-    // Handle API error
     if (error) {
-      toast({ 
-        title: "Error", 
+      toast({
+        title: "Error",
         description: "Failed to load courses. Please try again.",
-        variant: "destructive" 
+        variant: "destructive",
       });
       return;
     }
 
-    // Check if any filters are selected
     const hasFilters = selectedDepartment || selectedLevel || selectedTerm;
-    
+
     if (!hasFilters) {
-      toast({ 
-        title: "Info", 
-        description: "Please select at least one filter to search for courses." 
+      toast({
+        title: "Info",
+        description: "Please select at least one filter to search for courses.",
       });
       return;
     }
 
     setShowResults(true);
-    
-    // Show results toast
-    if (filteredCourses && filteredCourses.length > 0) {
+
+    if (filteredCourses.length > 0) {
       const courseWord = filteredCourses.length === 1 ? 'course' : 'courses';
       const departmentText = selectedDepartment ? departments.find(d => d.value === selectedDepartment)?.label : '';
       const levelText = selectedLevel ? levels.find(l => l.value === selectedLevel)?.label : '';
-      
+
       let searchMessage = `Found ${filteredCourses.length} ${courseWord}`;
       if (departmentText || levelText) {
         searchMessage += ' in';
         if (departmentText) searchMessage += ` ${departmentText}`;
         if (levelText) searchMessage += ` ${levelText}`;
       }
-      
+
       toast({ title: "Success", description: searchMessage });
     } else {
-      toast({ 
-        title: "Info", 
-        description: "No courses found matching your criteria. Try adjusting your filters or browse all courses." 
+      toast({
+        title: "Info",
+        description: "No courses found matching your criteria. Try adjusting your filters or browse all courses.",
       });
     }
   };
 
   const handleJoinNow = () => {
     try {
-      // Show loading toast
       toast({ title: "Info", description: "Redirecting to admissions page..." });
-      
-      // Navigate to admissions page
       router.push('/admissions');
-      
-      // Success toast will show after navigation
       setTimeout(() => {
         toast({ title: "Success", description: "Welcome to the admissions page!" });
       }, 500);
     } catch {
-      toast({ 
-        title: "Error", 
+      toast({
+        title: "Error",
         description: "Failed to navigate to admissions page. Please try again.",
-        variant: "destructive"
+        variant: "destructive",
       });
     }
   };
 
   const handleApplicationProcedure = () => {
     try {
-      // Create and trigger download
       const link = document.createElement('a');
       link.href = '/documents/application-procedure.pdf';
       link.download = 'application-procedure.pdf';
@@ -205,58 +193,40 @@ export default function CourseSearchSection() {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
-      // Show success toast
-      toast({ 
-        title: "Success", 
-        description: "Application procedure document downloaded successfully!" 
+      toast({
+        title: "Success",
+        description: "Application procedure document downloaded successfully!",
       });
     } catch {
-      // Show error toast if download fails
-      toast({ 
-        title: "Error", 
+      toast({
+        title: "Error",
         description: "Failed to download application procedure. Please try again or contact support.",
-        variant: "destructive"
+        variant: "destructive",
       });
     }
   };
 
-  // Handle department change with toast feedback
   const handleDepartmentChange = (value: string) => {
     setSelectedDepartment(value);
     if (value && showResults) {
-      // Reset results when changing filters after search
       setShowResults(false);
-      toast({ 
-        title: "Info", 
-        description: "Filters updated. Click search to see new results." 
-      });
+      toast({ title: "Info", description: "Filters updated. Click search to see new results." });
     }
   };
 
-  // Handle level change with toast feedback
   const handleLevelChange = (value: string) => {
     setSelectedLevel(value);
     if (value && showResults) {
-      // Reset results when changing filters after search
       setShowResults(false);
-      toast({ 
-        title: "Info", 
-        description: "Filters updated. Click search to see new results." 
-      });
+      toast({ title: "Info", description: "Filters updated. Click search to see new results." });
     }
   };
 
-  // Handle term change with toast feedback
   const handleTermChange = (value: string) => {
     setSelectedTerm(value);
     if (value && showResults) {
-      // Reset results when changing filters after search
       setShowResults(false);
-      toast({ 
-        title: "Info", 
-        description: "Intake term selected. Click search to see updated results." 
-      });
+      toast({ title: "Info", description: "Intake term selected. Click search to see updated results." });
     }
   };
 
@@ -280,46 +250,38 @@ export default function CourseSearchSection() {
 
   return (
     <section className="py-16 relative">
-      {/* Background Image with Overlay - Only for the search form area */}
+      {/* Background Image with Overlay */}
       <div className="relative">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-             backgroundImage: `url('/images/searchcourse.jpg')`
-          }}
+          style={{ backgroundImage: `url('/images/hero/adminblock.png')` }}
         />
-        
-        {/* Gradient overlay for better background visibility */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-blue-800/50 to-cyan-700/45"></div>
-        
-        {/* Subtle geometric pattern overlay for added visual interest */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-blue-800/50 to-cyan-700/45" />
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M30 0L60 30L30 60L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}></div>
+          }} />
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10 py-16">
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               Application for Admission
             </h2>
-            <div className="w-24 h-1 bg-cyan-400 mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-cyan-400 mx-auto mb-6" />
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
               Find and apply for your preferred course. Select your department, level, and preferred intake term to begin your journey with us.
             </p>
           </div>
 
-          {/* Search Form - Enhanced with glassmorphism effect */}
+          {/* Search Form */}
           <div className="max-w-4xl mx-auto">
             <div className="backdrop-blur-lg bg-white/10 rounded-2xl p-8 border border-white/20 shadow-2xl">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {/* Department Dropdown */}
                 <div className="relative">
-                  <label className="block text-white text-sm font-semibold mb-3">
-                    Department
-                  </label>
+                  <label className="block text-white text-sm font-semibold mb-3">Department</label>
                   <select
                     value={selectedDepartment}
                     onChange={(e) => handleDepartmentChange(e.target.value)}
@@ -336,9 +298,7 @@ export default function CourseSearchSection() {
 
                 {/* Level Dropdown */}
                 <div className="relative">
-                  <label className="block text-white text-sm font-semibold mb-3">
-                    Level
-                  </label>
+                  <label className="block text-white text-sm font-semibold mb-3">Level</label>
                   <select
                     value={selectedLevel}
                     onChange={(e) => handleLevelChange(e.target.value)}
@@ -355,9 +315,7 @@ export default function CourseSearchSection() {
 
                 {/* Term Dropdown */}
                 <div className="relative">
-                  <label className="block text-white text-sm font-semibold mb-3">
-                    Term
-                  </label>
+                  <label className="block text-white text-sm font-semibold mb-3">Term</label>
                   <select
                     value={selectedTerm}
                     onChange={(e) => handleTermChange(e.target.value)}
@@ -407,10 +365,11 @@ export default function CourseSearchSection() {
         </div>
       </div>
 
-      {/* Search Results - Outside the background image area */}
+      {/* Search Results */}
       <div className="bg-gray-50 py-12">
         <div className="container mx-auto px-4">
-          {/* Show error message if API fails */}
+
+          {/* API error banner — only shown if a real network/server error occurred */}
           {error && (
             <div className="text-center mb-8">
               <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg max-w-md mx-auto">
@@ -420,7 +379,7 @@ export default function CourseSearchSection() {
           )}
 
           {/* Search Results */}
-          {showResults && filteredCourses && filteredCourses.length > 0 && (
+          {showResults && filteredCourses.length > 0 && (
             <div>
               <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">
                 Found {filteredCourses.length} Course{filteredCourses.length !== 1 ? 's' : ''}
@@ -448,13 +407,13 @@ export default function CourseSearchSection() {
                             {course.description}
                           </p>
                           <Link href={`/courses/${course.id}`}>
-                            <Button 
-                              size="sm" 
+                            <Button
+                              size="sm"
                               className="w-full bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 py-2.5"
-                              onClick={() => toast({ 
-                                title: "Info", 
+                              onClick={() => toast({
+                                title: "Info",
                                 description: `Loading ${course.title} details...`,
-                                duration: 2000 
+                                duration: 2000,
                               })}
                             >
                               View Details
@@ -466,17 +425,13 @@ export default function CourseSearchSection() {
                   );
                 })}
               </div>
-              
+
               {filteredCourses.length > 6 && (
                 <div className="text-center mt-8">
                   <Link href="/courses">
-                    <Button 
+                    <Button
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-cyan-400/50"
-                      onClick={() => toast({ 
-                        title: "Info", 
-                        description: "Loading all courses...",
-                        duration: 2000 
-                      })}
+                      onClick={() => toast({ title: "Info", description: "Loading all courses...", duration: 2000 })}
                     >
                       View All {filteredCourses.length} Courses
                     </Button>
@@ -486,8 +441,8 @@ export default function CourseSearchSection() {
             </div>
           )}
 
-          {/* No Results Message */}
-          {showResults && filteredCourses && filteredCourses.length === 0 && (
+          {/* No Results */}
+          {showResults && filteredCourses.length === 0 && (
             <div className="text-center">
               <div className="bg-white rounded-2xl p-8 max-w-md mx-auto shadow-lg border border-gray-200">
                 <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -496,13 +451,9 @@ export default function CourseSearchSection() {
                   Try adjusting your search criteria or view all available courses.
                 </p>
                 <Link href="/courses">
-                  <Button 
+                  <Button
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg"
-                    onClick={() => toast({ 
-                      title: "Info", 
-                      description: "Loading all available courses...",
-                      duration: 2000 
-                    })}
+                    onClick={() => toast({ title: "Info", description: "Loading all available courses...", duration: 2000 })}
                   >
                     View All Courses
                   </Button>

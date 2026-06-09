@@ -2,547 +2,509 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-// Metadata for SEO
 export const metadata: Metadata = {
-  title: "About Us | Kongoni Technical Locational Training College",
-  description: "Learn about Kongoni Technical Locational Training College - over 5 years of excellence in technical education, empowering students with practical skills and industry-relevant training.",
-  alternates: {
-    canonical: "/about",
-  },
+  title: "About Us | Kongoni Technical Vocational College",
+  description:
+    "Learn about Kongoni TVC — a government-sponsored institution under the Ministry of Education, equipping students with practical skills since 2019.",
+  alternates: { canonical: "/about" },
 };
+
+// ─── Image map ────────────────────────────────────────────────────────────────
+// Replace these paths with your actual images in /public/images/
+// Suggested shots: workshop activity, students in class, campus exterior,
+// instructor demonstrating, lab equipment, graduation/certificate ceremony
+const IMGS = {
+  hero1:      "/images/about/pathfromgate.png", // wide workshop shot
+  hero2:      "/images/about/adminblock.png", // students in class
+  hero3:      "/images/about/sideadminblock.png", // campus exterior
+  hero4:      "/images/about/pathtoblock.png", // instructor / lab
+  campus:     "/images/about/pathtoblock.png",
+  workshop:   "/images/about/admission.jpg",
+  students:   "/images/about/buildingworkshop.jpeg",
+  lab:        "/images/about/ictlab.jpg",
+  outdoor:    "/images/about/frontsideadmin.png",
+  graduation: "/images/about/frontadmin.png",
+  dual1:      "/images/about/dualtraining1.jpg",
+  dual2:      "/images/about/dualtraining4.jpg",
+};
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section with Enhanced Design */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/90 to-blue-700 text-white py-20 lg:py-24 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-50">
-          <svg width="60" height="60" viewBox="0 0 60 60" className="w-full h-full">
-            <defs>
-              <pattern id="dots" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-                <circle cx="30" cy="30" r="2" fill="rgba(255,255,255,0.05)" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#dots)" />
-          </svg>
-        </div>
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              About <span className="text-secondary">Kongoni TVC</span>
-            </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 mb-6 leading-relaxed">
-              A Government Sponsored Institution under the Ministry of Education
-            </p>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto border border-white/20">
-              <div className="text-lg opacity-90 space-y-2">
-                <p className="flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                  Along Eldoret-Kitale Road, P.O.Box 45 - 30205 Matunda
-                </p>
-                <p className="flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                  Contact: 0788 070 303 | Email: kongonitvc@gmail.com / info@kongonitechnical.ac.ke
-                </p>
-                <p className="flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                  Website: www.kongonitechnical.ac.ke
-                </p>
+    <div className="min-h-screen bg-white">
+
+      {/* ══════════════════════════════════════════════════════════════
+          HERO — asymmetric image mosaic + headline
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gray-950">
+
+        {/* Image mosaic — 2-column grid, right side */}
+        <div className="absolute inset-0 grid grid-cols-2 gap-0.5 opacity-50 lg:opacity-60">
+          <div className="relative">
+            <Image src={IMGS.hero1} alt="Workshop training" fill className="object-cover" priority />
+          </div>
+          <div className="grid grid-rows-2 gap-0.5">
+            <div className="relative">
+              <Image src={IMGS.hero2} alt="Students in class" fill className="object-cover" priority />
+            </div>
+            <div className="grid grid-cols-2 gap-0.5">
+              <div className="relative">
+                <Image src={IMGS.hero3} alt="Campus exterior" fill className="object-cover" />
               </div>
+              <div className="relative">
+                <Image src={IMGS.hero4} alt="Instructor demonstrating" fill className="object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Dark gradient over the mosaic so text is readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-950/95 via-gray-950/75 to-gray-950/20" />
+
+        <div className="relative z-10 container mx-auto px-6 py-24 lg:py-32 max-w-7xl">
+          <div className="max-w-2xl">
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/40 rounded-full px-4 py-1.5 mb-8">
+              <span className="w-2 h-2 bg-secondary rounded-full" />
+              <span className="text-secondary text-sm font-semibold tracking-wide uppercase">
+                Government Sponsored · Est. 2019
+              </span>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] mb-6 tracking-tight">
+              Skills that{" "}
+              <span className="text-secondary">open doors.</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-white/75 leading-relaxed mb-10 max-w-xl">
+              Kongoni TVC is a Ministry of Education institution in Likuyani, Kakamega County —
+              training the next generation of engineers, technicians, and entrepreneurs since 2019.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/admissions"
+                className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-gray-900 font-bold px-7 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              >
+                Apply Now
+              </Link>
+              <Link
+                href="/courses"
+                className="inline-flex items-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold px-7 py-3.5 rounded-xl transition-all"
+              >
+                Explore Courses
+              </Link>
+            </div>
+
+            {/* Quick stats bar */}
+            <div className="mt-16 flex flex-wrap gap-8 border-t border-white/15 pt-8">
+              {[
+                { n: "2019", label: "Founded" },
+                { n: "8", label: "Departments" },
+                { n: "500+", label: "Graduates" },
+                { n: "5 ac", label: "Campus" },
+              ].map(({ n, label }) => (
+                <div key={label}>
+                  <div className="text-3xl font-black text-white">{n}</div>
+                  <div className="text-sm text-white/50 mt-0.5">{label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <main className="py-16 lg:py-20">
-        <div className="container mx-auto px-4">
-          {/* Introduction Section with Enhanced Layout and Images */}
-          <section className="max-w-6xl mx-auto mb-20">
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
-              <div className="bg-gradient-to-r from-primary/5 to-secondary/5 p-8 lg:p-12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
-                  About Our Institution
+      <main>
+
+        {/* ══════════════════════════════════════════════════════════════
+            WHO WE ARE — text left, campus image right
+        ══════════════════════════════════════════════════════════════ */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+              <div>
+                <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-4">About the College</p>
+                <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                  Practical training.<br />Real-world careers.
                 </h2>
-                
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  <div className="space-y-6">
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                      Kongoni Technical and Vocational college is a Government Sponsored Institution under the Ministry of Education. It was established with the core mandate of equipping youths with skills needed to secure employment in todays market.
-                    </p>
-                    <p className="text-gray-700 leading-relaxed">
-                      The institution opened its doors to the first batch of students in <strong className="text-primary">October 2019</strong> and is well equipped to offer courses ranging from ICT, Business to Engineering courses at certificate and diploma level.
-                    </p>
-                    <div className="bg-primary/10 p-6 rounded-xl border-l-4 border-primary">
-                      <p className="text-primary font-semibold text-lg">
-                        Centre of Excellence in Building and Civil Engineering
-                      </p>
-                    </div>
+                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                  Kongoni Technical and Vocational College is a Government Sponsored Institution under
+                  the Ministry of Education. We opened in October 2019 with 62 students and 12 staff —
+                  today we offer programs from ICT and Business to Engineering, Agriculture, and Fashion Design.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-8">
+                  Located next to Likuyani Sub-County Headquarters along the Kitale–Eldoret Road,
+                  our 5-acre campus provides a serene environment purpose-built for hands-on learning
+                  and personal development.
+                </p>
+
+                <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl p-5 mb-8">
+                  <p className="text-primary font-bold text-base">
+                    Centre of Excellence in Building &amp; Civil Engineering
+                  </p>
+                  <p className="text-gray-600 text-sm mt-1">
+                    TVETA Registration: <span className="font-mono font-semibold">TVETA/ASS/7/3440K (2)</span>
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-gray-50 rounded-2xl p-5">
+                    <div className="text-2xl font-black text-primary mb-1">95%</div>
+                    <p className="text-sm text-gray-600">Graduate employment rate</p>
                   </div>
-                  
-                  <div className="space-y-6">
-                    {/* Campus Image */}
-                    <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                      <div className="relative w-full h-64">
-                        <Image 
-                          src="/images/facilities/facilities12.jpg" 
-                          alt="Kongoni TVC Campus View - Modern Technical College Building" 
-                          fill
-                          className="object-cover hover:scale-105 transition-transform duration-300"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 text-white">
-                        <p className="font-semibold">Our Beautiful Campus</p>
-                        <p className="text-sm opacity-90">Serene Learning Environment</p>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                      <h3 className="font-bold text-foreground mb-4">Our Location</h3>
-                      <p className="text-gray-700 leading-relaxed">
-                        Located in Likuyani Sub-County of Kakamega County next to Likuyani Sub County Headquarters along Kitale-Eldoret Road in a serene environment conducive for learning and personal development.
-                      </p>
-                    </div>
-                    
-                    <div className="bg-secondary/10 p-6 rounded-xl border border-secondary/20">
-                      <h3 className="font-bold text-foreground mb-4">Our Mission</h3>
-                      <p className="text-gray-700 leading-relaxed">
-                        To provide quality technical and vocational training in collaboration with stakeholders to produce highly skilled and innovative human resource.
-                      </p>
-                    </div>
+                  <div className="bg-gray-50 rounded-2xl p-5">
+                    <div className="text-2xl font-black text-secondary mb-1">50%</div>
+                    <p className="text-sm text-gray-600">Industry-based training</p>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
 
-          {/* History Timeline Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-center mb-16">Our Journey</h2>
-            <div className="max-w-5xl mx-auto">
+              {/* Stacked images with offset */}
               <div className="relative">
-                {/* Timeline Line */}
-                <div className="absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-primary/20 hidden lg:block"></div>
-                
-                <div className="space-y-12">
-                  {/* 2016 */}
-                  <div className="flex flex-col lg:flex-row items-center">
-                    <div className="lg:w-1/2 lg:pr-12 mb-6 lg:mb-0">
-                      <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 lg:ml-auto lg:text-right">
-                        <div className="text-primary font-bold text-xl mb-3">2016</div>
-                        <h3 className="font-bold text-foreground text-lg mb-4">Foundation Laid</h3>
-                        <p className="text-gray-700 leading-relaxed">
-                          The idea to start the college was mooted by political and community leadership. Funds were availed to purchase approximately 5 acres of land.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="hidden lg:block w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg z-10"></div>
-                    <div className="lg:w-1/2 lg:pl-12"></div>
-                  </div>
-
-                  {/* 2019 */}
-                  <div className="flex flex-col lg:flex-row items-center">
-                    <div className="lg:w-1/2 lg:pr-12"></div>
-                    <div className="hidden lg:block w-6 h-6 bg-secondary rounded-full border-4 border-white shadow-lg z-10"></div>
-                    <div className="lg:w-1/2 lg:pl-12 mb-6 lg:mb-0">
-                      <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-                        <div className="text-secondary font-bold text-xl mb-3">November 2019</div>
-                        <h3 className="font-bold text-foreground text-lg mb-4">Official Registration</h3>
-                        <p className="text-gray-700 leading-relaxed">
-                          The college was registered by TVETA under Registration Certificate number TVETA/ASS/7/3440K (2) as a centre of excellence in Building and Civil Engineering.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* 2019 First Batch */}
-                  <div className="flex flex-col lg:flex-row items-center">
-                    <div className="lg:w-1/2 lg:pr-12 mb-6 lg:mb-0">
-                      <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 lg:ml-auto lg:text-right">
-                        <div className="text-primary font-bold text-xl mb-3">October 2019</div>
-                        <h3 className="font-bold text-foreground text-lg mb-4">First Students</h3>
-                        <p className="text-gray-700 leading-relaxed">
-                          The first batch of 62 trainees was enrolled in Building and Civil Engineering, ICT, and Business Studies with 12 staff members.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="hidden lg:block w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg z-10"></div>
-                    <div className="lg:w-1/2 lg:pl-12"></div>
-                  </div>
-
-                  {/* 2020 */}
-                  <div className="flex flex-col lg:flex-row items-center">
-                    <div className="lg:w-1/2 lg:pr-12"></div>
-                    <div className="hidden lg:block w-6 h-6 bg-secondary rounded-full border-4 border-white shadow-lg z-10"></div>
-                    <div className="lg:w-1/2 lg:pl-12 mb-6 lg:mb-0">
-                      <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-                        <div className="text-secondary font-bold text-xl mb-3">2020</div>
-                        <h3 className="font-bold text-foreground text-lg mb-4">Infrastructure Complete</h3>
-                        <p className="text-gray-700 leading-relaxed">
-                          The first block construction was completed, housing offices, lecture rooms, and workshops.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[440px]">
+                  <Image
+                    src={IMGS.campus}
+                    alt="Kongoni TVC campus"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+                {/* Floating inset image */}
+                <div className="absolute -bottom-8 -left-8 w-52 h-44 rounded-2xl overflow-hidden shadow-xl border-4 border-white hidden lg:block">
+                  <Image
+                    src={IMGS.workshop}
+                    alt="Workshop session"
+                    fill
+                    className="object-cover"
+                    sizes="208px"
+                  />
+                </div>
+                {/* Accreditation badge */}
+                <div className="absolute -top-6 -right-6 bg-primary text-white rounded-2xl p-4 shadow-xl hidden lg:flex flex-col items-center text-center w-36">
+                  <span className="text-3xl font-black">2019</span>
+                  <span className="text-xs font-medium opacity-80 mt-1">TVETA Registered</span>
                 </div>
               </div>
+
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Registration Information - Enhanced Design */}
-          <section className="mb-20">
-            <div className="bg-gradient-to-br from-primary to-blue-700 text-white py-16 px-8 rounded-3xl shadow-2xl relative overflow-hidden">
-              <div className="absolute inset-0 opacity-30">
-                <svg width="40" height="40" viewBox="0 0 40 40" className="w-full h-full">
-                  <defs>
-                    <pattern id="triangles" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <path d="M20 20L0 40L40 40z" fill="rgba(255,255,255,0.1)" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#triangles)" />
-                </svg>
+        {/* ══════════════════════════════════════════════════════════════
+            FACILITIES IMAGE STRIP — horizontal scroll
+        ══════════════════════════════════════════════════════════════ */}
+        <section className="py-16 bg-gray-50 overflow-hidden">
+          <div className="container mx-auto px-6 max-w-7xl mb-8">
+            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-2">Our Facilities</p>
+            <h2 className="text-3xl font-extrabold text-gray-900">Built for hands-on learning</h2>
+          </div>
+
+          {/* Scrollable strip */}
+          <div className="flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory scrollbar-hide"
+               style={{ scrollbarWidth: "none" }}>
+            {[
+              { src: IMGS.lab,        label: "ICT & Computing Lab" },
+              { src: IMGS.workshop,   label: "Engineering Workshop" },
+              { src: IMGS.students,   label: "Lecture Rooms" },
+              { src: IMGS.outdoor,    label: "College Grounds" },
+              { src: IMGS.graduation, label: "Graduation Ceremony" },
+              { src: IMGS.campus,     label: "Main Building" },
+            ].map(({ src, label }) => (
+              <div key={label} className="flex-shrink-0 snap-start w-72 lg:w-96 relative rounded-2xl overflow-hidden h-56 group">
+                <Image src={src} alt={label} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="384px" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <span className="absolute bottom-4 left-4 text-white text-sm font-semibold">{label}</span>
               </div>
-              
-              <div className="relative z-10">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl lg:text-4xl font-bold mb-4">Official Accreditation</h2>
-                  <p className="text-xl opacity-90">Recognized by TVETA</p>
-                </div>
-                
-                <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                  <div className="bg-white/15 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-2xl">🎓</span>
-                      </div>
-                      <h3 className="text-2xl font-bold mb-6">TVETA Registration</h3>
-                      <div className="space-y-4">
-                        <p className="text-lg">Registration Certificate Number:</p>
-                        <div className="bg-white/20 backdrop-blur-sm px-6 py-4 rounded-xl font-mono text-lg border border-white/30">
-                          TVETA/ASS/7/3440K (2)
-                        </div>
-                        <p className="text-sm opacity-80">Registered: November 2019</p>
-                      </div>
-                    </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════════════════════════════════
+            DUAL TRAINING — image left, text right
+        ══════════════════════════════════════════════════════════════ */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+              {/* Two stacked images */}
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="relative rounded-2xl overflow-hidden h-64 col-span-2">
+                    <Image src={IMGS.dual1} alt="Industry training" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                   </div>
-                  
-                  <div className="bg-white/15 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-2xl">🏆</span>
-                      </div>
-                      <h3 className="text-2xl font-bold mb-6">Centre of Excellence</h3>
-                      <div className="space-y-4">
-                        <p className="text-lg">Specialization:</p>
-                        <div className="bg-white/20 backdrop-blur-sm px-6 py-4 rounded-xl text-lg font-semibold border border-white/30">
-                          Building and Civil Engineering (BCE)
-                        </div>
-                        <p className="text-sm opacity-80">Government Recognized</p>
-                      </div>
-                    </div>
+                  <div className="relative rounded-2xl overflow-hidden h-44">
+                    <Image src={IMGS.dual2} alt="Classroom session" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+                  </div>
+                  <div className="bg-primary rounded-2xl h-44 flex flex-col items-center justify-center text-white text-center p-6">
+                    <span className="text-5xl font-black">50/50</span>
+                    <span className="text-sm font-medium opacity-80 mt-2">College + Industry training</span>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
 
-          {/* Objectives and Core Values - Modern Cards */}
-          <section className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-center mb-16">Our Foundation</h2>
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              {/* Objectives */}
-              <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-100 hover:shadow-3xl transition-all duration-300">
-                <div className="flex items-center mb-8">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
-                    <span className="text-primary text-2xl">🎯</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">Our Objectives</h3>
-                </div>
+              <div>
+                <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-4">How We Train</p>
+                <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                  Half classroom.<br />Half industry floor.
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                  Our dual training system means trainees spend 50% of their time at college and 50%
+                  embedded with partner companies — gaining real-world experience before they graduate.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-8">
+                  KTVC is equipped with modern training equipment and experienced instructors who bring
+                  industry practice into every lesson — making us one of the most practically focused
+                  colleges in the region.
+                </p>
+
                 <div className="space-y-4">
                   {[
-                    "Achieve and maintain a level of quality training which enhances the institution's reputation with customers.",
-                    "Ensure compliance with the Education Act and other relevant statutory and regulatory requirements.",
-                    "Endeavour to always maximize customer satisfaction with services provided by Kongoni TVC."
-                  ].map((objective, index) => (
-                    <div key={index} className="flex items-start group">
-                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 group-hover:bg-primary/20 transition-colors">
-                        <span className="w-3 h-3 bg-primary rounded-full"></span>
+                    "Modern, industry-standard workshops and labs",
+                    "Experienced instructors with professional backgrounds",
+                    "Direct links to employers for placement and jobs",
+                    "NITA-certified programs recognized nationwide",
+                  ].map((point) => (
+                    <div key={point} className="flex items-start gap-3">
+                      <div className="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div className="w-2 h-2 bg-secondary rounded-full" />
                       </div>
-                      <p className="text-gray-700 leading-relaxed flex-1">{objective}</p>
+                      <p className="text-gray-700">{point}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Core Values */}
-              <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-100 hover:shadow-3xl transition-all duration-300">
-                <div className="flex items-center mb-8">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mr-4">
-                    <span className="text-secondary text-2xl">💎</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">Our Core Values</h3>
-                </div>
-                <div className="space-y-6">
-                  {[
-                    { icon: "🤝", value: "Teamwork", color: "bg-primary" },
-                    { icon: "⚖️", value: "Equity", color: "bg-secondary" },
-                    { icon: "⭐", value: "Professionalism", color: "bg-blue-600" },
-                    { icon: "👁️", value: "Transparency & Accountability", color: "bg-green-600" },
-                    { icon: "❤️", value: "Integrity", color: "bg-red-600" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center group hover:bg-gray-50 p-3 rounded-xl transition-colors">
-                      <div className={`w-12 h-12 ${item.color} rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform`}>
-                        <span className="text-white text-lg">{item.icon}</span>
-                      </div>
-                      <span className="text-gray-700 font-medium text-lg">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Academic Departments - Enhanced with Descriptions */}
-          <section className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-center mb-16">Academic Departments</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              {[
-                { 
-                  icon: "💼", 
-                  name: "Business Department", 
-                  description: "Developing future leaders in commerce and entrepreneurship.",
-                  color: "bg-primary",
-                  gradient: "from-primary to-blue-600",
-                  slug: "business"
-                },
-                { 
-                  icon: "💻", 
-                  name: "Computing & Informatics Department", 
-                  description: "Empowering students with modern computing and digital skills.",
-                  color: "bg-secondary",
-                  gradient: "from-secondary to-yellow-500",
-                  slug: "computing-and-informatics"
-                },
-                { 
-                  icon: "🏗️", 
-                  name: "Building & Civil Engineering Department", 
-                  description: "Training in structural design, construction, and surveying.",
-                  color: "bg-blue-600",
-                  gradient: "from-blue-600 to-blue-800",
-                  slug: "building-and-civil-engineering"
-                },
-                { 
-                  icon: "⚡", 
-                  name: "Electrical & Electronics Engineering Department", 
-                  description: "Hands-on experience in electrical systems and installations.",
-                  color: "bg-yellow-600",
-                  gradient: "from-yellow-600 to-orange-500",
-                  slug: "electrical-and-electronics-engineering"
-                },
-                { 
-                  icon: "🔧", 
-                  name: "Automotive & Mechanical Engineering Department", 
-                  description: "Mastering vehicle diagnostics, repair, and maintenance.",
-                  color: "bg-green-600",
-                  gradient: "from-green-600 to-emerald-600",
-                  slug: "automotive-and-mechanical-engineering"
-                },
-                { 
-                  icon: "✂️", 
-                  name: "Fashion Design and Cosmetics Department", 
-                  description: "Creative training in fashion design, garment construction, and beauty techniques.",
-                  color: "bg-pink-600",
-                  gradient: "from-pink-600 to-purple-600",
-                  slug: "fashion-design-and-cosmetics"
-                },
-                { 
-                  icon: "🏨", 
-                  name: "Hospitality and Tourism Department", 
-                  description: "Comprehensive training in hotel management, tourism operations, and customer service.",
-                  color: "bg-purple-600",
-                  gradient: "from-purple-600 to-indigo-600",
-                  slug: "hospitality-and-tourism"
-                },
-                { 
-                  icon: "🌱", 
-                  name: "Agriculture Department", 
-                  description: "Innovative farming techniques and agribusiness education.",
-                  color: "bg-emerald-600",
-                  gradient: "from-emerald-600 to-green-700",
-                  slug: "agriculture"
-                }
-              ].map((dept, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group relative overflow-hidden">
-                  {/* Background gradient overlay on hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${dept.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}></div>
-                  
-                  <div className="relative z-10">
-                    <div className={`w-16 h-16 ${dept.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
-                      <span className="text-white text-2xl">{dept.icon}</span>
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground leading-tight mb-4 text-center">{dept.name}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-6 text-center">{dept.description}</p>
-                    
-                    {/* Learn More Button */}
-                    <div className="text-center">
-                      <Link 
-                        href={`/departments/${dept.slug}`}
-                        className={`inline-flex items-center text-sm font-semibold ${dept.color.replace('bg-', 'text-')} hover:underline transition-colors group-hover:scale-105 transform transition-transform`}
-                      >
-                        Learn More
-                        <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            {/* Department Stats */}
-            <div className="mt-16 text-center">
-              <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 max-w-4xl mx-auto border border-primary/20">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Our Academic Excellence</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  With 8 comprehensive departments offering both certificate and diploma programs, we provide industry-relevant training that prepares students for successful careers in their chosen fields.
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-primary mb-1">8</div>
-                    <p className="text-sm text-gray-600">Departments</p>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-secondary mb-1">25+</div>
-                    <p className="text-sm text-gray-600">Programs</p>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-blue-600 mb-1">50+</div>
-                    <p className="text-sm text-gray-600">Qualified Instructors</p>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-green-600 mb-1">95%</div>
-                    <p className="text-sm text-gray-600">Employment Rate</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+        {/* ══════════════════════════════════════════════════════════════
+            TIMELINE — clean horizontal-to-vertical
+        ══════════════════════════════════════════════════════════════ */}
+        <section className="py-24 bg-gray-950 text-white overflow-hidden">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <p className="text-secondary font-semibold text-sm uppercase tracking-widest mb-3 text-center">Our History</p>
+            <h2 className="text-4xl font-extrabold text-center mb-16">From idea to institution</h2>
 
-          {/* Key Statistics - Enhanced */}
-          <section className="mb-20">
-            <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-16 px-8 rounded-3xl shadow-xl">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-center mb-16">Our Impact in Numbers</h2>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="relative">
+              {/* Connecting line (desktop) */}
+              <div className="hidden lg:block absolute top-8 left-0 right-0 h-px bg-white/15" />
+
+              <div className="grid lg:grid-cols-4 gap-8">
                 {[
-                  { number: "5", label: "Years of Excellence", subtitle: "(Since 2019)", color: "text-primary" },
-                  { number: "8", label: "Academic Departments", subtitle: "(Comprehensive Programs)", color: "text-secondary" },
-                  { number: "500+", label: "Graduates", subtitle: "(Growing Strong)", color: "text-blue-600" },
-                  { number: "5", label: "Acres Campus", subtitle: "(Serene Environment)", color: "text-green-600" }
-                ].map((stat, index) => (
-                  <div key={index} className="text-center bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div className={`text-4xl lg:text-5xl font-bold ${stat.color} mb-3`}>{stat.number}</div>
-                    <p className="text-gray-700 font-semibold mb-1">{stat.label}</p>
-                    <p className="text-sm text-gray-500">{stat.subtitle}</p>
+                  {
+                    year: "2016",
+                    title: "The Vision",
+                    body: "Community and political leaders mooted the idea. Approximately 5 acres of land were purchased to serve as the college site.",
+                    color: "bg-primary",
+                  },
+                  {
+                    year: "Oct 2019",
+                    title: "Doors Open",
+                    body: "62 students enrolled in Building & Civil Engineering, ICT, and Business Studies, supported by 12 staff members.",
+                    color: "bg-secondary",
+                  },
+                  {
+                    year: "Nov 2019",
+                    title: "TVETA Registered",
+                    body: "Officially registered under TVETA/ASS/7/3440K (2) as a Centre of Excellence in Building and Civil Engineering.",
+                    color: "bg-blue-500",
+                  },
+                  {
+                    year: "2020",
+                    title: "First Block Complete",
+                    body: "Construction of the first permanent block was completed, housing offices, lecture rooms, and practical workshops.",
+                    color: "bg-green-500",
+                  },
+                ].map(({ year, title, body, color }) => (
+                  <div key={year} className="relative">
+                    {/* Dot on the timeline line */}
+                    <div className={`hidden lg:block absolute -top-[30px] left-0 w-4 h-4 ${color} rounded-full border-2 border-gray-950 shadow-lg`} />
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+                      <div className={`inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 ${color} text-white`}>
+                        {year}
+                      </div>
+                      <h3 className="text-lg font-bold mb-3">{title}</h3>
+                      <p className="text-white/60 text-sm leading-relaxed">{body}</p>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Why Choose Us - Modern Layout with Local Images */}
-          <section className="mb-20">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-center mb-16">Why Choose Kongoni TVC</h2>
-            <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {[
-                {
-                  number: "01",
-                  title: "State-of-the-Art Training Equipment",
-                  description: "KTVC proudly holds the stature of one of the country's most equipped colleges in terms of modern training equipment and experienced staff.",
-                  gradient: "from-primary to-blue-600",
-                  image: "/images/facilities/facilities12.jpg"
-                },
-                {
-                  number: "02",
-                  title: "Dual Training System",
-                  description: "Innovative dual system of training where trainees are trained 50% at college and 50% at the industry for real-world experience.",
-                  gradient: "from-secondary to-yellow-500",
-                  image: "/images/facilities/facilities12.jpg"
-                },
-                {
-                  number: "03",
-                  title: "Excellence in Education",
-                  description: "Equity in education, a well-rounded approach to training, and a focus on discipline and ethics are hallmarks in skill transfer at KTVC.",
-                  gradient: "from-green-600 to-emerald-600",
-                  image: "/images/facilities/facilities12.jpg"
-                }
-              ].map((feature, index) => (
-                <div key={index} className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 relative group">
-                  {/* Feature Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <Image 
-                      src={feature.image}
-                      alt={feature.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${feature.gradient} opacity-60`}></div>
-                    <div className="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                      <span className="text-white text-lg font-bold">{feature.number}</span>
-                    </div>
+        {/* ══════════════════════════════════════════════════════════════
+            MISSION / VALUES — split with accent card
+        ══════════════════════════════════════════════════════════════ */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="grid lg:grid-cols-3 gap-8">
+
+              {/* Mission */}
+              <div className="lg:col-span-1 bg-primary rounded-3xl p-8 text-white flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center mb-6">
+                    <span className="text-2xl">🎯</span>
                   </div>
-                  
-                  <div className="p-8 text-center">
-                    <h3 className="text-xl font-bold text-foreground mb-6 leading-tight">{feature.title}</h3>
-                    <p className="text-gray-700 leading-relaxed">{feature.description}</p>
-                  </div>
+                  <h3 className="text-2xl font-extrabold mb-4">Our Mission</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    To provide quality technical and vocational training in collaboration with
+                    stakeholders — producing highly skilled, innovative, and employable graduates.
+                  </p>
                 </div>
+                <div className="mt-8 pt-6 border-t border-white/20">
+                  <p className="text-sm text-white/60 uppercase tracking-widest font-semibold">Registered Body</p>
+                  <p className="text-white font-mono font-bold mt-1">TVETA/ASS/7/3440K (2)</p>
+                </div>
+              </div>
+
+              {/* Objectives */}
+              <div className="lg:col-span-1 bg-gray-50 rounded-3xl p-8">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                  <span className="text-2xl">📋</span>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-6">Objectives</h3>
+                <ul className="space-y-4">
+                  {[
+                    "Achieve and maintain training quality that enhances our reputation.",
+                    "Ensure compliance with the Education Act and regulatory requirements.",
+                    "Maximise student satisfaction with every service we provide.",
+                  ].map((obj, i) => (
+                    <li key={i} className="flex gap-3 text-gray-700 text-sm leading-relaxed">
+                      <span className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-primary text-xs font-bold">
+                        {i + 1}
+                      </span>
+                      {obj}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Core Values */}
+              <div className="lg:col-span-1 bg-gray-50 rounded-3xl p-8">
+                <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                  <span className="text-2xl">💎</span>
+                </div>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-6">Core Values</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { icon: "🤝", value: "Teamwork" },
+                    { icon: "⚖️", value: "Equity" },
+                    { icon: "⭐", value: "Professionalism" },
+                    { icon: "👁️", value: "Transparency" },
+                    { icon: "❤️", value: "Integrity" },
+                    { icon: "📣", value: "Accountability" },
+                  ].map(({ icon, value }) => (
+                    <div key={value} className="bg-white rounded-xl px-3 py-2.5 flex items-center gap-2 shadow-sm">
+                      <span>{icon}</span>
+                      <span className="text-sm font-semibold text-gray-800">{value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════════════════════════════════
+            DEPARTMENTS — clean icon grid
+        ══════════════════════════════════════════════════════════════ */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">Academics</p>
+              <h2 className="text-4xl font-extrabold text-gray-900 mb-4">8 Departments. Countless careers.</h2>
+              <p className="text-gray-600">
+                Every department is designed around what employers actually need — combining theory with
+                intensive practical work in our workshops and partner companies.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                { icon: "💼", name: "Business", tagline: "Commerce & Entrepreneurship",     color: "bg-blue-600",   slug: "business" },
+                { icon: "💻", name: "Computing & ICT", tagline: "Digital Skills & Tech",    color: "bg-violet-600", slug: "ict" },
+                { icon: "🏗️", name: "Building & Civil", tagline: "Construction & Survey",   color: "bg-slate-700",  slug: "civil" },
+                { icon: "⚡", name: "Electrical", tagline: "Power & Electronics",            color: "bg-yellow-500", slug: "electrical" },
+                { icon: "🔧", name: "Automotive", tagline: "Vehicle & Mechanical",           color: "bg-green-600",  slug: "automotive" },
+                { icon: "✂️", name: "Fashion & Beauty", tagline: "Design & Cosmetology",    color: "bg-pink-600",   slug: "fashion" },
+                { icon: "🏨", name: "Hospitality", tagline: "Hotel & Tourism",               color: "bg-purple-600", slug: "hospitality-tourism" },
+                { icon: "🌱", name: "Agriculture", tagline: "Farming & Agribusiness",        color: "bg-emerald-600",slug: "agriculture" },
+              ].map((dept) => (
+                <Link
+                  key={dept.slug}
+                  href={`/departments/${dept.slug}`}
+                  className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-gray-100"
+                >
+                  <div className={`w-14 h-14 ${dept.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform`}>
+                    <span className="text-white text-2xl">{dept.icon}</span>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-1">{dept.name}</h3>
+                  <p className="text-sm text-gray-500 mb-3">{dept.tagline}</p>
+                  <span className="text-primary text-sm font-semibold group-hover:underline">
+                    View courses →
+                  </span>
+                </Link>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Call to Action - Enhanced */}
-          <section className="text-center">
-            <div className="bg-gradient-to-br from-primary via-primary/90 to-blue-700 text-white py-16 px-8 rounded-3xl shadow-2xl relative overflow-hidden">
-              <div className="absolute inset-0 opacity-20">
-                <svg width="100" height="100" viewBox="0 0 100 100" className="w-full h-full">
-                  <defs>
-                    <pattern id="cta-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                      <path d="M50 50L0 100L100 100z M50 50L100 0L100 100z" fill="rgba(255,255,255,0.1)" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#cta-pattern)" />
-                </svg>
-              </div>
-              
-              <div className="relative z-10 max-w-4xl mx-auto">
-                <h2 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">Ready to Shape Your Future?</h2>
-                <p className="text-xl lg:text-2xl mb-12 opacity-95 leading-relaxed">
-                  Join thousands of successful graduates who started their careers at Kongoni Technical College
-                </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                  <Link 
-                    href="/programs" 
-                    className="inline-flex items-center bg-secondary hover:bg-secondary/90 text-gray-900 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 min-w-[200px] justify-center"
-                  >
-                    <span className="mr-2">📚</span>
-                    View Programs
-                  </Link>
-                  <Link 
-                    href="/contact" 
-                    className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 min-w-[200px] justify-center"
-                  >
-                    <span className="mr-2">📞</span>
-                    Contact Us
-                  </Link>
-                </div>
-              </div>
+        {/* ══════════════════════════════════════════════════════════════
+            CTA BANNER — full-bleed photo + overlay
+        ══════════════════════════════════════════════════════════════ */}
+        <section className="relative py-32 overflow-hidden">
+          <Image
+            src={IMGS.graduation}
+            alt="Students graduating at Kongoni TVC"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gray-950/75" />
+
+          <div className="relative z-10 container mx-auto px-6 max-w-4xl text-center text-white">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+              Ready to build your career?
+            </h2>
+            <p className="text-xl text-white/75 mb-10 max-w-xl mx-auto">
+              Join a growing community of graduates who left Kongoni TVC with qualifications —
+              and the skills to back them up.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                href="/admissions"
+                className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-gray-900 font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl text-lg"
+              >
+                Apply Now
+              </Link>
+              <Link
+                href="/courses"
+                className="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-all text-lg"
+              >
+                Browse Courses
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-all text-lg"
+              >
+                Contact Us
+              </Link>
             </div>
-          </section>
-        </div>
+
+            {/* Contact strip */}
+            <div className="mt-16 pt-8 border-t border-white/15 flex flex-wrap justify-center gap-8 text-sm text-white/60">
+              <span>📍 Along Eldoret–Kitale Road, Matunda, P.O. Box 45 - 30205</span>
+              <span>📞 0788 070 303</span>
+              <span>✉️ info@kongonitechnical.ac.ke</span>
+            </div>
+          </div>
+        </section>
+
       </main>
     </div>
   );

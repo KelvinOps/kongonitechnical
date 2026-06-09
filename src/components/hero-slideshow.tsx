@@ -16,8 +16,15 @@ interface Slide {
 
 const slides: Slide[] = [
     {
-    image: "/images/hero/Hero.png",
-    title: "Beautiful College",
+    image: "/images/hero/GateB.png",
+    title: "Gateway to Excellence",
+    subtitle: "Where Knowledge Meets Opportunity, Shaping Your Future",
+    buttonText: "Campus Tour",
+    buttonLink: "/about",
+  },
+      {
+    image: "/images/hero/adminblock.png",
+    title: "Administration Block",
     subtitle: "A conducive learning environment for your academic journey",
     buttonText: "Campus Tour",
     buttonLink: "/about",
@@ -37,14 +44,14 @@ const slides: Slide[] = [
     buttonLink: "/about",
   },
   {
-    image: "/images/hero/cultural8.jpg",
+    image: "/images/hero/Success.jpg",
     title: "Success Stories",
     subtitle: "Join thousands of successful graduates building careers",
     buttonText: "Alumni Stories",
     buttonLink: "/about",
   },
   {
-    image: "/images/newsevents/sigalagalatraining/modulartraininghero.jpg",
+    image: "/images/newsevents/academic_policy_review/Academics Commitee.jpeg",
     title: "Expert Faculty",
     subtitle: "Learn from industry professionals and experienced trainers",
     buttonText: "Meet Faculty",
