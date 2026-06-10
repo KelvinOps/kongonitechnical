@@ -3,6 +3,214 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Complete mock news data - synchronized with main news route
 const mockNews = [
+  {
+  id: "41",
+  title: "Kongoni TVC Athletes Shine at KATTI Western Region Athletics & Indoor Games 2026 — Qualify for Nationals at Nyayo",
+  excerpt: "Kongoni TVC athletes delivered a commanding performance at the KATTI Western Region Athletics & Indoor Games 2026 Championships held at Eregi TTC, claiming six medals across track and field disciplines — including Gold in the 4x400M Relay — and earning qualification to the National Athletics Championships at Nyayo National Stadium.",
+  content: `
+    <p>Kongoni Technical and Vocational College athletes have once again demonstrated their exceptional sporting talent, delivering a remarkable performance at the <strong>KATTI Western Region Athletics &amp; Indoor Games 2026 Championships</strong> held at <strong>Eregi Teachers Training College</strong> — and securing qualification to the <strong>National Athletics Championships at Nyayo National Stadium, Nairobi</strong>.</p>
+
+    <p>The championships brought together athletes from technical and vocational institutions across the Western Region, with Kongoni TVC competitors rising to the occasion and claiming honours across six disciplines — continuing the college's proud tradition of sporting excellence.</p>
+
+    <p><strong>🏅 Medal Tally — KATTI Western Region 2026:</strong></p>
+    <ol>
+      <li><strong>Triple Jump (Men)</strong> — 🥉 Bronze</li>
+      <li><strong>Shotput (Men)</strong> — 🥉 Bronze</li>
+      <li><strong>400M (Men)</strong> — 🥉 Bronze</li>
+      <li><strong>400M Hurdles (Men)</strong> — 🥈 Silver</li>
+      <li><strong>4x100M Relay / Short Relay (Men)</strong> — 🥈 Silver</li>
+      <li><strong>4x400M Relay / Long Relay (Men)</strong> — 🥇 <strong>Gold | Western Region Champions!</strong></li>
+    </ol>
+
+    <p>Every medal tells a story of sweat, discipline, and belief — and the <strong>4x400M Relay gold</strong> was the crown jewel of a dominant championship showing, crowning Kongoni TVC as <strong>Western Region Champions</strong> in that event.</p>
+
+    <p><strong>🏃 A Display of Discipline and Dedication:</strong></p>
+    <p>The athletes' performances are the result of months of rigorous training, early mornings on the track, and unwavering commitment — balanced alongside the demands of their technical and vocational coursework. Their success is a testament to the discipline and determination that defines the Kongoni TVC spirit.</p>
+
+    <p><strong>👏 Congratulations to Coaches and Athletes:</strong></p>
+    <p>The college extends heartfelt congratulations to every athlete who competed and to the dedicated coaching staff whose guidance and preparation made these results possible. Behind every medal is a coach who believed, pushed, and prepared — and Kongoni TVC's coaches delivered.</p>
+
+    <p><strong>🎉 A Hero's Welcome — Celebratory Procession on Campus:</strong></p>
+    <p>The return of the victorious athletes to campus was met with an electrifying reception. Fellow trainees, trainers, and college management lined the campus to welcome back the champions with cheers, songs, and celebration. In a spontaneous display of college pride, a jubilant procession wound through the campus grounds — echoing the spirited marches that have become a hallmark of Kongoni TVC's culture of celebrating excellence together.</p>
+
+    <p>Winners were hoisted on shoulders and surrounded by cheering crowds as the campus erupted in collective joy — a reminder that at Kongoni TVC, every achievement belongs to the whole community.</p>
+
+    <p>Principal Ms. Judith Akaranga personally congratulated the athletes: "We are incredibly proud of every one of our athletes who competed at the regional championships. Your performances have brought honour to this institution and inspired your fellow trainees. We are behind you all the way to Nyayo."</p>
+
+    <p><strong>🌟 Road to Nationals — Nyayo National Stadium:</strong></p>
+    <p>All qualifying athletes will now represent Kongoni TVC at the <strong>National Athletics Championships at Nyayo National Stadium, Nairobi</strong> — carrying the college's colours and the hopes of the entire campus community as they compete against the best athletes from technical and vocational institutions across Kenya.</p>
+
+    <p>The college is committed to providing full support — in training, logistics, and encouragement — to ensure our national qualifiers perform at their absolute best on the biggest stage.</p>
+
+    <p><strong>From Eregi TTC to Nyayo Stadium — Kongoni TVC is ready! 🏆🎽</strong></p>
+
+    <p><em>#KongoniTVC #KATTIAthletics2026 #RegionalChampions #WesternRegionChampions #NyayoNationals2026 #TrackAndField #Athletics #KongoniPride #TVETKenya #SportingExcellence #CelebrationMarch</em></p>
+  `,
+  imageUrl: "/images/newsevents/regionalathletics2026/athletics_main.jpg",
+  images: [
+    "/images/newsevents/regionalathletics2026/athletics_main.jpg",
+    "/images/newsevents/regionalathletics2026/athletics2.jpg",
+    "/images/newsevents/regionalathletics2026/athletics3.jpg",
+    "/images/newsevents/regionalathletics2026/athletics4.jpg",
+    "/images/newsevents/regionalathletics2026/athletics5.jpg",
+    "/images/newsevents/regionalathletics2026/athletics6.jpg",
+    "/images/newsevents/regionalathletics2026/celebration1.jpg",
+    "/images/newsevents/regionalathletics2026/celebration2.jpg",
+    "/images/newsevents/regionalathletics2026/celebration3.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-06-04T16:00:00Z",
+  updatedAt: "2026-06-04T16:00:00Z",
+  author: "Sports Department",
+  category: "Achievements",
+  eventDate: "2026-06-04",
+  location: "Eregi Teachers Training College, Western Kenya",
+  tags: [
+    "athletics",
+    "katti",
+    "regional-championship",
+    "national-qualifiers",
+    "track-and-field",
+    "sports",
+    "medals",
+    "gold-medal",
+    "western-region-champions",
+    "4x400m-relay",
+    "nyayo-nationals",
+    "2026",
+    "achievement",
+    "competition",
+    "celebration",
+    "celebratory-march",
+    "college-pride",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "40",
+  title: "Trainee Spotlight — Student Interviews Capture the Heart of Kongoni TVC",
+  excerpt: "In a series of candid on-campus interviews, Kongoni TVC trainees shared their personal journeys, motivations, and aspirations — offering an inspiring window into the lived experiences of the college's diverse student community.",
+  content: `
+    <p>Kongoni Technical and Vocational College recently held a series of <strong>Trainee Spotlight Interviews</strong> — candid, on-campus conversations with trainees from across all departments, giving voice to the personal stories, ambitions, and reflections that make up the rich fabric of college life.</p>
+
+    <p>The interviews, conducted by the Student Affairs Department in collaboration with the college media team, were designed to celebrate the diversity of the Kongoni TVC community, amplify trainee voices, and inspire both current and prospective students with authentic peer stories.</p>
+
+    <p><strong>🎤 What Trainees Shared:</strong></p>
+    <p>The interviews covered a wide range of themes and life experiences, including:</p>
+    <ul>
+      <li><strong>Personal journeys</strong> — Why they chose their course and what path led them to Kongoni TVC</li>
+      <li><strong>Challenges and resilience</strong> — The obstacles they have faced and how the college community has supported them</li>
+      <li><strong>Skills and growth</strong> — The practical skills and confidence they have gained through their training</li>
+      <li><strong>Future aspirations</strong> — Their dreams for careers, entrepreneurship, and contributing to their communities</li>
+      <li><strong>College life</strong> — Memorable moments, friendships, and the experiences that have shaped their time at Kongoni TVC</li>
+      <li><strong>Messages to others</strong> — Words of encouragement for young people considering vocational education</li>
+    </ul>
+
+    <p><strong>🌟 Voices from the Interview Series:</strong></p>
+    <p>Trainees from departments including Beauty Therapy, Civil &amp; Building Engineering, ICT, Automotive, Fashion &amp; Design, Food &amp; Beverage, and Business Studies took part — each bringing a unique perspective shaped by their background, course, and personal story.</p>
+
+    <p>Many interviewees spoke movingly about how TVET had transformed their sense of purpose and possibility. Others highlighted the supportive community of trainers and fellow trainees as a defining feature of their experience at Kongoni TVC.</p>
+
+    <p><strong>📹 Watch the Interviews:</strong></p>
+    <p>Full interview videos are available on the college's official YouTube channel, offering prospective trainees, parents, and the wider community an authentic, unscripted look into life at Kongoni Technical and Vocational College.</p>
+
+    <p><strong>💬 Principal's Note:</strong></p>
+    <p>Principal Ms. Judith Akaranga commended the initiative: "These interviews remind us why we do what we do. Every trainee here has a story worth telling — of courage, determination, and hope. We are proud to provide a platform where those stories can be heard."</p>
+
+    <p><em>#KongoniTVC #TraineeSpotlight #StudentInterviews #TVETKenya #RealStories #VocationalEducation #StudentVoices</em></p>
+  `,
+  imageUrl: "/images/newsevents/studentinterviews2026/interview_main.jpg",
+  images: [
+    "/images/newsevents/studentinterviews2026/interview_main.jpg",
+    "/images/newsevents/studentinterviews2026/interview2.jpg",
+    "/images/newsevents/studentinterviews2026/interview3.jpg",
+    "/images/newsevents/studentinterviews2026/interview4.jpg",
+    "/images/newsevents/studentinterviews2026/interview5.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=YOUR_INTERVIEW_VIDEO_ID",
+  videoThumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpg",
+  videos: [
+    {
+      url: "https://www.youtube.com/watch?v=YOUR_INTERVIEW_VIDEO_ID",
+      title: "🎤 Trainee Spotlight — Student Interviews 2026",
+      thumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpg"
+    }
+  ],
+  featured: true,
+  createdAt: "2026-06-05T10:00:00Z",
+  updatedAt: "2026-06-05T10:00:00Z",
+  author: "Student Affairs Department",
+  category: "Student Life",
+  eventDate: "2026-06-05",
+  location: "Kongoni Technical and Vocational College Campus",
+  tags: [
+    "student-interviews",
+    "trainee-spotlight",
+    "student-life",
+    "student-voices",
+    "2026",
+    "community",
+    "vocational-education",
+    "tvet-kenya",
+    "personal-stories",
+    "inspiration"
+  ]
+},
+{
+  id: "39",
+  title: "Madaraka Day 2026 — Celebrating Kenya's Journey to Self-Governance",
+  excerpt: "Kongoni Technical and Vocational College joins the nation in marking Madaraka Day 2026, celebrating 63 years since Kenya attained self-governance on 1st June 1963 — a day of pride, reflection, and renewed national purpose.",
+  content: `
+    <p>On <strong>1st June 2026</strong>, Kongoni Technical and Vocational College joins the entire nation in commemorating <strong>Madaraka Day</strong> — the 63rd anniversary of Kenya attaining internal self-governance in 1963, a pivotal milestone on the road to full independence.</p>
+
+    <p>Madaraka Day is a moment for every Kenyan to reflect on the sacrifices of those who fought for freedom, celebrate the progress our nation has made, and recommit to the ideals of unity, hard work, and shared prosperity that define the Kenyan spirit.</p>
+
+    <p><strong>🇰🇪 A Message from the College:</strong></p>
+    <p>To our entire Kongoni TVC family — trainees, trainers, staff, and the wider community — we celebrate this national holiday with gratitude and pride. Kenya's journey from colonialism to self-governance is a story of courage, resilience, and collective determination. As a technical and vocational institution, we see ourselves as contributors to that ongoing story — equipping young Kenyans with the skills and confidence to build the nation our freedom fighters dreamed of.</p>
+
+    <p><strong>🌍 The Meaning of Madaraka:</strong></p>
+    <ul>
+      <li>A reminder of the sacrifices made by Kenya's founding generation</li>
+      <li>A celebration of national unity across all communities and backgrounds</li>
+      <li>A call to responsibility — <em>madaraka</em> means responsibility and self-rule</li>
+      <li>An inspiration to serve Kenya through excellence, integrity, and hard work</li>
+      <li>A reaffirmation of our shared identity as one Kenyan people</li>
+    </ul>
+
+    <p><strong>💡 Madaraka and the TVET Mission:</strong></p>
+    <p>Technical and vocational education is one of Kenya's most powerful tools for realising the promise of self-governance. Every trainee who graduates with a marketable skill, every trainer who passes on their expertise, and every institution that opens its doors to a young Kenyan is participating in the fulfilment of the Madaraka dream.</p>
+
+    <p>Kongoni TVC is proud to be part of this national mission — transforming lives through skills, creating opportunity through education, and contributing to a Kenya where every citizen can thrive.</p>
+
+    <p><strong>Madaraka Day Mubarak! 🇰🇪✨</strong></p>
+
+    <p><em>— The Principal, Management, Staff, and Trainees of Kongoni Technical and Vocational College</em></p>
+
+    <p><em>#MadarakaDay2026 #KongoniTVC #JamhuriYaKenya #TVETKenya #SelfGovernance #NationalPride</em></p>
+  `,
+  imageUrl: "/images/newsevents/madaraka2026/madaraka_main.jpg",
+  images: [
+    "/images/newsevents/madaraka2026/madaraka_main.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-06-01T06:00:00Z",
+  updatedAt: "2026-06-01T06:00:00Z",
+  author: "College Administration",
+  category: "Announcements",
+  eventDate: "2026-06-01",
+  location: "Kongoni Technical and Vocational College",
+  tags: [
+    "madaraka-day",
+    "national-holiday",
+    "kenya",
+    "self-governance",
+    "independence",
+    "2026",
+    "national-pride",
+    "community",
+    "announcement"
+  ]
+},
 {
   id: "38",
   title: "Eid ul-Adha Mubarak — Wishing Our Community Joy, Peace & Blessings",

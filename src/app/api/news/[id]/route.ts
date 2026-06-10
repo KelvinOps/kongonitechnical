@@ -3,7 +3,214 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Enhanced mock news data with video support, multiple images, and comprehensive events
 const mockNews = [
+{
+  id: "41",
+  title: "Kongoni TVC Athletes Shine at KATTI Western Region Athletics & Indoor Games 2026 — Qualify for Nationals at Nyayo",
+  excerpt: "Kongoni TVC athletes delivered a commanding performance at the KATTI Western Region Athletics & Indoor Games 2026 Championships held at Eregi TTC, claiming six medals across track and field disciplines — including Gold in the 4x400M Relay — and earning qualification to the National Athletics Championships at Nyayo National Stadium.",
+  content: `
+    <p>Kongoni Technical and Vocational College athletes have once again demonstrated their exceptional sporting talent, delivering a remarkable performance at the <strong>KATTI Western Region Athletics &amp; Indoor Games 2026 Championships</strong> held at <strong>Eregi Teachers Training College</strong> — and securing qualification to the <strong>National Athletics Championships at Nyayo National Stadium, Nairobi</strong>.</p>
 
+    <p>The championships brought together athletes from technical and vocational institutions across the Western Region, with Kongoni TVC competitors rising to the occasion and claiming honours across six disciplines — continuing the college's proud tradition of sporting excellence.</p>
+
+    <p><strong>🏅 Medal Tally — KATTI Western Region 2026:</strong></p>
+    <ol>
+      <li><strong>Triple Jump (Men)</strong> — 🥉 Bronze</li>
+      <li><strong>Shotput (Men)</strong> — 🥉 Bronze</li>
+      <li><strong>400M (Men)</strong> — 🥉 Bronze</li>
+      <li><strong>400M Hurdles (Men)</strong> — 🥈 Silver</li>
+      <li><strong>4x100M Relay / Short Relay (Men)</strong> — 🥈 Silver</li>
+      <li><strong>4x400M Relay / Long Relay (Men)</strong> — 🥇 <strong>Gold | Western Region Champions!</strong></li>
+    </ol>
+
+    <p>Every medal tells a story of sweat, discipline, and belief — and the <strong>4x400M Relay gold</strong> was the crown jewel of a dominant championship showing, crowning Kongoni TVC as <strong>Western Region Champions</strong> in that event.</p>
+
+    <p><strong>🏃 A Display of Discipline and Dedication:</strong></p>
+    <p>The athletes' performances are the result of months of rigorous training, early mornings on the track, and unwavering commitment — balanced alongside the demands of their technical and vocational coursework. Their success is a testament to the discipline and determination that defines the Kongoni TVC spirit.</p>
+
+    <p><strong>👏 Congratulations to Coaches and Athletes:</strong></p>
+    <p>The college extends heartfelt congratulations to every athlete who competed and to the dedicated coaching staff whose guidance and preparation made these results possible. Behind every medal is a coach who believed, pushed, and prepared — and Kongoni TVC's coaches delivered.</p>
+
+    <p><strong>🎉 A Hero's Welcome — Celebratory Procession on Campus:</strong></p>
+    <p>The return of the victorious athletes to campus was met with an electrifying reception. Fellow trainees, trainers, and college management lined the campus to welcome back the champions with cheers, songs, and celebration. In a spontaneous display of college pride, a jubilant procession wound through the campus grounds — echoing the spirited marches that have become a hallmark of Kongoni TVC's culture of celebrating excellence together.</p>
+
+    <p>Winners were hoisted on shoulders and surrounded by cheering crowds as the campus erupted in collective joy — a reminder that at Kongoni TVC, every achievement belongs to the whole community.</p>
+
+    <p>Principal Ms. Judith Akaranga personally congratulated the athletes: "We are incredibly proud of every one of our athletes who competed at the regional championships. Your performances have brought honour to this institution and inspired your fellow trainees. We are behind you all the way to Nyayo."</p>
+
+    <p><strong>🌟 Road to Nationals — Nyayo National Stadium:</strong></p>
+    <p>All qualifying athletes will now represent Kongoni TVC at the <strong>National Athletics Championships at Nyayo National Stadium, Nairobi</strong> — carrying the college's colours and the hopes of the entire campus community as they compete against the best athletes from technical and vocational institutions across Kenya.</p>
+
+    <p>The college is committed to providing full support — in training, logistics, and encouragement — to ensure our national qualifiers perform at their absolute best on the biggest stage.</p>
+
+    <p><strong>From Eregi TTC to Nyayo Stadium — Kongoni TVC is ready! 🏆🎽</strong></p>
+
+    <p><em>#KongoniTVC #KATTIAthletics2026 #RegionalChampions #WesternRegionChampions #NyayoNationals2026 #TrackAndField #Athletics #KongoniPride #TVETKenya #SportingExcellence #CelebrationMarch</em></p>
+  `,
+  imageUrl: "/images/newsevents/regionalathletics2026/athletics_main.jpg",
+  images: [
+    "/images/newsevents/regionalathletics2026/athletics_main.jpg",
+    "/images/newsevents/regionalathletics2026/athletics2.jpg",
+    "/images/newsevents/regionalathletics2026/athletics3.jpg",
+    "/images/newsevents/regionalathletics2026/athletics4.jpg",
+    "/images/newsevents/regionalathletics2026/athletics5.jpg",
+    "/images/newsevents/regionalathletics2026/athletics6.jpg",
+    "/images/newsevents/regionalathletics2026/celebration1.jpg",
+    "/images/newsevents/regionalathletics2026/celebration2.jpg",
+    "/images/newsevents/regionalathletics2026/celebration3.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-06-04T16:00:00Z",
+  updatedAt: "2026-06-04T16:00:00Z",
+  author: "Sports Department",
+  category: "Achievements",
+  eventDate: "2026-06-04",
+  location: "Eregi Teachers Training College, Western Kenya",
+  tags: [
+    "athletics",
+    "katti",
+    "regional-championship",
+    "national-qualifiers",
+    "track-and-field",
+    "sports",
+    "medals",
+    "gold-medal",
+    "western-region-champions",
+    "4x400m-relay",
+    "nyayo-nationals",
+    "2026",
+    "achievement",
+    "competition",
+    "celebration",
+    "celebratory-march",
+    "college-pride",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "40",
+  title: "Trainee Spotlight — Student Interviews Capture the Heart of Kongoni TVC",
+  excerpt: "In a series of candid on-campus interviews, Kongoni TVC trainees shared their personal journeys, motivations, and aspirations — offering an inspiring window into the lived experiences of the college's diverse student community.",
+  content: `
+    <p>Kongoni Technical and Vocational College recently held a series of <strong>Trainee Spotlight Interviews</strong> — candid, on-campus conversations with trainees from across all departments, giving voice to the personal stories, ambitions, and reflections that make up the rich fabric of college life.</p>
+
+    <p>The interviews, conducted by the Student Affairs Department in collaboration with the college media team, were designed to celebrate the diversity of the Kongoni TVC community, amplify trainee voices, and inspire both current and prospective students with authentic peer stories.</p>
+
+    <p><strong>🎤 What Trainees Shared:</strong></p>
+    <p>The interviews covered a wide range of themes and life experiences, including:</p>
+    <ul>
+      <li><strong>Personal journeys</strong> — Why they chose their course and what path led them to Kongoni TVC</li>
+      <li><strong>Challenges and resilience</strong> — The obstacles they have faced and how the college community has supported them</li>
+      <li><strong>Skills and growth</strong> — The practical skills and confidence they have gained through their training</li>
+      <li><strong>Future aspirations</strong> — Their dreams for careers, entrepreneurship, and contributing to their communities</li>
+      <li><strong>College life</strong> — Memorable moments, friendships, and the experiences that have shaped their time at Kongoni TVC</li>
+      <li><strong>Messages to others</strong> — Words of encouragement for young people considering vocational education</li>
+    </ul>
+
+    <p><strong>🌟 Voices from the Interview Series:</strong></p>
+    <p>Trainees from departments including Beauty Therapy, Civil &amp; Building Engineering, ICT, Automotive, Fashion &amp; Design, Food &amp; Beverage, and Business Studies took part — each bringing a unique perspective shaped by their background, course, and personal story.</p>
+
+    <p>Many interviewees spoke movingly about how TVET had transformed their sense of purpose and possibility. Others highlighted the supportive community of trainers and fellow trainees as a defining feature of their experience at Kongoni TVC.</p>
+
+    <p><strong>📹 Watch the Interviews:</strong></p>
+    <p>Full interview videos are available on the college's official YouTube channel, offering prospective trainees, parents, and the wider community an authentic, unscripted look into life at Kongoni Technical and Vocational College.</p>
+
+    <p><strong>💬 Principal's Note:</strong></p>
+    <p>Principal Ms. Judith Akaranga commended the initiative: "These interviews remind us why we do what we do. Every trainee here has a story worth telling — of courage, determination, and hope. We are proud to provide a platform where those stories can be heard."</p>
+
+    <p><em>#KongoniTVC #TraineeSpotlight #StudentInterviews #TVETKenya #RealStories #VocationalEducation #StudentVoices</em></p>
+  `,
+  imageUrl: "/images/newsevents/studentinterviews2026/interview_main.jpg",
+  images: [
+    "/images/newsevents/studentinterviews2026/interview_main.jpg",
+    "/images/newsevents/studentinterviews2026/interview2.jpg",
+    "/images/newsevents/studentinterviews2026/interview3.jpg",
+    "/images/newsevents/studentinterviews2026/interview4.jpg",
+    "/images/newsevents/studentinterviews2026/interview5.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=YOUR_INTERVIEW_VIDEO_ID",
+  videoThumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpg",
+  videos: [
+    {
+      url: "https://www.youtube.com/watch?v=YOUR_INTERVIEW_VIDEO_ID",
+      title: "🎤 Trainee Spotlight — Student Interviews 2026",
+      thumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpg"
+    }
+  ],
+  featured: true,
+  createdAt: "2026-06-05T10:00:00Z",
+  updatedAt: "2026-06-05T10:00:00Z",
+  author: "Student Affairs Department",
+  category: "Student Life",
+  eventDate: "2026-06-05",
+  location: "Kongoni Technical and Vocational College Campus",
+  tags: [
+    "student-interviews",
+    "trainee-spotlight",
+    "student-life",
+    "student-voices",
+    "2026",
+    "community",
+    "vocational-education",
+    "tvet-kenya",
+    "personal-stories",
+    "inspiration"
+  ]
+},
+{
+  id: "39",
+  title: "Madaraka Day 2026 — Celebrating Kenya's Journey to Self-Governance",
+  excerpt: "Kongoni Technical and Vocational College joins the nation in marking Madaraka Day 2026, celebrating 63 years since Kenya attained self-governance on 1st June 1963 — a day of pride, reflection, and renewed national purpose.",
+  content: `
+    <p>On <strong>1st June 2026</strong>, Kongoni Technical and Vocational College joins the entire nation in commemorating <strong>Madaraka Day</strong> — the 63rd anniversary of Kenya attaining internal self-governance in 1963, a pivotal milestone on the road to full independence.</p>
+
+    <p>Madaraka Day is a moment for every Kenyan to reflect on the sacrifices of those who fought for freedom, celebrate the progress our nation has made, and recommit to the ideals of unity, hard work, and shared prosperity that define the Kenyan spirit.</p>
+
+    <p><strong>🇰🇪 A Message from the College:</strong></p>
+    <p>To our entire Kongoni TVC family — trainees, trainers, staff, and the wider community — we celebrate this national holiday with gratitude and pride. Kenya's journey from colonialism to self-governance is a story of courage, resilience, and collective determination. As a technical and vocational institution, we see ourselves as contributors to that ongoing story — equipping young Kenyans with the skills and confidence to build the nation our freedom fighters dreamed of.</p>
+
+    <p><strong>🌍 The Meaning of Madaraka:</strong></p>
+    <ul>
+      <li>A reminder of the sacrifices made by Kenya's founding generation</li>
+      <li>A celebration of national unity across all communities and backgrounds</li>
+      <li>A call to responsibility — <em>madaraka</em> means responsibility and self-rule</li>
+      <li>An inspiration to serve Kenya through excellence, integrity, and hard work</li>
+      <li>A reaffirmation of our shared identity as one Kenyan people</li>
+    </ul>
+
+    <p><strong>💡 Madaraka and the TVET Mission:</strong></p>
+    <p>Technical and vocational education is one of Kenya's most powerful tools for realising the promise of self-governance. Every trainee who graduates with a marketable skill, every trainer who passes on their expertise, and every institution that opens its doors to a young Kenyan is participating in the fulfilment of the Madaraka dream.</p>
+
+    <p>Kongoni TVC is proud to be part of this national mission — transforming lives through skills, creating opportunity through education, and contributing to a Kenya where every citizen can thrive.</p>
+
+    <p><strong>Madaraka Day Mubarak! 🇰🇪✨</strong></p>
+
+    <p><em>— The Principal, Management, Staff, and Trainees of Kongoni Technical and Vocational College</em></p>
+
+    <p><em>#MadarakaDay2026 #KongoniTVC #JamhuriYaKenya #TVETKenya #SelfGovernance #NationalPride</em></p>
+  `,
+  imageUrl: "/images/newsevents/madaraka2026/madaraka_main.jpg",
+  images: [
+    "/images/newsevents/madaraka2026/madaraka_main.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-06-01T06:00:00Z",
+  updatedAt: "2026-06-01T06:00:00Z",
+  author: "College Administration",
+  category: "Announcements",
+  eventDate: "2026-06-01",
+  location: "Kongoni Technical and Vocational College",
+  tags: [
+    "madaraka-day",
+    "national-holiday",
+    "kenya",
+    "self-governance",
+    "independence",
+    "2026",
+    "national-pride",
+    "community",
+    "announcement"
+  ]
+},
 {
   id: "38",
   title: "Eid ul-Adha Mubarak — Wishing Our Community Joy, Peace & Blessings",
@@ -72,12 +279,12 @@ const mockNews = [
     <p><strong>🎉 A College United in Celebration:</strong></p>
     <p>The procession drew trainees from every department and trainers from across all faculties, creating an electrifying atmosphere of collective pride. The march was more than a celebration of trophies — it was a testament to the spirit, discipline, and excellence that defines Kongoni TVC.</p>
 
-    <p>Banners, flags, and department colours were proudly displayed as the procession moved through campus. Winners from the <strong>Beauty Therapy</strong> and <strong>Civil & Building Engineering</strong> teams were hoisted in celebration, surrounded by their fellow trainees and cheering staff.</p>
+    <p>Banners, flags, and department colours were proudly displayed as the procession moved through campus. Winners from the <strong>Beauty Therapy</strong> and <strong>Civil &amp; Building Engineering</strong> teams were hoisted in celebration, surrounded by their fellow trainees and cheering staff.</p>
 
     <p><strong>🏆 What We're Celebrating:</strong></p>
     <ul>
       <li><strong>1st Place — Beauty Therapy Skills</strong>: Champions across all TVET institutions in the Western Region</li>
-      <li><strong>2nd Place — Civil & Building Engineering Project Innovation</strong>: Silver medallists in a fiercely competitive engineering category</li>
+      <li><strong>2nd Place — Civil &amp; Building Engineering Project Innovation</strong>: Silver medallists in a fiercely competitive engineering category</li>
       <li>Both winning teams qualify to represent the Western Region at the <strong>National TVET Fair in Wote, Kenya</strong></li>
     </ul>
 
@@ -148,11 +355,11 @@ const mockNews = [
     <p><strong>🥇 1st Place — Beauty Therapy Skills</strong></p>
     <p>Kongoni TVC's Beauty Therapy team delivered a masterclass performance, showcasing technical precision, creativity, and professional standards that surpassed all competing institutions across the entire western region. Their work was lauded by judges for its exceptional skill execution, attention to detail, and client-centred approach — a true demonstration of world-class vocational excellence.</p>
 
-    <p><strong>🥈 2nd Place — Civil & Building Engineering Project Innovation</strong></p>
+    <p><strong>🥈 2nd Place — Civil &amp; Building Engineering Project Innovation</strong></p>
     <p>The Civil and Building Engineering team presented an innovative project that impressed judges and fellow competitors alike. Their creative engineering solution, technical rigour, and professional presentation earned them a well-deserved silver position in a fiercely contested category — a remarkable achievement that reflects the depth of talent within the department.</p>
 
     <p><strong>🌟 Both Teams Advance to the National TVET Fair, Wote!</strong></p>
-    <p>Both the Beauty Therapy and Civil & Building Engineering teams will now carry the Kongoni TVC banner to the <strong>National TVET Fair in Wote, Kenya</strong>, representing the Western Region on the biggest stage in the TVET calendar. The college community extends its full support and encouragement as they prepare for the national showdown.</p>
+    <p>Both the Beauty Therapy and Civil &amp; Building Engineering teams will now carry the Kongoni TVC banner to the <strong>National TVET Fair in Wote, Kenya</strong>, representing the Western Region on the biggest stage in the TVET calendar. The college community extends its full support and encouragement as they prepare for the national showdown.</p>
 
     <p><strong>Voices of Pride:</strong></p>
     <p>Principal Ms. Judith Akaranga expressed immense pride in the teams' performances: "These achievements are the result of months of hard work, dedication, and an unwavering commitment to excellence. We are extraordinarily proud of every participant — winners and participants alike — for representing our institution with distinction and professionalism."</p>
@@ -177,12 +384,11 @@ const mockNews = [
     "/images/newsevents/tvetfair2026/tvetfair_civil1.jpg",
     "/images/newsevents/tvetfair2026/tvetfair_civil2.jpg",
     "/images/newsevents/tvetfair2026/tvetfair_awards.jpg",
-     "/images/newsevents/tvetfair2026/tvetfair_awards1.jpg",
+    "/images/newsevents/tvetfair2026/tvetfair_awards1.jpg",
     "/images/newsevents/tvetfair2026/tvetfair_team.jpg",
-     "/images/newsevents/tvetfair2026/tvetfair_team1.jpg",
-      "/images/newsevents/tvetfair2026/tvetfair_electrical.jpg",
-       "/images/newsevents/tvetfair2026/tvetfair_mechanical.jpg"
-     
+    "/images/newsevents/tvetfair2026/tvetfair_team1.jpg",
+    "/images/newsevents/tvetfair2026/tvetfair_electrical.jpg",
+    "/images/newsevents/tvetfair2026/tvetfair_mechanical.jpg"
   ],
   featured: true,
   createdAt: "2026-05-16T18:00:00Z",
@@ -223,11 +429,11 @@ const mockNews = [
 
     <ul>
       <li><strong>Beauty Therapy Department:</strong> Delivered a polished skills showcase demonstrating professional therapy techniques, creative hair and beauty artistry, and client-service excellence — drawing some of the loudest applause of the day.</li>
-      <li><strong>Civil & Building Engineering Department:</strong> Unveiled an innovative engineering project that drew considerable interest from the internal judges, showcasing both technical precision and creative problem-solving in the built environment.</li>
+      <li><strong>Civil &amp; Building Engineering Department:</strong> Unveiled an innovative engineering project that drew considerable interest from the internal judges, showcasing both technical precision and creative problem-solving in the built environment.</li>
       <li><strong>ICT Department:</strong> Demonstrated cutting-edge digital solutions, software projects, and tech innovations tailored for real-world applications.</li>
       <li><strong>Automotive Department:</strong> Presented diagnostic and mechanical solutions alongside impressive technical projects reflecting current industry standards.</li>
-      <li><strong>Fashion & Design Department:</strong> Showcased original garment collections, design concepts, and fashion artistry that impressed with their creativity and craftsmanship.</li>
-      <li><strong>Food & Beverage Department:</strong> Displayed culinary innovation through beautifully prepared dishes, beverage concepts, and hospitality presentations.</li>
+      <li><strong>Fashion &amp; Design Department:</strong> Showcased original garment collections, design concepts, and fashion artistry that impressed with their creativity and craftsmanship.</li>
+      <li><strong>Food &amp; Beverage Department:</strong> Displayed culinary innovation through beautifully prepared dishes, beverage concepts, and hospitality presentations.</li>
       <li><strong>Business Studies Department:</strong> Presented entrepreneurship projects, business models, and market innovation concepts aligned with current economic trends.</li>
     </ul>
 
@@ -323,7 +529,7 @@ const mockNews = [
     "/images/newsevents/prayerday2026/prayerday2.jpg",
     "/images/newsevents/prayerday2026/prayerday3.jpg",
     "/images/newsevents/prayerday2026/prayerday4.jpg",
-      "/images/newsevents/prayerday2026/prayerday5.jpg"
+    "/images/newsevents/prayerday2026/prayerday5.jpg"
   ],
   featured: true,
   createdAt: "2026-05-08T11:00:00Z",
@@ -363,13 +569,13 @@ const mockNews = [
 
     <p><strong>🏫 Departments Welcoming New and Returning Trainees:</strong></p>
     <ul>
-      <li><strong>Building & Construction</strong> — Masonry, Carpentry, Plumbing, and Electrical Installation</li>
+      <li><strong>Building &amp; Construction</strong> — Masonry, Carpentry, Plumbing, and Electrical Installation</li>
       <li><strong>ICT Department</strong> — Computer Studies, Software Development, and Digital Solutions</li>
       <li><strong>Automotive Department</strong> — Motor Vehicle Mechanics and Auto Electrical</li>
       <li><strong>Business Studies</strong> — Entrepreneurship, Accounting, and Business Management</li>
       <li><strong>Beauty Therapy</strong> — Professional Beauty, Hair, and Spa Therapy</li>
-      <li><strong>Fashion & Design</strong> — Tailoring, Dress Making, and Creative Design</li>
-      <li><strong>Food & Beverage</strong> — Catering, Hospitality, and Food Production</li>
+      <li><strong>Fashion &amp; Design</strong> — Tailoring, Dress Making, and Creative Design</li>
+      <li><strong>Food &amp; Beverage</strong> — Catering, Hospitality, and Food Production</li>
     </ul>
 
     <p><strong>🌟 A Warm Welcome from the Administration:</strong></p>
@@ -446,7 +652,7 @@ const mockNews = [
   imageUrl: "/images/newsevents/drama2026national/AdvertWin.jpeg",
   images: [
     "/images/newsevents/drama2026national/AdvertWin.jpeg",
-     "/images/newsevents/drama2026national/nationaldrama_advert.png",
+    "/images/newsevents/drama2026national/nationaldrama_advert.png",
     "/images/newsevents/drama2026national/nationaldrama_advert1.png",
     "/images/newsevents/drama2026national/nationaldrama_livetv.png"
   ],
@@ -501,9 +707,9 @@ const mockNews = [
 
     <p>The performers demonstrated exceptional stage presence, confidence, and teamwork. Their costumes — carefully designed to reinforce thematic elements — added visual appeal and depth to the performance. The creative use of props, lighting, and stage design further enhanced the storytelling, creating an immersive and memorable experience for the audience.</p>
 
-    <p>What truly set the team apart was their ability to seamlessly integrate drama, dance, and mime into a cohesive performance. Each scene transitioned smoothly into the next, maintaining audience engagement while delivering both entertainment and education. The performers’ dedication, evident through their synchronization and emotional expression, reflected the countless hours of rehearsal and commitment invested in the production.</p>
+    <p>What truly set the team apart was their ability to seamlessly integrate drama, dance, and mime into a cohesive performance. Each scene transitioned smoothly into the next, maintaining audience engagement while delivering both entertainment and education. The performers' dedication, evident through their synchronization and emotional expression, reflected the countless hours of rehearsal and commitment invested in the production.</p>
 
-    <p><strong>🥇 Awards & Recognition</strong></p>
+    <p><strong>🥇 Awards &amp; Recognition</strong></p>
     <p>The institution scooped multiple accolades at the festival, with winning items including:</p>
     <ul>
       <li><strong>Solo Verse</strong> — An outstanding performance that earned 2nd Runner‑Up!</li>
@@ -512,7 +718,7 @@ const mockNews = [
       <li><strong>Cultural Creative Dance</strong> — Bagged an award for the best item on environmental conservation.</li>
     </ul>
 
-    <p>The adjudicators commended the institution for its originality, clarity of theme, and effective communication of message. Special recognition was given to the group’s creativity in interpreting contemporary issues through cultural and artistic lenses.</p>
+    <p>The adjudicators commended the institution for its originality, clarity of theme, and effective communication of message. Special recognition was given to the group's creativity in interpreting contemporary issues through cultural and artistic lenses.</p>
 
     <p><strong>🌟 Voices of Pride</strong></p>
     <p>"This achievement is a testament to the institution's commitment to nurturing talent and promoting the arts as a vital component of holistic education," noted Mr David Madaga. "The support of trainers, directors, and the administration played a crucial role in the team's success — this belongs to all of us."</p>
@@ -569,7 +775,7 @@ const mockNews = [
     "regional-competition"
   ]
 },
-   {
+{
   id: "29",
   title: "Kongoni Technical College Annual Athletic Sports Day - Unity, Teamwork & Physical Excellence",
   excerpt: "Trainees from different departments came together for the annual athletic sports day, showcasing talent across multiple disciplines, with top performers qualifying to represent the institution at regional level and beyond.",
@@ -595,20 +801,20 @@ const mockNews = [
     <p><strong>🏅 Notable Attendees:</strong></p>
     <ul>
       <li><strong>Members of Athletics Kenya</strong> — Representatives from the national athletics governing body attended to observe and identify promising talent</li>
-      <li><strong>Principal Judith Akaranga</strong> — The college principal graced the event, underscoring the administration\'s commitment to student well-being and holistic development</li>
+      <li><strong>Principal Judith Akaranga</strong> — The college principal graced the event, underscoring the administration's commitment to student well-being and holistic development</li>
       <li><strong>College Lecturers and Management</strong> — Staff members turned out in strong numbers to cheer on and support the competing trainees</li>
       <li><strong>Radio Ustawi</strong> — The event received full media coverage from Radio Ustawi, who were present throughout the day capturing every moment of sporting action</li>
     </ul>
  
     <p><strong>📻 Media Coverage:</strong></p>
-    <p>Radio Ustawi\'s presence ensured that the excitement and achievements of the day reached a wider audience, shining a spotlight on the athletic talent at Kongoni Technical and Training Institute and amplifying the college\'s vibrant student life.</p>
+    <p>Radio Ustawi's presence ensured that the excitement and achievements of the day reached a wider audience, shining a spotlight on the athletic talent at Kongoni Technical and Training Institute and amplifying the college's vibrant student life.</p>
  
     <p><strong>🌟 Looking Ahead:</strong></p>
-    <p>The athletes who have qualified for regional competition will now carry the Kongoni Technical and Training Institute flag forward, representing the institution with pride. The college\'s management expressed full support for the qualifying trainees as they prepare for the next stage of competition.</p>
+    <p>The athletes who have qualified for regional competition will now carry the Kongoni Technical and Training Institute flag forward, representing the institution with pride. The college's management expressed full support for the qualifying trainees as they prepare for the next stage of competition.</p>
  
     <p>"Events like our annual sports day are a reminder that education is about more than the classroom," said Principal Judith Akaranga. "Sport builds character, discipline, and resilience — qualities that will serve our trainees throughout their careers and lives."</p>
  
-    <p>The institution congratulates every trainee who participated in making this year\'s sports day a memorable and inspiring occasion.</p>
+    <p>The institution congratulates every trainee who participated in making this year's sports day a memorable and inspiring occasion.</p>
  
     <p><em>#KongoniTechnical #Sports #RadioUstawi</em></p>
   `,
@@ -620,16 +826,16 @@ const mockNews = [
     "/images/Sports Day2026/sportdday (4).JPG",
     "/images/Sports Day2026/sportdday (5).JPG",
     "/images/Sports Day2026/sportdday (6).JPG",
-   "/images/Sports Day2026/sportdday (7).JPG",
+    "/images/Sports Day2026/sportdday (7).JPG",
     "/images/Sports Day2026/sportdday (8).JPG",
-        "/images/Sports Day2026/sportdday (9).JPG",
+    "/images/Sports Day2026/sportdday (9).JPG",
     "/images/Sports Day2026/sportdday (1).JPG",
     "/images/Sports Day2026/sportdday (11).JPG",
     "/images/Sports Day2026/sportdday (12).JPG",
     "/images/Sports Day2026/sportdday (13).JPG",
     "/images/Sports Day2026/sportdday (14).JPG",
-   "/images/Sports Day2026/sportdday (15).JPG",
-    "/images/Sports Day2026/sportdday (16).JPG",
+    "/images/Sports Day2026/sportdday (15).JPG",
+    "/images/Sports Day2026/sportdday (16).JPG"
   ],
   videoThumbnail: "/images/newsevents/athletics/athletics23.jpeg",
   featured: true,
@@ -654,7 +860,7 @@ const mockNews = [
     "holistic-development"
   ]
 },
-  {
+{
   id: "28",
   title: "Kongoni Technical College Partners with Modia Driving School to Offer Comprehensive Driving Courses",
   excerpt: "Kongoni Technical & Vocational College announces exciting collaboration with Modia Driving School to provide professional driving certification courses on campus, featuring NTSA-certified training across multiple vehicle classes.",
@@ -995,7 +1201,7 @@ const mockNews = [
     <p><strong>Preserving Heritage for Future Generations:</strong></p>
     <p>Cultural Day serves an important educational purpose beyond entertainment. It provides a platform for younger generations to learn about and appreciate traditional practices, ensuring that cultural heritage is preserved and passed on. The event included storytelling sessions where elders from the community shared the historical significance of various cultural practices.</p>
     
-    <p>"Events like these are crucial for keeping our traditions alive," noted the Principal . "In our rapidly modernizing world, it's essential that young people remain connected to their cultural roots while embracing progress and innovation."</p>
+    <p>"Events like these are crucial for keeping our traditions alive," noted the Principal. "In our rapidly modernizing world, it's essential that young people remain connected to their cultural roots while embracing progress and innovation."</p>
    
     <p><strong>Media Coverage and Documentation:</strong></p>
     <p>The entire event was professionally documented through photography and videography, with highlights available on the college's YouTube channel. The vibrant images and video footage serve as a lasting record of this memorable celebration and will be used for promotional purposes and future reference.</p>
@@ -1056,7 +1262,7 @@ const mockNews = [
     "/images/newsevents/culturalday/cultural9.jpeg",
     "/images/newsevents/culturalday/cultural10.jpeg"
   ],
-  videoUrl: "https://www.youtube.com/watch?v=duMxys0H_yY", 
+  videoUrl: "https://www.youtube.com/watch?v=duMxys0H_yY",
   videoThumbnail: "/images/newsevents/culturalday/cultural10.jpeg",
   featured: true,
   createdAt: "2025-11-07T16:00:00Z",
@@ -1083,703 +1289,703 @@ const mockNews = [
     "afrikwear-unit-entertainment"
   ]
 },
-  {
-    id: "25",
-    title: "Dual TVET Workshop - Round 2 Dualization Training for Rift Valley Region",
-    excerpt: "Trainers from Kongoni Technical and Vocational College joined other TVET institutions for a comprehensive 2-day workshop on Dual TVET and Dualization at Starbucks Hotel, Eldoret, facilitated by GIZ/GFA and Kenya School of TVET.",
-    content: `
-      <p>On 23rd and 24th October 2025, a team representing Kongoni Technical and Vocational College joined trainers from other TVET institutions across the Rift Valley Region for a transformative 2-Day Workshop on Round 2 Dual TVET and Dualization, held at Starbucks Hotel, Eldoret.</p>
-      
-      <p>The workshop was facilitated through collaborative efforts between GIZ/GFA and Kenya School of TVET, as part of the ongoing effort to ensure smooth implementation of dual learning, with a key focus on dualization in line with the modularized curriculum.</p>
-      
-      <p><strong>Day 1 Program Highlights:</strong></p>
-      <ul>
-        <li><strong>Overview of Dual Program</strong> - Comprehensive introduction to the D-TVET model and its implementation framework</li>
-        <li><strong>Steps in Dual Training Implementation</strong> - Detailed roadmap for establishing dual training systems</li>
-        <li><strong>Dual TVET Key Documentation</strong> - Planning and delivery documentation requirements</li>
-        <li><strong>Interpretation of Modularized CBET Curriculum</strong> - Understanding competency-based education modules</li>
-        <li><strong>Modular Implementation Graph Analysis</strong> - Visual representation of curriculum delivery timelines</li>
-        <li><strong>Development of Generic Training Plans</strong> - Creating standardized training frameworks</li>
-        <li><strong>Presentation of Sample Generic Plans</strong> - Best practices and model examples</li>
-        <li><strong>Introduction to Specific Training Plans</strong> - Customizing plans for specific courses</li>
-      </ul>
-      
-      <p><strong>Day 2 Program Highlights:</strong></p>
-      <ul>
-        <li><strong>Development of Specific Training Plans</strong> - Hands-on creation of unit-specific training plans</li>
-        <li><strong>In-Company Training Plan Development</strong> - Structuring workplace-based learning experiences</li>
-        <li><strong>Rotational Plan Development</strong> - Designing student rotation schedules between institution and industry</li>
-        <li><strong>Use of Mentoring Tools</strong> - Implementing effective mentorship frameworks</li>
-        <li><strong>Establishment and Roles of TICC</strong> - Training Institution Coordination Committee setup and responsibilities</li>
-        <li><strong>Challenges in Dual Training</strong> - Experience sharing and solutions discussion</li>
-      </ul>
-      
-      <p><strong>Key Workshop Objectives:</strong></p>
-      <ul>
-        <li>Sensitization on the D-TVET model and its benefits</li>
-        <li>Understanding dual training implementation steps</li>
-        <li>Mastering documentation requirements for planning and delivery</li>
-        <li>Developing practical skills in creating training plans</li>
-        <li>Building capacity for effective mentorship and coordination</li>
-        <li>Addressing implementation challenges through collaborative problem-solving</li>
-      </ul>
-      
-      <p>The workshop featured interactive sessions with energizers, group work, and practical exercises. Participants actively engaged in developing training plans, sharing experiences, and learning from facilitators from Kenya School of TVET and GIZ consultants.</p>
-      
-      <p><strong>Impact and Benefits:</strong></p>
-      <ul>
-        <li>Enhanced understanding of dual training methodology among Kongoni trainers</li>
-        <li>Improved capacity to implement modularized CBET curriculum</li>
-        <li>Strengthened collaboration with industry partners</li>
-        <li>Better preparation for establishing TICC structures</li>
-        <li>Practical tools and templates for training plan development</li>
-        <li>Network building with trainers from other TVET institutions</li>
-      </ul>
-      
-      <p>"This workshop has equipped our trainers with essential skills and knowledge to effectively implement the dual training model," remarked Deputy Principal for Academics. "The hands-on approach and collaborative learning environment provided invaluable insights that we will immediately apply in our training programs."</p>
-      
-      <p>The dual TVET model combines theoretical learning at the institution with practical training at industry workplaces, ensuring trainees gain real-world experience and industry-relevant skills. This approach significantly enhances graduate employability and bridges the gap between education and industry needs.</p>
-      
-      <p>Kongoni Technical and Vocational College remains committed to adopting best practices in technical education, and this workshop represents a significant milestone in our journey toward excellence in dual training delivery.</p>
-      
-      <p>The knowledge and skills gained from this workshop will be cascaded to all training staff, ensuring consistent implementation of the dual TVET model across all departments at Kongoni Technical and Vocational College.</p>
-    `,
-    imageUrl: "/images/newsevents/dualtvetworkshop/dualworkshop7.jpeg",
-    images: [
-      "/images/newsevents/dualtvetworkshop/dualworkshop1.jpeg",
-      "/images/newsevents/dualtvetworkshop/dualworkshop2.jpeg",
-      "/images/newsevents/dualtvetworkshop/dualworkshop3.jpeg",
-      "/images/newsevents/dualtvetworkshop/dualworkshop4.jpeg",
-      "/images/newsevents/dualtvetworkshop/dualworkshop5.jpeg",
-      "/images/newsevents/dualtvetworkshop/dualworkshop6.jpeg"
-    ],
-    videoThumbnail: "/images/newsevents/dualtvetworkshop/dualworkshop4.jpeg",
-    featured: true,
-    createdAt: "2025-10-24T17:00:00Z",
-    updatedAt: "2025-10-24T17:00:00Z",
-    author: "Academic Affairs Department",
-    category: "Training",
-    eventDate: "2025-10-24",
-    location: "Starbucks Hotel, Eldoret",
-    tags: ["dual-tvet", "workshop", "training", "giz", "kstvet", "dualization", "cbet", "modular-curriculum", "capacity-building", "rift-valley", "professional-development", "trainers"]
-  },
-  {
-    id: "24",
-    title: "Sports Day 2025 - Athletic Excellence and Team Spirit",
-    excerpt: "Kongoni Technical College hosted an electrifying Sports Day featuring football, volleyball, handball, and netball competitions. Eleven Stars crowned football champions with Rising Stars and Green Garden taking second and third positions respectively.",
-    content: `
-      <p>On October 10th, 2025, Kongoni Technical & Vocational Training College held its annual Sports Day, showcasing exceptional athletic talent and team spirit across multiple sporting disciplines.</p>
-      
-      <p>The day featured intense competitions in four major sports categories, with trainees demonstrating remarkable skills, determination, and sportsmanship throughout the event.</p>
-      
-      <p><strong>Sports Featured:</strong></p>
-      <ul>
-        <li>Football (Men's and Ladies')</li>
-        <li>Volleyball</li>
-        <li>Handball</li>
-        <li>Netball</li>
-      </ul>
-      
-      <p><strong>Men's Football Tournament Results:</strong></p>
-      <p>The men's football tournament was highly competitive, featuring 8 talented teams battling for supremacy on the field. After intense matches throughout the day, the champions emerged:</p>
-      <ul>
-        <li><strong>🥇 Champions: ELEVEN STARS</strong> - Demonstrated exceptional teamwork, strategic gameplay, and technical skills to claim the top position.</li>
-        <li><strong>🥈 2nd Runners-Up: RISING STARS</strong> - Lived up to their name with impressive performances, showing great potential and determination.</li>
-        <li><strong>🥉 3rd Place: GREEN GARDEN</strong> - Secured third position with commendable performances, displaying strong defensive strategies.</li>
-      </ul>
-      
-      <p><strong>Ladies' Football Competition:</strong></p>
-      <ul>
-        <li><strong>🥇 Champions: TEAM A</strong> - Emerged victorious with superior gameplay and outstanding performances.</li>
-      </ul>
-      
-      <p><strong>Event Highlights:</strong></p>
-      <ul>
-        <li>Over 200 student athletes participated across all sports</li>
-        <li>8 men's football teams competed in intense tournament format</li>
-        <li>2 ladies' football teams showcased women's athletic prowess</li>
-        <li>Professional officiating ensuring fair play throughout</li>
-      </ul>
-      
-      <p>"Today's Sports Day exemplifies our commitment to holistic education," remarked Principal Judith Akaranga during the awards ceremony.</p>
-      
-      <p>The event concluded with an awards ceremony where champions received their trophies amid cheers from fellow trainees.</p>
-    `,
-    imageUrl: "/images/newsevents/kattigames/kattigames9.jpg",
-    images: [
-      "/images/newsevents/kattigames/kattigames1.jpg",
-      "/images/newsevents/kattigames/kattigames2.jpg",
-      "/images/newsevents/kattigames/kattigames3.jpg",
-      "/images/newsevents/kattigames/kattigames4.jpg",
-      "/images/newsevents/kattigames/kattigamesladies5.jpg",
-      "/images/newsevents/kattigames/kattigamesladies6.jpg",
-      "/images/newsevents/kattigames/kattigamesladies7.jpg",
-      "/images/newsevents/kattigames/kattigamesladies8.jpg",
-      "/images/newsevents/kattigames/kattigames9.jpg"
-    ],
-    videoThumbnail: "/images/newsevents/kattigames/kattigames9.jpg",
-    featured: true,
-    createdAt: "2025-10-10T16:00:00Z",
-    updatedAt: "2025-10-10T16:00:00Z",
-    author: "Sports Department",
-    category: "Events",
-    eventDate: "2025-10-10",
-    location: "Matunda SA School",
-    tags: ["sports", "football", "volleyball", "handball", "netball", "championship", "athletics", "competition", "sports-day", "team-spirit"]
-  },
-  {
-    id: "23",
-    title: "Mazingira Day 2025 - 548 Fruit Trees Planted at Nangili Primary School",
-    excerpt: "KTVC joined forces with Equity Bank Moi's Bridge and Scout Society to celebrate Mazingira Day by planting 548 fruit trees at Nangili Comprehensive Primary School under the theme 'Citizen-Centric Tree Growing and Stewardship'.",
-    content: `
-      <p>On October 10th, 2025, Kongoni Technical & Vocational Training College, in partnership with Equity Bank Moi's Bridge and the KTVC Scout Society, celebrated Mazingira Day with a massive tree planting initiative at Nangili Comprehensive Primary School.</p>
-      
-      <p>Under the theme "Citizen-Centric Tree Growing and Stewardship" and hashtags #TurudiPrimo and #TukaDonateFruitTrees, the collaborative effort resulted in planting 548 fruit trees.</p>
-      
-      <p><strong>Complete Breakdown of Trees Planted:</strong></p>
-      <ul>
-        <li><strong>🥑 Avocados: 68 trees</strong></li>
-        <li><strong>🍈 Guavas: 156 trees</strong></li>
-        <li><strong>🥭 Grafted Mangoes: 50 trees</strong></li>
-        <li><strong>🌰 Macadamia (Njugu Mawe): 21 trees</strong></li>
-        <li><strong>🍈 Jackfruit (Fenesi): 56 trees</strong></li>
-        <li><strong>🍏 Custard Apple (Mafora): 18 trees</strong></li>
-        <li><strong>🫐 Black Plum (Zambarau): 2 trees</strong></li>
-        <li><strong>🍑 Loquat (Chinduli): 157 trees</strong></li>
-        <li><strong>🔴 Pomegranate (Mkomamanga): 20 trees</strong></li>
-      </ul>
-      
-      <p><strong>Environmental and Community Impact:</strong></p>
-      <ul>
-        <li>Carbon sequestration and climate change mitigation</li>
-        <li>Food security for school children</li>
-        <li>Educational value for environmental studies</li>
-        <li>Soil conservation and microclimate improvement</li>
-      </ul>
-      
-      <p>Deputy Principal Ezra Orina  emphasized: "Today we plant more than trees - we plant hope, nutrition, and a sustainable future for these children."</p>
-    `,
-    imageUrl: "/images/newsevents/treeplanting/nangilitree2.jpg",
-    images: [
-      "/images/newsevents/treeplanting/nangilitree3.jpg",
-      "/images/newsevents/treeplanting/nangilitree7.jpg",
-      "/images/newsevents/treeplanting/nangilitree49.jpg",
-      "/images/newsevents/treeplanting/nangilitree48.jpg",
-      "/images/newsevents/treeplanting/nangilitree1.jpg",
-      "/images/newsevents/treeplanting/nangilitree4.jpg",
-      "/images/newsevents/treeplanting/nangilitreeselect5.jpg",
-      "/images/newsevents/treeplanting/nangilitreeselect6.jpg",
-      "/images/newsevents/treeplanting/nangilitreeselect7.jpg",
-      "/images/newsevents/treeplanting/nangilitreeselect8.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=mazingira_day_2024",
-    videoThumbnail: "/images/newsevents/treeplanting/nangilitree7.jpg",
-    featured: true,
-    createdAt: "2025-10-10T14:00:00Z",
-    updatedAt: "2025-10-10T14:00:00Z",
-    author: "Environmental Conservation Team",
-    category: "Events",
-    eventDate: "2025-10-10",
-    location: "Nangili Comprehensive Primary School",
-    tags: ["mazingira-day", "tree-planting", "environment", "conservation", "equity-bank", "scouts", "community-service", "sustainability", "fruit-trees", "greening", "turudi-primo"]
-  },
-  {
-    id: "22",
-    title: "CBET Modular Curriculum Delivery Workshop at Sigalagala National Polytechnic",
-    excerpt: "Kongoni Technical College's academic leadership team participated in a comprehensive 5-day workshop on Competency-Based Education and Training (CBET) modular curriculum delivery at Sigalagala National Polytechnic.",
-    content: `
-      <p>A delegation from Kongoni Technical & Vocational Training College participated in an intensive 5-day workshop on Competency-Based Education and Training (CBET) modular curriculum delivery at Sigalagala National Polytechnic from September 8-12, 2025.</p>
-      
-      <p>The college was represented by key academic leadership including all Heads of Departments (HODs), the Examinations Officer, and the Deputy Principal for Academics.</p>
-      
-      <p><strong>Workshop Participants:</strong></p>
-      <ul>
-        <li>Deputy Principal for Academics - Ms. Lucy Makhokha</li>
-        <li>Examinations Officer - Mr. Paul Kyalo</li>
-        <li>All Department Heads</li>
-      </ul>
-      
-      <p>The workshop focused on enhancing CBET methodology implementation, emphasizing practical skills acquisition and competency demonstration.</p>
-    `,
-    imageUrl: "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
-    images: [
-      "/images/newsevents/sigalagalatraining/modulartraining1.jpg",
-      "/images/newsevents/sigalagalatraining/modulartraining2.jpg",
-      "/images/newsevents/sigalagalatraining/modulartraining3.jpg",
-      "/images/newsevents/sigalagalatraining/modulartraining4.jpg",
-      "/images/newsevents/sigalagalatraining/modulartraining5.jpg",
-      "/images/newsevents/sigalagalatraining/modulartraining6.jpg",
-      "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
-      "/images/newsevents/sigalagalatraining/modulartraining8.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=cbet_workshop_highlights",
-    videoThumbnail: "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
-    featured: true,
-    createdAt: "2025-09-12T18:00:00Z",
-    updatedAt: "2025-09-12T18:00:00Z",
-    author: "Academics Department",
-    category: "Training",
-    eventDate: "2025-09-12",
-    location: "Sigalagala National Polytechnic",
-    tags: ["cbet", "curriculum", "training", "academic-staff", "competency-based", "modular-delivery", "professional-development"]
-  }
-,{
-    id: "21",
-    title: "Kongoni Technical Hosts CS Oparanya at NYOTA Entrepreneurship Training Completion by Ebullient Professional Agencies",
-    excerpt: "Hon. Wycliffe Oparanya, Cabinet Secretary for Co-operatives and MSMEs, was chief guest at the completion ceremony of the 4-day NYOTA entrepreneurship training program that empowered 150 youths with business skills.",
-    content: `
-      <p>Kongoni Technical & Vocational Training College had the honor of hosting Hon. Wycliffe Oparanya, Cabinet Secretary for Co-operatives and Micro, Small and Medium Enterprises (MSMEs), as chief guest during the completion ceremony of the NYOTA (National Youth Opportunities Training Academy) entrepreneurship training program.</p>
-      
-      <p>The hosted 4-day intensive training program, held from September 12-15, 2025, successfully empowered 150 young entrepreneurs with essential business skills and knowledge needed to establish and manage successful enterprises.</p>
-      
-      <p><strong>Training Program Highlights:</strong></p>
-      <ul>
-        <li>Business plan development and financial planning</li>
-        <li>Market research and customer identification</li>
-        <li>Digital marketing strategies for small businesses</li>
-        <li>Access to government funding and support programs</li>
-        <li>Legal requirements for business registration</li>
-        <li>Record keeping and basic accounting principles</li>
-        <li>Product development and quality control</li>
-        <li>Networking and partnership building</li>
-      </ul>
-      
-      <p>During his address, CS Oparanya emphasized the government's commitment to youth empowerment through skills development and entrepreneurship. "The NYOTA initiative represents our dedication to creating opportunities for young Kenyans to become job creators rather than job seekers," he stated.</p>
-      
-      <p>The Cabinet Secretary praised Kongoni Technical College for its role in implementing government initiatives and providing quality training facilities. "Institutions like Kongoni Technical College are instrumental in achieving our vision of an empowered and economically active youth population," he noted.</p>
-      
-      <p><strong>Key Program Outcomes:</strong></p>
-      <ul>
-        <li>150 youths certified in entrepreneurship skills</li>
-        <li>85% of participants developed viable business plans</li>
-        <li>Formation of 12 youth business groups for collective ventures</li>
-        <li>Commitment from 120 participants to start businesses within 6 months</li>
-        <li>Establishment of mentorship networks with successful entrepreneurs</li>
-        <li>Access to government funding opportunities for qualified participants</li>
-      </ul>
-      
-      <p>Principal Judith Akaranga expressed gratitude to the government for selecting the college as a NYOTA training center. "This partnership demonstrates our capacity to deliver quality training programs that align with national development goals," she said.</p>
-      
-      <p>The training sessions, conducted daily from 8:00 AM to 4:00 PM, featured a blend of theoretical instruction and practical exercises. Participants engaged in business simulation activities, developed actual business plans, and received mentorship from experienced entrepreneurs.</p>
-      
-      <p><strong>Government Support Initiatives Highlighted:</strong></p>
-      <ul>
-        <li>Youth Enterprise Development Fund (YEDF) access procedures</li>
-        <li>Uwezo Fund application processes</li>
-        <li>Government procurement opportunities for youth-owned businesses</li>
-        <li>Tax incentives and exemptions for young entrepreneurs</li>
-        <li>Access to industrial parks and business incubation centers</li>
-        <li>Export promotion support for scalable businesses</li>
-      </ul>
-      
-      <p>The completion ceremony featured presentations by outstanding participants who showcased innovative business ideas ranging from agribusiness to technology solutions. Several participants received seed funding commitments from local investors present at the event.</p>
-      
-      <p>CS Oparanya announced plans to expand the NYOTA program to reach more youths across the country, with Kongoni Technical College identified as a model training center for replication in other regions.</p>
-      
-      <p>"Today marks not the end but the beginning of your entrepreneurial journey," the Cabinet Secretary told the participants. "The skills you have acquired here will enable you to contribute meaningfully to Kenya's economic transformation."</p>
-      
-      <p>The college established a follow-up support system to track participants' progress and provide ongoing mentorship as they implement their business plans in their respective communities.</p>
-    `,
-    imageUrl: "/images/newsevents/nyotaexitmeeting/nyotaexit18th-25.jpeg",
-    images: [
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-25.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-4.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-2.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-3.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-5.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-14.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-15.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-8.jpeg",
-            "/images/newsevents/nyotaexitmeeting/nyotaexit18th-17.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-22.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-24.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-30.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-25.jpeg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=cs_oparanya_nyota_visit",
-    videoThumbnail: "/images/newsevents/nyotaexitmeeting/nyotaexit18th-23.jpeg",
-    featured: true,
-    createdAt: "2025-09-15T16:00:00Z",
-    updatedAt: "2025-09-15T16:00:00Z",
-    author: "Administration",
-    category: "Events",
-    eventDate: "2025-09-15",
-    location: "College Grounds",
-    tags: ["nyota", "entrepreneurship", "cabinet-secretary", "youth-empowerment", "government-initiative", "business-training", "graduation"]
-  },
-  {
-    id: "19",
-    title: "3rd Board of Governors Inauguration - Transition to New Leadership Structure",
-    excerpt: "Historic transition as Kongoni Technical & Vocational Training College transitions from Board of Management to the new Board of Governance structure, marking a significant milestone in institutional development.",
-    content: `
-      <p>On September 5th, 2025, Kongoni Technical & Vocational Training College held its historic 3rd Board of Governance meeting, marking a significant transition in the institution's leadership structure.</p>
-      
-      <p>This meeting represented the formal transition from the previous Board of Management to the newly established Board of Governance, reflecting the college's commitment to enhanced institutional governance and strategic oversight.</p>
-      
-      <p><strong>Key Highlights of the Meeting:</strong></p>
-      <ul>
-        <li>Formal handover from the outgoing Board of Management</li>
-        <li>Introduction and orientation of new Board of Governance members</li>
-        <li>Review of institutional strategic plans and performance indicators</li>
-        <li>Discussion of governance framework and operational policies</li>
-        <li>Budget review and financial oversight responsibilities</li>
-        <li>Academic quality assurance and program development priorities</li>
-        <li>Infrastructure development and modernization plans</li>
-        <li>Student welfare and community engagement initiatives</li>
-      </ul>
-      
-      <p>The new Board of Governance brings together experienced professionals from various sectors including education, industry, government, and community leadership, ensuring comprehensive oversight and strategic guidance for the institution.</p>
-      
-      <p>"This transition represents our commitment to excellence in governance and our dedication to providing world-class technical and vocational education," said the Board Chairperson during the meeting.</p>
-      
-      <p>The Board of Governance will provide enhanced strategic oversight, ensuring the college continues to meet evolving industry needs while maintaining high educational standards. This governance structure aligns with best practices in technical and vocational education management.</p>
-      
-      <p><strong>Areas of Focus for the New Board:</strong></p>
-      <ul>
-        <li>Strategic planning and institutional development</li>
-        <li>Quality assurance and academic standards</li>
-        <li>Financial sustainability and resource mobilization</li>
-        <li>Industry partnerships and graduate employability</li>
-        <li>Innovation in technical education delivery</li>
-        <li>Community engagement and social responsibility</li>
-      </ul>
-      
-      <p>The college community looks forward to the enhanced leadership and strategic direction that the new Board of Governance will provide as we continue to build on our reputation as a leading technical and vocational training institution.</p>
-      
-      <p>This governance transition positions Kongoni Technical & Vocational Training College for continued growth and excellence in technical education delivery.</p>
-    `,
-    imageUrl: "/images/admin/board/bog2.jpg",
-    images: [
-      "/images/admin/board/bog1.jpeg",
-      "/images/admin/board/bog2.jpeg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=board_governance_meeting",
-    videoThumbnail: "/images/admin/admin1.jpeg",
-    featured: true,
-    createdAt: "2025-09-05T14:30:00Z",
-    updatedAt: "2025-09-05T14:30:00Z",
-    author: "Administration",
-    category: "Events",
-    eventDate: "2025-09-05",
-    location: "Principals Office",
-    tags: ["governance", "board-meeting", "leadership", "transition", "administration", "strategic-planning"]
-  },
-  {
-    id: "20",
-    title: "Term Opening Prayer Day - Spiritual Blessing for New Academic Term",
-    excerpt: "The college community came together for a special prayer service to seek divine blessing and guidance for the new academic term, fostering unity and spiritual well-being among trainees and staff.",
-    content: `
-      <p>On September 9th, 2025, Kongoni Technical & Vocational Training College held a special Term Opening Prayer Day, bringing together the entire college community to seek divine blessing and guidance for the new academic term.</p>
-      
-      <p>The prayer service, held at the main campus grounds, was attended by trainees, faculty, staff, and invited religious leaders from various denominations, reflecting the college's commitment to holistic education that nurtures both academic and spiritual development.</p>
-      
-      <p><strong>Prayer Service Program:</strong></p>
-      <ul>
-        <li>Opening worship and praise session</li>
-        <li>Welcome address by Principal Judith Akaranga</li>
-        <li>Interfaith prayers for academic success and guidance</li>
-        <li>Special prayers for trainees, faculty, and staff</li>
-        <li>Blessing of academic facilities and laboratories</li>
-        <li>Prayers for safety and protection throughout the term</li>
-        <li>Community fellowship and refreshments</li>
-      </ul>
-      
-      <p>"As we begin this new academic term, we recognize the importance of spiritual foundation in our educational journey," said Principal Judith Akaranga during her address. "This prayer day reminds us that success comes not only through hard work but also through divine guidance and blessing."</p>
-      
-      <p>The event featured participation from multiple religious denominations, emphasizing the college's inclusive approach to spiritual matters while respecting diverse faith backgrounds within the college community.</p>
-      
-      <p><strong>Key Prayer Themes:</strong></p>
-      <ul>
-        <li>Academic excellence and wisdom for trainees and instructors</li>
-        <li>Safety and protection for the college community</li>
-        <li>Unity and harmony among diverse backgrounds</li>
-        <li>Guidance for institutional leadership and decision-making</li>
-        <li>Success in upcoming examinations and assessments</li>
-        <li>Prosperity and growth for the institution</li>
-        <li>Community outreach and social impact</li>
-      </ul>
-      
-      <p>trainees from various departments participated actively, with many expressing gratitude for the opportunity to begin their academic journey with spiritual grounding. The prayer day also included special intercessions for new trainees beginning their studies.</p>
-      
-      <p>"This prayer day helps create a positive atmosphere for learning and reminds us that we are part of a caring community," said Mary Wanjiku, a Business Studies student.</p>
-      
-      <p>The college's commitment to spiritual well-being complements its focus on academic and technical excellence, recognizing that holistic education addresses all aspects of human development.</p>
-      
-      <p>Religious leaders from the local community praised the college's initiative, noting how such gatherings strengthen community bonds and provide moral foundation for educational pursuits.</p>
-      
-      <p>The Term Opening Prayer Day concluded with a blessing ceremony for all academic activities, setting a positive and hopeful tone for the term ahead.</p>
-    `,
+{
+  id: "25",
+  title: "Dual TVET Workshop - Round 2 Dualization Training for Rift Valley Region",
+  excerpt: "Trainers from Kongoni Technical and Vocational College joined other TVET institutions for a comprehensive 2-day workshop on Dual TVET and Dualization at Starbucks Hotel, Eldoret, facilitated by GIZ/GFA and Kenya School of TVET.",
+  content: `
+    <p>On 23rd and 24th October 2025, a team representing Kongoni Technical and Vocational College joined trainers from other TVET institutions across the Rift Valley Region for a transformative 2-Day Workshop on Round 2 Dual TVET and Dualization, held at Starbucks Hotel, Eldoret.</p>
+    
+    <p>The workshop was facilitated through collaborative efforts between GIZ/GFA and Kenya School of TVET, as part of the ongoing effort to ensure smooth implementation of dual learning, with a key focus on dualization in line with the modularized curriculum.</p>
+    
+    <p><strong>Day 1 Program Highlights:</strong></p>
+    <ul>
+      <li><strong>Overview of Dual Program</strong> - Comprehensive introduction to the D-TVET model and its implementation framework</li>
+      <li><strong>Steps in Dual Training Implementation</strong> - Detailed roadmap for establishing dual training systems</li>
+      <li><strong>Dual TVET Key Documentation</strong> - Planning and delivery documentation requirements</li>
+      <li><strong>Interpretation of Modularized CBET Curriculum</strong> - Understanding competency-based education modules</li>
+      <li><strong>Modular Implementation Graph Analysis</strong> - Visual representation of curriculum delivery timelines</li>
+      <li><strong>Development of Generic Training Plans</strong> - Creating standardized training frameworks</li>
+      <li><strong>Presentation of Sample Generic Plans</strong> - Best practices and model examples</li>
+      <li><strong>Introduction to Specific Training Plans</strong> - Customizing plans for specific courses</li>
+    </ul>
+    
+    <p><strong>Day 2 Program Highlights:</strong></p>
+    <ul>
+      <li><strong>Development of Specific Training Plans</strong> - Hands-on creation of unit-specific training plans</li>
+      <li><strong>In-Company Training Plan Development</strong> - Structuring workplace-based learning experiences</li>
+      <li><strong>Rotational Plan Development</strong> - Designing student rotation schedules between institution and industry</li>
+      <li><strong>Use of Mentoring Tools</strong> - Implementing effective mentorship frameworks</li>
+      <li><strong>Establishment and Roles of TICC</strong> - Training Institution Coordination Committee setup and responsibilities</li>
+      <li><strong>Challenges in Dual Training</strong> - Experience sharing and solutions discussion</li>
+    </ul>
+    
+    <p><strong>Key Workshop Objectives:</strong></p>
+    <ul>
+      <li>Sensitization on the D-TVET model and its benefits</li>
+      <li>Understanding dual training implementation steps</li>
+      <li>Mastering documentation requirements for planning and delivery</li>
+      <li>Developing practical skills in creating training plans</li>
+      <li>Building capacity for effective mentorship and coordination</li>
+      <li>Addressing implementation challenges through collaborative problem-solving</li>
+    </ul>
+    
+    <p>The workshop featured interactive sessions with energizers, group work, and practical exercises. Participants actively engaged in developing training plans, sharing experiences, and learning from facilitators from Kenya School of TVET and GIZ consultants.</p>
+    
+    <p><strong>Impact and Benefits:</strong></p>
+    <ul>
+      <li>Enhanced understanding of dual training methodology among Kongoni trainers</li>
+      <li>Improved capacity to implement modularized CBET curriculum</li>
+      <li>Strengthened collaboration with industry partners</li>
+      <li>Better preparation for establishing TICC structures</li>
+      <li>Practical tools and templates for training plan development</li>
+      <li>Network building with trainers from other TVET institutions</li>
+    </ul>
+    
+    <p>"This workshop has equipped our trainers with essential skills and knowledge to effectively implement the dual training model," remarked Deputy Principal for Academics. "The hands-on approach and collaborative learning environment provided invaluable insights that we will immediately apply in our training programs."</p>
+    
+    <p>The dual TVET model combines theoretical learning at the institution with practical training at industry workplaces, ensuring trainees gain real-world experience and industry-relevant skills. This approach significantly enhances graduate employability and bridges the gap between education and industry needs.</p>
+    
+    <p>Kongoni Technical and Vocational College remains committed to adopting best practices in technical education, and this workshop represents a significant milestone in our journey toward excellence in dual training delivery.</p>
+    
+    <p>The knowledge and skills gained from this workshop will be cascaded to all training staff, ensuring consistent implementation of the dual TVET model across all departments at Kongoni Technical and Vocational College.</p>
+  `,
+  imageUrl: "/images/newsevents/dualtvetworkshop/dualworkshop7.jpeg",
+  images: [
+    "/images/newsevents/dualtvetworkshop/dualworkshop1.jpeg",
+    "/images/newsevents/dualtvetworkshop/dualworkshop2.jpeg",
+    "/images/newsevents/dualtvetworkshop/dualworkshop3.jpeg",
+    "/images/newsevents/dualtvetworkshop/dualworkshop4.jpeg",
+    "/images/newsevents/dualtvetworkshop/dualworkshop5.jpeg",
+    "/images/newsevents/dualtvetworkshop/dualworkshop6.jpeg"
+  ],
+  videoThumbnail: "/images/newsevents/dualtvetworkshop/dualworkshop4.jpeg",
+  featured: true,
+  createdAt: "2025-10-24T17:00:00Z",
+  updatedAt: "2025-10-24T17:00:00Z",
+  author: "Academic Affairs Department",
+  category: "Training",
+  eventDate: "2025-10-24",
+  location: "Starbucks Hotel, Eldoret",
+  tags: ["dual-tvet", "workshop", "training", "giz", "kstvet", "dualization", "cbet", "modular-curriculum", "capacity-building", "rift-valley", "professional-development", "trainers"]
+},
+{
+  id: "24",
+  title: "Sports Day 2025 - Athletic Excellence and Team Spirit",
+  excerpt: "Kongoni Technical College hosted an electrifying Sports Day featuring football, volleyball, handball, and netball competitions. Eleven Stars crowned football champions with Rising Stars and Green Garden taking second and third positions respectively.",
+  content: `
+    <p>On October 10th, 2025, Kongoni Technical & Vocational Training College held its annual Sports Day, showcasing exceptional athletic talent and team spirit across multiple sporting disciplines.</p>
+    
+    <p>The day featured intense competitions in four major sports categories, with trainees demonstrating remarkable skills, determination, and sportsmanship throughout the event.</p>
+    
+    <p><strong>Sports Featured:</strong></p>
+    <ul>
+      <li>Football (Men's and Ladies')</li>
+      <li>Volleyball</li>
+      <li>Handball</li>
+      <li>Netball</li>
+    </ul>
+    
+    <p><strong>Men's Football Tournament Results:</strong></p>
+    <p>The men's football tournament was highly competitive, featuring 8 talented teams battling for supremacy on the field. After intense matches throughout the day, the champions emerged:</p>
+    <ul>
+      <li><strong>🥇 Champions: ELEVEN STARS</strong> - Demonstrated exceptional teamwork, strategic gameplay, and technical skills to claim the top position.</li>
+      <li><strong>🥈 2nd Runners-Up: RISING STARS</strong> - Lived up to their name with impressive performances, showing great potential and determination.</li>
+      <li><strong>🥉 3rd Place: GREEN GARDEN</strong> - Secured third position with commendable performances, displaying strong defensive strategies.</li>
+    </ul>
+    
+    <p><strong>Ladies' Football Competition:</strong></p>
+    <ul>
+      <li><strong>🥇 Champions: TEAM A</strong> - Emerged victorious with superior gameplay and outstanding performances.</li>
+    </ul>
+    
+    <p><strong>Event Highlights:</strong></p>
+    <ul>
+      <li>Over 200 student athletes participated across all sports</li>
+      <li>8 men's football teams competed in intense tournament format</li>
+      <li>2 ladies' football teams showcased women's athletic prowess</li>
+      <li>Professional officiating ensuring fair play throughout</li>
+    </ul>
+    
+    <p>"Today's Sports Day exemplifies our commitment to holistic education," remarked Principal Judith Akaranga during the awards ceremony.</p>
+    
+    <p>The event concluded with an awards ceremony where champions received their trophies amid cheers from fellow trainees.</p>
+  `,
+  imageUrl: "/images/newsevents/kattigames/kattigames9.jpg",
+  images: [
+    "/images/newsevents/kattigames/kattigames1.jpg",
+    "/images/newsevents/kattigames/kattigames2.jpg",
+    "/images/newsevents/kattigames/kattigames3.jpg",
+    "/images/newsevents/kattigames/kattigames4.jpg",
+    "/images/newsevents/kattigames/kattigamesladies5.jpg",
+    "/images/newsevents/kattigames/kattigamesladies6.jpg",
+    "/images/newsevents/kattigames/kattigamesladies7.jpg",
+    "/images/newsevents/kattigames/kattigamesladies8.jpg",
+    "/images/newsevents/kattigames/kattigames9.jpg"
+  ],
+  videoThumbnail: "/images/newsevents/kattigames/kattigames9.jpg",
+  featured: true,
+  createdAt: "2025-10-10T16:00:00Z",
+  updatedAt: "2025-10-10T16:00:00Z",
+  author: "Sports Department",
+  category: "Events",
+  eventDate: "2025-10-10",
+  location: "Matunda SA School",
+  tags: ["sports", "football", "volleyball", "handball", "netball", "championship", "athletics", "competition", "sports-day", "team-spirit"]
+},
+{
+  id: "23",
+  title: "Mazingira Day 2025 - 548 Fruit Trees Planted at Nangili Primary School",
+  excerpt: "KTVC joined forces with Equity Bank Moi's Bridge and Scout Society to celebrate Mazingira Day by planting 548 fruit trees at Nangili Comprehensive Primary School under the theme 'Citizen-Centric Tree Growing and Stewardship'.",
+  content: `
+    <p>On October 10th, 2025, Kongoni Technical & Vocational Training College, in partnership with Equity Bank Moi's Bridge and the KTVC Scout Society, celebrated Mazingira Day with a massive tree planting initiative at Nangili Comprehensive Primary School.</p>
+    
+    <p>Under the theme "Citizen-Centric Tree Growing and Stewardship" and hashtags #TurudiPrimo and #TukaDonateFruitTrees, the collaborative effort resulted in planting 548 fruit trees.</p>
+    
+    <p><strong>Complete Breakdown of Trees Planted:</strong></p>
+    <ul>
+      <li><strong>🥑 Avocados: 68 trees</strong></li>
+      <li><strong>🍈 Guavas: 156 trees</strong></li>
+      <li><strong>🥭 Grafted Mangoes: 50 trees</strong></li>
+      <li><strong>🌰 Macadamia (Njugu Mawe): 21 trees</strong></li>
+      <li><strong>🍈 Jackfruit (Fenesi): 56 trees</strong></li>
+      <li><strong>🍏 Custard Apple (Mafora): 18 trees</strong></li>
+      <li><strong>🫐 Black Plum (Zambarau): 2 trees</strong></li>
+      <li><strong>🍑 Loquat (Chinduli): 157 trees</strong></li>
+      <li><strong>🔴 Pomegranate (Mkomamanga): 20 trees</strong></li>
+    </ul>
+    
+    <p><strong>Environmental and Community Impact:</strong></p>
+    <ul>
+      <li>Carbon sequestration and climate change mitigation</li>
+      <li>Food security for school children</li>
+      <li>Educational value for environmental studies</li>
+      <li>Soil conservation and microclimate improvement</li>
+    </ul>
+    
+    <p>Deputy Principal Ezra Orina emphasized: "Today we plant more than trees - we plant hope, nutrition, and a sustainable future for these children."</p>
+  `,
+  imageUrl: "/images/newsevents/treeplanting/nangilitree2.jpg",
+  images: [
+    "/images/newsevents/treeplanting/nangilitree3.jpg",
+    "/images/newsevents/treeplanting/nangilitree7.jpg",
+    "/images/newsevents/treeplanting/nangilitree49.jpg",
+    "/images/newsevents/treeplanting/nangilitree48.jpg",
+    "/images/newsevents/treeplanting/nangilitree1.jpg",
+    "/images/newsevents/treeplanting/nangilitree4.jpg",
+    "/images/newsevents/treeplanting/nangilitreeselect5.jpg",
+    "/images/newsevents/treeplanting/nangilitreeselect6.jpg",
+    "/images/newsevents/treeplanting/nangilitreeselect7.jpg",
+    "/images/newsevents/treeplanting/nangilitreeselect8.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=mazingira_day_2024",
+  videoThumbnail: "/images/newsevents/treeplanting/nangilitree7.jpg",
+  featured: true,
+  createdAt: "2025-10-10T14:00:00Z",
+  updatedAt: "2025-10-10T14:00:00Z",
+  author: "Environmental Conservation Team",
+  category: "Events",
+  eventDate: "2025-10-10",
+  location: "Nangili Comprehensive Primary School",
+  tags: ["mazingira-day", "tree-planting", "environment", "conservation", "equity-bank", "scouts", "community-service", "sustainability", "fruit-trees", "greening", "turudi-primo"]
+},
+{
+  id: "22",
+  title: "CBET Modular Curriculum Delivery Workshop at Sigalagala National Polytechnic",
+  excerpt: "Kongoni Technical College's academic leadership team participated in a comprehensive 5-day workshop on Competency-Based Education and Training (CBET) modular curriculum delivery at Sigalagala National Polytechnic.",
+  content: `
+    <p>A delegation from Kongoni Technical & Vocational Training College participated in an intensive 5-day workshop on Competency-Based Education and Training (CBET) modular curriculum delivery at Sigalagala National Polytechnic from September 8-12, 2025.</p>
+    
+    <p>The college was represented by key academic leadership including all Heads of Departments (HODs), the Examinations Officer, and the Deputy Principal for Academics.</p>
+    
+    <p><strong>Workshop Participants:</strong></p>
+    <ul>
+      <li>Deputy Principal for Academics - Ms. Lucy Makhokha</li>
+      <li>Examinations Officer - Mr. Paul Kyalo</li>
+      <li>All Department Heads</li>
+    </ul>
+    
+    <p>The workshop focused on enhancing CBET methodology implementation, emphasizing practical skills acquisition and competency demonstration.</p>
+  `,
+  imageUrl: "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
+  images: [
+    "/images/newsevents/sigalagalatraining/modulartraining1.jpg",
+    "/images/newsevents/sigalagalatraining/modulartraining2.jpg",
+    "/images/newsevents/sigalagalatraining/modulartraining3.jpg",
+    "/images/newsevents/sigalagalatraining/modulartraining4.jpg",
+    "/images/newsevents/sigalagalatraining/modulartraining5.jpg",
+    "/images/newsevents/sigalagalatraining/modulartraining6.jpg",
+    "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
+    "/images/newsevents/sigalagalatraining/modulartraining8.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=cbet_workshop_highlights",
+  videoThumbnail: "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
+  featured: true,
+  createdAt: "2025-09-12T18:00:00Z",
+  updatedAt: "2025-09-12T18:00:00Z",
+  author: "Academics Department",
+  category: "Training",
+  eventDate: "2025-09-12",
+  location: "Sigalagala National Polytechnic",
+  tags: ["cbet", "curriculum", "training", "academic-staff", "competency-based", "modular-delivery", "professional-development"]
+},
+{
+  id: "21",
+  title: "Kongoni Technical Hosts CS Oparanya at NYOTA Entrepreneurship Training Completion by Ebullient Professional Agencies",
+  excerpt: "Hon. Wycliffe Oparanya, Cabinet Secretary for Co-operatives and MSMEs, was chief guest at the completion ceremony of the 4-day NYOTA entrepreneurship training program that empowered 150 youths with business skills.",
+  content: `
+    <p>Kongoni Technical & Vocational Training College had the honor of hosting Hon. Wycliffe Oparanya, Cabinet Secretary for Co-operatives and Micro, Small and Medium Enterprises (MSMEs), as chief guest during the completion ceremony of the NYOTA (National Youth Opportunities Training Academy) entrepreneurship training program.</p>
+    
+    <p>The hosted 4-day intensive training program, held from September 12-15, 2025, successfully empowered 150 young entrepreneurs with essential business skills and knowledge needed to establish and manage successful enterprises.</p>
+    
+    <p><strong>Training Program Highlights:</strong></p>
+    <ul>
+      <li>Business plan development and financial planning</li>
+      <li>Market research and customer identification</li>
+      <li>Digital marketing strategies for small businesses</li>
+      <li>Access to government funding and support programs</li>
+      <li>Legal requirements for business registration</li>
+      <li>Record keeping and basic accounting principles</li>
+      <li>Product development and quality control</li>
+      <li>Networking and partnership building</li>
+    </ul>
+    
+    <p>During his address, CS Oparanya emphasized the government's commitment to youth empowerment through skills development and entrepreneurship. "The NYOTA initiative represents our dedication to creating opportunities for young Kenyans to become job creators rather than job seekers," he stated.</p>
+    
+    <p>The Cabinet Secretary praised Kongoni Technical College for its role in implementing government initiatives and providing quality training facilities. "Institutions like Kongoni Technical College are instrumental in achieving our vision of an empowered and economically active youth population," he noted.</p>
+    
+    <p><strong>Key Program Outcomes:</strong></p>
+    <ul>
+      <li>150 youths certified in entrepreneurship skills</li>
+      <li>85% of participants developed viable business plans</li>
+      <li>Formation of 12 youth business groups for collective ventures</li>
+      <li>Commitment from 120 participants to start businesses within 6 months</li>
+      <li>Establishment of mentorship networks with successful entrepreneurs</li>
+      <li>Access to government funding opportunities for qualified participants</li>
+    </ul>
+    
+    <p>Principal Judith Akaranga expressed gratitude to the government for selecting the college as a NYOTA training center. "This partnership demonstrates our capacity to deliver quality training programs that align with national development goals," she said.</p>
+    
+    <p>The training sessions, conducted daily from 8:00 AM to 4:00 PM, featured a blend of theoretical instruction and practical exercises. Participants engaged in business simulation activities, developed actual business plans, and received mentorship from experienced entrepreneurs.</p>
+    
+    <p><strong>Government Support Initiatives Highlighted:</strong></p>
+    <ul>
+      <li>Youth Enterprise Development Fund (YEDF) access procedures</li>
+      <li>Uwezo Fund application processes</li>
+      <li>Government procurement opportunities for youth-owned businesses</li>
+      <li>Tax incentives and exemptions for young entrepreneurs</li>
+      <li>Access to industrial parks and business incubation centers</li>
+      <li>Export promotion support for scalable businesses</li>
+    </ul>
+    
+    <p>The completion ceremony featured presentations by outstanding participants who showcased innovative business ideas ranging from agribusiness to technology solutions. Several participants received seed funding commitments from local investors present at the event.</p>
+    
+    <p>CS Oparanya announced plans to expand the NYOTA program to reach more youths across the country, with Kongoni Technical College identified as a model training center for replication in other regions.</p>
+    
+    <p>"Today marks not the end but the beginning of your entrepreneurial journey," the Cabinet Secretary told the participants. "The skills you have acquired here will enable you to contribute meaningfully to Kenya's economic transformation."</p>
+    
+    <p>The college established a follow-up support system to track participants' progress and provide ongoing mentorship as they implement their business plans in their respective communities.</p>
+  `,
+  imageUrl: "/images/newsevents/nyotaexitmeeting/nyotaexit18th-25.jpeg",
+  images: [
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-25.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-4.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-2.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-3.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-5.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-14.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-15.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-8.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-17.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-22.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-24.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-30.jpeg",
+    "/images/newsevents/nyotaexitmeeting/nyotaexit18th-25.jpeg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=cs_oparanya_nyota_visit",
+  videoThumbnail: "/images/newsevents/nyotaexitmeeting/nyotaexit18th-23.jpeg",
+  featured: true,
+  createdAt: "2025-09-15T16:00:00Z",
+  updatedAt: "2025-09-15T16:00:00Z",
+  author: "Administration",
+  category: "Events",
+  eventDate: "2025-09-15",
+  location: "College Grounds",
+  tags: ["nyota", "entrepreneurship", "cabinet-secretary", "youth-empowerment", "government-initiative", "business-training", "graduation"]
+},
+{
+  id: "19",
+  title: "3rd Board of Governors Inauguration - Transition to New Leadership Structure",
+  excerpt: "Historic transition as Kongoni Technical & Vocational Training College transitions from Board of Management to the new Board of Governance structure, marking a significant milestone in institutional development.",
+  content: `
+    <p>On September 5th, 2025, Kongoni Technical & Vocational Training College held its historic 3rd Board of Governance meeting, marking a significant transition in the institution's leadership structure.</p>
+    
+    <p>This meeting represented the formal transition from the previous Board of Management to the newly established Board of Governance, reflecting the college's commitment to enhanced institutional governance and strategic oversight.</p>
+    
+    <p><strong>Key Highlights of the Meeting:</strong></p>
+    <ul>
+      <li>Formal handover from the outgoing Board of Management</li>
+      <li>Introduction and orientation of new Board of Governance members</li>
+      <li>Review of institutional strategic plans and performance indicators</li>
+      <li>Discussion of governance framework and operational policies</li>
+      <li>Budget review and financial oversight responsibilities</li>
+      <li>Academic quality assurance and program development priorities</li>
+      <li>Infrastructure development and modernization plans</li>
+      <li>Student welfare and community engagement initiatives</li>
+    </ul>
+    
+    <p>The new Board of Governance brings together experienced professionals from various sectors including education, industry, government, and community leadership, ensuring comprehensive oversight and strategic guidance for the institution.</p>
+    
+    <p>"This transition represents our commitment to excellence in governance and our dedication to providing world-class technical and vocational education," said the Board Chairperson during the meeting.</p>
+    
+    <p>The Board of Governance will provide enhanced strategic oversight, ensuring the college continues to meet evolving industry needs while maintaining high educational standards. This governance structure aligns with best practices in technical and vocational education management.</p>
+    
+    <p><strong>Areas of Focus for the New Board:</strong></p>
+    <ul>
+      <li>Strategic planning and institutional development</li>
+      <li>Quality assurance and academic standards</li>
+      <li>Financial sustainability and resource mobilization</li>
+      <li>Industry partnerships and graduate employability</li>
+      <li>Innovation in technical education delivery</li>
+      <li>Community engagement and social responsibility</li>
+    </ul>
+    
+    <p>The college community looks forward to the enhanced leadership and strategic direction that the new Board of Governance will provide as we continue to build on our reputation as a leading technical and vocational training institution.</p>
+    
+    <p>This governance transition positions Kongoni Technical & Vocational Training College for continued growth and excellence in technical education delivery.</p>
+  `,
+  imageUrl: "/images/admin/board/bog2.jpg",
+  images: [
+    "/images/admin/board/bog1.jpeg",
+    "/images/admin/board/bog2.jpeg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=board_governance_meeting",
+  videoThumbnail: "/images/admin/admin1.jpeg",
+  featured: true,
+  createdAt: "2025-09-05T14:30:00Z",
+  updatedAt: "2025-09-05T14:30:00Z",
+  author: "Administration",
+  category: "Events",
+  eventDate: "2025-09-05",
+  location: "Principals Office",
+  tags: ["governance", "board-meeting", "leadership", "transition", "administration", "strategic-planning"]
+},
+{
+  id: "20",
+  title: "Term Opening Prayer Day - Spiritual Blessing for New Academic Term",
+  excerpt: "The college community came together for a special prayer service to seek divine blessing and guidance for the new academic term, fostering unity and spiritual well-being among trainees and staff.",
+  content: `
+    <p>On September 9th, 2025, Kongoni Technical & Vocational Training College held a special Term Opening Prayer Day, bringing together the entire college community to seek divine blessing and guidance for the new academic term.</p>
+    
+    <p>The prayer service, held at the main campus grounds, was attended by trainees, faculty, staff, and invited religious leaders from various denominations, reflecting the college's commitment to holistic education that nurtures both academic and spiritual development.</p>
+    
+    <p><strong>Prayer Service Program:</strong></p>
+    <ul>
+      <li>Opening worship and praise session</li>
+      <li>Welcome address by Principal Judith Akaranga</li>
+      <li>Interfaith prayers for academic success and guidance</li>
+      <li>Special prayers for trainees, faculty, and staff</li>
+      <li>Blessing of academic facilities and laboratories</li>
+      <li>Prayers for safety and protection throughout the term</li>
+      <li>Community fellowship and refreshments</li>
+    </ul>
+    
+    <p>"As we begin this new academic term, we recognize the importance of spiritual foundation in our educational journey," said Principal Judith Akaranga during her address. "This prayer day reminds us that success comes not only through hard work but also through divine guidance and blessing."</p>
+    
+    <p>The event featured participation from multiple religious denominations, emphasizing the college's inclusive approach to spiritual matters while respecting diverse faith backgrounds within the college community.</p>
+    
+    <p><strong>Key Prayer Themes:</strong></p>
+    <ul>
+      <li>Academic excellence and wisdom for trainees and instructors</li>
+      <li>Safety and protection for the college community</li>
+      <li>Unity and harmony among diverse backgrounds</li>
+      <li>Guidance for institutional leadership and decision-making</li>
+      <li>Success in upcoming examinations and assessments</li>
+      <li>Prosperity and growth for the institution</li>
+      <li>Community outreach and social impact</li>
+    </ul>
+    
+    <p>trainees from various departments participated actively, with many expressing gratitude for the opportunity to begin their academic journey with spiritual grounding. The prayer day also included special intercessions for new trainees beginning their studies.</p>
+    
+    <p>"This prayer day helps create a positive atmosphere for learning and reminds us that we are part of a caring community," said Mary Wanjiku, a Business Studies student.</p>
+    
+    <p>The college's commitment to spiritual well-being complements its focus on academic and technical excellence, recognizing that holistic education addresses all aspects of human development.</p>
+    
+    <p>Religious leaders from the local community praised the college's initiative, noting how such gatherings strengthen community bonds and provide moral foundation for educational pursuits.</p>
+    
+    <p>The Term Opening Prayer Day concluded with a blessing ceremony for all academic activities, setting a positive and hopeful tone for the term ahead.</p>
+  `,
   imageUrl: "/images/newsevents/prayerday/prayerday1.jpeg",
   images: [
     "/images/newsevents/prayerday/prayerday1.jpeg",
     "/images/newsevents/prayerday/prayerday2.jpeg",
     "/images/newsevents/prayerday/prayerday3.jpeg"
   ],
-    videoUrl: "https://www.youtube.com/watch?v=prayer_day_highlights",
-    videoThumbnail: "/images/newsevents/prayer/prayer1.jpg",
-    featured: true,
-    createdAt: "2025-09-09T10:00:00Z",
-    updatedAt: "2025-09-09T10:00:00Z",
-    author: "Student Affairs",
-    category: "Student Life",
-    eventDate: "2025-09-09",
-    location: "Main Campus Grounds",
-    tags: ["prayer", "spirituality", "term-opening", "community", "blessing", "interfaith", "student-life"]
-  },
-  {
-    id: "18",
-    title: "September 2025 Intake trainees Reporting for New Academic Year",
-    excerpt: "We warmly welcome the September 2025 intake trainees as they begin their technical and vocational training journey at Kongoni Technical & Vocational Training College.",
-    content: `
-      <p>Kongoni Technical & Vocational Training College is pleased to welcome the September 2025 intake trainees who are reporting for the commencement of their technical and vocational training programs.</p>
-      
-      <p>The September intake includes trainees enrolled in various departments:</p>
-      <ul>
-        <li><strong>Building & Construction:</strong> Masonry, Carpentry, Plumbing, and Electrical Installation</li>
-        <li><strong>ICT Department:</strong> Computer Studies, Software Development, and Digital Marketing</li>
-        <li><strong>Automotive Department:</strong> Motor Vehicle Mechanics and Auto Electrical</li>
-        <li><strong>Business Studies:</strong> Entrepreneurship, Accounting, and Business Management</li>
-        <li><strong>Fashion & Design:</strong> Tailoring and Dress Making</li>
-        <li><strong>Food & Beverage:</strong> Catering and Food Production</li>
-      </ul>
-      
-      <p>During the orientation week, new trainees will:</p>
-      <ul>
-        <li>Complete registration and documentation processes</li>
-        <li>Receive campus tours and facility orientations</li>
-        <li>Meet with academic advisors and department heads</li>
-        <li>Attend mandatory health and safety briefings</li>
-        <li>Participate in team-building activities</li>
-        <li>Receive their student handbooks and timetables</li>
-      </ul>
-      
-      <p>"We are excited to welcome this new cohort of trainees who will contribute to Kenya's skilled workforce," said Principal Judith Akaranga. "Our comprehensive programs will equip them with practical skills and knowledge needed for successful careers."</p>
-      
-      <p>The college continues to maintain high admission standards while providing accessible technical education opportunities. trainees will benefit from modern facilities, experienced instructors, and strong industry partnerships.</p>
-      
-      <p>We wish all new trainees success in their academic journey and look forward to seeing their achievements throughout the program.</p>
-    `,
-    imageUrl: "/images/admin/admin1.jpeg",
-    images: [
-      "/images/admin/admin1.jpeg",
-      "/images/admin/admin2.jpeg",
-      "/images/admin/admin3.jpeg",
-      "/images/admin/admin4.jpeg",
-      "/images/campus/campus1.jpg",
-      "/images/campus/campus2.jpg",
-      "/images/newsevents/orientation/orientation1.jpg",
-      "/images/newsevents/orientation/orientation2.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=orientation_welcome",
-    videoThumbnail: "/images/admin/admin1.jpeg",
-    featured: true,
-    createdAt: "2025-09-02T08:00:00Z",
-    updatedAt: "2025-09-02T08:00:00Z",
-    author: "Administration",
-    category: "Student Life",
-    eventDate: "2025-09-02",
-    location: "Main Campus",
-    tags: ["intake", "new-trainees", "orientation", "academic-year"]
-  },
-  {
-    id: "1",
-    title: "Kongoni trainees Excel at Katti Athletics Games 2025 - Gold Medal Victory",
-    excerpt: "Our athletes brought home multiple medals from the Katti Athletics Games, showcasing exceptional talent in track and field events across various categories.",
-    content: `
-      <p>Kongoni Technical & Vocational Training College is proud to announce the outstanding performance of our student athletes at the prestigious Katti Athletics Games 2024, held at Nyayo National Stadium in Nairobi.</p>
-      
-      <p>Our dedicated team of 25 student athletes competed against over 200 institutions from across East Africa, bringing home an impressive medal haul:</p>
-      <ul>
-        <li><strong>Gold Medals (3):</strong> 
-          <ul>
-            <li>Mary Chepkemoi (Building Dept.) - 1500m Women's Race</li>
-            <li>James Kiprotich (Automotive Dept.) - Men's Shot Put</li>
-            <li>Women's 4x400m Relay Team (Mixed Departments)</li>
-          </ul>
-        </li>
-        <li><strong>Silver Medals (5):</strong> 100m Sprint, High Jump, Javelin, Long Jump, and Men's 800m</li>
-        <li><strong>Bronze Medals (4):</strong> Various track and field events including discus and pole vault</li>
-      </ul>
-      
-      <p>"This remarkable achievement reflects not only the natural talent of our trainees but also their dedication to training and the excellent coaching support they receive," said Sports Coordinator Mr. David Mutua.</p>
-      
-      <p>The college's investment in sports facilities and training programs continues to pay dividends, with our athletes consistently performing at national and regional levels. Several of our medalists have been scouted for national team selections for upcoming international competitions.</p>
-      
-      <p>Special recognition goes to Mary Chepkemoi who broke the games record in the 1500m women's race with a time of 4:12.8, surpassing the previous record by over 3 seconds.</p>
-      
-      <p>We congratulate all our athletes and look forward to their continued success in upcoming competitions. Special recognition goes to our coaching staff and the entire college community for their unwavering support.</p>
-    `,
-    imageUrl: "/images/newsevents/athletics/athletics23.jpeg",
-    images: [
-      "/images/newsevents/athletics/athletics1.jpeg",
-      "/images/newsevents/athletics/athletics18.jpeg",
-      "/images/newsevents/athletics/athletics23.jpeg",
-      "/images/newsevents/athletics/athletics24.jpeg",
-      "/images/newsevents/athletics/athletics25.jpeg",
-      "/images/newsevents/athletics/athletics26.jpeg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=athletics_highlights_2024",
-    videoThumbnail: "/images/newsevents/athletics/athletics23.jpeg",
-    featured: true,
-    createdAt: "2025-07-15T10:00:00Z",
-    updatedAt: "2025-07-15T10:00:00Z",
-    author: "Sports Department",
-    category: "Achievements",
-    eventDate: "2025-08-15",
-    location: "Nyayo National Stadium, Nairobi",
-    tags: ["athletics", "medals", "competition", "trainees", "gold-medal", "records"]
-  },
-  {
-    id: "2",
-    title: "Annual Guidance and Counselling Day Promotes Student Wellness",
-    excerpt: "Our comprehensive guidance and counselling program focused on mental health, career guidance, and personal development for holistic student growth.",
-    content: `
-      <p>Kongoni Technical & Vocational Training College successfully hosted its Annual Guidance and Counselling Day, emphasizing the importance of mental health and personal development in technical education.</p>
-      
-      <p>The day-long event featured various activities designed to support our trainees' emotional, academic, and career development:</p>
-      <ul>
-        <li>Individual counselling sessions with professional counsellors</li>
-        <li>Group therapy workshops on stress management and study skills</li>
-        <li>Career guidance seminars by industry professionals</li>
-        <li>Mental health awareness presentations</li>
-        <li>Peer support group formations</li>
-        <li>Life skills workshops covering financial literacy and personal relationships</li>
-        <li>Mindfulness and meditation sessions</li>
-        <li>Study techniques and time management workshops</li>
-      </ul>
-      
-      <p>"Student wellness is fundamental to academic success," explained Head of Student Affairs, Ms. Grace Wanjiku. "Through our guidance and counselling program, we ensure that every student has the support they need to thrive both academically and personally."</p>
-      
-      <p>The event saw participation from over 800 trainees across all departments, with positive feedback highlighting the practical value of the sessions. Guest speakers included clinical psychologists, career coaches, and successful alumni who shared their experiences and insights.</p>
-      
-      <p>Key highlights from the day included:</p>
-      <ul>
-        <li>150+ individual counselling sessions conducted</li>
-        <li>20 group workshops with average 15 participants each</li>
-        <li>Career guidance sessions for all final-year trainees</li>
-        <li>Mental health screening for early intervention</li>
-        <li>Formation of 12 peer support groups across departments</li>
-      </ul>
-      
-      <p>The college's commitment to holistic education includes regular counselling services, study groups, and wellness programs throughout the academic year. trainees can access confidential counselling services every weekday at the Student Wellness Center.</p>
-      
-      <p>"The response from trainees has been overwhelmingly positive," noted Senior Counsellor Dr. Peter Kamau. "Many trainees reported feeling more confident about their academic journey and personal development after participating in the day's activities."</p>
-    `,
-    imageUrl: "/images/newsevents/guidancecounselling/guidance4.jpeg",
-    images: [
-      "/images/newsevents/guidancecounselling/guidance1.jpeg",
-      "/images/newsevents/guidancecounselling/guidance2.jpeg",
-      "/images/newsevents/guidancecounselling/guidance3.jpeg",
-      "/images/newsevents/guidancecounselling/guidance4.jpeg",
-      "/images/newsevents/wellness/wellness1.jpg",
-      "/images/newsevents/wellness/wellness2.jpg",
-      "/images/newsevents/counselling/session1.jpg",
-      "/images/newsevents/counselling/session2.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=student_wellness_highlights",
-    videoThumbnail: "/images/newsevents/guidancecounselling/guidance4.jpeg",
-    featured: true,
-    createdAt: "2025-05-10T14:30:00Z",
-    updatedAt: "2025-05-10T14:30:00Z",
-    author: "Student Affairs",
-    category: "Student Life",
-    eventDate: "2025-08-10",
-    location: "Main Campus Auditorium",
-    tags: ["counselling", "wellness", "mental-health", "career-guidance", "student-support"]
-  },
-  {
-    id: "16",
-    title: "Visit by Mr Chris Norris - American Friends of Kenya Founder",
-    excerpt: "The Carpentry section was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) for an engaging day of tree planting and skill sharing.",
-    content: `
-      <p>The Carpentry section in building department was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) on Saturday June 5th.</p>
-      
-      <p>Among the activities of the day were:</p>
-      <ol>
-        <li><strong>Tree planting</strong> - Contributing to our environmental conservation efforts with 50 indigenous tree saplings</li>
-        <li><strong>Visit to the Carpentry store</strong> - Viewing and discussing the various tools and equipment</li>
-        <li><strong>7-hour interaction with trainees</strong> - An intensive workshop in the Carpentry section where participants shared different carpentry skills and collaboratively made an office desk to completion</li>
-        <li><strong>Skills exchange session</strong> - Mr. Norris shared international carpentry techniques and standards</li>
-        <li><strong>Equipment donation discussion</strong> - Planning for future equipment support from American Friends of Kenya</li>
-      </ol>
-      
-      <p>The visit was highly educational and inspiring for our trainees, providing them with exposure to international perspectives on vocational training and craftsmanship. Mr. Norris shared valuable insights from his experience with technical education programs globally.</p>
-      
-      <p>The hands-on desk-making session was particularly engaging, with trainees learning advanced techniques and best practices in furniture construction. The completed office desk will serve as a testament to the collaborative spirit and skilled craftsmanship demonstrated during the visit.</p>
-      
-      <p>The tree planting initiative aligns with the college's commitment to environmental conservation and sustainable practices. The indigenous trees planted will contribute to campus beautification and environmental protection efforts.</p>
-      
-      <p>Mr. Norris expressed his admiration for the dedication and skill level of our carpentry trainees, noting their potential for international market competitiveness with proper support and equipment enhancement.</p>
-      
-      <p>We look forward to his return with promised equipment donations and continuing this valuable partnership that bridges international cooperation with local technical education.</p>
-    `,
-    imageUrl: "/images/departments/building/carpentry1.jpg",
-    images: [
-      "/images/departments/building/carpentry1.jpg",
-      "/images/departments/building/carpentry2.jpg",
-      "/images/departments/building/carpentry3.jpg",
-      "/images/departments/building/building1.jpg",
-      "/images/departments/building/building2.jpg",
-      "/images/newsevents/tree-planting/tree1.jpg",
-      "/images/newsevents/tree-planting/tree2.jpg",
-      "/images/newsevents/international/visit1.jpg"
-    ],
-    featured: true,
-    createdAt: "2025-06-05T14:00:00Z",
-    updatedAt: "2025-06-05T14:00:00Z",
-    author: "Building Department",
-    category: "Events",
-    eventDate: "2024-06-05",
-    location: "Carpentry Workshop, Building Department",
-    tags: ["carpentry", "international", "collaboration", "tree-planting", "skills", "partnership"]
-  },
-  {
-    id: "17", 
-    title: "Drama trainees Achieve Second Position in Regional Competition",
-    excerpt: "Congratulations to our talented drama trainees who secured second position in both solo verse and spoken word categories at the regional drama festival.",
-    content: `
-      <p>We are proud to announce the outstanding achievement of our drama trainees who excelled at the recent regional drama festival, securing second position in two competitive categories.</p>
-      
-      <p><strong>Competition Results:</strong></p>
-      <ul>
-        <li><strong>Solo Verse Category:</strong> 2nd Position - Sarah Mwangi (ICT Department)</li>
-        <li><strong>Spoken Word Category:</strong> 2nd Position - Michael Ochieng (Business Studies)</li>
-      </ul>
-      
-      <p>This remarkable performance showcases the dedication and talent of our trainees, as well as the quality of training they receive in our performing arts program. The trainees competed against numerous institutions from across the region, making their achievement even more significant.</p>
-      
-      <p>The drama program at Kongoni Technical College continues to nurture creative expression alongside technical skills, proving that well-rounded education produces exceptional graduates. Our trainees demonstrated exceptional creativity, stage presence, and mastery of their craft.</p>
-      
-      <p>"These trainees have worked tirelessly to perfect their performances," said Drama Instructor Ms. Faith Wanjiru. "Their success reflects not only their individual talents but also their commitment to excellence in all aspects of their education."</p>
-      
-      <p>The college celebrates this achievement as part of our commitment to developing trainees' creative and communicative abilities, which are essential skills in today's competitive job market.</p>
-      
-      <p>Both trainees will now advance to the national drama competition scheduled for November 2024. The college community looks forward to supporting them as they represent us at the national level.</p>
-      
-      <p>Congratulations to all our drama trainees and their dedicated instructors for this well-deserved recognition!</p>
-    `,
-    imageUrl: "/images/hero/pic.jpg",
-    images: [
-      "/images/hero/cultural1.jpg",
-      "/images/hero/cultural2.jpg", 
-      "/images/hero/cultural3.jpg",
-      "/images/hero/cultural4.jpg",
-      "/images/hero/cultural5.jpg",
-      "/images/newsevents/drama/drama1.jpg",
-      "/images/newsevents/drama/drama2.jpg",
-      "/images/newsevents/drama/drama3.jpg"
-    ],
-    videoUrl: "https://www.youtube.com/watch?v=drama_competition_highlights",
-    videoThumbnail: "/images/hero/cultural5.jpg",
-    featured: true,
-    createdAt: "2024-08-20T16:30:00Z",
-    updatedAt: "2024-08-20T16:30:00Z",
-    author: "Performing Arts Department",
-    category: "Achievements",
-    eventDate: "2024-08-20", 
-    location: "Regional Drama Festival Venue",
-    tags: ["drama", "competition", "performance", "arts", "achievement", "regional"]
-  }
+  videoUrl: "https://www.youtube.com/watch?v=prayer_day_highlights",
+  videoThumbnail: "/images/newsevents/prayer/prayer1.jpg",
+  featured: true,
+  createdAt: "2025-09-09T10:00:00Z",
+  updatedAt: "2025-09-09T10:00:00Z",
+  author: "Student Affairs",
+  category: "Student Life",
+  eventDate: "2025-09-09",
+  location: "Main Campus Grounds",
+  tags: ["prayer", "spirituality", "term-opening", "community", "blessing", "interfaith", "student-life"]
+},
+{
+  id: "18",
+  title: "September 2025 Intake trainees Reporting for New Academic Year",
+  excerpt: "We warmly welcome the September 2025 intake trainees as they begin their technical and vocational training journey at Kongoni Technical & Vocational Training College.",
+  content: `
+    <p>Kongoni Technical & Vocational Training College is pleased to welcome the September 2025 intake trainees who are reporting for the commencement of their technical and vocational training programs.</p>
+    
+    <p>The September intake includes trainees enrolled in various departments:</p>
+    <ul>
+      <li><strong>Building & Construction:</strong> Masonry, Carpentry, Plumbing, and Electrical Installation</li>
+      <li><strong>ICT Department:</strong> Computer Studies, Software Development, and Digital Marketing</li>
+      <li><strong>Automotive Department:</strong> Motor Vehicle Mechanics and Auto Electrical</li>
+      <li><strong>Business Studies:</strong> Entrepreneurship, Accounting, and Business Management</li>
+      <li><strong>Fashion & Design:</strong> Tailoring and Dress Making</li>
+      <li><strong>Food & Beverage:</strong> Catering and Food Production</li>
+    </ul>
+    
+    <p>During the orientation week, new trainees will:</p>
+    <ul>
+      <li>Complete registration and documentation processes</li>
+      <li>Receive campus tours and facility orientations</li>
+      <li>Meet with academic advisors and department heads</li>
+      <li>Attend mandatory health and safety briefings</li>
+      <li>Participate in team-building activities</li>
+      <li>Receive their student handbooks and timetables</li>
+    </ul>
+    
+    <p>"We are excited to welcome this new cohort of trainees who will contribute to Kenya's skilled workforce," said Principal Judith Akaranga. "Our comprehensive programs will equip them with practical skills and knowledge needed for successful careers."</p>
+    
+    <p>The college continues to maintain high admission standards while providing accessible technical education opportunities. trainees will benefit from modern facilities, experienced instructors, and strong industry partnerships.</p>
+    
+    <p>We wish all new trainees success in their academic journey and look forward to seeing their achievements throughout the program.</p>
+  `,
+  imageUrl: "/images/admin/admin1.jpeg",
+  images: [
+    "/images/admin/admin1.jpeg",
+    "/images/admin/admin2.jpeg",
+    "/images/admin/admin3.jpeg",
+    "/images/admin/admin4.jpeg",
+    "/images/campus/campus1.jpg",
+    "/images/campus/campus2.jpg",
+    "/images/newsevents/orientation/orientation1.jpg",
+    "/images/newsevents/orientation/orientation2.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=orientation_welcome",
+  videoThumbnail: "/images/admin/admin1.jpeg",
+  featured: true,
+  createdAt: "2025-09-02T08:00:00Z",
+  updatedAt: "2025-09-02T08:00:00Z",
+  author: "Administration",
+  category: "Student Life",
+  eventDate: "2025-09-02",
+  location: "Main Campus",
+  tags: ["intake", "new-trainees", "orientation", "academic-year"]
+},
+{
+  id: "2",
+  title: "Annual Guidance and Counselling Day Promotes Student Wellness",
+  excerpt: "Our comprehensive guidance and counselling program focused on mental health, career guidance, and personal development for holistic student growth.",
+  content: `
+    <p>Kongoni Technical & Vocational Training College successfully hosted its Annual Guidance and Counselling Day, emphasizing the importance of mental health and personal development in technical education.</p>
+    
+    <p>The day-long event featured various activities designed to support our trainees' emotional, academic, and career development:</p>
+    <ul>
+      <li>Individual counselling sessions with professional counsellors</li>
+      <li>Group therapy workshops on stress management and study skills</li>
+      <li>Career guidance seminars by industry professionals</li>
+      <li>Mental health awareness presentations</li>
+      <li>Peer support group formations</li>
+      <li>Life skills workshops covering financial literacy and personal relationships</li>
+      <li>Mindfulness and meditation sessions</li>
+      <li>Study techniques and time management workshops</li>
+    </ul>
+    
+    <p>"Student wellness is fundamental to academic success," explained Head of Student Affairs, Ms. Grace Wanjiku. "Through our guidance and counselling program, we ensure that every student has the support they need to thrive both academically and personally."</p>
+    
+    <p>The event saw participation from over 800 trainees across all departments, with positive feedback highlighting the practical value of the sessions. Guest speakers included clinical psychologists, career coaches, and successful alumni who shared their experiences and insights.</p>
+    
+    <p>Key highlights from the day included:</p>
+    <ul>
+      <li>150+ individual counselling sessions conducted</li>
+      <li>20 group workshops with average 15 participants each</li>
+      <li>Career guidance sessions for all final-year trainees</li>
+      <li>Mental health screening for early intervention</li>
+      <li>Formation of 12 peer support groups across departments</li>
+    </ul>
+    
+    <p>The college's commitment to holistic education includes regular counselling services, study groups, and wellness programs throughout the academic year. trainees can access confidential counselling services every weekday at the Student Wellness Center.</p>
+    
+    <p>"The response from trainees has been overwhelmingly positive," noted Senior Counsellor Dr. Peter Kamau. "Many trainees reported feeling more confident about their academic journey and personal development after participating in the day's activities."</p>
+  `,
+  imageUrl: "/images/newsevents/guidancecounselling/guidance4.jpeg",
+  images: [
+    "/images/newsevents/guidancecounselling/guidance1.jpeg",
+    "/images/newsevents/guidancecounselling/guidance2.jpeg",
+    "/images/newsevents/guidancecounselling/guidance3.jpeg",
+    "/images/newsevents/guidancecounselling/guidance4.jpeg",
+    "/images/newsevents/wellness/wellness1.jpg",
+    "/images/newsevents/wellness/wellness2.jpg",
+    "/images/newsevents/counselling/session1.jpg",
+    "/images/newsevents/counselling/session2.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=student_wellness_highlights",
+  videoThumbnail: "/images/newsevents/guidancecounselling/guidance4.jpeg",
+  featured: true,
+  createdAt: "2025-05-10T14:30:00Z",
+  updatedAt: "2025-05-10T14:30:00Z",
+  author: "Student Affairs",
+  category: "Student Life",
+  eventDate: "2025-08-10",
+  location: "Main Campus Auditorium",
+  tags: ["counselling", "wellness", "mental-health", "career-guidance", "student-support"]
+},
+{
+  id: "16",
+  title: "Visit by Mr Chris Norris - American Friends of Kenya Founder",
+  excerpt: "The Carpentry section was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) for an engaging day of tree planting and skill sharing.",
+  content: `
+    <p>The Carpentry section in building department was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) on Saturday June 5th.</p>
+    
+    <p>Among the activities of the day were:</p>
+    <ol>
+      <li><strong>Tree planting</strong> - Contributing to our environmental conservation efforts with 50 indigenous tree saplings</li>
+      <li><strong>Visit to the Carpentry store</strong> - Viewing and discussing the various tools and equipment</li>
+      <li><strong>7-hour interaction with trainees</strong> - An intensive workshop in the Carpentry section where participants shared different carpentry skills and collaboratively made an office desk to completion</li>
+      <li><strong>Skills exchange session</strong> - Mr. Norris shared international carpentry techniques and standards</li>
+      <li><strong>Equipment donation discussion</strong> - Planning for future equipment support from American Friends of Kenya</li>
+    </ol>
+    
+    <p>The visit was highly educational and inspiring for our trainees, providing them with exposure to international perspectives on vocational training and craftsmanship. Mr. Norris shared valuable insights from his experience with technical education programs globally.</p>
+    
+    <p>The hands-on desk-making session was particularly engaging, with trainees learning advanced techniques and best practices in furniture construction. The completed office desk will serve as a testament to the collaborative spirit and skilled craftsmanship demonstrated during the visit.</p>
+    
+    <p>The tree planting initiative aligns with the college's commitment to environmental conservation and sustainable practices. The indigenous trees planted will contribute to campus beautification and environmental protection efforts.</p>
+    
+    <p>Mr. Norris expressed his admiration for the dedication and skill level of our carpentry trainees, noting their potential for international market competitiveness with proper support and equipment enhancement.</p>
+    
+    <p>We look forward to his return with promised equipment donations and continuing this valuable partnership that bridges international cooperation with local technical education.</p>
+  `,
+  imageUrl: "/images/departments/building/carpentry1.jpg",
+  images: [
+    "/images/departments/building/carpentry1.jpg",
+    "/images/departments/building/carpentry2.jpg",
+    "/images/departments/building/carpentry3.jpg",
+    "/images/departments/building/building1.jpg",
+    "/images/departments/building/building2.jpg",
+    "/images/newsevents/tree-planting/tree1.jpg",
+    "/images/newsevents/tree-planting/tree2.jpg",
+    "/images/newsevents/international/visit1.jpg"
+  ],
+  featured: true,
+  createdAt: "2025-06-05T14:00:00Z",
+  updatedAt: "2025-06-05T14:00:00Z",
+  author: "Building Department",
+  category: "Events",
+  eventDate: "2024-06-05",
+  location: "Carpentry Workshop, Building Department",
+  tags: ["carpentry", "international", "collaboration", "tree-planting", "skills", "partnership"]
+},
+{
+  id: "17",
+  title: "Drama trainees Achieve Second Position in Regional Competition",
+  excerpt: "Congratulations to our talented drama trainees who secured second position in both solo verse and spoken word categories at the regional drama festival.",
+  content: `
+    <p>We are proud to announce the outstanding achievement of our drama trainees who excelled at the recent regional drama festival, securing second position in two competitive categories.</p>
+    
+    <p><strong>Competition Results:</strong></p>
+    <ul>
+      <li><strong>Solo Verse Category:</strong> 2nd Position - Sarah Mwangi (ICT Department)</li>
+      <li><strong>Spoken Word Category:</strong> 2nd Position - Michael Ochieng (Business Studies)</li>
+    </ul>
+    
+    <p>This remarkable performance showcases the dedication and talent of our trainees, as well as the quality of training they receive in our performing arts program. The trainees competed against numerous institutions from across the region, making their achievement even more significant.</p>
+    
+    <p>The drama program at Kongoni Technical College continues to nurture creative expression alongside technical skills, proving that well-rounded education produces exceptional graduates. Our trainees demonstrated exceptional creativity, stage presence, and mastery of their craft.</p>
+    
+    <p>"These trainees have worked tirelessly to perfect their performances," said Drama Instructor Ms. Faith Wanjiru. "Their success reflects not only their individual talents but also their commitment to excellence in all aspects of their education."</p>
+    
+    <p>The college celebrates this achievement as part of our commitment to developing trainees' creative and communicative abilities, which are essential skills in today's competitive job market.</p>
+    
+    <p>Both trainees will now advance to the national drama competition scheduled for November 2024. The college community looks forward to supporting them as they represent us at the national level.</p>
+    
+    <p>Congratulations to all our drama trainees and their dedicated instructors for this well-deserved recognition!</p>
+  `,
+  imageUrl: "/images/hero/pic.jpg",
+  images: [
+    "/images/hero/cultural1.jpg",
+    "/images/hero/cultural2.jpg",
+    "/images/hero/cultural3.jpg",
+    "/images/hero/cultural4.jpg",
+    "/images/hero/cultural5.jpg",
+    "/images/newsevents/drama/drama1.jpg",
+    "/images/newsevents/drama/drama2.jpg",
+    "/images/newsevents/drama/drama3.jpg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=drama_competition_highlights",
+  videoThumbnail: "/images/hero/cultural5.jpg",
+  featured: true,
+  createdAt: "2024-08-20T16:30:00Z",
+  updatedAt: "2024-08-20T16:30:00Z",
+  author: "Performing Arts Department",
+  category: "Achievements",
+  eventDate: "2024-08-20",
+  location: "Regional Drama Festival Venue",
+  tags: ["drama", "competition", "performance", "arts", "achievement", "regional"]
+},
+{
+  id: "1",
+  title: "Kongoni trainees Excel at Katti Athletics Games 2025 - Gold Medal Victory",
+  excerpt: "Our athletes brought home multiple medals from the Katti Athletics Games, showcasing exceptional talent in track and field events across various categories.",
+  content: `
+    <p>Kongoni Technical & Vocational Training College is proud to announce the outstanding performance of our student athletes at the prestigious Katti Athletics Games 2024, held at Nyayo National Stadium in Nairobi.</p>
+    
+    <p>Our dedicated team of 25 student athletes competed against over 200 institutions from across East Africa, bringing home an impressive medal haul:</p>
+    <ul>
+      <li><strong>Gold Medals (3):</strong> 
+        <ul>
+          <li>Mary Chepkemoi (Building Dept.) - 1500m Women's Race</li>
+          <li>James Kiprotich (Automotive Dept.) - Men's Shot Put</li>
+          <li>Women's 4x400m Relay Team (Mixed Departments)</li>
+        </ul>
+      </li>
+      <li><strong>Silver Medals (5):</strong> 100m Sprint, High Jump, Javelin, Long Jump, and Men's 800m</li>
+      <li><strong>Bronze Medals (4):</strong> Various track and field events including discus and pole vault</li>
+    </ul>
+    
+    <p>"This remarkable achievement reflects not only the natural talent of our trainees but also their dedication to training and the excellent coaching support they receive," said Sports Coordinator Mr. David Mutua.</p>
+    
+    <p>The college's investment in sports facilities and training programs continues to pay dividends, with our athletes consistently performing at national and regional levels. Several of our medalists have been scouted for national team selections for upcoming international competitions.</p>
+    
+    <p>Special recognition goes to Mary Chepkemoi who broke the games record in the 1500m women's race with a time of 4:12.8, surpassing the previous record by over 3 seconds.</p>
+    
+    <p>We congratulate all our athletes and look forward to their continued success in upcoming competitions. Special recognition goes to our coaching staff and the entire college community for their unwavering support.</p>
+  `,
+  imageUrl: "/images/newsevents/athletics/athletics23.jpeg",
+  images: [
+    "/images/newsevents/athletics/athletics1.jpeg",
+    "/images/newsevents/athletics/athletics18.jpeg",
+    "/images/newsevents/athletics/athletics23.jpeg",
+    "/images/newsevents/athletics/athletics24.jpeg",
+    "/images/newsevents/athletics/athletics25.jpeg",
+    "/images/newsevents/athletics/athletics26.jpeg"
+  ],
+  videoUrl: "https://www.youtube.com/watch?v=athletics_highlights_2024",
+  videoThumbnail: "/images/newsevents/athletics/athletics23.jpeg",
+  featured: true,
+  createdAt: "2025-07-15T10:00:00Z",
+  updatedAt: "2025-07-15T10:00:00Z",
+  author: "Sports Department",
+  category: "Achievements",
+  eventDate: "2025-08-15",
+  location: "Nyayo National Stadium, Nairobi",
+  tags: ["athletics", "medals", "competition", "trainees", "gold-medal", "records"]
+}
 ];
 
 export async function GET(
