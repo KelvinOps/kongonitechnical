@@ -901,7 +901,7 @@ export default function CareersPage() {
           <div className="mb-6">
             <h2 className="text-3xl font-bold text-foreground">Role Requirements & Responsibilities</h2>
             <p className="text-gray-600 dark:text-gray-400 mt-1 text-sm">
-              Qualifications and key duties for each role category. Click "View Key Responsibilities" to expand.
+              Qualifications and key duties for each role category. Click View Key Responsibilities to expand.
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-6">
