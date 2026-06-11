@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Complete mock news data - synchronized with main news route
 const mockNews = [
-  {
+{
   id: "41",
   title: "Kongoni TVC Athletes Shine at KATTI Western Region Athletics & Indoor Games 2026 — Qualify for Nationals at Nyayo",
   excerpt: "Kongoni TVC athletes delivered a commanding performance at the KATTI Western Region Athletics & Indoor Games 2026 Championships held at Eregi TTC, claiming six medals across track and field disciplines — including Gold in the 4x400M Relay — and earning qualification to the National Athletics Championships at Nyayo National Stadium.",
@@ -46,24 +46,33 @@ const mockNews = [
 
     <p><em>#KongoniTVC #KATTIAthletics2026 #RegionalChampions #WesternRegionChampions #NyayoNationals2026 #TrackAndField #Athletics #KongoniPride #TVETKenya #SportingExcellence #CelebrationMarch</em></p>
   `,
-  imageUrl: "/images/newsevents/regionalathletics2026/athletics_main.jpg",
+  imageUrl: "/images/newsevents/regionalathletics2026/athletics_main.png",
   images: [
-    "/images/newsevents/regionalathletics2026/athletics_main.jpg",
+    "/images/newsevents/regionalathletics2026/athletics_main.png",
     "/images/newsevents/regionalathletics2026/athletics2.jpg",
     "/images/newsevents/regionalathletics2026/athletics3.jpg",
     "/images/newsevents/regionalathletics2026/athletics4.jpg",
     "/images/newsevents/regionalathletics2026/athletics5.jpg",
     "/images/newsevents/regionalathletics2026/athletics6.jpg",
-    "/images/newsevents/regionalathletics2026/celebration1.jpg",
-    "/images/newsevents/regionalathletics2026/celebration2.jpg",
+    "/images/newsevents/regionalathletics2026/celebration1.jpeg",
+    "/images/newsevents/regionalathletics2026/celebration2.jpeg",
     "/images/newsevents/regionalathletics2026/celebration3.jpg"
+  ],
+    videoUrl: "",
+  videoThumbnail: "/images/newsevents/regionalathletics2026/athletics_main.png",
+  videos: [
+    {
+      url: "https://www.youtube.com/watch?v=8oSY6pelwTc&feature=youtu.be",
+      title: "🎤 Kongoni TVC Athletes Shine at KATTI Western Region Athletics & Indoor Games 2026 ",
+      thumbnail: "/images/newsevents/regionalathletics2026/athletics_main.png"
+    }
   ],
   featured: true,
   createdAt: "2026-06-04T16:00:00Z",
-  updatedAt: "2026-06-04T16:00:00Z",
+  updatedAt: "2026-06-07T16:00:00Z",
   author: "Sports Department",
   category: "Achievements",
-  eventDate: "2026-06-04",
+  eventDate: "2026-06-07",
   location: "Eregi Teachers Training College, Western Kenya",
   tags: [
     "athletics",
@@ -119,29 +128,26 @@ const mockNews = [
 
     <p><em>#KongoniTVC #TraineeSpotlight #StudentInterviews #TVETKenya #RealStories #VocationalEducation #StudentVoices</em></p>
   `,
-  imageUrl: "/images/newsevents/studentinterviews2026/interview_main.jpg",
+  imageUrl: "/images/newsevents/studentinterviews2026/interview_main.jpeg",
   images: [
-    "/images/newsevents/studentinterviews2026/interview_main.jpg",
-    "/images/newsevents/studentinterviews2026/interview2.jpg",
-    "/images/newsevents/studentinterviews2026/interview3.jpg",
-    "/images/newsevents/studentinterviews2026/interview4.jpg",
-    "/images/newsevents/studentinterviews2026/interview5.jpg"
+    "/images/newsevents/studentinterviews2026/interview_main.jpeg",
+    "/images/newsevents/studentinterviews2026/interview2.jpeg"
   ],
-  videoUrl: "https://www.youtube.com/watch?v=YOUR_INTERVIEW_VIDEO_ID",
-  videoThumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpg",
+  videoUrl: "",
+  videoThumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpeg",
   videos: [
     {
-      url: "https://www.youtube.com/watch?v=YOUR_INTERVIEW_VIDEO_ID",
+      url: "",
       title: "🎤 Trainee Spotlight — Student Interviews 2026",
-      thumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpg"
+      thumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpeg"
     }
   ],
   featured: true,
-  createdAt: "2026-06-05T10:00:00Z",
-  updatedAt: "2026-06-05T10:00:00Z",
+  createdAt: "2026-06-08T10:00:00Z",
+  updatedAt: "2026-06-08T10:00:00Z",
   author: "Student Affairs Department",
   category: "Student Life",
-  eventDate: "2026-06-05",
+  eventDate: "2026-06-08",
   location: "Kongoni Technical and Vocational College Campus",
   tags: [
     "student-interviews",
@@ -156,11 +162,12 @@ const mockNews = [
     "inspiration"
   ]
 },
-{
-  id: "39",
-  title: "Madaraka Day 2026 — Celebrating Kenya's Journey to Self-Governance",
-  excerpt: "Kongoni Technical and Vocational College joins the nation in marking Madaraka Day 2026, celebrating 63 years since Kenya attained self-governance on 1st June 1963 — a day of pride, reflection, and renewed national purpose.",
-  content: `
+  {
+    id: "39",
+    title: "Madaraka Day 2026 — Celebrating Kenya's Journey to Self-Governance",
+    excerpt:
+      "Kongoni Technical and Vocational College joins the nation in marking Madaraka Day 2026, celebrating 63 years since Kenya attained self-governance on 1st June 1963 — a day of pride, reflection, and renewed national purpose.",
+    content: `
     <p>On <strong>1st June 2026</strong>, Kongoni Technical and Vocational College joins the entire nation in commemorating <strong>Madaraka Day</strong> — the 63rd anniversary of Kenya attaining internal self-governance in 1963, a pivotal milestone on the road to full independence.</p>
 
     <p>Madaraka Day is a moment for every Kenyan to reflect on the sacrifices of those who fought for freedom, celebrate the progress our nation has made, and recommit to the ideals of unity, hard work, and shared prosperity that define the Kenyan spirit.</p>
@@ -188,34 +195,33 @@ const mockNews = [
 
     <p><em>#MadarakaDay2026 #KongoniTVC #JamhuriYaKenya #TVETKenya #SelfGovernance #NationalPride</em></p>
   `,
-  imageUrl: "/images/newsevents/madaraka2026/madaraka_main.jpg",
-  images: [
-    "/images/newsevents/madaraka2026/madaraka_main.jpg"
-  ],
-  featured: true,
-  createdAt: "2026-06-01T06:00:00Z",
-  updatedAt: "2026-06-01T06:00:00Z",
-  author: "College Administration",
-  category: "Announcements",
-  eventDate: "2026-06-01",
-  location: "Kongoni Technical and Vocational College",
-  tags: [
-    "madaraka-day",
-    "national-holiday",
-    "kenya",
-    "self-governance",
-    "independence",
-    "2026",
-    "national-pride",
-    "community",
-    "announcement"
-  ]
-},
-{
-  id: "38",
-  title: "Eid ul-Adha Mubarak — Wishing Our Community Joy, Peace & Blessings",
-  excerpt: "Kongoni Technical and Vocational College extends warm Eid ul-Adha Mubarak greetings to all Muslim members of our college family and the wider community, wishing them a blessed Festival of Sacrifice filled with gratitude, compassion, and togetherness.",
-  content: `
+    imageUrl: "/images/newsevents/madaraka2026/madaraka_main.png",
+    images: ["/images/newsevents/madaraka2026/madaraka_main.png"],
+    featured: true,
+    createdAt: "2026-06-01T06:00:00Z",
+    updatedAt: "2026-06-01T06:00:00Z",
+    author: "College Administration",
+    category: "Announcements",
+    eventDate: "2026-06-01",
+    location: "Kongoni Technical and Vocational College",
+    tags: [
+      "madaraka-day",
+      "national-holiday",
+      "kenya",
+      "self-governance",
+      "independence",
+      "2026",
+      "national-pride",
+      "community",
+      "announcement",
+    ],
+  },
+  {
+    id: "38",
+    title: "Eid ul-Adha Mubarak — Wishing Our Community Joy, Peace & Blessings",
+    excerpt:
+      "Kongoni Technical and Vocational College extends warm Eid ul-Adha Mubarak greetings to all Muslim members of our college family and the wider community, wishing them a blessed Festival of Sacrifice filled with gratitude, compassion, and togetherness.",
+    content: `
     <p>Kongoni Technical and Vocational College warmly extends heartfelt <strong>Eid ul-Adha Mubarak — عيد الأضحى مبارك</strong> greetings to all Muslim trainees, staff, and the broader community as they celebrate this blessed occasion.</p>
 
     <p>Eid ul-Adha, the <em>Festival of Sacrifice</em>, commemorates the unwavering faith and devotion of Prophet Ibrahim (AS) and marks the culmination of the sacred Hajj pilgrimage. It is a time of profound reflection, gratitude, generosity, and communal unity.</p>
@@ -242,36 +248,35 @@ const mockNews = [
 
     <p><em>#EidulAdha #EidMubarak #KongoniTVC #FestivalOfSacrifice #Unity #Compassion #Generosity</em></p>
   `,
-  imageUrl: "/images/newsevents/eid2026/Finale.png",
-  images: [
-    "/images/newsevents/eid2026/Finale.png"
-  ],
-  featured: true,
-  createdAt: "2026-06-06T06:00:00Z",
-  updatedAt: "2026-06-06T06:00:00Z",
-  author: "College Administration",
-  category: "Announcements",
-  eventDate: "2026-05-27",
-  location: "Kongoni Technical and Vocational College",
-  tags: [
-    "eid-ul-adha",
-    "eid-mubarak",
-    "festival-of-sacrifice",
-    "islamic-holiday",
-    "community",
-    "celebration",
-    "unity",
-    "compassion",
-    "generosity",
-    "2026",
-    "announcement"
-  ]
-},
-{
-  id: "37",
-  title: "Victorious March Through College — Trainees & Trainers Celebrate Western TVET Fair Triumph",
-  excerpt: "In a jubilant display of pride and community spirit, Kongoni TVC trainees and trainers marched through the college environs in a celebratory procession, singing and cheering to honour the institution's historic victories at the 2026 Western TVET Fair.",
-  content: `
+    imageUrl: "/images/newsevents/eid2026/Finale.png",
+    images: ["/images/newsevents/eid2026/Finale.png"],
+    featured: true,
+    createdAt: "2026-05-26T06:00:00Z",
+    updatedAt: "2026-05-26T06:00:00Z",
+    author: "College Administration",
+    category: "Announcements",
+    eventDate: "2026-05-27",
+    location: "Kongoni Technical and Vocational College",
+    tags: [
+      "eid-ul-adha",
+      "eid-mubarak",
+      "festival-of-sacrifice",
+      "islamic-holiday",
+      "community",
+      "celebration",
+      "unity",
+      "compassion",
+      "generosity",
+      "2026",
+      "announcement",
+    ],
+  },
+  {
+    id: "37",
+    title: "Victorious March Through College — Trainees & Trainers Celebrate Western TVET Fair Triumph",
+    excerpt:
+      "In a jubilant display of pride and community spirit, Kongoni TVC trainees and trainers marched through the college environs in a celebratory procession, singing and cheering to honour the institution's historic victories at the 2026 Western TVET Fair.",
+    content: `
     <p>The Kongoni Technical and Vocational College grounds came alive with joyful noise, colour, and pride as trainees and trainers came together for a spirited <strong>Celebratory March</strong> to honour the institution's remarkable achievements at the <strong>2026 Western Region TVET Fair</strong>.</p>
 
     <p>The march wound through the college environs — from the main hall, through the departmental blocks, across the workshop areas, and around the college grounds — with participants singing victory songs, chanting praises, and celebrating as one unified community.</p>
@@ -304,48 +309,49 @@ const mockNews = [
 
     <p><em>#KongoniTVC #VictoriousMarch #WesternTVETFair2026 #NationalsHere #KongoniPride #CelebratoryMarch #TVET</em></p>
   `,
-  imageUrl: "/images/newsevents/celebrationmarch2026/march_main.jpg",
-  images: [
-    "/images/newsevents/celebrationmarch2026/march_main.jpg",
-    "/images/newsevents/celebrationmarch2026/march2.jpg",
-    "/images/newsevents/celebrationmarch2026/march3.jpg",
-    "/images/newsevents/celebrationmarch2026/march4.jpg",
-    "/images/newsevents/celebrationmarch2026/march5.jpg",
-    "/images/newsevents/celebrationmarch2026/march6.jpg",
-    "/images/newsevents/celebrationmarch2026/march7.jpg",
-    "/images/newsevents/celebrationmarch2026/march8.jpg",
-    "/images/newsevents/celebrationmarch2026/march9.jpg",
-    "/images/newsevents/celebrationmarch2026/march10.jpg",
-    "/images/newsevents/celebrationmarch2026/march11.jpg",
-    "/images/newsevents/celebrationmarch2026/march12.jpg"
-  ],
-  featured: true,
-  createdAt: "2026-05-18T14:00:00Z",
-  updatedAt: "2026-05-18T14:00:00Z",
-  author: "Student Affairs Department",
-  category: "Events",
-  eventDate: "2026-05-18",
-  location: "Kongoni Technical and Vocational College Grounds",
-  tags: [
-    "celebratory-march",
-    "victory",
-    "western-tvet-fair",
-    "2026",
-    "beauty-therapy",
-    "civil-engineering",
-    "national-qualifiers",
-    "college-pride",
-    "community",
-    "celebrations",
-    "wote-nationals",
-    "tvet-kenya"
-  ]
-},
-{
-  id: "36",
-  title: "Kongoni TVC Shines at 2026 Western Region TVET Fair — 1st Place Beauty Therapy & 2nd Place Civil Engineering",
-  excerpt: "Kongoni Technical and Vocational College delivered an outstanding performance at the 2026 Western Region TVET Fair (14–16 May), clinching 1st place in Beauty Therapy Skills and 2nd place in Civil & Building Engineering Project Innovation — with both teams now advancing to the National TVET Fair in Wote, Kenya.",
-  content: `
+    imageUrl: "/images/newsevents/celebrationmarch2026/march_main.jpg",
+    images: [
+      "/images/newsevents/celebrationmarch2026/march_main.jpg",
+      "/images/newsevents/celebrationmarch2026/march2.jpg",
+      "/images/newsevents/celebrationmarch2026/march3.jpg",
+      "/images/newsevents/celebrationmarch2026/march4.jpg",
+      "/images/newsevents/celebrationmarch2026/march5.jpg",
+      "/images/newsevents/celebrationmarch2026/march6.jpg",
+      "/images/newsevents/celebrationmarch2026/march7.jpg",
+      "/images/newsevents/celebrationmarch2026/march8.jpg",
+      "/images/newsevents/celebrationmarch2026/march9.jpg",
+      "/images/newsevents/celebrationmarch2026/march10.jpg",
+      "/images/newsevents/celebrationmarch2026/march11.jpg",
+      "/images/newsevents/celebrationmarch2026/march12.jpg",
+    ],
+    featured: true,
+    createdAt: "2026-05-18T14:00:00Z",
+    updatedAt: "2026-05-18T14:00:00Z",
+    author: "Student Affairs Department",
+    category: "Events",
+    eventDate: "2026-05-18",
+    location: "Kongoni Technical and Vocational College Grounds",
+    tags: [
+      "celebratory-march",
+      "victory",
+      "western-tvet-fair",
+      "2026",
+      "beauty-therapy",
+      "civil-engineering",
+      "national-qualifiers",
+      "college-pride",
+      "community",
+      "celebrations",
+      "wote-nationals",
+      "tvet-kenya",
+    ],
+  },
+  {
+    id: "36",
+    title: "Kongoni TVC Shines at 2026 Western Region TVET Fair — 1st Place Beauty Therapy & 2nd Place Civil Engineering",
+    excerpt:
+      "Kongoni Technical and Vocational College delivered an outstanding performance at the 2026 Western Region TVET Fair (14–16 May), clinching 1st place in Beauty Therapy Skills and 2nd place in Civil & Building Engineering Project Innovation — with both teams now advancing to the National TVET Fair in Wote, Kenya.",
+    content: `
     <p>Kongoni Technical and Vocational College has once again demonstrated the exceptional calibre of its trainees and trainers at the prestigious <strong>2026 Western Region TVET Fair</strong>, competing against polytechnics and TVET institutions from across the western region from <strong>14th to 16th May 2026</strong>.</p>
 
     <p>After three days of intensive skills competitions, project presentations, and rigorous judging, Kongoni TVC emerged among the region's top performers — securing medals in two highly competitive categories and earning qualification to the <strong>National TVET Fair in Wote, Kenya</strong>.</p>
@@ -376,51 +382,51 @@ const mockNews = [
 
     <p><em>#KongoniTVC #WesternTVETFair2026 #BeautyTherapy #CivilEngineering #NationalQualifiers #Wote2026 #TVETExcellence #WesternChampions</em></p>
   `,
-  imageUrl: "/images/newsevents/tvetfair2026/tvetfair_main.jpg",
-  images: [
-    "/images/newsevents/tvetfair2026/tvetfair_main.jpg",
-    "/images/newsevents/tvetfair2026/tvetfair_beauty1.jpg",
-    "/images/newsevents/tvetfair2026/tvetfair_beauty2.jpg",
-    "/images/newsevents/tvetfair2026/tvetfair_civil1.jpg",
-    "/images/newsevents/tvetfair2026/tvetfair_civil2.jpg",
-    "/images/newsevents/tvetfair2026/tvetfair_awards.jpg",
-     "/images/newsevents/tvetfair2026/tvetfair_awards1.jpg",
-    "/images/newsevents/tvetfair2026/tvetfair_team.jpg",
-     "/images/newsevents/tvetfair2026/tvetfair_team1.jpg",
+    imageUrl: "/images/newsevents/tvetfair2026/tvetfair_main.jpg",
+    images: [
+      "/images/newsevents/tvetfair2026/tvetfair_main.jpg",
+      "/images/newsevents/tvetfair2026/tvetfair_beauty1.jpg",
+      "/images/newsevents/tvetfair2026/tvetfair_beauty2.jpg",
+      "/images/newsevents/tvetfair2026/tvetfair_civil1.jpg",
+      "/images/newsevents/tvetfair2026/tvetfair_civil2.jpg",
+      "/images/newsevents/tvetfair2026/tvetfair_awards.jpg",
+      "/images/newsevents/tvetfair2026/tvetfair_awards1.jpg",
+      "/images/newsevents/tvetfair2026/tvetfair_team.jpg",
+      "/images/newsevents/tvetfair2026/tvetfair_team1.jpg",
       "/images/newsevents/tvetfair2026/tvetfair_electrical.jpg",
-       "/images/newsevents/tvetfair2026/tvetfair_mechanical.jpg"
-     
-  ],
-  featured: true,
-  createdAt: "2026-05-16T18:00:00Z",
-  updatedAt: "2026-05-16T18:00:00Z",
-  author: "Academic & Student Affairs Department",
-  category: "Achievements",
-  eventDate: "2026-05-16",
-  location: "Western Region TVET Fair, Western Kenya",
-  tags: [
-    "western-tvet-fair",
-    "2026",
-    "beauty-therapy",
-    "civil-engineering",
-    "1st-place",
-    "2nd-place",
-    "national-qualifiers",
-    "wote",
-    "achievement",
-    "competition",
-    "skills-competition",
-    "western-region",
-    "tvet-kenya",
-    "awards",
-    "excellence"
-  ]
-},
-{
-  id: "35",
-  title: "Internal College Exhibition 2026 — Departments Showcase Innovation Ahead of Western TVET Fair",
-  excerpt: "On Tuesday 12th May 2026, Kongoni TVC held an Internal College Exhibition where individual departments presented the impressive items, projects, and skills they had prepared to represent the institution at the upcoming KATTI Western TVET Fair 2026.",
-  content: `
+      "/images/newsevents/tvetfair2026/tvetfair_mechanical.jpg",
+    ],
+    featured: true,
+    createdAt: "2026-05-16T18:00:00Z",
+    updatedAt: "2026-05-16T18:00:00Z",
+    author: "Academic & Student Affairs Department",
+    category: "Achievements",
+    eventDate: "2026-05-16",
+    location: "Western Region TVET Fair, Western Kenya",
+    tags: [
+      "western-tvet-fair",
+      "2026",
+      "beauty-therapy",
+      "civil-engineering",
+      "1st-place",
+      "2nd-place",
+      "national-qualifiers",
+      "wote",
+      "achievement",
+      "competition",
+      "skills-competition",
+      "western-region",
+      "tvet-kenya",
+      "awards",
+      "excellence",
+    ],
+  },
+  {
+    id: "35",
+    title: "Internal College Exhibition 2026 — Departments Showcase Innovation Ahead of Western TVET Fair",
+    excerpt:
+      "On Tuesday 12th May 2026, Kongoni TVC held an Internal College Exhibition where individual departments presented the impressive items, projects, and skills they had prepared to represent the institution at the upcoming KATTI Western TVET Fair 2026.",
+    content: `
     <p>On <strong>Tuesday, 12th May 2026</strong>, the Kongoni Technical and Vocational College grounds buzzed with excitement and creative energy during the <strong>Internal College Exhibition 2026</strong> — an in-house showcase designed to preview and finalise the entries that departments would be presenting at the <strong>KATTI Western TVET Fair 2026</strong>.</p>
 
     <p>The internal exhibition served as a critical dress rehearsal, allowing departmental teams to present their prepared projects, skills demonstrations, and innovations before an internal panel of judges, trainers, and fellow trainees — receiving feedback and affirmation ahead of the regional competition stage.</p>
@@ -450,47 +456,48 @@ const mockNews = [
 
     <p><em>#KongoniTVC #InternalExhibition2026 #WesternTVETFair #StudentInnovation #DepartmentShowcase #TVETExcellence</em></p>
   `,
-  imageUrl: "/images/newsevents/internalexhibition2026/exhibition_main.jpg",
-  images: [
-    "/images/newsevents/internalexhibition2026/exhibition_main.jpg",
-    "/images/newsevents/internalexhibition2026/exhibition_beauty.jpg",
-    "/images/newsevents/internalexhibition2026/exhibition_civil.jpg",
-    "/images/newsevents/internalexhibition2026/exhibition_ict.jpg",
-    "/images/newsevents/internalexhibition2026/exhibition_automotive.jpg",
-    "/images/newsevents/internalexhibition2026/exhibition_food.jpg",
-    "/images/newsevents/internalexhibition2026/exhibition_electrical.jpg"
-  ],
-  featured: true,
-  createdAt: "2026-05-12T17:00:00Z",
-  updatedAt: "2026-05-12T17:00:00Z",
-  author: "Academic Affairs Department",
-  category: "Events",
-  eventDate: "2026-05-12",
-  location: "Kongoni Technical and Vocational College Grounds",
-  tags: [
-    "internal-exhibition",
-    "2026",
-    "tvet-fair",
-    "departments",
-    "innovation",
-    "skills-showcase",
-    "beauty-therapy",
-    "civil-engineering",
-    "ict",
-    "automotive",
-    "fashion-design",
-    "food-beverage",
-    "business-studies",
-    "western-region",
-    "preparation",
-    "student-talent"
-  ]
-},
-{
-  id: "34",
-  title: "Term Opening Prayer Day — Seeking Divine Guidance for the May–August 2026 Term",
-  excerpt: "On Friday 8th May 2026, the Kongoni TVC community gathered in faith and unity for the Term Opening Prayer Day, invoking divine blessing, wisdom, and protection over trainees, trainers, and staff as the new academic term begins.",
-  content: `
+    imageUrl: "/images/newsevents/internalexhibition2026/exhibition_main.jpg",
+    images: [
+      "/images/newsevents/internalexhibition2026/exhibition_main.jpg",
+      "/images/newsevents/internalexhibition2026/exhibition_beauty.jpg",
+      "/images/newsevents/internalexhibition2026/exhibition_civil.jpg",
+      "/images/newsevents/internalexhibition2026/exhibition_ict.jpg",
+      "/images/newsevents/internalexhibition2026/exhibition_automotive.jpg",
+      "/images/newsevents/internalexhibition2026/exhibition_food.jpg",
+      "/images/newsevents/internalexhibition2026/exhibition_electrical.jpg",
+    ],
+    featured: true,
+    createdAt: "2026-05-12T17:00:00Z",
+    updatedAt: "2026-05-12T17:00:00Z",
+    author: "Academic Affairs Department",
+    category: "Events",
+    eventDate: "2026-05-12",
+    location: "Kongoni Technical and Vocational College Grounds",
+    tags: [
+      "internal-exhibition",
+      "2026",
+      "tvet-fair",
+      "departments",
+      "innovation",
+      "skills-showcase",
+      "beauty-therapy",
+      "civil-engineering",
+      "ict",
+      "automotive",
+      "fashion-design",
+      "food-beverage",
+      "business-studies",
+      "western-region",
+      "preparation",
+      "student-talent",
+    ],
+  },
+  {
+    id: "34",
+    title: "Term Opening Prayer Day — Seeking Divine Guidance for the May–August 2026 Term",
+    excerpt:
+      "On Friday 8th May 2026, the Kongoni TVC community gathered in faith and unity for the Term Opening Prayer Day, invoking divine blessing, wisdom, and protection over trainees, trainers, and staff as the new academic term begins.",
+    content: `
     <p>On <strong>Friday, 8th May 2026</strong>, Kongoni Technical and Vocational College paused to gather in prayer and reflection as the institution observed the <strong>Term Opening Prayer Day</strong> for the <strong>May–August 2026 Academic Term</strong>.</p>
 
     <p>In keeping with the college's cherished tradition of anchoring each new term in faith, the prayer day brought together trainees, trainers, and staff in a spirit of unity, gratitude, and hopeful anticipation for the term ahead.</p>
@@ -524,41 +531,42 @@ const mockNews = [
 
     <p><em>#KongoniTVC #PrayerDay #MayTerm2026 #HolisticEducation #TermOpening #FaithAndExcellence</em></p>
   `,
-  imageUrl: "/images/newsevents/prayerday2026/prayerday_main.jpg",
-  images: [
-    "/images/newsevents/prayerday2026/prayerday_main.jpg",
-    "/images/newsevents/prayerday2026/prayerday2.jpg",
-    "/images/newsevents/prayerday2026/prayerday3.jpg",
-    "/images/newsevents/prayerday2026/prayerday4.jpg",
-      "/images/newsevents/prayerday2026/prayerday5.jpg"
-  ],
-  featured: true,
-  createdAt: "2026-05-08T11:00:00Z",
-  updatedAt: "2026-05-08T11:00:00Z",
-  author: "Student Affairs Department",
-  category: "Student Life",
-  eventDate: "2026-05-08",
-  location: "Kongoni Technical and Vocational College Main Grounds",
-  tags: [
-    "prayer-day",
-    "term-opening",
-    "2026",
-    "may-term",
-    "spirituality",
-    "interfaith",
-    "community",
-    "blessing",
-    "holistic-education",
-    "student-life",
-    "faith",
-    "new-term"
-  ]
-},
-{
-  id: "33",
-  title: "May–August 2026 Intake — Trainees Report in Great Numbers for New Academic Term",
-  excerpt: "On 5th May 2026, Kongoni Technical and Vocational College welcomed a large and enthusiastic cohort of returning and new trainees to the May–August 2026 term, with the college grounds bustling with energy as registration and orientation got underway.",
-  content: `
+    imageUrl: "/images/newsevents/prayerday2026/prayerday_main.jpg",
+    images: [
+      "/images/newsevents/prayerday2026/prayerday_main.jpg",
+      "/images/newsevents/prayerday2026/prayerday2.jpg",
+      "/images/newsevents/prayerday2026/prayerday3.jpg",
+      "/images/newsevents/prayerday2026/prayerday4.jpg",
+      "/images/newsevents/prayerday2026/prayerday5.jpg",
+    ],
+    featured: true,
+    createdAt: "2026-05-08T11:00:00Z",
+    updatedAt: "2026-05-08T11:00:00Z",
+    author: "Student Affairs Department",
+    category: "Student Life",
+    eventDate: "2026-05-08",
+    location: "Kongoni Technical and Vocational College Main Grounds",
+    tags: [
+      "prayer-day",
+      "term-opening",
+      "2026",
+      "may-term",
+      "spirituality",
+      "interfaith",
+      "community",
+      "blessing",
+      "holistic-education",
+      "student-life",
+      "faith",
+      "new-term",
+    ],
+  },
+  {
+    id: "33",
+    title: "May–August 2026 Intake — Trainees Report in Great Numbers for New Academic Term",
+    excerpt:
+      "On 5th May 2026, Kongoni Technical and Vocational College welcomed a large and enthusiastic cohort of returning and new trainees to the May–August 2026 term, with the college grounds bustling with energy as registration and orientation got underway.",
+    content: `
     <p>The <strong>5th of May 2026</strong> marked an exciting new beginning for Kongoni Technical and Vocational College as trainees arrived in impressive numbers to report for the commencement of the <strong>May–August 2026 Academic Term</strong>.</p>
 
     <p>The college grounds came alive with the energy of hundreds of trainees — some returning with renewed purpose after the term break, others stepping onto campus for the very first time — all converging to begin what promises to be a vibrant and productive term.</p>
@@ -600,41 +608,42 @@ const mockNews = [
 
     <p><em>#KongoniTVC #MayIntake2026 #NewTerm #TraineesReporting #TVETKenya #WelcomeHome</em></p>
   `,
-  imageUrl: "/images/newsevents/reporting2026may/reporting_main.jpg",
-  images: [
-    "/images/newsevents/reporting2026may/reporting_main.jpg",
-    "/images/newsevents/reporting2026may/reporting2.jpg",
-    "/images/newsevents/reporting2026may/reporting3.jpg",
-    "/images/newsevents/reporting2026may/reporting4.jpg",
-    "/images/newsevents/reporting2026may/reporting5.jpg"
-  ],
-  featured: true,
-  createdAt: "2026-05-05T09:00:00Z",
-  updatedAt: "2026-05-05T09:00:00Z",
-  author: "Administration",
-  category: "Student Life",
-  eventDate: "2026-05-05",
-  location: "Kongoni Technical and Vocational College Grounds",
-  tags: [
-    "trainees-reporting",
-    "may-2026",
-    "new-term",
-    "intake",
-    "orientation",
-    "may-august-term",
-    "student-life",
-    "new-intake",
-    "returning-trainees",
-    "tvet-kenya",
-    "college-opening",
-    "2026"
-  ]
-},
-{
-  id: "31",
-  title: "Kongoni Technical Shines as National Champions at the 2026 Kenya National Drama and Film Festival",
-  excerpt: "Kongoni Technical and Vocational College (Kongoni TVC) has etched its name in the annals of excellence after an outstanding performance at the 2026 Kenya National Drama and Film Festival held in Nyeri County — emerging as national champions in the Advertisement Category on their very first attempt.",
-  content: `
+    imageUrl: "/images/newsevents/reporting2026may/reporting_main.jpg",
+    images: [
+      "/images/newsevents/reporting2026may/reporting_main.jpg",
+      "/images/newsevents/reporting2026may/reporting2.jpg",
+      "/images/newsevents/reporting2026may/reporting3.jpg",
+      "/images/newsevents/reporting2026may/reporting4.jpg",
+      "/images/newsevents/reporting2026may/reporting5.jpg",
+    ],
+    featured: true,
+    createdAt: "2026-05-05T09:00:00Z",
+    updatedAt: "2026-05-05T09:00:00Z",
+    author: "Administration",
+    category: "Student Life",
+    eventDate: "2026-05-05",
+    location: "Kongoni Technical and Vocational College Grounds",
+    tags: [
+      "trainees-reporting",
+      "may-2026",
+      "new-term",
+      "intake",
+      "orientation",
+      "may-august-term",
+      "student-life",
+      "new-intake",
+      "returning-trainees",
+      "tvet-kenya",
+      "college-opening",
+      "2026",
+    ],
+  },
+  {
+    id: "31",
+    title: "Kongoni Technical Shines as National Champions at the 2026 Kenya National Drama and Film Festival",
+    excerpt:
+      "Kongoni Technical and Vocational College (Kongoni TVC) has etched its name in the annals of excellence after an outstanding performance at the 2026 Kenya National Drama and Film Festival held in Nyeri County — emerging as national champions in the Advertisement Category on their very first attempt.",
+    content: `
     <p>Kongoni Technical and Vocational College (Kongoni TVC) has etched its name in the annals of excellence after an outstanding performance at the <strong>2026 Kenya National Drama and Film Festivals</strong> held in Nyeri County. The prestigious event, hosted at <strong>Nyeri National Polytechnic</strong> and <strong>Kagumo Teachers Training College</strong> from <strong>April 6th to 15th</strong>, brought together top-performing institutions from across the country.</p>
     <p>Kongoni Technical emerged as the <strong>national champions in the advertisement category</strong> — a remarkable achievement that has been widely celebrated within and beyond the institution. Their winning piece creatively addressed a relatable and practical issue: demonstrating how students can conveniently pay examination fees using their mobile phones, instead of enduring long, time-consuming queues. The advert resonated strongly with audiences and adjudicators alike for its relevance, clarity, and innovative delivery.</p>
     <p>What makes this triumph even more extraordinary is the fact that <strong>this was the institution's first time ever competing in the advertisement category</strong>. National champions. First attempt. That milestone alone speaks volumes about the calibre of talent nurtured at Kongoni TVC.</p>
@@ -650,58 +659,59 @@ const mockNews = [
     <p><em>Creative Minds. Powerful Stories. Bright Futures.</em></p>
     <p><em>#KongoniTVC #NationalChampions #KNDFF2026 #AdvertisementCategory #EmergingWinners #EquityBank #TVETKenya</em></p>
   `,
-  imageUrl: "/images/newsevents/drama2026national/AdvertWin.jpeg",
-  images: [
-    "/images/newsevents/drama2026national/AdvertWin.jpeg",
-     "/images/newsevents/drama2026national/nationaldrama_advert.png",
-    "/images/newsevents/drama2026national/nationaldrama_advert1.png",
-    "/images/newsevents/drama2026national/nationaldrama_livetv.png"
-  ],
-  videoUrl: "https://www.youtube.com/watch?v=3GdhGQ5QUio",
-  videoThumbnail: "/images/newsevents/drama2026national/nationaldrama_advert.png",
-  videos: [
-    {
-      url: "https://www.youtube.com/watch?v=3GdhGQ5QUio",
-      title: "🏆 Advertisement — National Winning Entry",
-      thumbnail: "/images/newsevents/drama2026national/nationaldrama_advert.png"
-    },
-    {
-      url: "https://www.youtube.com/watch?v=nHvpt8KMo-E",
-      title: "📺 Live TV Production",
-      thumbnail: "/images/newsevents/drama2026national/nationaldrama_livetv.png"
-    }
-  ],
-  featured: true,
-  createdAt: "2026-04-16T10:00:00Z",
-  updatedAt: "2026-04-16T10:00:00Z",
-  author: "Student Affairs Department",
-  category: "Achievements",
-  eventDate: "2026-04-15",
-  location: "Nyeri National Polytechnic & Kagumo Teachers Training College, Nyeri County",
-  tags: [
-    "drama",
-    "national-champions",
-    "kndff2026",
-    "advertisement-category",
-    "emerging-winners",
-    "equity-bank",
-    "live-tv",
-    "film-festival",
-    "2026",
-    "nyeri",
-    "performing-arts",
-    "student-talent",
-    "achievement",
-    "tvet-kenya",
-    "national-competition",
-    "first-attempt"
-  ]
-},
-{
-  id: "30",
-  title: "Drama Club Excels at the 2026 Regional KATTI Drama Festivals - Multiple Awards at Bungoma National Polytechnic",
-  excerpt: "Kongoni Technical and Vocational College's drama club delivered a captivating performance at the 2026 Regional KATTI Drama Festivals held at Bungoma National Polytechnic, scooping multiple awards across solo verse, spoken word, film, and cultural creative dance categories.",
-  content: `
+    imageUrl: "/images/newsevents/drama2026national/AdvertWin.jpeg",
+    images: [
+      "/images/newsevents/drama2026national/AdvertWin.jpeg",
+      "/images/newsevents/drama2026national/nationaldrama_advert.png",
+      "/images/newsevents/drama2026national/nationaldrama_advert1.png",
+      "/images/newsevents/drama2026national/nationaldrama_livetv.png",
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=3GdhGQ5QUio",
+    videoThumbnail: "/images/newsevents/drama2026national/nationaldrama_advert.png",
+    videos: [
+      {
+        url: "https://www.youtube.com/watch?v=3GdhGQ5QUio",
+        title: "🏆 Advertisement — National Winning Entry",
+        thumbnail: "/images/newsevents/drama2026national/nationaldrama_advert.png",
+      },
+      {
+        url: "https://www.youtube.com/watch?v=nHvpt8KMo-E",
+        title: "📺 Live TV Production",
+        thumbnail: "/images/newsevents/drama2026national/nationaldrama_livetv.png",
+      },
+    ],
+    featured: true,
+    createdAt: "2026-04-16T10:00:00Z",
+    updatedAt: "2026-04-16T10:00:00Z",
+    author: "Student Affairs Department",
+    category: "Achievements",
+    eventDate: "2026-04-15",
+    location: "Nyeri National Polytechnic & Kagumo Teachers Training College, Nyeri County",
+    tags: [
+      "drama",
+      "national-champions",
+      "kndff2026",
+      "advertisement-category",
+      "emerging-winners",
+      "equity-bank",
+      "live-tv",
+      "film-festival",
+      "2026",
+      "nyeri",
+      "performing-arts",
+      "student-talent",
+      "achievement",
+      "tvet-kenya",
+      "national-competition",
+      "first-attempt",
+    ],
+  },
+  {
+    id: "30",
+    title: "Drama Club Excels at the 2026 Regional KATTI Drama Festivals - Multiple Awards at Bungoma National Polytechnic",
+    excerpt:
+      "Kongoni Technical and Vocational College's drama club delivered a captivating performance at the 2026 Regional KATTI Drama Festivals held at Bungoma National Polytechnic, scooping multiple awards across solo verse, spoken word, film, and cultural creative dance categories.",
+    content: `
     <p>In a remarkable display of creativity, discipline, and artistic excellence, our institution emerged as one of the standout performers at the <strong>2026 Regional KATTI Drama Festivals</strong>, held at <strong>Bungoma National Polytechnic</strong>. The event brought together talented participants from various institutions across the region, providing a vibrant platform for showcasing theatrical brilliance, cultural expression, and storytelling mastery.</p>
 
     <p>Our drama team captivated audiences and adjudicators alike with a powerful, well-coordinated performance centered on <strong>environmental conservation</strong>, <strong>national cohesion</strong>, <strong>making good life choices</strong>, and <strong>embracing technology in the artificial intelligence era</strong>. These performances ranged from solo verse, narrative, stand-up comedy, modern dance, spoken word, choral verse, film presentations, and culminated in a spectacular cultural creative dance.</p>
@@ -734,62 +744,63 @@ const mockNews = [
 
     <p><em>#KongoniTechnical #KATTIDrama2026 #DramaFestival #BungomaNationalPolytechnic #ArtsAndCulture</em></p>
   `,
-  imageUrl: "/images/newsevents/drama2026/CCD_.png",
-  images: [
-    "/images/newsevents/drama2026/drama2026_1.png",
-    "/images/newsevents/drama2026/drama2026_2.png",
-    "/images/newsevents/drama2026/drama2026_3.png",
-    "/images/newsevents/drama2026/CCD_.png",
-    "/images/newsevents/drama2026/CORALVERSE.png",
-    "/images/newsevents/drama2026/MODERNDANCE.png",
-    "/images/newsevents/drama2026/STANDUPCOMEDY.png",
-    "/images/newsevents/drama2026/SOLOVERSE.png"
-  ],
-  videoUrl: "https://www.youtube.com/watch?v=Cln1l8H34bc",
-  videoThumbnail: "/images/newsevents/drama2026/drama2026_1.png",
-  featured: true,
-  createdAt: "2026-03-30T10:00:00Z",
-  updatedAt: "2026-03-30T10:00:00Z",
-  author: "Student Affairs Department",
-  category: "Achievements",
-  eventDate: "2026-03-08",
-  location: "Bungoma National Polytechnic",
-  tags: [
-    "drama",
-    "katti",
-    "drama-festival",
-    "2026",
-    "bungoma",
-    "solo-verse",
-    "spoken-word",
-    "modern-dance",
-    "narrative",
-    "stand-up-comedy",
-    "choral-verse",
-    "film",
-    "cultural-dance",
-    "awards",
-    "achievement",
-    "performing-arts",
-    "student-talent",
-    "environmental-conservation",
-    "regional-competition"
-  ]
-},
-   {
-  id: "29",
-  title: "Kongoni Technical College Annual Athletic Sports Day - Unity, Teamwork & Physical Excellence",
-  excerpt: "Trainees from different departments came together for the annual athletic sports day, showcasing talent across multiple disciplines, with top performers qualifying to represent the institution at regional level and beyond.",
-  content: `
+    imageUrl: "/images/newsevents/drama2026/CCD_.png",
+    images: [
+      "/images/newsevents/drama2026/drama2026_1.png",
+      "/images/newsevents/drama2026/drama2026_2.png",
+      "/images/newsevents/drama2026/drama2026_3.png",
+      "/images/newsevents/drama2026/CCD_.png",
+      "/images/newsevents/drama2026/CORALVERSE.png",
+      "/images/newsevents/drama2026/MODERNDANCE.png",
+      "/images/newsevents/drama2026/STANDUPCOMEDY.png",
+      "/images/newsevents/drama2026/SOLOVERSE.png",
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=Cln1l8H34bc",
+    videoThumbnail: "/images/newsevents/drama2026/drama2026_1.png",
+    featured: true,
+    createdAt: "2026-03-30T10:00:00Z",
+    updatedAt: "2026-03-30T10:00:00Z",
+    author: "Student Affairs Department",
+    category: "Achievements",
+    eventDate: "2026-03-08",
+    location: "Bungoma National Polytechnic",
+    tags: [
+      "drama",
+      "katti",
+      "drama-festival",
+      "2026",
+      "bungoma",
+      "solo-verse",
+      "spoken-word",
+      "modern-dance",
+      "narrative",
+      "stand-up-comedy",
+      "choral-verse",
+      "film",
+      "cultural-dance",
+      "awards",
+      "achievement",
+      "performing-arts",
+      "student-talent",
+      "environmental-conservation",
+      "regional-competition",
+    ],
+  },
+  {
+    id: "29",
+    title: "Kongoni Technical College Annual Athletic Sports Day - Unity, Teamwork & Physical Excellence",
+    excerpt:
+      "Trainees from different departments came together for the annual athletic sports day, showcasing talent across multiple disciplines, with top performers qualifying to represent the institution at regional level and beyond.",
+    content: `
     <p>Kongoni Technical and Training Institute has successfully concluded its annual athletic sports activities, bringing together trainees from across all departments for a day of fierce but friendly competition, camaraderie, and sporting excellence.</p>
- 
+
     <p>The event was designed to promote unity, teamwork, and physical fitness among trainees — values the college recognizes as integral to holistic education alongside technical and vocational training.</p>
- 
+
     <p><strong>🏃 A Day of Competition and Achievement:</strong></p>
     <p>Trainees from every department stepped up to compete across a wide range of athletic disciplines, displaying remarkable talent, determination, and sportsmanship throughout the day. The competitions were spirited and closely contested, with participants giving their all in pursuit of glory for themselves and their departments.</p>
- 
+
     <p>Standout performers from multiple disciplines have qualified to represent Kongoni Technical and Training Institute at the regional level and beyond — a testament to the depth of athletic talent within the institution.</p>
- 
+
     <p><strong>🎯 Event Objectives:</strong></p>
     <ul>
       <li><strong>Promote Unity:</strong> Bringing trainees from all departments together in a shared celebration of sport</li>
@@ -798,74 +809,75 @@ const mockNews = [
       <li><strong>Talent Identification:</strong> Spotting athletes with potential for regional and national competition</li>
       <li><strong>Holistic Development:</strong> Complementing academic and technical training with physical and social development</li>
     </ul>
- 
+
     <p><strong>🏅 Notable Attendees:</strong></p>
     <ul>
       <li><strong>Members of Athletics Kenya</strong> — Representatives from the national athletics governing body attended to observe and identify promising talent</li>
-      <li><strong>Principal Judith Akaranga</strong> — The college principal graced the event, underscoring the administration\'s commitment to student well-being and holistic development</li>
+      <li><strong>Principal Judith Akaranga</strong> — The college principal graced the event, underscoring the administration's commitment to student well-being and holistic development</li>
       <li><strong>College Lecturers and Management</strong> — Staff members turned out in strong numbers to cheer on and support the competing trainees</li>
       <li><strong>Radio Ustawi</strong> — The event received full media coverage from Radio Ustawi, who were present throughout the day capturing every moment of sporting action</li>
     </ul>
- 
+
     <p><strong>📻 Media Coverage:</strong></p>
-    <p>Radio Ustawi\'s presence ensured that the excitement and achievements of the day reached a wider audience, shining a spotlight on the athletic talent at Kongoni Technical and Training Institute and amplifying the college\'s vibrant student life.</p>
- 
+    <p>Radio Ustawi's presence ensured that the excitement and achievements of the day reached a wider audience, shining a spotlight on the athletic talent at Kongoni Technical and Training Institute and amplifying the college's vibrant student life.</p>
+
     <p><strong>🌟 Looking Ahead:</strong></p>
-    <p>The athletes who have qualified for regional competition will now carry the Kongoni Technical and Training Institute flag forward, representing the institution with pride. The college\'s management expressed full support for the qualifying trainees as they prepare for the next stage of competition.</p>
- 
+    <p>The athletes who have qualified for regional competition will now carry the Kongoni Technical and Training Institute flag forward, representing the institution with pride. The college's management expressed full support for the qualifying trainees as they prepare for the next stage of competition.</p>
+
     <p>"Events like our annual sports day are a reminder that education is about more than the classroom," said Principal Judith Akaranga. "Sport builds character, discipline, and resilience — qualities that will serve our trainees throughout their careers and lives."</p>
- 
-    <p>The institution congratulates every trainee who participated in making this year\'s sports day a memorable and inspiring occasion.</p>
- 
+
+    <p>The institution congratulates every trainee who participated in making this year's sports day a memorable and inspiring occasion.</p>
+
     <p><em>#KongoniTechnical #Sports #RadioUstawi</em></p>
   `,
-  imageUrl: "/images/Sports Day2026/sportdday (17).JPG",
-  images: [
-    "/images/Sports Day2026/sportdday (10).JPG",
-    "/images/Sports Day2026/sportdday (2).JPG",
-    "/images/Sports Day2026/sportdday (3).JPG",
-    "/images/Sports Day2026/sportdday (4).JPG",
-    "/images/Sports Day2026/sportdday (5).JPG",
-    "/images/Sports Day2026/sportdday (6).JPG",
-   "/images/Sports Day2026/sportdday (7).JPG",
-    "/images/Sports Day2026/sportdday (8).JPG",
-        "/images/Sports Day2026/sportdday (9).JPG",
-    "/images/Sports Day2026/sportdday (1).JPG",
-    "/images/Sports Day2026/sportdday (11).JPG",
-    "/images/Sports Day2026/sportdday (12).JPG",
-    "/images/Sports Day2026/sportdday (13).JPG",
-    "/images/Sports Day2026/sportdday (14).JPG",
-   "/images/Sports Day2026/sportdday (15).JPG",
-    "/images/Sports Day2026/sportdday (16).JPG",
-  ],
-  videoThumbnail: "/images/newsevents/athletics/athletics23.jpeg",
-  featured: true,
-  createdAt: "2026-03-13T10:00:00Z",
-  updatedAt: "2026-03-13T10:00:00Z",
-  author: "Sports Department",
-  category: "Events",
-  eventDate: "2026-03-13",
-  location: "Kongoni Technical and Training Institute Grounds",
-  tags: [
-    "athletics",
-    "sports",
-    "teamwork",
-    "unity",
-    "fitness",
-    "radio-ustawi",
-    "athletics-kenya",
-    "competition",
-    "annual-sports",
-    "student-life",
-    "regional-qualifiers",
-    "holistic-development"
-  ]
-},
+    imageUrl: "/images/Sports Day2026/sportdday (17).JPG",
+    images: [
+      "/images/Sports Day2026/sportdday (10).JPG",
+      "/images/Sports Day2026/sportdday (2).JPG",
+      "/images/Sports Day2026/sportdday (3).JPG",
+      "/images/Sports Day2026/sportdday (4).JPG",
+      "/images/Sports Day2026/sportdday (5).JPG",
+      "/images/Sports Day2026/sportdday (6).JPG",
+      "/images/Sports Day2026/sportdday (7).JPG",
+      "/images/Sports Day2026/sportdday (8).JPG",
+      "/images/Sports Day2026/sportdday (9).JPG",
+      "/images/Sports Day2026/sportdday (1).JPG",
+      "/images/Sports Day2026/sportdday (11).JPG",
+      "/images/Sports Day2026/sportdday (12).JPG",
+      "/images/Sports Day2026/sportdday (13).JPG",
+      "/images/Sports Day2026/sportdday (14).JPG",
+      "/images/Sports Day2026/sportdday (15).JPG",
+      "/images/Sports Day2026/sportdday (16).JPG",
+    ],
+    videoThumbnail: "/images/newsevents/athletics/athletics23.jpeg",
+    featured: true,
+    createdAt: "2026-03-13T10:00:00Z",
+    updatedAt: "2026-03-13T10:00:00Z",
+    author: "Sports Department",
+    category: "Events",
+    eventDate: "2026-03-13",
+    location: "Kongoni Technical and Training Institute Grounds",
+    tags: [
+      "athletics",
+      "sports",
+      "teamwork",
+      "unity",
+      "fitness",
+      "radio-ustawi",
+      "athletics-kenya",
+      "competition",
+      "annual-sports",
+      "student-life",
+      "regional-qualifiers",
+      "holistic-development",
+    ],
+  },
   {
-  id: "28",
-  title: "Kongoni Technical College Partners with Modia Driving School to Offer Comprehensive Driving Courses",
-  excerpt: "Kongoni Technical & Vocational College announces exciting collaboration with Modia Driving School to provide professional driving certification courses on campus, featuring NTSA-certified training across multiple vehicle classes.",
-  content: `
+    id: "28",
+    title: "Kongoni Technical College Partners with Modia Driving School to Offer Comprehensive Driving Courses",
+    excerpt:
+      "Kongoni Technical & Vocational College announces exciting collaboration with Modia Driving School to provide professional driving certification courses on campus, featuring NTSA-certified training across multiple vehicle classes.",
+    content: `
     <p>Kongoni Technical & Vocational Training College is proud to announce a strategic partnership with <strong>Modia Driving School</strong>, bringing professional driving education directly to our campus. This collaboration represents our commitment to expanding practical skills training and providing our students and community with valuable, certified driving qualifications.</p>
     <p><strong>🚗 About the Partnership:</strong></p>
     <p>This partnership combines Kongoni Technical College's educational excellence with Modia Driving School's professional driving instruction expertise. Together, we offer comprehensive driving courses designed to meet industry standards and prepare participants for successful careers in transportation and logistics.</p>
@@ -878,28 +890,40 @@ const mockNews = [
     </ul>
     <p><em>Kongoni Technical & Vocational Training College: Expanding Skills, Empowering Futures.</em></p>
   `,
-  imageUrl: "/images/newsevents/modiadriving/driving1.jpg",
-  images: [
-    "/images/newsevents/modiadriving/driving1.jpg",
-    "/images/newsevents/modiadriving/driving2.jpeg",
-    "/images/newsevents/modiadriving/driving3.jpeg",
-    "/images/newsevents/modiadriving/driving4.jpg",
-    "/images/newsevents/modiadriving/driving5.jpeg"
-  ],
-  featured: true,
-  createdAt: "2025-12-10T12:00:00Z",
-  updatedAt: "2025-12-10T12:00:00Z",
-  author: "Administration & External Partnerships",
-  category: "Partnerships",
-  eventDate: "2025-12-10",
-  location: "Kongoni Technical and Vocational College Campus",
-  tags: ["driving-school", "modia-driving", "partnership", "driving-courses", "ntsa-certified", "vocational-training", "skills-development", "road-safety", "transport-education", "professional-driving"]
-},
+    imageUrl: "/images/newsevents/modiadriving/driving1.jpg",
+    images: [
+      "/images/newsevents/modiadriving/driving1.jpg",
+      "/images/newsevents/modiadriving/driving2.jpeg",
+      "/images/newsevents/modiadriving/driving3.jpeg",
+      "/images/newsevents/modiadriving/driving4.jpg",
+      "/images/newsevents/modiadriving/driving5.jpeg",
+    ],
+    featured: true,
+    createdAt: "2025-12-10T12:00:00Z",
+    updatedAt: "2025-12-10T12:00:00Z",
+    author: "Administration & External Partnerships",
+    category: "Partnerships",
+    eventDate: "2025-12-10",
+    location: "Kongoni Technical and Vocational College Campus",
+    tags: [
+      "driving-school",
+      "modia-driving",
+      "partnership",
+      "driving-courses",
+      "ntsa-certified",
+      "vocational-training",
+      "skills-development",
+      "road-safety",
+      "transport-education",
+      "professional-driving",
+    ],
+  },
   {
-  id: "27",
-  title: "Celebrating Academic Excellence: Our Staff's Remarkable Achievements",
-  excerpt: "Kongoni Technical and Vocational College proudly celebrates our trainers and staff members who have recently achieved significant academic milestones at various universities across Kenya.",
-  content: `
+    id: "27",
+    title: "Celebrating Academic Excellence: Our Staff's Remarkable Achievements",
+    excerpt:
+      "Kongoni Technical and Vocational College proudly celebrates our trainers and staff members who have recently achieved significant academic milestones at various universities across Kenya.",
+    content: `
     <p>Kongoni Technical and Vocational Training College extends heartfelt congratulations to our dedicated trainers and staff members who have recently achieved remarkable academic milestones. Their pursuit of higher education exemplifies our institution's commitment to lifelong learning and professional development.</p>
     <p><strong>🌟 PHD ACHIEVEMENT 🌟</strong></p>
     <p>We celebrate with immense pride as our esteemed <strong>Board of Governors Member</strong> successfully attained her <strong>Doctor of Philosophy (PhD)</strong> from <strong>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</strong>.</p>
@@ -909,61 +933,82 @@ const mockNews = [
     <p>Heartfelt congratulations to Bryan Wekesa, Ann Namukhaywa, Kelvin Bugigi, Dennis Simiyu, Ann Waitherero from <strong>Kenya School of TVET (KSTVET)</strong> and <strong>Joshua Makacha</strong> from <strong>Dedan Kimathi University of Technology</strong>.</p>
     <p><em>Kongoni Technical and Vocational Training College: Where excellence in education begins with excellence in educators.</em></p>
   `,
-  imageUrl: "/images/newsevents/staffachievements/achievement1.jpg",
-  images: [
-    "/images/newsevents/staffachievements/achievement1.jpg",
-    "/images/newsevents/staffachievements/achievement2.jpg",
-    "/images/newsevents/staffachievements/achievement3.jpg",
-    "/images/newsevents/staffachievements/achievement4.jpg",
-    "/images/newsevents/staffachievements/achievement5.jpg"
-  ],
-  featured: true,
-  createdAt: "2025-12-10T10:00:00Z",
-  updatedAt: "2025-12-10T10:00:00Z",
-  author: "Administration & Human Resources",
-  category: "Achievements",
-  eventDate: "2025-12-10",
-  location: "Kongoni Technical and Vocational College",
-  tags: ["staff-achievements", "academic-excellence", "graduation", "phd", "degrees", "diplomas", "professional-development"]
-},
-{
-  id: "26",
-  title: "Kongoni TVC Cultural Day 2025 - Celebrating Heritage, Unity & Talent",
-  excerpt: "Kongoni Technical and Vocational College hosted a spectacular Cultural Day celebration featuring traditional dances, drama, spoken word, cultural fashion parade, local cuisine exhibitions, and vibrant music performances.",
-  content: `
+    imageUrl: "/images/newsevents/staffachievements/achievement1.jpg",
+    images: [
+      "/images/newsevents/staffachievements/achievement1.jpg",
+      "/images/newsevents/staffachievements/achievement2.jpg",
+      "/images/newsevents/staffachievements/achievement3.jpg",
+      "/images/newsevents/staffachievements/achievement4.jpg",
+      "/images/newsevents/staffachievements/achievement5.jpg",
+    ],
+    featured: true,
+    createdAt: "2025-12-10T10:00:00Z",
+    updatedAt: "2025-12-10T10:00:00Z",
+    author: "Administration & Human Resources",
+    category: "Achievements",
+    eventDate: "2025-12-10",
+    location: "Kongoni Technical and Vocational College",
+    tags: [
+      "staff-achievements",
+      "academic-excellence",
+      "graduation",
+      "phd",
+      "degrees",
+      "diplomas",
+      "professional-development",
+    ],
+  },
+  {
+    id: "26",
+    title: "Kongoni TVC Cultural Day 2025 - Celebrating Heritage, Unity & Talent",
+    excerpt:
+      "Kongoni Technical and Vocational College hosted a spectacular Cultural Day celebration featuring traditional dances, drama, spoken word, cultural fashion parade, local cuisine exhibitions, and vibrant music performances.",
+    content: `
     <p>On November 7th, 2025, Kongoni Technical & Vocational Training College transformed its grounds into a vibrant celebration of Kenyan culture during the highly anticipated Cultural Day 2025.</p>
     <p>The event brought together trainees, staff, and guests in a spectacular showcase of Kenya's diverse cultural heritage, demonstrating the college's commitment to celebrating unity in diversity while nurturing talent and creativity among trainees.</p>
     <p>Special thanks to <strong>Afrikwear Unit Entertainment</strong> for their exceptional professional media coverage throughout the Cultural Day celebration.</p>
     <p><strong>🎉 Thank you for celebrating with us! 🎉</strong></p>
   `,
-  imageUrl: "/images/newsevents/culturalday/cultural10.jpeg",
-  images: [
-    "/images/newsevents/culturalday/cultural1.jpeg",
-    "/images/newsevents/culturalday/cultural2.jpeg",
-    "/images/newsevents/culturalday/cultural3.jpeg",
-    "/images/newsevents/culturalday/cultural4.jpeg",
-    "/images/newsevents/culturalday/cultural5.jpeg",
-    "/images/newsevents/culturalday/cultural6.jpeg",
-    "/images/newsevents/culturalday/cultural7.jpeg",
-    "/images/newsevents/culturalday/cultural8.jpeg",
-    "/images/newsevents/culturalday/cultural9.jpeg",
-    "/images/newsevents/culturalday/cultural10.jpeg"
-  ],
-  videoUrl: "https://www.youtube.com/watch?v=duMxys0H_yY",
-  videoThumbnail: "/images/newsevents/culturalday/cultural10.jpeg",
-  featured: true,
-  createdAt: "2025-11-07T16:00:00Z",
-  updatedAt: "2025-11-07T16:00:00Z",
-  author: "Student Affairs Department",
-  category: "Events",
-  eventDate: "2025-11-07",
-  location: "Kongoni Technical and Vocational College Grounds",
-  tags: ["cultural-day", "heritage", "traditional-dances", "drama", "spoken-word", "fashion-parade", "local-cuisine", "music", "unity-in-diversity", "kenyan-culture"]
-},
+    imageUrl: "/images/newsevents/culturalday/cultural10.jpeg",
+    images: [
+      "/images/newsevents/culturalday/cultural1.jpeg",
+      "/images/newsevents/culturalday/cultural2.jpeg",
+      "/images/newsevents/culturalday/cultural3.jpeg",
+      "/images/newsevents/culturalday/cultural4.jpeg",
+      "/images/newsevents/culturalday/cultural5.jpeg",
+      "/images/newsevents/culturalday/cultural6.jpeg",
+      "/images/newsevents/culturalday/cultural7.jpeg",
+      "/images/newsevents/culturalday/cultural8.jpeg",
+      "/images/newsevents/culturalday/cultural9.jpeg",
+      "/images/newsevents/culturalday/cultural10.jpeg",
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=duMxys0H_yY",
+    videoThumbnail: "/images/newsevents/culturalday/cultural10.jpeg",
+    featured: true,
+    createdAt: "2025-11-07T16:00:00Z",
+    updatedAt: "2025-11-07T16:00:00Z",
+    author: "Student Affairs Department",
+    category: "Events",
+    eventDate: "2025-11-07",
+    location: "Kongoni Technical and Vocational College Grounds",
+    tags: [
+      "cultural-day",
+      "heritage",
+      "traditional-dances",
+      "drama",
+      "spoken-word",
+      "fashion-parade",
+      "local-cuisine",
+      "music",
+      "unity-in-diversity",
+      "kenyan-culture",
+    ],
+  },
   {
     id: "25",
     title: "Dual TVET Workshop - Round 2 Dualization Training for Rift Valley Region",
-    excerpt: "Trainers from Kongoni Technical and Vocational College joined other TVET institutions for a comprehensive 2-day workshop on Dual TVET and Dualization at Starbucks Hotel, Eldoret.",
+    excerpt:
+      "Trainers from Kongoni Technical and Vocational College joined other TVET institutions for a comprehensive 2-day workshop on Dual TVET and Dualization at Starbucks Hotel, Eldoret.",
     content: `
       <p>On 23rd and 24th October 2025, a team representing Kongoni Technical and Vocational College joined trainers from other TVET institutions across the Rift Valley Region for a transformative 2-Day Workshop on Round 2 Dual TVET and Dualization, held at Starbucks Hotel, Eldoret.</p>
       <p>The workshop was facilitated through collaborative efforts between GIZ/GFA and Kenya School of TVET, as part of the ongoing effort to ensure smooth implementation of dual learning.</p>
@@ -976,7 +1021,7 @@ const mockNews = [
       "/images/newsevents/dualtvetworkshop/dualworkshop3.jpeg",
       "/images/newsevents/dualtvetworkshop/dualworkshop4.jpeg",
       "/images/newsevents/dualtvetworkshop/dualworkshop5.jpeg",
-      "/images/newsevents/dualtvetworkshop/dualworkshop6.jpeg"
+      "/images/newsevents/dualtvetworkshop/dualworkshop6.jpeg",
     ],
     featured: true,
     createdAt: "2025-10-24T17:00:00Z",
@@ -985,12 +1030,24 @@ const mockNews = [
     category: "Training",
     eventDate: "2025-10-24",
     location: "Starbucks Hotel, Eldoret",
-    tags: ["dual-tvet", "workshop", "training", "giz", "kstvet", "dualization", "cbet", "modular-curriculum", "capacity-building", "rift-valley"]
+    tags: [
+      "dual-tvet",
+      "workshop",
+      "training",
+      "giz",
+      "kstvet",
+      "dualization",
+      "cbet",
+      "modular-curriculum",
+      "capacity-building",
+      "rift-valley",
+    ],
   },
   {
     id: "24",
     title: "Sports Day 2025 - Athletic Excellence and Team Spirit",
-    excerpt: "Kongoni Technical College hosted an electrifying Sports Day featuring football, volleyball, handball, and netball competitions. Eleven Stars crowned football champions.",
+    excerpt:
+      "Kongoni Technical College hosted an electrifying Sports Day featuring football, volleyball, handball, and netball competitions. Eleven Stars crowned football champions.",
     content: `
       <p>On October 10th, 2025, Kongoni Technical & Vocational Training College held its annual Sports Day, showcasing exceptional athletic talent and team spirit across multiple sporting disciplines.</p>
       <p><strong>Men's Football Tournament Results:</strong></p>
@@ -1011,7 +1068,7 @@ const mockNews = [
       "/images/newsevents/kattigames/kattigamesladies6.jpg",
       "/images/newsevents/kattigames/kattigamesladies7.jpg",
       "/images/newsevents/kattigames/kattigamesladies8.jpg",
-      "/images/newsevents/kattigames/kattigames9.jpg"
+      "/images/newsevents/kattigames/kattigames9.jpg",
     ],
     featured: true,
     createdAt: "2025-10-10T16:00:00Z",
@@ -1020,12 +1077,13 @@ const mockNews = [
     category: "Events",
     eventDate: "2025-10-10",
     location: "Matunda SA School",
-    tags: ["sports", "football", "volleyball", "handball", "netball", "championship", "athletics", "competition", "sports-day"]
+    tags: ["sports", "football", "volleyball", "handball", "netball", "championship", "athletics", "competition", "sports-day"],
   },
   {
     id: "23",
     title: "Mazingira Day 2025 - 548 Fruit Trees Planted at Nangili Primary School",
-    excerpt: "KTVC joined forces with Equity Bank Moi's Bridge and Scout Society to celebrate Mazingira Day by planting 548 fruit trees at Nangili Comprehensive Primary School.",
+    excerpt:
+      "KTVC joined forces with Equity Bank Moi's Bridge and Scout Society to celebrate Mazingira Day by planting 548 fruit trees at Nangili Comprehensive Primary School.",
     content: `
       <p>On October 10th, 2025, Kongoni Technical & Vocational Training College, in partnership with Equity Bank Moi's Bridge and the KTVC Scout Society, celebrated Mazingira Day with a massive tree planting initiative at Nangili Comprehensive Primary School.</p>
       <p>Under the theme "Citizen-Centric Tree Growing and Stewardship", the collaborative effort resulted in planting 548 fruit trees including avocados, guavas, grafted mangoes, macadamia, jackfruit, custard apple, black plum, loquat, and pomegranate.</p>
@@ -1038,7 +1096,7 @@ const mockNews = [
       "/images/newsevents/treeplanting/nangilitree49.jpg",
       "/images/newsevents/treeplanting/nangilitree48.jpg",
       "/images/newsevents/treeplanting/nangilitree1.jpg",
-      "/images/newsevents/treeplanting/nangilitree4.jpg"
+      "/images/newsevents/treeplanting/nangilitree4.jpg",
     ],
     featured: true,
     createdAt: "2025-10-10T14:00:00Z",
@@ -1047,12 +1105,23 @@ const mockNews = [
     category: "Events",
     eventDate: "2025-10-10",
     location: "Nangili Comprehensive Primary School",
-    tags: ["mazingira-day", "tree-planting", "environment", "conservation", "equity-bank", "scouts", "community-service", "sustainability", "fruit-trees"]
+    tags: [
+      "mazingira-day",
+      "tree-planting",
+      "environment",
+      "conservation",
+      "equity-bank",
+      "scouts",
+      "community-service",
+      "sustainability",
+      "fruit-trees",
+    ],
   },
   {
     id: "22",
     title: "CBET Modular Curriculum Delivery Workshop at Sigalagala National Polytechnic",
-    excerpt: "Kongoni Technical College's academic leadership team participated in a comprehensive 5-day workshop on Competency-Based Education and Training (CBET) modular curriculum delivery.",
+    excerpt:
+      "Kongoni Technical College's academic leadership team participated in a comprehensive 5-day workshop on Competency-Based Education and Training (CBET) modular curriculum delivery.",
     content: `
       <p>A delegation from Kongoni Technical & Vocational Training College participated in an intensive 5-day workshop on CBET modular curriculum delivery at Sigalagala National Polytechnic from September 8-12, 2025.</p>
       <p>The college was represented by key academic leadership including all Heads of Departments (HODs), the Examinations Officer, and the Deputy Principal for Academics.</p>
@@ -1066,7 +1135,7 @@ const mockNews = [
       "/images/newsevents/sigalagalatraining/modulartraining5.jpg",
       "/images/newsevents/sigalagalatraining/modulartraining6.jpg",
       "/images/newsevents/sigalagalatraining/modulartraining7.jpg",
-      "/images/newsevents/sigalagalatraining/modulartraining8.jpg"
+      "/images/newsevents/sigalagalatraining/modulartraining8.jpg",
     ],
     featured: true,
     createdAt: "2025-09-12T18:00:00Z",
@@ -1075,12 +1144,13 @@ const mockNews = [
     category: "Training",
     eventDate: "2025-09-12",
     location: "Sigalagala National Polytechnic",
-    tags: ["cbet", "curriculum", "training", "academic-staff", "competency-based", "modular-delivery", "professional-development"]
+    tags: ["cbet", "curriculum", "training", "academic-staff", "competency-based", "modular-delivery", "professional-development"],
   },
-{
+  {
     id: "21",
     title: "Kongoni Technical Hosts CS Oparanya at NYOTA Entrepreneurship Training Completion",
-    excerpt: "Hon. Wycliffe Oparanya, Cabinet Secretary for Co-operatives and MSMEs, was chief guest at the completion ceremony of the 4-day NYOTA entrepreneurship training program that empowered 150 youths.",
+    excerpt:
+      "Hon. Wycliffe Oparanya, Cabinet Secretary for Co-operatives and MSMEs, was chief guest at the completion ceremony of the 4-day NYOTA entrepreneurship training program that empowered 150 youths.",
     content: `
       <p>Kongoni Technical & Vocational Training College had the honor of hosting Hon. Wycliffe Oparanya, Cabinet Secretary for Co-operatives and MSMEs, as chief guest during the completion ceremony of the NYOTA entrepreneurship training program.</p>
       <p>The hosted 4-day intensive training program successfully empowered 150 young entrepreneurs with essential business skills needed to establish and manage successful enterprises.</p>
@@ -1093,7 +1163,7 @@ const mockNews = [
       "/images/newsevents/nyotaexitmeeting/nyotaexit18th-2.jpeg",
       "/images/newsevents/nyotaexitmeeting/nyotaexit18th-3.jpeg",
       "/images/newsevents/nyotaexitmeeting/nyotaexit18th-5.jpeg",
-      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-14.jpeg"
+      "/images/newsevents/nyotaexitmeeting/nyotaexit18th-14.jpeg",
     ],
     videoUrl: "https://www.youtube.com/watch?v=tSrJ788t99U",
     videoThumbnail: "/images/newsevents/nyotaexitmeeting/nyotaexit18th-23.jpeg",
@@ -1104,67 +1174,65 @@ const mockNews = [
     category: "Events",
     eventDate: "2025-09-15",
     location: "College Grounds",
-    tags: ["nyota", "entrepreneurship", "cabinet-secretary", "youth-empowerment", "government-initiative", "business-training"]
+    tags: ["nyota", "entrepreneurship", "cabinet-secretary", "youth-empowerment", "government-initiative", "business-training"],
   },
-{
-  id: "19",
-  title: "3rd Board of Governors Inauguration - Transition to New Leadership Structure",
-  excerpt: "Historic transition as Kongoni Technical & Vocational Training College transitions from Board of Management to the new Board of Governance structure.",
-  content: `
-    <p>On September 5th, 2025, Kongoni Technical & Vocational Training College held its historic 3rd Board of Governance meeting, marking a significant transition in the institution's leadership structure from the previous Board of Management to the newly established Board of Governance.</p>
-    <p>This governance transition positions Kongoni Technical & Vocational Training College for continued growth and excellence in technical education delivery.</p>
-  `,
-  imageUrl: "/images/admin/board/bog2.jpg",
-  images: [
-    "/images/admin/board/bog1.jpeg",
-    "/images/admin/board/bog2.jpeg"
-  ],
-  featured: true,
-  createdAt: "2025-09-05T14:30:00Z",
-  updatedAt: "2025-09-05T14:30:00Z",
-  author: "Administration",
-  category: "Events",
-  eventDate: "2025-09-05",
-  location: "College Boardroom",
-  tags: ["governance", "board-meeting", "leadership", "transition", "administration", "strategic-planning"]
-},
-{
-  id: "20",
-  title: "Term Opening Prayer Day - Spiritual Blessing for New Academic Term",
-  excerpt: "The college community came together for a special prayer service to seek divine blessing and guidance for the new academic term.",
-  content: `
+  {
+    id: "20",
+    title: "Term Opening Prayer Day - Spiritual Blessing for New Academic Term",
+    excerpt: "The college community came together for a special prayer service to seek divine blessing and guidance for the new academic term.",
+    content: `
     <p>On September 9th, 2025, Kongoni Technical & Vocational Training College held a special Term Opening Prayer Day, bringing together the entire college community to seek divine blessing and guidance for the new academic term.</p>
     <p>The prayer service featured participation from multiple religious denominations, emphasizing the college's inclusive approach to spiritual matters while respecting diverse faith backgrounds within the college community.</p>
   `,
-  imageUrl: "/images/newsevents/prayerday/prayerday1.jpeg",
-  images: [
-    "/images/newsevents/prayerday/prayerday1.jpeg",
-    "/images/newsevents/prayerday/prayerday2.jpeg",
-    "/images/newsevents/prayerday/prayerday3.jpeg"
-  ],
-  featured: true,
-  createdAt: "2025-09-09T10:00:00Z",
-  updatedAt: "2025-09-09T10:00:00Z",
-  author: "Student Affairs",
-  category: "Student Life",
-  eventDate: "2025-09-09",
-  location: "Main Campus Grounds",
-  tags: ["prayer", "spirituality", "term-opening", "community", "blessing", "interfaith", "student-life"]
-},
+    imageUrl: "/images/newsevents/prayerday/prayerday1.jpeg",
+    images: [
+      "/images/newsevents/prayerday/prayerday1.jpeg",
+      "/images/newsevents/prayerday/prayerday2.jpeg",
+      "/images/newsevents/prayerday/prayerday3.jpeg",
+    ],
+    featured: true,
+    createdAt: "2025-09-09T10:00:00Z",
+    updatedAt: "2025-09-09T10:00:00Z",
+    author: "Student Affairs",
+    category: "Student Life",
+    eventDate: "2025-09-09",
+    location: "Main Campus Grounds",
+    tags: ["prayer", "spirituality", "term-opening", "community", "blessing", "interfaith", "student-life"],
+  },
+  {
+    id: "19",
+    title: "3rd Board of Governors Inauguration - Transition to New Leadership Structure",
+    excerpt: "Historic transition as Kongoni Technical & Vocational Training College transitions from Board of Management to the new Board of Governance structure.",
+    content: `
+    <p>On September 5th, 2025, Kongoni Technical & Vocational Training College held its historic 3rd Board of Governance meeting, marking a significant transition in the institution's leadership structure from the previous Board of Management to the newly established Board of Governance.</p>
+    <p>This governance transition positions Kongoni Technical & Vocational Training College for continued growth and excellence in technical education delivery.</p>
+  `,
+    imageUrl: "/images/admin/board/bog2.jpg",
+    images: ["/images/admin/board/bog1.jpeg", "/images/admin/board/bog2.jpeg"],
+    featured: true,
+    createdAt: "2025-09-05T14:30:00Z",
+    updatedAt: "2025-09-05T14:30:00Z",
+    author: "Administration",
+    category: "Events",
+    eventDate: "2025-09-05",
+    location: "College Boardroom",
+    tags: ["governance", "board-meeting", "leadership", "transition", "administration", "strategic-planning"],
+  },
   {
     id: "18",
     title: "September 2025 Intake Trainees Reporting for New Academic Year",
-    excerpt: "We warmly welcome the September 2025 intake trainees as they begin their technical and vocational training journey at Kongoni Technical & Vocational Training College.",
+    excerpt:
+      "We warmly welcome the September 2025 intake trainees as they begin their technical and vocational training journey at Kongoni Technical & Vocational Training College.",
     content: `
       <p>Kongoni Technical & Vocational Training College is pleased to welcome the September 2025 intake trainees who are reporting for the commencement of their technical and vocational training programs.</p>
       <p>"We are excited to welcome this new cohort of trainees who will contribute to Kenya's skilled workforce," said Principal Judith Akaranga.</p>
     `,
-    imageUrl:  "/images/newsevents/traineesreporting/reporting2.jpeg",
+    imageUrl: "/images/newsevents/traineesreporting/reporting2.jpeg",
     images: [
-   "/images/newsevents/traineesreporting/reporting1.jpeg",
+      "/images/newsevents/traineesreporting/reporting1.jpeg",
       "/images/newsevents/traineesreporting/reporting2.jpeg",
-    "/images/newsevents/traineesreporting/reporting3.jpeg",
-        "/images/newsevents/traineesreporting/reporting4.jpeg"
+      "/images/newsevents/traineesreporting/reporting3.jpeg",
+      "/images/newsevents/traineesreporting/reporting4.jpeg",
     ],
     featured: true,
     createdAt: "2025-09-02T08:00:00Z",
@@ -1173,12 +1241,13 @@ const mockNews = [
     category: "Student Life",
     eventDate: "2025-09-02",
     location: "Main Campus",
-    tags: ["intake", "new-trainees", "orientation", "academic-year"]
+    tags: ["intake", "new-trainees", "orientation", "academic-year"],
   },
   {
-    id: "17", 
+    id: "17",
     title: "Drama Trainees Achieve Second Position in Regional Competition",
-    excerpt: "Congratulations to our talented drama trainees who secured second position in both solo verse and spoken word categories at the regional drama festival.",
+    excerpt:
+      "Congratulations to our talented drama trainees who secured second position in both solo verse and spoken word categories at the regional drama festival.",
     content: `
       <p>We are proud to announce the outstanding achievement of our drama trainees who excelled at the recent regional drama festival, securing second position in two competitive categories.</p>
       <p>Both trainees will now advance to the national drama competition. The college community looks forward to supporting them as they represent us at the national level.</p>
@@ -1186,24 +1255,52 @@ const mockNews = [
     imageUrl: "/images/hero/cultural5.jpg",
     images: [
       "/images/hero/cultural1.jpg",
-      "/images/hero/cultural2.jpg", 
+      "/images/hero/cultural2.jpg",
       "/images/hero/cultural3.jpg",
       "/images/hero/cultural4.jpg",
-      "/images/hero/cultural5.jpg"
+      "/images/hero/cultural5.jpg",
     ],
     featured: true,
     createdAt: "2025-08-20T16:30:00Z",
     updatedAt: "2025-08-20T16:30:00Z",
     author: "Performing Arts Department",
     category: "Achievements",
-    eventDate: "2025-08-20", 
+    eventDate: "2025-08-20",
     location: "Regional Drama Festival Venue",
-    tags: ["drama", "competition", "performance", "arts", "achievement", "regional"]
+    tags: ["drama", "competition", "performance", "arts", "achievement", "regional"],
+  },
+  {
+    id: "16",
+    title: "Visit by Mr Chris Norris - American Friends of Kenya Founder",
+    excerpt:
+      "The Carpentry section was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) for an engaging day of tree planting and skill sharing.",
+    content: `
+    <p>The Carpentry section in building department was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) on Saturday June 5th.</p>
+    <p>The visit featured tree planting, a visit to the carpentry store, and a 7-hour interaction with trainees that included collaborative desk-making and skills exchange. Mr. Norris expressed admiration for the dedication of Kongoni's carpentry trainees.</p>
+  `,
+    imageUrl: "/images/newsevents/founder/founder15.jpeg",
+    images: [
+      "/images/newsevents/founder/founder1.jpeg",
+      "/images/newsevents/founder/founder2.jpeg",
+      "/images/newsevents/founder/founder3.jpeg",
+      "/images/newsevents/founder/founder4.jpeg",
+      "/images/newsevents/founder/founder5.jpeg",
+      "/images/newsevents/founder/founder6.jpeg",
+    ],
+    featured: true,
+    createdAt: "2025-06-05T14:00:00Z",
+    updatedAt: "2025-06-05T14:00:00Z",
+    author: "Building Department",
+    category: "Events",
+    eventDate: "2025-06-05",
+    location: "Carpentry Workshop, Building Department",
+    tags: ["carpentry", "international", "collaboration", "tree-planting", "skills", "partnership"],
   },
   {
     id: "1",
     title: "Kongoni Trainees Excel at Katti Athletics Games 2024 - Gold Medal Victory",
-    excerpt: "Our athletes brought home multiple medals from the Katti Athletics Games, showcasing exceptional talent in track and field events across various categories.",
+    excerpt:
+      "Our athletes brought home multiple medals from the Katti Athletics Games, showcasing exceptional talent in track and field events across various categories.",
     content: `
       <p>Kongoni Technical & Vocational Training College is proud to announce the outstanding performance of our student athletes at the prestigious Katti Athletics Games 2024.</p>
       <p>Our dedicated team of 25 student athletes competed against over 200 institutions from across East Africa, bringing home an impressive medal haul including 3 gold medals, 5 silver medals, and 4 bronze medals.</p>
@@ -1217,7 +1314,7 @@ const mockNews = [
       "/images/newsevents/athletics/athletics18.jpeg",
       "/images/newsevents/athletics/athletics23.jpeg",
       "/images/newsevents/athletics/athletics24.jpeg",
-      "/images/newsevents/athletics/athletics25.jpeg"
+      "/images/newsevents/athletics/athletics25.jpeg",
     ],
     featured: true,
     createdAt: "2025-08-15T10:00:00Z",
@@ -1226,38 +1323,13 @@ const mockNews = [
     category: "Achievements",
     eventDate: "2025-08-15",
     location: "Nyayo National Stadium, Nairobi",
-    tags: ["athletics", "medals", "competition", "trainees", "gold-medal", "records"]
-  },
-  {
-    id: "16",
-    title: "Visit by Mr Chris Norris - American Friends of Kenya Founder",
-    excerpt: "The Carpentry section was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) for an engaging day of tree planting and skill sharing.",
-    content: `
-      <p>The Carpentry section in building department was privileged to host Mr Chris Norris, core founder of Kongoni Library/Networks (American Friends of Kenya) on Saturday June 5th.</p>
-      <p>The visit featured tree planting, a visit to the carpentry store, and a 7-hour interaction with trainees that included collaborative desk-making and skills exchange. Mr. Norris expressed admiration for the dedication of Kongoni's carpentry trainees.</p>
-    `,
-    imageUrl: "/images/newsevents/founder/founder15.jpeg",
-    images: [
-      "/images/newsevents/founder/founder1.jpeg",
-      "/images/newsevents/founder/founder2.jpeg",
-      "/images/newsevents/founder/founder3.jpeg",
-      "/images/newsevents/founder/founder4.jpeg",
-      "/images/newsevents/founder/founder5.jpeg",
-      "/images/newsevents/founder/founder6.jpeg"
-    ],
-    featured: true,
-    createdAt: "2025-06-05T14:00:00Z",
-    updatedAt: "2025-06-05T14:00:00Z",
-    author: "Building Department",
-    category: "Events",
-    eventDate: "2025-06-05",
-    location: "Carpentry Workshop, Building Department",
-    tags: ["carpentry", "international", "collaboration", "tree-planting", "skills", "partnership"]
+    tags: ["athletics", "medals", "competition", "trainees", "gold-medal", "records"],
   },
   {
     id: "2",
     title: "Annual Guidance and Counselling Day Promotes Student Wellness",
-    excerpt: "Our comprehensive guidance and counselling program focused on mental health, career guidance, and personal development for holistic student growth.",
+    excerpt:
+      "Our comprehensive guidance and counselling program focused on mental health, career guidance, and personal development for holistic student growth.",
     content: `
       <p>Kongoni Technical & Vocational Training College successfully hosted its Annual Guidance and Counselling Day, emphasizing the importance of mental health and personal development in technical education.</p>
       <p>The event saw participation from over 800 trainees across all departments, with positive feedback highlighting the practical value of the sessions.</p>
@@ -1267,7 +1339,7 @@ const mockNews = [
       "/images/newsevents/guidancecounselling/guidance1.jpeg",
       "/images/newsevents/guidancecounselling/guidance2.jpeg",
       "/images/newsevents/guidancecounselling/guidance3.jpeg",
-      "/images/newsevents/guidancecounselling/guidance4.jpeg"
+      "/images/newsevents/guidancecounselling/guidance4.jpeg",
     ],
     featured: true,
     createdAt: "2025-08-10T14:30:00Z",
@@ -1276,7 +1348,7 @@ const mockNews = [
     category: "Student Life",
     eventDate: "2025-08-10",
     location: "Main Campus Auditorium",
-    tags: ["counselling", "wellness", "mental-health", "career-guidance", "student-support"]
+    tags: ["counselling", "wellness", "mental-health", "career-guidance", "student-support"],
   },
   {
     id: "3",
@@ -1290,7 +1362,7 @@ const mockNews = [
       "/images/departments/ict/ict1.jpg",
       "/images/departments/ict/ict2.jpg",
       "/images/departments/ict/ict3.jpg",
-      "/images/departments/ict/ict4.jpg"
+      "/images/departments/ict/ict4.jpg",
     ],
     featured: false,
     createdAt: "2024-07-20T11:00:00Z",
@@ -1299,7 +1371,7 @@ const mockNews = [
     category: "Facilities",
     eventDate: "2024-07-20",
     location: "ICT Laboratory Block",
-    tags: ["technology", "laboratory", "equipment", "ict", "infrastructure"]
+    tags: ["technology", "laboratory", "equipment", "ict", "infrastructure"],
   },
   {
     id: "4",
@@ -1312,7 +1384,7 @@ const mockNews = [
     images: [
       "/images/departments/automotive/automotive1.jpg",
       "/images/departments/automotive/automotive2.jpg",
-      "/images/departments/automotive/automotive3.jpg"
+      "/images/departments/automotive/automotive3.jpg",
     ],
     featured: false,
     createdAt: "2025-06-15T09:00:00Z",
@@ -1321,7 +1393,7 @@ const mockNews = [
     category: "Facilities",
     eventDate: "2025-06-15",
     location: "Automotive Workshop",
-    tags: ["automotive", "equipment", "workshop", "upgrade", "training"]
+    tags: ["automotive", "equipment", "workshop", "upgrade", "training"],
   },
   {
     id: "5",
@@ -1334,7 +1406,7 @@ const mockNews = [
     images: [
       "/images/newsevents/entrepreneurship/entrepreneur1.jpg",
       "/images/newsevents/entrepreneurship/entrepreneur2.jpg",
-      "/images/newsevents/entrepreneurship/entrepreneur3.jpg"
+      "/images/newsevents/entrepreneurship/entrepreneur3.jpg",
     ],
     featured: true,
     createdAt: "2024-05-25T13:00:00Z",
@@ -1343,8 +1415,8 @@ const mockNews = [
     category: "Events",
     eventDate: "2024-05-25",
     location: "Main Campus Hall",
-    tags: ["entrepreneurship", "innovation", "business", "trainees", "competition"]
-  }
+    tags: ["entrepreneurship", "innovation", "business", "trainees", "competition"],
+  },
 ];
 
 export async function GET(request: NextRequest) {
@@ -1359,22 +1431,22 @@ export async function GET(request: NextRequest) {
 
     if (category && category !== "all") {
       filteredNews = filteredNews.filter(
-        news => news.category.toLowerCase() === category.toLowerCase()
+        (news) => news.category.toLowerCase() === category.toLowerCase()
       );
     }
 
     if (featured === "true") {
-      filteredNews = filteredNews.filter(news => news.featured);
+      filteredNews = filteredNews.filter((news) => news.featured);
     }
 
     if (search) {
       const searchLower = search.toLowerCase();
       filteredNews = filteredNews.filter(
-        news =>
+        (news) =>
           news.title.toLowerCase().includes(searchLower) ||
           news.excerpt.toLowerCase().includes(searchLower) ||
           news.content.toLowerCase().includes(searchLower) ||
-          news.tags.some(tag => tag.toLowerCase().includes(searchLower))
+          news.tags.some((tag) => tag.toLowerCase().includes(searchLower))
       );
     }
 
@@ -1389,19 +1461,18 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    return NextResponse.json(filteredNews, { 
+    return NextResponse.json(filteredNews, {
       status: 200,
       headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
-      }
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
+      },
     });
-
   } catch (error) {
     console.error("News API error:", error);
     return NextResponse.json(
-      { 
-        success: false, 
-        message: "Failed to fetch news articles" 
+      {
+        success: false,
+        message: "Failed to fetch news articles",
       },
       { status: 500 }
     );

@@ -19,7 +19,6 @@ const AUDIO_SRC = '/documents/service-charter-audio.m4a';
 const BG_IMAGE  = '/images/hero/service-charter-bg.png';
 
 export default function ServiceCharterAudioSection() {
-  // Start as false — let events drive loading state rather than assuming load is in progress
   const [isPlaying, setIsPlaying]   = useState(false);
   const [isLoading, setIsLoading]   = useState(false);
   const [hasError,  setHasError]    = useState(false);
@@ -38,7 +37,6 @@ export default function ServiceCharterAudioSection() {
       setHasError(false);
     };
 
-    // canplaythrough means enough data buffered to play without interruption
     const handleCanPlayThrough = () => {
       setIsReady(true);
       setIsLoading(false);
@@ -80,8 +78,9 @@ export default function ServiceCharterAudioSection() {
     audio.addEventListener('pause',          handlePause);
     audio.addEventListener('error',          handleError);
 
-    // Trigger the browser to start buffering
-    audio.load();
+    // REMOVED: audio.load() — do NOT call this on mount.
+    // The browser will start downloading the file immediately if load() is called.
+    // Loading is now deferred until the user explicitly clicks play.
 
     return () => {
       audio.removeEventListener('canplay',        handleCanPlay);
@@ -99,20 +98,19 @@ export default function ServiceCharterAudioSection() {
 
     if (isPlaying) {
       audio.pause();
-      // setIsPlaying handled by 'pause' event
       return;
     }
 
-    // If not yet ready, show loading and wait for canplay
+    // If not yet ready, trigger loading now (user-initiated) and wait for canplay
     if (!isReady) {
       setIsLoading(true);
+      audio.load(); // Deferred to here — only runs when the user clicks play
       await new Promise<void>((resolve) => {
         const onReady = () => {
           audio.removeEventListener('canplay', onReady);
           resolve();
         };
         audio.addEventListener('canplay', onReady);
-        // In case browser already buffered enough before listener attached
         if (audio.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
           audio.removeEventListener('canplay', onReady);
           resolve();
@@ -125,7 +123,6 @@ export default function ServiceCharterAudioSection() {
     try {
       setIsLoading(true);
       await audio.play();
-      // setIsPlaying(true) handled by 'playing' event
     } catch (err) {
       console.error('[Audio] play() rejected:', err);
       setIsPlaying(false);
@@ -209,11 +206,9 @@ export default function ServiceCharterAudioSection() {
         backgroundAttachment: 'fixed',
       }}
     >
-      {/* Dark overlay so text stays legible over any background image */}
       <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
 
       <div className="relative z-10 container mx-auto px-4">
-        {/* Section heading — white text over the overlay */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-white mb-3 drop-shadow">
             Service Delivery Charter
@@ -229,7 +224,6 @@ export default function ServiceCharterAudioSection() {
           <Card className="overflow-hidden shadow-xl border border-white/20 bg-white/95 backdrop-blur-sm">
             <div className="p-5">
 
-              {/* Error banner */}
               {hasError && (
                 <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-md bg-red-50 border border-red-200 text-red-700 text-xs">
                   <AlertCircle className="w-4 h-4 shrink-0" />
@@ -244,7 +238,6 @@ export default function ServiceCharterAudioSection() {
               )}
 
               <div className="flex items-center justify-between gap-4 flex-wrap">
-                {/* Label */}
                 <div className="flex items-center space-x-3">
                   <div className="bg-primary/10 p-2 rounded-full">
                     <Headphones className="w-5 h-5 text-primary" />
@@ -255,7 +248,7 @@ export default function ServiceCharterAudioSection() {
                   </div>
                 </div>
 
-                {/* Hidden audio element */}
+                {/* preload="none" prevents any automatic fetching on page load */}
                 <audio
                   ref={audioRef}
                   onTimeUpdate={handleTimeUpdate}
@@ -263,12 +256,11 @@ export default function ServiceCharterAudioSection() {
                   onDurationChange={handleDurationChange}
                   onEnded={() => { setIsPlaying(false); setCurrentTime(0); }}
                   className="hidden"
-                  preload="auto"
+                  preload="none"
                 >
                   <source src={AUDIO_SRC} type="audio/mp4" />
                 </audio>
 
-                {/* Controls */}
                 <div className="flex items-center space-x-2">
                   <Button
                     variant="ghost"
@@ -320,7 +312,6 @@ export default function ServiceCharterAudioSection() {
                 </div>
               </div>
 
-              {/* Progress bar */}
               <div className="mt-4">
                 <div className="relative w-full h-1.5 bg-gray-200 rounded-lg overflow-hidden">
                   <div

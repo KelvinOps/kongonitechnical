@@ -46,24 +46,33 @@ const mockNews = [
 
     <p><em>#KongoniTVC #KATTIAthletics2026 #RegionalChampions #WesternRegionChampions #NyayoNationals2026 #TrackAndField #Athletics #KongoniPride #TVETKenya #SportingExcellence #CelebrationMarch</em></p>
   `,
-  imageUrl: "/images/newsevents/regionalathletics2026/athletics_main.jpg",
+  imageUrl: "/images/newsevents/regionalathletics2026/athletics_main.png",
   images: [
-    "/images/newsevents/regionalathletics2026/athletics_main.jpg",
+    "/images/newsevents/regionalathletics2026/athletics_main.png",
     "/images/newsevents/regionalathletics2026/athletics2.jpg",
     "/images/newsevents/regionalathletics2026/athletics3.jpg",
     "/images/newsevents/regionalathletics2026/athletics4.jpg",
     "/images/newsevents/regionalathletics2026/athletics5.jpg",
     "/images/newsevents/regionalathletics2026/athletics6.jpg",
-    "/images/newsevents/regionalathletics2026/celebration1.jpg",
-    "/images/newsevents/regionalathletics2026/celebration2.jpg",
+    "/images/newsevents/regionalathletics2026/celebration1.jpeg",
+    "/images/newsevents/regionalathletics2026/celebration2.jpeg",
     "/images/newsevents/regionalathletics2026/celebration3.jpg"
+  ],
+    videoUrl: "",
+  videoThumbnail: "/images/newsevents/regionalathletics2026/athletics_main.png",
+  videos: [
+    {
+      url: "https://www.youtube.com/watch?v=8oSY6pelwTc&feature=youtu.be",
+      title: "🎤 Kongoni TVC Athletes Shine at KATTI Western Region Athletics & Indoor Games 2026 ",
+      thumbnail: "/images/newsevents/regionalathletics2026/athletics_main.png"
+    }
   ],
   featured: true,
   createdAt: "2026-06-04T16:00:00Z",
-  updatedAt: "2026-06-04T16:00:00Z",
+  updatedAt: "2026-06-07T16:00:00Z",
   author: "Sports Department",
   category: "Achievements",
-  eventDate: "2026-06-04",
+  eventDate: "2026-06-07",
   location: "Eregi Teachers Training College, Western Kenya",
   tags: [
     "athletics",
@@ -119,29 +128,26 @@ const mockNews = [
 
     <p><em>#KongoniTVC #TraineeSpotlight #StudentInterviews #TVETKenya #RealStories #VocationalEducation #StudentVoices</em></p>
   `,
-  imageUrl: "/images/newsevents/studentinterviews2026/interview_main.jpg",
+  imageUrl: "/images/newsevents/studentinterviews2026/interview_main.jpeg",
   images: [
-    "/images/newsevents/studentinterviews2026/interview_main.jpg",
-    "/images/newsevents/studentinterviews2026/interview2.jpg",
-    "/images/newsevents/studentinterviews2026/interview3.jpg",
-    "/images/newsevents/studentinterviews2026/interview4.jpg",
-    "/images/newsevents/studentinterviews2026/interview5.jpg"
+    "/images/newsevents/studentinterviews2026/interview_main.jpeg",
+    "/images/newsevents/studentinterviews2026/interview2.jpeg"
   ],
-  videoUrl: "https://www.youtube.com/watch?v=YOUR_INTERVIEW_VIDEO_ID",
-  videoThumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpg",
+  videoUrl: "",
+  videoThumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpeg",
   videos: [
     {
-      url: "https://www.youtube.com/watch?v=YOUR_INTERVIEW_VIDEO_ID",
+      url: "",
       title: "🎤 Trainee Spotlight — Student Interviews 2026",
-      thumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpg"
+      thumbnail: "/images/newsevents/studentinterviews2026/interview_main.jpeg"
     }
   ],
   featured: true,
-  createdAt: "2026-06-05T10:00:00Z",
-  updatedAt: "2026-06-05T10:00:00Z",
+  createdAt: "2026-06-08T10:00:00Z",
+  updatedAt: "2026-06-08T10:00:00Z",
   author: "Student Affairs Department",
   category: "Student Life",
-  eventDate: "2026-06-05",
+  eventDate: "2026-06-08",
   location: "Kongoni Technical and Vocational College Campus",
   tags: [
     "student-interviews",
@@ -188,9 +194,9 @@ const mockNews = [
 
     <p><em>#MadarakaDay2026 #KongoniTVC #JamhuriYaKenya #TVETKenya #SelfGovernance #NationalPride</em></p>
   `,
-  imageUrl: "/images/newsevents/madaraka2026/madaraka_main.jpg",
+  imageUrl: "/images/newsevents/madaraka2026/madaraka_main.png",
   images: [
-    "/images/newsevents/madaraka2026/madaraka_main.jpg"
+    "/images/newsevents/madaraka2026/madaraka_main.png"
   ],
   featured: true,
   createdAt: "2026-06-01T06:00:00Z",
@@ -247,11 +253,11 @@ const mockNews = [
     "/images/newsevents/eid2026/Finale.png"
   ],
   featured: true,
-  createdAt: "2026-06-06T06:00:00Z",
-  updatedAt: "2026-06-06T06:00:00Z",
+  createdAt: "2026-05-26T06:00:00Z",
+  updatedAt: "2026-05-26T06:00:00Z",
   author: "College Administration",
   category: "Announcements",
-  eventDate: "2026-05-27",
+  eventDate: "2026-05-26",
   location: "Kongoni Technical and Vocational College",
   tags: [
     "eid-ul-adha",
