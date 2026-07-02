@@ -3,6 +3,216 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Complete mock news data - synchronized with main news route
 const mockNews = [
+  {
+  id: "45",
+  title: "Equity Bank Honours Kongoni TVC for Best Advert Win at KATTI Drama Festivals 2026",
+  excerpt: "Equity Bank celebrated Kongoni Technical and Vocational College with a special awarding ceremony after the institution's advert — depicting mobile-phone exam fee payment — clinched the Best Advert award at the recently concluded KATTI Drama Festivals 2026.",
+  content: `
+    <p>Kongoni Technical and Vocational College was celebrated in a special awarding ceremony hosted by <strong>Equity Bank</strong>, in recognition of the institution's outstanding win in the <strong>Best Advert</strong> category at the recently concluded <strong>KATTI Drama Festivals 2026</strong>.</p>
+ 
+    <p>The winning advert told a simple yet powerful story: showing trainees how examination fees can be conveniently paid via mobile phone, eliminating the need for long, time-consuming banking queues. Its clarity, relevance, and creative execution captured the attention of adjudicators and audiences alike, earning Kongoni TVC top honours in the category.</p>
+ 
+    <p><strong>🏆 A Partnership Worth Celebrating:</strong></p>
+    <p>Equity Bank representatives graced the college to formally recognise the achievement, commending the trainees and trainers behind the production for their creativity and for showcasing a real, practical solution that resonates with learners across the country.</p>
+ 
+    <p>"Your success, our commitment" was the message echoed throughout the ceremony, as Equity Bank reaffirmed its continued support for youth creativity, innovation, and technical and vocational education across Kenya.</p>
+ 
+    <p><strong>💬 Words of Appreciation:</strong></p>
+    <p>Principal Ms. Judith Akaranga thanked Equity Bank for the recognition and support, noting that partnerships like this affirm the college's commitment to nurturing well-rounded trainees who excel both technically and creatively. She congratulated the drama team once again for their national triumph and for now being celebrated by a key institutional partner.</p>
+ 
+    <p><strong>🎬 Creative Minds, Powerful Stories, Bright Futures:</strong></p>
+    <p>This awarding ceremony builds on Kongoni TVC's landmark achievement as national champions in the Advertisement category at the 2026 Kenya National Drama and Film Festivals — a milestone made even sweeter by Equity Bank's recognition and continued partnership with the institution.</p>
+ 
+    <p><em>Courtesy of Equity Bank — "Your success, our commitment."</em></p>
+ 
+    <p><em>#KongoniTVC #EquityBank #BestAdvert #KATTIDramaFestivals2026 #CreativeMindsPowerfulStories #TVETKenya</em></p>
+  `,
+  imageUrl: "/images/newsevents/equityaward2026/equityaward_main.jpeg",
+  images: [
+    "/images/newsevents/equityaward2026/equityaward_main.jpeg",
+    "/images/newsevents/equityaward2026/equityaward2.jpeg",
+    "/images/newsevents/equityaward2026/equityaward3.jpeg",
+    "/images/newsevents/equityaward2026/equityaward4.jpeg",
+    "/images/newsevents/equityaward2026/equityaward5.jpeg"
+  ],
+  featured: true,
+  createdAt: "2026-06-22T10:00:00Z",
+  updatedAt: "2026-06-22T10:00:00Z",
+  author: "Student Affairs Department",
+  category: "Achievements",
+  eventDate: "2026-06-22",
+  location: "Kongoni Technical and Vocational College",
+  tags: [
+    "equity-bank",
+    "best-advert",
+    "katti-drama-festivals",
+    "2026",
+    "awarding-ceremony",
+    "drama",
+    "achievement",
+    "partnership",
+    "creative-minds",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "44",
+  title: "KTVC Launches Apiary Unit in Partnership with Western Nyuki Care",
+  excerpt: "Kongoni Technical and Vocational College officially launched its Apiary Unit in collaboration with Western Nyuki Care, marking a major step toward practical, income-generating agriculture training for Agriculture trainees.",
+  content: `
+    <p>Kongoni Technical and Vocational College officially launched its <strong>Apiary Unit</strong> in collaboration with <strong>Western Nyuki Care</strong>, marking a major step toward practical, income-generating agriculture training at the institution.</p>
+ 
+    <p>The induction and training sessions commenced at 10:00 AM, bringing together all Agriculture trainees, KTVC staff, and technical experts from Western Nyuki Care.</p>
+ 
+    <p><strong>Building Skills for the Future of Agriculture:</strong></p>
+    <p>The new Apiary Unit is designed to give trainees hands-on experience in modern beekeeping. The training covers key areas including hive siting and types, bee behavior and safety, colony management, pest and disease control, harvesting, honey handling, and market linkages.</p>
+ 
+    <p>All Agriculture trainees are required to attend all sessions to gain full practical competence. Certificates of completion will be issued at the end of the training to trainees who meet the attendance and practical assessment requirements.</p>
+ 
+    <p><strong>A Partnership for Impact:</strong></p>
+    <p>Speaking during the launch, Western Nyuki Care representatives noted that apiculture is a climate-smart enterprise with low land requirements and high returns. One well-managed hive can generate <strong>KSh 15,000 – KSh 25,000 per year</strong>, while also improving crop yields through pollination.</p>
+ 
+    <p>KTVC management welcomed the collaboration, stating that the Apiary Unit will strengthen the college's position as a center of excellence for agriculture and create new opportunities for youth and women in agribusiness.</p>
+ 
+    <p><strong>About the Photo:</strong></p>
+    <p>The photo captures trainees and facilitators gathered in front of the Kongoni TVC administration block after the official launch. The group's presence reflects the college's commitment to practical learning and partnership-driven training that directly supports the BETA Agenda of job creation and household income growth.</p>
+ 
+    <p>KTVC looks forward to a productive training period and to seeing our trainees become certified, confident apiarists ready to serve their communities.</p>
+ 
+    <p><em>#KongoniTVC #ApiaryUnit #WesternNyukiCare #Beekeeping #Agribusiness #BETAAgenda #TVETKenya</em></p>
+  `,
+  imageUrl: "/images/newsevents/apiaryunit2026/apiaryunit_main.jpeg",
+  images: [
+    "/images/newsevents/apiaryunit2026/apiaryunit_main.jpeg",
+    "/images/newsevents/apiaryunit2026/apiaryunit2.jpeg",
+    "/images/newsevents/apiaryunit2026/apiaryunit3.jpeg",
+    "/images/newsevents/apiaryunit2026/apiaryunit4.jpeg"
+  ],
+  featured: true,
+  createdAt: "2026-07-01T10:00:00Z",
+  updatedAt: "2026-07-01T10:00:00Z",
+  author: "Agriculture Department",
+  category: "Training",
+  eventDate: "2026-07-01",
+  location: "Kongoni Technical and Vocational College, Matunda, Kakamega County",
+  tags: [
+    "apiary-unit",
+    "beekeeping",
+    "western-nyuki-care",
+    "agribusiness",
+    "agriculture-extension",
+    "climate-smart",
+    "beta-agenda",
+    "partnership",
+    "2026",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "43",
+  title: "Agriculture Extension Module 2 Trainees Master Drip Irrigation at KTVC Farm",
+  excerpt: "Agriculture Extension Module 2 trainees spent the day installing a full drip irrigation system at the KTVC Farm, building water-smart skills for climate-resilient farming.",
+  content: `
+    <p>Agriculture Extension Module 2 trainees at Kongoni Technical and Vocational College spent the day in the field putting theory into practice during an intensive drip irrigation installation practical at the KTVC Farm.</p>
+ 
+    <p>The session is part of KTVC's commitment to practical, skills-based training that equips trainees for real-world farming and agribusiness.</p>
+ 
+    <p><strong>Learning Water-Smart Farming:</strong></p>
+    <p>Under the guidance of their department teachers, trainees demonstrated the full process of setting up a small-scale drip irrigation system:</p>
+    <ol>
+      <li><strong>System Layout:</strong> Measuring, laying, and aligning main and lateral drip lines to match crop spacing.</li>
+      <li><strong>Installation:</strong> Connecting pipes, fittings, and emitters to ensure even water distribution.</li>
+      <li><strong>Testing & Water Management:</strong> Using an elevated tank to test gravity-fed water flow and check for leaks, blockages, and uniform delivery to young seedlings.</li>
+    </ol>
+ 
+    <p>Drip irrigation delivers water directly to the root zone, reducing water use by up to 60% compared to furrow or overhead methods. It also improves yields, minimizes weed growth, and allows for fertigation — key skills for dry spells and climate change adaptation.</p>
+ 
+    <p><strong>The Practical in Pictures:</strong></p>
+    <p>Trainees are seen working as a team to position and secure drip lines across a prepared bed, wearing coats, gloves, and gumboots to show professionalism and safety awareness in the field. Another group tested the system using an elevated tank on a stand, observing water flow and making final adjustments to ensure each plant receives adequate moisture.</p>
+ 
+    <p><strong>Building BETA-Ready Agripreneurs:</strong></p>
+    <p>These practicals directly support the BETA Agenda by promoting technologies that increase production, conserve resources, and create income opportunities. A 1/8-acre plot under drip can generate <strong>KSh 40,000 – KSh 80,000 per season</strong> from vegetables, making it ideal for youth and women agri-SMEs.</p>
+ 
+    <p>KTVC continues to invest in practical learning spaces so our trainees graduate not just with certificates, but with skills they can use immediately on their farms and in their communities.</p>
+ 
+    <p><em>#KongoniTVC #DripIrrigation #WaterSmartFarming #AgricultureExtension #BETAAgenda #TVETKenya</em></p>
+  `,
+  imageUrl: "/images/newsevents/dripirrigation2026/dripirrigation_main.jpeg",
+  images: [
+    "/images/newsevents/dripirrigation2026/dripirrigation_main.jpeg",
+    "/images/newsevents/dripirrigation2026/dripirrigation2.jpeg",
+    "/images/newsevents/dripirrigation2026/dripirrigation3.jpeg"
+  ],
+  featured: true,
+  createdAt: "2026-06-24T10:00:00Z",
+  updatedAt: "2026-06-24T10:00:00Z",
+  author: "Agriculture Department",
+  category: "Training",
+  eventDate: "2026-06-24",
+  location: "KTVC Farm, Matunda, Kakamega County",
+  tags: [
+    "drip-irrigation",
+    "agriculture-extension",
+    "water-smart-farming",
+    "climate-resilience",
+    "beta-agenda",
+    "practical-training",
+    "2026",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "42",
+  title: "Agriculture Extension Module 2: Salano Farm Hosts a Day of Innovation and Professional Growth",
+  excerpt: "Agriculture Extension Module 2 trainees had a day of practical, climate-smart learning at Salano Farm, covering fish farming, soya production, and an innovative recycled-tire cone garden model.",
+  content: `
+    <p>Agriculture Extension Module 2 trainees had an unforgettable day of practical learning at Salano Farm, where professionalism met innovation in the field.</p>
+ 
+    <p>The session brought together trainees with various agricultural professionals from across Africa for an immersive experience in modern, climate-smart farming.</p>
+ 
+    <p><strong>Learning Beyond the Classroom:</strong></p>
+    <p>The day's training covered several high-impact enterprises aligned with Kenya's food security and BETA agenda:</p>
+    <ol>
+      <li><strong>Fish Farming:</strong> Experts shared practical insights on pond management, feed formulation, and market linkages for profitable aquaculture.</li>
+      <li><strong>Soya Farming:</strong> Trainees were taken through the entire value chain — from land preparation and variety selection to harvesting and value addition.</li>
+      <li><strong>Cone Garden / Kitchen Garden Innovation:</strong> A highlight of the day was the hands-on construction of vertical cone gardens using recycled tires. This space-saving model is ideal for small farms and homesteads, improving soil use, water efficiency, and allowing families to grow nutritious vegetables like kales, spinach, and herbs right at home.</li>
+    </ol>
+ 
+    <p><strong>The Photo Speaks: Unity, Learning, and Action:</strong></p>
+    <p>The group photo captures the spirit of the day — trainees, facilitators, and community members smiling behind the newly constructed cone gardens, holding seed packets.</p>
+ 
+    <p>The tire structures represent agriculture innovation — turning waste into productive kitchen gardens. The seed packets in hand symbolize readiness to implement. The presence of children and elders shows that this knowledge is for the whole community, while the tap and drip line in the foreground highlight the focus on water-smart irrigation.</p>
+ 
+    <p><em>#KongoniTVC #AgricultureExtension #SalanoFarm #ClimateSmartFarming #BETAAgenda #TVETKenya #KitchenGardenInnovation</em></p>
+  `,
+  imageUrl: "/images/newsevents/salanofarm2026/salanofarm_main.jpeg",
+  images: [
+    "/images/newsevents/salanofarm2026/salanofarm_main.jpeg",
+    "/images/newsevents/salanofarm2026/salanofarm2.jpeg",
+    "/images/newsevents/salanofarm2026/salanofarm3.jpeg",
+    "/images/newsevents/salanofarm2026/salanofarm4.jpeg",
+    "/images/newsevents/salanofarm2026/salanofarm5.jpeg"
+  ],
+  featured: true,
+  createdAt: "2026-06-23T10:00:00Z",
+  updatedAt: "2026-06-23T10:00:00Z",
+  author: "Agriculture Department",
+  category: "Training",
+  eventDate: "2026-06-23",
+  location: "Salano Farm, Kakamega, Kenya",
+  tags: [
+    "salano-farm",
+    "agriculture-extension",
+    "fish-farming",
+    "soya-farming",
+    "cone-garden",
+    "kitchen-garden",
+    "climate-smart-farming",
+    "beta-agenda",
+    "2026",
+    "tvet-kenya"
+  ]
+},
 {
   id: "41",
   title: "Kongoni TVC Athletes Shine at KATTI Western Region Athletics & Indoor Games 2026 — Qualify for Nationals at Nyayo",
