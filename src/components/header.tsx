@@ -191,6 +191,7 @@ export default function Header() {
           label: "Downloadable resources",
           isCategory: true as const,
           items: [
+            { href: "/downloads", label: "KUCCPS Admissions 2026" },
             { href: "/documents/kongoni-technical-brochure.pdf", label: "Brochure" },
             { href: "/documents/trainee-rules", label: "Trainee Rules and Regulations" }
           ]
