@@ -260,6 +260,7 @@ export default function DownloadsPage() {
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
                   Some files below are too large to host directly, so they're bundled as zip folders in our shared Drive.
                   Files marked <span className="font-semibold" style={{ color: "#e07b00" }}>ZIP</span> will open the Drive folder in a new tab instead of downloading right away.
+                  Open Drive link to Download Zipped folder. Folders are encrypted using student INDEX NUMBER 
                 </p>
                 <a
                   href={DRIVE_FOLDER_LINK}
