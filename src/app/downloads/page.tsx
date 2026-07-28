@@ -420,7 +420,7 @@ export default function DownloadsPage() {
             <div className="grid md:grid-cols-2 gap-4 text-sm max-w-md mx-auto">
               <div className="flex items-center justify-center gap-2">
                 <FileText className="text-[#099cca]" size={16} />
-                <span>info@kongonitechnical.ac.ke</span>
+                <span>registry@kongonitechnical.ac.ke</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Clock className="text-[#099cca]" size={16} />
