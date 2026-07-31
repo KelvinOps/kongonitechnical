@@ -19,9 +19,9 @@ import {
 } from "lucide-react";
 
 // ── Single source of truth for the advert PDF ──────────────────────
-const ADVERT_PDF = "/documents/KONGONITVC_JOBADVERT_10-06-2026.pdf";
-const ADVERT_PDF_FILENAME = "KONGONITVC_JOBADVERT_10-06-2026.pdf";
-const ADVERT_FILE_SIZE = "2.5 MB";
+const ADVERT_PDF = "/documents/JOB-ADS-31072026.pdf";
+const ADVERT_PDF_FILENAME = "KONGONITVC_JOBADVERT_AUGUST_2026.pdf";
+const ADVERT_FILE_SIZE = "1.9 MB";
 
 interface JobOpening {
   title: string;
@@ -42,6 +42,54 @@ interface JobOpening {
 }
 
 const jobOpenings: JobOpening[] = [
+  // ── ACTIVE – August 2026 ────────────────────────────────────────
+  {
+    title: "Human Resource Officer",
+    department: "Human Resources",
+    location: "Kongoni Technical",
+    type: "Permanent",
+    deadline: "13 Aug 2026",
+    postedDate: "22 Jul 2026",
+    requirements: [
+      "Bachelor's degree in Human Resource Management / Higher National Diploma in Human Resource Management",
+      "Must be a registered member of IHRM",
+      "Minimum 1 year of relevant experience",
+      "Computer literacy",
+      "Meet Chapter Six of the Constitution of Kenya requirements"
+    ],
+    description: "Oversee the human resource and administration function, supervise all support service areas, and maintain staff welfare in the institution.",
+    experience: "1+ years",
+    status: "open",
+    fileSize: ADVERT_FILE_SIZE,
+    jobGroup: "K",
+    reportsTo: "Deputy Principal Administration",
+    posts: 1,
+    qualification: "Bachelor's Degree / HND"
+  },
+  {
+    title: "Accounts Assistant",
+    department: "Finance Department",
+    location: "Kongoni Technical",
+    type: "Permanent",
+    deadline: "13 Aug 2026",
+    postedDate: "22 Jul 2026",
+    requirements: [
+      "Diploma in Accounting or its equivalent from a recognized institution",
+      "Must have CPA Part I or in progress",
+      "Minimum 2 years of relevant experience",
+      "Computer literacy",
+      "Meet Chapter Six of the Constitution of Kenya requirements"
+    ],
+    description: "Prepare payments to creditors, maintain records of debtors, and assist other departments in preparing financial management reports.",
+    experience: "2+ years",
+    status: "open",
+    fileSize: ADVERT_FILE_SIZE,
+    jobGroup: "G",
+    reportsTo: "Finance Officer",
+    posts: 1,
+    qualification: "Diploma"
+  },
+
   // ── LEGACY / CLOSED ──────────────────────────────────────────────
   {
     title: "Store Keeper",
@@ -131,7 +179,7 @@ const jobOpenings: JobOpening[] = [
     fileSize: "1.7 MB"
   },
 
-  // ── NEW OPENINGS – June 2026 ──────────────────────────────────────
+  // ── CLOSED – previously open (June 2026 batch, deadline 23 Jun 2026 lapsed) ──
 
   // Agriculture & Environmental Studies
   {
@@ -144,8 +192,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma in General Agriculture", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Training in General Agriculture, developing technical training materials, and guiding trainees in practical exercises.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Diploma"
   },
@@ -159,8 +207,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree in Agribusiness Management or Agricultural Extension", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Training in Agribusiness Management and Agricultural Extension, developing curricula, and evaluating trainees.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Degree"
   },
@@ -176,8 +224,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree in Computer Science / Computer Studies / Software Engineering", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver computing and software engineering training, develop technical materials, and evaluate trainees.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 2,
     qualification: "Degree"
   },
@@ -191,8 +239,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma in ICT, IT or Computer Science / Computer Studies", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver ICT and IT training at diploma level, develop learning materials, and support practical sessions.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Diploma"
   },
@@ -208,8 +256,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree in Water Resources and Environmental Management", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Teach Water Resources and Environmental Management, develop training materials, and guide trainees.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Degree"
   },
@@ -223,8 +271,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma in Building Technology", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver Building Technology training, develop materials, and supervise practical exercises.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Diploma"
   },
@@ -238,8 +286,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma in Civil Engineering", "Computer literacy", "Knowledge of Occupational Safety and Health Act"],
     description: "Issue training resources, supervise workshop health & safety, maintain equipment security, and assist in practical session preparation.",
     experience: "1+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Diploma"
   },
@@ -255,8 +303,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree in Hospitality Management / Hotel Management", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver Hospitality Management training, develop curricula, and guide students in practical exercises.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Degree"
   },
@@ -270,8 +318,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma in Food & Beverage / Catering and Accommodation", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Train students in catering, food & beverage service and accommodation operations.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Diploma"
   },
@@ -287,8 +335,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree in Electrical and Electronic Technology", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver electrical and electronics engineering training, develop materials, and evaluate trainees.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 2,
     qualification: "Degree"
   },
@@ -302,8 +350,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma in Electrical Engineering (Power Option)", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver electrical power engineering training at diploma level and supervise practical sessions.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Diploma"
   },
@@ -317,8 +365,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Craft certificate in Electrical Installation or equivalent", "Computer literacy", "Knowledge of Occupational Safety and Health Act"],
     description: "Support trainers and trainees, maintain workshop inventory, enforce health & safety, prepare maintenance schedules, and oversee workshop cleanliness.",
     experience: "1+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Craft"
   },
@@ -334,8 +382,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree in Supply Chain Management", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver Supply Chain Management training, develop materials, and evaluate trainees.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Degree"
   },
@@ -349,8 +397,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree or HND in Human Resource Management", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Train students in Human Resource Management concepts, develop materials, and guide practical exercises.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Degree/HND"
   },
@@ -364,8 +412,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma in Social Work and Community Development", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver Social Work and Community Development training and guide trainees in field exercises.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Diploma"
   },
@@ -379,8 +427,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree in Business Management (Accounting Option)", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver Business Management with Accounting training, develop learning materials, and evaluate trainees.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Degree"
   },
@@ -396,8 +444,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree in Fashion and Design / Textile Fashion and Design or equivalent", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver Fashion & Design training at degree level, develop materials, and guide practical work.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Degree"
   },
@@ -411,8 +459,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma in Fashion and Design", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver Fashion and Design training at diploma level and supervise practical sessions.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Diploma"
   },
@@ -426,8 +474,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma or NAVCET Level 2 in Cosmetology / Hairdressing and Beauty Therapy", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Train students in cosmetology, hairdressing, and beauty therapy; develop materials and guide practical exercises.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 2,
     qualification: "Diploma/NAVCET Level 2"
   },
@@ -443,8 +491,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Degree in Power Mechanics Technology", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver Power Mechanics Technology training, develop materials, and evaluate trainees in practical exercises.",
     experience: "1+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Degree"
   },
@@ -458,8 +506,8 @@ const jobOpenings: JobOpening[] = [
     requirements: ["Diploma in Automotive Engineering", "CBET background", "Pedagogy skills", "Computer literate", "Kenyan Citizen"],
     description: "Deliver Automotive Engineering training, develop technical materials, and supervise practical sessions.",
     experience: "2+ years",
-    status: "open",
-    fileSize: ADVERT_FILE_SIZE,
+    status: "closed",
+    fileSize: "2.5 MB",
     posts: 1,
     qualification: "Diploma"
   },
@@ -467,6 +515,8 @@ const jobOpenings: JobOpening[] = [
 
 const allDepartments = [
   "All Departments",
+  "Human Resources",
+  "Finance Department",
   "Agriculture & Environmental Studies",
   "Computing & Informatics",
   "Building & Civil Engineering",
@@ -476,11 +526,9 @@ const allDepartments = [
   "Fashion Design & Cosmetology",
   "Mechanical Engineering",
   "Procurement",
-  "Finance Department",
   "Automotive Department",
   "Library Services",
   "Engineering Department",
-  "Human Resources",
 ];
 
 // ── Expandable Role Requirements Card ──────────────────────────────
@@ -572,7 +620,7 @@ export default function CareersPage() {
     { label: "Open Positions", value: String(openJobs.length), icon: Briefcase },
     { label: "Total Posts Available", value: String(openPostsCount), icon: Users },
     { label: "Departments Hiring", value: String(openDepartments), icon: Calendar },
-    { label: "Application Deadline", value: "23 Jun 2026", icon: Clock }
+    { label: "Application Deadline", value: "13 Aug 2026", icon: Clock }
   ];
 
   const filteredAndSortedJobs = useMemo(() => {
@@ -630,69 +678,51 @@ export default function CareersPage() {
   };
 
   // ── Role data ────────────────────────────────────────────────────
-  const trainerData: RoleCardProps = {
-    icon: GraduationCap,
+  const hrOfficerData: RoleCardProps = {
+    icon: Users,
     accentColor: "#099cca",
-    title: "Trainers",
-    subtitle: "All trainer positions share these baseline requirements",
+    title: "Human Resource Officer",
+    subtitle: "Human Resources Department · Job Group K · Permanent",
     qualifications: [
-      "Background training in Competency Based Education (CBET)",
-      "Pedagogy skills",
-      "Registration with TVETA is an added advantage",
-      "Must be a Kenyan Citizen",
+      "Bachelor's degree in Human Resource Management / HND in Human Resource Management",
+      "Registered member of IHRM",
+      "Minimum 1 year of relevant experience",
       "Computer literate",
+      "Meet Chapter Six of the Constitution of Kenya requirements",
     ],
     responsibilities: [
-      "Training in specific subject area",
-      "Development of technical training materials",
-      "Instructing, guiding and evaluating trainees in practical exercises",
-      "Reporting on progress and overall performance of individual trainees",
-      "Performing any other responsibility that may be assigned from time to time",
+      "Develop the human resource planning policy and procedures",
+      "Advise the BOG on HR policy matters",
+      "Act as the link between management and the union on labor relations",
+      "Oversee HR trainings and development across departments",
+      "Supervise administrative service areas including catering, boarding, secretaries, and transport",
+      "Oversee recruitment and appointment of staff",
+      "Manage and update the payroll and ensure compliance",
+      "Handle staff discipline, grievances, and welfare",
     ],
   };
 
-  const workshopAttendantData: RoleCardProps = {
-    icon: Wrench,
+  const accountsAssistantData: RoleCardProps = {
+    icon: FileText,
     accentColor: "#e07b00",
-    title: "Electrical Workshop Attendant",
-    subtitle: "Electrical & Electronics Engineering Department",
+    title: "Accounts Assistant",
+    subtitle: "Finance Department · Job Group G · Permanent",
     qualifications: [
-      "Craft certificate in Electrical Installation or equivalent",
-      "Computer literacy",
-      "Knowledge of Occupational Safety and Health Act",
+      "Diploma in Accounting or its equivalent from a recognized institution",
+      "CPA Part I or in progress",
+      "Minimum 2 years of relevant experience",
+      "Computer literate",
+      "Meet Chapter Six of the Constitution of Kenya requirements",
     ],
     responsibilities: [
-      "Provide support to trainers and trainees in solving technical problems and practical work",
-      "Maintain workshop inventories by receiving, issuing tools and materials in the workshop and ensuring sufficient materials are available",
-      "Observe and ensure health and safety procedures are practiced and enforced, and accidents are reported to the section head",
-      "Supervise the trainees while in the workshop to ensure all health and safety procedures are observed",
-      "Prepare maintenance schedules for all workshop equipment for approval by the section head and maintain requisite records on servicing schedules",
-      "Advise the section head on budgeting requirements of the workshop to ensure all workshop requirements are budgeted for",
-      "Segregate non-functional equipment and machinery to promote safety in the workshop",
-      "Provide procurement specifications for workshop equipment to be purchased to ensure correct equipment/machinery is acquired",
-      "Report breakdown of machinery and equipment to the head of section to advise on replacement needs",
-      "Supervise cleaning of the workshop to promote general cleanliness and provide a conducive environment for trainings and practicals",
-      "Any other duty assigned from time to time",
-    ],
-  };
-
-  const civilTechnicianData: RoleCardProps = {
-    icon: HardHat,
-    accentColor: "#5a7d2b",
-    title: "Building & Civil Engineering Technician",
-    subtitle: "Building & Civil Engineering Department",
-    qualifications: [
-      "Diploma in Civil Engineering",
-      "Computer literacy",
-      "Knowledge of Occupational Safety and Health Act",
-    ],
-    responsibilities: [
-      "Issue trainees with the required training resources during practicals to ensure practical trainings run smoothly",
-      "Supervise trainees while in the workshop to ensure all health and safety procedures are observed",
-      "Clean the workshop and equipment to ensure a conducive working environment",
-      "Maintain the security of equipment and materials in the workshop by ensuring it is opened and locked at appropriate times",
-      "Store workshop equipment at the right locations to ensure ease of access and security",
-      "Provide assistance in the preparation of practical sessions by setting up apparatus/equipment required for practicals",
+      "Prepare payment vouchers and monitor payments to creditors",
+      "Enter financial data and maintain accounting records",
+      "Prepare imprest, journal vouchers, and petty cash",
+      "Capture institution income and expenses accurately",
+      "Prepare and issue invoices or fee statements for tuition, accommodation, and other charges",
+      "Track unpaid student fees and follow up on overdue payments",
+      "Reconcile student accounts and receivable balances with the general ledger",
+      "Prepare reports on outstanding receivables, collections, and bad debts",
     ],
   };
 
@@ -711,7 +741,7 @@ export default function CareersPage() {
                 {openJobs.length} Open Roles · {openPostsCount} Posts
               </div>
               <div className="bg-white/20 text-white text-lg px-4 py-2 rounded-full font-medium">
-                Contract Positions
+                Permanent Positions
               </div>
               <div className="bg-white/20 text-white text-lg px-4 py-2 rounded-full font-medium">
                 Equal Opportunity Employer
@@ -820,7 +850,7 @@ export default function CareersPage() {
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
             <div className="p-6 border-b border-gray-200 dark:border-gray-600 flex items-center justify-between flex-wrap gap-2">
               <h2 className="text-2xl font-bold text-foreground">Current Openings</h2>
-              <span className="text-sm text-gray-500 dark:text-gray-400">Deadline: 23 June 2026, 5:00 PM</span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">Deadline: 13 August 2026, 5:00 PM</span>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -901,13 +931,12 @@ export default function CareersPage() {
           <div className="mb-6">
             <h2 className="text-3xl font-bold text-foreground">Role Requirements & Responsibilities</h2>
             <p className="text-gray-600 dark:text-gray-400 mt-1 text-sm">
-              Qualifications and key duties for each role category. Click View Key Responsibilities to expand.
+              Qualifications and key duties for each active role. Click View Key Responsibilities to expand.
             </p>
           </div>
-          <div className="grid lg:grid-cols-3 gap-6">
-            <RoleRequirementsCard {...trainerData} />
-            <RoleRequirementsCard {...workshopAttendantData} />
-            <RoleRequirementsCard {...civilTechnicianData} />
+          <div className="grid lg:grid-cols-2 gap-6">
+            <RoleRequirementsCard {...hrOfficerData} />
+            <RoleRequirementsCard {...accountsAssistantData} />
           </div>
         </section>
 
@@ -939,7 +968,7 @@ export default function CareersPage() {
               <div className="mt-6 p-4 bg-[#099cca]/10 rounded-lg">
                 <h4 className="font-semibold text-foreground mb-2">Application Guidelines</h4>
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                  <li>• Deadline: <strong>5:00 PM, 23rd June 2026</strong></li>
+                  <li>• Deadline: <strong>5:00 PM, 13th August 2026</strong></li>
                   <li>• Email: <strong>vacancies@kongonitechnical.ac.ke</strong></li>
                   <li>• Hard copy: Principal, Kongoni TVC, P.O. Box 45-30205, Matunda</li>
                   <li>• Include CVs and copies of relevant certificates</li>
