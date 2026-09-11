@@ -9,14 +9,16 @@ import {
   CheckCircle,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  ArrowRight,
+  Building2
 } from "lucide-react";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Principal - Ms. Judith  Akaranga | Kongoni Technical & Vocational College',
-  description: 'Meet Ms. Judith  Akaranga, Principal of Kongoni Technical and Vocational College. With over 35 years of educational leadership experience, Ms. Akaranga brings exceptional expertise in technical and vocational education.',
-  keywords: 'Principal, Judith Akaranga, Kongoni Technical College, TVET, Educational Leadership, Technical Education',
+  title: 'Principal - Mr. Stedi L. Bonface | Kongoni Technical & Vocational College',
+  description: 'Meet Mr. Stedi L. Bonface, Principal of Kongoni Technical and Vocational College, leading the institution with a commitment to integrity, innovation, and industry-aligned technical education.',
+  keywords: 'Principal, Stedi Bonface, Kongoni Technical College, TVET, Educational Leadership, Technical Education',
 };
 
 export default function PrincipalPage() {
@@ -47,8 +49,8 @@ export default function PrincipalPage() {
               Office of the Principal
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Ms. Judith  Akaranga<br />
-              Over 35 Years of Educational Leadership Excellence
+              Mr. Stedi L. Bonface<br />
+              Principal, Kongoni Technical &amp; Vocational College
             </p>
           </div>
         </div>
@@ -63,8 +65,8 @@ export default function PrincipalPage() {
               <div className="bg-white rounded-lg shadow-lg p-6 text-center sticky top-8">
                 <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-gray-200 ring-4 ring-primary/20">
                   <Image
-                    src="/images/principal.png"
-                    alt="Ms. Judith  Akaranga - Principal"
+                    src="/images/admin/STEDI BONIFACE.png"
+                    alt="Mr. Stedi L. Bonface - Principal"
                     width={192}
                     height={192}
                     className="object-cover w-full h-full"
@@ -73,29 +75,29 @@ export default function PrincipalPage() {
                 </div>
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-1">
-                    Ms. Judith  Akaranga
+                    Mr. Stedi L. Bonface
                   </h2>
                   <p className="text-primary font-semibold mb-3 text-lg">Principal</p>
                   <p className="text-gray-600 text-sm mb-1">
-                    Kongoni Technical & Vocational College
+                    Kongoni Technical &amp; Vocational College
                   </p>
                   <p className="text-gray-500 text-xs mb-6">
                     Secretary to the Board of Governors
                   </p>
                   
-                  {/* Qualifications */}
+                  {/* Career info */}
                   <div className="space-y-3 text-sm text-gray-700 mb-6">
                     <div className="flex items-center justify-center space-x-2 bg-gray-50 rounded-lg py-2 px-3">
-                      <GraduationCap className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span>M.Ed (Educational Administration)</span>
+                      <Building2 className="w-4 h-4 text-primary flex-shrink-0" />
+                      <span>Formerly Principal, Turbo TVC</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2 bg-gray-50 rounded-lg py-2 px-3">
                       <Award className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span>35+ Years Experience</span>
+                      <span>Appointed Principal, August 2026</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2 bg-gray-50 rounded-lg py-2 px-3">
                       <Users className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span>TVET & Secondary Leadership</span>
+                      <span>TVET Leadership</span>
                     </div>
                   </div>
                 </div>
@@ -133,33 +135,78 @@ export default function PrincipalPage() {
                 
                 <div className="prose prose-lg text-gray-700 space-y-6">
                   <p className="leading-relaxed text-lg">
-                    It is with great pleasure that I welcome you to Kongoni Technical and Vocational College. 
-                    As a dedicated educator with over 35 years of experience in educational leadership and 
-                    management, I am committed to advancing the mission of our institution and ensuring that 
-                    our students receive world-class technical and vocational training.
+                    Stepping into Kongoni Technical and Vocational College, I see a 
+                    community built on resilience, creativity, and a shared vision for 
+                    excellence. It is a privilege to join hands with you as we chart the 
+                    next chapter of growth and innovation.
                   </p>
 
                   <p className="leading-relaxed">
-                    At Kongoni TVC, our commitment lies in delivering high-quality education that meets industry 
-                    standards and anticipates future job market demands. With our experienced faculty, 
-                    state-of-the-art facilities, and innovative curriculum, we ensure comprehensive training 
-                    across various technical and vocational fields.
+                    At Kongoni, we do more than train, we inspire. Every workshop, every 
+                    classroom, and every project is a space where ideas take shape, skills 
+                    are sharpened, and futures are defined. Our mission is to nurture 
+                    professionals who are not only competent in their fields but also 
+                    courageous enough to lead change in society.
                   </p>
 
                   <p className="leading-relaxed">
-                    Our college has witnessed tremendous expansion since its inception, growing significantly 
-                    in terms of academic programs, staffing, and physical facilities. This growth reflects 
-                    our dedication to excellence and our commitment to serving our community and the broader 
-                    region with quality technical education.
+                    As Principal, I am committed to strengthening our culture of integrity, 
+                    teamwork, and continuous learning. Together, we will embrace emerging 
+                    technologies, expand industry collaborations, and create opportunities 
+                    that empower our trainees to thrive in a rapidly evolving world.
                   </p>
 
                   <p className="leading-relaxed">
-                    We take pride in nurturing a supportive learning environment that fosters creativity, 
-                    critical thinking, and practical skills. Our programs are meticulously designed to equip 
-                    students with the competencies necessary to excel as technical professionals both regionally 
-                    and globally.
+                    Let us move forward with confidence, united by purpose, and driven by 
+                    the belief that Kongoni TVC is not just a college, it is a launchpad 
+                    for dreams, innovation, and lifelong success.
                   </p>
                 </div>
+              </div>
+
+              {/* Career Journey */}
+              <div className="bg-gray-50 rounded-lg p-8">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+                  <Building2 className="w-6 h-6 text-primary mr-2" />
+                  Career Journey
+                </h3>
+
+                <div className="flex flex-col md:flex-row items-stretch gap-4">
+                  <div className="flex-1 bg-white rounded-lg border border-gray-200 p-5">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">
+                      Previously
+                    </p>
+                    <p className="font-semibold text-gray-900">Principal, Turbo TVC</p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Uasin Gishu County
+                    </p>
+                  </div>
+
+                  <div className="hidden md:flex items-center justify-center px-2 text-primary">
+                    <ArrowRight className="w-6 h-6" />
+                  </div>
+                  <div className="md:hidden flex items-center justify-center text-primary rotate-90">
+                    <ArrowRight className="w-6 h-6" />
+                  </div>
+
+                  <div className="flex-1 bg-primary/5 rounded-lg border border-primary/20 p-5">
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">
+                      Since August 2026
+                    </p>
+                    <p className="font-semibold text-gray-900">Principal, Kongoni TVC</p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Kakamega County
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-gray-700 leading-relaxed mt-6">
+                  Mr. Bonface&apos;s transfer to Kongoni TVC was part of a Ministry of 
+                  Education reshuffle of TVET leadership, aimed at strengthening service 
+                  delivery and addressing declining enrolment across technical and 
+                  vocational institutions. He succeeds Ms. Judith Akaranga, who retired 
+                  after a long career leading multiple TVET institutions.
+                </p>
               </div>
 
               {/* Vision and Leadership Philosophy */}
@@ -170,18 +217,18 @@ export default function PrincipalPage() {
                 </h3>
                 
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Drawing from my extensive experience across secondary and technical institutions, I believe 
-                  in transformative educational leadership that combines strategic vision with practical 
-                  implementation. Kongoni TVC serves as a Center of Excellence in training highly qualified 
-                  technical professionals, aligning with our vision to lead in technical and vocational education 
-                  across the region.
+                  Kongoni TVC serves as a center of excellence in training highly qualified 
+                  technical professionals, and my leadership is guided by that same standard: 
+                  strengthening a culture of integrity, teamwork, and continuous learning 
+                  across every workshop, classroom, and project.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
-                  My leadership philosophy centers on collaborative excellence, innovation, and student-centered 
-                  learning. I believe in empowering both our faculty and students to reach their full potential 
-                  through continuous professional development, industry engagement, and the cultivation of an 
-                  environment that promotes academic excellence and personal growth.
+                  I believe in embracing emerging technologies and expanding industry 
+                  collaborations so that our trainees graduate not just competent in their 
+                  fields, but confident and courageous enough to lead change in society. 
+                  Kongoni is not just a college, it is a launchpad for dreams, innovation, 
+                  and lifelong success.
                 </p>
               </div>
             </div>
@@ -288,13 +335,12 @@ export default function PrincipalPage() {
           <div className="mt-16">
             <div className="bg-gradient-to-r from-primary to-primary/80 rounded-lg p-8 text-white text-center">
               <blockquote className="text-xl italic mb-6 leading-relaxed">
-                &quot;In pursuit of efficient and quality education, we have implemented comprehensive programs 
-                to monitor performance and continually enhance our service delivery to our students, 
-                community, and all stakeholders. Together, we are building a brighter future through 
-                technical excellence.&quot;
+                &quot;Let us move forward with confidence, united by purpose, and driven by 
+                the belief that Kongoni TVC is not just a college, it is a launchpad for 
+                dreams, innovation, and lifelong success.&quot;
               </blockquote>
               <cite className="text-secondary font-semibold text-lg">
-                - Ms. Judith  Akaranga, Principal
+                - Mr. Stedi L. Bonface, Principal
               </cite>
             </div>
           </div>

@@ -1,6 +1,18 @@
+//app/about/page.tsx
+
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Briefcase,
+  Monitor,
+  HardHat,
+  Zap,
+  Car,
+  Scissors,
+  UtensilsCrossed,
+  Sprout,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us | Kongoni Technical Vocational College",
@@ -26,6 +38,9 @@ const IMGS = {
   graduation: "/images/about/frontadmin.png",
   dual1:      "/images/about/dualtraining1.jpg",
   dual2:      "/images/about/dualtraining4.jpg",
+  // Leadership
+  judith:     "/images/admin/judith.png", 
+  stedi:      "/images/admin/STEDI BONIFACE.png", 
 };
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -206,8 +221,8 @@ export default function AboutPage() {
                style={{ scrollbarWidth: "none" }}>
             {[
               { src: IMGS.lab,        label: "ICT & Computing Lab" },
-              { src: IMGS.workshop,   label: "Engineering Workshop" },
-              { src: IMGS.students,   label: "Lecture Rooms" },
+              { src: IMGS.workshop,   label: "Student Admission" },
+              { src: IMGS.students,   label: "Engineering Workshop" },
               { src: IMGS.outdoor,    label: "College Grounds" },
               { src: IMGS.graduation, label: "Graduation Ceremony" },
               { src: IMGS.campus,     label: "Main Building" },
@@ -337,6 +352,78 @@ export default function AboutPage() {
         </section>
 
         {/* ══════════════════════════════════════════════════════════════
+            LEADERSHIP — outgoing & incoming principal
+        ══════════════════════════════════════════════════════════════ */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">Leadership</p>
+              <h2 className="text-4xl font-extrabold text-gray-900 mb-4">A legacy carried forward</h2>
+              <p className="text-gray-600">
+                In August 2026, Kongoni TVC welcomed new leadership as part of a Ministry of
+                Education reshuffle of TVET principals aimed at strengthening service delivery
+                nationwide.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8">
+
+              {/* Former Principal */}
+              <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="relative w-20 h-20 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 ring-4 ring-gray-200">
+                    <Image src={IMGS.judith} alt="Judith Akaranga" fill className="object-cover" />
+                  </div>
+                  <div>
+                    <span className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-gray-200 text-gray-600 mb-2">
+                      Principal, 2023–2026
+                    </span>
+                    <h3 className="text-xl font-bold text-gray-900">Judith Akaranga</h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Ms. Akaranga led Kongoni TVC for three years, bringing over 15 years of
+                  experience in technical education leadership and an MSc in Education
+                  Administration. She was widely recognised for promoting cultural diversity
+                  at the college — notably introducing the annual Cultural Festival and the
+                  &quot;Mr &amp; Miss Kongoni&quot; ceremony, which brought traditional dance,
+                  attire, and drama into college life while showcasing the institution&apos;s
+                  training programs to the wider community.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  She retired in August 2026 as part of a nationwide Ministry of Education
+                  reshuffle of TVET leadership.
+                </p>
+              </div>
+
+              {/* Current Principal */}
+              <div className="bg-primary/5 rounded-3xl p-8 border border-primary/20">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="relative w-20 h-20 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 ring-4 ring-primary/20">
+                    <Image src={IMGS.stedi} alt="Stedi Bonface" fill className="object-cover" />
+                  </div>
+                  <div>
+                    <span className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-primary text-white mb-2">
+                      Principal, Since Aug 2026
+                    </span>
+                    <h3 className="text-xl font-bold text-gray-900">Stedi L. Bonface</h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Formerly Principal of Turbo TVC, Mr. Bonface now leads Kongoni TVC with a
+                  focus on integrity, teamwork, and continuous learning — building on the
+                  foundation laid by his predecessor.
+                </p>
+                <Link href="/principal" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+                  Read the Principal&apos;s full message →
+                </Link>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════════════════════════════════
             MISSION / VALUES — split with accent card
         ══════════════════════════════════════════════════════════════ */}
         <section className="py-24 bg-white">
@@ -426,14 +513,14 @@ export default function AboutPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {[
-                { icon: "💼", name: "Business", tagline: "Commerce & Entrepreneurship",     color: "bg-blue-600",   slug: "business" },
-                { icon: "💻", name: "Computing & ICT", tagline: "Digital Skills & Tech",    color: "bg-violet-600", slug: "ict" },
-                { icon: "🏗️", name: "Building & Civil", tagline: "Construction & Survey",   color: "bg-slate-700",  slug: "civil" },
-                { icon: "⚡", name: "Electrical", tagline: "Power & Electronics",            color: "bg-yellow-500", slug: "electrical" },
-                { icon: "🔧", name: "Automotive", tagline: "Vehicle & Mechanical",           color: "bg-green-600",  slug: "automotive" },
-                { icon: "✂️", name: "Fashion & Beauty", tagline: "Design & Cosmetology",    color: "bg-pink-600",   slug: "fashion" },
-                { icon: "🏨", name: "Hospitality", tagline: "Hotel & Tourism",               color: "bg-purple-600", slug: "hospitality-tourism" },
-                { icon: "🌱", name: "Agriculture", tagline: "Farming & Agribusiness",        color: "bg-emerald-600",slug: "agriculture" },
+                { icon: Briefcase,       name: "Business", tagline: "Commerce & Entrepreneurship",  color: "bg-blue-600",    slug: "business" },
+                { icon: Monitor,         name: "Computing & ICT", tagline: "Digital Skills & Tech",  color: "bg-violet-600",  slug: "ict" },
+                { icon: HardHat,         name: "Building & Civil", tagline: "Construction & Survey", color: "bg-slate-700",   slug: "civil" },
+                { icon: Zap,             name: "Electrical", tagline: "Power & Electronics",         color: "bg-yellow-500",  slug: "electrical" },
+                { icon: Car,             name: "Automotive", tagline: "Vehicle & Mechanical",        color: "bg-green-600",   slug: "automotive" },
+                { icon: Scissors,        name: "Fashion & Beauty", tagline: "Design & Cosmetology",  color: "bg-pink-600",    slug: "fashion" },
+                { icon: UtensilsCrossed, name: "Hospitality", tagline: "Hotel & Tourism",            color: "bg-purple-600",  slug: "hospitality-tourism" },
+                { icon: Sprout,          name: "Agriculture", tagline: "Farming & Agribusiness",     color: "bg-emerald-600", slug: "agriculture" },
               ].map((dept) => (
                 <Link
                   key={dept.slug}
@@ -441,12 +528,12 @@ export default function AboutPage() {
                   className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-gray-100"
                 >
                   <div className={`w-14 h-14 ${dept.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform`}>
-                    <span className="text-white text-2xl">{dept.icon}</span>
+                    <dept.icon className="w-7 h-7 text-white" strokeWidth={2} />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-1">{dept.name}</h3>
                   <p className="text-sm text-gray-500 mb-3">{dept.tagline}</p>
                   <span className="text-primary text-sm font-semibold group-hover:underline">
-                    View courses →
+                    View Department →
                   </span>
                 </Link>
               ))}

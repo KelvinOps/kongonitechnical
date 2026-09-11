@@ -163,12 +163,8 @@ export default function Header() {
           isCategory: true as const,
           items: [
             { href: "/news/executive-order", label: "Executive Order" },
-            { href: "/news/legal-order", label: "Legal Order" },
-            { href: "/news/legislation-tvet", label: "Legislation on TVET" },
             { href: "/news/circulars", label: "Circulars" },
-            { href: "/news/other-resources", label: "Other Resources" },
-            { href: "/news/ktvc-documents", label: "KTVC Documents" },
-            { href: "/news/research", label: "Research" }
+            { href: "/news/other-resources", label: "Other Resources" }
           ]
         },
         { 
@@ -191,8 +187,7 @@ export default function Header() {
           label: "Downloadable resources",
           isCategory: true as const,
           items: [
-            { href: "/downloads", label: "KUCCPS Admissions 2026" },
-            { href: "/documents/kongoni-technical-brochure.pdf", label: "Brochure" },
+            { href: "/documents/KTVC-BROCHURE.pdf", label: "Brochure" },
             { href: "/documents/KTVC-TRAINEES-RULES-AND-REGULATIONS.pdf", label: "Trainee Rules and Regulations" }
           ]
         }
@@ -207,26 +202,22 @@ export default function Header() {
           label: "Prospect Students",
           isCategory: true as const,
           items: [
-            { href: "/documents/Admission-Letter-2025.pdf", label: "Admission Letter" },
+            { href: "/documents/KTVC-APPLICATION-FORM.pdf", label: "Admission Form" },
             { href: "/admissions", label: "Online Application" },
             { href: "/documents/KongoniTVC-feestructure-2026.pdf", label: "Fee Structure 2026" },
             { href: "/documents/KongoniTVC-course-requirements.pdf", label: "Course Requirements" },
             { href: "/documents/KongoniTVC-medical form.pdf", label: "Medical Form" },
-            { href: "https://portal.hef.co.ke/", label: "Scholarship Application" },
-            { href: "/documents/hostel-booking.pdf", label: "Hostel Booking" }
+            { href: "https://portal.hef.co.ke/", label: "Scholarship Application" }
           ]
         },
         { 
           label: "Current Student",
           isCategory: true as const,
           items: [
-            { href: "/documents/student-forms", label: "All Student Forms" },
-            { href: "/documents/trainee-rules", label: "Trainee Rules & Regulations" },
-            { href: "/examination", label: "Examination" },
-            { href: "/student-hub/unit-registration", label: "Unit Registration Procedure" },
-            { href: "/documents/course-transfer", label: "Course Transfer Form" },
-            { href: "/documents/clearance-form", label: "Clearance Form" },
-            { href: "/documents/student-handbook", label: "Student Handbook" }
+            { href: "/documents/KTVC-APPLICATION-FORM.pdf", label: "All Student Forms" },
+            { href: "/documents/KTVC-TRAINEES-RULES-AND-REGULATIONS.pdf", label: "Trainee Rules & Regulations" },
+            { href: "/documents/KTVC-TRAINEE-CLEARANCE.pdf", label: "Trainee Clearance Form" },
+            { href: "https://tvetcdacc.go.ke/downloads/", label: "TVET CDACC Downloads" },
           ]
         }
       ]

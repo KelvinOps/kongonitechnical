@@ -1,3 +1,4 @@
+// app/governing-council/page.tsx (or wherever this file lives)
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -77,12 +78,12 @@ const boardMembers = [
   },
   {
     id: 8,
-    name: "Judith Gahuya Akaranga",
+    name: "Stedi L. Bonface",
     position: "Secretary",
     role: "Board Secretary & Principal",
-    qualification: "MED - Educational Administration (Kenyatta University)",
-    image: "/images/admin/board/JUDITH AKARANGA.png",
-    summary: "Principal of Kongoni Technical and Vocational College with extensive leadership experience. Previously served as Principal at Shamberere TTI, Musakasa TTI, and held various leadership positions in secondary schools across Kenya.",
+    qualification: "TVET Leadership; Formerly Principal, Turbo TVC (Uasin Gishu County)",
+    image: "/images/admin/STEDI BONIFACE.png",
+    summary: "Principal of Kongoni Technical and Vocational College, appointed August 2026 as part of a Ministry of Education reshuffle of TVET leadership. Previously served as Principal at Turbo TVC, bringing a commitment to integrity, innovation, and industry-aligned technical education.",
     committee: "Secretary to the Board of Governors"
   }
 ];
@@ -91,11 +92,11 @@ const boardMembers = [
 const managementTeam = [
   {
     id: 1,
-    name: "Judith Gahuya Akaranga",
+    name: "Stedi L. Bonface",
     position: "Principal",
-    qualification: "MED - Educational Administration (Kenyatta University)",
-    image: "/images/admin/board/JUDITH AKARANGA.png",
-    summary: "Leads the institution with over 30 years of educational experience. Has served as Principal at multiple technical institutions and secondary schools, demonstrating strong leadership in educational administration and institutional development."
+    qualification: "TVET Leadership; Formerly Principal, Turbo TVC",
+    image: "/images/admin/STEDI BONIFACE.png",
+    summary: "Leads Kongoni Technical and Vocational College since August 2026, succeeding Ms. Judith Akaranga. Formerly Principal at Turbo TVC in Uasin Gishu County, with a strong record in TVET leadership and a commitment to strengthening industry partnerships, integrity, and continuous learning across the institution."
   },
   {
     id: 2,
