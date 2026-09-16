@@ -35,9 +35,9 @@ export const metadata: Metadata = {
 // Performance Contracting Team Members Data
 const teamMembers = [
   {
-    name: "Ms. Judith Akaranga",
+    name: "Mr. Stedi L. Bonface",
     title: "Team Leader & Principal",
-    image: "/images/pc/judithakaranga.png",
+    image: "/images/pc/STEDI BONIFACE.png",
     email: "principal@kongonitechnical.ac.ke",
     phone: "+254 788 070 303"
   },
@@ -63,16 +63,16 @@ const teamMembers = [
     phone: "+254 788 070 303"
   },
   {
-    name: "Ms. Jesca Kitiavi",
+    name: "",
     title: "Human Resources Manager",
-    image: "/images/pc/JESCAH_KITIAVI.png",
+    image: "/images/pc/",
     email: "hrm@kongonitechnical.ac.ke",
     phone: "+254 788 070 303"
   },
   {
-    name: "Mr. Cyrus Lagat",
+    name: "Mr. Nganyi Amos",
     title: "Quality Assurance Officer",
-    image: "/images/pc/cyruslagat.png",
+    image: "/images/pc/NGANYI AMOS.png",
     email: "iqa@kongonitechnical.ac.ke",
     phone: "+254 788 070 303"
   },
@@ -99,9 +99,9 @@ const teamMembers = [
   }
   ,
   {
-    name: "Ms. Charity Chepkorir ",
+    name: "Ms.  ",
     title: "PC Coordinator",
-    image: "/images/pc/CHARITY JEPKORIR.png",
+    image: "/images/pc/",
     email: "pc@kongonitechnical.ac.ke",
     phone: "+254 788 070 303"
   }

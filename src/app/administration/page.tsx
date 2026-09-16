@@ -32,17 +32,17 @@ interface AdminMember {
 const administrationTeam: AdminMember[] = [
   {
     id: '1',
-    name: 'Ms. Judith Akaranga',
+    name: 'Mr. Stedi L. Bonface',
     position: 'Principal',
     department: 'Executive Leadership',
-    image: '/images/admin/judithakaranga.png',
+    image: '/images/admin/STEDI BONIFACE.png',
     email: 'principal@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['MSc in Education Administration'],
-    experience: '15+ years in technical education',
+    qualifications: ['TVET Leadership & Management'],
+    experience: 'Formerly Principal, Turbo TVC',
     responsibilities: ['Strategic planning and institutional leadership', 'Academic quality assurance', 'Stakeholder relations', 'Policy implementation'],
-    bio: 'Ms Akaranga brings over 15 years of experience in technical education leadership. She is passionate about developing skilled technical professionals who contribute to Kenya\'s economic growth.',
-    joinDate: '2023'
+    bio: 'Mr. Bonface joined Kongoni TVC as Principal in August 2026, transferring from Turbo TVC as part of a Ministry of Education reshuffle of TVET leadership. He is committed to strengthening a culture of integrity, teamwork, and continuous learning across the institution.',
+    joinDate: '2026'
   },
   {
     id: '2',
@@ -102,16 +102,16 @@ const administrationTeam: AdminMember[] = [
   },
   {
     id: '7',
-    name: 'Mr Cyrus Lagat',
+    name: 'Mr. Nganyi Amos',
     position: 'Internal Quality Assurance Coordinator',
     department: 'Research and Innovation',
-    image: '/images/admin/cyruslagat.png',
+    image: '/images/admin/NGANYI AMOS.png',
     email: 'iqa@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
     qualifications: ['MSc in Education'],
     experience: '13+ years in research and innovation',
     responsibilities: ['Research program coordination', 'Innovation initiatives', 'Grant applications', 'Industry collaborations'],
-    bio: 'Mr Lagat leads our research efforts, focusing on applied research that addresses real-world technical challenges.',
+    bio: 'Mr. Amos leads our research efforts, focusing on applied research that addresses real-world technical challenges.',
     joinDate: '2018'
   },
     {
@@ -172,30 +172,30 @@ const administrationTeam: AdminMember[] = [
   },
     {
     id: '13',
-    name: 'Ms Jesica Kitiavi ',
+    name: ' ',
     position: 'Human Resource Officer',
     department: 'Human Resource',
-    image: '/images/admin/JESCAH_KITIAVI.png',
+    image: '',
     email: 'hrm@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
     qualifications: ['BSc in Human Resource'],
     experience: '5+ years in human resource',
     responsibilities: ['Industry partnerships development', 'Student internship coordination', 'Alumni engagement', 'Corporate relations'],
-    bio: 'Ms Jesica manages and takes care of all staff and creating opportunities for staff.',
+    bio: 'Manages and takes care of all staff and creating opportunities for staff.',
     joinDate: '2025'
   },
   {
     id: '10',
-    name: 'Ms. Charity Jepkorir',
+    name: '',
     position: 'Performance Contracting Coordinator',
     department: 'Quality Assurance',
-    image: '/images/admin/CHARITY JEPKORIR.png',
+    image: '',
     email: 'pc@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
     qualifications: ['BSc in Public Administration'],
     experience: '9+ years in performance management',
     responsibilities: ['Performance contract development', 'Monitoring and evaluation', 'Reporting and documentation', 'Institutional planning'],
-    bio: 'Ms. Joyline ensures the institution meets its strategic objectives through effective performance contracting and continuous monitoring of key performance indicators.',
+    bio: 'Ensures the institution meets its strategic objectives through effective performance contracting and continuous monitoring of key performance indicators.',
     joinDate: '2022'
   }
 ]
@@ -247,9 +247,9 @@ export default function AdministrationPage() {
           <h2 className="text-3xl font-bold text-foreground mb-8">Leadership Message</h2>
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
             <blockquote className="text-lg text-gray-700 dark:text-gray-300 italic mb-6 leading-relaxed">
-              At Kongoni Technical and Vocational College, we are committed to providing world-class technical education that empowers our students with practical skills and knowledge needed to excel in their chosen fields. Our administration team works tirelessly to create an environment that fosters innovation, excellence, and personal growth.
+              Let us move forward with confidence, united by purpose, and driven by the belief that Kongoni TVC is not just a college, it is a launchpad for dreams, innovation, and lifelong success.
             </blockquote>
-            <cite className="text-primary font-semibold">- Ms Judith Akaranga, Principal</cite>
+            <cite className="text-primary font-semibold">- Mr. Stedi L. Bonface, Principal</cite>
           </div>
         </div>
       </section>
