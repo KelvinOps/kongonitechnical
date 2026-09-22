@@ -1,7 +1,7 @@
 // app/administration/page.tsx
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Mail, Phone,  Calendar, Award, GraduationCap, Users, Download, FileText } from 'lucide-react'
+import { Mail, Phone, Calendar, Award, GraduationCap, Users, Download, FileText, User } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Administration Team | Kongoni Technical and Vocational College',
@@ -38,7 +38,7 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/STEDI BONIFACE.png',
     email: 'principal@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['TVET Leadership & Management'],
+    qualifications: [''],
     experience: 'Formerly Principal, Turbo TVC',
     responsibilities: ['Strategic planning and institutional leadership', 'Academic quality assurance', 'Stakeholder relations', 'Policy implementation'],
     bio: 'Mr. Bonface joined Kongoni TVC as Principal in August 2026, transferring from Turbo TVC as part of a Ministry of Education reshuffle of TVET leadership. He is committed to strengthening a culture of integrity, teamwork, and continuous learning across the institution.',
@@ -80,7 +80,7 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/kevinmasinde.png',
     email: 'dean@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BSc in Information Technology'],
+    qualifications: ['BSc'],
     experience: '14+ years in engineering education',
     responsibilities: ['Engineering programs leadership', 'Industry partnerships', 'Research coordination', 'Student projects supervision'],
     bio: 'Mr Masinde leads our engineering programs with a focus on practical skills development and industry relevance.',
@@ -94,7 +94,7 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/andrewjuma.png',
     email: 'registrar@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['Diploma in Building Technology'],
+    qualifications: ['Bsc in Building'],
     experience: '9+ years in academic registry',
     responsibilities: ['Student records management', 'Academic calendar coordination', 'Examination administration', 'Graduation ceremonies'],
     bio: 'Mr. Juma ensures efficient management of all student academic records and administrative processes.',
@@ -102,19 +102,19 @@ const administrationTeam: AdminMember[] = [
   },
   {
     id: '7',
-    name: 'Mr. Nganyi Amos',
+    name: 'Mr Nganyi Amos',
     position: 'Internal Quality Assurance Coordinator',
     department: 'Research and Innovation',
     image: '/images/admin/NGANYI AMOS.png',
     email: 'iqa@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['MSc in Education'],
-    experience: '13+ years in research and innovation',
+    qualifications: ['Bsc'],
+    experience: '3+ years in research and innovation',
     responsibilities: ['Research program coordination', 'Innovation initiatives', 'Grant applications', 'Industry collaborations'],
     bio: 'Mr. Amos leads our research efforts, focusing on applied research that addresses real-world technical challenges.',
     joinDate: '2018'
   },
-    {
+  {
     id: '11',
     name: 'Mr Patrick Mwangi',
     position: 'Examination Officer',
@@ -122,7 +122,7 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/patrickmwangi.png',
     email: 'exams@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['MSc in Education'],
+    qualifications: ['Bsc'],
     experience: '13+ years in curriculum development',
     responsibilities: ['Research program coordination', 'Innovation initiatives', 'Grant applications', 'Industry collaborations'],
     bio: 'Mr Mwangi leads our examination department, focusing on applied research that addresses real-world technical challenges.',
@@ -130,31 +130,46 @@ const administrationTeam: AdminMember[] = [
   },
   {
     id: '8',
-    name: 'Ms. Millicent Nambo',
+    name: 'CPA Millicent Nambo',
     position: 'Finance Officer',
     department: 'Finance and Accounts',
     image: '/images/admin/millcentnambo.png',
-    email: 'finance@kongonitecnhical.ac.ke',
+    email: 'finance@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['MBA in Finance', 'CPA (K)', 'BSc in Finance and Accounting'],
+    qualifications: ['BCOM', 'CPA'],
     experience: '8+ years in financial management',
     responsibilities: ['Financial planning and control', 'Budget management', 'Financial reporting', 'Audit coordination'],
     bio: 'Ms Nambo ensures sound financial management and transparent use of institutional resources.',
     joinDate: '2021'
   },
-    {
+  {
     id: '12',
-    name: 'Mr Reuben Chemtingen',
+    name: 'CPA Reuben Chemtingen',
     position: 'Internal Auditor',
     department: 'Finance and Accounts',
     image: '/images/admin/reuben cheptinget.png',
-    email: 'audit@kongonitecnhical.ac.ke',
+    email: 'audit@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['MBA in Finance', 'CPA (K)', 'BSc in Finance and Accounting'],
+    qualifications: ['BCOM', 'CPA'],
     experience: '8+ years in financial management',
     responsibilities: ['Financial planning and control', 'Budget management', 'Financial reporting', 'Audit coordination'],
     bio: 'Mr Chemtingen ensures sound financial management and transparent use of institutional resources.',
     joinDate: '2025'
+  }
+  ,
+  {
+    id: '14',
+    name: 'Geofrey Kipkore',
+    position: 'Procurement Officer',
+    department: 'Procurement',
+    image: '/images/admin/GEOFREY_KIPKORIR.png',
+    email: 'procurement@kongonitechnical.ac.ke',
+    phone: '+254 788 070 303',
+    qualifications: ['BSc'],
+    experience: '9+ years in performance management',
+    responsibilities: ['Performance contract development', 'Monitoring and evaluation', 'Reporting and documentation', 'Institutional planning'],
+    bio: 'Ensures the institution meets its strategic objectives through effective performance contracting and continuous monitoring of key performance indicators.',
+    joinDate: '2022'
   },
   {
     id: '9',
@@ -164,15 +179,15 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/ODHIAMBO KEVIN  MAGONYA.png',
     email: 'ilo@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BSc in Education'],
+    qualifications: ['BSc'],
     experience: '11+ years in industry partnerships',
     responsibilities: ['Industry partnerships development', 'Student internship coordination', 'Alumni engagement', 'Corporate relations'],
     bio: 'Mr. Magonya bridges the gap between the institution and industry, ensuring our programs align with market needs and creating opportunities for students.',
     joinDate: '2020'
   },
-    {
+  {
     id: '13',
-    name: ' ',
+    name: '-',
     position: 'Human Resource Officer',
     department: 'Human Resource',
     image: '',
@@ -186,13 +201,13 @@ const administrationTeam: AdminMember[] = [
   },
   {
     id: '10',
-    name: '',
+    name: '-',
     position: 'Performance Contracting Coordinator',
     department: 'Quality Assurance',
     image: '',
     email: 'pc@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BSc in Public Administration'],
+    qualifications: ['BSc'],
     experience: '9+ years in performance management',
     responsibilities: ['Performance contract development', 'Monitoring and evaluation', 'Reporting and documentation', 'Institutional planning'],
     bio: 'Ensures the institution meets its strategic objectives through effective performance contracting and continuous monitoring of key performance indicators.',
@@ -260,31 +275,37 @@ export default function AdministrationPage() {
           <h2 className="text-3xl font-bold text-center text-foreground mb-12 animate-fade-in-up">Our Leadership Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {administrationTeam.map((member, index) => (
-              <div 
-                key={member.id} 
+              <div
+                key={member.id}
                 className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Member Photo */}
                 <div className="flex justify-center pt-8 pb-4">
                   <div className="relative h-48 w-48 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-primary/40 ring-4 ring-primary/30">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                      sizes="192px"
-                      priority={false}
-                    />
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name || member.position}
+                        fill
+                        className="object-cover"
+                        sizes="192px"
+                        priority={false}
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center">
+                        <User className="h-20 w-20 text-primary/60" />
+                      </div>
+                    )}
                   </div>
                 </div>
 
                 {/* Member Info */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{member.name || 'To Be Announced'}</h3>
                   <p className="text-primary font-semibold mb-1">{member.position}</p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{member.department}</p>
-                  
+
                   {/* Contact Info */}
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
@@ -316,8 +337,8 @@ export default function AdministrationPage() {
                   <div className="mb-4">
                     <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">Key Qualifications</p>
                     <div className="space-y-1">
-                      {member.qualifications.slice(0, 2).map((qual, index) => (
-                        <p key={index} className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
+                      {member.qualifications.slice(0, 2).map((qual, qIndex) => (
+                        <p key={qIndex} className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
                           {qual}
                         </p>
                       ))}
@@ -340,7 +361,7 @@ export default function AdministrationPage() {
       <section className="py-16 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">Organizational Structure</h2>
-          
+
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden animate-scale-in">
             {/* PDF Preview */}
             <div className="relative w-full bg-gray-100 dark:bg-gray-700" style={{ minHeight: '600px' }}>
@@ -366,7 +387,7 @@ export default function AdministrationPage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <a
                   href="/documents/kongoni-tvc-organogram.pdf"
                   download="Kongoni-TVC-Organogram.pdf"
