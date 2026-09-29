@@ -19,6 +19,7 @@ import PartnershipsSection from "@/components/partnerships-section";
 import FAQSection from "@/components/faq-section";
 import FeedbackSection from "@/components/feedback-section"; 
 import PosterVideoSection from "@/components/poster-video-section";
+import QuickLinksBar from "@/components/quick-links-bar";
 
 // Loading components for better UX
 const SectionSkeleton = () => (
@@ -47,6 +48,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="space-y-0 bg-gray-50">
+
+      <QuickLinksBar />
       {/* Hero Section - Critical above fold content */}
       <HeroSlideshow />
 
