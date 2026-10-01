@@ -214,7 +214,7 @@ export default function CBETPage() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                href="/admissions" 
+                href="https://kongonitvc.jiunge.com/programmes-widget" 
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-900 transition-all duration-300"
               >
                 Apply Now
@@ -513,7 +513,7 @@ export default function CBETPage() {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link 
-              href="/admissions"
+              href="https://kongonitvc.jiunge.com/programmes-widget"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-900 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 group shadow-lg"
             >
               Apply Now

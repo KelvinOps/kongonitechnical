@@ -281,7 +281,7 @@ export default function ContactPage() {
                   Visit our admissions page for step-by-step guidance on joining Kongoni TVC.
                 </p>
                 <a
-                  href="/admissions"
+                  href="https://kongonitvc.jiunge.com/programmes-widget"
                   className="inline-flex items-center gap-2 bg-white text-blue-600 font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-blue-50 transition-colors"
                 >
                   Go to Admissions <ArrowRight className="w-4 h-4" />
@@ -294,9 +294,9 @@ export default function ContactPage() {
                 <ul className="space-y-3">
                   {[
                     { label: "Course requirements & intake dates", href: "/courses" },
-                    { label: "Fee structure & payment plans",      href: "/admissions#fees" },
+                    { label: "Fee structure & payment plans",      href: "https://kongonitvc.jiunge.com/programmes-widget#fees" },
                     { label: "Hostel & accommodation",             href: "/facilities" },
-                    { label: "HELB & bursary information",         href: "/admissions#funding" },
+                    { label: "HELB & bursary information",         href: "https://kongonitvc.jiunge.com/programmes-widget#funding" },
                     { label: "NITA & TVETA certification",         href: "/courses/nita-courses" },
                   ].map(({ label, href }) => (
                     <li key={label}>

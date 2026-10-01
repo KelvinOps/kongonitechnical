@@ -739,7 +739,7 @@ export default function CourseDetailPage() {
                   Take the first step towards your career in {course.title.toLowerCase()}.
                 </p>
                 <div className="space-y-3">
-                  <Link href="/admissions" className="block">
+                  <Link href="https://kongonitvc.jiunge.com/programmes-widget" className="block">
                     <Button className={`w-full bg-${typeInfo.color}-600 hover:bg-${typeInfo.color}-700`}>
                       Apply Now
                     </Button>

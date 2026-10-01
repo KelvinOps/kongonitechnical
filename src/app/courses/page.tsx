@@ -379,7 +379,7 @@ export default function CoursesSection() {
                 Explore All Courses
               </Button>
             </Link>
-            <Link href="/admissions">
+            <Link href="https://kongonitvc.jiunge.com/programmes-widget">
               <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3">
                 Apply Now
               </Button>

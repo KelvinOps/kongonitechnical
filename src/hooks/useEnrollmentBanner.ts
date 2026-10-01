@@ -69,7 +69,7 @@ export const useEnrollmentBanner = () => {
       console.log('🎯 Navigating to admissions page');
       // Use setTimeout to ensure banner is closed before navigation
       setTimeout(() => {
-        window.location.href = '/admissions';
+        window.location.href = 'https://kongonitvc.jiunge.com/programmes-widget';
       }, 100);
     }
   };

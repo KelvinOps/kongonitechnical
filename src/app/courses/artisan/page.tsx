@@ -327,7 +327,7 @@ export default function ArtisanCoursesPage() {
             Our artisan programs provide intensive, hands-on training in skilled trades. With short duration and focused curriculum, you&apos;ll quickly gain the practical skills employers are looking for.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="/admissions">
+            <Link href="https://kongonitvc.jiunge.com/programmes-widget">
               <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
                 Apply for Artisan Program
               </Button>

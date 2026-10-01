@@ -171,7 +171,7 @@ export default function CourseSearchSection() {
   const handleJoinNow = () => {
     try {
       toast({ title: "Info", description: "Redirecting to admissions page..." });
-      router.push('/admissions');
+      router.push('https://kongonitvc.jiunge.com/programmes-widget');
       setTimeout(() => {
         toast({ title: "Success", description: "Welcome to the admissions page!" });
       }, 500);

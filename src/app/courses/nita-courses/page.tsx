@@ -326,7 +326,7 @@ export default function NitaCoursesPage() {
             Our NITA-approved courses are designed in partnership with industry to ensure you gain the exact skills employers need. Graduate with confidence knowing your certification is recognized nationwide.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="/admissions">
+            <Link href="https://kongonitvc.jiunge.com/programmes-widget">
               <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
                 Apply for NITA Course
               </Button>

@@ -315,7 +315,7 @@ export default function CertificateCoursesPage() {
             Our certificate programs are designed to get you job-ready quickly with practical, hands-on training. Perfect for those starting their careers or looking to gain new skills in a specific field.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="/admissions">
+            <Link href="https://kongonitvc.jiunge.com/programmes-widget">
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
                 Apply for Certificate Program
               </Button>

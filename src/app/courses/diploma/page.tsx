@@ -319,7 +319,7 @@ export default function DiplomaCoursesPage() {
             Our diploma programs provide comprehensive education and advanced skills training. With strong industry connections and university transfer opportunities, you&apos;ll be well-prepared for professional success.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="/admissions">
+            <Link href="https://kongonitvc.jiunge.com/programmes-widget">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                 Apply for Diploma Program
               </Button>

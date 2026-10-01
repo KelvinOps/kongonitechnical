@@ -270,7 +270,7 @@ export default function CoursesSection() {
         <h2 className="text-2xl font-bold text-gray-700 mb-4">Our Academic Programs</h2>
         <p className="text-gray-500">Course information is currently unavailable. Please check back soon.</p>
         <div className="mt-6">
-          <Link href="/admissions">
+          <Link href="https://kongonitvc.jiunge.com/programmes-widget">
             <Button className="bg-blue-600 hover:bg-blue-700 text-white">Apply Now</Button>
           </Link>
         </div>
@@ -327,7 +327,7 @@ export default function CoursesSection() {
                 Explore All Courses
               </Button>
             </Link>
-            <Link href="/admissions">
+            <Link href="https://kongonitvc.jiunge.com/programmes-widget">
               <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3">
                 Apply Now
               </Button>

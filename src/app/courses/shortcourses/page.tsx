@@ -325,7 +325,7 @@ export default function ShortCoursesPage() {
             Our short courses are perfect for professionals looking to upgrade their skills, learn new technologies, or pivot their career. With flexible schedules and practical focus, you can learn while you work.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="/admissions">
+            <Link href="https://kongonitvc.jiunge.com/programmes-widget">
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
                 Enroll in Short Course
               </Button>

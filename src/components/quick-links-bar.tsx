@@ -4,7 +4,7 @@ import Link from "next/link";
 // Edit these to match your real routes / external portal URLs.
 const LINKS = [
   { label: "Download your admission letter", href: "https://kongonitvc.jiunge.com/sign-up" },
-  { label: "Apply to join Kongoni", href: "https://kongonitvc.jiunge.com/programmes" },
+  { label: "Apply to join Kongoni", href: "https://kongonitvc.jiunge.com/programmes-widget" },
   { label: "Student portal login", href: "https://kongonitvc.jiunge.com/login" },
 ];
 

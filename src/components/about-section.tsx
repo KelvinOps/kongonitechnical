@@ -63,11 +63,11 @@ const AboutSection = () => {
 
   // Navigation functions
   const handleApplyNow = () => {
-    router.push('/admissions');
+    router.push('https://kongonitvc.jiunge.com/programmes-widget');
   };
 
   const handleIntakeClick = () => {
-    router.push('/admissions');
+    router.push('https://kongonitvc.jiunge.com/programmes-widget');
   };
 
   const handleVisitCampus = () => {

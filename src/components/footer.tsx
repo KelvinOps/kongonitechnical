@@ -209,7 +209,7 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/admissions" className="text-black hover:text-white transition-colors duration-300 hover:underline">
+                  <Link href="https://kongonitvc.jiunge.com/programmes-widget" className="text-black hover:text-white transition-colors duration-300 hover:underline">
                     Admissions
                   </Link>
                 </li>

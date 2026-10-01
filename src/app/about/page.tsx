@@ -98,7 +98,7 @@ export default function AboutPage() {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/admissions"
+                href="https://kongonitvc.jiunge.com/programmes-widget"
                 className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-gray-900 font-bold px-7 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
                 Apply Now
@@ -564,7 +564,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/admissions"
+                href="https://kongonitvc.jiunge.com/programmes-widget"
                 className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-gray-900 font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl text-lg"
               >
                 Apply Now

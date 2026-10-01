@@ -146,11 +146,11 @@ export default function Header() {
       ]
     },
     { 
-      href: "/admissions", 
+      href: "https://kongonitvc.jiunge.com/programmes-widget", 
       label: "Admissions",
       hasDropdown: true,
       subItems: [
-        { href: "/admissions", label: "Student Application" } 
+        { href: "https://kongonitvc.jiunge.com/programmes-widget", label: "Student Application" } 
       ]
     },
     { 
@@ -203,7 +203,7 @@ export default function Header() {
           isCategory: true as const,
           items: [
             { href: "/documents/KTVC-APPLICATION-FORM.pdf", label: "Admission Form" },
-            { href: "/admissions", label: "Online Application" },
+            { href: "https://kongonitvc.jiunge.com/programmes-widget", label: "Online Application" },
             { href: "/documents/KongoniTVC-feestructure-2026.pdf", label: "Fee Structure 2026" },
             { href: "/documents/KongoniTVC-course-requirements.pdf", label: "Course Requirements" },
             { href: "/documents/KongoniTVC-medical form.pdf", label: "Medical Form" },
@@ -458,7 +458,7 @@ export default function Header() {
 
             {/* CTA Button */}
             <div className="hidden lg:block flex-shrink-0">
-              <Link href="/admissions">
+              <Link href="https://kongonitvc.jiunge.com/programmes-widget">
                 <Button className="bg-secondary text-black hover:bg-secondary/90 hover:scale-105 transition-all duration-200 font-semibold border-2 border-secondary shadow-lg px-6 py-2">
                   Apply Now
                 </Button>
@@ -580,7 +580,7 @@ export default function Header() {
                 </div>
               </div>
               
-              <Link href="/admissions" onClick={() => {
+              <Link href="https://kongonitvc.jiunge.com/programmes-widget" onClick={() => {
                 setIsMobileMenuOpen(false);
                 setOpenDropdown(null);
               }}>
