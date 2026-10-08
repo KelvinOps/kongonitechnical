@@ -79,7 +79,7 @@ export const departments: DepartmentDetails[] = [
     },
     vision: "To be a premier institution for business education, producing ethical leaders and innovative entrepreneurs who contribute to sustainable economic development.",
     mission: "To nurture innovative business minds for a competitive global market.",
-    teachingStaff: ["Mr Emmanuel Chacha", "Mr Hillary Lubale","Ms Faith Kanyiri","Ms Mildred Adhiambo","Mr Mike Kipkoech", "Ms Jenifa Eshilingi", "Ms Beldine Atieno Oguna","Ms Fransisca Nafula","Ms Dorris Wekesa" ],
+    teachingStaff: ["Ms Faith Kanyiri","Ms Mildred Adhiambo", "Ms Dorice Wekesa" ],
     nonTeachingStaff: [],
     trainers: ["Ms Faith Kanyiri","Ms Mildred Adhiambo","Ms Dorice Wekesa" ],
     objectives: [
@@ -175,9 +175,9 @@ export const departments: DepartmentDetails[] = [
     name: "Mechanical & Automotive Engineering Department",
     description: "Mastering vehicle diagnostics, repair, and maintenance.",
     backgroundInfo: "The Mechanical & Automotive Engineering Department is dedicated to training skilled technicians and engineers in vehicle diagnostics, repair, and maintenance. With the automotive industry rapidly evolving towards electric and hybrid vehicles, our department stays current with emerging technologies.",
-    hodImage: "/images/hod/wekesabryan.jpg",
+    hodImage: "/images/hod/COLLINS OMUTANYI.png",
     hodName: "Mr Collins Omutanyi",
-    hodTitle: "Head of Department - Automotive Engineering",
+    hodTitle: "Acting Head of Department - Automotive Engineering",
     hodBio: "Mr. Collins Omutanyi is a master automotive technician and engineer with  experience in vehicle diagnostics, engine repair, and automotive technology. He holds multiple industry certifications and specializes in both traditional and electric vehicle systems.",
     hodSocial: {
       facebook: "https://facebook.com/Collins Omutanyi",
