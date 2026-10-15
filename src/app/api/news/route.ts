@@ -3,6 +3,388 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Complete mock news data - synchronized with main news route
 const mockNews = [
+  // =====================================================================
+// =====================================================================
+{
+  id: "52",
+  title: "Kongoni TVC Gives a Spirited Showing at the KATTI Regional Ball Games 2026 at Shamberere National Polytechnic",
+  excerpt: "Kongoni Technical and Vocational College took part in the KATTI Regional Ball Games at Shamberere National Polytechnic from 9th to 11th October 2026, with Ladies Volleyball and Men's Basketball reaching the quarter finals.",
+  content: `
+    <p>From <strong>9th to 11th October 2026</strong>, Kongoni Technical and Vocational College proudly took part in the <strong>KATTI Regional Ball Games</strong>, hosted at <strong>Shamberere National Polytechnic</strong>.</p>
+
+    <p>The competition brought together student-athletes from TVET institutions across the region, giving them a platform to showcase sporting talent, teamwork, discipline and resilience. Team Kongoni TVC competed with determination, grit and a clear will to win.</p>
+
+    <p><strong>🏆 Results Summary:</strong></p>
+    <ul>
+      <li><strong>🏐 Volleyball Ladies</strong> — Quarter Finalists</li>
+      <li><strong>🏀 Basketball Men</strong> — Quarter Finalists</li>
+      <li><strong>⚽ Soccer Men</strong> — Preliminaries</li>
+      <li><strong>🏐 Volleyball Men</strong> — Preliminaries</li>
+      <li><strong>🏀 Basketball Ladies</strong> — Preliminaries</li>
+    </ul>
+
+    <p><strong>💪 Back to the Drawing Board:</strong></p>
+    <p>Although the teams fell short of their targets in some disciplines, every match provided valuable lessons and experience. The college congratulates all athletes for the fight and determination they showed, and commits to going back to the drawing board and returning stronger.</p>
+
+    <p><strong>🙏 Thank You:</strong></p>
+    <p>Thank you to the athletes, coaches, trainers, officials and supporters whose dedication and sacrifice made the college's participation possible.</p>
+
+    <p><strong>We shall be back, fighting on all fronts, because we know where we belong. 💙</strong></p>
+
+    <p><em>#KongoniTVC #KATTIRegionalGames2026 #ShamberereNationalPolytechnic #TeamKongoni #TVETSports #ProudlyKongoni</em></p>
+  `,
+  imageUrl: "/images/newsevents/kattiballgames2026/ballgames_main.jpeg",
+  images: [
+    "/images/newsevents/kattiballgames2026/ballgames_main.jpeg",
+    "/images/newsevents/kattiballgames2026/BASKETBALL LADIES.png",
+    "/images/newsevents/kattiballgames2026/BASKETBALL MEN.png",
+    "/images/newsevents/kattiballgames2026/SOCCER MEN.png",
+    "/images/newsevents/kattiballgames2026/VOLLEYBALL LADIES.png",
+    "/images/newsevents/kattiballgames2026/VOLLEYBALL MENS.png",
+  ],
+  featured: true,
+  createdAt: "2026-10-12T10:00:00Z",
+  updatedAt: "2026-10-12T10:00:00Z",
+  author: "Sports Department",
+  category: "Achievements",
+  eventDate: "2026-10-09",
+  location: "Shamberere National Polytechnic",
+  tags: [
+    "katti",
+    "regional-ball-games",
+    "volleyball",
+    "basketball",
+    "soccer",
+    "quarter-finalists",
+    "shamberere-national-polytechnic",
+    "sports",
+    "2026",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "51",
+  title: "Mazingira Day 2026 — Kongoni TVC Staff and Trainees Plant Trees at Kakamega Forest",
+  excerpt: "On 10th October 2026, staff and trainees of Kongoni Technical and Vocational College marked Mazingira Day with a tree-planting exercise at Kakamega Forest, reaffirming the college's commitment to conservation and climate action.",
+  content: `
+    <p>On <strong>10th October 2026</strong>, staff and trainees of Kongoni Technical and Vocational College marked <strong>Mazingira Day</strong> by taking part in a tree-planting exercise at <strong>Kakamega Forest</strong>, one of Kenya's most important natural ecosystems.</p>
+
+    <p>The activity demonstrated the college's commitment to environmental conservation, climate action and sustainable development.</p>
+
+    <p><strong>🌳 Why It Matters:</strong></p>
+    <ul>
+      <li>Restoring ecosystems and enhancing biodiversity</li>
+      <li>Improving air quality</li>
+      <li>Contributing to climate action</li>
+      <li>Securing a greener future for generations to come</li>
+    </ul>
+
+    <p><strong>🌱 A Shared Responsibility:</strong></p>
+    <p>Beyond the planting itself, the day was a reminder of our collective responsibility to protect and conserve the environment through sustainable practices, both within and beyond the institution. At Kongoni TVC, we believe environmental stewardship is everyone's responsibility.</p>
+
+    <p>The college commends all staff and trainees who took part in this noble exercise and thanks everyone who continues to support environmental sustainability initiatives.</p>
+
+    <p><strong>Plant a tree today. Protect the environment. Secure the future. 💚</strong></p>
+
+    <p><em>#MazingiraDay2026 #KongoniTVC #TreePlanting #KakamegaForest #ClimateAction #TVETKenya</em></p>
+  `,
+  imageUrl: "/images/newsevents/mazingira2026/mazingira_main.jpeg",
+  images: [
+    "/images/newsevents/mazingira2026/mazingira_main.jpeg",
+    "/images/newsevents/mazingira2026/mazingira2.jpeg",
+    "/images/newsevents/mazingira2026/mazingira3.jpeg",
+    "/images/newsevents/mazingira2026/mazingira4.jpeg",
+    "/images/newsevents/mazingira2026/mazingira5.jpeg"
+  ],
+  featured: true,
+  createdAt: "2026-10-11T10:00:00Z",
+  updatedAt: "2026-10-11T10:00:00Z",
+  author: "Environmental Conservation Team",
+  category: "Events",
+  eventDate: "2026-10-10",
+  location: "Kakamega Forest, Kakamega County",
+  tags: [
+    "mazingira-day",
+    "tree-planting",
+    "kakamega-forest",
+    "environment",
+    "conservation",
+    "climate-action",
+    "sustainability",
+    "2026",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "50",
+  title: "Agriculture and Environmental Studies Trainees Tour Labedcash Marine Enterprises",
+  excerpt: "Agriculture and Environmental Studies trainees visited Labedcash Marine Enterprises for a hands-on field visit covering fish ponds, poultry farming, a banana plantation and a hatchery.",
+  content: `
+    <p>Trainees from the <strong>Agriculture and Environmental Studies</strong> departments of Kongoni Technical and Vocational College went on a field visit to <strong>Labedcash Marine Enterprises</strong> to learn how agricultural enterprises are run in practice.</p>
+
+    <p>The visit began with an <strong>entry point meeting</strong>, where the trainees were welcomed and briefed on the enterprise and its operations before touring the facilities.</p>
+
+    <p><strong>🔍 What the Trainees Saw:</strong></p>
+    <ul>
+      <li><strong>Fish Ponds:</strong> How the aquaculture units are set up and managed</li>
+      <li><strong>Poultry Farming:</strong> Practical poultry production in action</li>
+      <li><strong>Banana Plantation:</strong> Crop husbandry and plantation management</li>
+      <li><strong>Hatchery:</strong> The hatchery operation and how stock is raised</li>
+    </ul>
+
+    <p><strong>🎓 Learning Beyond the Classroom:</strong></p>
+    <p>Field visits like this connect classroom theory to real working enterprises, helping trainees see how the skills they are learning apply in the field and in agribusiness.</p>
+
+    <p>The college thanks Labedcash Marine Enterprises for hosting the trainees and sharing their knowledge and facilities.</p>
+
+    <p><em>#KongoniTVC #Agriculture #EnvironmentalStudies #FieldVisit #LabedcashMarineEnterprises #TVETKenya</em></p>
+  `,
+  imageUrl: "/images/newsevents/labedcashvisit2026/labedcash_main.jpeg",
+  images: [
+    "/images/newsevents/labedcashvisit2026/labedcash_main.jpeg",
+    "/images/newsevents/labedcashvisit2026/labedcash2.jpeg",
+    "/images/newsevents/labedcashvisit2026/labedcash3.jpeg",
+    "/images/newsevents/labedcashvisit2026/labedcash4.jpeg",
+    "/images/newsevents/labedcashvisit2026/labedcash5.jpeg",
+    "/images/newsevents/labedcashvisit2026/labedcash6.jpeg",
+    "/images/newsevents/labedcashvisit2026/labedcash7.jpeg",
+    "/images/newsevents/labedcashvisit2026/labedcash8.jpeg",
+    "/images/newsevents/labedcashvisit2026/labedcash9.jpeg",
+    "/images/newsevents/labedcashvisit2026/labedcash10.jpeg"
+  ],
+  featured: true,
+  createdAt: "2026-10-14T10:00:00Z", 
+  updatedAt: "2026-10-14T10:00:00Z", 
+  author: "Agriculture Department",
+  category: "Training",
+  eventDate: "2026-10-14", 
+  location: "Labedcash Marine Enterprises", 
+  tags: [
+    "field-visit",
+    "labedcash-marine-enterprises",
+    "agriculture",
+    "environmental-studies",
+    "fish-farming",
+    "poultry",
+    "banana-plantation",
+    "hatchery",
+    "practical-training",
+    "2026",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "49",
+  title: "Term Opening Prayer Day — Seeking Divine Guidance for the September 2026 Term",
+  excerpt: "On 4th September 2026, the Kongoni TVC community gathered for the Term Opening Prayer Day, seeking blessing, wisdom and protection for trainees, trainers and staff as the new term begins.",
+  content: `
+    <p>On <strong>4th September 2026</strong>, Kongoni Technical and Vocational College held its <strong>Term Opening Prayer Day</strong> for the September 2026 term, bringing trainees, trainers and staff together in faith and unity.</p>
+
+    <p>In keeping with the college's tradition of anchoring each new term in prayer, the gathering sought divine blessing, wisdom and protection for the whole college community.</p>
+
+    <p><strong>🙏 Key Prayer Themes:</strong></p>
+    <ul>
+      <li>Academic excellence and wisdom for all trainees</li>
+      <li>Safety and protection for the college community throughout the term</li>
+      <li>Strength and effectiveness for trainers and staff</li>
+      <li>A warm welcome and blessing for new trainees joining the college</li>
+      <li>Peace, unity and harmony within the college and the nation</li>
+    </ul>
+
+    <p><strong>🌟 A United Community:</strong></p>
+    <p>The prayer day reflects the college's commitment to holistic development, nurturing not only the minds and hands of its trainees but also their hearts. We wish every trainee, trainer and staff member a blessed and successful term.</p>
+
+    <p><em>#KongoniTVC #PrayerDay #SeptemberTerm2026 #TermOpening #FaithAndExcellence #TVETKenya</em></p>
+  `,
+  imageUrl: "/images/newsevents/prayerday2026sept/prayerday_main.jpg",
+  images: [
+    "/images/newsevents/prayerday2026sept/prayerday_main.jpg",
+    "/images/newsevents/prayerday2026sept/prayerday2.jpg",
+    "/images/newsevents/prayerday2026sept/prayerday3.jpg",
+    "/images/newsevents/prayerday2026sept/prayerday4.jpg",
+    "/images/newsevents/prayerday2026sept/prayerday5.jpg",
+    "/images/newsevents/prayerday2026sept/prayerday6.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-09-04T11:00:00Z",
+  updatedAt: "2026-09-04T11:00:00Z",
+  author: "Student Affairs Department",
+  category: "Student Life",
+  eventDate: "2026-09-04",
+  location: "Kongoni Technical and Vocational College Main Grounds",
+  tags: [
+    "prayer-day",
+    "term-opening",
+    "september-2026",
+    "spirituality",
+    "interfaith",
+    "community",
+    "blessing",
+    "student-life",
+    "2026"
+  ]
+},
+{
+  id: "48",
+  title: "September 2026 Intake Marketing Campaign — Join Kongoni TVC",
+  excerpt: "Kongoni Technical and Vocational College took its September 2026 intake marketing campaign to the community, inviting prospective trainees to enrol and gain practical skills for employment and entrepreneurship.",
+  content: `
+    <p>Kongoni Technical and Vocational College carried out its <strong>September 2026 Intake Marketing Campaign</strong>, reaching out to prospective trainees, parents and the wider community to share what the college offers.</p>
+
+    <p>The campaign invited young people to join the college and gain practical, hands-on skills that prepare them for employment, entrepreneurship and lifelong learning.</p>
+
+    <p><strong>🎓 Why Choose Kongoni TVC:</strong></p>
+    <ul>
+      <li>Practical, competency-based training</li>
+      <li>Experienced trainers and well-equipped workshops</li>
+      <li>A vibrant student life with sports, drama, music and cultural activities</li>
+      <li>A record of achievement in regional and national competitions</li>
+    </ul>
+
+    <p><strong>📣 Spread the Word:</strong></p>
+    <p>Prospective trainees who are interested in joining the September 2026 intake are encouraged to contact the college administration office for more information on courses and admission.</p>
+
+    <p><em>#KongoniTVC #SeptemberIntake2026 #JoinKongoni #TVETKenya #SkillsForLife</em></p>
+  `,
+  imageUrl: "/images/newsevents/intakecampaign2026/campaign_main.jpeg",
+  images: [
+    "/images/newsevents/intakecampaign2026/campaign_main.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign2.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign3.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign4.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign5.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign6.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign7.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign8.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign9.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign10.jpeg",
+    "/images/newsevents/intakecampaign2026/campaign11.jpeg"
+  ],
+  featured: true,
+  createdAt: "2026-09-14T09:00:00Z", 
+  updatedAt: "2026-09-14T09:00:00Z", 
+  author: "Administration",
+  category: "Announcements",
+  eventDate: "2026-09-10",
+  location: "Kongoni Technical and Vocational College",
+  tags: [
+    "intake",
+    "september-2026",
+    "marketing-campaign",
+    "admissions",
+    "new-trainees",
+    "2026",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "47",
+  title: "Leadership Transition at Kongoni TVC — Ms. Judith Akaranga Retires; Mr. Stedi L. Bonface Appointed",
+  excerpt: "On 12th August 2026, Kongoni Technical and Vocational College marked a leadership transition with the retirement of Principal Ms. Judith Akaranga and the appointment of Mr. Stedi L. Bonface.",
+  content: `
+    <p>On <strong>12th August 2026</strong>, Kongoni Technical and Vocational College marked an important leadership transition with the <strong>retirement of Principal Ms. Judith Akaranga</strong> and the <strong>appointment of Mr. Stedi L. Bonface</strong> to lead the college.</p>
+
+    <p><strong>🙏 Honouring Ms. Judith Akaranga:</strong></p>
+    <p>The college community extends its sincere gratitude to Ms. Akaranga for her service and leadership. Under her leadership, the college celebrated many achievements, including national champion status in the Advertisement category at the 2026 Kenya National Drama and Film Festivals. We wish her a happy, healthy and fulfilling retirement.</p>
+
+    <p><strong>🤝 Welcoming Mr. Stedi L. Bonface:</strong></p>
+    <p>The college warmly welcomes Mr. Bonface and looks forward to working with him as the institution builds on its progress and pursues new heights in technical and vocational education.</p>
+
+    <p><strong>🌟 A New Chapter:</strong></p>
+    <p>Trainees, trainers and staff are encouraged to give the new leadership their full support as Kongoni TVC continues its journey of excellence.</p>
+
+    <p><em>#KongoniTVC #LeadershipTransition #ThankYouMsAkaranga #WelcomeMrBonface #TVETKenya</em></p>
+  `,
+  imageUrl: "/images/newsevents/leadershiptransition2026/transition_main.jpeg",
+  images: [
+    "/images/newsevents/leadershiptransition2026/transition_main.jpeg",
+    "/images/newsevents/leadershiptransition2026/transition2.jpeg",
+    "/images/newsevents/leadershiptransition2026/transition3.jpeg",
+    "/images/newsevents/leadershiptransition2026/transition4.jpeg"
+  ],
+  featured: true,
+  createdAt: "2026-08-12T10:00:00Z",
+  updatedAt: "2026-08-12T10:00:00Z",
+  author: "College Administration",
+  category: "Announcements",
+  eventDate: "2026-08-12",
+  location: "Kongoni Technical and Vocational College",
+  tags: [
+    "leadership-transition",
+    "retirement",
+    "new-principal",
+    "judith-akaranga",
+    "stedi-bonface",
+    "administration",
+    "announcement",
+    "2026",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "46",
+  title: "Kongoni TVC Shines at the Kenya Music Festival 2026 (TVET Category) — 11 Awards at Nyeri National Polytechnic",
+  excerpt: "Kongoni Technical and Vocational College went head to head with the big teams at the Kenya Music Festival 2026 (TVET Category) and emerged among the best, winning 2 first positions, 5 second positions and 4 third positions.",
+  content: `
+    <p>Kongoni Technical and Vocational College is proud to celebrate the outstanding performance of its trainees at the <strong>Kenya Music Festival 2026 (TVET Category)</strong>, held at <strong>Nyeri National Polytechnic</strong>.</p>
+
+    <p>Competing against some of the country's leading TVET institutions, our talented team showed excellence, creativity, discipline and the true Kongoni spirit. We fought a good fight, went head to head with the big teams, and still emerged among the best.</p>
+
+    <p><strong>🏆 Our Achievements:</strong></p>
+    <ul>
+      <li><strong>🥇 1st Position</strong> — 2 items</li>
+      <li><strong>🥈 2nd Position</strong> — 5 items</li>
+      <li><strong>🥉 3rd Position</strong> — 4 items</li>
+    </ul>
+
+    <p>In total, Kongoni TVC brought home <strong>11 awards</strong>. Although we did not achieve every target we set, we ticked many boxes and proved that Kongoni TVC can compete with the very best.</p>
+
+    <p><strong>🎶 A Team Effort:</strong></p>
+    <p>These results reflect the hard work of our trainees, trainers, coaches and support staff, who invested their time, talent and passion in representing the college on the national stage. Every rehearsal, every performance and every challenge along the way made the team stronger.</p>
+
+    <p><strong>🙏 Words of Appreciation:</strong></p>
+    <p>The college is grateful to our Principal, <strong>Ms. Judith Akaranga</strong>, for her continued support, encouragement and commitment to nurturing student talent and co-curricular excellence. Thank you also to every participant, coach, trainer and supporter for carrying the Kongoni TVC flag high.</p>
+
+    <p><strong>🌟 The Journey Has Just Begun:</strong></p>
+    <p>Congratulations, Team Kongoni TVC! Let us keep the same consistency, discipline and winning spirit. This is just the beginning of a better future ahead.</p>
+
+    <p><em>#KongoniTVC #KenyaMusicFestival2026 #TVETExcellence #StudentTalent #ProudlyKongoni #TVETKenya</em></p>
+  `,
+  imageUrl: "/images/newsevents/musicfestival2026/musicfestival_main.jpeg",
+  images: [
+    "/images/newsevents/musicfestival2026/musicfestival_main.jpeg",
+    "/images/newsevents/musicfestival2026/musicfestival2.jpg",
+    "/images/newsevents/musicfestival2026/musicfestival3.jpg",
+    "/images/newsevents/musicfestival2026/musicfestival4.jpg",
+    "/images/newsevents/musicfestival2026/musicfestival5.jpg",
+    "/images/newsevents/musicfestival2026/musicfestival6.jpg",
+    "/images/newsevents/musicfestival2026/musicfestival7.jpg",
+
+  ],
+  featured: true,
+  createdAt: "2026-08-01T08:00:00Z", 
+  updatedAt: "2026-08-14T08:00:00Z", 
+  author: "Sports Department",
+  category: "Achievements",
+  eventDate: "2026-08-01", 
+  location: "Nyeri National Polytechnic, Nyeri County",
+  tags: [
+    "kenya-music-festival",
+    "music-festival-2026",
+    "tvet-category",
+    "awards",
+    "first-position",
+    "second-position",
+    "third-position",
+    "nyeri",
+    "performing-arts",
+    "student-talent",
+    "achievement",
+    "co-curricular",
+    "2026",
+    "tvet-kenya"
+  ]
+},
   {
   id: "45",
   title: "Equity Bank Honours Kongoni TVC for Best Advert Win at KATTI Drama Festivals 2026",
