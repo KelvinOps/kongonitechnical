@@ -532,39 +532,6 @@ export default function ServiceCharterPage() {
           </div>
         </div>
 
-        <div className="mt-12 max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg p-8 shadow-md">
-            <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">Download Service Charters</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
-                <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h4 className="font-semibold text-lg mb-2">English Version</h4>
-                <p className="text-gray-600 text-sm mb-4">Official Service Charter in English</p>
-                <Button 
-                  onClick={() => downloadPDF('/documents/English-Service-Charter.pdf', 'KTVC-Service-Charter-English.pdf')}
-                  className="bg-primary text-white hover:bg-primary/90"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download English PDF
-                </Button>
-              </div>
-              
-              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
-                <FileText className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <h4 className="font-semibold text-lg mb-2">Toleo la Kiswahili</h4>
-                <p className="text-gray-600 text-sm mb-4">Mkataba wa Huduma kwa Kiswahili</p>
-                <Button 
-                  onClick={() => downloadPDF('/documents/Kiswahili-Service-Charter.pdf', 'KTVC-Service-Charter-Kiswahili.pdf')}
-                  className="bg-secondary text-gray-800 hover:bg-secondary/90"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Kiswahili PDF
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="mt-16 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
