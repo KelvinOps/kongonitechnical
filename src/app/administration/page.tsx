@@ -1,7 +1,7 @@
 // app/administration/page.tsx
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Mail, Phone, Calendar, Award, GraduationCap, Users, Download, FileText, User } from 'lucide-react'
+import { Mail, Phone, Calendar, GraduationCap, Users, Download, FileText, User } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Administration Team | Kongoni Technical and Vocational College',
@@ -22,7 +22,6 @@ interface AdminMember {
   image: string
   email: string
   phone: string
-  qualifications: string[]
   experience: string
   responsibilities: string[]
   bio: string
@@ -38,7 +37,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/STEDI BONIFACE.png',
     email: 'principal@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: [''],
     experience: 'Formerly Principal, Turbo TVC',
     responsibilities: ['Strategic planning and institutional leadership', 'Academic quality assurance', 'Stakeholder relations', 'Policy implementation'],
     bio: 'Mr. Bonface joined Kongoni TVC as Principal in August 2026, transferring from Turbo TVC as part of a Ministry of Education reshuffle of TVET leadership. He is committed to strengthening a culture of integrity, teamwork, and continuous learning across the institution.',
@@ -52,7 +50,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/lucymakokha.png',
     email: 'dpac@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['MSc in Statistics'],
     experience: '12+ years in academic administration',
     responsibilities: ['Academic program oversight', 'Curriculum development', 'Faculty coordination', 'Student academic affairs'],
     bio: 'Ms. Makhokha oversees all academic programs ensuring they meet industry standards and prepare students for successful careers in technical fields.',
@@ -66,7 +63,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/ezraorina.png',
     email: 'dpad@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['Bachelor of Education', 'Diploma in Technical Education', 'Diploma in Mechanical Engineering'],
     experience: '10+ years in institutional administration',
     responsibilities: ['Administrative operations', 'Human resource management', 'Financial oversight', 'Infrastructure development'],
     bio: 'Mr. Orina ensures smooth administrative operations and creates an enabling environment for effective teaching and learning.',
@@ -80,7 +76,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/kevinmasinde.png',
     email: 'dean@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BSc'],
     experience: '14+ years in engineering education',
     responsibilities: ['Engineering programs leadership', 'Industry partnerships', 'Research coordination', 'Student projects supervision'],
     bio: 'Mr Masinde leads our engineering programs with a focus on practical skills development and industry relevance.',
@@ -94,7 +89,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/andrewjuma.png',
     email: 'registrar@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['Bsc in Building'],
     experience: '9+ years in academic registry',
     responsibilities: ['Student records management', 'Academic calendar coordination', 'Examination administration', 'Graduation ceremonies'],
     bio: 'Mr. Juma ensures efficient management of all student academic records and administrative processes.',
@@ -108,7 +102,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/NGANYI AMOS.png',
     email: 'iqa@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['Bsc'],
     experience: '3+ years in research and innovation',
     responsibilities: ['Research program coordination', 'Innovation initiatives', 'Grant applications', 'Industry collaborations'],
     bio: 'Mr. Amos leads our research efforts, focusing on applied research that addresses real-world technical challenges.',
@@ -122,7 +115,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/patrickmwangi.png',
     email: 'exams@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['Bsc'],
     experience: '13+ years in curriculum development',
     responsibilities: ['Research program coordination', 'Innovation initiatives', 'Grant applications', 'Industry collaborations'],
     bio: 'Mr Mwangi leads our examination department, focusing on applied research that addresses real-world technical challenges.',
@@ -136,7 +128,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/millcentnambo.png',
     email: 'finance@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BCOM', 'CPA'],
     experience: '8+ years in financial management',
     responsibilities: ['Financial planning and control', 'Budget management', 'Financial reporting', 'Audit coordination'],
     bio: 'Ms Nambo ensures sound financial management and transparent use of institutional resources.',
@@ -150,13 +141,11 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/reuben cheptinget.png',
     email: 'audit@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BCOM', 'CPA'],
     experience: '8+ years in financial management',
     responsibilities: ['Financial planning and control', 'Budget management', 'Financial reporting', 'Audit coordination'],
     bio: 'Mr Chemtingen ensures sound financial management and transparent use of institutional resources.',
     joinDate: '2025'
-  }
-  ,
+  },
   {
     id: '14',
     name: 'Geofrey Kipkore',
@@ -165,7 +154,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/GEOFREY_KIPKORIR.png',
     email: 'procurement@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BSc'],
     experience: '9+ years in performance management',
     responsibilities: ['Performance contract development', 'Monitoring and evaluation', 'Reporting and documentation', 'Institutional planning'],
     bio: 'Ensures the institution meets its strategic objectives through effective performance contracting and continuous monitoring of key performance indicators.',
@@ -179,7 +167,6 @@ const administrationTeam: AdminMember[] = [
     image: '/images/admin/ODHIAMBO KEVIN  MAGONYA.png',
     email: 'ilo@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BSc'],
     experience: '11+ years in industry partnerships',
     responsibilities: ['Industry partnerships development', 'Student internship coordination', 'Alumni engagement', 'Corporate relations'],
     bio: 'Mr. Magonya bridges the gap between the institution and industry, ensuring our programs align with market needs and creating opportunities for students.',
@@ -193,7 +180,6 @@ const administrationTeam: AdminMember[] = [
     image: '',
     email: 'hrm@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BSc in Human Resource'],
     experience: '5+ years in human resource',
     responsibilities: ['Industry partnerships development', 'Student internship coordination', 'Alumni engagement', 'Corporate relations'],
     bio: 'Manages and takes care of all staff and creating opportunities for staff.',
@@ -207,7 +193,6 @@ const administrationTeam: AdminMember[] = [
     image: '',
     email: 'pc@kongonitechnical.ac.ke',
     phone: '+254 788 070 303',
-    qualifications: ['BSc'],
     experience: '9+ years in performance management',
     responsibilities: ['Performance contract development', 'Monitoring and evaluation', 'Reporting and documentation', 'Institutional planning'],
     bio: 'Ensures the institution meets its strategic objectives through effective performance contracting and continuous monitoring of key performance indicators.',
@@ -218,7 +203,6 @@ const administrationTeam: AdminMember[] = [
 const stats = [
   { icon: Users, label: 'Leadership Team', value: '10+' },
   { icon: GraduationCap, label: 'Combined Experience', value: '5+ Years' },
-  { icon: Award, label: 'Advanced Degrees', value: '75%' },
   { icon: Calendar, label: 'Average Tenure', value: '5+ Years' }
 ]
 
@@ -242,7 +226,7 @@ export default function AdministrationPage() {
       {/* Statistics Section */}
       <section className="py-12 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="flex justify-center mb-4">
@@ -331,18 +315,6 @@ export default function AdministrationPage() {
                   {/* Bio with line clamp */}
                   <div className="mb-4">
                     <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-2">{member.bio}</p>
-                  </div>
-
-                  {/* Qualifications */}
-                  <div className="mb-4">
-                    <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">Key Qualifications</p>
-                    <div className="space-y-1">
-                      {member.qualifications.slice(0, 2).map((qual, qIndex) => (
-                        <p key={qIndex} className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
-                          {qual}
-                        </p>
-                      ))}
-                    </div>
                   </div>
 
                   {/* Join Date */}

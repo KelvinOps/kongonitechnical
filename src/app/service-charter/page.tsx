@@ -104,9 +104,9 @@ export default function ServiceCharterPage() {
   };
 
   const PDFViewer = ({ title, language, isKiswahili = false }: { title: string; language: string; isKiswahili?: boolean }) => {
-    const pdfPath = isKiswahili ? '/documents/Kiswahili-Service-Charter.pdf' : '/documents/English-Service-Charter.pdf';
-    const imagePath = isKiswahili ? "/documents/KiswahiliCharter.jpg" : "/documents/EnglishCharter.jpg";
-    const downloadName = isKiswahili ? 'KongoniTVC-Service-Charter-Kiswahili.pdf' : 'KongoniTVC-Service-Charter-English.pdf';
+    const pdfPath = isKiswahili ? '/documents/service-charter/KTVC Service_Charter_Kiswahili.pdf' : '/documents/service-charter/KTVC Service_Charter_English.pdf';
+    const imagePath = isKiswahili ? "/documents/service-charter/Kiswahili.png" : "/documents/service-charter/English.png";
+    const downloadName = isKiswahili ? 'KONGONITVC Service Charter Kiswahili.pdf' : 'KONGONITVC Service Charter English.pdf';
 
     return (
       <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
