@@ -4,7 +4,76 @@ import { NextRequest, NextResponse } from "next/server";
 // Complete mock news data - synchronized with main news route
 const mockNews = [
   // =====================================================================
-// =====================================================================
+{
+  id: "53",
+  title: "Happy Mashujaa Day 2026 — Honouring Our Heroes, Inspiring Our Future",
+  excerpt: "On 20th October 2026, Kongoni Technical and Vocational College joined the nation in celebrating Mashujaa Day, honouring the courage and sacrifice of Kenya's heroes and heroines while inviting prospective trainees to join the January 2027 intake.",
+  content: `
+    <p>On <strong>20th October 2026</strong>, Kongoni Technical and Vocational College joined the entire nation in celebrating <strong>Mashujaa Day</strong>, a day set aside to honour the courage, sacrifice, determination and vision of Kenya's heroes and heroines.</p>
+
+    <p>Their legacy continues to inspire a stronger, united and prosperous nation, and reminds every Kenyan of the responsibility to serve with integrity and dedication.</p>
+
+    <p><strong>🇰🇪 A Message from the College:</strong></p>
+    <p>As we honour the great men and women who shaped our country, we also celebrate the power of education, innovation and technical skills in building Kenya's future. At Kongoni TVC, we are committed to nurturing competent professionals, innovators, entrepreneurs and leaders who will drive national development.</p>
+
+    <p><strong>🎓 January 2027 Intake Is Ongoing!</strong></p>
+    <p>Prospective trainees are invited to join one of our eight academic departments:</p>
+    <ul>
+      <li><strong>Business Department</strong></li>
+      <li><strong>Computing &amp; Informatics Department</strong></li>
+      <li><strong>Building &amp; Civil Engineering Department</strong></li>
+      <li><strong>Electrical &amp; Electronics Department</strong></li>
+      <li><strong>Automotive &amp; Mechanical Department</strong></li>
+      <li><strong>Fashion Design &amp; Cosmetics Department</strong></li>
+      <li><strong>Hospitality &amp; Tourism Department</strong></li>
+      <li><strong>Agriculture Department</strong></li>
+    </ul>
+
+    <p><strong>✅ Why Choose Kongoni TVC:</strong></p>
+    <ul>
+      <li>Quality, competency-based training</li>
+      <li>Practical skills development</li>
+      <li>Modern training facilities</li>
+      <li>Experienced trainers</li>
+      <li>Industry-relevant competencies</li>
+      <li>Career and entrepreneurship opportunities</li>
+    </ul>
+
+    <p><strong>📞 Get in Touch:</strong></p>
+    <ul>
+      <li><strong>Location:</strong> Along Eldoret-Kitale Road, Matunda</li>
+      <li><strong>Phone:</strong> 0788 070 303</li>
+      <li><strong>Website:</strong> www.kongonitechnical.ac.ke</li>
+    </ul>
+
+    <p><strong>Honouring Our Heroes, Inspiring Our Future. Happy Mashujaa Day from the Kongoni TVC family! 🇰🇪</strong></p>
+
+    <p><em>#MashujaaDay2026 #KongoniTVC #TVETKenya #JanuaryIntake2027 #TechnicalSkillsForLife #SkillsForProsperity #HonouringOurHeroes</em></p>
+  `,
+  imageUrl: "/images/newsevents/mashujaa2026/mashujaa_main.png",
+  images: [
+    "/images/newsevents/mashujaa2026/mashujaa_main.png"
+  ],
+  featured: true,
+  createdAt: "2026-10-20T06:00:00Z",
+  updatedAt: "2026-10-20T06:00:00Z",
+  author: "College Administration",
+  category: "Announcements",
+  eventDate: "2026-10-20",
+  location: "Kongoni Technical and Vocational College",
+  tags: [
+    "mashujaa-day",
+    "national-holiday",
+    "kenya",
+    "heroes",
+    "january-2027-intake",
+    "admissions",
+    "national-pride",
+    "announcement",
+    "2026",
+    "tvet-kenya"
+  ]
+},
 {
   id: "52",
   title: "Kongoni TVC Gives a Spirited Showing at the KATTI Regional Ball Games 2026 at Shamberere National Polytechnic",
