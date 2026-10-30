@@ -3,6 +3,76 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Enhanced mock news data with video support, multiple images, and comprehensive events
 const mockNews = [
+
+  {
+  id: "54",
+  title: "Kongoni TVC Hosts IGA Capacity Building Programme — Empowering TVET Institutions for Sustainable Growth",
+  excerpt: "On 26th–27th October 2026, Kongoni TVC hosted the Income Generating Activities (IGA) Capacity Building Programme, bringing together participants from Kongoni TVC, Kiminini TVC and Cherangany TVC to explore innovative approaches to financial sustainability and enterprise development.",
+  content: `
+    <p>On <strong>26th and 27th October 2026</strong>, Kongoni Technical and Vocational College successfully hosted the <strong>IGA Capacity Building Programme</strong>, bringing together participants from <strong>Kongoni TVC</strong>, <strong>Kiminini TVC</strong> and <strong>Cherangany TVC</strong> to explore innovative approaches to <strong>Income Generating Activities (IGAs)</strong>.</p>
+
+    <p>The two-day programme was designed to help TVET institutions build stronger, more self-reliant enterprises that support quality training and long-term institutional growth.</p>
+
+    <p><strong>💡 Key Areas Covered:</strong></p>
+    <ul>
+      <li><strong>Financial Sustainability in TVET</strong></li>
+      <li><strong>Enterprise Development</strong></li>
+      <li><strong>Business Planning</strong></li>
+      <li><strong>Governance &amp; Management of IGAs</strong></li>
+      <li><strong>Marketing, Branding &amp; Customer Service</strong></li>
+      <li><strong>Monitoring, Evaluation &amp; Risk Management</strong></li>
+    </ul>
+
+    <p><strong>🤝 Collaboration and Practical Learning:</strong></p>
+    <p>Through collaboration, knowledge sharing and practical group assignments, participants developed strategies to maximise institutional resources and create sustainable opportunities for growth. From business planning and market assessment to branding and risk management, they gained practical knowledge to transform ideas into viable Income Generating Activities.</p>
+
+    <p><strong>📄 Programme Document:</strong></p>
+    <p>The full programme schedule is available for download: <a href="https://onedrive.live.com?cid=baab235f79149a97&amp;id=BAAB235F79149A97!sf89c30805b7e47879d5c12552f51eebd" target="_blank" rel="noopener noreferrer"><strong>IGA Capacity Building Programme (PDF)</strong></a></p>
+
+    <p><strong>🙏 Words of Appreciation:</strong></p>
+    <p>Special thanks to <strong>SDTVET</strong>, the facilitators, management teams and all participants for contributing to the success of this programme.</p>
+
+    <p><strong>Together. Innovating. Growing.</strong></p>
+
+    <p><em>#KongoniTVC #TVETKenya #IGA #CapacityBuilding #SustainableTVET #EnterpriseDevelopment #SkillsForProsperity</em></p>
+  `,
+  imageUrl: "/images/newsevents/igacapacitybuilding2026/iga_main.jpg",
+  images: [
+    "/images/newsevents/igacapacitybuilding2026/iga_main.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga2.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga3.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga4.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga5.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga6.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga7.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga8.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga9.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga10.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga11.jpg",
+    "/images/newsevents/igacapacitybuilding2026/iga12.jpg"
+  ],
+  featured: true,
+  createdAt: "2026-10-28T10:00:00Z",
+  updatedAt: "2026-10-28T10:00:00Z",
+  author: "Administration",
+  category: "Training",
+  eventDate: "2026-10-26",
+  location: "Kongoni Technical and Vocational College",
+  tags: [
+    "iga",
+    "income-generating-activities",
+    "capacity-building",
+    "enterprise-development",
+    "business-planning",
+    "financial-sustainability",
+    "sdtvet",
+    "kiminini-tvc",
+    "cherangany-tvc",
+    "partnership",
+    "2026",
+    "tvet-kenya"
+  ]
+},
 {
   id: "53",
   title: "Happy Mashujaa Day 2026 — Honouring Our Heroes, Inspiring Our Future",
