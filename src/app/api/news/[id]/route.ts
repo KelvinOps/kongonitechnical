@@ -57,7 +57,7 @@ const mockNews = [
   author: "Administration",
   category: "Training",
   eventDate: "2026-10-26",
-  location: "Kongoni Technical and Vocational College",
+  location: "Kongoni Community Library",
   tags: [
     "iga",
     "income-generating-activities",

@@ -20,26 +20,50 @@ import {
   Play,
   Pause,
   SkipBack,
-  SkipForward
+  SkipForward,
+  Loader2,
+  AlertCircle
 } from "lucide-react";
+
+const AUDIO_SRC = '/api/service-charter-audio';
+const AUDIO_DOWNLOAD = '/api/service-charter-audio?download=1';
 
 export default function ServiceCharterPage() {
   const [activeTab, setActiveTab] = useState('both');
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   // Audio controls
-  const togglePlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
+  const togglePlayPause = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (!audio.paused) {
+      audio.pause();
+      return;
     }
+
+    try {
+      setHasError(false);
+      setIsLoading(true);
+      await audio.play();
+    } catch (err) {
+      console.error('[Audio] play() rejected:', err);
+      setIsLoading(false);
+      setIsPlaying(false);
+    }
+  };
+
+  const handleAudioError = () => {
+    const err = audioRef.current?.error;
+    console.error('[Audio] Load failed, code:', err?.code, err?.message);
+    setHasError(true);
+    setIsLoading(false);
+    setIsPlaying(false);
   };
 
   const handleTimeUpdate = () => {
@@ -48,9 +72,10 @@ export default function ServiceCharterPage() {
     }
   };
 
-  const handleLoadedMetadata = () => {
-    if (audioRef.current) {
-      setDuration(audioRef.current.duration);
+  const handleDurationChange = () => {
+    const dur = audioRef.current?.duration;
+    if (dur && isFinite(dur) && dur > 0) {
+      setDuration(dur);
     }
   };
 
@@ -63,17 +88,22 @@ export default function ServiceCharterPage() {
   };
 
   const skipTime = (seconds: number) => {
-    if (audioRef.current) {
-      audioRef.current.currentTime += seconds;
-    }
+    const audio = audioRef.current;
+    if (!audio) return;
+    const max = duration > 0 ? duration : audio.currentTime + seconds;
+    const newTime = Math.max(0, Math.min(audio.currentTime + seconds, max));
+    audio.currentTime = newTime;
+    setCurrentTime(newTime);
   };
 
   const formatTime = (time: number) => {
-    if (isNaN(time)) return '0:00';
+    if (!isFinite(time) || time <= 0) return '0:00';
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   };
+
+  const progressPercentage = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   const downloadPDF = (filename: string, displayName: string) => {
     try {
@@ -90,18 +120,27 @@ export default function ServiceCharterPage() {
     }
   };
 
-  const downloadAudio = () => {
-    try {
-      const link = document.createElement('a');
-      link.href = '/documents/Kongoni tvc audio Recordings of service delivery charter.m4a';
-      link.download = 'KTVC-Service-Charter-Audio.m4a';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } catch (error) {
-      console.error('Download failed:', error);
-    }
-  };
+const downloadAudio = async () => {
+  try {
+    const res = await fetch(AUDIO_SRC); // same URL that plays fine
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'KTVC-Service-Charter-Audio.m4a';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  } catch (error) {
+    console.error('[Audio] Download failed:', error);
+    window.open(AUDIO_DOWNLOAD, '_blank'); // fallback
+  }
+};
 
   const PDFViewer = ({ title, language, isKiswahili = false }: { title: string; language: string; isKiswahili?: boolean }) => {
     const pdfPath = isKiswahili ? '/documents/service-charter/KTVC Service_Charter_Kiswahili.pdf' : '/documents/service-charter/KTVC Service_Charter_English.pdf';
@@ -375,6 +414,13 @@ export default function ServiceCharterPage() {
         <div className="max-w-5xl mx-auto">
           <Card className="overflow-hidden shadow-md border border-gray-200">
             <div className="bg-white p-4">
+              {hasError && (
+                <div className="flex items-center gap-2 mb-3 px-3 py-2 rounded-md bg-red-50 border border-red-200 text-red-700 text-xs">
+                  <AlertCircle className="w-4 h-4 shrink-0" />
+                  <span>Audio could not be loaded. Please try again, or use the download button.</span>
+                </div>
+              )}
+
               <div className="flex items-center justify-between gap-4 flex-wrap">
                 <div className="flex items-center space-x-3">
                   <div className="bg-primary/10 p-2 rounded-full">
@@ -388,13 +434,20 @@ export default function ServiceCharterPage() {
 
                 <audio
                   ref={audioRef}
-                  onTimeUpdate={handleTimeUpdate}
-                  onLoadedMetadata={handleLoadedMetadata}
-                  onEnded={() => setIsPlaying(false)}
+                  src={AUDIO_SRC}
+                  preload="none"
                   className="hidden"
-                >
-                  <source src="/documents/Kongoni tvc audio Recordings of service delivery charter.m4a" type="audio/mp4" />
-                </audio>
+                  onTimeUpdate={handleTimeUpdate}
+                  onLoadedMetadata={handleDurationChange}
+                  onDurationChange={handleDurationChange}
+                  onWaiting={() => setIsLoading(true)}
+                  onCanPlay={() => setIsLoading(false)}
+                  onPlaying={() => { setIsLoading(false); setIsPlaying(true); setHasError(false); }}
+                  onPlay={() => setIsPlaying(true)}
+                  onPause={() => setIsPlaying(false)}
+                  onEnded={() => { setIsPlaying(false); setCurrentTime(0); }}
+                  onError={handleAudioError}
+                />
 
                 <div className="flex items-center space-x-2">
                   <Button
@@ -402,6 +455,7 @@ export default function ServiceCharterPage() {
                     size="sm"
                     onClick={() => skipTime(-10)}
                     className="h-8 w-8 p-0 hover:bg-gray-100"
+                    title="Skip back 10 seconds"
                   >
                     <SkipBack className="w-3 h-3" />
                   </Button>
@@ -409,8 +463,11 @@ export default function ServiceCharterPage() {
                   <Button
                     onClick={togglePlayPause}
                     className="h-10 w-10 rounded-full bg-primary hover:bg-primary/90 text-white p-0"
+                    title={isPlaying ? 'Pause' : 'Play'}
                   >
-                    {isPlaying ? (
+                    {isLoading ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : isPlaying ? (
                       <Pause className="w-4 h-4" />
                     ) : (
                       <Play className="w-4 h-4 ml-0.5" />
@@ -422,6 +479,7 @@ export default function ServiceCharterPage() {
                     size="sm"
                     onClick={() => skipTime(10)}
                     className="h-8 w-8 p-0 hover:bg-gray-100"
+                    title="Skip forward 10 seconds"
                   >
                     <SkipForward className="w-3 h-3" />
                   </Button>
@@ -443,11 +501,14 @@ export default function ServiceCharterPage() {
                   type="range"
                   min="0"
                   max={duration || 0}
+                  step="0.1"
                   value={currentTime}
                   onChange={handleSeek}
+                  disabled={duration === 0}
+                  aria-label="Seek audio"
                   className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                   style={{
-                    background: `linear-gradient(to right, #0893f0 0%, #0893f0 ${(currentTime / duration) * 100}%, #e5e7eb ${(currentTime / duration) * 100}%, #e5e7eb 100%)`
+                    background: `linear-gradient(to right, #0893f0 0%, #0893f0 ${progressPercentage}%, #e5e7eb ${progressPercentage}%, #e5e7eb 100%)`
                   }}
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">

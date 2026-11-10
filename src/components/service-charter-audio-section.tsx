@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,137 +15,64 @@ import {
   AlertCircle
 } from "lucide-react";
 
-const AUDIO_SRC = '/documents/service-charter-audio.m4a';
-const BG_IMAGE  = '/images/hero/service-charter-bg.png';
+const AUDIO_SRC = '/api/service-charter-audio';
+const AUDIO_DOWNLOAD = '/api/service-charter-audio?download=1';
+const BG_IMAGE = '/images/hero/service-charter-bg.png';
+
+const PDF_EN = '/documents/service-charter/KTVC Service_Charter_English.pdf';
+const PDF_SW = '/documents/service-charter/KTVC Service_Charter_Kiswahili.pdf';
 
 export default function ServiceCharterAudioSection() {
-  const [isPlaying, setIsPlaying]   = useState(false);
-  const [isLoading, setIsLoading]   = useState(false);
-  const [hasError,  setHasError]    = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
-  const [duration,  setDuration]    = useState(0);
-  const [isReady,   setIsReady]     = useState(false);
+  const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    const handleCanPlay = () => {
-      setIsReady(true);
-      setIsLoading(false);
-      setHasError(false);
-    };
-
-    const handleCanPlayThrough = () => {
-      setIsReady(true);
-      setIsLoading(false);
-    };
-
-    const handleWaiting = () => setIsLoading(true);
-
-    const handlePlaying = () => {
-      setIsLoading(false);
-      setHasError(false);
-      setIsPlaying(true);
-    };
-
-    const handlePause = () => setIsPlaying(false);
-
-    const handleError = () => {
-      const err = audio.error;
-      const messages: Record<number, string> = {
-        1: 'MEDIA_ERR_ABORTED – playback was aborted.',
-        2: 'MEDIA_ERR_NETWORK – network error while loading.',
-        3: 'MEDIA_ERR_DECODE – audio could not be decoded.',
-        4: 'MEDIA_ERR_SRC_NOT_SUPPORTED – file not found or format unsupported.',
-      };
-      console.error(
-        '[Audio] Load failed:',
-        err ? messages[err.code] ?? err.message : 'Unknown error',
-        '\nCheck: public' + AUDIO_SRC + ' exists and has no spaces in the filename.'
-      );
-      setHasError(true);
-      setIsLoading(false);
-      setIsPlaying(false);
-      setIsReady(false);
-    };
-
-    audio.addEventListener('canplay',       handleCanPlay);
-    audio.addEventListener('canplaythrough', handleCanPlayThrough);
-    audio.addEventListener('waiting',        handleWaiting);
-    audio.addEventListener('playing',        handlePlaying);
-    audio.addEventListener('pause',          handlePause);
-    audio.addEventListener('error',          handleError);
-
-    // REMOVED: audio.load() — do NOT call this on mount.
-    // The browser will start downloading the file immediately if load() is called.
-    // Loading is now deferred until the user explicitly clicks play.
-
-    return () => {
-      audio.removeEventListener('canplay',        handleCanPlay);
-      audio.removeEventListener('canplaythrough', handleCanPlayThrough);
-      audio.removeEventListener('waiting',        handleWaiting);
-      audio.removeEventListener('playing',        handlePlaying);
-      audio.removeEventListener('pause',          handlePause);
-      audio.removeEventListener('error',          handleError);
-    };
-  }, []);
 
   const togglePlayPause = async () => {
     const audio = audioRef.current;
-    if (!audio || hasError) return;
+    if (!audio) return;
 
-    if (isPlaying) {
+    if (!audio.paused) {
       audio.pause();
       return;
     }
 
-    // If not yet ready, trigger loading now (user-initiated) and wait for canplay
-    if (!isReady) {
-      setIsLoading(true);
-      audio.load(); // Deferred to here — only runs when the user clicks play
-      await new Promise<void>((resolve) => {
-        const onReady = () => {
-          audio.removeEventListener('canplay', onReady);
-          resolve();
-        };
-        audio.addEventListener('canplay', onReady);
-        if (audio.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
-          audio.removeEventListener('canplay', onReady);
-          resolve();
-        }
-      });
-      setIsLoading(false);
-      setIsReady(true);
-    }
-
     try {
+      setHasError(false);
       setIsLoading(true);
+      // Called directly inside the click handler so browsers allow it.
+      // With preload="none", play() starts loading the file itself.
       await audio.play();
     } catch (err) {
       console.error('[Audio] play() rejected:', err);
-      setIsPlaying(false);
       setIsLoading(false);
+      setIsPlaying(false);
     }
+  };
+
+  const handleError = () => {
+    const err = audioRef.current?.error;
+    const messages: Record<number, string> = {
+      1: 'MEDIA_ERR_ABORTED - playback was aborted.',
+      2: 'MEDIA_ERR_NETWORK - network error while loading.',
+      3: 'MEDIA_ERR_DECODE - audio could not be decoded.',
+      4: 'MEDIA_ERR_SRC_NOT_SUPPORTED - file not found or format unsupported.',
+    };
+    console.error('[Audio] Load failed:', err ? messages[err.code] ?? err.message : 'Unknown error');
+    setHasError(true);
+    setIsLoading(false);
+    setIsPlaying(false);
   };
 
   const handleTimeUpdate = () => {
     if (audioRef.current) setCurrentTime(audioRef.current.currentTime);
   };
 
-  const handleLoadedMetadata = () => {
-    if (audioRef.current) {
-      const dur = audioRef.current.duration;
-      if (isFinite(dur)) setDuration(dur);
-    }
-  };
-
   const handleDurationChange = () => {
-    if (audioRef.current) {
-      const dur = audioRef.current.duration;
-      if (isFinite(dur) && dur > 0) setDuration(dur);
-    }
+    const dur = audioRef.current?.duration;
+    if (dur && isFinite(dur) && dur > 0) setDuration(dur);
   };
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -157,28 +84,42 @@ export default function ServiceCharterAudioSection() {
   };
 
   const skipTime = (seconds: number) => {
-    if (audioRef.current) {
-      const newTime = Math.max(0, Math.min(audioRef.current.currentTime + seconds, duration));
-      audioRef.current.currentTime = newTime;
-      setCurrentTime(newTime);
-    }
+    const audio = audioRef.current;
+    if (!audio) return;
+    const max = duration > 0 ? duration : audio.currentTime + seconds;
+    const newTime = Math.max(0, Math.min(audio.currentTime + seconds, max));
+    audio.currentTime = newTime;
+    setCurrentTime(newTime);
   };
 
   const formatTime = (time: number) => {
-    if (!isFinite(time) || time === 0) return '0:00';
+    if (!isFinite(time) || time <= 0) return '0:00';
     const m = Math.floor(time / 60);
     const s = Math.floor(time % 60);
     return `${m}:${s.toString().padStart(2, '0')}`;
   };
 
-  const downloadAudio = () => {
+const downloadAudio = async () => {
+  try {
+    const res = await fetch(AUDIO_SRC); // same URL that plays fine
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+
     const link = document.createElement('a');
-    link.href = AUDIO_SRC;
+    link.href = url;
     link.download = 'KTVC-Service-Charter-Audio.m4a';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  } catch (error) {
+    console.error('[Audio] Download failed:', error);
+    window.open(AUDIO_DOWNLOAD, '_blank'); // fallback
+  }
+};
 
   const downloadPDF = (filename: string, displayName: string) => {
     try {
@@ -220,7 +161,7 @@ export default function ServiceCharterAudioSection() {
 
         <div className="max-w-5xl mx-auto space-y-6">
 
-          {/* ── Audio Player Card ── */}
+          {/* Audio Player Card */}
           <Card className="overflow-hidden shadow-xl border border-white/20 bg-white/95 backdrop-blur-sm">
             <div className="p-5">
 
@@ -228,11 +169,7 @@ export default function ServiceCharterAudioSection() {
                 <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-md bg-red-50 border border-red-200 text-red-700 text-xs">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   <span>
-                    Audio file could not be loaded. Make sure{' '}
-                    <code className="font-mono bg-red-100 px-1 rounded">
-                      public{AUDIO_SRC}
-                    </code>{' '}
-                    exists and has no spaces in its filename.
+                    Audio could not be loaded. Please try again, or use the download button.
                   </span>
                 </div>
               )}
@@ -248,18 +185,22 @@ export default function ServiceCharterAudioSection() {
                   </div>
                 </div>
 
-                {/* preload="none" prevents any automatic fetching on page load */}
                 <audio
                   ref={audioRef}
-                  onTimeUpdate={handleTimeUpdate}
-                  onLoadedMetadata={handleLoadedMetadata}
-                  onDurationChange={handleDurationChange}
-                  onEnded={() => { setIsPlaying(false); setCurrentTime(0); }}
-                  className="hidden"
+                  src={AUDIO_SRC}
                   preload="none"
-                >
-                  <source src={AUDIO_SRC} type="audio/mp4" />
-                </audio>
+                  className="hidden"
+                  onTimeUpdate={handleTimeUpdate}
+                  onLoadedMetadata={handleDurationChange}
+                  onDurationChange={handleDurationChange}
+                  onWaiting={() => setIsLoading(true)}
+                  onCanPlay={() => setIsLoading(false)}
+                  onPlaying={() => { setIsLoading(false); setIsPlaying(true); setHasError(false); }}
+                  onPlay={() => setIsPlaying(true)}
+                  onPause={() => setIsPlaying(false)}
+                  onEnded={() => { setIsPlaying(false); setCurrentTime(0); }}
+                  onError={handleError}
+                />
 
                 <div className="flex items-center space-x-2">
                   <Button
@@ -268,7 +209,6 @@ export default function ServiceCharterAudioSection() {
                     onClick={() => skipTime(-10)}
                     className="h-8 w-8 p-0 hover:bg-gray-100"
                     title="Skip back 10 seconds"
-                    disabled={hasError}
                   >
                     <SkipBack className="w-3 h-3" />
                   </Button>
@@ -277,7 +217,6 @@ export default function ServiceCharterAudioSection() {
                     onClick={togglePlayPause}
                     className="h-10 w-10 rounded-full bg-primary hover:bg-primary/90 text-white p-0"
                     title={isPlaying ? 'Pause' : 'Play'}
-                    disabled={hasError}
                   >
                     {isLoading ? (
                       <Loader2 className="w-4 h-4 animate-spin" />
@@ -294,7 +233,6 @@ export default function ServiceCharterAudioSection() {
                     onClick={() => skipTime(10)}
                     className="h-8 w-8 p-0 hover:bg-gray-100"
                     title="Skip forward 10 seconds"
-                    disabled={hasError}
                   >
                     <SkipForward className="w-3 h-3" />
                   </Button>
@@ -305,7 +243,6 @@ export default function ServiceCharterAudioSection() {
                     onClick={downloadAudio}
                     className="h-8 w-8 p-0 hover:bg-gray-100"
                     title="Download Audio"
-                    disabled={hasError}
                   >
                     <Download className="w-3 h-3" />
                   </Button>
@@ -326,7 +263,8 @@ export default function ServiceCharterAudioSection() {
                     value={currentTime}
                     onChange={handleSeek}
                     className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
-                    disabled={!isReady || hasError}
+                    disabled={duration === 0}
+                    aria-label="Seek audio"
                   />
                 </div>
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -337,7 +275,7 @@ export default function ServiceCharterAudioSection() {
             </div>
           </Card>
 
-          {/* ── Download PDFs Card ── */}
+          {/* Download PDFs Card */}
           <Card className="overflow-hidden shadow-xl border border-white/20 bg-white/95 backdrop-blur-sm">
             <div className="p-6">
               <h3 className="text-xl font-bold text-center mb-6 text-gray-800">
@@ -349,7 +287,7 @@ export default function ServiceCharterAudioSection() {
                   <h4 className="font-semibold text-base mb-2">English Version</h4>
                   <p className="text-gray-600 text-xs mb-3">Official Service Charter</p>
                   <Button
-                    onClick={() => downloadPDF('/documents/English-Service-Charter.pdf', 'KTVC-Service-Charter-English.pdf')}
+                    onClick={() => downloadPDF(PDF_EN, 'KTVC-Service-Charter-English.pdf')}
                     className="bg-primary text-white hover:bg-primary/90 w-full"
                     size="sm"
                   >
@@ -363,7 +301,7 @@ export default function ServiceCharterAudioSection() {
                   <h4 className="font-semibold text-base mb-2">Toleo la Kiswahili</h4>
                   <p className="text-gray-600 text-xs mb-3">Mkataba wa Huduma</p>
                   <Button
-                    onClick={() => downloadPDF('/documents/Kiswahili-Service-Charter.pdf', 'KTVC-Service-Charter-Kiswahili.pdf')}
+                    onClick={() => downloadPDF(PDF_SW, 'KTVC-Service-Charter-Kiswahili.pdf')}
                     className="bg-secondary text-gray-800 hover:bg-secondary/90 w-full"
                     size="sm"
                   >
