@@ -4,6 +4,200 @@ import { NextRequest, NextResponse } from "next/server";
 // Enhanced mock news data with video support, multiple images, and comprehensive events
 const mockNews = [
 
+{
+  id: "56",
+  title: "Applications Open: Equity Wings to Fly TVET Scholarship 2027 — Horticulture Production Level 5 & 6 at Kongoni TVC",
+  excerpt: "Kongoni Technical and Vocational College, in partnership with the Equity Group Foundation, invites eligible youth to apply for the Wings to Fly TVET Scholarship 2027 in Horticulture Production (Level 5 & 6). Application deadline: 18th November 2026.",
+  content: `
+    <p>Kongoni Technical and Vocational College, in partnership with the <strong>Equity Group Foundation Wings to Fly Programme</strong>, is pleased to announce that applications are now open for the <strong>Equity Wings to Fly TVET Scholarship 2027</strong>.</p>
+
+    <p><strong>🚨 Application Deadline: 18th November 2026</strong></p>
+
+    <p><strong>🌱 Programmes Offered:</strong></p>
+    <ul>
+      <li><strong>Horticulture Production — Level 5</strong></li>
+      <li><strong>Horticulture Production — Level 6</strong></li>
+    </ul>
+
+    <p>This is an excellent opportunity for young people with a passion for agriculture to turn that passion into a career, gaining practical skills in modern food production and agribusiness.</p>
+
+    <p><strong>🎓 Scholarship Benefits:</strong></p>
+    <ul>
+      <li><strong>Full Scholarship Support</strong></li>
+      <li><strong>Mentorship Programme</strong></li>
+      <li><strong>Financial Literacy Training</strong></li>
+      <li><strong>Industry Training &amp; Exposure</strong></li>
+      <li><strong>Career Development Opportunities</strong></li>
+    </ul>
+
+    <p><strong>🌿 What You Will Learn:</strong></p>
+    <ul>
+      <li>Crop Production</li>
+      <li>Greenhouse Technology</li>
+      <li>Agribusiness</li>
+      <li>Irrigation Systems</li>
+      <li>Modern Horticultural Practices</li>
+    </ul>
+
+    <p><strong>✅ Eligibility Requirements:</strong></p>
+    <ul>
+      <li>Admission letter from Kongoni TVC</li>
+      <li>Minimum KCSE Grade D (Plain)</li>
+      <li>Aged between 18 and 35 years</li>
+      <li>Passion for agriculture and food production</li>
+    </ul>
+
+    <p><strong>📍 How to Apply:</strong></p>
+    <p>Application forms and application assistance are available at Kongoni TVC. Interested applicants are encouraged to visit the college early and submit their applications before the deadline.</p>
+
+    <p><strong>📞 Get in Touch:</strong></p>
+    <ul>
+      <li><strong>Location:</strong> Along Eldoret-Kitale Road, Matunda</li>
+      <li><strong>Phone / WhatsApp:</strong> 0788 070 303</li>
+      <li><strong>Website:</strong> www.kongonitechnical.ac.ke</li>
+    </ul>
+
+    <p><strong>Take the first step towards a rewarding career in agriculture and agribusiness. Cultivate your future at Kongoni TVC! 🌱🎓</strong></p>
+
+    <p><em>#KongoniTVC #EquityWingsToFly #TVETScholarship2027 #HorticultureProduction #ScholarshipOpportunity #TVETKenya #StudyAtKongoniTVC</em></p>
+  `,
+  imageUrl: "/images/newsevents/wingstofly2027/wingstofly_main.jpeg",
+  images: [
+    "/images/newsevents/wingstofly2027/wingstofly_main.jpeg"
+  ],
+  featured: true,
+  createdAt: "2026-11-10T08:00:00Z",
+  updatedAt: "2026-11-10T08:00:00Z",
+  author: "College Administration",
+  category: "Announcements",
+  eventDate: "2026-11-18", 
+  location: "Kongoni Technical and Vocational College, Matunda, Kakamega County",
+  tags: [
+    "scholarship",
+    "equity-wings-to-fly",
+    "equity-group-foundation",
+    "tvet-scholarship-2027",
+    "horticulture-production",
+    "level-5",
+    "level-6",
+    "agriculture",
+    "admissions",
+    "application-deadline",
+    "announcement",
+    "2026",
+    "tvet-kenya"
+  ]
+},
+{
+  id: "55",
+  title: "Kongoni TVC Cultural Festival 2026 — A Vibrant Celebration of Culture, Unity and Heritage",
+  excerpt: "On 6th November 2026, Kongoni Technical and Vocational College came alive with colour, music, dance, food and creative performances during the Cultural Festival 2026, hosted by Afrikwear Entertainment with the support of valued partners.",
+  content: `
+    <p>On <strong>6th November 2026</strong>, Kongoni Technical and Vocational College came alive with colour, culture, music, dance and unity during the <strong>Kongoni TVC Cultural Festival 2026</strong>.</p>
+
+    <p>Trainees and staff proudly showcased the rich cultural heritage that makes our nation unique and beautiful. From traditional dances and cultural attire to music, food and creative performances, the day was a true celebration of diversity, talent and togetherness.</p>
+
+    <p><strong>🎭 Festival Highlights:</strong></p>
+    <ul>
+      <li><strong>Traditional Dances</strong> — Captivating performances drawn from the heritage of different communities</li>
+      <li><strong>Cultural Attire</strong> — Vibrant traditional dress worn with pride by trainees and staff</li>
+      <li><strong>Music &amp; Creative Performances</strong> — Songs, rhythms and artistic presentations that kept the energy high</li>
+      <li><strong>Cultural Exhibitions</strong> — Displays showcasing the customs and values that make our communities unique</li>
+      <li><strong>Cultural Cuisine</strong> — A delicious tasting journey through traditional foods</li>
+    </ul>
+
+    <p><strong>🌍 Education Beyond the Classroom:</strong></p>
+    <p>Moments like these remind us that education is not only about academic and technical skills, but also about preserving our identity, appreciating one another and embracing cultural diversity. At Kongoni TVC, preserving culture is an essential part of fostering mutual respect and national cohesion.</p>
+
+    <p><strong>👏 Hosted by Afrikwear Entertainment:</strong></p>
+    <p>The college extends its sincere appreciation to <strong>Afrikwear Entertainment</strong> for successfully hosting and coordinating this remarkable event.</p>
+
+    <p><strong>🤝 Our Valued Partners and Stakeholders:</strong></p>
+    <p>We also thank the following partners and stakeholders for their presence, support and contribution to the success of the celebration:</p>
+    <ul>
+      <li><strong>The Kongoni Network Community</strong></li>
+      <li><strong>Matunda Mall Resort</strong></li>
+      <li><strong>Olive Inn Restaurant</strong></li>
+      <li><strong>Equity Bank</strong></li>
+      <li><strong>Radio Ustawi</strong></li>
+    </ul>
+
+    <p><strong>🙏 Thank You:</strong></p>
+    <p>Thank you to all trainees, lecturers, organisers and guests who made the event a success.</p>
+
+    <p><strong>Together, we celebrate our cultures. Together, we build a stronger future. 🇰🇪✨</strong></p>
+
+    <p><em>#KongoniTVC #CulturalFestival2026 #AfrikwearEntertainment #CelebratingDiversity #CultureAndHeritage #TVETKenya #ProudlyKenyan</em></p>
+  `,
+  imageUrl: "/images/newsevents/culturalfestival2026/culturalfestival_main.jpg",
+  images: [
+    "/images/newsevents/culturalfestival2026/culturalfestival_main.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival1.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival2.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival3.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival4.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival5.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival6.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival7.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival9.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival10.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival11.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival12.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival13.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival14.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival15.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival16.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival17.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival18.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival19.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival20.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival21.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival22.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival23.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival24.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival25.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival26.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival27.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival28.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival29.jpg",
+    "/images/newsevents/culturalfestival2026/culturalfestival30.jpg"
+  ],
+    videoUrl: "https://www.youtube.com/watch?v=GDZgrUVlptE",
+  videoThumbnail: "/images/newsevents/culturalfestival2026/culturalfestival_main.jpg",
+  videos: [
+    {
+      url: "https://www.youtube.com/watch?v=GDZgrUVlptE",
+      title: "🎭 Kongoni TVC Cultural Festival 2026 | Celebrating Diversity, Heritage & Unity",
+      thumbnail: "/images/newsevents/culturalfestival2026/culturalfestival_main.jpg"
+    }
+  ],
+  featured: true,
+  createdAt: "2026-11-08T10:00:00Z",
+  updatedAt: "2026-11-08T10:00:00Z",
+  author: "Student Affairs Department",
+  category: "Events",
+  eventDate: "2026-11-06",
+  location: "Kongoni Technical and Vocational College Grounds",
+  tags: [
+    "cultural-festival",
+    "cultural-day",
+    "heritage",
+    "traditional-dances",
+    "cultural-attire",
+    "music",
+    "cultural-cuisine",
+    "unity-in-diversity",
+    "afrikwear-entertainment",
+    "kongoni-network-community",
+    "matunda-mall-resort",
+    "olive-inn-restaurant",
+    "equity-bank",
+    "radio-ustawi",
+    "student-life",
+    "2026",
+    "tvet-kenya"
+  ]
+},
   {
   id: "54",
   title: "Kongoni TVC Hosts IGA Capacity Building Programme — Empowering TVET Institutions for Sustainable Growth",

@@ -72,7 +72,7 @@ const departments = [
     name: "Business Department",
     description: "Developing future leaders in commerce and entrepreneurship.",
     programs: ["Business Management", "Accounting", "Marketing", "Entrepreneurship", "Supply Chain Management"],
-    hod: "Ms. Dorothy Ludisi",
+    hod: "Ms. Dorice Wekesa",
     image: "/images/hod/dorothyludisi.jpeg"
   },
   {
@@ -93,14 +93,14 @@ const departments = [
     name: "Electrical & Electronics Engineering Department",
     description: "Hands-on experience in electrical systems and installations.",
     programs: ["Electrical Engineering", "Electronics Engineering", "Telecommunications", "Power Systems"],
-    hod: "Mr Evans Maruti",
+    hod: "Mr Thomas Maululwa",
     image: "/images/hod/evansmaruti.jpg"
   },
   {
     name: "Automotive & Mechanical Engineering Department",
     description: "Mastering vehicle diagnostics, repair, and maintenance.",
     programs: ["Mechanical Engineering", "Automotive Technology", "Welding & Fabrication", "Refrigeration Technology"],
-    hod: "Mr Bryan Wekesa",
+    hod: "Mr Collins Omutanyi",
     image: "/images/hod/wekesabryan.jpg"
   },
   {
